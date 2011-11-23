@@ -82,6 +82,7 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap
     {
         $auto = Zend_Loader_Autoloader::getInstance();
         $auto->registerNamespace('TM');
+        $auto->registerNamespace('EK');
         $auto->registerNamespace('StdLib');
     }
 
@@ -136,7 +137,6 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap
         Zend_Loader::loadClass('SetViewParam');
         Zend_Controller_Front::getInstance()->registerPlugin(new SetViewParam());
     }
-
 
 }
 

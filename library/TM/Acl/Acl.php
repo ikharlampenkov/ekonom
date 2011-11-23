@@ -36,37 +36,37 @@ class TM_Acl_Acl extends Zend_Acl {
         $this->addResource(new Zend_Acl_Resource('user/editRole'), 'admin_allow');
         $this->addResource(new Zend_Acl_Resource('user/deleteRole'), 'admin_allow');
 
-        $this->addResource(new Zend_Acl_Resource('task/index'), 'admin_allow');
-        $this->addResource(new Zend_Acl_Resource('task/add'), 'admin_allow');
-        $this->addResource(new Zend_Acl_Resource('task/edit'), 'admin_allow');
-        $this->addResource(new Zend_Acl_Resource('task/delete'), 'admin_allow');
-        $this->addResource(new Zend_Acl_Resource('task/addAttributeType'), 'admin_allow');
-        $this->addResource(new Zend_Acl_Resource('task/editAttributeType'), 'admin_allow');
-        $this->addResource(new Zend_Acl_Resource('task/deleteAttributeType'), 'admin_allow');
-        $this->addResource(new Zend_Acl_Resource('task/addAttributeHash'), 'admin_allow');
-        $this->addResource(new Zend_Acl_Resource('task/editAttributeHash'), 'admin_allow');
-        $this->addResource(new Zend_Acl_Resource('task/deleteAttributeHash'), 'admin_allow');
-        $this->addResource(new Zend_Acl_Resource('task/deleteLinkToDoc'), 'admin_allow');
+        $this->addResource(new Zend_Acl_Resource('city/index'), 'admin_allow');
+        $this->addResource(new Zend_Acl_Resource('city/add'), 'admin_allow');
+        $this->addResource(new Zend_Acl_Resource('city/edit'), 'admin_allow');
+        $this->addResource(new Zend_Acl_Resource('city/delete'), 'admin_allow');
+        $this->addResource(new Zend_Acl_Resource('city/addAttributeType'), 'admin_allow');
+        $this->addResource(new Zend_Acl_Resource('city/editAttributeType'), 'admin_allow');
+        $this->addResource(new Zend_Acl_Resource('city/deleteAttributeType'), 'admin_allow');
+        $this->addResource(new Zend_Acl_Resource('city/addAttributeHash'), 'admin_allow');
+        $this->addResource(new Zend_Acl_Resource('city/editAttributeHash'), 'admin_allow');
+        $this->addResource(new Zend_Acl_Resource('city/deleteAttributeHash'), 'admin_allow');
+        $this->addResource(new Zend_Acl_Resource('city/deleteLinkToDoc'), 'admin_allow');
 
-        $this->addResource(new Zend_Acl_Resource('document/index'), 'admin_allow');
-        $this->addResource(new Zend_Acl_Resource('document/add'), 'admin_allow');
-        $this->addResource(new Zend_Acl_Resource('document/edit'), 'admin_allow');
-        $this->addResource(new Zend_Acl_Resource('document/delete'), 'admin_allow');
-        $this->addResource(new Zend_Acl_Resource('document/addFolder'), 'admin_allow');
-        $this->addResource(new Zend_Acl_Resource('document/editFolder'), 'admin_allow');
-        $this->addResource(new Zend_Acl_Resource('document/addAttributeType'), 'admin_allow');
-        $this->addResource(new Zend_Acl_Resource('document/editAttributeType'), 'admin_allow');
-        $this->addResource(new Zend_Acl_Resource('document/deleteAttributeType'), 'admin_allow');
-        $this->addResource(new Zend_Acl_Resource('document/addAttributeHash'), 'admin_allow');
-        $this->addResource(new Zend_Acl_Resource('document/editAttributeHash'), 'admin_allow');
-        $this->addResource(new Zend_Acl_Resource('document/deleteAttributeHash'), 'admin_allow');
+        $this->addResource(new Zend_Acl_Resource('catalog/index'), 'admin_allow');
+        $this->addResource(new Zend_Acl_Resource('catalog/add'), 'admin_allow');
+        $this->addResource(new Zend_Acl_Resource('catalog/edit'), 'admin_allow');
+        $this->addResource(new Zend_Acl_Resource('catalog/delete'), 'admin_allow');
+        $this->addResource(new Zend_Acl_Resource('catalog/addFolder'), 'admin_allow');
+        $this->addResource(new Zend_Acl_Resource('catalog/editFolder'), 'admin_allow');
+        $this->addResource(new Zend_Acl_Resource('catalog/addAttributeType'), 'admin_allow');
+        $this->addResource(new Zend_Acl_Resource('catalog/editAttributeType'), 'admin_allow');
+        $this->addResource(new Zend_Acl_Resource('catalog/deleteAttributeType'), 'admin_allow');
+        $this->addResource(new Zend_Acl_Resource('catalog/addAttributeHash'), 'admin_allow');
+        $this->addResource(new Zend_Acl_Resource('catalog/editAttributeHash'), 'admin_allow');
+        $this->addResource(new Zend_Acl_Resource('catalog/deleteAttributeHash'), 'admin_allow');
 
-        $this->addResource(new Zend_Acl_Resource('discussion/index'), 'admin_allow');
-        $this->addResource(new Zend_Acl_Resource('discussion/add'), 'admin_allow');
-        $this->addResource(new Zend_Acl_Resource('discussion/edit'), 'admin_allow');
-        $this->addResource(new Zend_Acl_Resource('discussion/delete'), 'admin_allow');
-        $this->addResource(new Zend_Acl_Resource('discussion/addTopic'), 'admin_allow');
-        $this->addResource(new Zend_Acl_Resource('discussion/editTopic'), 'admin_allow');
+        $this->addResource(new Zend_Acl_Resource('company/index'), 'admin_allow');
+        $this->addResource(new Zend_Acl_Resource('company/add'), 'admin_allow');
+        $this->addResource(new Zend_Acl_Resource('company/edit'), 'admin_allow');
+        $this->addResource(new Zend_Acl_Resource('company/delete'), 'admin_allow');
+        $this->addResource(new Zend_Acl_Resource('company/addTopic'), 'admin_allow');
+        $this->addResource(new Zend_Acl_Resource('company/editTopic'), 'admin_allow');
 
         $this->addResource(new Zend_Acl_Resource('files/'), 'admin_allow');
 

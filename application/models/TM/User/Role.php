@@ -56,7 +56,7 @@ class TM_User_Role
     public function insertToDB()
     {
         try {
-            $sql = 'INSERT INTO tm_user_role(title)
+            $sql = 'INSERT INTO user_role(title)
                     VALUES ("' . $this->_title . '")';
             $this->_db->query($sql);
         } catch (Exception $e) {
@@ -74,7 +74,7 @@ class TM_User_Role
     public function updateToDB()
     {
         try {
-            $sql = 'UPDATE tm_user_role
+            $sql = 'UPDATE user_role
                     SET title="' . $this->_title . '" 
                     WHERE id=' .  $this->_id ;
             $this->_db->query($sql);
@@ -92,7 +92,7 @@ class TM_User_Role
     public function deleteFromDB()
     {
         try {
-            $sql = 'DELETE FROM tm_user_role WHERE id=' . $this->_id;
+            $sql = 'DELETE FROM user_role WHERE id=' . $this->_id;
             $this->_db->query($sql);
         } catch (Exception $e) {
             throw new Exception($e->getMessage());
@@ -112,7 +112,7 @@ class TM_User_Role
     {
         try {
            $db = StdLib_DB::getInstance();
-            $sql = 'SELECT * FROM tm_user_role WHERE id=' . (int)$id;
+            $sql = 'SELECT * FROM user_role WHERE id=' . (int)$id;
             $result = $db->query($sql, StdLib_DB::QUERY_MOD_ASSOC);
 
             if (isset($result[0])) {
@@ -138,7 +138,7 @@ class TM_User_Role
     {
         try {
             $db = StdLib_DB::getInstance();
-            $sql = 'SELECT * FROM tm_user_role';
+            $sql = 'SELECT * FROM user_role';
             $result = $db->query($sql, StdLib_DB::QUERY_MOD_ASSOC);
 
             if (isset($result[0])) {

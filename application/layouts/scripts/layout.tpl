@@ -47,16 +47,13 @@
                             </tr>
 
                             <tr>
-                                <td><a href="/task/" class="menu">Задачи</a></td>
+                                <td><a href="/city/" class="menu">Города</a></td>
                             </tr>
                             <tr>
-                                <td><a href="/document/" class="menu">Документы</a></td>
+                                <td><a href="/company/" class="menu">Компании</a></td>
                             </tr>
                             <tr>
-                                <td><a href="/reports/" class="menu">Отчеты</a></td>
-                            </tr>
-                            <tr>
-                                <td><a href="/discussion/" class="menu">Обсуждение</a></td>
+                                <td><a href="/catalog/" class="menu">Каталог</a></td>
                             </tr>
                             <tr>
                                 <td><a href="/user/" class="menu">Пользователи</a></td>

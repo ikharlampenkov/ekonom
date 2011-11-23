@@ -1,0 +1,38 @@
+info   SELECT * FROM tm_user WHERE login="admin"  23.11.2011 22:54
+error   Can`t complit query: SELECT * FROM tm_user WHERE login="admin" No error: 1146:: Error msg: Table 'ekonom_pro_db.tm_user' doesn't exist ;  23.11.2011 22:54
+info   SELECT * FROM user WHERE login="admin"  23.11.2011 22:55
+info   SELECT * FROM tm_user_role WHERE id=1  23.11.2011 22:55
+error   Can`t complit query: SELECT * FROM tm_user_role WHERE id=1 No error: 1146:: Error msg: Table 'ekonom_pro_db.tm_user_role' doesn't exist ;  23.11.2011 22:55
+info   SELECT * FROM user WHERE login="admin"  23.11.2011 22:55
+info   SELECT * FROM tm_user_role WHERE id=1  23.11.2011 22:55
+error   Can`t complit query: SELECT * FROM tm_user_role WHERE id=1 No error: 1146:: Error msg: Table 'ekonom_pro_db.tm_user_role' doesn't exist ;  23.11.2011 22:55
+info   SELECT * FROM user WHERE login="admin"  23.11.2011 22:55
+info   SELECT * FROM user_role WHERE id=1  23.11.2011 22:55
+info   SELECT * FROM user_role  23.11.2011 22:57
+info   SELECT * FROM user  23.11.2011 22:57
+info   SELECT * FROM user_role WHERE id=1  23.11.2011 22:57
+info   SELECT * FROM user WHERE id=1  23.11.2011 23:10
+info   SELECT * FROM user_role WHERE id=1  23.11.2011 23:10
+info   SELECT * FROM city  23.11.2011 23:21
+info   SELECT * FROM city  23.11.2011 23:24
+info   SELECT * FROM city  23.11.2011 23:25
+info   SELECT * FROM city  23.11.2011 23:26
+info   INSERT INTO city(title, phone_code)
+                    VALUES ("Кемерово", "3842")  23.11.2011 23:28
+info   SELECT * FROM city  23.11.2011 23:28
+info   SELECT * FROM city  23.11.2011 23:29
+info   INSERT INTO city(title, phone_code)
+                    VALUES ("овокнец", "3843")  23.11.2011 23:29
+info   SELECT * FROM city  23.11.2011 23:29
+info   SELECT * FROM city WHERE id=2  23.11.2011 23:29
+info   SELECT * FROM city WHERE id=2  23.11.2011 23:29
+info   UPDATE city
+                    SET title="Новокузнец", phone_code="3843"
+                    WHERE id=2  23.11.2011 23:29
+info   SELECT * FROM city  23.11.2011 23:29
+info   SELECT * FROM city WHERE id=2  23.11.2011 23:29
+info   SELECT * FROM city WHERE id=2  23.11.2011 23:29
+info   UPDATE city
+                    SET title="Новокузнецк", phone_code="3843"
+                    WHERE id=2  23.11.2011 23:29
+info   SELECT * FROM city  23.11.2011 23:29

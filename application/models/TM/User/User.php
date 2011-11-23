@@ -106,7 +106,7 @@ class TM_User_User
     public function insertToDb()
     {
         try {
-            $sql = 'INSERT INTO tm_user(login, password, role_id, date_create)
+            $sql = 'INSERT INTO user(login, password, role_id, date_create)
                     VALUES ("' . $this->_login . '", ' . $this->_password  . ', ' . $this->_role->getId() . ', "' . $this->_dateCreate . '")';
             $this->_db->query($sql);
         } catch (Exception $e) {
@@ -123,7 +123,7 @@ class TM_User_User
     public function updateToDb()
     {
         try {
-            $sql = 'UPDATE tm_user
+            $sql = 'UPDATE user
                     SET login="' . $this->_login . '", role_id="' . $this->_role->getId() . '", date_create="' . $this->_dateCreate . '"
                     WHERE id=' . $this->_id;
             $this->_db->query($sql);
@@ -141,7 +141,7 @@ class TM_User_User
     public function deleteFromDb()
     {
         try {
-            $sql = 'DELETE FROM tm_user
+            $sql = 'DELETE FROM user
                     WHERE id=' . $this->_id;
             $this->_db->query($sql);
         } catch (Exception $e) {
@@ -154,7 +154,7 @@ class TM_User_User
      *
      * @param int id
 
-     * @return Task::tm_user_Task
+     * @return Task::user_Task
      * @static
      * @access public
      */
@@ -162,7 +162,7 @@ class TM_User_User
     {
         try {
             $db = StdLib_DB::getInstance();
-            $sql = 'SELECT * FROM tm_user WHERE id=' . (int)$id;
+            $sql = 'SELECT * FROM user WHERE id=' . (int)$id;
             $result = $db->query($sql, StdLib_DB::QUERY_MOD_ASSOC);
 
             if (isset($result[0])) {
@@ -190,7 +190,7 @@ class TM_User_User
     {
         try {
             $db = StdLib_DB::getInstance();
-            $sql = 'SELECT * FROM tm_user WHERE login="' . $login . '"';
+            $sql = 'SELECT * FROM user WHERE login="' . $login . '"';
             $result = $db->query($sql, StdLib_DB::QUERY_MOD_ASSOC);
 
             if (isset($result[0])) {
@@ -236,7 +236,7 @@ class TM_User_User
     {
         try {
             $db = StdLib_DB::getInstance();
-            $sql = 'SELECT * FROM tm_user';
+            $sql = 'SELECT * FROM user';
             $result = $db->query($sql, StdLib_DB::QUERY_MOD_ASSOC);
 
             if (isset($result[0])) {
