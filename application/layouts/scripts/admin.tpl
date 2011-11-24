@@ -21,7 +21,14 @@
     <tr>
         <td style="height: 60px; vertical-align: top;">
 
-            Тест
+            <table style="width: 100%; height: 60px; background-color:#69aefc;">
+                <tr>
+                    <td style="padding-left: 25px; vertical-align: middle;"><a href="/" style="color: #ffffff; text-decoration: none; font-size: 26px;">{$title}</a></td>
+                    <td width="300" valign="middle" style="color:white">
+                        Пользователь: {$authUser} &nbsp; / &nbsp; <a href="/login/logout/" style="color:black">Выйти</a>
+                    </td>
+                </tr>
+            </table>
 
 
         </td>
@@ -48,7 +55,10 @@
                             <tr>
                                 <td><a href="/catalog/" class="menu">Каталог</a></td>
                             </tr>
-                            
+                            <tr>
+                                <td><a href="/user/" class="menu">Пользователи</a></td>
+                            </tr>
+
                         </table>
 
                     </td>
