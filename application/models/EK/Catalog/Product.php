@@ -1,10 +1,10 @@
 <?php
 
 /**
- * class Product
+ * class EK_Catalog_Product
  *
  */
-class Product {
+class EK_Catalog_Product {
     /** Aggregations: */
     /** Compositions: */
     /*     * * Attributes: ** */
@@ -49,7 +49,7 @@ class Product {
      * @access public
      */
     public function __construct($id = 0, $title = '') {
-        $this->_db = simo_db::getInstance();
+        $this->_db = StdLib_DB::getInstance();
 
         $this->_id = $id;
         $this->_title = $title;
@@ -91,7 +91,7 @@ class Product {
     /**
      *
      *
-     * @return FileManager::Image
+     * @return FileManager::TM_FileManager_Image
      * @access public
      */
     public function getImg() {
@@ -127,7 +127,7 @@ class Product {
     /**
      *
      *
-     * @return Shop::Rubric
+     * @return Shop::EK_Catalog_Rubric
      * @access public
      */
     public function getRubric() {
@@ -175,7 +175,7 @@ class Product {
     public function setImg($value) {
         if (is_null($this->_img)) {
             global $__cfg;
-            $this->_img = new Image($__cfg['file.upload.dir'], $value);
+            $this->_img = new TM_FileManager_Image($__cfg['file.upload.dir'], $value);
         } else {
             $this->_img->setName($value);
         }
@@ -183,15 +183,15 @@ class Product {
     }
 
     public function setRubric($value) {
-        $this->_rubric = Rubric::getInstanceById($value);
+        $this->_rubric = EK_Catalog_Rubric::getInstanceById($value);
     }
 
     /**
      *
      *
-     * @param string value
+     * @param string $value
 
-     * @return
+     * @return void
      * @access public
      */
     public function setFullText($value) {
@@ -217,7 +217,7 @@ class Product {
 
             $this->_id = $this->_db->getLastInsertId();
 
-            $this->_img = new Image($__cfg['file.upload.dir']);
+            $this->_img = new TM_FileManager_Image($__cfg['file.upload.dir']);
 
             $fileName = $this->_img->download('img');
             if ($fileName !== false) {
@@ -225,7 +225,7 @@ class Product {
                 $this->_db->query('UPDATE product SET img="' . $fileName . '" WHERE id=' . $this->_id);
             }
         } catch (Exception $e) {
-            simo_exception::registrMsg($e, $this->_debug);
+            throw new Exception($e->getMessage());
             return null;
         }
     }
@@ -245,7 +245,7 @@ class Product {
                 $this->_db->query('UPDATE product SET img="' . $fileName . '" WHERE id=' . $this->_id);
             }
         } catch (Exception $e) {
-            simo_exception::registrMsg($e, $this->_debug);
+            throw new Exception($e->getMessage());
             return null;
         }
     }
@@ -257,7 +257,7 @@ class Product {
             $sql = 'DELETE FROM product WHERE id=' . $this->_id;
             $this->_db->query($sql);
         } catch (Exception $e) {
-            simo_exception::registrMsg($e, $this->_debug);
+            throw new Exception($e->getMessage());
         }
     }
 
@@ -269,27 +269,27 @@ class Product {
                     WHERE id=' . $this->_id;
             $this->_db->query($sql);
         } catch (Exception $e) {
-            simo_exception::registrMsg($e, $this->_debug);
+            throw new Exception($e->getMessage());
         }
     }
 
     public static function getInstanceById($id) {
         try {
-            $db = simo_db::getInstance();
-            $result = $db->query('SELECT * FROM product WHERE id=' . $id, simo_db::QUERY_MOD_ASSOC);
+            $db = StdLib_DB::getInstance();
+            $result = $db->query('SELECT * FROM product WHERE id=' . $id, StdLib_DB::QUERY_MOD_ASSOC);
             if (isset($result[0])) {
-                $o = new Product();
+                $o = new EK_Catalog_Product();
                 $o->assignByHash($result[0]);
                 return $o;
             }
         } catch (Exception $e) {
-            simo_exception::registrMsg($e, $this->_debug);
+            throw new Exception($e->getMessage());
             return null;
         }
     }
 
     public static function getInstanceByArray(array $array) {
-        $o = new Product();
+        $o = new EK_Catalog_Product();
         $o->assignByHash($array);
         return $o;
     }
@@ -306,5 +306,5 @@ class Product {
 
 }
 
-// end of Product
+// end of EK_Catalog_Product
 ?>

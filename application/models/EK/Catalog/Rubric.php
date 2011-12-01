@@ -1,10 +1,10 @@
 <?php
 
 /**
- * class Rubric
+ * class EK_Catalog_Rubric
  *
  */
-class Rubric {
+class EK_Catalog_Rubric {
     /** Aggregations: */
     /** Compositions: */
     /*     * * Attributes: ** */
@@ -47,7 +47,7 @@ class Rubric {
      * @access public
      */
     public function __construct($id = 0, $title = '', $parent = 0) {
-        $this->_db = simo_db::getInstance();
+        $this->_db = StdLib_DB::getInstance();
 
         $this->_id = $id;
         $this->_title = $title;
@@ -170,10 +170,10 @@ class Rubric {
     public function insertToDb() {
         try {
             $sql = 'INSERT INTO product_rubric (title, parent_id, is_root)
-                    VALUES ("' . $this->_title . '", ' . $this->_parent . ', ' . Rubric::IS_NOT_ROOT . ')';
+                    VALUES ("' . $this->_title . '", ' . $this->_parent . ', ' . EK_Catalog_Rubric::IS_NOT_ROOT . ')';
             $this->_db->query($sql);
         } catch (Exception $e) {
-            simo_exception::registrMsg($e, $this->_debug);
+            throw new Exception($e->getMessage());
             return null;
         }
     }
@@ -181,11 +181,11 @@ class Rubric {
     public function updateToDb() {
         try {
             $sql = 'UPDATE product_rubric
-                    SET title="' . $this->_title . '", parent_id="' . $this->_parent . '", is_root=' . Rubric::IS_NOT_ROOT . '
+                    SET title="' . $this->_title . '", parent_id="' . $this->_parent . '", is_root=' . EK_Catalog_Rubric::IS_NOT_ROOT . '
                     WHERE id=' . $this->_id;
             $this->_db->query($sql);
         } catch (Exception $e) {
-            simo_exception::registrMsg($e, $this->_debug);
+            throw new Exception($e->getMessage());
             return null;
         }
     }
@@ -203,16 +203,16 @@ class Rubric {
             $sql = 'DELETE FROM product_rubric WHERE id=' . $this->_id;
             $this->_db->query($sql);
         } catch (Exception $e) {
-            simo_exception::registrMsg($e, $this->_debug);
+            throw new Exception($e->getMessage());
         }
     }
 
     public function getPathToRubric(&$path = array()) {
-        if ($this->_isRoot != Rubric::IS_ROOT) {
-            $tempRubric = Rubric::getInstanceById($this->_parent);
-            if ($tempRubric instanceof Rubric) {
+        if ($this->_isRoot != EK_Catalog_Rubric::IS_ROOT) {
+            $tempRubric = EK_Catalog_Rubric::getInstanceById($this->_parent);
+            if ($tempRubric instanceof EK_Catalog_Rubric) {
                 $path[] = $tempRubric;
-                if ($tempRubric->getIsRoot() != Rubric::IS_ROOT) {
+                if ($tempRubric->getIsRoot() != EK_Catalog_Rubric::IS_ROOT) {
                     $tempRubric->getPathToRubric($path);
                 }
             } else {
@@ -225,37 +225,37 @@ class Rubric {
 
     public static function getInstanceById($id) {
         try {
-            $db = simo_db::getInstance();
-            $result = $db->query('SELECT * FROM product_rubric WHERE id=' . $id, simo_db::QUERY_MOD_ASSOC);
+            $db = StdLib_DB::getInstance();
+            $result = $db->query('SELECT * FROM product_rubric WHERE id=' . $id, StdLib_DB::QUERY_MOD_ASSOC);
             if (isset($result[0]) && !empty($result[0])) {
-                $o = new Rubric();
+                $o = new EK_Catalog_Rubric();
                 $o->assignByHash($result[0]);
                 return $o;
             } else
                 return false;
         } catch (Exception $e) {
-            simo_exception::registrMsg($e, true);
+            throw new Exception($e->getMessage());
             return false;
         }
     }
 
     public static function getInstanceByArray(array $array) {
-        $o = new Rubric();
+        $o = new EK_Catalog_Rubric();
         $o->assignByHash($array);
         return $o;
     }
 
     public static function getRootRubric() {
         try {
-            $db = simo_db::getInstance();
-            $result = $db->query('SELECT * FROM product_rubric WHERE is_root=' . Rubric::IS_ROOT, simo_db::QUERY_MOD_ASSOC);
+            $db = StdLib_DB::getInstance();
+            $result = $db->query('SELECT * FROM product_rubric WHERE is_root=' . EK_Catalog_Rubric::IS_ROOT, StdLib_DB::QUERY_MOD_ASSOC);
             if (isset($result[0])) {
-                $o = new Rubric();
+                $o = new EK_Catalog_Rubric();
                 $o->assignByHash($result[0]);
                 return $o;
             }
         } catch (Exception $e) {
-            simo_exception::registrMsg($e, $this->_debug);
+            throw new Exception($e->getMessage());
             return null;
         }
     }
@@ -269,5 +269,5 @@ class Rubric {
 
 }
 
-// end of Rubric
+// end of EK_Catalog_Rubric
 ?>
