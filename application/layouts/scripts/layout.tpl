@@ -17,11 +17,25 @@
 
 <body>
 
-<table style="width: 100%; height: 100%;" cellpadding="0" cellspacing="0" border="0" align="center">
+<table style="width: 100%; height: 100%;" cellpadding="0" cellspacing="0" border="1" align="center">
     <tr>
-        <td style="height: 60px; vertical-align: top;">
+        <td style="height: 60px;">
 
-            Тест
+            <table style="height: 60px;">
+                <tr>
+                    <td></td>
+                    <td style="width: 300px; vertical-align: middle;">Выберите город:
+                        <select id="selectCity">
+                        {if !empty($cityList)}
+                            {foreach from=$cityList item=city}
+                                <option value="{$city->id}">{$city->title}</option>
+                            {/foreach}
+                        {/if}
+
+                        </select>
+                    </td>
+                </tr>
+            </table>
 
 
         </td>
@@ -33,27 +47,29 @@
                 <tr>
                     <td width="230">
 
-                        <table border="0" cellpadding="10" cellspacing="10" width="100%" height="100%"
-                               style="background-color:#f0f0f0">
+                        <table border="0" cellpadding="10" cellspacing="10" width="100%" height="100%">
                             <tr>
                                 <td><h1>Меню:</h1></td>
                             </tr>
 
-                            <tr>
-                                <td><a href="/city/" class="menu">Города</a></td>
-                            </tr>
-                            <tr>
-                                <td><a href="/company/" class="menu">Компании</a></td>
-                            </tr>
-                            <tr>
-                                <td><a href="/catalog/" class="menu">Каталог</a></td>
-                            </tr>
-                            
                         </table>
 
                     </td>
                     <td>
+
+                    {foreach from=$companyList item=company}
+                        <div>{$company->title}</div>
+                        {if $company->getAddressList() !== false}
+                            {foreach from=$company->getAddressList() item=address}
+                                {$address->city->title}, {$address->address} {$address->phone}<br/>
+                            {/foreach}
+                        {/if}
+                        <br/>
+                    {/foreach}
+
+                    {*
                     {$this->layout()->content}
+                    *}
                     </td>
                 </tr>
             </table>

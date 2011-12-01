@@ -10,7 +10,7 @@
 /*
   id,
   city_id,
-  address_id,
+  company_id,
   address,
   phone
 */
@@ -24,13 +24,13 @@ class EK_Company_Address {
     protected $_id;
 
     /**
-     *
+     * @var string
      * @access protected
      */
     protected $_address;
 
     /**
-     *
+     * @var string
      * @access protected
      */
     protected $_phone;
@@ -96,7 +96,7 @@ class EK_Company_Address {
      */
     public function getCompany()
     {
-        return $this->_address;
+        return $this->_company;
     }
 
     /**
@@ -105,7 +105,7 @@ class EK_Company_Address {
      * @return string
      * @access public
      */
-    public function getPnone()
+    public function getPhone()
     {
         return $this->_db->prepareStringToOut($this->_phone);
     } // end of member function getDateCreate
@@ -159,7 +159,7 @@ class EK_Company_Address {
      */
     public function setCompany(EK_Company_Company $value)
     {
-        $this->_address = $value;
+        $this->_company = $value;
     }
 
     /**
@@ -185,13 +185,14 @@ class EK_Company_Address {
 
     /**
      *
-     *
+     * @param $company
      * @return EK_Company_Address
      * @access public
      */
-    public function __construct()
+    public function __construct($company)
     {
         $this->_db = StdLib_DB::getInstance();
+        $this->_company = $company;
     } // end of member function __construct
 
     /**
@@ -203,8 +204,8 @@ class EK_Company_Address {
     public function insertToDb()
     {
         try {
-            $sql = 'INSERT INTO address(title, city_id, description, file)
-                    VALUES ("' . $this->_title . '", ' . $this->_city->getId() . ', "' . $this->_description . '", "")';
+            $sql = 'INSERT INTO company_address(city_id, company_id, address, phone)
+                    VALUES (' . $this->_city->getId() . ', ' . $this->_company->getId() . ', "' . $this->_address . '", "' . $this->_phone . '")';
             $this->_db->query($sql);
 
             $this->_id = $this->_db->getLastInsertId();
@@ -214,7 +215,7 @@ class EK_Company_Address {
     } // end of member function insertToDb
 
 
-    //city_id, title, file, description
+    //city_id, company_id, address, phone
 
     /**
      *
@@ -225,8 +226,9 @@ class EK_Company_Address {
     public function updateToDb()
     {
         try {
-            $sql = 'UPDATE address
-                    SET title="' . $this->_title . '", city_id=' . $this->_city->getId() . ', description="' . $this->_description . '"
+            $sql = 'UPDATE company_address
+                    SET city_id=' . $this->_city->getId() . ', company_id=' . $this->_company->getId() . ',
+                        address="' . $this->_address . '", phone="' . $this->_phone . '"
                     WHERE id=' . $this->_id;
             $this->_db->query($sql);
             
@@ -244,7 +246,7 @@ class EK_Company_Address {
     public function deleteFromDb()
     {
         try {
-            $sql = 'DELETE FROM address
+            $sql = 'DELETE FROM company_address
                     WHERE id=' . $this->_id;
             $this->_db->query($sql);
         } catch (Exception $e) {
@@ -255,21 +257,22 @@ class EK_Company_Address {
     /**
      *
      *
+     * @param $company
      * @param int $id идентификатор задачи
 
-     * @return EK_Company_Company
+     * @return EK_Company_Address
      * @static
      * @access public
      */
-    public static function getInstanceById($id)
+    public static function getInstanceById($company, $id)
     {
         try {
             $db = StdLib_DB::getInstance();
-            $sql = 'SELECT * FROM address WHERE id=' . (int)$id;
+            $sql = 'SELECT * FROM company_address WHERE id=' . (int)$id;
             $result = $db->query($sql, StdLib_DB::QUERY_MOD_ASSOC);
 
             if (isset($result[0])) {
-                $o = new EK_Company_Company();
+                $o = new EK_Company_Address($company);
                 $o->fillFromArray($result[0]);
                 return $o;
             } else {
@@ -282,16 +285,16 @@ class EK_Company_Address {
 
     /**
      *
-     *
+     * @param $company
      * @param array $values
-     * @return EK_Company_Company
+     * @return EK_Company_Address
      * @static
      * @access public
      */
-    public static function getInstanceByArray($values)
+    public static function getInstanceByArray($company, $values)
     {
         try {
-            $o = new EK_Company_Company();
+            $o = new EK_Company_Address($company);
             $o->fillFromArray($values);
             return $o;
         } catch (Exception $e) {
@@ -301,25 +304,25 @@ class EK_Company_Address {
 
     /**
      *
-     *
+     * @param EK_Company_Company $company
 
      * @return array
      * @static
      * @access public
      */
-    public static function getAllInstance()
+    public static function getAllInstance($company)
     {
         try {
             $db = StdLib_DB::getInstance();
 
-            $sql = 'SELECT * FROM address ';
+            $sql = 'SELECT * FROM company_address WHERE  company_id=' . $company->getId();
 
             $result = $db->query($sql, StdLib_DB::QUERY_MOD_ASSOC);
 
             if (isset($result[0])) {
                 $retArray = array();
                 foreach ($result as $res) {
-                    $retArray[] = EK_Company_Company::getInstanceByArray($res);
+                    $retArray[] = EK_Company_Address::getInstanceByArray($company, $res);
                 }
                 return $retArray;
             } else {
@@ -329,27 +332,6 @@ class EK_Company_Address {
             throw new Exception($e->getMessage());
         }
     } // end of member function getAllInstance
-
-    public static function getDocumentByCity(EK_City_City $city)
-    {
-        try {
-            $db = StdLib_DB::getInstance();
-            $sql = 'SELECT * FROM address WHERE city_id=' . $city->getId();
-            $result = $db->query($sql, StdLib_DB::QUERY_MOD_ASSOC);
-
-            if (isset($result[0])) {
-                $retArray = array();
-                foreach ($result as $res) {
-                    $retArray[] = EK_Company_Company::getInstanceByArray($res);
-                }
-                return $retArray;
-            } else {
-                return false;
-            }
-        } catch (Exception $e) {
-            throw new Exception($e->getMessage());
-        }
-    }
 
     /**
      *
@@ -362,10 +344,9 @@ class EK_Company_Address {
     public function fillFromArray($values)
     {
         $this->setId($values['id']);
-        $this->setTitle($values['title']);
-        $this->setDescription($values['description']);
         $this->setCity(EK_City_City::getInstanceById($values['city_id']));
-        $this->_file->setName($values['file']);
+        $this->setAddress($values['address']);
+        $this->setPhone($values['phone']);
 
         //$this->getAttributeList();
     } // end of member function fillFromArray

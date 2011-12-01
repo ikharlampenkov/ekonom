@@ -379,6 +379,25 @@ class EK_Company_Company
         $this->_file->setName($values['file']);
 
         //$this->getAttributeList();
+    }
+
+    /**
+     * @param array $addressList
+     */
+    public function setAddressList($addressList)
+    {
+        $this->_addressList = $addressList;
+    }
+
+    /**
+     * @return array
+     */
+    public function getAddressList()
+    {
+        if (empty($this->_addressList)) {
+            $this->_addressList = EK_Company_Address::getAllInstance($this);
+        }
+        return $this->_addressList;
     } // end of member function fillFromArray
 
     /*

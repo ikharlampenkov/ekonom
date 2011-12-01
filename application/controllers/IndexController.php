@@ -10,7 +10,8 @@ class IndexController extends Zend_Controller_Action
 
     public function indexAction()
     {
-        // action body
+        $this->view->assign('cityList', EK_City_City::getAllInstance());
+        $this->view->assign('companyList', EK_Company_Company::getAllInstance());
     }
 
 

@@ -13,6 +13,7 @@
             <td class="ttovar">{$company->title}</td>
             <td class="ttovar">{$company->city->title}</td>
             <td class="tedit">
+                    <a href="{$this->url(['controller' => $controller,'action' => 'viewAddress', 'idcompany' => $company->id])}">адреса</a><br/>
                     <a href="{$this->url(['controller' => $controller,'action' => 'edit', 'id' => $company->id])}">редактировать</a><br/>
                     <a href="{$this->url(['controller' => $controller,'action' => 'delete', 'id' => $company->id])}" onclick="return confirmDelete('{$company->id}');" style="color: #830000">удалить</a>
             </td>

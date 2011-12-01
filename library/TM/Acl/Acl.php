@@ -65,8 +65,11 @@ class TM_Acl_Acl extends Zend_Acl {
         $this->addResource(new Zend_Acl_Resource('company/add'), 'admin_allow');
         $this->addResource(new Zend_Acl_Resource('company/edit'), 'admin_allow');
         $this->addResource(new Zend_Acl_Resource('company/delete'), 'admin_allow');
-        $this->addResource(new Zend_Acl_Resource('company/addTopic'), 'admin_allow');
-        $this->addResource(new Zend_Acl_Resource('company/editTopic'), 'admin_allow');
+        $this->addResource(new Zend_Acl_Resource('company/viewAddress'), 'admin_allow');
+        $this->addResource(new Zend_Acl_Resource('company/addAddress'), 'admin_allow');
+        $this->addResource(new Zend_Acl_Resource('company/editAddress'), 'admin_allow');
+         $this->addResource(new Zend_Acl_Resource('company/deleteAddress'), 'admin_allow');
+
 
         $this->addResource(new Zend_Acl_Resource('files/'), 'admin_allow');
 

@@ -47,12 +47,6 @@ class CompanyController extends Zend_Controller_Action
             $oCompany->setDescription($data['description']);
             $oCompany->setCity(EK_City_City::getInstanceById($data['city_id']));
 
-            /*
-            foreach ($data['attribute'] as $key => $value) {
-                $oCompany->setAttribute($key, $value);
-            }
-            */
-
             try {
                 $oCompany->updateToDb();
                 $this->_redirect('/company/');
@@ -61,8 +55,6 @@ class CompanyController extends Zend_Controller_Action
             }
 
         }
-
-        //$this->view->assign('attributeHashList', EK_Company_Hash::getAllInstance());
 
         $this->view->assign('cityList', EK_City_City::getAllInstance());
         $this->view->assign('company', $oCompany);
@@ -78,127 +70,72 @@ class CompanyController extends Zend_Controller_Action
             throw new Exception($e->getMessage());
 
         }
-        // action body
     }
 
-    /*
-    public function addattributetypeAction()
+    public function viewaddressAction()
     {
-        $oType = new EK_Attribute_AttributeType(new EK_Company_AttributeTypeMapper());
+        $oCompany = EK_Company_Company::getInstanceById($this->getRequest()->getParam('idcompany'));
+        $this->view->assign('company', $oCompany);
+
+        $this->view->assign('addressList', EK_Company_Address::getAllInstance($oCompany));
+    }
+
+    public function addaddressAction()
+    {
+        $oAddress = new EK_Company_Address(EK_Company_Company::getInstanceById($this->getRequest()->getParam('idcompany')), $this->getRequest()->getParam('id'));
 
         if ($this->getRequest()->isPost()) {
             $data = $this->getRequest()->getParam('data');
-
-            $oType->setTitle($data['title']);
-            $oType->setDescription($data['description']);
-            $oType->setHandler($data['handler']);
+            $oAddress->setAddress($data['address']);
+            $oAddress->setPhone($data['phone']);
+            $oAddress->setCity(EK_City_City::getInstanceById($data['city']));
 
             try {
-                $oType->insertToDb();
-                $this->_redirect('/company/index/parent/' . $this->getRequest()->getParam('parent', 0));
+                $oAddress->insertToDb();
+                $this->_redirect('/company/viewAddress/idcompany/' . $this->getRequest()->getParam('idcompany', 0));
             } catch (Exception $e) {
                 $this->view->assign('exception_msg', $e->getMessage());
             }
 
         }
 
-        $this->view->assign('type', $oType);
+        $this->view->assign('cityList', EK_City_City::getAllInstance());
+        $this->view->assign('address', $oAddress);
     }
 
-    public function editattributetypeAction()
+    public function editaddressAction()
     {
-       $oType = EK_Attribute_AttributeTypeFactory::getAttributeTypeById(new EK_Company_AttributeTypeMapper(), $this->getRequest()->getParam('id'));
+       $oAddress = EK_Company_Address::getInstanceById(EK_Company_Company::getInstanceById($this->getRequest()->getParam('idcompany')), $this->getRequest()->getParam('id'));
 
         if ($this->getRequest()->isPost()) {
             $data = $this->getRequest()->getParam('data');
 
-            $oType->setTitle($data['title']);
-            $oType->setDescription($data['description']);
-            $oType->setHandler($data['handler']);
+            $oAddress->setAddress($data['address']);
+            $oAddress->setPhone($data['phone']);
+            $oAddress->setCity(EK_City_City::getInstanceById($data['city']));
 
             try {
-                $oType->updateToDb();
-                $this->_redirect('/company/index/parent/' . $this->getRequest()->getParam('parent', 0));
+                $oAddress->updateToDb();
+                $this->_redirect('/company/viewAddress/idcompany/' . $this->getRequest()->getParam('idcompany', 0));
             } catch (Exception $e) {
                 $this->view->assign('exception_msg', $e->getMessage());
             }
 
         }
 
-        $this->view->assign('type', $oType);
+        $this->view->assign('cityList', EK_City_City::getAllInstance());
+        $this->view->assign('address', $oAddress);
     }
 
-    public function deleteattributetypeAction()
+    public function deleteaddressAction()
     {
-        $oType = EK_Attribute_AttributeTypeFactory::getAttributeTypeById(new EK_Company_AttributeTypeMapper(), $this->getRequest()->getParam('id'));
+        $oAddress = EK_Company_Address::getInstanceById(EK_Company_Company::getInstanceById($this->getRequest()->getParam('idcompany')), $this->getRequest()->getParam('id'));
         try {
-            $oType->deleteFromDB();
-            $this->_redirect('/company/index/parent/' . $this->getRequest()->getParam('parent', 0));
+            $oAddress->deleteFromDB();
+            $this->_redirect('/company/viewAddress/idcompany/' . $this->getRequest()->getParam('idcompany', 0));
         } catch (Exception $e) {
             throw new Exception($e->getMessage());
         }
     }
-
-    public function addattributehashAction()
-    {
-        $oHash = new EK_Company_Hash();
-
-        if ($this->getRequest()->isPost()) {
-            $data = $this->getRequest()->getParam('data');
-
-            $oHash->setAttributeKey($data['attribute_key']);
-            $oHash->setTitle($data['title']);
-            $oHash->setType(EK_Attribute_AttributeTypeFactory::getAttributeTypeById(new EK_Company_AttributeTypeMapper(), $data['type_id']));
-            $oHash->setValueList($data['list_value']);
-
-            try {
-                $oHash->insertToDb();
-                $this->_redirect('/company/index/parent/' . $this->getRequest()->getParam('parent', 0));
-            } catch (Exception $e) {
-                $this->view->assign('exception_msg', $e->getMessage());
-            }
-
-        }
-
-        $this->view->assign('hash', $oHash);
-        $this->view->assign('attributeTypeList', EK_Attribute_AttributeType::getAllInstance(new EK_Company_AttributeTypeMapper()));
-    }
-
-    public function editattributehashAction()
-    {
-        $oHash = EK_Company_Hash::getInstanceById($this->getRequest()->getParam('key'));
-
-        if ($this->getRequest()->isPost()) {
-            $data = $this->getRequest()->getParam('data');
-
-            $oHash->setTitle($data['title']);
-            $oHash->setType(EK_Attribute_AttributeTypeFactory::getAttributeTypeById(new EK_Company_AttributeTypeMapper(), $data['type_id']));
-            $oHash->setValueList($data['list_value']);
-
-            try {
-                $oHash->updateToDb();
-                $this->_redirect('/company/index/parent/' . $this->getRequest()->getParam('parent', 0));
-            } catch (Exception $e) {
-                $this->view->assign('exception_msg', $e->getMessage());
-            }
-
-        }
-
-        $this->view->assign('hash', $oHash);
-        $this->view->assign('attributeTypeList', EK_Attribute_AttributeType::getAllInstance(new EK_Company_AttributeTypeMapper()));
-    }
-
-    public function deleteattributehashAction()
-    {
-        $oHash = EK_Company_Hash::getInstanceById($this->getRequest()->getParam('key'));
-        try {
-            $oHash->deleteFromDB();
-            $this->_redirect('/company/index/parent/' . $this->getRequest()->getParam('parent', 0));
-        } catch (Exception $e) {
-            throw new Exception($e->getMessage());
-        }
-    }
-    */
-
 }
 
