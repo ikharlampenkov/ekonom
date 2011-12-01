@@ -133,6 +133,10 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap
         Zend_Loader::loadClass('TM_Acl_Acl');
         Zend_Loader::loadClass('CheckAccess');
         Zend_Controller_Front::getInstance()->registerPlugin(new CheckAccess());
+
+        $view = $this->getResource('View');
+        $view->getEngine()->loadPlugin('smarty_block_if_allowed');
+        $view->getEngine()->loadPlugin('smarty_block_if_object_allowed');
         return new TM_Acl_Acl();
     }
 
