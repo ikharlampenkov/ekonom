@@ -256,7 +256,6 @@ class EK_Catalog_Rubric {
             }
         } catch (Exception $e) {
             throw new Exception($e->getMessage());
-            return null;
         }
     }
 
@@ -266,6 +265,28 @@ class EK_Catalog_Rubric {
         $this->setParent($result['parent_id']);
         $this->setIsRoot($result['is_root']);
     }
+
+    public static  function getRubricTree() {
+            $tree = array();
+
+            $root = EK_Catalog_Rubric::getRootRubric();
+            $tree[] = $root;
+
+            $root->_getSubRubricTree($root->id, $tree);
+            return $tree;
+        }
+
+        private function _getSubRubricTree($parent, &$tree) {
+            $result = $this->_db->query('SELECT * FROM product_rubric WHERE parent_id=' . $parent, StdLib_DB::QUERY_MOD_ASSOC);
+            if (isset($result[0])) {
+                foreach ($result as $res) {
+                    $rubric = EK_Catalog_Rubric::getInstanceByArray($res);
+                    $tree[] = $rubric;
+                    $this->_getSubRubricTree($rubric->id, $tree);
+                }
+            } else
+                return false;
+        }
 
 }
 

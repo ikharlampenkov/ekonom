@@ -31,28 +31,6 @@ class EK_Catalog_ProductCatalog {
         }
     }
 
-    public function getRubricTree() {
-        $tree = array();
-
-        $root = EK_Catalog_Rubric::getRootRubric();
-        $tree[] = $root;
-
-        $this->_getSubRubricTree($root->id, $tree);
-        return $tree;
-    }
-
-    private function _getSubRubricTree($parent, &$tree) {
-        $result = $this->_db->query('SELECT * FROM product_rubric WHERE parent_id=' . $parent, StdLib_DB::QUERY_MOD_ASSOC);
-        if (isset($result[0])) {
-            foreach ($result as $res) {
-                $rubric = EK_Catalog_Rubric::getInstanceByArray($res);
-                $tree[] = $rubric;
-                $this->_getSubRubricTree($rubric->id, $tree);
-            }
-        } else
-            return false;
-    }
-
     public function getAllProduct($rubric_id) {
         try {
             $result = $this->_db->query('SELECT * FROM product WHERE product_rubric_id=' . $rubric_id, StdLib_DB::QUERY_MOD_ASSOC);

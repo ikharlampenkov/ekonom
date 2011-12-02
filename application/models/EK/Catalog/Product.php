@@ -20,7 +20,7 @@ class EK_Catalog_Product {
      */
     protected $_title;
     /**
-     *
+     * @var TM_FileManager_Image
      * @access protected
      */
     protected $_img = null;
@@ -127,7 +127,7 @@ class EK_Catalog_Product {
     /**
      *
      *
-     * @return Shop::EK_Catalog_Rubric
+     * @return EK_Catalog_Rubric
      * @access public
      */
     public function getRubric() {
@@ -147,9 +147,9 @@ class EK_Catalog_Product {
     /**
      *
      *
-     * @param string value
+     * @param string $value
 
-     * @return
+     * @return void
      * @access public
      */
     public function setTitle($value) {
@@ -174,16 +174,14 @@ class EK_Catalog_Product {
 
     public function setImg($value) {
         if (is_null($this->_img)) {
-            global $__cfg;
-            $this->_img = new TM_FileManager_Image($__cfg['file.upload.dir'], $value);
+            $this->_img = $value;
         } else {
             $this->_img->setName($value);
         }
-        $this->_shortText = $value;
     }
 
     public function setRubric($value) {
-        $this->_rubric = EK_Catalog_Rubric::getInstanceById($value);
+        $this->_rubric = $value;
     }
 
     /**
@@ -217,7 +215,7 @@ class EK_Catalog_Product {
 
             $this->_id = $this->_db->getLastInsertId();
 
-            $this->_img = new TM_FileManager_Image($__cfg['file.upload.dir']);
+            $this->_img = new TM_FileManager_Image(Zend_Registry::get('production')->files->path);
 
             $fileName = $this->_img->download('img');
             if ($fileName !== false) {
@@ -297,8 +295,8 @@ class EK_Catalog_Product {
     protected function assignByHash(array $result) {
         $this->setId($result['id']);
         $this->setTitle($result['title']);
-        $this->setRubric($result['product_rubric_id']);
-        $this->setImg($result['img']);
+        $this->setRubric(EK_Catalog_Rubric::getInstanceById($result['product_rubric_id']));
+        $this->setImg(new TM_FileManager_Image(Zend_Registry::get('production')->files->path, $result['img']));
         $this->setShortText($result['short_text']);
         $this->setFullText($result['full_text']);
         $this->setPrice($result['price']);

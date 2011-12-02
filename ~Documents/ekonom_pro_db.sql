@@ -1,9 +1,9 @@
 -- phpMyAdmin SQL Dump
--- version 3.3.9.2
+-- version 
 -- http://www.phpmyadmin.net
 --
 -- Хост: ekonom.mysql
--- Время создания: Дек 01 2011 г., 20:59
+-- Время создания: Дек 02 2011 г., 17:43
 -- Версия сервера: 5.1.41
 -- Версия PHP: 5.2.10
 
@@ -11,6 +11,7 @@ SET FOREIGN_KEY_CHECKS=0;
 SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT=0;
 START TRANSACTION;
+SET time_zone = "+00:00";
 
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
@@ -27,7 +28,7 @@ START TRANSACTION;
 --
 -- Структура таблицы `city`
 --
--- Создание: Ноя 23 2011 г., 22:43
+-- Создание: Ноя 23 2011 г., 15:43
 --
 
 DROP TABLE IF EXISTS `city`;
@@ -51,7 +52,7 @@ INSERT INTO `city` (`id`, `title`, `phone_code`) VALUES
 --
 -- Структура таблицы `company`
 --
--- Создание: Ноя 24 2011 г., 08:53
+-- Создание: Ноя 24 2011 г., 01:53
 --
 
 DROP TABLE IF EXISTS `company`;
@@ -78,7 +79,7 @@ INSERT INTO `company` (`id`, `city_id`, `title`, `file`, `description`) VALUES
 --
 -- Структура таблицы `company_address`
 --
--- Создание: Ноя 24 2011 г., 08:53
+-- Создание: Ноя 24 2011 г., 01:53
 --
 
 DROP TABLE IF EXISTS `company_address`;
@@ -106,7 +107,7 @@ INSERT INTO `company_address` (`id`, `company_id`, `city_id`, `address`, `phone`
 --
 -- Структура таблицы `content_page`
 --
--- Создание: Ноя 23 2011 г., 22:43
+-- Создание: Ноя 23 2011 г., 15:43
 --
 
 DROP TABLE IF EXISTS `content_page`;
@@ -119,17 +120,12 @@ CREATE TABLE IF NOT EXISTS `content_page` (
   UNIQUE KEY `page_title_UNIQUE` (`page_title`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
 
---
--- Дамп данных таблицы `content_page`
---
-
-
 -- --------------------------------------------------------
 
 --
 -- Структура таблицы `goods`
 --
--- Создание: Ноя 23 2011 г., 22:43
+-- Создание: Ноя 23 2011 г., 15:43
 --
 
 DROP TABLE IF EXISTS `goods`;
@@ -143,17 +139,12 @@ CREATE TABLE IF NOT EXISTS `goods` (
   KEY `fk_goods_company1` (`company_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
---
--- Дамп данных таблицы `goods`
---
-
-
 -- --------------------------------------------------------
 
 --
 -- Структура таблицы `goods_hash`
 --
--- Создание: Ноя 23 2011 г., 22:43
+-- Создание: Ноя 23 2011 г., 15:43
 --
 
 DROP TABLE IF EXISTS `goods_hash`;
@@ -168,17 +159,12 @@ CREATE TABLE IF NOT EXISTS `goods_hash` (
   KEY `fk_goods_hash_goods_attribute_type1` (`type_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
---
--- Дамп данных таблицы `goods_hash`
---
-
-
 -- --------------------------------------------------------
 
 --
 -- Структура таблицы `product`
 --
--- Создание: Дек 01 2011 г., 17:34
+-- Создание: Дек 01 2011 г., 10:34
 --
 
 DROP TABLE IF EXISTS `product`;
@@ -209,7 +195,7 @@ INSERT INTO `product` (`id`, `product_rubric_id`, `title`, `img`, `short_text`, 
 --
 -- Структура таблицы `product_rubric`
 --
--- Создание: Дек 01 2011 г., 17:35
+-- Создание: Дек 01 2011 г., 10:35
 --
 
 DROP TABLE IF EXISTS `product_rubric`;
@@ -240,7 +226,7 @@ INSERT INTO `product_rubric` (`id`, `title`, `parent_id`, `is_root`) VALUES
 --
 -- Структура таблицы `rubric`
 --
--- Создание: Ноя 23 2011 г., 22:43
+-- Создание: Ноя 23 2011 г., 15:43
 --
 
 DROP TABLE IF EXISTS `rubric`;
@@ -252,17 +238,12 @@ CREATE TABLE IF NOT EXISTS `rubric` (
   KEY `fk_rubric_rubric1` (`parent_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
---
--- Дамп данных таблицы `rubric`
---
-
-
 -- --------------------------------------------------------
 
 --
 -- Структура таблицы `tm_acl_role`
 --
--- Создание: Дек 01 2011 г., 16:48
+-- Создание: Дек 01 2011 г., 09:48
 --
 
 DROP TABLE IF EXISTS `tm_acl_role`;
@@ -314,6 +295,16 @@ INSERT INTO `tm_acl_role` (`tm_user_role_id`, `tm_user_resource_id`, `is_allow`,
 (1, 84, 1, 'show'),
 (1, 85, 1, 'show'),
 (1, 86, 1, 'show'),
+(1, 87, 1, 'show'),
+(1, 88, 1, 'show'),
+(1, 89, 1, 'show'),
+(1, 90, 1, 'show'),
+(1, 91, 1, 'show'),
+(1, 92, 1, 'show'),
+(1, 93, 1, 'show'),
+(1, 94, 1, 'show'),
+(1, 95, 1, 'show'),
+(1, 96, 1, 'show'),
 (3, 1, 1, 'show'),
 (3, 2, 1, 'show'),
 (3, 3, 1, 'show'),
@@ -337,6 +328,27 @@ INSERT INTO `tm_acl_role` (`tm_user_role_id`, `tm_user_resource_id`, `is_allow`,
 (3, 70, 0, 'show'),
 (3, 71, 0, 'show'),
 (3, 72, 0, 'show'),
+(3, 76, 0, 'show'),
+(3, 77, 0, 'show'),
+(3, 78, 0, 'show'),
+(3, 79, 0, 'show'),
+(3, 80, 1, 'show'),
+(3, 81, 1, 'show'),
+(3, 82, 0, 'show'),
+(3, 83, 0, 'show'),
+(3, 84, 0, 'show'),
+(3, 85, 1, 'show'),
+(3, 86, 1, 'show'),
+(3, 87, 0, 'show'),
+(3, 88, 0, 'show'),
+(3, 89, 0, 'show'),
+(3, 90, 0, 'show'),
+(3, 91, 0, 'show'),
+(3, 92, 0, 'show'),
+(3, 93, 0, 'show'),
+(3, 94, 0, 'show'),
+(3, 95, 0, 'show'),
+(3, 96, 0, 'show'),
 (4, 1, 1, 'show'),
 (4, 2, 1, 'show'),
 (4, 3, 1, 'show'),
@@ -360,8 +372,8 @@ INSERT INTO `tm_acl_role` (`tm_user_role_id`, `tm_user_resource_id`, `is_allow`,
 (4, 70, 0, 'show'),
 (4, 71, 0, 'show'),
 (4, 72, 0, 'show'),
-(4, 76, 1, 'show'),
-(4, 77, 1, 'show'),
+(4, 76, 0, 'show'),
+(4, 77, 0, 'show'),
 (4, 78, 0, 'show'),
 (4, 79, 0, 'show'),
 (4, 80, 1, 'show'),
@@ -371,6 +383,16 @@ INSERT INTO `tm_acl_role` (`tm_user_role_id`, `tm_user_resource_id`, `is_allow`,
 (4, 84, 0, 'show'),
 (4, 85, 1, 'show'),
 (4, 86, 1, 'show'),
+(4, 87, 1, 'show'),
+(4, 88, 1, 'show'),
+(4, 89, 1, 'show'),
+(4, 90, 0, 'show'),
+(4, 91, 0, 'show'),
+(4, 92, 0, 'show'),
+(4, 93, 0, 'show'),
+(4, 94, 1, 'show'),
+(4, 95, 1, 'show'),
+(4, 96, 1, 'show'),
 (5, 1, 1, 'show'),
 (5, 2, 1, 'show'),
 (5, 3, 1, 'show'),
@@ -394,7 +416,7 @@ INSERT INTO `tm_acl_role` (`tm_user_role_id`, `tm_user_resource_id`, `is_allow`,
 --
 -- Структура таблицы `tm_task_attribute`
 --
--- Создание: Дек 01 2011 г., 16:48
+-- Создание: Дек 01 2011 г., 09:48
 --
 
 DROP TABLE IF EXISTS `tm_task_attribute`;
@@ -409,17 +431,12 @@ CREATE TABLE IF NOT EXISTS `tm_task_attribute` (
   KEY `fk_tm_task_attribute_tm_task1` (`task_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
---
--- Дамп данных таблицы `tm_task_attribute`
---
-
-
 -- --------------------------------------------------------
 
 --
 -- Структура таблицы `tm_task_attribute_type`
 --
--- Создание: Дек 01 2011 г., 16:48
+-- Создание: Дек 01 2011 г., 09:48
 --
 
 DROP TABLE IF EXISTS `tm_task_attribute_type`;
@@ -447,7 +464,7 @@ INSERT INTO `tm_task_attribute_type` (`id`, `title`, `handler`, `description`) V
 --
 -- Структура таблицы `tm_task_hash`
 --
--- Создание: Дек 01 2011 г., 16:48
+-- Создание: Дек 01 2011 г., 09:48
 --
 
 DROP TABLE IF EXISTS `tm_task_hash`;
@@ -478,7 +495,7 @@ INSERT INTO `tm_task_hash` (`task_id`, `attribute_key`, `title`, `type_id`, `lis
 --
 -- Структура таблицы `tm_user`
 --
--- Создание: Дек 01 2011 г., 16:48
+-- Создание: Дек 01 2011 г., 09:48
 --
 
 DROP TABLE IF EXISTS `tm_user`;
@@ -507,7 +524,7 @@ INSERT INTO `tm_user` (`id`, `login`, `password`, `role_id`, `date_create`) VALU
 --
 -- Структура таблицы `tm_user_attribute`
 --
--- Создание: Дек 01 2011 г., 16:48
+-- Создание: Дек 01 2011 г., 09:48
 --
 
 DROP TABLE IF EXISTS `tm_user_attribute`;
@@ -535,7 +552,7 @@ INSERT INTO `tm_user_attribute` (`user_id`, `attribute_key`, `type_id`, `attribu
 --
 -- Структура таблицы `tm_user_attribute_type`
 --
--- Создание: Дек 01 2011 г., 16:48
+-- Создание: Дек 01 2011 г., 09:48
 --
 
 DROP TABLE IF EXISTS `tm_user_attribute_type`;
@@ -562,7 +579,7 @@ INSERT INTO `tm_user_attribute_type` (`id`, `title`, `handler`, `description`) V
 --
 -- Структура таблицы `tm_user_hash`
 --
--- Создание: Дек 01 2011 г., 16:48
+-- Создание: Дек 01 2011 г., 09:48
 --
 
 DROP TABLE IF EXISTS `tm_user_hash`;
@@ -589,7 +606,7 @@ INSERT INTO `tm_user_hash` (`user_id`, `attribute_key`, `title`, `type_id`, `lis
 --
 -- Структура таблицы `tm_user_profile`
 --
--- Создание: Дек 01 2011 г., 16:48
+-- Создание: Дек 01 2011 г., 09:48
 --
 
 DROP TABLE IF EXISTS `tm_user_profile`;
@@ -601,17 +618,12 @@ CREATE TABLE IF NOT EXISTS `tm_user_profile` (
   KEY `fk_tm_user_profile_tm_user1` (`user_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
---
--- Дамп данных таблицы `tm_user_profile`
---
-
-
 -- --------------------------------------------------------
 
 --
 -- Структура таблицы `tm_user_resource`
 --
--- Создание: Дек 01 2011 г., 16:48
+-- Создание: Дек 01 2011 г., 09:48
 --
 
 DROP TABLE IF EXISTS `tm_user_resource`;
@@ -620,7 +632,7 @@ CREATE TABLE IF NOT EXISTS `tm_user_resource` (
   `title` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `title` (`title`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=87 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=97 ;
 
 --
 -- Дамп данных таблицы `tm_user_resource`
@@ -628,6 +640,12 @@ CREATE TABLE IF NOT EXISTS `tm_user_resource` (
 
 INSERT INTO `tm_user_resource` (`id`, `title`) VALUES
 (85, 'catalog'),
+(94, 'catalog/add'),
+(91, 'catalog/addRubric'),
+(96, 'catalog/delete'),
+(93, 'catalog/deleteRubric'),
+(95, 'catalog/edit'),
+(92, 'catalog/editRubric'),
 (86, 'catalog/index'),
 (76, 'city'),
 (78, 'city/add'),
@@ -635,9 +653,13 @@ INSERT INTO `tm_user_resource` (`id`, `title`) VALUES
 (77, 'city/index'),
 (80, 'company'),
 (82, 'company/add'),
+(88, 'company/addAddress'),
 (84, 'company/delete'),
+(90, 'company/deleteAddress'),
 (83, 'company/edit'),
+(89, 'company/editAddress'),
 (81, 'company/index'),
+(87, 'company/viewAddress'),
 (4, 'index/index'),
 (1, 'login'),
 (2, 'login/index'),
@@ -667,7 +689,7 @@ INSERT INTO `tm_user_resource` (`id`, `title`) VALUES
 --
 -- Структура таблицы `tm_user_role`
 --
--- Создание: Дек 01 2011 г., 16:48
+-- Создание: Дек 01 2011 г., 09:48
 --
 
 DROP TABLE IF EXISTS `tm_user_role`;
@@ -692,7 +714,7 @@ INSERT INTO `tm_user_role` (`id`, `title`) VALUES
 --
 -- Структура таблицы `user`
 --
--- Создание: Ноя 24 2011 г., 08:48
+-- Создание: Ноя 24 2011 г., 01:48
 --
 
 DROP TABLE IF EXISTS `user`;
@@ -721,7 +743,7 @@ INSERT INTO `user` (`id`, `login`, `password`, `role_id`, `date_create`, `compan
 --
 -- Структура таблицы `user_attribute`
 --
--- Создание: Ноя 23 2011 г., 22:43
+-- Создание: Ноя 23 2011 г., 15:43
 --
 
 DROP TABLE IF EXISTS `user_attribute`;
@@ -736,17 +758,12 @@ CREATE TABLE IF NOT EXISTS `user_attribute` (
   KEY `fk_user_attribute_user_attribute_type1` (`type_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
---
--- Дамп данных таблицы `user_attribute`
---
-
-
 -- --------------------------------------------------------
 
 --
 -- Структура таблицы `user_attribute_type`
 --
--- Создание: Ноя 23 2011 г., 22:43
+-- Создание: Ноя 23 2011 г., 15:43
 --
 
 DROP TABLE IF EXISTS `user_attribute_type`;
@@ -758,17 +775,12 @@ CREATE TABLE IF NOT EXISTS `user_attribute_type` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
---
--- Дамп данных таблицы `user_attribute_type`
---
-
-
 -- --------------------------------------------------------
 
 --
 -- Структура таблицы `user_hash`
 --
--- Создание: Ноя 23 2011 г., 22:44
+-- Создание: Ноя 23 2011 г., 15:44
 --
 
 DROP TABLE IF EXISTS `user_hash`;
@@ -781,17 +793,12 @@ CREATE TABLE IF NOT EXISTS `user_hash` (
   KEY `fk_user_hash_user_attribute_type1` (`type_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
---
--- Дамп данных таблицы `user_hash`
---
-
-
 -- --------------------------------------------------------
 
 --
 -- Структура таблицы `user_role`
 --
--- Создание: Ноя 24 2011 г., 08:48
+-- Создание: Ноя 24 2011 г., 01:48
 --
 
 DROP TABLE IF EXISTS `user_role`;
