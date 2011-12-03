@@ -23,7 +23,7 @@ class EK_Catalog_Rubric {
      */
     protected $_title;
     /**
-     *
+     * @var EK_Company_Rubric
      * @access protected
      */
     protected $_parent;
@@ -37,16 +37,14 @@ class EK_Catalog_Rubric {
     /**
      *
      *
-     * @param int id
+     * @param int $id
+     * @param string $title
+     * @param EK_Company_Rubric|null $parent
 
-     * @param string name
-
-     * @param int parent
-
-     * @return
+     * @return EK_Catalog_Rubric
      * @access public
      */
-    public function __construct($id = 0, $title = '', $parent = 0) {
+    public function __construct($id = 0, $title = '', $parent = null) {
         $this->_db = StdLib_DB::getInstance();
 
         $this->_id = $id;
@@ -83,7 +81,7 @@ class EK_Catalog_Rubric {
     /**
      *
      *
-     * @return int
+     * @return EK_Company_Rubric
      * @access public
      */
     public function getParent() {
@@ -114,9 +112,9 @@ class EK_Catalog_Rubric {
     /**
      *
      *
-     * @param int value
+     * @param int $value
 
-     * @return
+     * @return void
      * @access public
      */
     public function setId($value) {
@@ -128,9 +126,9 @@ class EK_Catalog_Rubric {
     /**
      *
      *
-     * @param string value
+     * @param string $value
 
-     * @return
+     * @return void
      * @access public
      */
     public function setTitle($value) {
@@ -142,9 +140,9 @@ class EK_Catalog_Rubric {
     /**
      *
      *
-     * @param int value
+     * @param EK_Company_Rubric $value
 
-     * @return int
+     * @return void
      * @access public
      */
     public function setParent($value) {
@@ -156,9 +154,9 @@ class EK_Catalog_Rubric {
     /**
      *
      *
-     * @param bool value
+     * @param bool $value
 
-     * @return
+     * @return void
      * @access public
      */
     public function setIsRoot($value) {
@@ -170,29 +168,29 @@ class EK_Catalog_Rubric {
     public function insertToDb() {
         try {
             $sql = 'INSERT INTO product_rubric (title, parent_id, is_root)
-                    VALUES ("' . $this->_title . '", ' . $this->_parent . ', ' . EK_Catalog_Rubric::IS_NOT_ROOT . ')';
+                    VALUES ("' . $this->_title . '", ' . $this->_parent->id . ', ' . EK_Catalog_Rubric::IS_NOT_ROOT . ')';
             $this->_db->query($sql);
+
+            $this->_id = $this->_db->getLastInsertID();
         } catch (Exception $e) {
             throw new Exception($e->getMessage());
-            return null;
         }
     }
 
     public function updateToDb() {
         try {
             $sql = 'UPDATE product_rubric
-                    SET title="' . $this->_title . '", parent_id="' . $this->_parent . '", is_root=' . EK_Catalog_Rubric::IS_NOT_ROOT . '
+                    SET title="' . $this->_title . '", parent_id="' . $this->_parent->id . '", is_root=' . EK_Catalog_Rubric::IS_NOT_ROOT . '
                     WHERE id=' . $this->_id;
             $this->_db->query($sql);
         } catch (Exception $e) {
             throw new Exception($e->getMessage());
-            return null;
         }
     }
 
     public function deleteFromDb() {
         try {
-            $tempPC = new ProductCatalog();
+            $tempPC = new EK_Catalog_ProductCatalog();
             $tempPL = $tempPC->getAllProduct($this->_id);
             if ($tempPL !== false) {
                 foreach ($tempPL as $product) {
@@ -209,7 +207,7 @@ class EK_Catalog_Rubric {
 
     public function getPathToRubric(&$path = array()) {
         if ($this->_isRoot != EK_Catalog_Rubric::IS_ROOT) {
-            $tempRubric = EK_Catalog_Rubric::getInstanceById($this->_parent);
+            $tempRubric = EK_Catalog_Rubric::getInstanceById($this->_parent->id);
             if ($tempRubric instanceof EK_Catalog_Rubric) {
                 $path[] = $tempRubric;
                 if ($tempRubric->getIsRoot() != EK_Catalog_Rubric::IS_ROOT) {
@@ -223,6 +221,12 @@ class EK_Catalog_Rubric {
             return false;
     }
 
+    /**
+     * @static
+     * @param $id
+     * @return bool|EK_Catalog_Rubric
+     * @throws Exception
+     */
     public static function getInstanceById($id) {
         try {
             $db = StdLib_DB::getInstance();
@@ -235,7 +239,6 @@ class EK_Catalog_Rubric {
                 return false;
         } catch (Exception $e) {
             throw new Exception($e->getMessage());
-            return false;
         }
     }
 
@@ -262,8 +265,11 @@ class EK_Catalog_Rubric {
     protected function assignByHash($result) {
         $this->setId($result['id']);
         $this->setTitle($result['title']);
-        $this->setParent($result['parent_id']);
+
+        if ()
+        $this->setParent(EK_Catalog_Rubric::getInstanceById($result['parent_id']));
         $this->setIsRoot($result['is_root']);
+
     }
 
     public static  function getRubricTree() {
