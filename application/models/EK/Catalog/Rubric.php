@@ -266,8 +266,9 @@ class EK_Catalog_Rubric {
         $this->setId($result['id']);
         $this->setTitle($result['title']);
 
-        if ()
-        $this->setParent(EK_Catalog_Rubric::getInstanceById($result['parent_id']));
+        if (!empty($result['parent_id'])) {
+            $this->setParent(EK_Catalog_Rubric::getInstanceById($result['parent_id']));
+        }
         $this->setIsRoot($result['is_root']);
 
     }

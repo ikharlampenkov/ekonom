@@ -96,31 +96,66 @@ class CatalogController extends Zend_Controller_Action
     }
 
     public function addrubricAction()
-        {
-            $cur_rubric = EK_Catalog_Rubric::getInstanceById($this->getRequest()->getParam('rubric', 0));
-            $oRubric = new EK_Catalog_Rubric();
-            $oRubric->setParent($cur_rubric);
+    {
+        $cur_rubric = EK_Catalog_Rubric::getInstanceById($this->getRequest()->getParam('rubric', 0));
+        $oRubric = new EK_Catalog_Rubric();
+        $oRubric->setParent($cur_rubric);
 
 
-            if ($this->getRequest()->isPost()) {
-                $data = $this->getRequest()->getParam('data');
+        if ($this->getRequest()->isPost()) {
+            $data = $this->getRequest()->getParam('data');
 
-                $oRubric->setTitle($data['title']);
-                $oRubric->setParent(EK_Catalog_Rubric::getInstanceById($data['rubric']));
+            $oRubric->setTitle($data['title']);
+            $oRubric->setParent(EK_Catalog_Rubric::getInstanceById($data['parent']));
 
-                try {
-                    $oRubric->insertToDb();
-                    $this->_redirect('/catalog/index/rubric/' . $this->getRequest()->getParam('rubric', 0));
-                } catch (Exception $e) {
-                    $this->view->assign('exception_msg', $e->getMessage());
-                }
+            try {
+                $oRubric->insertToDb();
+                $this->_redirect('/catalog/index/rubric/' . $this->getRequest()->getParam('rubric', 0));
+            } catch (Exception $e) {
+                $this->view->assign('exception_msg', $e->getMessage());
             }
-
-            $this->view->assign('rubric_tree', EK_Catalog_Rubric::getRubricTree());
-            $this->view->assign('rubric', $oRubric);
-            $this->view->assign('cur_rubric', $cur_rubric);
         }
 
+        $this->view->assign('rubric_tree', EK_Catalog_Rubric::getRubricTree());
+        $this->view->assign('rubric', $oRubric);
+        $this->view->assign('cur_rubric', $cur_rubric);
+    }
+
+    public function editrubricAction()
+    {
+        $cur_rubric = EK_Catalog_Rubric::getInstanceById($this->getRequest()->getParam('rubric', 0));
+        $oRubric = EK_Catalog_Rubric::getInstanceById($this->getRequest()->getParam('id'));
+
+        if ($this->getRequest()->isPost()) {
+            $data = $this->getRequest()->getParam('data');
+
+            $oRubric->setTitle($data['title']);
+            $oRubric->setParent(EK_Catalog_Rubric::getInstanceById($data['parent']));
+
+            try {
+                $oRubric->updateToDb();
+                $this->_redirect('/catalog/index/rubric/' . $this->getRequest()->getParam('rubric', 0));
+            } catch (Exception $e) {
+                $this->view->assign('exception_msg', $e->getMessage());
+            }
+        }
+
+        $this->view->assign('rubric_tree', EK_Catalog_Rubric::getRubricTree());
+        $this->view->assign('rubric', $oRubric);
+        $this->view->assign('cur_rubric', $cur_rubric);
+    }
+
+    public function deleterubricAction()
+    {
+        $oRubric = EK_Catalog_Rubric::getInstanceById($this->getRequest()->getParam('id'));
+        try {
+            $oRubric->deleteFromDb();
+            $this->_redirect('/catalog/index/rubric/' . $this->getRequest()->getParam('rubric', 0));
+        } catch (Exception $e) {
+            $this->view->assign('exception_msg', $e->getMessage());
+        }
+
+    }
 }
 
 /*
