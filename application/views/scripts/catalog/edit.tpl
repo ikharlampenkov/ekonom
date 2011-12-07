@@ -1,4 +1,4 @@
-<div class="page"><h1>Добавить товар</h1></div><br/>
+<div class="page"><h1>Редактировать товар</h1></div><br/>
 
 <form action="{$this->url(['controller' => $controller,'action' => 'edit', 'rubric' => $cur_rubric->getId()])}" method="post" enctype="multipart/form-data">
     <table width="100%">
@@ -33,6 +33,16 @@
             <td class="ttovar">Полный текст</td>
             <td class="ttovar"><textarea name="data[full_text]">{$product->fullText}</textarea></td>
         </tr>
+
+        {if $attributeHashList!==false}
+        {foreach from=$attributeHashList item=attributeHash}
+            <tr>
+                <td class="ttovar_title">{$attributeHash->title}</td>
+                <td class="ttovar">{$attributeHash->type->getHTMLFrom($attributeHash, $product)}{*<input name="data[attribute][{$attributeHash->attributeKey}]" value="{if $task->searchAttribute($attributeHash->attributeKey)}{$task->getAttribute($attributeHash->attributeKey)->value}{/if}"/>*}</td>
+            </tr>
+        {/foreach}
+        {/if}
+
     </table>
     <input id="save" name="save" type="submit" value="Сохранить"/>
 </form>

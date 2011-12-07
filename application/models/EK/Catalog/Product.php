@@ -39,7 +39,14 @@ class EK_Catalog_Product {
      * @access protected
      */
     protected $_rubric = null;
+
     protected $_price = 0;
+
+    /**
+     * @var array
+     */
+    protected $_attributeList = array();
+
     private $_db;
 
     /**
@@ -207,7 +214,6 @@ class EK_Catalog_Product {
     }
 
     public function insertToDb() {
-        global $__cfg;
         try {
             $sql = 'INSERT INTO product (product_rubric_id, title, short_text, full_text, price)
                     VALUES (' . $this->_rubric->id . ', "' . $this->_title . '", "' . $this->_shortText . '", "' . $this->_fullText . '", ' . $this->_price . ')';
@@ -224,7 +230,6 @@ class EK_Catalog_Product {
             }
         } catch (Exception $e) {
             throw new Exception($e->getMessage());
-            return null;
         }
     }
 
@@ -244,7 +249,6 @@ class EK_Catalog_Product {
             }
         } catch (Exception $e) {
             throw new Exception($e->getMessage());
-            return null;
         }
     }
 
@@ -282,7 +286,6 @@ class EK_Catalog_Product {
             }
         } catch (Exception $e) {
             throw new Exception($e->getMessage());
-            return null;
         }
     }
 
@@ -300,6 +303,68 @@ class EK_Catalog_Product {
         $this->setShortText($result['short_text']);
         $this->setFullText($result['full_text']);
         $this->setPrice($result['price']);
+
+        $this->getAttributeList();
+    }
+
+    public function getAttributeList()
+    {
+         if (is_null($this->_attributeList) || empty($this->_attributeList)) {
+            try {
+                $attributeList = TM_Attribute_Attribute::getAllInstance(new EK_Catalog_AttributeMapper(), $this);
+                if ($attributeList !== false) {
+                    foreach ($attributeList as $attribute) {
+                        $this->_attributeList[$attribute->attribyteKey] = $attribute;
+                    }
+                }
+
+                return $this->_attributeList;
+            } catch (Exception $e) {
+                throw new Exception($e->getMessage());
+            }
+        } else {
+            return $this->_attributeList;
+        }
+    }
+
+    public function getAttribute($key)
+    {
+        return $this->_attributeList[$key];
+    }
+
+    public function setAttribute($key, $value)
+    {
+        if ($this->searchAttribute($key)) {
+            $this->_attributeList[$key]->setValue($value);
+
+        } else {
+            $oHash = EK_Catalog_Hash::getInstanceById($key);
+            $oAttribute = new TM_Attribute_Attribute(new EK_Catalog_AttributeMapper(), $this);
+            $oAttribute->setAttribyteKey($key);
+            $oAttribute->setType($oHash->getType());
+            $oAttribute->setValue($value);
+
+            $this->_attributeList[$key] = $oAttribute;
+            $oAttribute->insertToDB();
+        }
+    }
+
+    public function searchAttribute($needle)
+    {
+        if (is_null($this->_attributeList) && !empty($this->_attributeList)) {
+            return false;
+        } else {
+            return array_key_exists($needle, $this->_attributeList);
+        }
+    }
+
+    protected function saveAttributeList()
+    {
+        if (!is_null($this->_attributeList) && !empty($this->_attributeList)) {
+            foreach ($this->_attributeList as $attribute) {
+                $attribute->updateToDB();
+            }
+        }
     }
 
 }

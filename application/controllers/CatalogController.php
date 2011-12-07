@@ -25,6 +25,9 @@ class CatalogController extends Zend_Controller_Action
         $this->view->assign('rubric_list', $o_catalog->getAllRubric($cur_rubric->getId()));
         $this->view->assign('product_list', $o_catalog->getAllProduct($cur_rubric->getId()));
         $this->view->assign('path', $cur_rubric->getPathToRubric());
+
+        $this->view->assign('attributeTypeList', TM_Attribute_AttributeType::getAllInstance(new EK_Catalog_AttributeTypeMapper()));
+        $this->view->assign('attributeHashList', EK_Catalog_Hash::getAllInstance());
     }
 
     public function addAction()
@@ -70,6 +73,10 @@ class CatalogController extends Zend_Controller_Action
             $oProduct->setFullText($data['full_text']);
             $oProduct->setPrice($data['price']);
 
+            foreach ($data['attribute'] as $key => $value) {
+                $oProduct->setAttribute($key, $value);
+            }
+
             try {
                 $oProduct->updateToDb();
                 $this->_redirect('/catalog/index/rubric/' . $this->getRequest()->getParam('rubric', 0));
@@ -80,6 +87,7 @@ class CatalogController extends Zend_Controller_Action
 
         $this->view->assign('rubric_tree', EK_Catalog_Rubric::getRubricTree());
         $this->view->assign('product', $oProduct);
+        $this->view->assign('attributeHashList', EK_Catalog_Hash::getAllInstance($oProduct));
         $this->view->assign('cur_rubric', $cur_rubric);
     }
 
@@ -156,100 +164,134 @@ class CatalogController extends Zend_Controller_Action
         }
 
     }
+
+    public function addattributetypeAction()
+    {
+        $oType = new TM_Attribute_AttributeType(new EK_Catalog_AttributeTypeMapper());
+
+        if ($this->getRequest()->isPost()) {
+            $data = $this->getRequest()->getParam('data');
+
+            $oType->setTitle($data['title']);
+            $oType->setDescription($data['description']);
+            $oType->setHandler($data['handler']);
+
+            try {
+                $oType->insertToDb();
+                $this->_redirect('/catalog/index/rubric/' . $this->getRequest()->getParam('rubric', 0));
+            } catch (Exception $e) {
+                $this->view->assign('exception_msg', $e->getMessage());
+            }
+
+        }
+
+        $this->view->assign('type', $oType);
+    }
+
+    public function editattributetypeAction()
+    {
+        $oType = TM_Attribute_AttributeTypeFactory::getAttributeTypeById(new EK_Catalog_AttributeTypeMapper(), $this->getRequest()->getParam('id'));
+
+        if ($this->getRequest()->isPost()) {
+            $data = $this->getRequest()->getParam('data');
+
+            $oType->setTitle($data['title']);
+            $oType->setDescription($data['description']);
+            $oType->setHandler($data['handler']);
+
+            try {
+                $oType->updateToDb();
+                $this->_redirect('/catalog/index/rubric/' . $this->getRequest()->getParam('rubric', 0));
+            } catch (Exception $e) {
+                $this->view->assign('exception_msg', $e->getMessage());
+            }
+
+        }
+
+        $this->view->assign('type', $oType);
+    }
+
+    public function deleteattributetypeAction()
+    {
+        $oType = TM_Attribute_AttributeTypeFactory::getAttributeTypeById(new EK_Catalog_AttributeTypeMapper(), $this->getRequest()->getParam('id'));
+        try {
+            $oType->deleteFromDB();
+            $this->_redirect('/catalog/index/rubric/' . $this->getRequest()->getParam('rubric', 0));
+        } catch (Exception $e) {
+            throw new Exception($e->getMessage());
+        }
+    }
+
+    public function addattributehashAction()
+    {
+        $oHash = new EK_Catalog_Hash();
+
+        if ($this->getRequest()->isPost()) {
+            $data = $this->getRequest()->getParam('data');
+
+            $oHash->setAttributeKey($data['attribute_key']);
+            $oHash->setTitle($data['title']);
+            $oHash->setType(TM_Attribute_AttributeTypeFactory::getAttributeTypeById(new EK_Catalog_AttributeTypeMapper(), $data['type_id']));
+            $oHash->setValueList($data['list_value']);
+
+            try {
+                $oHash->insertToDb();
+                $this->_redirect('/catalog/index/rubric/' . $this->getRequest()->getParam('rubric', 0));
+            } catch (Exception $e) {
+                $this->view->assign('exception_msg', $e->getMessage());
+            }
+
+        }
+
+        $this->view->assign('hash', $oHash);
+        $this->view->assign('attributeTypeList', TM_Attribute_AttributeType::getAllInstance(new EK_Catalog_AttributeTypeMapper()));
+    }
+
+    public function editattributehashAction()
+    {
+        $oHash = EK_Catalog_Hash::getInstanceById($this->getRequest()->getParam('key'));
+
+        if ($this->getRequest()->isPost()) {
+            $data = $this->getRequest()->getParam('data');
+
+            $oHash->setTitle($data['title']);
+            $oHash->setType(TM_Attribute_AttributeTypeFactory::getAttributeTypeById(new EK_Catalog_AttributeTypeMapper(), $data['type_id']));
+            $oHash->setValueList($data['list_value']);
+
+            try {
+                $oHash->updateToDb();
+                $this->_redirect('/catalog/index/rubric/' . $this->getRequest()->getParam('rubric', 0));
+            } catch (Exception $e) {
+                $this->view->assign('exception_msg', $e->getMessage());
+            }
+
+        }
+
+        $this->view->assign('hash', $oHash);
+        $this->view->assign('attributeTypeList', TM_Attribute_AttributeType::getAllInstance(new EK_Catalog_AttributeTypeMapper()));
+    }
+
+    public function deleteattributehashAction()
+    {
+        $oHash = EK_Catalog_Hash::getInstanceById($this->getRequest()->getParam('key'));
+        try {
+            $oHash->deleteFromDB();
+            $this->_redirect('/catalog/index/rubric/' . $this->getRequest()->getParam('rubric', 0));
+        } catch (Exception $e) {
+            throw new Exception($e->getMessage());
+        }
+    }
 }
 
 /*
  *
 
-    if (isset($_GET['rubric'])) {
-        $cur_rubric = Rubric::getInstanceById($_GET['rubric']);
-    } else {
-        $cur_rubric = Rubric::getRootRubric();
-    }
 
-    $o_smarty->assign('cur_rubric', $cur_rubric);
-
-    if ($action == 'add_rubric') {
-        if (isset($data)) {
-            $o_rubric = new Rubric();
-            $o_rubric->setTitle($data['title']);
-            $o_rubric->setParent($data['parent']);
-            $o_rubric->insertToDb();
-            simo_functions::chLocation('?page=' . $page . '&rubric=' . $cur_rubric->id);
-            exit;
-        }
-
-        $o_smarty->assign('rubric_tree', $o_catalog->getRubricTree());
-        $o_smarty->assign('txt', 'Добавить рубрику');
-    } elseif ($action == 'edit_rubric' && isset($_GET['id'])) {
-        $o_rubric = Rubric::getInstanceById($_GET['id']);
-
-        if (isset($data)) {
-            $o_rubric->setTitle($data['title']);
-            $o_rubric->setParent($data['parent']);
-            $o_rubric->updateToDb();
-            simo_functions::chLocation('?page=' . $page . '&rubric=' . $cur_rubric->id);
-            exit;
-        }
-
-        $o_smarty->assign('rubric', $o_rubric);
-        $o_smarty->assign('rubric_tree', $o_catalog->getRubricTree());
-        $o_smarty->assign('txt', 'Редактировать рубрику');
-    } elseif ($action == 'del_rubric' && isset($_GET['id'])) {
-        $o_rubric = Rubric::getInstanceById($_GET['id']);
-        $o_rubric->deleteFromDb();
-        unset($o_rubric);
-        simo_functions::chLocation('?page=' . $page . '&rubric=' . $cur_rubric->id);
-        exit;
-    } elseif ($action == 'add_product') {
-        if (isset($data)) {
-            $oProduct = new EK_Catalog_Product();
-            $oProduct->setTitle($data['title']);
-            $oProduct->setRubric($data['rubric']);
-            $oProduct->setShortText($data['short_text']);
-            $oProduct->setFullText($data['full_text']);
-            $oProduct->setPrice($data['price']);
-            $oProduct->insertToDb();
-            simo_functions::chLocation('?page=' . $page . '&rubric=' . $cur_rubric->id);
-            exit;
-        }
-
-        $o_smarty->assign('rubric_tree', $o_catalog->getRubricTree());
-        $o_smarty->assign('txt', 'Добавить товар');
-    } elseif ($action == 'edit_product' && isset($_GET['id'])) {
-        $oProduct = EK_Catalog_Product::getInstanceById($_GET['id']);
-
-        if (isset($data)) {
-            $oProduct->setTitle($data['title']);
-            $oProduct->setRubric($data['rubric']);
-            $oProduct->setShortText($data['short_text']);
-            $oProduct->setFullText($data['full_text']);
-            $oProduct->setPrice($data['price']);
-            $oProduct->updateToDb();
-            simo_functions::chLocation('?page=' . $page . '&rubric=' . $cur_rubric->id);
-            exit;
-        }
-
-        $o_smarty->assign('product', $oProduct);
-        $o_smarty->assign('rubric_tree', $o_catalog->getRubricTree());
-        $o_smarty->assign('txt', 'Редактировать товар');
-    } elseif ($action == 'del_product' && isset($_GET['id'])) {
-        $oProduct = EK_Catalog_Product::getInstanceById($_GET['id']);
-        $oProduct->deleteFromDb();
-        unset($oProduct);
-        simo_functions::chLocation('?page=' . $page . '&rubric=' . $cur_rubric->id);
-        exit;
-    } elseif ($action == 'del_img' && isset($_GET['id'])) {
+    if ($action == 'del_img' && isset($_GET['id'])) {
         $oProduct = EK_Catalog_Product::getInstanceById($_GET['id']);
         $oProduct->deleteImg();
         simo_functions::chLocation('?page=' . $page . '&rubric=' . $cur_rubric->id);
         exit;
-    } else {
-
-
-        $o_smarty->assign('rubric_list', $o_catalog->getAllRubric($cur_rubric->getId()));
-        $o_smarty->assign('product_list', $o_catalog->getAllProduct($cur_rubric->getId()));
-        $o_smarty->assign('path', $cur_rubric->getPathToRubric());
-    }
+    } 
  */
 
