@@ -127,8 +127,7 @@ class TM_Attribute_Attribute
     /**
      *
      *
-     * @param Attribute::TM_Attribute_AttribyteType $value
-
+     * @param TM_Attribute_AttributeType $value
      * @return void
      * @access public
      */
@@ -147,7 +146,10 @@ class TM_Attribute_Attribute
      */
     public function setValue($value)
     {
-        $this->_value = $this->_db->prepareString($value);
+        if ($value === 'on') {
+            $this->_value = 1;
+        }
+        $this->_value = trim($this->_db->prepareString($value));
     } // end of member function setValue
 
     /**

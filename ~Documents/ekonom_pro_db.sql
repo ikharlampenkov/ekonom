@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Хост: ekonom.mysql
--- Время создания: Дек 02 2011 г., 17:43
+-- Время создания: Дек 08 2011 г., 11:58
 -- Версия сервера: 5.1.41
 -- Версия PHP: 5.2.10
 
@@ -193,6 +193,97 @@ INSERT INTO `product` (`id`, `product_rubric_id`, `title`, `img`, `short_text`, 
 -- --------------------------------------------------------
 
 --
+-- Структура таблицы `product_attribute`
+--
+-- Создание: Дек 07 2011 г., 09:48
+--
+
+DROP TABLE IF EXISTS `product_attribute`;
+CREATE TABLE IF NOT EXISTS `product_attribute` (
+  `product_id` int(10) unsigned NOT NULL,
+  `attribute_key` varchar(255) NOT NULL,
+  `type_id` int(10) unsigned NOT NULL,
+  `attribute_value` text NOT NULL,
+  `is_fill` tinyint(1) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`product_id`,`attribute_key`),
+  KEY `fk_tm_task_attribute_tm_task_attribute_type1` (`type_id`),
+  KEY `fk_tm_task_attribute_tm_task1` (`product_id`),
+  KEY `attribute_key` (`attribute_key`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Дамп данных таблицы `product_attribute`
+--
+
+INSERT INTO `product_attribute` (`product_id`, `attribute_key`, `type_id`, `attribute_value`, `is_fill`) VALUES
+(11, 'description', 1, '', 0),
+(11, 'description2', 2, 'авравраврварав', 0),
+(11, 'full_text', 2, '', 0),
+(11, 'test_list', 3, 'Один', 0),
+(11, 'Срок', 4, '07.12.2011 17:15:56', 0);
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `product_attribute_type`
+--
+-- Создание: Дек 07 2011 г., 09:45
+--
+
+DROP TABLE IF EXISTS `product_attribute_type`;
+CREATE TABLE IF NOT EXISTS `product_attribute_type` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `title` varchar(50) NOT NULL,
+  `handler` varchar(100) NOT NULL,
+  `description` varchar(255) NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `title_UNIQUE` (`title`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=5 ;
+
+--
+-- Дамп данных таблицы `product_attribute_type`
+--
+
+INSERT INTO `product_attribute_type` (`id`, `title`, `handler`, `description`) VALUES
+(1, 'Строка', 'TM_Attribute_AttributeType', 'Любое строковое значение'),
+(2, 'Текст', 'TM_Attribute_AttributeTypeText', 'Многострочный  текст'),
+(3, 'Список', 'TM_Attribute_AttributeTypeList', 'Список из возможных вариантов'),
+(4, 'Дата', 'TM_Attribute_AttributeTypeDate', '');
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `product_hash`
+--
+-- Создание: Дек 07 2011 г., 10:17
+--
+
+DROP TABLE IF EXISTS `product_hash`;
+CREATE TABLE IF NOT EXISTS `product_hash` (
+  `product_id` int(10) unsigned DEFAULT NULL,
+  `attribute_key` varchar(255) NOT NULL,
+  `title` varchar(255) NOT NULL,
+  `type_id` int(10) unsigned NOT NULL,
+  `list_value` text,
+  PRIMARY KEY (`attribute_key`),
+  KEY `fk_tm_task_hash_tm_task_attribute_type1` (`type_id`),
+  KEY `fk_tm_task_hash_tm_task1` (`product_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Дамп данных таблицы `product_hash`
+--
+
+INSERT INTO `product_hash` (`product_id`, `attribute_key`, `title`, `type_id`, `list_value`) VALUES
+(NULL, 'description', 'Текстовое описание задачи', 1, ''),
+(NULL, 'description2', 'description', 2, ' '),
+(NULL, 'full_text', 'Большой текст', 2, ''),
+(NULL, 'test_list', 'Проверка списка', 3, 'Один||Два||Три '),
+(NULL, 'Срок', 'Срок выполнения задачи', 4, ' ');
+
+-- --------------------------------------------------------
+
+--
 -- Структура таблицы `product_rubric`
 --
 -- Создание: Дек 01 2011 г., 10:35
@@ -206,7 +297,7 @@ CREATE TABLE IF NOT EXISTS `product_rubric` (
   `is_root` tinyint(1) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`),
   KEY `fk_product_rubric_product_rubric` (`parent_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=9 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=10 ;
 
 --
 -- Дамп данных таблицы `product_rubric`
@@ -219,7 +310,8 @@ INSERT INTO `product_rubric` (`id`, `title`, `parent_id`, `is_root`) VALUES
 (4, 'Непродовольственные товары', 1, 0),
 (5, 'Бытовая химия', 4, 0),
 (6, 'Одежда', 4, 0),
-(8, 'Овощи', 2, 0);
+(8, 'Овощи', 2, 0),
+(9, 'Новая рубрика', 1, 0);
 
 -- --------------------------------------------------------
 
@@ -294,7 +386,7 @@ INSERT INTO `tm_acl_role` (`tm_user_role_id`, `tm_user_resource_id`, `is_allow`,
 (1, 83, 1, 'show'),
 (1, 84, 1, 'show'),
 (1, 85, 1, 'show'),
-(1, 86, 1, 'show'),
+(1, 86, 1, 'show,show-attribute-hash,show-attribute-type'),
 (1, 87, 1, 'show'),
 (1, 88, 1, 'show'),
 (1, 89, 1, 'show'),
@@ -853,6 +945,20 @@ ALTER TABLE `goods_hash`
 --
 ALTER TABLE `product`
   ADD CONSTRAINT `fk_product_product_rubric1` FOREIGN KEY (`product_rubric_id`) REFERENCES `product_rubric` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+--
+-- Ограничения внешнего ключа таблицы `product_attribute`
+--
+ALTER TABLE `product_attribute`
+  ADD CONSTRAINT `product_attribute_ibfk_3` FOREIGN KEY (`type_id`) REFERENCES `product_attribute_type` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `product_attribute_ibfk_1` FOREIGN KEY (`product_id`) REFERENCES `product` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `product_attribute_ibfk_2` FOREIGN KEY (`attribute_key`) REFERENCES `product_hash` (`attribute_key`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Ограничения внешнего ключа таблицы `product_hash`
+--
+ALTER TABLE `product_hash`
+  ADD CONSTRAINT `product_hash_ibfk_1` FOREIGN KEY (`type_id`) REFERENCES `product_attribute_type` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Ограничения внешнего ключа таблицы `product_rubric`

@@ -1,83 +1,201 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html>
 <head>
-    <meta http-equiv="Content-type" content="text/html; charset=utf-8"/>
-    <meta name="description" content="{$description}"/>
-    <meta name="keywords" content="{$keywords}"/>
-    <meta name="author-corporate" content=""/>
-    <meta name="publisher-email" content=""/>
-
-    <link rel="stylesheet" type="text/css" href="/css/main.css"/>
-    <script type="text/javascript" language="javascript" src="/js/jquery.js"></script>
-    <script type="text/javascript" language="javascript" src="/js/main.js"></script>
-
-    <title>{$title}</title>
-
+    <title>Ekonom.pro - сайт.</title>
+    <link rel="stylesheet" href="/css/main2.css"/>
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico"/>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+    <script type="text/javascript" src="/js/html5.js"></script>
+    <script type="text/javascript" src="/js/share42.js"></script>
 </head>
-
 <body>
+<div id="page">
+    <header>
+        <h1 id="logo"><span>Ekonom.pro &mdash; мегавъебенный сайт</span></h1>
 
-<table style="width: 100%; height: 100%;" cellpadding="0" cellspacing="0" border="1" align="center">
-    <tr>
-        <td style="height: 60px;">
+        <div id="choose-city-form">
+            <h4><label for="city_name">Выбрать город</label></h4>
 
-            <table style="height: 60px;">
-                <tr>
-                    <td></td>
-                    <td style="width: 300px; vertical-align: middle;">Выберите город:
-                        <select id="selectCity">
-                        {if !empty($cityList)}
-                            {foreach from=$cityList item=city}
-                                <option value="{$city->id}">{$city->title}</option>
-                            {/foreach}
-                        {/if}
-
-                        </select>
-                    </td>
-                </tr>
-            </table>
-
-
-        </td>
-    </tr>
-    <tr>
-        <td>
-
-            <table border="0" cellpadding="20" width="100%">
-                <tr>
-                    <td width="230">
-
-                        <table border="0" cellpadding="10" cellspacing="10" width="100%" height="100%">
-                            <tr>
-                                <td><h1>Меню:</h1></td>
-                            </tr>
-
-                        </table>
-
-                    </td>
-                    <td>
-
-                    {foreach from=$companyList item=company}
-                        <div>{$company->title}</div>
-                        {if $company->getAddressList() !== false}
-                            {foreach from=$company->getAddressList() item=address}
-                                {$address->city->title}, {$address->address} {$address->phone}<br/>
-                            {/foreach}
-                        {/if}
-                        <br/>
+            <form class="b-form" action="/choose-city" method="post">
+                <select name="city_name" id="city_name">
+                {if !empty($cityList)}
+                    {foreach from=$cityList item=city}
+                        <option value="{$city->id}">{$city->title}</option>
                     {/foreach}
+                {/if}
+                </select>
+            </form>
+        </div>
 
-                    {*
-                    {$this->layout()->content}
-                    *}
-                    </td>
-                </tr>
-            </table>
+        <div id="search-form">
+            <h4><label for="search_query">Поиск по сайту</label></h4>
 
-        </td>
-    </tr>
-</table>
+            <form action="/search" method="get">
+                <fieldset>
+                    <input type="text" name="query" id="search_query" placeholder="Я ищу:">
+                    <input type="submit" value="Найти" id="submit">
+                </fieldset>
+            </form>
+        </div>
+    </header>
+
+    <div id="content">
+        <nav id="main-nav">
+            <ul>
+                <li><a href="/actions">Акции</a></li>
+                <li><a href="/sales">Распродажи</a></li>
+                <li><a href="/coupons">Купоны</a></li>
+                <li><a href="/companies">Компании</a></li>
+                <li><a href="/about">О нас</a></li>
+                <li><a href="/contacts">Контактная информация</a></li>
+            </ul>
+        </nav>
+
+        <div id="slider">
+
+            <ul id="slides">
+                <li class="slide">
+                    <h3>Большой теннис<br/> 300Р в месяц</h3>
+                    <img src="/i/slide1.jpg" alt="Слайд №1">
+
+                    <p class="description">Абонемент на 1 занятие в неделю в спорткомплексе Олимпийский.</p>
+                </li>
+                <!--
+                <li class="slide">
+                    <h3>Большой теннис<br/> 300Р в месяц</h3>
+                    <img src="/i/slide1.jpg" alt="Слайд №1">
+
+                    <p class="description">Абонемент на 1 занятие в неделю в спорткомплексе Олимпийский.</p>
+                </li>-->
+            </ul>
+            <a href="#previous" class="previous"></a>
+            <a href="#next" class="next"></a>
+
+            <div id="shadow"></div>
+        </div>
+
+        <article id="main-content">
+
+        {foreach from=$companyList item=company}
+            <div>{$company->title}</div>
+            {if $company->getAddressList() !== false}
+                {foreach from=$company->getAddressList() item=address}
+                    {$address->city->title}, {$address->address} {$address->phone}<br/>
+                {/foreach}
+            {/if}
+            <br/>
+        {/foreach}
+
+        {*
+        {$this->layout()->content}
+        *}
+
+            <h1 class="heading">Акции города</h1>
+
+            <ul id="actions" class="clearfix">
+                <li>
+                    <h3><a href="/actions/1">Телефон LG Prada</a></h3>
+                    <img src="/uploads/action1.png" alt=""></li>
+                <li>
+                    <h3><a href="/actions/2">Суперджинсы</a></h3>
+                    <img src="/uploads/action2.jpg" alt=""></li>
+                <li>
+                    <h3><a href="/actions/3">Башмаки со скидкой</a></h3>
+                    <img src="/uploads/action3.jpg" alt=""></li>
+                <li>
+                    <h3><a href="/actions/1">Телефон LG Prada</a></h3>
+                    <img src="/uploads/action1.png" alt=""></li>
+                <li>
+                    <h3><a href="/actions/2">Суперджинсы</a></h3>
+                    <img src="/uploads/action2.jpg" alt=""></li>
+                <li>
+                    <h3><a href="/actions/3">Башмаки со скидкой</a></h3>
+                    <img src="/uploads/action3.jpg" alt=""></li>
+                <li>
+                    <h3><a href="/actions/1">Телефон LG Prada</a></h3>
+                    <img src="/uploads/action1.png" alt=""></li>
+                <li>
+                    <h3><a href="/actions/2">Суперджинсы</a></h3>
+                    <img src="/uploads/action2.jpg" alt=""></li>
+                <li>
+                    <h3><a href="/actions/3">Башмаки со скидкой</a></h3>
+                    <img src="/uploads/action3.jpg" alt=""></li>
+                <li>
+                    <h3><a href="/actions/1">Телефон LG Prada</a></h3>
+                    <img src="/uploads/action1.png" alt=""></li>
+                <li>
+                    <h3><a href="/actions/2">Суперджинсы</a></h3>
+                    <img src="/uploads/action2.jpg" alt=""></li>
+                <li>
+                    <h3><a href="/actions/3">Башмаки со скидкой</a></h3>
+                    <img src="/uploads/action3.jpg" alt=""></li>
+                <li>
+                    <h3><a href="/actions/1">Телефон LG Prada</a></h3>
+                    <img src="/uploads/action1.png" alt=""></li>
+                <li>
+                    <h3><a href="/actions/2">Суперджинсы</a></h3>
+                    <img src="/uploads/action2.jpg" alt=""></li>
+                <li>
+                    <h3><a href="/actions/3">Башмаки со скидкой</a></h3>
+                    <img src="/uploads/action3.jpg" alt=""></li>
+            </ul>
+
+            <div id="paginator">
+                <a href="/actions?page=1">&larr;</a>
+                <ul class="pages-list">
+                    <li><a href="/actions?page=1">1</a></li>
+                    <li><a href="/actions?page=2" class="active">2</a></li>
+                    <li><a href="/actions?page=3">3</a></li>
+                </ul>
+                <a href="/actions?page=3">&rarr;</a>
+            </div>
+
+            <aside>
+                <div id="banners" class="clearfix">
+                    <div class="banner size490_84">
+                        <a href="http://yandex.ru"><img src="/uploads/banner.png"/></a>
+                    </div>
+                    <div class="banner size490_84">
+                        <a href="http://yandex.ru"><img src="/uploads/banner.png"/></a>
+                    </div>
+                </div>
+
+                <div id="share">
+                    <script type="text/javascript">
+                        //<!--
+                        share42('/i/');
+                        //-->
+                    </script>
+
+                    <div id="plusone">
+                        <g:plusone></g:plusone>
+                    </div>
 
 
+                    <script type="text/javascript">//<!--
+                    window.___gcfg = { lang: 'ru' };
+
+                    (function () {
+                    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+                    po.src = 'https://apis.google.com/js/plusone.js';
+                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+                     })();
+                    //-->
+                    </script>
+                </div>
+            </aside>
+        </article>
+    </div>
+</div>
+
+<footer>
+    <div id="footer-inner" class="clearfix">
+        <p id="copyright">Ekonom.pro &copy; 2011</p>
+
+        <p id="conditions"><a href="/conditions">Общие условия пользования сайтом</a></p>
+
+        <div id="phone" class="nobr"><span>+7 (3842) 77 77 77</span></div>
+    </div>
+</footer>
 </body>
 </html>
