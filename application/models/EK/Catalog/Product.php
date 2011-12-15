@@ -4,7 +4,8 @@
  * class EK_Catalog_Product
  *
  */
-class EK_Catalog_Product {
+class EK_Catalog_Product
+{
     /** Aggregations: */
     /** Compositions: */
     /*     * * Attributes: ** */
@@ -43,6 +44,12 @@ class EK_Catalog_Product {
     protected $_price = 0;
 
     /**
+     * @var EK_Company_Company
+     * @access protected
+     */
+    protected $_company = null;
+
+    /**
      * @var array
      */
     protected $_attributeList = array();
@@ -55,7 +62,8 @@ class EK_Catalog_Product {
      * @return
      * @access public
      */
-    public function __construct($id = 0, $title = '') {
+    public function __construct($id = 0, $title = '')
+    {
         $this->_db = StdLib_DB::getInstance();
 
         $this->_id = $id;
@@ -64,7 +72,8 @@ class EK_Catalog_Product {
 
 // end of member function __construct
 
-    public function __get($name) {
+    public function __get($name)
+    {
         $method = "get{$name}";
         if (method_exists($this, $method)) {
             return $this->$method();
@@ -77,7 +86,8 @@ class EK_Catalog_Product {
      * @return int
      * @access public
      */
-    public function getId() {
+    public function getId()
+    {
         return $this->_id;
     }
 
@@ -89,7 +99,8 @@ class EK_Catalog_Product {
      * @return string
      * @access public
      */
-    public function getTitle() {
+    public function getTitle()
+    {
         return $this->_title;
     }
 
@@ -101,7 +112,8 @@ class EK_Catalog_Product {
      * @return FileManager::TM_FileManager_Image
      * @access public
      */
-    public function getImg() {
+    public function getImg()
+    {
         return $this->_img;
     }
 
@@ -113,7 +125,8 @@ class EK_Catalog_Product {
      * @return string
      * @access public
      */
-    public function getShortText() {
+    public function getShortText()
+    {
         return $this->_shortText;
     }
 
@@ -125,7 +138,8 @@ class EK_Catalog_Product {
      * @return string
      * @access public
      */
-    public function getFullText() {
+    public function getFullText()
+    {
         return $this->_fullText;
     }
 
@@ -137,17 +151,20 @@ class EK_Catalog_Product {
      * @return EK_Catalog_Rubric
      * @access public
      */
-    public function getRubric() {
+    public function getRubric()
+    {
         return $this->_rubric;
     }
 
 // end of member function getRubric
 
-    public function getPrice() {
+    public function getPrice()
+    {
         return $this->_price;
     }
 
-    public function setId($value) {
+    public function setId($value)
+    {
         $this->_id = $value;
     }
 
@@ -155,11 +172,11 @@ class EK_Catalog_Product {
      *
      *
      * @param string $value
-
      * @return void
      * @access public
      */
-    public function setTitle($value) {
+    public function setTitle($value)
+    {
         $this->_title = $value;
     }
 
@@ -169,17 +186,18 @@ class EK_Catalog_Product {
      *
      *
      * @param string value
-
      * @return
      * @access public
      */
-    public function setShortText($value) {
+    public function setShortText($value)
+    {
         $this->_shortText = $value;
     }
 
 // end of member function setShortText
 
-    public function setImg($value) {
+    public function setImg($value)
+    {
         if (is_null($this->_img)) {
             $this->_img = $value;
         } else {
@@ -187,7 +205,8 @@ class EK_Catalog_Product {
         }
     }
 
-    public function setRubric($value) {
+    public function setRubric($value)
+    {
         $this->_rubric = $value;
     }
 
@@ -195,17 +214,18 @@ class EK_Catalog_Product {
      *
      *
      * @param string $value
-
      * @return void
      * @access public
      */
-    public function setFullText($value) {
+    public function setFullText($value)
+    {
         $this->_fullText = $value;
     }
 
 // end of member function setFullText
 
-    public function setPrice($value) {
+    public function setPrice($value)
+    {
         if (!empty($value)) {
             $this->_price = str_replace(',', '.', $value);
         } else {
@@ -213,13 +233,32 @@ class EK_Catalog_Product {
         }
     }
 
-    public function insertToDb() {
+    /**
+     * @param \EK_Company_Company $company
+     */
+    public function setCompany($company)
+    {
+        $this->_company = $company;
+    }
+
+    /**
+     * @return \EK_Company_Company
+     */
+    public function getCompany()
+    {
+        return $this->_company;
+    }
+
+    public function insertToDb()
+    {
         try {
-            $sql = 'INSERT INTO product (product_rubric_id, title, short_text, full_text, price)
-                    VALUES (' . $this->_rubric->id . ', "' . $this->_title . '", "' . $this->_shortText . '", "' . $this->_fullText . '", ' . $this->_price . ')';
+            $sql = 'INSERT INTO product (product_rubric_id, title, short_text, full_text, price, company_id)
+                    VALUES (' . $this->_rubric->id . ', "' . $this->_title . '", "' . $this->_shortText . '",
+                           "' . $this->_fullText . '", ' . $this->_price . ', ' . $this->_company->id . ')';
             $this->_db->query($sql);
 
             $this->_id = $this->_db->getLastInsertId();
+            $this->saveAttributeList();
 
             $this->_img = new TM_FileManager_Image(Zend_Registry::get('production')->files->path);
 
@@ -233,14 +272,16 @@ class EK_Catalog_Product {
         }
     }
 
-    public function updateToDb() {
+    public function updateToDb()
+    {
         try {
             $sql = 'UPDATE product
                     SET product_rubric_id=' . $this->_rubric->id . ', title="' . $this->_title . '",
                         short_text="' . $this->_shortText . '", full_text="' . $this->_fullText . '",
-                        price=' . $this->_price . '
+                        price=' . $this->_price . ', company_id=' . $this->_company->id . '
                     WHERE id=' . $this->_id;
             $this->_db->query($sql);
+            $this->saveAttributeList();
 
             $fileName = $this->_img->download('img');
             if ($fileName !== false) {
@@ -252,7 +293,8 @@ class EK_Catalog_Product {
         }
     }
 
-    public function deleteFromDb() {
+    public function deleteFromDb()
+    {
         try {
             $this->_img->delete();
 
@@ -263,7 +305,8 @@ class EK_Catalog_Product {
         }
     }
 
-    public function deleteImg() {
+    public function deleteImg()
+    {
         try {
             $this->_img->delete();
 
@@ -275,7 +318,8 @@ class EK_Catalog_Product {
         }
     }
 
-    public static function getInstanceById($id) {
+    public static function getInstanceById($id)
+    {
         try {
             $db = StdLib_DB::getInstance();
             $result = $db->query('SELECT * FROM product WHERE id=' . $id, StdLib_DB::QUERY_MOD_ASSOC);
@@ -289,13 +333,15 @@ class EK_Catalog_Product {
         }
     }
 
-    public static function getInstanceByArray(array $array) {
+    public static function getInstanceByArray(array $array)
+    {
         $o = new EK_Catalog_Product();
         $o->assignByHash($array);
         return $o;
     }
 
-    protected function assignByHash(array $result) {
+    protected function assignByHash(array $result)
+    {
         $this->setId($result['id']);
         $this->setTitle($result['title']);
         $this->setRubric(EK_Catalog_Rubric::getInstanceById($result['product_rubric_id']));
@@ -304,12 +350,14 @@ class EK_Catalog_Product {
         $this->setFullText($result['full_text']);
         $this->setPrice($result['price']);
 
+        $this->setCompany(EK_Company_Company::getInstanceById($result['company_id']));
+
         $this->getAttributeList();
     }
 
     public function getAttributeList()
     {
-         if (is_null($this->_attributeList) || empty($this->_attributeList)) {
+        if (is_null($this->_attributeList) || empty($this->_attributeList)) {
             try {
                 $attributeList = TM_Attribute_Attribute::getAllInstance(new EK_Catalog_AttributeMapper(), $this);
                 if ($attributeList !== false) {

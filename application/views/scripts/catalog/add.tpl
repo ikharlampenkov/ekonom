@@ -7,6 +7,17 @@
             <td class="ttovar"><input name="data[title]" value="{$product->title}"/></td>
         </tr>
         <tr>
+            <td class="ttovar">Компания</td>
+            <td class="ttovar"><select name="data[company]">
+            {if $companyList!==false}
+                {foreach from=$companyList item=company}
+                <option value="{$company->id}" {if $company->id==$product->company->id}selected="selected"{/if}>{$company->title}</option>
+            {/foreach}
+            {/if}
+            </select>
+            </td>
+        </tr>
+        <tr>
             <td class="ttovar">Рисунок</td>
             <td class="ttovar"><input type="file" name="img"/></td>
         </tr>

@@ -35,6 +35,7 @@ class CatalogController extends Zend_Controller_Action
         $cur_rubric = EK_Catalog_Rubric::getInstanceById($this->getRequest()->getParam('rubric', 0));
         $oProduct = new EK_Catalog_Product();
         $oProduct->setRubric($cur_rubric);
+        $oProduct->setCompany(EK_Company_Company::getInstanceById(1));
 
 
         if ($this->getRequest()->isPost()) {
@@ -42,9 +43,14 @@ class CatalogController extends Zend_Controller_Action
 
             $oProduct->setTitle($data['title']);
             $oProduct->setRubric(EK_Catalog_Rubric::getInstanceById($data['rubric']));
+            $oProduct->setCompany(EK_Company_Company::getInstanceById($data['company']));
             $oProduct->setShortText($data['short_text']);
             $oProduct->setFullText($data['full_text']);
             $oProduct->setPrice($data['price']);
+
+            foreach ($data['attribute'] as $key => $value) {
+                $oProduct->setAttribute($key, $value);
+            }
 
             try {
                 $oProduct->insertToDb();
@@ -55,6 +61,7 @@ class CatalogController extends Zend_Controller_Action
         }
 
         $this->view->assign('rubric_tree', EK_Catalog_Rubric::getRubricTree());
+        $this->view->assign('companyList', EK_Company_Company::getAllInstance());
         $this->view->assign('product', $oProduct);
         $this->view->assign('cur_rubric', $cur_rubric);
     }
@@ -69,6 +76,7 @@ class CatalogController extends Zend_Controller_Action
 
             $oProduct->setTitle($data['title']);
             $oProduct->setRubric(EK_Catalog_Rubric::getInstanceById($data['rubric']));
+            $oProduct->setCompany(EK_Company_Company::getInstanceById($data['company']));
             $oProduct->setShortText($data['short_text']);
             $oProduct->setFullText($data['full_text']);
             $oProduct->setPrice($data['price']);
@@ -86,6 +94,7 @@ class CatalogController extends Zend_Controller_Action
         }
 
         $this->view->assign('rubric_tree', EK_Catalog_Rubric::getRubricTree());
+        $this->view->assign('companyList', EK_Company_Company::getAllInstance());
         $this->view->assign('product', $oProduct);
         $this->view->assign('attributeHashList', EK_Catalog_Hash::getAllInstance($oProduct));
         $this->view->assign('cur_rubric', $cur_rubric);

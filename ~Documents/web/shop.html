@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ekonom.pro - меганевъебенный сайт.</title>
+    <link rel="stylesheet" href="css/main.css"/>
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <script type="text/javascript" src="js/html5.js"></script>
+    <script type="text/javascript" src="js/share42.js"></script>
+</head>
+<body>
+<div id="page">
+    <header>
+        <h1 id="logo"><a href="/" title="Вернуться на главную"><span>Ekonom.pro &mdash; мегавъебенный сайт</span></a></h1>
+
+        <div id="choose-city-form">
+            <h4><label for="city_name">Выбрать город</label></h4>
+            <form class="b-form" action="/choose-city" method="post">
+                <select name="city_name" id="city_name">
+                    <option value="1" selected="selected">Кемерово</option>
+                    <option value="2">Новосибирк</option>
+                    <option value="3">Новокузнецк</option>
+                </select>
+            </form>
+        </div>
+
+        <div id="search-form">
+            <h4><label for="search_query">Поиск по сайту</label></h4>
+            <form action="/search" method="get">
+                <fieldset>
+                    <input type="text" name="query" id="search_query" placeholder="Я ищу:">
+                    <input type="submit" value="Найти" id="submit">
+                </fieldset>
+            </form>
+        </div>
+    </header>
+
+    <div id="content" class="clearfix">
+        <nav id="main-nav">
+            <ul>
+                <li><a href="/actions">Акции</a></li>
+                <li><a href="/sales">Распродажи</a></li>
+                <li><a href="/coupons">Купоны</a></li>
+                <li>
+                    <a href="/companies">Компании</a>
+                    <ul class="first-level submenu">
+                        <li><a href="/companies/auto">Автомобили</a></li>
+                        <li>
+                            <a href="/companies/clothes">Одежда</a>
+                            <ul class="submenu second-level">
+                                <li>
+                                    <a href="/companies/clothes/men">Мужская одежда</a>
+                                    <ul class="submenu third-level">
+                                        <li><a href="/companies/clothes/teenagers/shoes">Обувь</a></li>
+                                        <li><a href="/companies/clothes/teenagers/jeans">Джинсы</a></li>
+                                        <li><a href="/companies/clothes/teenagers/sports">Спортивная одежда</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="/companies/clothes/women">Женская одежда</a></li>
+                                <li><a href="/companies/clothes/children">Детская одежда</a></li>
+                                <li>
+                                    <a href="/companies/clothes/teenagers">Одежда для подростков</a>
+                                    <ul class="submenu third-level">
+                                        <li><a href="/companies/clothes/teenagers/shoes">Обувь</a></li>
+                                        <li><a href="/companies/clothes/teenagers/jeans">Джинсы</a></li>
+                                        <li><a href="/companies/clothes/teenagers/sports">Спортивная одежда</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><a href="/companies/household">Бытовая техника</a></li>
+                        <li><a href="/companies/computers">Компьютеры</a></li>
+                        <li><a href="/companies/food">Продукты питания</a></li>
+                    </ul>
+                </li>
+                <li><a href="/about">О нас</a></li>
+                <li><a href="/contacts">Контактная информация</a></li>
+            </ul>
+        </nav>
+
+        <article id="main-content" class="shop-description">
+            <h1>Prada</h1>
+            <div class="clearfix inner">
+                <div class="gallery">
+                    <div class="big-image">
+                        <img src="uploads/gallery.jpg" width="420" height="270" alt="Комментарий к первому фото" data-preview="/uploads/gallery_preview.jpg" />
+                        <h5 class="title">Комментарий к первому фото</h5>
+                        <a href="#previous" class="previous"></a>
+                        <a href="#next" class="next"></a>
+                    </div>
+
+                    <ul class="previews">
+                        <li>
+                            <a href="/uploads/gallery1.jpg" title="Комментарий ко второму фото">
+                                <img src="uploads/gallery1_preview.jpg" title="Превью второго фото" class="shadow-image"/>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/uploads/gallery2.jpg" title="Комментарий ко второму фото">
+                                <img src="uploads/gallery2_preview.jpg" title="Превью второго фото" class="shadow-image"/>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/uploads/gallery3.jpg" title="Комментарий ко второму фото">
+                                <img src="uploads/gallery3_preview.jpg" title="Превью второго фото" class="shadow-image"/>
+                            </a>
+                        </li>
+                        <li class="empty"></li>
+                    </ul>
+                </div>
+
+                <div class="information">
+                    <img class="shop-logo shadow-image" src="uploads/prada_logo.jpg" alt="Логотип магазина Prada" />
+
+                    <h3>Краткое описание магазина или товара</h3>
+                    <p>Prada – всемирно известный Дом Моды, выпускающий коллекции модной одежды и аксессуаров.</p>
+
+                    <h3>Адреса магазинов</h3>
+                    <ul class="addresses-list">
+                        <li>
+                            <span class="nobr">Пр. Ленина, 90/1, ТРК "Променад"</span>,<br/>
+                            <span class="phone nobr">+7 (3842) 77-77-77</span>
+                        </li>
+                        <li>
+                            <span class="nobr">Пр. Ленина, 90/1, ТРК "Променад"</span>,<br/>
+                            <span class="phone nobr">+7 (3842) 77-77-77</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div id="share" class="clear">
+                    <script type="text/javascript">
+                    //<!--
+                        share42('/images/');
+                    //-->
+                    </script>
+
+                    <div id="plusone">
+                        <g:plusone></g:plusone>
+                    </div>
+
+
+                    <script type="text/javascript">//<!--
+                      window.___gcfg = {lang: 'ru'};
+
+                      (function() {
+                        var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+                        po.src = 'https://apis.google.com/js/plusone.js';
+                        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+                      })();
+                    //-->
+                    </script>
+                </div>
+            </div>
+
+
+        </article>
+
+        <aside id="sidebar">
+            <section id="adv">
+                <a href="http://yandex.ru">
+                    <img src="uploads/banner.jpg" width="187" height="357"/>
+                </a>
+            </section>
+        </aside>
+    </div>
+</div>
+
+<footer>
+    <div id="footer-inner" class="clearfix">
+        <p id="copyright">Ekonom.pro &copy; 2011</p>
+        <p id="conditions"><a href="/conditions">Общие условия пользования сайтом</a></p>
+        <div id="phone" class="nobr"><span>+7 (3842) 77 77 77</span></div>
+    </div>
+</footer>
+</body>
+</html>
