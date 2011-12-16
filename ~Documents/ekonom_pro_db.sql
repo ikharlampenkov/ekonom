@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Хост: ekonom.mysql
--- Время создания: Дек 15 2011 г., 17:33
+-- Время создания: Дек 16 2011 г., 17:37
 -- Версия сервера: 5.1.41
 -- Версия PHP: 5.2.10
 
@@ -107,16 +107,17 @@ INSERT INTO `company_address` (`id`, `company_id`, `city_id`, `address`, `phone`
 --
 -- Структура таблицы `company_user`
 --
--- Создание: Дек 15 2011 г., 09:28
+-- Создание: Дек 16 2011 г., 10:18
 --
 
 DROP TABLE IF EXISTS `company_user`;
 CREATE TABLE IF NOT EXISTS `company_user` (
   `company_id` int(10) unsigned NOT NULL,
-  `tm_user_id` int(10) unsigned NOT NULL,
+  `user_id` int(10) unsigned NOT NULL,
+  `is_read` tinyint(1) NOT NULL DEFAULT '0',
+  `is_write` tinyint(1) NOT NULL DEFAULT '0',
   `is_moderate` tinyint(1) NOT NULL DEFAULT '0',
-  PRIMARY KEY (`company_id`,`tm_user_id`),
-  KEY `fk_user_company_tm_user1` (`tm_user_id`)
+  PRIMARY KEY (`company_id`,`user_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -788,8 +789,7 @@ ALTER TABLE `company_address`
 -- Ограничения внешнего ключа таблицы `company_user`
 --
 ALTER TABLE `company_user`
-  ADD CONSTRAINT `fk_user_company_company1` FOREIGN KEY (`company_id`) REFERENCES `company` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  ADD CONSTRAINT `fk_user_company_tm_user1` FOREIGN KEY (`tm_user_id`) REFERENCES `tm_user` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+  ADD CONSTRAINT `fk_user_company_company1` FOREIGN KEY (`company_id`) REFERENCES `company` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 --
 -- Ограничения внешнего ключа таблицы `product`

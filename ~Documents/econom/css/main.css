@@ -272,7 +272,7 @@ html {
 
 body {
     min-height: 100%;
-    background: #e6e6e6 url('/i/header_back.png') repeat-x left top;
+    background: #e6e6e6 url('/images/header_back.png') repeat-x left top;
     position: relative;
     overflow-y: scroll;
 }
@@ -293,7 +293,7 @@ body > footer
     position: absolute;
     bottom: 0; left: 0;
     width: 100%;
-    background: #d1d1d1 url('/i/footer_back.png') repeat-x left top;
+    background: #d1d1d1 url('/images/footer_back.png') repeat-x left top;
 }
 
 #footer-inner {
@@ -306,7 +306,7 @@ body > footer
     margin: 40px 20px 0 0;
     width: 399px;
     height: 60px;
-    background: url('/i/logo.png') no-repeat left top;
+    background: url('/images/logo.png') no-repeat left top;
 }
 
 #logo a {
@@ -353,7 +353,7 @@ body > footer
 
 #search-form #submit {
     height: 21px;
-    background: url('/i/search_button_back.png') repeat-x left top;
+    background: url('/images/search_button_back.png') repeat-x left top;
     border: none;
     color: #fff;
     font-size: 12px;
@@ -389,7 +389,7 @@ body > footer
 /* Main navigation bar */
 #main-nav {
     height: 36px;
-    background:  #354d59 url('/i/main_nav.png') repeat-x left top;
+    background:  #354d59 url('/images/main_nav.png') repeat-x left top;
     border-radius: 0 0 23px 23px;
     color: #fff;
     z-index: 999;
@@ -409,7 +409,7 @@ body > footer
     float: left;
     padding: 0 15px;
     height: 100%;
-    background: url('/i/main_nav_li_back.png') no-repeat left top;
+    background: url('/images/main_nav_li_back.png') no-repeat left top;
 }
 
 #main-nav > ul > li:first-child {
@@ -449,7 +449,7 @@ body > footer
 
 #main-nav .first-level,
 #main-nav .third-level {
-    background: #293f4a url('/i/first-level_background.png') repeat-x left bottom;
+    background: #293f4a url('/images/first-level_background.png') repeat-x left bottom;
     top: 35px; left: 0px;
     z-index: 99999;
     border-radius: 0 0 25px 25px;
@@ -458,7 +458,7 @@ body > footer
 
 #main-nav .first-level > li,
 #main-nav .third-level > li {
-    background: url('/i/main-nav-marker.png') no-repeat 5px center ;
+    background: url('/images/main-nav-marker.png') no-repeat 5px center ;
 }
 
 #main-nav .first-level > li:hover,
@@ -485,7 +485,7 @@ body > footer
 }
 
 #main-nav .second-level > li:hover {
-    background: url('/i/second-level_background.png') repeat-x left center;
+    background: url('/images/second-level_background.png') repeat-x left center;
     color: #fff;
 }
 
@@ -566,19 +566,19 @@ body > footer
 }
 
 #slider .previous {
-    background: url('/i/slider_left.png') no-repeat;
+    background: url('/images/slider_left.png') no-repeat;
     left: 25px;
 }
 
 #slider .next {
-    background: url('/i/slider_right.png') no-repeat;
+    background: url('/images/slider_right.png') no-repeat;
     right: 25px;
 }
 
 #slider #shadow {
     width: 1000px;
     height: 32px;
-    background:  url('/i/slider_shadow.png') no-repeat;
+    background:  url('/images/slider_shadow.png') no-repeat;
     position: absolute;
     bottom: 0px;
     left: 0;
@@ -637,7 +637,7 @@ body > footer
     top: 2px;
     right: 2px;
     width: 30px; height: 31px;
-    background: url('/i/discount.png') no-repeat left top;
+    background: url('/images/discount.png') no-repeat left top;
     color: #fff;
     line-height: 30px;
     font-family: ArialNarrow, Arial, sans-serif;
@@ -728,15 +728,15 @@ body > footer
 }
 
 .share42 .facebook {
-    background:url(/i/icons.png) -0px 0;
+    background:url(/images/icons.png) -0px 0;
 }
 
 .share42 .twitter {
-    background:url(/i/icons.png) -24px 0;
+    background:url(/images/icons.png) -24px 0;
 }
 
 .share42 .vkontakte {
-    background:url(/i/icons.png) -48px 0;
+    background:url(/images/icons.png) -48px 0;
 }
 
 #plusone {
@@ -773,7 +773,7 @@ body > footer
 }
 
 .item-description h1 {
-    background: url('/i/shop_heading_background.png') repeat-x left top;
+    background: url('/images/shop_heading_background.png') repeat-x left top;
     height: 55px;
     margin:  0;
     line-height: 55px;
@@ -786,7 +786,7 @@ body > footer
 }
 
 .item-description .inner {
-    background: #ededed url('/i/shop_background.png') repeat-x left top;
+    background: #ededed url('/images/shop_background.png') repeat-x left top;
     border-radius: 0 0 12px 12px;
     padding: 20px;
 }
@@ -802,7 +802,7 @@ body > footer
 }
 
 .item-description .information section {
-    background: url('/i/address_list_border.png') repeat-x left top;
+    background: url('/images/address_list_border.png') repeat-x left top;
     padding: 10px 0;
 }
 
@@ -886,13 +886,13 @@ body > footer
 }
 
 .item-description .addresses-list {
-    background:  url('/i/address_list_border.png') repeat-x left top;
+    background:  url('/images/address_list_border.png') repeat-x left top;
     margin: 0;
 }
 
 .item-description .addresses-list li {
     list-style: none;
-    background: url('/i/address_list_border.png') repeat-x left bottom;
+    background: url('/images/address_list_border.png') repeat-x left bottom;
     padding: 5px 0;
     font-family: ArialNarrow, Arial, sans-serif;
     font-size: 14px;
@@ -925,12 +925,12 @@ body > footer
 
 .item-description .gallery .previous {
     left: 10px;
-    background: url('/i/gallery_left.png') no-repeat;
+    background: url('/images/gallery_left.png') no-repeat;
 }
 
 .item-description .gallery .next {
     right: 10px;
-    background: url('/i/gallery_right.png') no-repeat;
+    background: url('/images/gallery_right.png') no-repeat;
 }
 
 .item-description .gallery .title {
@@ -983,7 +983,7 @@ body > footer
     width: 132px;
     height: 30px;
     line-height: 32px;
-    background: url('/i/button_back.png') no-repeat left top;
+    background: url('/images/button_back.png') no-repeat left top;
     border-radius: 5px;
     box-shadow: 3px 3px 3px 0 rgba(0,0,0,0.3);
     text-align: center;

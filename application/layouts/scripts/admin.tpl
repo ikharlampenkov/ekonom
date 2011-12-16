@@ -7,7 +7,7 @@
     <meta name="author-corporate" content=""/>
     <meta name="publisher-email" content=""/>
 
-    <link rel="stylesheet" type="text/css" href="/css/main.css"/>
+    <link rel="stylesheet" type="text/css" href="/css/main2.css"/>
     <script type="text/javascript" language="javascript" src="/js/jquery.js"></script>
     <script type="text/javascript" language="javascript" src="/js/main.js"></script>
 

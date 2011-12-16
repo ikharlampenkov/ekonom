@@ -2,24 +2,22 @@
 <html>
 <head>
     <title>Ekonom.pro - Экономь профессионально.</title>
-    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico"/>
-    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
     <!-- This script describes some html5 specific things for IE8- -->
     <!--[if lte IE 8]>
-    <script type="text/javascript" src="/js/html5.js"></script>
+        <script type="text/javascript" src="/js/html5.js"></script>
     <![endif]-->
 
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
 
     <!-- fancybox assets -->
     <script type="text/javascript" src="/fancybox/lib/jquery.mousewheel-3.0.6.pack.js"></script>
-    <link rel="stylesheet" href="/fancybox/source/jquery.fancybox.css?v=2.0.4" type="text/css" media="screen"/>
+    <link rel="stylesheet" href="/fancybox/source/jquery.fancybox.css?v=2.0.4" type="text/css" media="screen" />
     <script type="text/javascript" src="/fancybox/source/jquery.fancybox.js?v=2.0.4"></script>
 
-    <link rel="stylesheet" href="/css/main.css"/>
-    <!-- Include last! It overrides default fancybox styles -->
-    <script type="text/javascript" src="/js/ajax-form.js"></script>
-    <!-- read comments in js files for better understanding of its purpose -->
+    <link rel="stylesheet" href="/css/main.css"/> <!-- Include last! It overrides default fancybox styles -->
+    <script type="text/javascript" src="/js/ajax-form.js"></script><!-- read comments in js files for better understanding of its purpose -->
     <script type="text/javascript" src="/js/gallery.js"></script>
     <script type="text/javascript" src="/js/slider.js"></script>
 
@@ -29,25 +27,21 @@
 <body>
 <div id="page">
     <header>
-        <h1 id="logo"><span>Ekonom.pro &mdash; Экономь профессионально.</span></h1>
+        <h1 id="logo"><span>Ekonom.pro &mdash; мегавъебенный сайт</span></h1>
 
         <div id="choose-city-form">
             <h4><label for="city_name">Выбрать город</label></h4>
-
             <form class="b-form" action="/choose-city" method="post">
                 <select name="city_name" id="city_name">
-                {if !empty($cityList)}
-                    {foreach from=$cityList item=city}
-                        <option value="{$city->id}">{$city->title}</option>
-                    {/foreach}
-                {/if}
+                    <option value="1" selected="selected">Кемерово</option>
+                    <option value="2">Новосибирк</option>
+                    <option value="3">Новокузнецк</option>
                 </select>
             </form>
         </div>
 
         <div id="search-form">
             <h4><label for="search_query">Поиск по сайту</label></h4>
-
             <form action="/search" method="get">
                 <fieldset>
                     <input type="text" name="query" id="search_query" placeholder="Я ищу:">
@@ -90,62 +84,44 @@
         </div>
 
         <article id="main-content">
-
-        {foreach from=$companyList item=company}
-            <div>{$company->title}</div>
-            {if $company->getAddressList() !== false}
-                {foreach from=$company->getAddressList() item=address}
-                    {$address->city->title}, {$address->address} {$address->phone}<br/>
-                {/foreach}
-            {/if}
-            <br/>
-        {/foreach}
-
-        {*
-        {$this->layout()->content}
-        *}
-
             <h1 class="heading">Акции города</h1>
 
             <ul id="actions" class="clearfix">
                 <li>
                     <h3><a href="/item.html" class="various fancybox.ajax">Телефон LG Prada</a></h3>
                     <img src="/uploads/action1.png" alt="">
-
                     <div class="discount">20%</div>
                 </li>
                 <li>
                     <h3><a href="/item.html" class="various fancybox.ajax">Суперджинсы</a></h3>
                     <img src="/uploads/action2.jpg" alt="">
-
                     <div class="discount">21%</div>
                 </li>
                 <li>
                     <h3><a href="/item.html" class="various fancybox.ajax">Башмаки со скидкой</a></h3>
                     <img src="/uploads/action3.jpg" alt="">
-
                     <div class="discount">73%</div>
                 </li>
             </ul>
             <script type="text/javascript">
-                var updatePlusOne = function () {
-                gapi.plusone.go();
+                var updatePlusOne = function() {
+                    gapi.plusone.go();
                 };
 
-                $(document).ready(function () {
-                $(".various").fancybox({
-                maxWidth    : 800,
-                maxHeight    : 600,
-                fitToView    : false,
-                width        : 800,
-                autoSize    : false,
-                closeClick    : false,
-                openEffect    : 'none',
-                closeEffect    : 'none',
-                padding: 0,
-                scrolling: 'no',
-                afterShow: updatePlusOne
-                });
+                $(document).ready(function() {
+                    $(".various").fancybox({
+                        maxWidth	: 800,
+                        maxHeight	: 600,
+                        fitToView	: false,
+                        width		: 800,
+                        autoSize	: false,
+                        closeClick	: false,
+                        openEffect	: 'none',
+                        closeEffect	: 'none',
+                        padding: 0,
+                        scrolling: 'no',
+                        afterShow: updatePlusOne
+                    });
                 });
             </script>
 
@@ -162,23 +138,23 @@
             <aside>
                 <div id="banners" class="clearfix">
                     <div class="banner size490_84">
-                        <a href="http://yandex.ru"><img src="/uploads/banner.png"/></a>
+                        <a href="http://yandex.ru"><img src="/uploads/banner.png" /></a>
                     </div>
                     <div class="banner size490_84">
-                        <a href="http://yandex.ru"><img src="/uploads/banner.png"/></a>
+                        <a href="http://yandex.ru"><img src="/uploads/banner.png" /></a>
                     </div>
                 </div>
 
                 <div id="share">
                     <span class="share42">
                         <a target="_blank" title="Поделиться в Facebook" class="facebook" href="#" rel="nofollow"
-                           onclick="window.open('http://www.facebook.com/sharer.php?u={ url }&amp;t={ title }', '_blank', 'scrollbars=0, resizable=1, menubar=0, left=200, top=200, width=550, height=440, toolbar=0, status=0');return false">
+                           onclick="window.open('http://www.facebook.com/sharer.php?u={url}&amp;t={title}', '_blank', 'scrollbars=0, resizable=1, menubar=0, left=200, top=200, width=550, height=440, toolbar=0, status=0');return false">
                         </a>
                         <a target="_blank" title="Добавить в Twitter" class="twitter" href="#" rel="nofollow"
-                           onclick="window.open('http://twitter.com/share?text={ title }&amp;url={ url }', '_blank', 'scrollbars=0, resizable=1, menubar=0, left=200, top=200, width=550, height=440, toolbar=0, status=0');return false">
+                           onclick="window.open('http://twitter.com/share?text={title}&amp;url={url}', '_blank', 'scrollbars=0, resizable=1, menubar=0, left=200, top=200, width=550, height=440, toolbar=0, status=0');return false">
                         </a>
                         <a target="_blank" title="Поделиться В Контакте" class="vkontakte" href="#" rel="nofollow"
-                           onclick="window.open('http://vkontakte.ru/share.php?url={ url }', '_blank', 'scrollbars=0, resizable=1, menubar=0, left=200, top=200, width=554, height=421, toolbar=0, status=0');return false">
+                           onclick="window.open('http://vkontakte.ru/share.php?url={url}', '_blank', 'scrollbars=0, resizable=1, menubar=0, left=200, top=200, width=554, height=421, toolbar=0, status=0');return false">
                         </a>
                     </span>
 
@@ -197,11 +173,9 @@
 <footer>
     <div id="footer-inner" class="clearfix">
         <p id="copyright">Ekonom.pro &copy; 2011</p>
-
         <p id="conditions"><a href="/conditions">Общие условия пользования сайтом</a></p>
-
         <div id="phone" class="nobr">+7 (3842) 33-86-86</div>
     </div>
 </footer>
 </body>
-</html>
+</html>        
