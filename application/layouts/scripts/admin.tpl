@@ -7,7 +7,7 @@
     <meta name="author-corporate" content=""/>
     <meta name="publisher-email" content=""/>
 
-    <link rel="stylesheet" type="text/css" href="/css/main.css"/>
+    <link rel="stylesheet" type="text/css" href="/css/main2.css"/>
     <script type="text/javascript" language="javascript" src="/js/jquery.js"></script>
     <script type="text/javascript" language="javascript" src="/js/main.js"></script>
 
@@ -46,18 +46,26 @@
                                 <td><h1>Меню:</h1></td>
                             </tr>
 
+                        {if_allowed resource="city/index"}
                             <tr>
                                 <td><a href="/city/" class="menu">Города</a></td>
                             </tr>
+                        {/if_allowed}
+                        {if_allowed resource="company/index"}
                             <tr>
                                 <td><a href="/company/" class="menu">Компании</a></td>
                             </tr>
+                        {/if_allowed}
+                        {if_allowed resource="catalog/index"}
                             <tr>
                                 <td><a href="/catalog/" class="menu">Каталог</a></td>
                             </tr>
+                        {/if_allowed}
+                        {if_allowed resource="user/index"}
                             <tr>
                                 <td><a href="/user/" class="menu">Пользователи</a></td>
                             </tr>
+                        {/if_allowed}
 
                         </table>
 

@@ -1,4 +1,4 @@
-<div class="page"><h1>Редактировать атрибут</h1></div><br/>
+<h1 class="heading">Редактировать атрибут</h1>
 
 {if isset($exception_msg)}
 <div>Ошибка: {$exception_msg}</div><br/>

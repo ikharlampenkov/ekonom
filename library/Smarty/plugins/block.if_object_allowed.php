@@ -13,7 +13,7 @@
  * @param $content
  * @param $smarty
  * @param $repeat
- * @return
+ * @return bool|string
  */
 function smarty_block_if_object_allowed($params, $content, &$smarty, &$repeat)
 {
@@ -24,14 +24,16 @@ function smarty_block_if_object_allowed($params, $content, &$smarty, &$repeat)
             $storage_data = Zend_Auth::getInstance()->getStorage()->read();
             $user = $storage_data->id;
 
-            if ($storage_data->role === 'admin') {
+            if ($storage_data->role === 'admin' || ($storage_data->role === 'customer' || $storage_data->role === 'guest')) {
                 return $content;
             }
 
-            $class = 'TM_Acl_' . $params['type'] . 'Acl';
+            $class = 'EK_Acl_' . $params['type'] . 'Acl';
+
+
             if (class_exists($class)) {
 
-                $aclList = call_user_func($class.'::getAllInstance', $params['object']);
+                $aclList = call_user_func($class . '::getAllInstance', $params['object']);
 
                 if (empty($aclList)) {
                     return false;
@@ -41,12 +43,18 @@ function smarty_block_if_object_allowed($params, $content, &$smarty, &$repeat)
                         $privilege = $params['priv'];
                     }
 
-
+                    if ($privilege == 'moderate' && ($storage_data->role === 'customer' || $storage_data->role === 'guest')) {
+                        return $content;
+                    }
 
                     if (array_key_exists($user, $aclList)) {
                         if ($privilege == 'read' && $aclList[$user]->getIsRead()) {
                             return $content;
                         } elseif ($privilege == 'write' && $aclList[$user]->getIsWrite()) {
+                            return $content;
+                        } elseif ($privilege == 'executant' && $aclList[$user]->getIsExecutant()) {
+                            return $content;
+                        } elseif ($privilege == 'moderate' && $aclList[$user]->getIsModerate()) {
                             return $content;
                         } else {
                             return false;
@@ -55,7 +63,7 @@ function smarty_block_if_object_allowed($params, $content, &$smarty, &$repeat)
                         return false;
                     }
                 }
-                
+
             } else {
                 return false;
             }

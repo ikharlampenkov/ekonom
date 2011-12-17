@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 
+-- version 3.4.5
 -- http://www.phpmyadmin.net
 --
--- Хост: ekonom.mysql
--- Время создания: Дек 02 2011 г., 17:43
--- Версия сервера: 5.1.41
--- Версия PHP: 5.2.10
+-- Хост: localhost
+-- Время создания: Дек 17 2011 г., 14:38
+-- Версия сервера: 5.1.50
+-- Версия PHP: 5.3.8-ZS5.5.0
 
 SET FOREIGN_KEY_CHECKS=0;
 SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
@@ -27,8 +27,6 @@ SET time_zone = "+00:00";
 
 --
 -- Структура таблицы `city`
---
--- Создание: Ноя 23 2011 г., 15:43
 --
 
 DROP TABLE IF EXISTS `city`;
@@ -52,8 +50,6 @@ INSERT INTO `city` (`id`, `title`, `phone_code`) VALUES
 --
 -- Структура таблицы `company`
 --
--- Создание: Ноя 24 2011 г., 01:53
---
 
 DROP TABLE IF EXISTS `company`;
 CREATE TABLE IF NOT EXISTS `company` (
@@ -71,15 +67,13 @@ CREATE TABLE IF NOT EXISTS `company` (
 --
 
 INSERT INTO `company` (`id`, `city_id`, `title`, `file`, `description`) VALUES
-(1, 1, 'Первая компания', '', ''),
-(2, 1, 'Вторая компания', '', '');
+(1, 1, 'Первая компания', 'file_17-12-2011-13-09-34.png', ''),
+(2, 1, 'Вторая компания', 'file_17-12-2011-13-09-45.png', '');
 
 -- --------------------------------------------------------
 
 --
 -- Структура таблицы `company_address`
---
--- Создание: Ноя 24 2011 г., 01:53
 --
 
 DROP TABLE IF EXISTS `company_address`;
@@ -105,9 +99,31 @@ INSERT INTO `company_address` (`id`, `company_id`, `city_id`, `address`, `phone`
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `content_page`
+-- Структура таблицы `company_user`
 --
--- Создание: Ноя 23 2011 г., 15:43
+
+DROP TABLE IF EXISTS `company_user`;
+CREATE TABLE IF NOT EXISTS `company_user` (
+  `company_id` int(10) unsigned NOT NULL,
+  `user_id` int(10) unsigned NOT NULL,
+  `is_read` tinyint(1) NOT NULL DEFAULT '0',
+  `is_write` tinyint(1) NOT NULL DEFAULT '0',
+  `is_moderate` tinyint(1) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`company_id`,`user_id`),
+  KEY `user_id` (`user_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Дамп данных таблицы `company_user`
+--
+
+INSERT INTO `company_user` (`company_id`, `user_id`, `is_read`, `is_write`, `is_moderate`) VALUES
+(1, 7, 0, 0, 1);
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `content_page`
 --
 
 DROP TABLE IF EXISTS `content_page`;
@@ -118,53 +134,12 @@ CREATE TABLE IF NOT EXISTS `content_page` (
   `content` text,
   PRIMARY KEY (`id`),
   UNIQUE KEY `page_title_UNIQUE` (`page_title`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
-
--- --------------------------------------------------------
-
---
--- Структура таблицы `goods`
---
--- Создание: Ноя 23 2011 г., 15:43
---
-
-DROP TABLE IF EXISTS `goods`;
-CREATE TABLE IF NOT EXISTS `goods` (
-  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `title` varchar(255) NOT NULL,
-  `rubric_id` int(10) unsigned NOT NULL,
-  `company_id` int(10) unsigned NOT NULL,
-  PRIMARY KEY (`id`,`rubric_id`),
-  KEY `fk_goods_rubric1` (`rubric_id`),
-  KEY `fk_goods_company1` (`company_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `goods_hash`
---
--- Создание: Ноя 23 2011 г., 15:43
---
-
-DROP TABLE IF EXISTS `goods_hash`;
-CREATE TABLE IF NOT EXISTS `goods_hash` (
-  `rubric_id` int(10) unsigned NOT NULL,
-  `attribute_key` varchar(25) NOT NULL,
-  `title` varchar(255) NOT NULL,
-  `list_value` varchar(45) DEFAULT NULL,
-  `type_id` int(10) unsigned NOT NULL,
-  PRIMARY KEY (`rubric_id`,`attribute_key`),
-  KEY `fk_goods_hash_rubric1` (`rubric_id`),
-  KEY `fk_goods_hash_goods_attribute_type1` (`type_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
--- --------------------------------------------------------
-
---
 -- Структура таблицы `product`
---
--- Создание: Дек 01 2011 г., 10:34
 --
 
 DROP TABLE IF EXISTS `product`;
@@ -176,26 +151,120 @@ CREATE TABLE IF NOT EXISTS `product` (
   `short_text` varchar(255) DEFAULT NULL,
   `full_text` text,
   `price` decimal(12,2) unsigned DEFAULT NULL,
+  `company_id` int(10) unsigned NOT NULL,
   PRIMARY KEY (`id`),
-  KEY `fk_product_product_rubric1` (`product_rubric_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=12 ;
+  KEY `fk_product_product_rubric1` (`product_rubric_id`),
+  KEY `company_id` (`company_id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=14 ;
 
 --
 -- Дамп данных таблицы `product`
 --
 
-INSERT INTO `product` (`id`, `product_rubric_id`, `title`, `img`, `short_text`, `full_text`, `price`) VALUES
-(1, 3, 'Апельсин', 'img_30-06-2011-21-19-07.jpg', 'Просто апельсин', 'Детальная информация об апельсинах', 100.00),
-(3, 3, 'Вишня', 'img_30-06-2011-21-11-19.jpg', 'Просто вишня', 'Просто сладкая вишня', 250.00),
-(4, 5, 'Моющее средство', NULL, 'паоапоаппаоапоап', 'овпоапоапоап', 234.00),
-(11, 1, 'полплпрлп', NULL, '', '', 125.50);
+INSERT INTO `product` (`id`, `product_rubric_id`, `title`, `img`, `short_text`, `full_text`, `price`, `company_id`) VALUES
+(1, 3, 'Апельсин', 'img_30-06-2011-21-19-07.jpg', 'Просто апельсин', 'Детальная информация об апельсинах', '100.00', 1),
+(3, 3, 'Вишня', 'img_30-06-2011-21-11-19.jpg', 'Просто вишня', 'Просто сладкая вишня', '250.00', 1),
+(4, 5, 'Моющее средство', NULL, 'паоапоаппаоапоап', 'овпоапоапоап', '234.00', 1),
+(11, 1, 'полплпрлп', NULL, '', '', '125.50', 1),
+(12, 1, 'Тест', NULL, '', '', '0.00', 1),
+(13, 2, 'Тест атрибутов', 'img_16-12-2011-23-02-46.png', 'аптаптпатап', '', '0.00', 1);
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `product_attribute`
+--
+
+DROP TABLE IF EXISTS `product_attribute`;
+CREATE TABLE IF NOT EXISTS `product_attribute` (
+  `product_id` int(10) unsigned NOT NULL,
+  `attribute_key` varchar(255) NOT NULL,
+  `type_id` int(10) unsigned NOT NULL,
+  `attribute_value` text NOT NULL,
+  `is_fill` tinyint(1) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`product_id`,`attribute_key`),
+  KEY `fk_tm_task_attribute_tm_task_attribute_type1` (`type_id`),
+  KEY `fk_tm_task_attribute_tm_task1` (`product_id`),
+  KEY `attribute_key` (`attribute_key`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Дамп данных таблицы `product_attribute`
+--
+
+INSERT INTO `product_attribute` (`product_id`, `attribute_key`, `type_id`, `attribute_value`, `is_fill`) VALUES
+(11, 'description', 1, '', 0),
+(11, 'description2', 2, 'авравраврварав', 0),
+(11, 'full_text', 2, '', 0),
+(11, 'test_list', 3, 'Один', 0),
+(11, 'Срок', 4, '07.12.2011 17:15:56', 0),
+(13, 'description', 1, '', 0),
+(13, 'description2', 2, 'аптаптптап', 0),
+(13, 'full_text', 2, 'патпатптпатаптаптатпап', 0),
+(13, 'test_list', 3, 'Один', 0),
+(13, 'Срок', 4, '16.12.2011 23:02:06', 0);
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `product_attribute_type`
+--
+
+DROP TABLE IF EXISTS `product_attribute_type`;
+CREATE TABLE IF NOT EXISTS `product_attribute_type` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `title` varchar(50) NOT NULL,
+  `handler` varchar(100) NOT NULL,
+  `description` varchar(255) NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `title_UNIQUE` (`title`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=5 ;
+
+--
+-- Дамп данных таблицы `product_attribute_type`
+--
+
+INSERT INTO `product_attribute_type` (`id`, `title`, `handler`, `description`) VALUES
+(1, 'Строка', 'TM_Attribute_AttributeType', 'Любое строковое значение'),
+(2, 'Текст', 'TM_Attribute_AttributeTypeText', 'Многострочный  текст'),
+(3, 'Список', 'TM_Attribute_AttributeTypeList', 'Список из возможных вариантов'),
+(4, 'Дата', 'TM_Attribute_AttributeTypeDate', '');
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `product_hash`
+--
+
+DROP TABLE IF EXISTS `product_hash`;
+CREATE TABLE IF NOT EXISTS `product_hash` (
+  `product_id` int(10) unsigned DEFAULT NULL,
+  `attribute_key` varchar(255) NOT NULL,
+  `title` varchar(255) NOT NULL,
+  `type_id` int(10) unsigned NOT NULL,
+  `list_value` text,
+  `required` tinyint(1) NOT NULL DEFAULT '0',
+  `sort_order` int(10) unsigned NOT NULL DEFAULT '10000',
+  PRIMARY KEY (`attribute_key`),
+  KEY `fk_tm_task_hash_tm_task_attribute_type1` (`type_id`),
+  KEY `fk_tm_task_hash_tm_task1` (`product_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Дамп данных таблицы `product_hash`
+--
+
+INSERT INTO `product_hash` (`product_id`, `attribute_key`, `title`, `type_id`, `list_value`, `required`, `sort_order`) VALUES
+(NULL, 'description', 'Текстовое описание задачи', 1, '', 0, 10000),
+(NULL, 'description2', 'description', 2, ' ', 0, 10000),
+(NULL, 'full_text', 'Большой текст', 2, '', 0, 10000),
+(NULL, 'test_list', 'Проверка списка', 3, 'Один||Два||Три ', 0, 10000),
+(NULL, 'Срок', 'Срок выполнения задачи', 4, ' ', 0, 10000);
 
 -- --------------------------------------------------------
 
 --
 -- Структура таблицы `product_rubric`
---
--- Создание: Дек 01 2011 г., 10:35
 --
 
 DROP TABLE IF EXISTS `product_rubric`;
@@ -206,7 +275,7 @@ CREATE TABLE IF NOT EXISTS `product_rubric` (
   `is_root` tinyint(1) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`),
   KEY `fk_product_rubric_product_rubric` (`parent_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=9 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=10 ;
 
 --
 -- Дамп данных таблицы `product_rubric`
@@ -219,31 +288,13 @@ INSERT INTO `product_rubric` (`id`, `title`, `parent_id`, `is_root`) VALUES
 (4, 'Непродовольственные товары', 1, 0),
 (5, 'Бытовая химия', 4, 0),
 (6, 'Одежда', 4, 0),
-(8, 'Овощи', 2, 0);
-
--- --------------------------------------------------------
-
---
--- Структура таблицы `rubric`
---
--- Создание: Ноя 23 2011 г., 15:43
---
-
-DROP TABLE IF EXISTS `rubric`;
-CREATE TABLE IF NOT EXISTS `rubric` (
-  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `title` varchar(255) NOT NULL,
-  `parent_id` int(10) unsigned DEFAULT NULL,
-  PRIMARY KEY (`id`),
-  KEY `fk_rubric_rubric1` (`parent_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+(8, 'Овощи', 2, 0),
+(9, 'Новая рубрика', 1, 0);
 
 -- --------------------------------------------------------
 
 --
 -- Структура таблицы `tm_acl_role`
---
--- Создание: Дек 01 2011 г., 09:48
 --
 
 DROP TABLE IF EXISTS `tm_acl_role`;
@@ -269,7 +320,7 @@ INSERT INTO `tm_acl_role` (`tm_user_role_id`, `tm_user_resource_id`, `is_allow`,
 (1, 6, 1, 'show'),
 (1, 7, 1, 'show'),
 (1, 8, 1, 'show'),
-(1, 15, 1, 'show'),
+(1, 15, 1, 'show,show-attribute-hash,show-attribute-type,show-resource'),
 (1, 19, 1, 'show'),
 (1, 20, 1, 'show'),
 (1, 21, 1, 'show'),
@@ -294,7 +345,7 @@ INSERT INTO `tm_acl_role` (`tm_user_role_id`, `tm_user_resource_id`, `is_allow`,
 (1, 83, 1, 'show'),
 (1, 84, 1, 'show'),
 (1, 85, 1, 'show'),
-(1, 86, 1, 'show'),
+(1, 86, 1, 'show,show-attribute-hash,show-attribute-type'),
 (1, 87, 1, 'show'),
 (1, 88, 1, 'show'),
 (1, 89, 1, 'show'),
@@ -305,6 +356,13 @@ INSERT INTO `tm_acl_role` (`tm_user_role_id`, `tm_user_resource_id`, `is_allow`,
 (1, 94, 1, 'show'),
 (1, 95, 1, 'show'),
 (1, 96, 1, 'show'),
+(1, 97, 1, 'show'),
+(1, 98, 1, 'show'),
+(1, 99, 1, 'show'),
+(1, 100, 1, 'show'),
+(1, 101, 1, 'show'),
+(1, 102, 1, 'show'),
+(1, 103, 1, 'show'),
 (3, 1, 1, 'show'),
 (3, 2, 1, 'show'),
 (3, 3, 1, 'show'),
@@ -349,6 +407,13 @@ INSERT INTO `tm_acl_role` (`tm_user_role_id`, `tm_user_resource_id`, `is_allow`,
 (3, 94, 0, 'show'),
 (3, 95, 0, 'show'),
 (3, 96, 0, 'show'),
+(3, 97, 0, 'show'),
+(3, 98, 0, 'show'),
+(3, 99, 0, 'show'),
+(3, 100, 0, 'show'),
+(3, 101, 1, 'show'),
+(3, 102, 1, 'show'),
+(3, 103, 1, 'show'),
 (4, 1, 1, 'show'),
 (4, 2, 1, 'show'),
 (4, 3, 1, 'show'),
@@ -393,6 +458,13 @@ INSERT INTO `tm_acl_role` (`tm_user_role_id`, `tm_user_resource_id`, `is_allow`,
 (4, 94, 1, 'show'),
 (4, 95, 1, 'show'),
 (4, 96, 1, 'show'),
+(4, 97, 0, 'show'),
+(4, 98, 0, 'show'),
+(4, 99, 0, 'show'),
+(4, 100, 0, 'show'),
+(4, 101, 1, 'show'),
+(4, 102, 1, 'show'),
+(4, 103, 1, 'show'),
 (5, 1, 1, 'show'),
 (5, 2, 1, 'show'),
 (5, 3, 1, 'show'),
@@ -409,14 +481,46 @@ INSERT INTO `tm_acl_role` (`tm_user_role_id`, `tm_user_resource_id`, `is_allow`,
 (5, 23, 0, 'show'),
 (5, 24, 0, 'show'),
 (5, 25, 0, 'show'),
-(5, 59, 0, 'show');
+(5, 59, 0, 'show'),
+(5, 67, 0, 'show'),
+(5, 68, 0, 'show'),
+(5, 69, 0, 'show'),
+(5, 70, 0, 'show'),
+(5, 71, 0, 'show'),
+(5, 72, 0, 'show'),
+(5, 76, 0, 'show'),
+(5, 77, 0, 'show'),
+(5, 78, 0, 'show'),
+(5, 79, 0, 'show'),
+(5, 80, 1, 'show'),
+(5, 81, 1, 'show'),
+(5, 82, 0, 'show'),
+(5, 83, 0, 'show'),
+(5, 84, 0, 'show'),
+(5, 85, 1, 'show'),
+(5, 86, 1, 'show'),
+(5, 87, 0, 'show'),
+(5, 88, 0, 'show'),
+(5, 89, 0, 'show'),
+(5, 90, 0, 'show'),
+(5, 91, 0, 'show'),
+(5, 92, 0, 'show'),
+(5, 93, 0, 'show'),
+(5, 94, 0, 'show'),
+(5, 95, 0, 'show'),
+(5, 96, 0, 'show'),
+(5, 97, 0, 'show'),
+(5, 98, 0, 'show'),
+(5, 99, 0, 'show'),
+(5, 100, 0, 'show'),
+(5, 101, 1, 'show'),
+(5, 102, 1, 'show'),
+(5, 103, 1, 'show');
 
 -- --------------------------------------------------------
 
 --
 -- Структура таблицы `tm_task_attribute`
---
--- Создание: Дек 01 2011 г., 09:48
 --
 
 DROP TABLE IF EXISTS `tm_task_attribute`;
@@ -435,8 +539,6 @@ CREATE TABLE IF NOT EXISTS `tm_task_attribute` (
 
 --
 -- Структура таблицы `tm_task_attribute_type`
---
--- Создание: Дек 01 2011 г., 09:48
 --
 
 DROP TABLE IF EXISTS `tm_task_attribute_type`;
@@ -463,8 +565,6 @@ INSERT INTO `tm_task_attribute_type` (`id`, `title`, `handler`, `description`) V
 
 --
 -- Структура таблицы `tm_task_hash`
---
--- Создание: Дек 01 2011 г., 09:48
 --
 
 DROP TABLE IF EXISTS `tm_task_hash`;
@@ -495,8 +595,6 @@ INSERT INTO `tm_task_hash` (`task_id`, `attribute_key`, `title`, `type_id`, `lis
 --
 -- Структура таблицы `tm_user`
 --
--- Создание: Дек 01 2011 г., 09:48
---
 
 DROP TABLE IF EXISTS `tm_user`;
 CREATE TABLE IF NOT EXISTS `tm_user` (
@@ -508,23 +606,22 @@ CREATE TABLE IF NOT EXISTS `tm_user` (
   PRIMARY KEY (`id`),
   UNIQUE KEY `login_UNIQUE` (`login`),
   KEY `fk_tm_user_tm_user_role1` (`role_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=7 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=8 ;
 
 --
 -- Дамп данных таблицы `tm_user`
 --
 
 INSERT INTO `tm_user` (`id`, `login`, `password`, `role_id`, `date_create`) VALUES
-(1, 'admin', '123', 1, '2011-11-16 16:26:11'),
+(1, 'admin', '123', 1, '2011-11-16 16:26:00'),
 (2, 'user', '321', 4, '2011-11-17 23:35:18'),
-(6, 'user2', '333', 4, '2011-11-25 21:50:32');
+(6, 'user2', '333', 4, '2011-11-25 21:50:32'),
+(7, 'moder', '654', 4, '2011-12-16 21:58:00');
 
 -- --------------------------------------------------------
 
 --
 -- Структура таблицы `tm_user_attribute`
---
--- Создание: Дек 01 2011 г., 09:48
 --
 
 DROP TABLE IF EXISTS `tm_user_attribute`;
@@ -544,15 +641,15 @@ CREATE TABLE IF NOT EXISTS `tm_user_attribute` (
 --
 
 INSERT INTO `tm_user_attribute` (`user_id`, `attribute_key`, `type_id`, `attribute_value`, `is_fill`) VALUES
+(1, 'name', 1, 'Администратор', 1),
 (2, 'name', 1, 'Первый пользователь', 1),
-(6, 'name', 1, 'Второй пользователь', 1);
+(6, 'name', 1, 'Второй пользователь', 1),
+(7, 'name', 1, 'Модератор первой компании', 1);
 
 -- --------------------------------------------------------
 
 --
 -- Структура таблицы `tm_user_attribute_type`
---
--- Создание: Дек 01 2011 г., 09:48
 --
 
 DROP TABLE IF EXISTS `tm_user_attribute_type`;
@@ -579,8 +676,6 @@ INSERT INTO `tm_user_attribute_type` (`id`, `title`, `handler`, `description`) V
 --
 -- Структура таблицы `tm_user_hash`
 --
--- Создание: Дек 01 2011 г., 09:48
---
 
 DROP TABLE IF EXISTS `tm_user_hash`;
 CREATE TABLE IF NOT EXISTS `tm_user_hash` (
@@ -606,8 +701,6 @@ INSERT INTO `tm_user_hash` (`user_id`, `attribute_key`, `title`, `type_id`, `lis
 --
 -- Структура таблицы `tm_user_profile`
 --
--- Создание: Дек 01 2011 г., 09:48
---
 
 DROP TABLE IF EXISTS `tm_user_profile`;
 CREATE TABLE IF NOT EXISTS `tm_user_profile` (
@@ -623,199 +716,96 @@ CREATE TABLE IF NOT EXISTS `tm_user_profile` (
 --
 -- Структура таблицы `tm_user_resource`
 --
--- Создание: Дек 01 2011 г., 09:48
---
 
 DROP TABLE IF EXISTS `tm_user_resource`;
 CREATE TABLE IF NOT EXISTS `tm_user_resource` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `title` varchar(45) DEFAULT NULL,
+  `rtitle` varchar(255) NOT NULL DEFAULT '',
   PRIMARY KEY (`id`),
   UNIQUE KEY `title` (`title`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=97 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=104 ;
 
 --
 -- Дамп данных таблицы `tm_user_resource`
 --
 
-INSERT INTO `tm_user_resource` (`id`, `title`) VALUES
-(85, 'catalog'),
-(94, 'catalog/add'),
-(91, 'catalog/addRubric'),
-(96, 'catalog/delete'),
-(93, 'catalog/deleteRubric'),
-(95, 'catalog/edit'),
-(92, 'catalog/editRubric'),
-(86, 'catalog/index'),
-(76, 'city'),
-(78, 'city/add'),
-(79, 'city/edit'),
-(77, 'city/index'),
-(80, 'company'),
-(82, 'company/add'),
-(88, 'company/addAddress'),
-(84, 'company/delete'),
-(90, 'company/deleteAddress'),
-(83, 'company/edit'),
-(89, 'company/editAddress'),
-(81, 'company/index'),
-(87, 'company/viewAddress'),
-(4, 'index/index'),
-(1, 'login'),
-(2, 'login/index'),
-(3, 'login/logout'),
-(5, 'user'),
-(6, 'user/add'),
-(70, 'user/addAttributeHash'),
-(67, 'user/addAttributeType'),
-(22, 'user/addResource'),
-(19, 'user/addRole'),
-(8, 'user/delete'),
-(72, 'user/deleteAttributeHash'),
-(69, 'user/deleteAttributeType'),
-(24, 'user/deleteResource'),
-(21, 'user/deleteRole'),
-(7, 'user/edit'),
-(71, 'user/editAttributeHash'),
-(68, 'user/editAttributeType'),
-(23, 'user/editResource'),
-(20, 'user/editRole'),
-(25, 'user/fillResource'),
-(15, 'user/index'),
-(59, 'user/showRoleAcl');
+INSERT INTO `tm_user_resource` (`id`, `title`, `rtitle`) VALUES
+(1, 'login', ''),
+(2, 'login/index', ''),
+(3, 'login/logout', ''),
+(4, 'index/index', ''),
+(5, 'user', ''),
+(6, 'user/add', ''),
+(7, 'user/edit', ''),
+(8, 'user/delete', ''),
+(15, 'user/index', ''),
+(19, 'user/addRole', ''),
+(20, 'user/editRole', ''),
+(21, 'user/deleteRole', ''),
+(22, 'user/addResource', ''),
+(23, 'user/editResource', ''),
+(24, 'user/deleteResource', ''),
+(25, 'user/fillResource', ''),
+(59, 'user/showRoleAcl', ''),
+(67, 'user/addAttributeType', ''),
+(68, 'user/editAttributeType', ''),
+(69, 'user/deleteAttributeType', ''),
+(70, 'user/addAttributeHash', ''),
+(71, 'user/editAttributeHash', ''),
+(72, 'user/deleteAttributeHash', ''),
+(76, 'city', ''),
+(77, 'city/index', ''),
+(78, 'city/add', ''),
+(79, 'city/edit', ''),
+(80, 'company', ''),
+(81, 'company/index', ''),
+(82, 'company/add', ''),
+(83, 'company/edit', ''),
+(84, 'company/delete', ''),
+(85, 'catalog', ''),
+(86, 'catalog/index', ''),
+(87, 'company/viewAddress', ''),
+(88, 'company/addAddress', ''),
+(89, 'company/editAddress', ''),
+(90, 'company/deleteAddress', ''),
+(91, 'catalog/addRubric', ''),
+(92, 'catalog/editRubric', ''),
+(93, 'catalog/deleteRubric', ''),
+(94, 'catalog/add', ''),
+(95, 'catalog/edit', ''),
+(96, 'catalog/delete', ''),
+(97, 'user/viewAttributeType', 'Пользователи/Показать типы атрибутов'),
+(98, 'user/viewResource', 'Пользователи/Показать ресурсы'),
+(99, 'user/viewHash', 'Пользователи/Показать список атрибутов'),
+(100, 'company/showAcl', 'Компания/Права пользователей'),
+(101, 'about.html', 'О компании'),
+(102, 'about/index', 'О компании/О компании'),
+(103, 'company/view', 'Компания/Просмотреть');
 
 -- --------------------------------------------------------
 
 --
 -- Структура таблицы `tm_user_role`
 --
--- Создание: Дек 01 2011 г., 09:48
---
 
 DROP TABLE IF EXISTS `tm_user_role`;
 CREATE TABLE IF NOT EXISTS `tm_user_role` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `title` varchar(32) NOT NULL,
+  `rtitle` varchar(255) NOT NULL DEFAULT '',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=7 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=6 ;
 
 --
 -- Дамп данных таблицы `tm_user_role`
 --
 
-INSERT INTO `tm_user_role` (`id`, `title`) VALUES
-(1, 'admin'),
-(3, 'customer'),
-(4, 'companyadmin'),
-(5, 'guest');
-
--- --------------------------------------------------------
-
---
--- Структура таблицы `user`
---
--- Создание: Ноя 24 2011 г., 01:48
---
-
-DROP TABLE IF EXISTS `user`;
-CREATE TABLE IF NOT EXISTS `user` (
-  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `login` varchar(32) NOT NULL,
-  `password` varchar(32) NOT NULL,
-  `role_id` int(10) unsigned NOT NULL,
-  `date_create` datetime NOT NULL,
-  `company_id` int(10) unsigned DEFAULT NULL,
-  PRIMARY KEY (`id`),
-  UNIQUE KEY `login_UNIQUE` (`login`),
-  KEY `fk_tm_user_tm_user_role1` (`role_id`),
-  KEY `fk_user_company1` (`company_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
-
---
--- Дамп данных таблицы `user`
---
-
-INSERT INTO `user` (`id`, `login`, `password`, `role_id`, `date_create`, `company_id`) VALUES
-(1, 'admin', '123', 1, '2011-11-23 05:00:00', NULL);
-
--- --------------------------------------------------------
-
---
--- Структура таблицы `user_attribute`
---
--- Создание: Ноя 23 2011 г., 15:43
---
-
-DROP TABLE IF EXISTS `user_attribute`;
-CREATE TABLE IF NOT EXISTS `user_attribute` (
-  `user_id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `attribute_key` varchar(255) NOT NULL,
-  `attribute_value` text NOT NULL,
-  `type_id` int(10) unsigned NOT NULL,
-  PRIMARY KEY (`user_id`,`attribute_key`),
-  KEY `fk_tm_user_profile_tm_user1` (`user_id`),
-  KEY `fk_tm_user_profile_user_hash1` (`attribute_key`),
-  KEY `fk_user_attribute_user_attribute_type1` (`type_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
-
--- --------------------------------------------------------
-
---
--- Структура таблицы `user_attribute_type`
---
--- Создание: Ноя 23 2011 г., 15:43
---
-
-DROP TABLE IF EXISTS `user_attribute_type`;
-CREATE TABLE IF NOT EXISTS `user_attribute_type` (
-  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `title` varchar(50) NOT NULL,
-  `handler` varchar(100) NOT NULL,
-  `description` varchar(255) DEFAULT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
-
--- --------------------------------------------------------
-
---
--- Структура таблицы `user_hash`
---
--- Создание: Ноя 23 2011 г., 15:44
---
-
-DROP TABLE IF EXISTS `user_hash`;
-CREATE TABLE IF NOT EXISTS `user_hash` (
-  `attribute_key` varchar(255) NOT NULL,
-  `title` varchar(255) NOT NULL,
-  `list_value` text,
-  `type_id` int(10) unsigned NOT NULL,
-  PRIMARY KEY (`attribute_key`),
-  KEY `fk_user_hash_user_attribute_type1` (`type_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
--- --------------------------------------------------------
-
---
--- Структура таблицы `user_role`
---
--- Создание: Ноя 24 2011 г., 01:48
---
-
-DROP TABLE IF EXISTS `user_role`;
-CREATE TABLE IF NOT EXISTS `user_role` (
-  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `title` varchar(32) NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
-
---
--- Дамп данных таблицы `user_role`
---
-
-INSERT INTO `user_role` (`id`, `title`) VALUES
-(1, 'admin'),
-(2, 'companyadmin'),
-(3, 'customer');
+INSERT INTO `tm_user_role` (`id`, `title`, `rtitle`) VALUES
+(1, 'admin', 'Администратор'),
+(3, 'customer', 'Покупатель'),
+(4, 'companyadmin', 'Модератор'),
+(5, 'guest', 'Гость');
 
 --
 -- Ограничения внешнего ключа сохраненных таблиц
@@ -831,40 +821,42 @@ ALTER TABLE `company`
 -- Ограничения внешнего ключа таблицы `company_address`
 --
 ALTER TABLE `company_address`
-  ADD CONSTRAINT `company_address_ibfk_2` FOREIGN KEY (`city_id`) REFERENCES `city` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  ADD CONSTRAINT `company_address_ibfk_1` FOREIGN KEY (`company_id`) REFERENCES `company` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+  ADD CONSTRAINT `company_address_ibfk_1` FOREIGN KEY (`company_id`) REFERENCES `company` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  ADD CONSTRAINT `company_address_ibfk_2` FOREIGN KEY (`city_id`) REFERENCES `city` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 --
--- Ограничения внешнего ключа таблицы `goods`
+-- Ограничения внешнего ключа таблицы `company_user`
 --
-ALTER TABLE `goods`
-  ADD CONSTRAINT `fk_goods_rubric1` FOREIGN KEY (`rubric_id`) REFERENCES `rubric` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  ADD CONSTRAINT `fk_goods_company1` FOREIGN KEY (`company_id`) REFERENCES `company` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
-
---
--- Ограничения внешнего ключа таблицы `goods_hash`
---
-ALTER TABLE `goods_hash`
-  ADD CONSTRAINT `fk_goods_hash_rubric1` FOREIGN KEY (`rubric_id`) REFERENCES `rubric` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  ADD CONSTRAINT `fk_goods_hash_goods_attribute_type1` FOREIGN KEY (`type_id`) REFERENCES `goods_attribute_type` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+ALTER TABLE `company_user`
+  ADD CONSTRAINT `company_user_ibfk_1` FOREIGN KEY (`company_id`) REFERENCES `company` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `company_user_ibfk_2` FOREIGN KEY (`user_id`) REFERENCES `tm_user` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Ограничения внешнего ключа таблицы `product`
 --
 ALTER TABLE `product`
-  ADD CONSTRAINT `fk_product_product_rubric1` FOREIGN KEY (`product_rubric_id`) REFERENCES `product_rubric` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+  ADD CONSTRAINT `product_ibfk_1` FOREIGN KEY (`product_rubric_id`) REFERENCES `product_rubric` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `product_ibfk_2` FOREIGN KEY (`company_id`) REFERENCES `company` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Ограничения внешнего ключа таблицы `product_attribute`
+--
+ALTER TABLE `product_attribute`
+  ADD CONSTRAINT `product_attribute_ibfk_1` FOREIGN KEY (`product_id`) REFERENCES `product` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `product_attribute_ibfk_2` FOREIGN KEY (`attribute_key`) REFERENCES `product_hash` (`attribute_key`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `product_attribute_ibfk_3` FOREIGN KEY (`type_id`) REFERENCES `product_attribute_type` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Ограничения внешнего ключа таблицы `product_hash`
+--
+ALTER TABLE `product_hash`
+  ADD CONSTRAINT `product_hash_ibfk_1` FOREIGN KEY (`type_id`) REFERENCES `product_attribute_type` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Ограничения внешнего ключа таблицы `product_rubric`
 --
 ALTER TABLE `product_rubric`
   ADD CONSTRAINT `fk_product_rubric_product_rubric` FOREIGN KEY (`parent_id`) REFERENCES `product_rubric` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
-
---
--- Ограничения внешнего ключа таблицы `rubric`
---
-ALTER TABLE `rubric`
-  ADD CONSTRAINT `fk_rubric_rubric1` FOREIGN KEY (`parent_id`) REFERENCES `rubric` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 --
 -- Ограничения внешнего ключа таблицы `tm_acl_role`
@@ -905,26 +897,9 @@ ALTER TABLE `tm_user_attribute`
 --
 ALTER TABLE `tm_user_hash`
   ADD CONSTRAINT `tm_user_hash_ibfk_1` FOREIGN KEY (`type_id`) REFERENCES `tm_user_attribute_type` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
-
---
--- Ограничения внешнего ключа таблицы `user`
---
-ALTER TABLE `user`
-  ADD CONSTRAINT `user_ibfk_1` FOREIGN KEY (`role_id`) REFERENCES `user_role` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  ADD CONSTRAINT `fk_user_company1` FOREIGN KEY (`company_id`) REFERENCES `company` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
-
---
--- Ограничения внешнего ключа таблицы `user_attribute`
---
-ALTER TABLE `user_attribute`
-  ADD CONSTRAINT `fk_tm_user_profile_tm_user1` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  ADD CONSTRAINT `fk_tm_user_profile_user_hash1` FOREIGN KEY (`attribute_key`) REFERENCES `user_hash` (`attribute_key`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  ADD CONSTRAINT `fk_user_attribute_user_attribute_type1` FOREIGN KEY (`type_id`) REFERENCES `user_attribute_type` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
-
---
--- Ограничения внешнего ключа таблицы `user_hash`
---
-ALTER TABLE `user_hash`
-  ADD CONSTRAINT `fk_user_hash_user_attribute_type1` FOREIGN KEY (`type_id`) REFERENCES `user_attribute_type` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 SET FOREIGN_KEY_CHECKS=1;
 COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

@@ -13,6 +13,13 @@ class CompanyController extends Zend_Controller_Action
         $this->view->assign('companyList', EK_Company_Company::getAllInstance());
     }
 
+    public function viewAction()
+    {
+        $oCompany = EK_Company_Company::getInstanceById($this->getRequest()->getParam('id'));
+        $this->view->assign('company', $oCompany);
+        $this->view->assign('addressList', EK_Company_Address::getAllInstance($oCompany));
+    }
+
     public function addAction()
     {
         $oCompany = new EK_Company_Company();
@@ -137,5 +144,35 @@ class CompanyController extends Zend_Controller_Action
             throw new Exception($e->getMessage());
         }
     }
+
+    public function showaclAction()
+        {
+            $oCompany = EK_Company_Company::getInstanceById($this->getRequest()->getParam('idCompany'));
+
+            if ($this->getRequest()->isPost()) {
+                $data = $this->getRequest()->getParam('data');
+
+                try {
+                    foreach ($data as $idUser => $values) {
+
+                        $companyAcl = new EK_Acl_CompanyAcl($oCompany);
+
+                        $companyAcl->setUser(TM_User_User::getInstanceById($idUser));
+                        $companyAcl->setIsRead($values['is_read']);
+                        $companyAcl->setIsWrite($values['is_write']);
+                        $companyAcl->setIsModerate($values['is_moderate']);
+                        $companyAcl->saveToDb();
+                    }
+
+                    $this->_redirect('/company/showAcl/idCompany/' . $this->getRequest()->getParam('idCompany'));
+                } catch (Exception $e) {
+                    $this->view->assign('exception_msg', $e->getMessage());
+                }
+            }
+
+            $this->view->assign('companyAcl', EK_Acl_CompanyAcl::getAllInstance($oCompany));
+            $this->view->assign('userList', TM_User_User::getAllInstance());
+            $this->view->assign('company', $oCompany);
+        }
 }
 

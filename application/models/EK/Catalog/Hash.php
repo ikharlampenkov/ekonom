@@ -41,6 +41,16 @@ class EK_Catalog_Hash
     protected $_listValue = '';
 
     /**
+     * @var bool
+     */
+    protected $_isRequired = false;
+
+    /**
+     * @var int
+     */
+    protected $_sortOrder = 1000;
+
+    /**
      *
      * @access protected
      */
@@ -49,7 +59,7 @@ class EK_Catalog_Hash
     /**
      *
      *
-     * @return EK_Catalog_Rubric
+     * @return EK_Catalog_Catalog
      * @access public
      */
     public function getTask()
@@ -87,12 +97,11 @@ class EK_Catalog_Hash
     /**
      *
      *
-     * @param EK_Catalog_Rubric $value
-
+     * @param EK_Catalog_Product $value
      * @return void
      * @access protected
      */
-    protected function setTask(EK_Catalog_Rubric $value)
+    protected function setTask(EK_Catalog_Product $value)
     {
         $this->_task = $value;
 
@@ -125,7 +134,6 @@ class EK_Catalog_Hash
      *
      *
      * @param string $value
-
      * @return void
      * @access public
      */
@@ -138,7 +146,6 @@ class EK_Catalog_Hash
      *
      *
      * @param array|string $value
-
      * @return void
      * @access public
      */
@@ -169,6 +176,53 @@ class EK_Catalog_Hash
     } // end of member function getValueList
 
     /**
+     * @param boolean $isRequired
+     */
+    public function setIsRequired($isRequired)
+    {
+        if ($isRequired === 'on') {
+            $this->_isRequired = 1;
+        } elseif (empty($isRequired)) {
+            $this->_isRequired = 0;
+        } else {
+            $this->_isRequired = $isRequired;
+        }
+    }
+
+    /**
+     * @return boolean
+     */
+    public function getIsRequired()
+    {
+        return $this->_isRequired;
+    }
+
+    /**
+     * @param int $sortOrder
+     */
+    public function setSortOrder($sortOrder)
+    {
+        $this->_sortOrder = $sortOrder;
+    }
+
+    /**
+     * @return int
+     */
+    public function getSortOrder()
+    {
+        return $this->_sortOrder;
+    } // end of member function fillFromArray
+
+    protected function _prepareBool($value)
+    {
+        if ($value) {
+            return 1;
+        } else {
+            return 0;
+        }
+    }
+
+    /**
      * @param $name
      * @return mixed
      */
@@ -183,7 +237,6 @@ class EK_Catalog_Hash
     /**
      *
      *
-
      * @return EK_Catalog_Hash
      * @access public
      */
@@ -201,15 +254,16 @@ class EK_Catalog_Hash
     public function insertToDb()
     {
         try {
-            $sql = 'INSERT INTO product_hash(product_id, attribute_key, title, type_id, list_value)
-                    VALUES (NULL, "' . $this->_attributeKey . '", "' . $this->_title . '", ' . $this->_type->getId() . ', "' . $this->_listValue . ' ")';
+            $sql = 'INSERT INTO product_hash(product_id, attribute_key, title, type_id, list_value, required, sort_order)
+                    VALUES (NULL, "' . $this->_attributeKey . '", "' . $this->_title . '", ' . $this->_type->getId() . ',
+                            "' . $this->_listValue . ' ", ' . $this->_prepareBool($this->_isRequired) . ', ' . $this->_sortOrder . ')';
             $this->_db->query($sql);
         } catch (Exception $e) {
             throw new Exception($e->getMessage());
         }
     } // end of member function insertToDb
 
-    //product_id, attribute_key, title, type_id
+    //product_id, attribute_key, title, type_id, required, sort_order
 
     /**
      *
@@ -221,7 +275,9 @@ class EK_Catalog_Hash
     {
         try {
             $sql = 'UPDATE product_hash
-                    SET title="' . $this->_title . '", type_id=' . $this->_type->getId() . ', list_value="' . $this->_listValue . ' "
+                    SET title="' . $this->_title . '", type_id=' . $this->_type->getId() . ',
+                        list_value="' . $this->_listValue . ' ", required=' . $this->_prepareBool($this->_isRequired) . ',
+                        sort_order=' . $this->_sortOrder . '
                     WHERE product_id IS NULL AND attribute_key="' . $this->_attributeKey . '"';
             $this->_db->query($sql);
         } catch (Exception $e) {
@@ -250,7 +306,6 @@ class EK_Catalog_Hash
      *
      *
      * @param int $key идентификатор задачи
-
      * @return EK_Catalog_Hash
      * @static
      * @access public
@@ -278,7 +333,6 @@ class EK_Catalog_Hash
      *
      *
      * @param array $values
-
      * @return EK_Catalog_Hash
      * @static
      * @access public
@@ -297,7 +351,6 @@ class EK_Catalog_Hash
     /**
      *
      * @param $object
-
      * @return array
      * @static
      * @access public
@@ -307,17 +360,16 @@ class EK_Catalog_Hash
         try {
             $db = StdLib_DB::getInstance();
 
+            $sql = 'SELECT product_hash.attribute_key, title, product_hash.type_id, list_value, required, sort_order
+                    FROM product_hash ';
+
             if (!is_null($object)) {
-                $sql = 'SELECT COUNT(attribute_key) FROM product_attribute WHERE product_id=' . $object->id;
-                $result = $db->query($sql, StdLib_DB::QUERY_MODE_NUM);
-            }
-
-            $sql = 'SELECT product_hash.attribute_key, title, product_hash.type_id, list_value FROM product_hash';
-
-            if (!is_null($object) && isset($result[0][0]) && $result[0][0] > 0) {
-                $sql .= ' LEFT JOIN product_attribute ON product_hash.attribute_key=product_attribute.attribute_key
-                          WHERE product_attribute.product_id=' . $object->id . '
-                          ORDER BY is_fill DESC, title';
+            $sql .= ' LEFT JOIN (
+                        SELECT * FROM product_attribute WHERE product_attribute.product_id=' . $object->id . '
+                    ) t2 ON product_hash.attribute_key=t2.attribute_key
+                    ORDER BY required DESC, sort_order, title';
+            } else {
+                $sql .= ' ORDER BY required DESC, sort_order, title';
             }
 
             $result = $db->query($sql, StdLib_DB::QUERY_MOD_ASSOC);
@@ -341,7 +393,6 @@ class EK_Catalog_Hash
      *
      *
      * @param array $values
-
      * @return void
      * @access public
      */
@@ -353,6 +404,8 @@ class EK_Catalog_Hash
 
         $this->setType(TM_Attribute_AttributeTypeFactory::getAttributeTypeById(new EK_Catalog_AttributeTypeMapper(), $values['type_id']));
         $this->setValueList($values['list_value']);
-    } // end of member function fillFromArray
+        $this->setIsRequired($values['required']);
+        $this->setSortOrder($values['sort_order']);
+    }
 
 }

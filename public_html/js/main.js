@@ -22,3 +22,7 @@ function comment_reply_on(id) {
     $('#replay_form').show();
     $('#add_form').hide();
 }
+
+$(document).ready(function () {
+    company.createSubMenu();
+});

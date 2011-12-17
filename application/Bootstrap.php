@@ -122,10 +122,25 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap
            $view = $this->getResource('View');
            $view->assign('authUser', $data->login);
 
+           /*
            if ($data->role == 'admin') {
                $view->getEngine()->getTemplateVars('layout')->setLayout('admin');
-           } 
+           } elseif ($data->role == 'companyadmin') {
+               $view->getEngine()->getTemplateVars('layout')->setLayout('admin');
+           }
+           */
         }
+
+        $mainSession = new Zend_Session_Namespace('main');
+
+
+        if (!isset($mainSession->curCity)) {
+            $mainSession->curCity = 1;
+
+        } else {
+            $view->assign('curCity', $mainSession->curCity);
+        }
+
     }
 
     protected function _initAcl()
@@ -144,7 +159,11 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap
     {
         Zend_Loader::loadClass('SetViewParam');
         Zend_Controller_Front::getInstance()->registerPlugin(new SetViewParam());
+
+        Zend_Loader::loadClass('ShowCityList');
+        Zend_Controller_Front::getInstance()->registerPlugin(new ShowCityList());
     }
+
 
 }
 

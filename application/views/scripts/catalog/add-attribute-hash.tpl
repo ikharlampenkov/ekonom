@@ -1,4 +1,4 @@
-<div class="page"><h1>Добавить атрибут</h1></div><br/>
+<h1 class="heading">Добавить атрибут</h1>
 
 {if isset($exception_msg)}
 <div>Ошибка: {$exception_msg}</div><br/>
@@ -27,6 +27,14 @@
         <tr>
             <td class="ttovar_title">Список значений (через ||) </td>
             <td class="ttovar"><input name="data[list_value]" value="{$hash->listValue}"/></td>
+        </tr>
+        <tr>
+            <td class="ttovar_title">Обязательное</td>
+            <td class="ttovar"><input type="checkbox" name="data[required]" {if $hash->isRequired}checked="checked" {/if} style="width: 14px;"/></td>
+        </tr>
+        <tr>
+            <td class="ttovar_title">Порядок сортировки</td>
+            <td class="ttovar"><input name="data[sort_order]" value="{$hash->sortOrder}"/></td>
         </tr>
     </table>
     <input id="save" name="save" type="submit" value="Сохранить"/>

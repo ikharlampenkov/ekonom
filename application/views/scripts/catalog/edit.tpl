@@ -1,4 +1,4 @@
-<div class="page"><h1>Редактировать товар</h1></div><br/>
+<h1 class="heading">Редактировать товар</h1>
 
 <form action="{$this->url(['controller' => $controller,'action' => 'edit', 'rubric' => $cur_rubric->getId()])}" method="post" enctype="multipart/form-data">
     <table width="100%">
@@ -7,9 +7,23 @@
             <td class="ttovar"><input name="data[title]" value="{$product->title}"/></td>
         </tr>
         <tr>
+            <td class="ttovar">Компания</td>
+            <td class="ttovar">
+                <select name="data[company]">
+                {if $companyList!==false}
+                    {foreach from=$companyList item=company}
+                        {if_object_allowed type="Company" object="{$company}" priv="moderate"}
+                            <option value="{$company->id}" {if $company->id==$product->company->id}selected="selected"{/if}>{$company->title}</option>
+                        {/if_object_allowed}
+                    {/foreach}
+                {/if}
+                </select>
+            </td>
+        </tr>
+        <tr>
             <td class="ttovar">Рисунок</td>
-            <td class="ttovar">{if isset($product) &&   $product->img->getName()}<img src="{$siteurl}files/{$product->img->getName()}"/><br/>
-                &nbsp;<a href="?page={$page}&action=del_img&id={$product->id}&rubric={$cur_rubric->getId()}">удалить</a><br/>{/if}
+            <td class="ttovar">{if isset($product) &&   $product->img->getName()}<img src="/files/{$product->img->getName()}"/><br/>{/if}
+                {*&nbsp;<a href="?page={$page}&action=del_img&id={$product->id}&rubric={$cur_rubric->getId()}">удалить</a><br/>{/if}*}
                 <input type="file" name="img"/></td>
         </tr>
         <tr>
@@ -34,14 +48,14 @@
             <td class="ttovar"><textarea name="data[full_text]">{$product->fullText}</textarea></td>
         </tr>
 
-        {if $attributeHashList!==false}
+    {if $attributeHashList!==false}
         {foreach from=$attributeHashList item=attributeHash}
             <tr>
                 <td class="ttovar_title">{$attributeHash->title}</td>
                 <td class="ttovar">{$attributeHash->type->getHTMLFrom($attributeHash, $product)}{*<input name="data[attribute][{$attributeHash->attributeKey}]" value="{if $task->searchAttribute($attributeHash->attributeKey)}{$task->getAttribute($attributeHash->attributeKey)->value}{/if}"/>*}</td>
             </tr>
         {/foreach}
-        {/if}
+    {/if}
 
     </table>
     <input id="save" name="save" type="submit" value="Сохранить"/>

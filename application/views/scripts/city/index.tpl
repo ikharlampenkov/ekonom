@@ -1,4 +1,4 @@
-<div class="page"><h1>Города</h1></div><br/>
+<h1 class="heading">Города</h1>
 
 
 <table width="100%">

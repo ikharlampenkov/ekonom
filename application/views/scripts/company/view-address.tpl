@@ -1,4 +1,4 @@
-<div class="page"><h1>Компания {$company->title} <a href="{$this->url(['controller' => $controller, 'action' => 'index'])}">Все компании</a></h1></div><br/>
+<h1 class="heading">Компания {$company->title} <a href="{$this->url(['controller' => $controller, 'action' => 'index'])}">Все компании</a></h1>
 
 
 

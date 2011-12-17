@@ -1,4 +1,4 @@
-<div class="page"><h1>Добавить рубрику</h1></div><br/>
+<h1 class="heading">Добавить рубрику</h1>
 
     <form action="{$this->url(['controller' => $controller, 'action' => 'editRubric', 'id' => $rubric->getId(), 'rubric' => $cur_rubric->getId()])}" method="post">
         <table width="100%">
