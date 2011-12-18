@@ -162,6 +162,9 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap
 
         Zend_Loader::loadClass('ShowCityList');
         Zend_Controller_Front::getInstance()->registerPlugin(new ShowCityList());
+
+        Zend_Loader::loadClass('ShowRubricMenu');
+        Zend_Controller_Front::getInstance()->registerPlugin(new ShowRubricMenu());
     }
 
 

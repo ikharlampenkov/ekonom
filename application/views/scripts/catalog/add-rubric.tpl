@@ -1,3 +1,5 @@
+<article id="main-content">
+
 <h1 class="heading">Добавить рубрику</h1>
 
 <form action="{$this->url(['controller' => $controller, 'action' => 'addRubric', 'rubric' => $cur_rubric->getId()])}" method="post">
@@ -18,3 +20,5 @@
     </table>
     <input id="save" name="save" type="submit" value="Сохранить"/>
 </form>
+
+</article>

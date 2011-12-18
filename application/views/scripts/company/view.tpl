@@ -1,53 +1,55 @@
 <article id="main-content" class="item-description shop">
 
-    <h1>Prada</h1>
+    <h1>{$company->title}</h1>
 
     <div class="clearfix inner">
+        {if $galleryList !== false}
+
+
+
         <div class="gallery">
+            {foreach from=$galleryList item=gallery name=_gallery}
+                {if $smarty.foreach._gallery.first}
             <div class="big-image">
-                <img src="/uploads/gallery.jpg" width="420" height="270" alt="Комментарий к первому фото" data-preview="/uploads/gallery_preview.jpg"/>
-                <h5 class="title">Комментарий к первому фото</h5>
+                <img src="/gallery{$gallery->file->getSubPath()}/{$gallery->file->getName()}" width="420" height="270" alt="{$gallery->title}" data-preview="/gallery{$gallery->file->getSubPath()}/{$gallery->file->getPreview()}"/>
+                <h5 class="title">{$gallery->title}</h5>
                 <a href="#previous" class="previous"></a>
                 <a href="#next" class="next"></a>
             </div>
 
             <ul class="previews clearfix">
+                {else}
                 <li>
-                    <a href="/uploads/gallery1.jpg" title="Комментарий ко второму фото">
-                        <img src="/uploads/gallery1_preview.jpg" alt="Превью второго фото" class="shadow-image"/>
+                    <a href="/gallery{$gallery->file->getSubPath()}/{$gallery->file->getName()}" title="{$gallery->title}">
+                        <img src="/gallery{$gallery->file->getSubPath()}/{$gallery->file->getPreview()}" alt="{$gallery->title}" class="shadow-image"/>
                     </a>
                 </li>
-                <li>
-                    <a href="/uploads/gallery2.jpg" title="Комментарий ко второму фото">
-                        <img src="/uploads/gallery2_preview.jpg" alt="Превью второго фото" class="shadow-image"/>
-                    </a>
-                </li>
-                <li>
-                    <a href="/uploads/gallery3.jpg" title="Комментарий ко второму фото">
-                        <img src="/uploads/gallery3_preview.jpg" alt="Превью второго фото" class="shadow-image"/>
-                    </a>
-                </li>
+                {/if}
+                {if $smarty.foreach._gallery.last}
             </ul>
+                {/if}
+            {/foreach}
         </div>
+        {/if}
 
         <div class="information">
-            <img class="shop-logo shadow-image" src="/uploads/prada_logo.jpg" alt="Логотип магазина Prada"/>
+            <img class="shop-logo shadow-image" src="/files/{$company->file->getName()}" alt="Логотип магазина {$company->title}"/>
 
             <h3>Краткое описание магазина или товара</h3>
 
-            <p>Prada – всемирно известный Дом Моды, выпускающий коллекции модной одежды и аксессуаров.</p>
+            <p>{$company->description}</p>
 
+        {if $company->getAddressList() !== false}
             <h3>Адреса магазинов</h3>
             <ul class="addresses-list">
-                <li>
-                    <span class="nobr">Пр. Ленина, 90/1, ТРК "Променад"</span>,<br/>
-                    <span class="phone nobr">+7 (3842) 77-77-77</span>
-                </li>
-                <li>
-                    <span class="nobr">Пр. Ленина, 90/1, ТРК "Променад"</span>,<br/>
-                    <span class="phone nobr">+7 (3842) 77-77-77</span>
-                </li>
+                {foreach from=$company->getAddressList() item=address}
+                    <li>
+                        <span class="nobr">{$address->city->title}, {$address->address}</span>,<br/>
+                        <span class="phone nobr">+7 {$address->phone}</span>
+                    </li>
+                {/foreach}
             </ul>
+        {/if}
         </div>
 
         <div id="share" class="clear">
@@ -84,3 +86,4 @@
         </a>
     </section>
 </aside>
+

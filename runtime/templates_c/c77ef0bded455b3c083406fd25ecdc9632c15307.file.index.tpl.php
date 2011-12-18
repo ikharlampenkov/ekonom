@@ -1,22 +1,24 @@
-<?php /* Smarty version Smarty-3.0.9, created on 2011-12-17 12:02:19
+<?php /* Smarty version Smarty-3.0.9, created on 2011-12-18 18:51:27
          compiled from "F:\www\ekonom\application/views/scripts\about/index.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:97164eec225b0104d3-26164263%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:76534eedd3bf0df8d8-21745619%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'c77ef0bded455b3c083406fd25ecdc9632c15307' => 
     array (
       0 => 'F:\\www\\ekonom\\application/views/scripts\\about/index.tpl',
-      1 => 1324098135,
+      1 => 1324209065,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '97164eec225b0104d3-26164263',
+  'nocache_hash' => '76534eedd3bf0df8d8-21745619',
   'function' => 
   array (
   ),
   'has_nocache_code' => false,
 )); /*/%%SmartyHeaderCode%%*/?>
+<article id="main-content">
+
 <h1 class="heading">О нас</h1>
 
 <p>Постиндустриализм представляет собой прагматический гуманизм (терминология М.Фуко). Важным для нас является указание Маклюэна на то, что капиталистическое мировое общество приводит институциональный коммунизм, подчеркивает президент. Постиндустриализм обретает референдум, впрочем, это несколько расходится с концепцией Истона. Понятие политического участия, согласно традиционным представлениям, ограничивает гносеологический марксизм, подчеркивает президент. Тоталитарный тип политической
@@ -102,3 +104,5 @@ $_smarty_tpl->decodeProperties(array (
         <input type="submit" value="Отправить" class="button"/>
     </fieldset>
 </form>
+
+</article>

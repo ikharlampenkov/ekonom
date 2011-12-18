@@ -1,3 +1,5 @@
+<article id="main-content">
+
 <h1 class="heading">Каталог</h1>
 
 
@@ -119,3 +121,5 @@
 
 </table>
 {/if_allowed}
+
+</article>

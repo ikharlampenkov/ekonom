@@ -1,3 +1,4 @@
+
 <div style="background-color:#f0f0f0; padding:5px;"><h1>КАТАЛОГ ТОВАРОВ</h1></div>
 
 {if $action=='add_rubric' || $action=="edit_rubric"}

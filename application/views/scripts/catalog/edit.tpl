@@ -1,3 +1,5 @@
+<article id="main-content">
+
 <h1 class="heading">Редактировать товар</h1>
 
 <form action="{$this->url(['controller' => $controller,'action' => 'edit', 'rubric' => $cur_rubric->getId()])}" method="post" enctype="multipart/form-data">
@@ -60,3 +62,5 @@
     </table>
     <input id="save" name="save" type="submit" value="Сохранить"/>
 </form>
+
+</article>

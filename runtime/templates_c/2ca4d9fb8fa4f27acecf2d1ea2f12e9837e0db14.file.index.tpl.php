@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.0.9, created on 2011-12-17 12:53:28
+<?php /* Smarty version Smarty-3.0.9, created on 2011-12-18 19:04:04
          compiled from "F:\www\ekonom\application/views/scripts\user/index.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:204624eec2e585adb73-00520766%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_smarty_tpl->decodeProperties(array (
     '2ca4d9fb8fa4f27acecf2d1ea2f12e9837e0db14' => 
     array (
       0 => 'F:\\www\\ekonom\\application/views/scripts\\user/index.tpl',
-      1 => 1324101205,
+      1 => 1324107625,
       2 => 'file',
     ),
   ),
@@ -74,7 +74,8 @@ if ($_smarty_tpl->_count($_from) > 0){
                 <img src="/i/edit.png"/>&nbsp;<a href="<?php echo $_smarty_tpl->getVariable('this')->value->url(array('controller'=>$_smarty_tpl->getVariable('controller')->value,'action'=>'edit','id'=>$_smarty_tpl->getVariable('user')->value->id));?>
 ">редактировать</a><br/>
                 <img src="/i/delete.png"/>&nbsp;<a href="<?php echo $_smarty_tpl->getVariable('this')->value->url(array('controller'=>$_smarty_tpl->getVariable('controller')->value,'action'=>'delete','id'=>$_smarty_tpl->getVariable('user')->value->id));?>
-" onclick="return confirmDelete('<?php echo $_smarty_tpl->getVariable('user')->value->login;?>');" style="color: #830000">удалить</a></td>
+" onclick="return confirmDelete('<?php echo $_smarty_tpl->getVariable('user')->value->login;?>
+');" style="color: #830000">удалить</a></td>
         </tr>
     <?php }} ?>
 <?php }?>

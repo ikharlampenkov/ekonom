@@ -1,24 +1,26 @@
-<?php /* Smarty version Smarty-3.0.9, created on 2011-12-17 12:50:56
+<?php /* Smarty version Smarty-3.0.9, created on 2011-12-18 21:37:53
          compiled from "F:\www\ekonom\application/views/scripts\catalog/index.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:303784eec2dc06ee9b2-65697383%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:70784eedfac14f5048-71959659%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'a943f4c37583ea01c7979b69872ea4115840ecec' => 
     array (
       0 => 'F:\\www\\ekonom\\application/views/scripts\\catalog/index.tpl',
-      1 => 1324100894,
+      1 => 1324219071,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '303784eec2dc06ee9b2-65697383',
+  'nocache_hash' => '70784eedfac14f5048-71959659',
   'function' => 
   array (
   ),
   'has_nocache_code' => false,
 )); /*/%%SmartyHeaderCode%%*/?>
 <?php if (!is_callable('smarty_block_if_allowed')) include 'F:\www\ekonom\library\Smarty\plugins\block.if_allowed.php';
-?><h1 class="heading">Каталог</h1>
+?><article id="main-content">
+
+<h1 class="heading">Каталог</h1>
 
 
 <?php if ($_smarty_tpl->getVariable('path')->value){?>
@@ -209,3 +211,6 @@ if ($_smarty_tpl->_count($_from) > 0){
 
 </table>
 <?php $_block_content = ob_get_clean(); $_block_repeat=false; echo smarty_block_if_allowed(array('resource'=>($_smarty_tpl->getVariable('controller')->value)."/index",'priv'=>"show-attribute-type"), $_block_content, $_smarty_tpl, $_block_repeat);  } array_pop($_smarty_tpl->smarty->_tag_stack);?>
+
+
+</article>

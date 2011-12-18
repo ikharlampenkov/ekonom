@@ -1,3 +1,5 @@
+<article id="main-content">
+
 <h1 class="heading">Компания {$company->title} <a href="{$this->url(['controller' => $controller, 'action' => 'index'])}">Все компании</a></h1>
 
 
@@ -24,3 +26,5 @@
 {/if}
 
 </table>
+
+</article>

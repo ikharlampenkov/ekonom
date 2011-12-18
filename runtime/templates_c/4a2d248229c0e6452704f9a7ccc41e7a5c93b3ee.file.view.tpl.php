@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.0.9, created on 2011-12-17 14:21:39
+<?php /* Smarty version Smarty-3.0.9, created on 2011-12-18 23:40:09
          compiled from "F:\www\ekonom\application/views/scripts\company/view.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:279454eec430373f2d0-32478494%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:305294eee176975e368-10925528%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '4a2d248229c0e6452704f9a7ccc41e7a5c93b3ee' => 
     array (
       0 => 'F:\\www\\ekonom\\application/views/scripts\\company/view.tpl',
-      1 => 1324106496,
+      1 => 1324226406,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '279454eec430373f2d0-32478494',
+  'nocache_hash' => '305294eee176975e368-10925528',
   'function' => 
   array (
   ),
@@ -19,54 +19,92 @@ $_smarty_tpl->decodeProperties(array (
 )); /*/%%SmartyHeaderCode%%*/?>
 <article id="main-content" class="item-description shop">
 
-    <h1>Prada</h1>
+    <h1><?php echo $_smarty_tpl->getVariable('company')->value->title;?>
+</h1>
 
     <div class="clearfix inner">
+        <?php if ($_smarty_tpl->getVariable('galleryList')->value!==false){?>
+
+
+
         <div class="gallery">
+            <?php  $_smarty_tpl->tpl_vars['gallery'] = new Smarty_Variable;
+ $_from = $_smarty_tpl->getVariable('galleryList')->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+ $_smarty_tpl->tpl_vars['gallery']->total= $_smarty_tpl->_count($_from);
+ $_smarty_tpl->tpl_vars['gallery']->iteration=0;
+ $_smarty_tpl->tpl_vars['gallery']->index=-1;
+if ($_smarty_tpl->tpl_vars['gallery']->total > 0){
+    foreach ($_from as $_smarty_tpl->tpl_vars['gallery']->key => $_smarty_tpl->tpl_vars['gallery']->value){
+ $_smarty_tpl->tpl_vars['gallery']->iteration++;
+ $_smarty_tpl->tpl_vars['gallery']->index++;
+ $_smarty_tpl->tpl_vars['gallery']->first = $_smarty_tpl->tpl_vars['gallery']->index === 0;
+ $_smarty_tpl->tpl_vars['gallery']->last = $_smarty_tpl->tpl_vars['gallery']->iteration === $_smarty_tpl->tpl_vars['gallery']->total;
+ $_smarty_tpl->tpl_vars['smarty']->value['foreach']['_gallery']['first'] = $_smarty_tpl->tpl_vars['gallery']->first;
+ $_smarty_tpl->tpl_vars['smarty']->value['foreach']['_gallery']['last'] = $_smarty_tpl->tpl_vars['gallery']->last;
+?>
+                <?php if ($_smarty_tpl->getVariable('smarty')->value['foreach']['_gallery']['first']){?>
             <div class="big-image">
-                <img src="/uploads/gallery.jpg" width="420" height="270" alt="Комментарий к первому фото" data-preview="/uploads/gallery_preview.jpg"/>
-                <h5 class="title">Комментарий к первому фото</h5>
+                <img src="/gallery<?php echo $_smarty_tpl->getVariable('gallery')->value->file->getSubPath();?>
+/<?php echo $_smarty_tpl->getVariable('gallery')->value->file->getName();?>
+" width="420" height="270" alt="<?php echo $_smarty_tpl->getVariable('gallery')->value->title;?>
+" data-preview="/gallery<?php echo $_smarty_tpl->getVariable('gallery')->value->file->getSubPath();?>
+/<?php echo $_smarty_tpl->getVariable('gallery')->value->file->getPreview();?>
+"/>
+                <h5 class="title"><?php echo $_smarty_tpl->getVariable('gallery')->value->title;?>
+</h5>
                 <a href="#previous" class="previous"></a>
                 <a href="#next" class="next"></a>
             </div>
 
             <ul class="previews clearfix">
+                <?php }else{ ?>
                 <li>
-                    <a href="/uploads/gallery1.jpg" title="Комментарий ко второму фото">
-                        <img src="/uploads/gallery1_preview.jpg" alt="Превью второго фото" class="shadow-image"/>
+                    <a href="/gallery<?php echo $_smarty_tpl->getVariable('gallery')->value->file->getSubPath();?>
+/<?php echo $_smarty_tpl->getVariable('gallery')->value->file->getName();?>
+" title="<?php echo $_smarty_tpl->getVariable('gallery')->value->title;?>
+">
+                        <img src="/gallery<?php echo $_smarty_tpl->getVariable('gallery')->value->file->getSubPath();?>
+/<?php echo $_smarty_tpl->getVariable('gallery')->value->file->getPreview();?>
+" alt="<?php echo $_smarty_tpl->getVariable('gallery')->value->title;?>
+" class="shadow-image"/>
                     </a>
                 </li>
-                <li>
-                    <a href="/uploads/gallery2.jpg" title="Комментарий ко второму фото">
-                        <img src="/uploads/gallery2_preview.jpg" alt="Превью второго фото" class="shadow-image"/>
-                    </a>
-                </li>
-                <li>
-                    <a href="/uploads/gallery3.jpg" title="Комментарий ко второму фото">
-                        <img src="/uploads/gallery3_preview.jpg" alt="Превью второго фото" class="shadow-image"/>
-                    </a>
-                </li>
+                <?php }?>
+                <?php if ($_smarty_tpl->getVariable('smarty')->value['foreach']['_gallery']['last']){?>
             </ul>
+                <?php }?>
+            <?php }} ?>
         </div>
+        <?php }?>
 
         <div class="information">
-            <img class="shop-logo shadow-image" src="/uploads/prada_logo.jpg" alt="Логотип магазина Prada"/>
+            <img class="shop-logo shadow-image" src="/files/<?php echo $_smarty_tpl->getVariable('company')->value->file->getName();?>
+" alt="Логотип магазина <?php echo $_smarty_tpl->getVariable('company')->value->title;?>
+"/>
 
             <h3>Краткое описание магазина или товара</h3>
 
-            <p>Prada – всемирно известный Дом Моды, выпускающий коллекции модной одежды и аксессуаров.</p>
+            <p><?php echo $_smarty_tpl->getVariable('company')->value->description;?>
+</p>
 
+        <?php if ($_smarty_tpl->getVariable('company')->value->getAddressList()!==false){?>
             <h3>Адреса магазинов</h3>
             <ul class="addresses-list">
-                <li>
-                    <span class="nobr">Пр. Ленина, 90/1, ТРК "Променад"</span>,<br/>
-                    <span class="phone nobr">+7 (3842) 77-77-77</span>
-                </li>
-                <li>
-                    <span class="nobr">Пр. Ленина, 90/1, ТРК "Променад"</span>,<br/>
-                    <span class="phone nobr">+7 (3842) 77-77-77</span>
-                </li>
+                <?php  $_smarty_tpl->tpl_vars['address'] = new Smarty_Variable;
+ $_from = $_smarty_tpl->getVariable('company')->value->getAddressList(); if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+if ($_smarty_tpl->_count($_from) > 0){
+    foreach ($_from as $_smarty_tpl->tpl_vars['address']->key => $_smarty_tpl->tpl_vars['address']->value){
+?>
+                    <li>
+                        <span class="nobr"><?php echo $_smarty_tpl->getVariable('address')->value->city->title;?>
+, <?php echo $_smarty_tpl->getVariable('address')->value->address;?>
+</span>,<br/>
+                        <span class="phone nobr">+7 <?php echo $_smarty_tpl->getVariable('address')->value->phone;?>
+</span>
+                    </li>
+                <?php }} ?>
             </ul>
+        <?php }?>
         </div>
 
         <div id="share" class="clear">
@@ -103,3 +141,4 @@ $_smarty_tpl->decodeProperties(array (
         </a>
     </section>
 </aside>
+

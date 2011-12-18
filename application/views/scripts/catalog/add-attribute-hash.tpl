@@ -1,3 +1,5 @@
+<article id="main-content">
+
 <h1 class="heading">Добавить атрибут</h1>
 
 {if isset($exception_msg)}

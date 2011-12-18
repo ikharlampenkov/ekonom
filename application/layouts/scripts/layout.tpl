@@ -15,14 +15,14 @@
 
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
 
-    {*<script type="text/javascript" language="javascript" src="/js/jquery.js"></script>*}
+{*<script type="text/javascript" language="javascript" src="/js/jquery.js"></script>*}
     <script type="text/javascript" language="javascript" src="/js/jquery-ui.js"></script>
-    {*
-    <script type="text/javascript" language="javascript" src="/js/i18n/jquery.ui.datepicker-ru.js"></script>
-    <script type="text/javascript" language="javascript" src="/js/jquery-ui.timepicker.js"></script>
-    <script type="text/javascript" language="javascript" src="/js/i18n/jquery.ui.timepicker-ru.js"></script>
-    <script type="text/javascript" language="javascript" src="/js/jquery.form.js"></script>
-    *}
+{*
+<script type="text/javascript" language="javascript" src="/js/i18n/jquery.ui.datepicker-ru.js"></script>
+<script type="text/javascript" language="javascript" src="/js/jquery-ui.timepicker.js"></script>
+<script type="text/javascript" language="javascript" src="/js/i18n/jquery.ui.timepicker-ru.js"></script>
+<script type="text/javascript" language="javascript" src="/js/jquery.form.js"></script>
+*}
 
     <!-- fancybox assets -->
     <script type="text/javascript" src="/fancybox/lib/jquery.mousewheel-3.0.6.pack.js"></script>
@@ -79,7 +79,46 @@
                 <li><a href="/actions/">Акции</a></li>
                 <li><a href="/sales/">Распродажи</a></li>
                 <li><a href="/coupons/">Купоны</a></li>
-                <li><a href="/company/">Компании</a></li>
+                <li><a href="/company/">Компании</a>
+                    <ul class="first-level submenu">
+                    {foreach from=$headRubricList item=rubric}
+                        <li>
+                            <a href="{$this->url(['controller' => 'catalog', 'action' => 'index', 'rubric' => $rubric->getId()])}">{$rubric->title}</a>
+                            {*<ul class="submenu second-level"></ul>*}
+                        </li>
+
+                    {/foreach}
+
+                        <li><a href="/companies/auto">Автомобили</a></li>
+                        <li>
+                            <a href="/companies/clothes">Одежда</a>
+                            <ul class="submenu second-level">
+                                <li>
+                                    <a href="/companies/clothes/men">Мужская одежда</a>
+                                    <ul class="submenu third-level">
+                                        <li><a href="/companies/clothes/teenagers/shoes">Обувь</a></li>
+                                        <li><a href="/companies/clothes/teenagers/jeans">Джинсы</a></li>
+                                        <li><a href="/companies/clothes/teenagers/sports">Спортивная одежда</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="/companies/clothes/women">Женская одежда</a></li>
+                                <li><a href="/companies/clothes/children">Детская одежда</a></li>
+                                <li>
+                                    <a href="/companies/clothes/teenagers">Одежда для подростков</a>
+                                    <ul class="submenu third-level">
+                                        <li><a href="/companies/clothes/teenagers/shoes">Обувь</a></li>
+                                        <li><a href="/companies/clothes/teenagers/jeans">Джинсы</a></li>
+                                        <li><a href="/companies/clothes/teenagers/sports">Спортивная одежда</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><a href="/companies/household">Бытовая техника</a></li>
+                        <li><a href="/companies/computers">Компьютеры</a></li>
+                        <li><a href="/companies/food">Продукты питания</a></li>
+                    </ul>
+
+                </li>
                 <li><a href="/about/">О нас</a></li>
                 <li><a href="/contacts">Контактная информация</a></li>
             {if_allowed resource="city/index"}
@@ -97,79 +136,14 @@
             </ul>
         </nav>
 
+    {$this->layout()->content}
 
-        <div id="slider">
-
-            <ul id="slides">
-                <li class="slide">
-                    <img src="/uploads/slide1.jpg" alt="Слайд №2">
-
-                    <p class="description"><a href="http://yandex.ru">Абонемент на 1 занятие в неделю в спорткомплексе Олимпийский</a>.</p>
-                </li>
-                <li class="slide">
-                    <img src="/uploads/slide1.jpg" alt="Слайд №1">
-
-                    <p class="description"><a href="http://google.ru">Абонемент на 2 занятие в неделю в спорткомплексе Олимпийский</a>.</p>
-                </li>
-            </ul>
-            <a href="#previous" class="previous"></a>
-            <a href="#next" class="next"></a>
-
-            <div id="shadow"></div>
-        </div>
-
-        <article id="main-content">
-
-        {*
-                {foreach from=$companyList item=company}
-                    <div>{$company->title}</div>
-                    {if $company->getAddressList() !== false}
-                        {foreach from=$company->getAddressList() item=address}
-                            {$address->city->title}, {$address->address} {$address->phone}<br/>
-                        {/foreach}
-                    {/if}
-                    <br/>
-                {/foreach}
-        *}
-
-
-        {$this->layout()->content}
-
-
-
-            <aside>
-                <div id="banners" class="clearfix">
-                    <div class="banner size490_84">
-                        <a href="http://yandex.ru"><img src="/uploads/banner.png"/></a>
-                    </div>
-                    <div class="banner size490_84">
-                        <a href="http://yandex.ru"><img src="/uploads/banner.png"/></a>
-                    </div>
-                </div>
-
-                <div id="share">
-                    <span class="share42">
-                        <a target="_blank" title="Поделиться в Facebook" class="facebook" href="#" rel="nofollow"
-                           onclick="window.open('http://www.facebook.com/sharer.php?u={ url }&amp;t={ title }', '_blank', 'scrollbars=0, resizable=1, menubar=0, left=200, top=200, width=550, height=440, toolbar=0, status=0');return false">
-                        </a>
-                        <a target="_blank" title="Добавить в Twitter" class="twitter" href="#" rel="nofollow"
-                           onclick="window.open('http://twitter.com/share?text={ title }&amp;url={ url }', '_blank', 'scrollbars=0, resizable=1, menubar=0, left=200, top=200, width=550, height=440, toolbar=0, status=0');return false">
-                        </a>
-                        <a target="_blank" title="Поделиться В Контакте" class="vkontakte" href="#" rel="nofollow"
-                           onclick="window.open('http://vkontakte.ru/share.php?url={ url }', '_blank', 'scrollbars=0, resizable=1, menubar=0, left=200, top=200, width=554, height=421, toolbar=0, status=0');return false">
-                        </a>
-                    </span>
-
-                    <div id="plusone">
-                        <g:plusone></g:plusone>
-                    </div>
-                    <script type="text/javascript">
-                        plusone();
-                    </script>
-                </div>
-            </aside>
-        </article>
     </div>
+
+{if $controller != 'index'}
+    <a href="javascript:history.go(-1);" class="button back">Назад</a>
+{/if}
+
 </div>
 
 <footer>

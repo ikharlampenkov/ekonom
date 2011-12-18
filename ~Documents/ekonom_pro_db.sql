@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Хост: localhost
--- Время создания: Дек 17 2011 г., 14:38
+-- Время создания: Дек 18 2011 г., 23:41
 -- Версия сервера: 5.1.50
 -- Версия PHP: 5.3.8-ZS5.5.0
 
@@ -67,8 +67,8 @@ CREATE TABLE IF NOT EXISTS `company` (
 --
 
 INSERT INTO `company` (`id`, `city_id`, `title`, `file`, `description`) VALUES
-(1, 1, 'Первая компания', 'file_17-12-2011-13-09-34.png', ''),
-(2, 1, 'Вторая компания', 'file_17-12-2011-13-09-45.png', '');
+(1, 1, 'Первая компания', 'file_18-12-2011-19-33-24.jpg', 'Prada – всемирно известный Дом Моды, выпускающий коллекции модной одежды и аксессуаров.'),
+(2, 1, 'Вторая компания', 'file_17-12-2011-13-09-45.png', 'Prada – всемирно известный Дом Моды, выпускающий коллекции модной одежды и аксессуаров.');
 
 -- --------------------------------------------------------
 
@@ -135,6 +135,71 @@ CREATE TABLE IF NOT EXISTS `content_page` (
   PRIMARY KEY (`id`),
   UNIQUE KEY `page_title_UNIQUE` (`page_title`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `gallery`
+--
+
+DROP TABLE IF EXISTS `gallery`;
+CREATE TABLE IF NOT EXISTS `gallery` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `title` varchar(255) NOT NULL,
+  `date_create` datetime NOT NULL,
+  `user_id` int(10) unsigned NOT NULL,
+  `file` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `fk_tm_document_tm_user1` (`user_id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=5 ;
+
+--
+-- Дамп данных таблицы `gallery`
+--
+
+INSERT INTO `gallery` (`id`, `title`, `date_create`, `user_id`, `file`) VALUES
+(1, 'Первое фото', '2011-12-18 23:10:50', 1, 'img_18-12-2011-23-10-50.jpg'),
+(2, 'Второе фото', '2011-12-18 23:27:19', 1, 'img_18-12-2011-23-27-19.jpg'),
+(3, 'Треть фото', '2011-12-18 23:28:11', 1, 'img_18-12-2011-23-28-11.jpg'),
+(4, 'Четвертое фото', '2011-12-18 23:28:27', 1, 'img_18-12-2011-23-28-27.jpg');
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `gallery_company`
+--
+
+DROP TABLE IF EXISTS `gallery_company`;
+CREATE TABLE IF NOT EXISTS `gallery_company` (
+  `gallery_id` int(10) unsigned NOT NULL,
+  `company_id` int(10) unsigned NOT NULL,
+  KEY `fk_tm_task_document_tm_document1` (`gallery_id`),
+  KEY `fk_gallery_company_company1` (`company_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Дамп данных таблицы `gallery_company`
+--
+
+INSERT INTO `gallery_company` (`gallery_id`, `company_id`) VALUES
+(1, 1),
+(2, 1),
+(3, 1),
+(4, 1);
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `gallery_product`
+--
+
+DROP TABLE IF EXISTS `gallery_product`;
+CREATE TABLE IF NOT EXISTS `gallery_product` (
+  `gallery_id` int(10) unsigned NOT NULL,
+  `product_id` int(10) unsigned NOT NULL,
+  PRIMARY KEY (`gallery_id`,`product_id`),
+  KEY `fk_table1_product1` (`product_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -283,9 +348,9 @@ CREATE TABLE IF NOT EXISTS `product_rubric` (
 
 INSERT INTO `product_rubric` (`id`, `title`, `parent_id`, `is_root`) VALUES
 (1, 'root', NULL, 1),
-(2, 'Продовольственные товары', 1, 0),
+(2, 'Продовольственные', 1, 0),
 (3, 'Фрукты', 2, 0),
-(4, 'Непродовольственные товары', 1, 0),
+(4, 'Непродовольственные', 1, 0),
 (5, 'Бытовая химия', 4, 0),
 (6, 'Одежда', 4, 0),
 (8, 'Овощи', 2, 0),
@@ -363,6 +428,12 @@ INSERT INTO `tm_acl_role` (`tm_user_role_id`, `tm_user_resource_id`, `is_allow`,
 (1, 101, 1, 'show'),
 (1, 102, 1, 'show'),
 (1, 103, 1, 'show'),
+(1, 104, 1, 'show'),
+(1, 105, 1, 'show'),
+(1, 106, 1, 'show'),
+(1, 107, 1, 'show'),
+(1, 108, 1, 'show'),
+(1, 109, 1, 'show'),
 (3, 1, 1, 'show'),
 (3, 2, 1, 'show'),
 (3, 3, 1, 'show'),
@@ -414,6 +485,8 @@ INSERT INTO `tm_acl_role` (`tm_user_role_id`, `tm_user_resource_id`, `is_allow`,
 (3, 101, 1, 'show'),
 (3, 102, 1, 'show'),
 (3, 103, 1, 'show'),
+(3, 104, 1, 'show'),
+(3, 105, 1, 'show'),
 (4, 1, 1, 'show'),
 (4, 2, 1, 'show'),
 (4, 3, 1, 'show'),
@@ -465,6 +538,12 @@ INSERT INTO `tm_acl_role` (`tm_user_role_id`, `tm_user_resource_id`, `is_allow`,
 (4, 101, 1, 'show'),
 (4, 102, 1, 'show'),
 (4, 103, 1, 'show'),
+(4, 104, 1, 'show'),
+(4, 105, 1, 'show'),
+(4, 106, 1, 'show'),
+(4, 107, 1, 'show'),
+(4, 108, 1, 'show'),
+(4, 109, 1, 'show'),
 (5, 1, 1, 'show'),
 (5, 2, 1, 'show'),
 (5, 3, 1, 'show'),
@@ -515,7 +594,9 @@ INSERT INTO `tm_acl_role` (`tm_user_role_id`, `tm_user_resource_id`, `is_allow`,
 (5, 100, 0, 'show'),
 (5, 101, 1, 'show'),
 (5, 102, 1, 'show'),
-(5, 103, 1, 'show');
+(5, 103, 1, 'show'),
+(5, 104, 1, 'show'),
+(5, 105, 1, 'show');
 
 -- --------------------------------------------------------
 
@@ -724,7 +805,7 @@ CREATE TABLE IF NOT EXISTS `tm_user_resource` (
   `rtitle` varchar(255) NOT NULL DEFAULT '',
   PRIMARY KEY (`id`),
   UNIQUE KEY `title` (`title`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=104 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=110 ;
 
 --
 -- Дамп данных таблицы `tm_user_resource`
@@ -781,7 +862,13 @@ INSERT INTO `tm_user_resource` (`id`, `title`, `rtitle`) VALUES
 (100, 'company/showAcl', 'Компания/Права пользователей'),
 (101, 'about.html', 'О компании'),
 (102, 'about/index', 'О компании/О компании'),
-(103, 'company/view', 'Компания/Просмотреть');
+(103, 'company/view', 'Компания/Просмотреть'),
+(104, 'actions/index', 'Акции/Акции'),
+(105, 'actions/view', 'Акции/Просмотреть акцию'),
+(106, 'company/viewGallery', 'Компании/Просмотреть галерею'),
+(107, 'company/addGallery', 'Компания/Добавить фото'),
+(108, 'company/editGallery', 'Компания/Редактировать фото'),
+(109, 'company/deleteGallery', 'Компания/Удалить фото');
 
 -- --------------------------------------------------------
 
@@ -830,6 +917,26 @@ ALTER TABLE `company_address`
 ALTER TABLE `company_user`
   ADD CONSTRAINT `company_user_ibfk_1` FOREIGN KEY (`company_id`) REFERENCES `company` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `company_user_ibfk_2` FOREIGN KEY (`user_id`) REFERENCES `tm_user` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Ограничения внешнего ключа таблицы `gallery`
+--
+ALTER TABLE `gallery`
+  ADD CONSTRAINT `tm_document_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `tm_user` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Ограничения внешнего ключа таблицы `gallery_company`
+--
+ALTER TABLE `gallery_company`
+  ADD CONSTRAINT `tm_task_document_ibfk_2` FOREIGN KEY (`gallery_id`) REFERENCES `gallery` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `fk_gallery_company_company1` FOREIGN KEY (`company_id`) REFERENCES `company` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+--
+-- Ограничения внешнего ключа таблицы `gallery_product`
+--
+ALTER TABLE `gallery_product`
+  ADD CONSTRAINT `fk_table1_gallery1` FOREIGN KEY (`gallery_id`) REFERENCES `gallery` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  ADD CONSTRAINT `fk_table1_product1` FOREIGN KEY (`product_id`) REFERENCES `product` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 --
 -- Ограничения внешнего ключа таблицы `product`

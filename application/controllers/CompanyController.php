@@ -2,10 +2,12 @@
 
 class CompanyController extends Zend_Controller_Action
 {
+    protected $_user = null;
 
     public function init()
     {
-        
+        $storage_data = Zend_Auth::getInstance()->getStorage()->read();
+        $this->_user = TM_User_User::getInstanceById($storage_data->id);
     }
 
     public function indexAction()
@@ -18,6 +20,7 @@ class CompanyController extends Zend_Controller_Action
         $oCompany = EK_Company_Company::getInstanceById($this->getRequest()->getParam('id'));
         $this->view->assign('company', $oCompany);
         $this->view->assign('addressList', EK_Company_Address::getAllInstance($oCompany));
+        $this->view->assign('galleryList', EK_Gallery_Company::getAllInstance($oCompany));
     }
 
     public function addAction()
@@ -112,7 +115,7 @@ class CompanyController extends Zend_Controller_Action
 
     public function editaddressAction()
     {
-       $oAddress = EK_Company_Address::getInstanceById(EK_Company_Company::getInstanceById($this->getRequest()->getParam('idcompany')), $this->getRequest()->getParam('id'));
+        $oAddress = EK_Company_Address::getInstanceById(EK_Company_Company::getInstanceById($this->getRequest()->getParam('idcompany')), $this->getRequest()->getParam('id'));
 
         if ($this->getRequest()->isPost()) {
             $data = $this->getRequest()->getParam('data');
@@ -146,33 +149,103 @@ class CompanyController extends Zend_Controller_Action
     }
 
     public function showaclAction()
-        {
-            $oCompany = EK_Company_Company::getInstanceById($this->getRequest()->getParam('idCompany'));
+    {
+        $oCompany = EK_Company_Company::getInstanceById($this->getRequest()->getParam('idCompany'));
 
-            if ($this->getRequest()->isPost()) {
-                $data = $this->getRequest()->getParam('data');
+        if ($this->getRequest()->isPost()) {
+            $data = $this->getRequest()->getParam('data');
 
-                try {
-                    foreach ($data as $idUser => $values) {
+            try {
+                foreach ($data as $idUser => $values) {
 
-                        $companyAcl = new EK_Acl_CompanyAcl($oCompany);
+                    $companyAcl = new EK_Acl_CompanyAcl($oCompany);
 
-                        $companyAcl->setUser(TM_User_User::getInstanceById($idUser));
-                        $companyAcl->setIsRead($values['is_read']);
-                        $companyAcl->setIsWrite($values['is_write']);
-                        $companyAcl->setIsModerate($values['is_moderate']);
-                        $companyAcl->saveToDb();
-                    }
-
-                    $this->_redirect('/company/showAcl/idCompany/' . $this->getRequest()->getParam('idCompany'));
-                } catch (Exception $e) {
-                    $this->view->assign('exception_msg', $e->getMessage());
+                    $companyAcl->setUser(TM_User_User::getInstanceById($idUser));
+                    $companyAcl->setIsRead($values['is_read']);
+                    $companyAcl->setIsWrite($values['is_write']);
+                    $companyAcl->setIsModerate($values['is_moderate']);
+                    $companyAcl->saveToDb();
                 }
+
+                $this->_redirect('/company/showAcl/idCompany/' . $this->getRequest()->getParam('idCompany'));
+            } catch (Exception $e) {
+                $this->view->assign('exception_msg', $e->getMessage());
+            }
+        }
+
+        $this->view->assign('companyAcl', EK_Acl_CompanyAcl::getAllInstance($oCompany));
+        $this->view->assign('userList', TM_User_User::getAllInstance());
+        $this->view->assign('company', $oCompany);
+    }
+
+    public function viewgalleryAction()
+    {
+        $oCompany = EK_Company_Company::getInstanceById($this->getRequest()->getParam('idCompany'));
+        $this->view->assign('galleryList', EK_Gallery_Company::getAllInstance($oCompany));
+        $this->view->assign('company', $oCompany);
+    }
+
+    public function addgalleryAction()
+    {
+        $oCompany = EK_Company_Company::getInstanceById($this->getRequest()->getParam('idCompany'));
+
+        $oGallery = new EK_Gallery_Company();
+        $oGallery->setUser($this->_user);
+        $oGallery->setDateCreate(date('d.m.Y H:i:s'));
+
+        if ($this->getRequest()->isPost()) {
+            $data = $this->getRequest()->getParam('data');
+            $oGallery->setTitle($data['title']);
+
+            try {
+                $oGallery->insertToDb($oCompany);
+                $this->_redirect('/company/viewGallery/idCompany/' . $this->getRequest()->getParam('idCompany'));
+            } catch (Exception $e) {
+                $this->view->assign('exception_msg', $e->getMessage());
             }
 
-            $this->view->assign('companyAcl', EK_Acl_CompanyAcl::getAllInstance($oCompany));
-            $this->view->assign('userList', TM_User_User::getAllInstance());
-            $this->view->assign('company', $oCompany);
         }
+
+        $this->view->assign('gallery', $oGallery);
+        $this->view->assign('company', $oCompany);
+    }
+
+    public function editgalleryAction()
+    {
+        $oCompany = EK_Company_Company::getInstanceById($this->getRequest()->getParam('idCompany'));
+        $oGallery = EK_Gallery_Company::getInstanceById($this->getRequest()->getParam('id'));
+
+        if ($this->getRequest()->isPost()) {
+            $data = $this->getRequest()->getParam('data');
+            $oGallery->setTitle($data['title']);
+
+            try {
+                $oGallery->updateToDb();
+                $this->_redirect('/company/viewGallery/idCompany/' . $this->getRequest()->getParam('idCompany'));
+            } catch (Exception $e) {
+                $this->view->assign('exception_msg', $e->getMessage());
+            }
+
+        }
+
+        $this->view->assign('gallery', $oGallery);
+        $this->view->assign('company', $oCompany);
+    }
+
+    public function deletegalleryAction()
+    {
+        $oCompany = EK_Company_Company::getInstanceById($this->getRequest()->getParam('idCompany'));
+        $oGallery = EK_Gallery_Company::getInstanceById($this->getRequest()->getParam('id'));
+
+        try {
+            $oGallery->deleteFromDB($oCompany);
+            $this->_redirect('/company/viewGallery/idCompany/' . $this->getRequest()->getParam('idCompany'));
+        } catch (Exception $e) {
+            throw new Exception($e->getMessage());
+
+        }
+    }
+
+
 }
 

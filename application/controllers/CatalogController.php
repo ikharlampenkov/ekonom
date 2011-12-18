@@ -30,6 +30,11 @@ class CatalogController extends Zend_Controller_Action
         $this->view->assign('attributeHashList', EK_Catalog_Hash::getAllInstance());
     }
 
+    public function viewSubMenu()
+    {
+
+    }
+
     public function addAction()
     {
         $cur_rubric = EK_Catalog_Rubric::getInstanceById($this->getRequest()->getParam('rubric', 0));

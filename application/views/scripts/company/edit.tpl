@@ -29,7 +29,7 @@
         <tr>
             <td class="ttovar_title">Лого</td>
             <td class="ttovar">
-                {if $company->file->getName()}<a href="/files/{$document->company->getName()}" target="_blank">загрузить</a>{/if}
+                {if $company->file->getName()}<img src="/files/{$company->file->getName()}" />{/if}<br/>
                 <input type="file" name="file"/>
             </td>
         </tr>

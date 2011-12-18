@@ -5,10 +5,6 @@
  *
  */
 class TM_FileManager_Image extends TM_FileManager_File {
-    /** Aggregations: */
-
-    /** Compositions: */
-    /*     * * Attributes: ** */
 
     protected $_extList = array('gif', 'jpg', 'jpeg', 'png');
 
@@ -84,7 +80,7 @@ class TM_FileManager_Image extends TM_FileManager_File {
     /**
      *
      *
-     * @return
+     * @return void
      * @access public
      */
     public function delete() {

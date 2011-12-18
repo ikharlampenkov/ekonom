@@ -32,6 +32,10 @@ class EK_Catalog_Rubric {
      * @access protected
      */
     protected $_isRoot = 0;
+
+    /**
+     * @var StdLib_DB
+     */
     private $_db;
 
     /**
@@ -220,6 +224,24 @@ class EK_Catalog_Rubric {
         } else
             return false;
     }
+
+    public static function getAllInstance($parent) {
+            try {
+                $db = StdLib_DB::getInstance();
+                $result = $db->query('SELECT * FROM product_rubric WHERE parent_id=' . $parent, StdLib_DB::QUERY_MOD_ASSOC);
+                if (isset($result[0])) {
+                    $rubricArray = array();
+                    foreach ($result as $value) {
+                        $rubricArray[] = EK_Catalog_Rubric::getInstanceByArray($value);
+                    }
+                    return $rubricArray;
+                } else {
+                    return false;
+                }
+            } catch (Exception $e) {
+                return false;
+            }
+        }
 
     /**
      * @static

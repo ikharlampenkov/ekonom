@@ -1,3 +1,5 @@
+<article id="main-content">
+
 <h1 class="heading">Редактировать тип атрибута</h1>
 
 {if isset($exception_msg)}
@@ -21,3 +23,5 @@
     </table>
     <input id="save" name="save" type="submit" value="Сохранить"/>
 </form>
+
+</article>

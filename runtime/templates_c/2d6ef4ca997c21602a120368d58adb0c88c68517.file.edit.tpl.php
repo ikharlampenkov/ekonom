@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.0.9, created on 2011-12-17 13:09:07
+<?php /* Smarty version Smarty-3.0.9, created on 2011-12-18 19:26:20
          compiled from "F:\www\ekonom\application/views/scripts\company/edit.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:282964eec3203bde207-83195965%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:207484eeddbec5b7ff4-03263383%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '2d6ef4ca997c21602a120368d58adb0c88c68517' => 
     array (
       0 => 'F:\\www\\ekonom\\application/views/scripts\\company/edit.tpl',
-      1 => 1324100894,
+      1 => 1324211174,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '282964eec3203bde207-83195965',
+  'nocache_hash' => '207484eeddbec5b7ff4-03263383',
   'function' => 
   array (
   ),
@@ -58,8 +58,8 @@ if ($_smarty_tpl->_count($_from) > 0){
         <tr>
             <td class="ttovar_title">Лого</td>
             <td class="ttovar">
-                <?php if ($_smarty_tpl->getVariable('company')->value->file->getName()){?><a href="/files/<?php echo $_smarty_tpl->getVariable('document')->value->company->getName();?>
-" target="_blank">загрузить</a><?php }?>
+                <?php if ($_smarty_tpl->getVariable('company')->value->file->getName()){?><img src="/files/<?php echo $_smarty_tpl->getVariable('company')->value->file->getName();?>
+" /><?php }?><br/>
                 <input type="file" name="file"/>
             </td>
         </tr>
