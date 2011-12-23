@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.0.9, created on 2011-12-18 19:12:57
+<?php /* Smarty version Smarty-3.0.9, created on 2011-12-23 22:04:23
          compiled from "F:\www\ekonom\application/views/scripts\index/index.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:56404eedd8c93ab9d3-09955168%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:122054ef498776ced41-74590526%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '94b43447258ea62d6154766d1bbba1c4afdc3e80' => 
     array (
       0 => 'F:\\www\\ekonom\\application/views/scripts\\index/index.tpl',
-      1 => 1324210372,
+      1 => 1324652660,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '56404eedd8c93ab9d3-09955168',
+  'nocache_hash' => '122054ef498776ced41-74590526',
   'function' => 
   array (
   ),
@@ -45,7 +45,8 @@ $_smarty_tpl->decodeProperties(array (
         <li>
             <h3><a href="<?php echo $_smarty_tpl->getVariable('this')->value->url(array('controller'=>'actions','action'=>'view','id'=>'1'));?>
 " class="various fancybox.ajax">Телефон LG Prada</a></h3>
-            <img src="/uploads/action1.png" alt="">
+            <a href="<?php echo $_smarty_tpl->getVariable('this')->value->url(array('controller'=>'actions','action'=>'view','id'=>'1'));?>
+" class="various fancybox.ajax"><img src="/uploads/action1.png" alt=""></a>
 
             <div class="discount">20%</div>
         </li>

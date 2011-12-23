@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.0.9, created on 2011-12-18 21:33:31
+<?php /* Smarty version Smarty-3.0.9, created on 2011-12-23 23:15:19
          compiled from "F:\www\ekonom\application/layouts/scripts\layout.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:46754eedf9bb3739b3-01772771%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:313094ef4a9170f44e2-22453367%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '80ff11feedc4a0ba005e0c5733e3e115c1477d3b' => 
     array (
       0 => 'F:\\www\\ekonom\\application/layouts/scripts\\layout.tpl',
-      1 => 1324218243,
+      1 => 1324656888,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '46754eedf9bb3739b3-01772771',
+  'nocache_hash' => '313094ef4a9170f44e2-22453367',
   'function' => 
   array (
   ),
@@ -50,6 +50,8 @@ $_smarty_tpl->decodeProperties(array (
 
     <script type="text/javascript" language="javascript" src="/js/func.js"></script>
     <script type="text/javascript" language="javascript" src="/js/main.js"></script>
+
+    <script type="text/javascript" language="javascript" src="/js/share42.js"></script>
 
     <!-- Google plusone -->
     <script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
@@ -91,12 +93,53 @@ if ($_smarty_tpl->_count($_from) > 0){
         </div>
     </header>
 
-    <div id="content">
+    <div id="content" class="clearfix">
         <nav id="main-nav">
             <ul>
-                <li><a href="/actions/">Акции</a></li>
-                <li><a href="/sales/">Распродажи</a></li>
-                <li><a href="/coupons/">Купоны</a></li>
+                <li>
+                    <a href="/offers">Выбрать</a>
+                    <ul class="first-level submenu">
+                    <?php  $_smarty_tpl->tpl_vars['rubric'] = new Smarty_Variable;
+ $_from = $_smarty_tpl->getVariable('headRubricList')->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+if ($_smarty_tpl->_count($_from) > 0){
+    foreach ($_from as $_smarty_tpl->tpl_vars['rubric']->key => $_smarty_tpl->tpl_vars['rubric']->value){
+?>
+                        <li>
+                            <a href="<?php echo $_smarty_tpl->getVariable('this')->value->url(array('controller'=>'catalog','action'=>'index','rubric'=>$_smarty_tpl->getVariable('rubric')->value->getId()));?>
+"><?php echo $_smarty_tpl->getVariable('rubric')->value->title;?>
+</a>
+                        </li>
+
+                    <?php }} ?>
+                        <li><a href="/companies/auto">Автомобили</a></li>
+                        <li>
+                            <a href="/companies/clothes">Одежда</a>
+                            <ul class="submenu second-level">
+                                <li>
+                                    <a href="/companies/clothes/men">Мужская одежда</a>
+                                    <ul class="submenu third-level">
+                                        <li><a href="/companies/clothes/teenagers/shoes">Обувь</a></li>
+                                        <li><a href="/companies/clothes/teenagers/jeans">Джинсы</a></li>
+                                        <li><a href="/companies/clothes/teenagers/sports">Спортивная одежда</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="/companies/clothes/women">Женская одежда</a></li>
+                                <li><a href="/companies/clothes/children">Детская одежда</a></li>
+                                <li>
+                                    <a href="/companies/clothes/teenagers">Одежда для подростков</a>
+                                    <ul class="submenu third-level">
+                                        <li><a href="/companies/clothes/teenagers/shoes">Обувь</a></li>
+                                        <li><a href="/companies/clothes/teenagers/jeans">Джинсы</a></li>
+                                        <li><a href="/companies/clothes/teenagers/sports">Спортивная одежда</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><a href="/companies/household">Бытовая техника</a></li>
+                        <li><a href="/companies/computers">Компьютеры</a></li>
+                        <li><a href="/companies/food">Продукты питания</a></li>
+                    </ul>
+                </li>
                 <li><a href="/company/">Компании</a>
                     <ul class="first-level submenu">
                     <?php  $_smarty_tpl->tpl_vars['rubric'] = new Smarty_Variable;
@@ -140,10 +183,8 @@ if ($_smarty_tpl->_count($_from) > 0){
                         <li><a href="/companies/computers">Компьютеры</a></li>
                         <li><a href="/companies/food">Продукты питания</a></li>
                     </ul>
-
                 </li>
                 <li><a href="/about/">О нас</a></li>
-                <li><a href="/contacts">Контактная информация</a></li>
             <?php $_smarty_tpl->smarty->_tag_stack[] = array('if_allowed', array('resource'=>"city/index")); $_block_repeat=true; smarty_block_if_allowed(array('resource'=>"city/index"), null, $_smarty_tpl, $_block_repeat);while ($_block_repeat) { ob_start();?>
 
                 <li><a href="/city/">Города</a></li>
@@ -159,6 +200,11 @@ if ($_smarty_tpl->_count($_from) > 0){
                 <li><a href="/catalog/">Каталог</a></li>
             <?php $_block_content = ob_get_clean(); $_block_repeat=false; echo smarty_block_if_allowed(array('resource'=>"catalog/index"), $_block_content, $_smarty_tpl, $_block_repeat);  } array_pop($_smarty_tpl->smarty->_tag_stack);?>
 
+            <?php $_smarty_tpl->smarty->_tag_stack[] = array('if_allowed', array('resource'=>"contentPage/index")); $_block_repeat=true; smarty_block_if_allowed(array('resource'=>"contentPage/index"), null, $_smarty_tpl, $_block_repeat);while ($_block_repeat) { ob_start();?>
+
+                <li><a href="/contentPage/">Контентные страницы</a></li>
+            <?php $_block_content = ob_get_clean(); $_block_repeat=false; echo smarty_block_if_allowed(array('resource'=>"contentPage/index"), $_block_content, $_smarty_tpl, $_block_repeat);  } array_pop($_smarty_tpl->smarty->_tag_stack);?>
+
             <?php $_smarty_tpl->smarty->_tag_stack[] = array('if_allowed', array('resource'=>"user/index")); $_block_repeat=true; smarty_block_if_allowed(array('resource'=>"user/index"), null, $_smarty_tpl, $_block_repeat);while ($_block_repeat) { ob_start();?>
 
                 <li><a href="/user/">Пользователи</a></li>
@@ -171,10 +217,6 @@ if ($_smarty_tpl->_count($_from) > 0){
 
 
     </div>
-
-<?php if ($_smarty_tpl->getVariable('controller')->value!='index'){?>
-    <a href="javascript:history.go(-1);" class="button back">Назад</a>
-<?php }?>
 
 </div>
 

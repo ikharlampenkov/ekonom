@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.0.9, created on 2011-12-18 22:54:38
+<?php /* Smarty version Smarty-3.0.9, created on 2011-12-23 22:10:48
          compiled from "F:\www\ekonom\application/views/scripts\company/index.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:227524eee0cbe413b07-95837550%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:147194ef499f8bbef14-08800670%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '4528c0f58b5ad95b2e77897251943699034d7647' => 
     array (
       0 => 'F:\\www\\ekonom\\application/views/scripts\\company/index.tpl',
-      1 => 1324222611,
+      1 => 1324653041,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '227524eee0cbe413b07-95837550',
+  'nocache_hash' => '147194ef499f8bbef14-08800670',
   'function' => 
   array (
   ),
@@ -48,9 +48,10 @@ if ($_smarty_tpl->_count($_from) > 0){
                     <h3><a href="<?php echo $_smarty_tpl->getVariable('this')->value->url(array('controller'=>$_smarty_tpl->getVariable('controller')->value,'action'=>'view','id'=>$_smarty_tpl->getVariable('company')->value->id));?>
 " class="various fancybox.ajax"><?php echo $_smarty_tpl->getVariable('company')->value->title;?>
 </a></h3>
-                    <img src="/files/<?php echo $_smarty_tpl->getVariable('company')->value->file->getName();?>
+                    <a href="<?php echo $_smarty_tpl->getVariable('this')->value->url(array('controller'=>$_smarty_tpl->getVariable('controller')->value,'action'=>'view','id'=>$_smarty_tpl->getVariable('company')->value->id));?>
+" class="various fancybox.ajax"><img src="/files/<?php echo $_smarty_tpl->getVariable('company')->value->file->getName();?>
 " alt="<?php echo $_smarty_tpl->getVariable('company')->value->title;?>
-">
+"></a>
 
                     <div class="discount">A</div>
 

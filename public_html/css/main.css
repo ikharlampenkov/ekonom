@@ -515,7 +515,7 @@ body > footer
     position: relative;
     width: 100%;
     height: 269px;
-    margin: 40px 0 40px 0;
+    margin: 40px 0 90px 0;
     overflow-x: hidden;
     overflow-y: visible;
 }
@@ -608,6 +608,17 @@ body > footer
     border-radius: 12px;
 }
 
+/**
+ * Если ээфект наведения кажется слишком вычурным - удалите все строчки, кроме первой
+ */
+#actions li:hover {
+    box-shadow: 0 0 7px 0 rgba(0,0,0,0.6);
+    border:  1px #fff solid;
+    width: 188px;
+    height: 108px;
+    overflow:  hidden;
+}
+
 #actions li h3 {
     position: absolute;
     bottom: 0; left: 0;
@@ -675,6 +686,11 @@ body > footer
 
 #paginator a:hover {
     box-shadow: rgba(0,0,0,0.2) 2px 2px 2px 0px inset;
+}
+
+/* This style adds some addditional margin for paginator in comments list */
+section.comments #paginator {
+    margin-top: 20px;
 }
 
 #main-content > aside {
@@ -764,6 +780,9 @@ body > footer
 .item-description.shop {
     width: 780px;
     float: left;
+}
+
+.item-description.shop > .inner {
     border-radius: 12px;
     box-shadow: 0 0 5px 0 rgba(0,0,0,0.3);
 }
@@ -786,7 +805,7 @@ body > footer
     border-radius: 12px 12px 0 0;
 }
 
-.item-description .inner {
+.item-description .inner > .clearfix {
     background: #ededed url('/i/shop_background.png') repeat-x left top;
     border-radius: 0 0 12px 12px;
     padding: 20px;
@@ -795,6 +814,7 @@ body > footer
 .item-description .gallery {
     width: 422px;
     float: left;
+    margin-bottom: 30px;
 }
 
 .item-description .information {
@@ -843,8 +863,6 @@ body > footer
     font-size: 20px; line-height: 20px;
     color: #cf2121;
     width: 95px;
-    clear: both;
-    margin-top: 10px;
 }
 
 .item-description .information .discount ins {
@@ -852,6 +870,7 @@ body > footer
     font-size: 34px; line-height: 32px;
     text-decoration: none;
     width: 95px;
+    clear: both;
 }
 
 .item-description .information h3 {
@@ -1001,8 +1020,13 @@ body > footer
     float: right;
 }
 
+.button.reserve {
+    float: left;
+}
+
 .button.share-with-friend {
     float: left;
+    margin-left: 15px;
 }
 
 .button.back {
@@ -1083,6 +1107,44 @@ body > footer
     margin-top: 20px;
 }
 
+.item-description.shop #actions {
+    margin-top: 50px;
+}
+
+/**
+ * Если вам кажется, что список на странице магазина выглядит уродливо - так и есть.
+ * Четвертая кнопка не влазит как ни крути в ширину столбца 780px.
+ * Можно убрать выключку по ширине путем удаления кода до следующего комментария и пустого элемента с классом .empty в самом конце списка
+ */
+.item-description.shop #actions {
+    text-align: justify;
+}
+
+.item-description.shop #actions > li {
+    float: none;
+    display: inline-block;
+}
+
+.item-description.shop #actions > li.empty {
+    width: 100%;
+    height: 0;
+    margin: 0; padding: 0;
+    font-size: 0;
+    line-height: 0;
+    visibility: hidden;
+}
+
+/**
+ * Извиняюсь за латынь, но в Windows 7 мои глаза кровоточат, глядя на это.
+ * Рекомендую включить сглаживание и выпилить этот кусок кода.
+ */
+#item .heading,
+.item-description .discount,
+#main-content .heading,
+#main-nav > ul a {
+    font-weight: bold !important;
+}
+
 /* Companies list */
 #companies {
     margin: 0 0 0 -12px;
@@ -1097,6 +1159,14 @@ body > footer
     /* overflow: hidden; */
     position: relative;
     border-radius: 12px;
+}
+
+#companies li:hover {
+    box-shadow: 0 0 7px 0 rgba(0,0,0,0.6);
+    border:  1px #fff solid;
+    width: 188px;
+    height: 108px;
+    /* overflow:  hidden; */
 }
 
 #companies li h3 {
@@ -1198,6 +1268,8 @@ body > footer
     outline: none;
     list-style: none;
 }
+
+
 
 /* Ivan */
 

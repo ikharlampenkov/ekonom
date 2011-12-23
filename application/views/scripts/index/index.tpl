@@ -25,7 +25,7 @@
     <ul id="actions" class="clearfix">
         <li>
             <h3><a href="{$this->url(['controller' => 'actions','action' => 'view', 'id' => '1'])}" class="various fancybox.ajax">Телефон LG Prada</a></h3>
-            <img src="/uploads/action1.png" alt="">
+            <a href="{$this->url(['controller' => 'actions','action' => 'view', 'id' => '1'])}" class="various fancybox.ajax"><img src="/uploads/action1.png" alt=""></a>
 
             <div class="discount">20%</div>
         </li>

@@ -39,6 +39,8 @@
     <script type="text/javascript" language="javascript" src="/js/func.js"></script>
     <script type="text/javascript" language="javascript" src="/js/main.js"></script>
 
+    <script type="text/javascript" language="javascript" src="/js/share42.js"></script>
+
     <!-- Google plusone -->
     <script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
 </head>
@@ -73,18 +75,54 @@
         </div>
     </header>
 
-    <div id="content">
+    <div id="content" class="clearfix">
         <nav id="main-nav">
             <ul>
-                <li><a href="/actions/">Акции</a></li>
-                <li><a href="/sales/">Распродажи</a></li>
-                <li><a href="/coupons/">Купоны</a></li>
+                <li>
+                    <a href="/offers">Выбрать</a>
+                    <ul class="first-level submenu">
+                    {foreach from=$headRubricList item=rubric}
+                        <li>
+                            <a href="{$this->url(['controller' => 'catalog', 'action' => 'index', 'rubric' => $rubric->getId()])}">{$rubric->title}</a>
+                        {*<ul class="submenu second-level"></ul>*}
+                        </li>
+
+                    {/foreach}
+                        <li><a href="/companies/auto">Автомобили</a></li>
+                        <li>
+                            <a href="/companies/clothes">Одежда</a>
+                            <ul class="submenu second-level">
+                                <li>
+                                    <a href="/companies/clothes/men">Мужская одежда</a>
+                                    <ul class="submenu third-level">
+                                        <li><a href="/companies/clothes/teenagers/shoes">Обувь</a></li>
+                                        <li><a href="/companies/clothes/teenagers/jeans">Джинсы</a></li>
+                                        <li><a href="/companies/clothes/teenagers/sports">Спортивная одежда</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="/companies/clothes/women">Женская одежда</a></li>
+                                <li><a href="/companies/clothes/children">Детская одежда</a></li>
+                                <li>
+                                    <a href="/companies/clothes/teenagers">Одежда для подростков</a>
+                                    <ul class="submenu third-level">
+                                        <li><a href="/companies/clothes/teenagers/shoes">Обувь</a></li>
+                                        <li><a href="/companies/clothes/teenagers/jeans">Джинсы</a></li>
+                                        <li><a href="/companies/clothes/teenagers/sports">Спортивная одежда</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><a href="/companies/household">Бытовая техника</a></li>
+                        <li><a href="/companies/computers">Компьютеры</a></li>
+                        <li><a href="/companies/food">Продукты питания</a></li>
+                    </ul>
+                </li>
                 <li><a href="/company/">Компании</a>
                     <ul class="first-level submenu">
                     {foreach from=$headRubricList item=rubric}
                         <li>
                             <a href="{$this->url(['controller' => 'catalog', 'action' => 'index', 'rubric' => $rubric->getId()])}">{$rubric->title}</a>
-                            {*<ul class="submenu second-level"></ul>*}
+                        {*<ul class="submenu second-level"></ul>*}
                         </li>
 
                     {/foreach}
@@ -117,10 +155,8 @@
                         <li><a href="/companies/computers">Компьютеры</a></li>
                         <li><a href="/companies/food">Продукты питания</a></li>
                     </ul>
-
                 </li>
                 <li><a href="/about/">О нас</a></li>
-                <li><a href="/contacts">Контактная информация</a></li>
             {if_allowed resource="city/index"}
                 <li><a href="/city/">Города</a></li>
             {/if_allowed}
@@ -129,6 +165,9 @@
             {/if_allowed}
             {if_allowed resource="catalog/index"}
                 <li><a href="/catalog/">Каталог</a></li>
+            {/if_allowed}
+            {if_allowed resource="contentPage/index"}
+                <li><a href="/contentPage/">Контентные страницы</a></li>
             {/if_allowed}
             {if_allowed resource="user/index"}
                 <li><a href="/user/">Пользователи</a></li>
@@ -140,9 +179,11 @@
 
     </div>
 
+{*
 {if $controller != 'index'}
     <a href="javascript:history.go(-1);" class="button back">Назад</a>
 {/if}
+*}
 
 </div>
 
