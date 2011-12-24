@@ -5,7 +5,7 @@ class CatalogController extends Zend_Controller_Action
 
     public function init()
     {
-
+        $this->_helper->AjaxContext()->addActionContext('viewSubMenu', 'html')->initContext('html');
         /* Initialize action controller here */
     }
 
@@ -32,7 +32,8 @@ class CatalogController extends Zend_Controller_Action
 
     public function viewSubMenu()
     {
-
+        $rub = $this->getRequest()->getParam('rubric', 0);
+        $this->view->assign('rubric_list', EK_Catalog_Rubric::getAllInstance($rub));
     }
 
     public function addAction()
