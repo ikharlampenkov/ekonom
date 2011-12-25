@@ -24,5 +24,9 @@ function comment_reply_on(id) {
 }
 
 $(document).ready(function () {
-    company.createSubMenu();
+    //company.createSubMenu();
+
+    $('ul.first-level > li > ul.second-level').mouseout(function() {
+        mainMenu.hideSubMenu();
+    });
 });

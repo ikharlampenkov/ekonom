@@ -253,3 +253,22 @@ var company = {
     }
 }
 
+var catalog = {
+
+}
+
+var mainMenu = {
+    showSubMenu:function (rq_url, parent) {
+        $.get(rq_url, '', function(data) {
+            if (data != '') {
+               $('#first_level_' + parent + ' ul').html(data).show();
+            }
+        }, 'html');
+
+    },
+
+    hideSubMenu: function () {
+        $(this).hide();
+    }
+}
+
