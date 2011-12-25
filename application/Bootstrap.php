@@ -138,7 +138,7 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap
 
         if (!isset($mainSession->curCity)) {
             $mainSession->curCity = 1;
-
+            $view->assign('curCity', $mainSession->curCity);
         } else {
             $view->assign('curCity', $mainSession->curCity);
         }
