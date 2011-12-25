@@ -6,6 +6,7 @@ class CatalogController extends Zend_Controller_Action
     public function init()
     {
         $this->_helper->AjaxContext()->addActionContext('viewSubMenu', 'html')->initContext('html');
+        $this->_helper->AjaxContext()->addActionContext('viewProduct', 'html')->initContext('html');
         /* Initialize action controller here */
     }
 
@@ -34,6 +35,12 @@ class CatalogController extends Zend_Controller_Action
     {
         $rub = $this->getRequest()->getParam('rubric', 0);
         $this->view->assign('rubricList', EK_Catalog_Rubric::getAllInstance($rub));
+    }
+
+    public function viewproductAction()
+    {
+        $oProduct = EK_Catalog_Product::getInstanceById($this->getRequest()->getParam('id'));
+        $this->view->assign('product', $oProduct);
     }
 
     public function addAction()

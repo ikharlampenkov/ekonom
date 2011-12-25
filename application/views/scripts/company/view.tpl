@@ -79,44 +79,19 @@
         </div>
     </div>
 
+{if $productList}
     <ul id="actions" class="clearfix shop-actions">
+        {foreach from=$productList item=product}
         <li>
-            <h3><a href="/item.html" class="various fancybox.ajax">Телефон LG Prada</a></h3>
-            <a href="/item.html" class="various fancybox.ajax"><img src="/uploads/action1.png" alt=""></a>
+            <h3><a href="{$this->url(['controller' => 'catalog','action' => 'viewProduct', 'id' => $product->id])}" class="various fancybox.ajax">{$product->title}</a></h3>
+            <a href="{$this->url(['controller' => 'catalog','action' => 'viewProduct', 'id' => $product->id])}" class="various fancybox.ajax"><img src="{if $product->img->getName()}/files/{$product->img->getPreview()}{else}/uploads/action1.png{/if}" alt="{$product->title}"></a>
 
-            <div class="discount">20%</div>
+            {if $product->searchAttribute('discount')}
+            <div class="discount">{$product->getAttribute('discount')->value}</div>
+            {/if}
         </li>
-        <li>
-            <h3><a href="/item.html" class="various fancybox.ajax">Суперджинсы</a></h3>
-            <a href="/item.html" class="various fancybox.ajax"><img src="/uploads/action2.jpg" alt=""></a>
+        {/foreach}
 
-            <div class="discount">21%</div>
-        </li>
-        <li>
-            <h3><a href="/item.html" class="various fancybox.ajax">Башмаки со скидкой</a></h3>
-            <a href="/item.html" class="various fancybox.ajax"><img src="/uploads/action3.jpg" alt=""></a>
-
-            <div class="discount">73%</div>
-        </li>
-        <li>
-            <h3><a href="/item.html" class="various fancybox.ajax">Телефон LG Prada</a></h3>
-            <a href="/item.html" class="various fancybox.ajax"><img src="/uploads/action1.png" alt=""></a>
-
-            <div class="discount">20%</div>
-        </li>
-        <li>
-            <h3><a href="/item.html" class="various fancybox.ajax">Суперджинсы</a></h3>
-            <a href="/item.html" class="various fancybox.ajax"><img src="/uploads/action2.jpg" alt=""></a>
-
-            <div class="discount">21%</div>
-        </li>
-        <li>
-            <h3><a href="/item.html" class="various fancybox.ajax">Башмаки со скидкой</a></h3>
-            <a href="/item.html" class="various fancybox.ajax"><img src="/uploads/action3.jpg" alt=""></a>
-
-            <div class="discount">73%</div>
-        </li>
-        <li class="empty"></li>
     </ul>
 
     <div id="paginator">
@@ -128,6 +103,7 @@
         </ul>
         <a href="/actions?page=3">&rarr;</a>
     </div>
+{/if}
 
     <script type="text/javascript">
         var updatePlusOne = function () {

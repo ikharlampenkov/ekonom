@@ -24,9 +24,16 @@ function comment_reply_on(id) {
 }
 
 $(document).ready(function () {
-    //company.createSubMenu();
+    company.createSubMenu();
 
-    $('ul.first-level > li > ul.second-level').mouseout(function() {
+    /*
+    $('ul.second-level').mouseout(function() {
         mainMenu.hideSubMenu();
+    });
+    */
+
+    $('select#city_name').change(function() {
+        $('select#city_name').val();
+        $('#form_city_name').submit();
     });
 });

@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.0.9, created on 2011-12-23 22:28:02
+<?php /* Smarty version Smarty-3.0.9, created on 2011-12-26 00:16:32
          compiled from "F:\www\ekonom\application/views/scripts\company/view.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:130994ef49e022fccb0-35897328%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:89344ef75a70ce70c5-65493420%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '4a2d248229c0e6452704f9a7ccc41e7a5c93b3ee' => 
     array (
       0 => 'F:\\www\\ekonom\\application/views/scripts\\company/view.tpl',
-      1 => 1324654078,
+      1 => 1324833389,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '130994ef49e022fccb0-35897328',
+  'nocache_hash' => '89344ef75a70ce70c5-65493420',
   'function' => 
   array (
   ),
@@ -134,44 +134,29 @@ if ($_smarty_tpl->_count($_from) > 0){
         </div>
     </div>
 
+<?php if ($_smarty_tpl->getVariable('productList')->value){?>
     <ul id="actions" class="clearfix shop-actions">
+        <?php  $_smarty_tpl->tpl_vars['product'] = new Smarty_Variable;
+ $_from = $_smarty_tpl->getVariable('productList')->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+if ($_smarty_tpl->_count($_from) > 0){
+    foreach ($_from as $_smarty_tpl->tpl_vars['product']->key => $_smarty_tpl->tpl_vars['product']->value){
+?>
         <li>
-            <h3><a href="/item.html" class="various fancybox.ajax">Телефон LG Prada</a></h3>
-            <a href="/item.html" class="various fancybox.ajax"><img src="/uploads/action1.png" alt=""></a>
+            <h3><a href="<?php echo $_smarty_tpl->getVariable('this')->value->url(array('controller'=>'catalog','action'=>'viewProduct','id'=>$_smarty_tpl->getVariable('product')->value->id));?>
+" class="various fancybox.ajax"><?php echo $_smarty_tpl->getVariable('product')->value->title;?>
+</a></h3>
+            <a href="<?php echo $_smarty_tpl->getVariable('this')->value->url(array('controller'=>'catalog','action'=>'viewProduct','id'=>$_smarty_tpl->getVariable('product')->value->id));?>
+" class="various fancybox.ajax"><img src="<?php if ($_smarty_tpl->getVariable('product')->value->img->getName()){?>/files/<?php echo $_smarty_tpl->getVariable('product')->value->img->getPreview();?>
+<?php }else{ ?>/uploads/action1.png<?php }?>" alt="<?php echo $_smarty_tpl->getVariable('product')->value->title;?>
+"></a>
 
-            <div class="discount">20%</div>
+            <?php if ($_smarty_tpl->getVariable('product')->value->searchAttribute('discount')){?>
+            <div class="discount"><?php echo $_smarty_tpl->getVariable('product')->value->getAttribute('discount')->value;?>
+</div>
+            <?php }?>
         </li>
-        <li>
-            <h3><a href="/item.html" class="various fancybox.ajax">Суперджинсы</a></h3>
-            <a href="/item.html" class="various fancybox.ajax"><img src="/uploads/action2.jpg" alt=""></a>
+        <?php }} ?>
 
-            <div class="discount">21%</div>
-        </li>
-        <li>
-            <h3><a href="/item.html" class="various fancybox.ajax">Башмаки со скидкой</a></h3>
-            <a href="/item.html" class="various fancybox.ajax"><img src="/uploads/action3.jpg" alt=""></a>
-
-            <div class="discount">73%</div>
-        </li>
-        <li>
-            <h3><a href="/item.html" class="various fancybox.ajax">Телефон LG Prada</a></h3>
-            <a href="/item.html" class="various fancybox.ajax"><img src="/uploads/action1.png" alt=""></a>
-
-            <div class="discount">20%</div>
-        </li>
-        <li>
-            <h3><a href="/item.html" class="various fancybox.ajax">Суперджинсы</a></h3>
-            <a href="/item.html" class="various fancybox.ajax"><img src="/uploads/action2.jpg" alt=""></a>
-
-            <div class="discount">21%</div>
-        </li>
-        <li>
-            <h3><a href="/item.html" class="various fancybox.ajax">Башмаки со скидкой</a></h3>
-            <a href="/item.html" class="various fancybox.ajax"><img src="/uploads/action3.jpg" alt=""></a>
-
-            <div class="discount">73%</div>
-        </li>
-        <li class="empty"></li>
     </ul>
 
     <div id="paginator">
@@ -183,6 +168,7 @@ if ($_smarty_tpl->_count($_from) > 0){
         </ul>
         <a href="/actions?page=3">&rarr;</a>
     </div>
+<?php }?>
 
     <script type="text/javascript">
         var updatePlusOne = function () {

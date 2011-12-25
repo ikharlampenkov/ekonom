@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.0.9, created on 2011-12-23 23:15:19
+<?php /* Smarty version Smarty-3.0.9, created on 2011-12-25 23:25:48
          compiled from "F:\www\ekonom\application/layouts/scripts\layout.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:313094ef4a9170f44e2-22453367%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:23954ef74e8cef7959-86280205%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '80ff11feedc4a0ba005e0c5733e3e115c1477d3b' => 
     array (
       0 => 'F:\\www\\ekonom\\application/layouts/scripts\\layout.tpl',
-      1 => 1324656888,
+      1 => 1324830345,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '313094ef4a9170f44e2-22453367',
+  'nocache_hash' => '23954ef74e8cef7959-86280205',
   'function' => 
   array (
   ),
@@ -64,7 +64,7 @@ $_smarty_tpl->decodeProperties(array (
         <div id="choose-city-form">
             <h4><label for="city_name">Выбрать город</label></h4>
 
-            <form class="b-form" action="/choose-city" method="post">
+            <form id="form_city_name" class="b-form" action="/index/chooseCity" method="post">
                 <select name="city_name" id="city_name">
                 <?php if (!empty($_smarty_tpl->getVariable('headCityList',null,true,false)->value)){?>
                     <?php  $_smarty_tpl->tpl_vars['city'] = new Smarty_Variable;
@@ -147,41 +147,21 @@ if ($_smarty_tpl->_count($_from) > 0){
 if ($_smarty_tpl->_count($_from) > 0){
     foreach ($_from as $_smarty_tpl->tpl_vars['rubric']->key => $_smarty_tpl->tpl_vars['rubric']->value){
 ?>
-                        <li>
-                            <a href="<?php echo $_smarty_tpl->getVariable('this')->value->url(array('controller'=>'catalog','action'=>'index','rubric'=>$_smarty_tpl->getVariable('rubric')->value->getId()));?>
+                        <li id="first_level_<?php echo $_smarty_tpl->getVariable('rubric')->value->id;?>
+">
+                            <a href="<?php echo $_smarty_tpl->getVariable('this')->value->url(array('controller'=>'company','action'=>'index','rubric'=>$_smarty_tpl->getVariable('rubric')->value->getId()));?>
 "><?php echo $_smarty_tpl->getVariable('rubric')->value->title;?>
 </a>
+                            <?php if ($_smarty_tpl->getVariable('rubric')->value->hasChild()){?>
+                                <ul class="submenu second-level">
+                                <?php $_template = new Smarty_Internal_Template("catalog/child-block.tpl", $_smarty_tpl->smarty, $_smarty_tpl, $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null);
+$_template->assign('subrubric',$_smarty_tpl->getVariable('rubric')->value->getChild()); echo $_template->getRenderedTemplate(); $_template->rendered_content = null;?><?php unset($_template);?>
+                                </ul>
+                            <?php }?>
                         </li>
 
                     <?php }} ?>
 
-                        <li><a href="/companies/auto">Автомобили</a></li>
-                        <li>
-                            <a href="/companies/clothes">Одежда</a>
-                            <ul class="submenu second-level">
-                                <li>
-                                    <a href="/companies/clothes/men">Мужская одежда</a>
-                                    <ul class="submenu third-level">
-                                        <li><a href="/companies/clothes/teenagers/shoes">Обувь</a></li>
-                                        <li><a href="/companies/clothes/teenagers/jeans">Джинсы</a></li>
-                                        <li><a href="/companies/clothes/teenagers/sports">Спортивная одежда</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="/companies/clothes/women">Женская одежда</a></li>
-                                <li><a href="/companies/clothes/children">Детская одежда</a></li>
-                                <li>
-                                    <a href="/companies/clothes/teenagers">Одежда для подростков</a>
-                                    <ul class="submenu third-level">
-                                        <li><a href="/companies/clothes/teenagers/shoes">Обувь</a></li>
-                                        <li><a href="/companies/clothes/teenagers/jeans">Джинсы</a></li>
-                                        <li><a href="/companies/clothes/teenagers/sports">Спортивная одежда</a></li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </li>
-                        <li><a href="/companies/household">Бытовая техника</a></li>
-                        <li><a href="/companies/computers">Компьютеры</a></li>
-                        <li><a href="/companies/food">Продукты питания</a></li>
                     </ul>
                 </li>
                 <li><a href="/about/">О нас</a></li>

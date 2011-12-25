@@ -267,8 +267,9 @@ var mainMenu = {
 
     },
 
-    hideSubMenu: function () {
-        $(this).hide();
+    hideSubMenu: function (parent) {
+        $('#first_level_' + parent + ' ul').hide();
+        $('#first_level_' + parent + ' ul').empty();
     }
 }
 

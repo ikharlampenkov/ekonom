@@ -1,6 +1,8 @@
 <article id="main-content">
 
-    <h1 class="heading">Компании</h1>
+
+
+    <h1 class="heading">Компании{if isset($rubric)}.{$rubric->title}{/if}</h1>
 
 
 {if_allowed resource="{$controller}/add"}
@@ -17,6 +19,7 @@
                     <h3><a href="{$this->url(['controller' => $controller,'action' => 'view', 'id' => $company->id])}" class="various fancybox.ajax">{$company->title}</a></h3>
                     <a href="{$this->url(['controller' => $controller,'action' => 'view', 'id' => $company->id])}" class="various fancybox.ajax"><img src="/files/{$company->file->getName()}" alt="{$company->title}"></a>
 
+                    {if_allowed resource="{$controller}/edit"}
                     <div class="discount">A</div>
 
                     <ul id="company_action_{$company->id}" class="company_action_menu">
@@ -41,7 +44,7 @@
                             <li class="action"><img src="/i/delete.png"/>&nbsp;<a href="{$this->url(['controller' => $controller,'action' => 'delete', 'id' => $company->id])}" onclick="return confirmDelete('{$company->id}');" style="color: #830000">удалить</a></li>
                         {/if_allowed}
                     </ul>
-
+                    {/if_allowed}
 
                 </li>
             {/if_object_allowed}

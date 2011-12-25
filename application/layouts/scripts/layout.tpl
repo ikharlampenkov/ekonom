@@ -52,7 +52,7 @@
         <div id="choose-city-form">
             <h4><label for="city_name">Выбрать город</label></h4>
 
-            <form class="b-form" action="/choose-city" method="post">
+            <form id="form_city_name" class="b-form" action="/index/chooseCity" method="post">
                 <select name="city_name" id="city_name">
                 {if !empty($headCityList)}
                     {foreach from=$headCityList item=city}
@@ -120,40 +120,17 @@
                 <li><a href="/company/">Компании</a>
                     <ul class="first-level submenu">
                     {foreach from=$headRubricList item=rubric}
-                        <li id="first_level_{$rubric->id}" onmouseover="mainMenu.showSubMenu('{$this->url(['controller' => 'catalog', 'action' => 'viewSubMenu', 'rubric' => $rubric->id])}', {$rubric->id})">
-                            <a href="{$this->url(['controller' => 'catalog', 'action' => 'index', 'rubric' => $rubric->getId()])}">{$rubric->title}</a>
-                            <ul class="submenu second-level"></ul>
+                        <li id="first_level_{$rubric->id}">
+                            <a href="{$this->url(['controller' => 'company', 'action' => 'index', 'rubric' => $rubric->getId()])}">{$rubric->title}</a>
+                            {if $rubric->hasChild()}
+                                <ul class="submenu second-level">
+                                {include file="catalog/child-block.tpl" subrubric=$rubric->getChild()}
+                                </ul>
+                            {/if}
                         </li>
 
                     {/foreach}
 
-                        <li><a href="/companies/auto">Автомобили</a></li>
-                        <li>
-                            <a href="/companies/clothes">Одежда</a>
-                            <ul class="submenu second-level">
-                                <li>
-                                    <a href="/companies/clothes/men">Мужская одежда</a>
-                                    <ul class="submenu third-level">
-                                        <li><a href="/companies/clothes/teenagers/shoes">Обувь</a></li>
-                                        <li><a href="/companies/clothes/teenagers/jeans">Джинсы</a></li>
-                                        <li><a href="/companies/clothes/teenagers/sports">Спортивная одежда</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="/companies/clothes/women">Женская одежда</a></li>
-                                <li><a href="/companies/clothes/children">Детская одежда</a></li>
-                                <li>
-                                    <a href="/companies/clothes/teenagers">Одежда для подростков</a>
-                                    <ul class="submenu third-level">
-                                        <li><a href="/companies/clothes/teenagers/shoes">Обувь</a></li>
-                                        <li><a href="/companies/clothes/teenagers/jeans">Джинсы</a></li>
-                                        <li><a href="/companies/clothes/teenagers/sports">Спортивная одежда</a></li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </li>
-                        <li><a href="/companies/household">Бытовая техника</a></li>
-                        <li><a href="/companies/computers">Компьютеры</a></li>
-                        <li><a href="/companies/food">Продукты питания</a></li>
                     </ul>
                 </li>
                 <li><a href="/about/">О нас</a></li>
