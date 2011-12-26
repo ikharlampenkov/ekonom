@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.0.9, created on 2011-12-16 23:29:50
+<?php /* Smarty version Smarty-3.0.9, created on 2011-12-25 23:01:13
          compiled from "F:\www\ekonom\application/views/scripts\user/edit-resource.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:148784eeb71fe07f858-71706405%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_smarty_tpl->decodeProperties(array (
     '07ccc328a57070777d46e6a91656dc5fcb2efd4d' => 
     array (
       0 => 'F:\\www\\ekonom\\application/views/scripts\\user/edit-resource.tpl',
-      1 => 1324036073,
+      1 => 1324107625,
       2 => 'file',
     ),
   ),
@@ -17,7 +17,7 @@ $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
 )); /*/%%SmartyHeaderCode%%*/?>
-<div class="page"><h1>Редактировать ресурс</h1></div><br/>
+<h1 class="heading">Редактировать ресурс</h1>
 
 <?php if (isset($_smarty_tpl->getVariable('exception_msg',null,true,false)->value)){?>
 <div>Ошибка: <?php echo $_smarty_tpl->getVariable('exception_msg')->value;?>

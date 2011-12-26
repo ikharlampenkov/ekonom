@@ -7,17 +7,19 @@
     <content url="file://$MODULE_DIR$" />
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="jQuery-1.6.2" level="application" />
     <orderEntry type="module-library">
-      <library name="PHP 5.3.8">
+      <library name="PHP">
         <CLASSES>
-          <root url="file://C:/Zend/ZendServer/share/ZendFramework/library" />
+          <root url="file://C:/PHP/PEAR/pear" />
+          <root url="file://C:/PHP/ZendFramework/library" />
         </CLASSES>
         <SOURCES>
-          <root url="file://C:/Zend/ZendServer/share/ZendFramework/library" />
+          <root url="file://C:/PHP/PEAR/pear" />
+          <root url="file://C:/PHP/ZendFramework/library" />
         </SOURCES>
       </library>
     </orderEntry>
-    <orderEntry type="library" name="jQuery-1.6.2" level="application" />
   </component>
 </module>
 

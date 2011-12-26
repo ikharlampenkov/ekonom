@@ -318,6 +318,48 @@ class EK_Catalog_Product
         }
     }
 
+    public static function getAllInstance($rubric_id)
+    {
+        try {
+            $db = StdLib_DB::getInstance();
+            $result = $db->query('SELECT * FROM product WHERE company_id=' . $rubric_id, StdLib_DB::QUERY_MOD_ASSOC);
+            if (isset($result[0])) {
+                $productArray = array();
+                foreach ($result as $value) {
+                    $productArray[] = EK_Catalog_Product::getInstanceByArray($value);
+                }
+                return $productArray;
+            } else
+                return false;
+        } catch (Exception $e) {
+            throw new Exception($e->getMessage());
+        }
+    }
+
+    /**
+     * @static
+     * @param EK_Company_Company $company
+     * @return array|bool
+     * @throws Exception
+     */
+    public static function getAllInstanceByCompany($company)
+        {
+            try {
+                $db = StdLib_DB::getInstance();
+                $result = $db->query('SELECT * FROM product WHERE company_id=' . $company->id, StdLib_DB::QUERY_MOD_ASSOC);
+                if (isset($result[0])) {
+                    $productArray = array();
+                    foreach ($result as $value) {
+                        $productArray[] = EK_Catalog_Product::getInstanceByArray($value);
+                    }
+                    return $productArray;
+                } else
+                    return false;
+            } catch (Exception $e) {
+                throw new Exception($e->getMessage());
+            }
+        }
+
     public static function getInstanceById($id)
     {
         try {

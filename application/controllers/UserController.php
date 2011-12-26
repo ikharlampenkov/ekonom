@@ -26,9 +26,9 @@ class UserController extends Zend_Controller_Action
     }
 
     public function viewresourceAction()
-        {
-            $this->view->assign('userResourceList', TM_User_Resource::getAllInstance());
-        }
+    {
+        $this->view->assign('userResourceList', TM_User_Resource::getAllInstance());
+    }
 
     public function addAction()
     {

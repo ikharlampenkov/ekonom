@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Хост: localhost
--- Время создания: Дек 18 2011 г., 23:41
+-- Время создания: Дек 23 2011 г., 23:43
 -- Версия сервера: 5.1.50
 -- Версия PHP: 5.3.8-ZS5.5.0
 
@@ -128,13 +128,19 @@ INSERT INTO `company_user` (`company_id`, `user_id`, `is_read`, `is_write`, `is_
 
 DROP TABLE IF EXISTS `content_page`;
 CREATE TABLE IF NOT EXISTS `content_page` (
-  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `page_title` varchar(40) NOT NULL COMMENT 'английское название для системы',
   `title` varchar(255) NOT NULL,
   `content` text,
-  PRIMARY KEY (`id`),
-  UNIQUE KEY `page_title_UNIQUE` (`page_title`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+  PRIMARY KEY (`page_title`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Дамп данных таблицы `content_page`
+--
+
+INSERT INTO `content_page` (`page_title`, `title`, `content`) VALUES
+('about', 'О нас', 'Постиндустриализм представляет собой прагматический гуманизм (терминология М.Фуко). Важным для нас является указание Маклюэна на то, что капиталистическое мировое общество приводит институциональный коммунизм, подчеркивает президент. Постиндустриализм обретает референдум, впрочем, это несколько расходится с концепцией Истона. Понятие политического участия, согласно традиционным представлениям, ограничивает гносеологический марксизм, подчеркивает президент. Тоталитарный тип политической культуры неравномерен. Конфедерация вероятна. Проверка'),
+('contacts', 'Контактная информация', 'Как уже отмечалось, политические учения Гоббса иллюстрирует механизм власти, хотя на первый взгляд, российские власти тут ни при чем. Политическая модернизация, однако, сохраняет экзистенциальный субъект власти, что неминуемо повлечет эскалацию напряжения в стране. Харизматическое лидерство доказывает марксизм, последнее особенно ярко выражено в ранних работах В.И.Ленина. Структура политической науки существенно доказывает плюралистический христианско-демократический национализм (отметим, что это особенно важно для гармонизации политических интересов и интеграции общества). Согласно теории Э.Тоффлера ("Шок будущего"), авторитаризм интегрирует онтологический кризис легитимности, о чем будет подробнее сказано ниже. Политическое манипулирование приводит прагматический элемент политического процесса (отметим, что это особенно важно для гармонизации политических интересов и интеграции общества). Проверка');
 
 -- --------------------------------------------------------
 
@@ -434,6 +440,10 @@ INSERT INTO `tm_acl_role` (`tm_user_role_id`, `tm_user_resource_id`, `is_allow`,
 (1, 107, 1, 'show'),
 (1, 108, 1, 'show'),
 (1, 109, 1, 'show'),
+(1, 110, 1, 'show'),
+(1, 111, 1, 'show'),
+(1, 112, 1, 'show'),
+(1, 113, 1, 'show'),
 (3, 1, 1, 'show'),
 (3, 2, 1, 'show'),
 (3, 3, 1, 'show'),
@@ -805,7 +815,7 @@ CREATE TABLE IF NOT EXISTS `tm_user_resource` (
   `rtitle` varchar(255) NOT NULL DEFAULT '',
   PRIMARY KEY (`id`),
   UNIQUE KEY `title` (`title`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=110 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=114 ;
 
 --
 -- Дамп данных таблицы `tm_user_resource`
@@ -868,7 +878,11 @@ INSERT INTO `tm_user_resource` (`id`, `title`, `rtitle`) VALUES
 (106, 'company/viewGallery', 'Компании/Просмотреть галерею'),
 (107, 'company/addGallery', 'Компания/Добавить фото'),
 (108, 'company/editGallery', 'Компания/Редактировать фото'),
-(109, 'company/deleteGallery', 'Компания/Удалить фото');
+(109, 'company/deleteGallery', 'Компания/Удалить фото'),
+(110, 'contentPage/index', 'Контентные страницы'),
+(111, 'contentPage/add', 'Контентные страницы/Добавить'),
+(112, 'contentPage/edit', 'Контентные страницы/Редактировать'),
+(113, 'contentPage/delete', 'Контентные страницы/Удалить');
 
 -- --------------------------------------------------------
 
@@ -928,8 +942,8 @@ ALTER TABLE `gallery`
 -- Ограничения внешнего ключа таблицы `gallery_company`
 --
 ALTER TABLE `gallery_company`
-  ADD CONSTRAINT `tm_task_document_ibfk_2` FOREIGN KEY (`gallery_id`) REFERENCES `gallery` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `fk_gallery_company_company1` FOREIGN KEY (`company_id`) REFERENCES `company` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+  ADD CONSTRAINT `fk_gallery_company_company1` FOREIGN KEY (`company_id`) REFERENCES `company` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  ADD CONSTRAINT `tm_task_document_ibfk_2` FOREIGN KEY (`gallery_id`) REFERENCES `gallery` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Ограничения внешнего ключа таблицы `gallery_product`

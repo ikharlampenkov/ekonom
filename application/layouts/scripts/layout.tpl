@@ -39,6 +39,8 @@
     <script type="text/javascript" language="javascript" src="/js/func.js"></script>
     <script type="text/javascript" language="javascript" src="/js/main.js"></script>
 
+    <script type="text/javascript" language="javascript" src="/js/share42.js"></script>
+
     <!-- Google plusone -->
     <script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
 </head>
@@ -50,7 +52,7 @@
         <div id="choose-city-form">
             <h4><label for="city_name">Выбрать город</label></h4>
 
-            <form class="b-form" action="/choose-city" method="post">
+            <form id="form_city_name" class="b-form" action="/index/chooseCity" method="post">
                 <select name="city_name" id="city_name">
                 {if !empty($headCityList)}
                     {foreach from=$headCityList item=city}
@@ -62,6 +64,13 @@
         </div>
 
         <div id="search-form">
+
+        {if $authUserRole != 'guest'}
+            <div id="logout-link">
+                Пользователь: {$authUser} <a href="{$this->url(['controller' => 'login', 'action' => 'logout'])}">Выход</a>
+            </div>
+        {/if}
+
             <h4><label for="search_query">Поиск по сайту</label></h4>
 
             <form action="/search" method="get">
@@ -73,22 +82,19 @@
         </div>
     </header>
 
-    <div id="content">
+    <div id="content" class="clearfix">
         <nav id="main-nav">
             <ul>
-                <li><a href="/actions/">Акции</a></li>
-                <li><a href="/sales/">Распродажи</a></li>
-                <li><a href="/coupons/">Купоны</a></li>
-                <li><a href="/company/">Компании</a>
+                <li>
+                    <a href="/offers">Выбрать</a>
                     <ul class="first-level submenu">
                     {foreach from=$headRubricList item=rubric}
                         <li>
                             <a href="{$this->url(['controller' => 'catalog', 'action' => 'index', 'rubric' => $rubric->getId()])}">{$rubric->title}</a>
-                            {*<ul class="submenu second-level"></ul>*}
+                        {*<ul class="submenu second-level"></ul>*}
                         </li>
 
                     {/foreach}
-
                         <li><a href="/companies/auto">Автомобили</a></li>
                         <li>
                             <a href="/companies/clothes">Одежда</a>
@@ -117,18 +123,32 @@
                         <li><a href="/companies/computers">Компьютеры</a></li>
                         <li><a href="/companies/food">Продукты питания</a></li>
                     </ul>
-
                 </li>
+            {if_allowed resource="company/index"}
+                <li><a href="/company/">Компании</a>
+                    <ul class="first-level submenu">
+                    {foreach from=$headRubricList item=rubric}
+                        <li id="first_level_{$rubric->id}">
+                            <a href="{$this->url(['controller' => 'company', 'action' => 'index', 'rubric' => $rubric->getId()])}">{$rubric->title}</a>
+                            {if $rubric->hasChild()}
+                                <ul class="submenu second-level">
+                                {include file="catalog/child-block.tpl" subrubric=$rubric->getChild()}
+                                </ul>
+                            {/if}
+                        </li>
+                    {/foreach}
+                    </ul>
+                </li>
+            {/if_allowed}
                 <li><a href="/about/">О нас</a></li>
-                <li><a href="/contacts">Контактная информация</a></li>
             {if_allowed resource="city/index"}
                 <li><a href="/city/">Города</a></li>
             {/if_allowed}
-            {if_allowed resource="company/index"}
-                <li><a href="/company/">Компании</a></li>
-            {/if_allowed}
             {if_allowed resource="catalog/index"}
                 <li><a href="/catalog/">Каталог</a></li>
+            {/if_allowed}
+            {if_allowed resource="contentPage/index"}
+                <li><a href="/contentPage/">Контентные страницы</a></li>
             {/if_allowed}
             {if_allowed resource="user/index"}
                 <li><a href="/user/">Пользователи</a></li>
@@ -140,9 +160,11 @@
 
     </div>
 
+{*
 {if $controller != 'index'}
     <a href="javascript:history.go(-1);" class="button back">Назад</a>
 {/if}
+*}
 
 </div>
 

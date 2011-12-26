@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.0.9, created on 2011-12-18 22:54:38
+<?php /* Smarty version Smarty-3.0.9, created on 2011-12-25 23:41:27
          compiled from "F:\www\ekonom\application/views/scripts\company/index.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:227524eee0cbe413b07-95837550%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:289454ef75237da1234-62017290%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '4528c0f58b5ad95b2e77897251943699034d7647' => 
     array (
       0 => 'F:\\www\\ekonom\\application/views/scripts\\company/index.tpl',
-      1 => 1324222611,
+      1 => 1324831284,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '227524eee0cbe413b07-95837550',
+  'nocache_hash' => '289454ef75237da1234-62017290',
   'function' => 
   array (
   ),
@@ -22,7 +22,10 @@ if (!is_callable('smarty_modifier_capitalize')) include 'F:\www\ekonom\library\S
 if (!is_callable('smarty_block_if_object_allowed')) include 'F:\www\ekonom\library\Smarty\plugins\block.if_object_allowed.php';
 ?><article id="main-content">
 
-    <h1 class="heading">Компании</h1>
+
+
+    <h1 class="heading">Компании<?php if (isset($_smarty_tpl->getVariable('rubric',null,true,false)->value)){?>.<?php echo $_smarty_tpl->getVariable('rubric')->value->title;?>
+<?php }?></h1>
 
 
 <?php $_smarty_tpl->smarty->_tag_stack[] = array('if_allowed', array('resource'=>($_smarty_tpl->getVariable('controller')->value)."/add")); $_block_repeat=true; smarty_block_if_allowed(array('resource'=>($_smarty_tpl->getVariable('controller')->value)."/add"), null, $_smarty_tpl, $_block_repeat);while ($_block_repeat) { ob_start();?>
@@ -48,9 +51,12 @@ if ($_smarty_tpl->_count($_from) > 0){
                     <h3><a href="<?php echo $_smarty_tpl->getVariable('this')->value->url(array('controller'=>$_smarty_tpl->getVariable('controller')->value,'action'=>'view','id'=>$_smarty_tpl->getVariable('company')->value->id));?>
 " class="various fancybox.ajax"><?php echo $_smarty_tpl->getVariable('company')->value->title;?>
 </a></h3>
-                    <img src="/files/<?php echo $_smarty_tpl->getVariable('company')->value->file->getName();?>
+                    <a href="<?php echo $_smarty_tpl->getVariable('this')->value->url(array('controller'=>$_smarty_tpl->getVariable('controller')->value,'action'=>'view','id'=>$_smarty_tpl->getVariable('company')->value->id));?>
+" class="various fancybox.ajax"><img src="/files/<?php echo $_smarty_tpl->getVariable('company')->value->file->getName();?>
 " alt="<?php echo $_smarty_tpl->getVariable('company')->value->title;?>
-">
+"></a>
+
+                    <?php $_smarty_tpl->smarty->_tag_stack[] = array('if_allowed', array('resource'=>($_smarty_tpl->getVariable('controller')->value)."/edit")); $_block_repeat=true; smarty_block_if_allowed(array('resource'=>($_smarty_tpl->getVariable('controller')->value)."/edit"), null, $_smarty_tpl, $_block_repeat);while ($_block_repeat) { ob_start();?>
 
                     <div class="discount">A</div>
 
@@ -93,6 +99,7 @@ if ($_smarty_tpl->_count($_from) > 0){
                         <?php $_block_content = ob_get_clean(); $_block_repeat=false; echo smarty_block_if_allowed(array('resource'=>($_smarty_tpl->getVariable('controller')->value)."/delete"), $_block_content, $_smarty_tpl, $_block_repeat);  } array_pop($_smarty_tpl->smarty->_tag_stack);?>
 
                     </ul>
+                    <?php $_block_content = ob_get_clean(); $_block_repeat=false; echo smarty_block_if_allowed(array('resource'=>($_smarty_tpl->getVariable('controller')->value)."/edit"), $_block_content, $_smarty_tpl, $_block_repeat);  } array_pop($_smarty_tpl->smarty->_tag_stack);?>
 
 
                 </li>

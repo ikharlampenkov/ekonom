@@ -4,7 +4,8 @@
  * class EK_Catalog_Rubric
  *
  */
-class EK_Catalog_Rubric {
+class EK_Catalog_Rubric
+{
     /** Aggregations: */
     /** Compositions: */
     /*     * * Attributes: ** */
@@ -34,6 +35,12 @@ class EK_Catalog_Rubric {
     protected $_isRoot = 0;
 
     /**
+     * @var array
+     * @access protected
+     */
+    protected $_childRubric = array();
+
+    /**
      * @var StdLib_DB
      */
     private $_db;
@@ -44,11 +51,11 @@ class EK_Catalog_Rubric {
      * @param int $id
      * @param string $title
      * @param EK_Company_Rubric|null $parent
-
      * @return EK_Catalog_Rubric
      * @access public
      */
-    public function __construct($id = 0, $title = '', $parent = null) {
+    public function __construct($id = 0, $title = '', $parent = null)
+    {
         $this->_db = StdLib_DB::getInstance();
 
         $this->_id = $id;
@@ -64,7 +71,8 @@ class EK_Catalog_Rubric {
      * @return int
      * @access public
      */
-    public function getId() {
+    public function getId()
+    {
         return $this->_id;
     }
 
@@ -76,7 +84,8 @@ class EK_Catalog_Rubric {
      * @return string
      * @access public
      */
-    public function getTitle() {
+    public function getTitle()
+    {
         return $this->_title;
     }
 
@@ -88,7 +97,8 @@ class EK_Catalog_Rubric {
      * @return EK_Company_Rubric
      * @access public
      */
-    public function getParent() {
+    public function getParent()
+    {
         return $this->_parent;
     }
 
@@ -100,13 +110,15 @@ class EK_Catalog_Rubric {
      * @return bool
      * @access public
      */
-    public function getIsRoot() {
+    public function getIsRoot()
+    {
         return $this->_isRoot;
     }
 
 // end of member function getIsRoot
 
-    public function __get($name) {
+    public function __get($name)
+    {
         $method = "get{$name}";
         if (method_exists($this, $method)) {
             return $this->$method();
@@ -117,11 +129,11 @@ class EK_Catalog_Rubric {
      *
      *
      * @param int $value
-
      * @return void
      * @access public
      */
-    public function setId($value) {
+    public function setId($value)
+    {
         $this->_id = $value;
     }
 
@@ -131,11 +143,11 @@ class EK_Catalog_Rubric {
      *
      *
      * @param string $value
-
      * @return void
      * @access public
      */
-    public function setTitle($value) {
+    public function setTitle($value)
+    {
         $this->_title = $value;
     }
 
@@ -145,11 +157,11 @@ class EK_Catalog_Rubric {
      *
      *
      * @param EK_Company_Rubric $value
-
      * @return void
      * @access public
      */
-    public function setParent($value) {
+    public function setParent($value)
+    {
         $this->_parent = $value;
     }
 
@@ -159,17 +171,18 @@ class EK_Catalog_Rubric {
      *
      *
      * @param bool $value
-
      * @return void
      * @access public
      */
-    public function setIsRoot($value) {
+    public function setIsRoot($value)
+    {
         $this->_isRoot = $value;
     }
 
 // end of member function setIsRoot
 
-    public function insertToDb() {
+    public function insertToDb()
+    {
         try {
             $sql = 'INSERT INTO product_rubric (title, parent_id, is_root)
                     VALUES ("' . $this->_title . '", ' . $this->_parent->id . ', ' . EK_Catalog_Rubric::IS_NOT_ROOT . ')';
@@ -181,7 +194,8 @@ class EK_Catalog_Rubric {
         }
     }
 
-    public function updateToDb() {
+    public function updateToDb()
+    {
         try {
             $sql = 'UPDATE product_rubric
                     SET title="' . $this->_title . '", parent_id="' . $this->_parent->id . '", is_root=' . EK_Catalog_Rubric::IS_NOT_ROOT . '
@@ -192,7 +206,8 @@ class EK_Catalog_Rubric {
         }
     }
 
-    public function deleteFromDb() {
+    public function deleteFromDb()
+    {
         try {
             $tempPC = new EK_Catalog_ProductCatalog();
             $tempPL = $tempPC->getAllProduct($this->_id);
@@ -209,7 +224,8 @@ class EK_Catalog_Rubric {
         }
     }
 
-    public function getPathToRubric(&$path = array()) {
+    public function getPathToRubric(&$path = array())
+    {
         if ($this->_isRoot != EK_Catalog_Rubric::IS_ROOT) {
             $tempRubric = EK_Catalog_Rubric::getInstanceById($this->_parent->id);
             if ($tempRubric instanceof EK_Catalog_Rubric) {
@@ -225,23 +241,24 @@ class EK_Catalog_Rubric {
             return false;
     }
 
-    public static function getAllInstance($parent) {
-            try {
-                $db = StdLib_DB::getInstance();
-                $result = $db->query('SELECT * FROM product_rubric WHERE parent_id=' . $parent, StdLib_DB::QUERY_MOD_ASSOC);
-                if (isset($result[0])) {
-                    $rubricArray = array();
-                    foreach ($result as $value) {
-                        $rubricArray[] = EK_Catalog_Rubric::getInstanceByArray($value);
-                    }
-                    return $rubricArray;
-                } else {
-                    return false;
+    public static function getAllInstance($parent)
+    {
+        try {
+            $db = StdLib_DB::getInstance();
+            $result = $db->query('SELECT * FROM product_rubric WHERE parent_id=' . $parent, StdLib_DB::QUERY_MOD_ASSOC);
+            if (isset($result[0])) {
+                $rubricArray = array();
+                foreach ($result as $value) {
+                    $rubricArray[] = EK_Catalog_Rubric::getInstanceByArray($value);
                 }
-            } catch (Exception $e) {
+                return $rubricArray;
+            } else {
                 return false;
             }
+        } catch (Exception $e) {
+            return false;
         }
+    }
 
     /**
      * @static
@@ -249,7 +266,8 @@ class EK_Catalog_Rubric {
      * @return bool|EK_Catalog_Rubric
      * @throws Exception
      */
-    public static function getInstanceById($id) {
+    public static function getInstanceById($id)
+    {
         try {
             $db = StdLib_DB::getInstance();
             $result = $db->query('SELECT * FROM product_rubric WHERE id=' . $id, StdLib_DB::QUERY_MOD_ASSOC);
@@ -264,13 +282,15 @@ class EK_Catalog_Rubric {
         }
     }
 
-    public static function getInstanceByArray(array $array) {
+    public static function getInstanceByArray(array $array)
+    {
         $o = new EK_Catalog_Rubric();
         $o->assignByHash($array);
         return $o;
     }
 
-    public static function getRootRubric() {
+    public static function getRootRubric()
+    {
         try {
             $db = StdLib_DB::getInstance();
             $result = $db->query('SELECT * FROM product_rubric WHERE is_root=' . EK_Catalog_Rubric::IS_ROOT, StdLib_DB::QUERY_MOD_ASSOC);
@@ -284,7 +304,8 @@ class EK_Catalog_Rubric {
         }
     }
 
-    protected function assignByHash($result) {
+    protected function assignByHash($result)
+    {
         $this->setId($result['id']);
         $this->setTitle($result['title']);
 
@@ -295,27 +316,74 @@ class EK_Catalog_Rubric {
 
     }
 
-    public static  function getRubricTree() {
-            $tree = array();
+    public static function getRubricTree()
+    {
+        $tree = array();
 
-            $root = EK_Catalog_Rubric::getRootRubric();
-            $tree[] = $root;
+        $root = EK_Catalog_Rubric::getRootRubric();
+        $tree[] = $root;
 
-            $root->_getSubRubricTree($root->id, $tree);
-            return $tree;
-        }
+        $root->_getSubRubricTree($root->id, $tree);
+        return $tree;
+    }
 
-        private function _getSubRubricTree($parent, &$tree) {
-            $result = $this->_db->query('SELECT * FROM product_rubric WHERE parent_id=' . $parent, StdLib_DB::QUERY_MOD_ASSOC);
-            if (isset($result[0])) {
-                foreach ($result as $res) {
-                    $rubric = EK_Catalog_Rubric::getInstanceByArray($res);
-                    $tree[] = $rubric;
-                    $this->_getSubRubricTree($rubric->id, $tree);
+    private function _getSubRubricTree($parent, &$tree)
+    {
+        $result = $this->_db->query('SELECT * FROM product_rubric WHERE parent_id=' . $parent, StdLib_DB::QUERY_MOD_ASSOC);
+        if (isset($result[0])) {
+            foreach ($result as $res) {
+                $rubric = EK_Catalog_Rubric::getInstanceByArray($res);
+                $tree[] = $rubric;
+                $this->_getSubRubricTree($rubric->id, $tree);
+            }
+        } else
+            return false;
+    }
+
+    /**
+     *
+     *
+     * @return array
+     * @access public
+     */
+    public function getChild()
+    {
+        if (is_null($this->_childRubric) || empty($this->_childRubric)) {
+            try {
+                $sql = 'SELECT * FROM product_rubric WHERE parent_id=' . $this->_id;
+                $result = $this->_db->query($sql, StdLib_DB::QUERY_MOD_ASSOC);
+
+                if (isset($result[0]['id'])) {
+                    foreach ($result as $res) {
+                        $this->_childRubric[] = EK_Catalog_Rubric::getInstanceById($res['id']);
+                    }
+                } else {
+                    $this->_childRubric = array();
                 }
-            } else
-                return false;
+                return $this->_childRubric;
+            } catch (Exception $e) {
+                throw new Exception($e->getMessage());
+            }
+        } else {
+            return $this->_childRubric;
         }
+    } // end of member function getChild
+
+    /**
+     * @return bool
+     */
+    public function hasChild()
+    {
+        if (is_null($this->_childRubric) || empty($this->_childRubric)) {
+            $this->getChild();
+        }
+
+        if (!empty($this->_childRubric)) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 
 }
 

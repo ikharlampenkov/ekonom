@@ -111,7 +111,6 @@ class EK_Company_Company
      *
      *
      * @param int $value
-
      * @return void
      * @access protected
      */
@@ -124,7 +123,6 @@ class EK_Company_Company
      *
      *
      * @param string $value
-
      * @return void
      * @access public
      */
@@ -150,7 +148,6 @@ class EK_Company_Company
      *
      *
      * @param string $value
-
      * @return string
      * @access public
      */
@@ -267,7 +264,6 @@ class EK_Company_Company
      *
      *
      * @param int $id идентификатор задачи
-
      * @return EK_Company_Company
      * @static
      * @access public
@@ -312,18 +308,28 @@ class EK_Company_Company
 
     /**
      *
+     * @param int $city
+     * @param EK_Catalog_Rubric|null $rubric
      *
-
      * @return array
      * @static
      * @access public
      */
-    public static function getAllInstance()
+    public static function getAllInstance($city = 1, $rubric = null)
     {
         try {
             $db = StdLib_DB::getInstance();
 
-            $sql = 'SELECT * FROM company ';
+            $sql = 'SELECT * FROM company WHERE city_id=' . (int)$city;
+
+            if (!is_null($rubric)) {
+                $sql .= ' AND id IN (
+                 SELECT DISTINCT company_id
+                 FROM product, product_rubric
+                 WHERE product.product_rubric_id=product_rubric.id
+                   AND product_rubric.id=' . $rubric->id . '
+                 )';
+            }
 
             $result = $db->query($sql, StdLib_DB::QUERY_MOD_ASSOC);
 
@@ -366,7 +372,6 @@ class EK_Company_Company
      *
      *
      * @param array $values
-
      * @return void
      * @access public
      */

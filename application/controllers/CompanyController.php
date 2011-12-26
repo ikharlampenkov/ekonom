@@ -4,15 +4,28 @@ class CompanyController extends Zend_Controller_Action
 {
     protected $_user = null;
 
+    protected $_city = 1;
+
     public function init()
     {
         $storage_data = Zend_Auth::getInstance()->getStorage()->read();
         $this->_user = TM_User_User::getInstanceById($storage_data->id);
+
+        $mainSession = new Zend_Session_Namespace('main');
+        $this->_city = $mainSession->curCity;
     }
 
     public function indexAction()
     {
-        $this->view->assign('companyList', EK_Company_Company::getAllInstance());
+        $rubricId = $this->getRequest()->getParam('rubric', 0);
+        if ($rubricId != 0) {
+
+            $rubric =  EK_Catalog_Rubric::getInstanceById($rubricId);
+            $this->view->assign('rubric', $rubric);
+            $this->view->assign('companyList', EK_Company_Company::getAllInstance($this->_city, $rubric));
+        } else {
+            $this->view->assign('companyList', EK_Company_Company::getAllInstance($this->_city));
+        }
     }
 
     public function viewAction()
@@ -21,6 +34,7 @@ class CompanyController extends Zend_Controller_Action
         $this->view->assign('company', $oCompany);
         $this->view->assign('addressList', EK_Company_Address::getAllInstance($oCompany));
         $this->view->assign('galleryList', EK_Gallery_Company::getAllInstance($oCompany));
+        $this->view->assign('productList', EK_Catalog_Product::getAllInstanceByCompany($oCompany));
     }
 
     public function addAction()

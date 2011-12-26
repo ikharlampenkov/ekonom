@@ -1,6 +1,35 @@
 <article id="main-content">
 
-<h1 class="heading">О нас</h1>
+{if $authUserRole == 'admin'}
+
+    <form action="{$this->url(['controller' => $controller, 'action' => 'index'])}" method="POST">
+        <h1 class="heading">О нас</h1>
+
+        <textarea name="data_about[content]" style="width: 100%; height: 200px;">{$contentAbout->content}</textarea>
+
+        <h1 class="heading">Контактная информация</h1>
+
+        <textarea name="data_contacts[content]" style="width: 100%; height: 200px;">{$contentContacts->content}</textarea>
+
+        <input type="submit" value="Сохранить" class="button"/>
+
+    </form>
+
+
+    {else}
+
+    <h1 class="heading">О нас</h1>
+
+    <p>{$contentAbout->content}</p>
+
+    <h1 class="heading">Контактная информация</h1>
+
+    <p>{$contentContacts->content}</p>
+{/if}
+
+
+
+{*
 
 <p>Постиндустриализм представляет собой прагматический гуманизм (терминология М.Фуко). Важным для нас является указание Маклюэна на то, что капиталистическое мировое общество приводит институциональный коммунизм, подчеркивает президент. Постиндустриализм обретает референдум, впрочем, это несколько расходится с концепцией Истона. Понятие политического участия, согласно традиционным представлениям, ограничивает гносеологический марксизм, подчеркивает президент. Тоталитарный тип политической
     культуры неравномерен. Конфедерация вероятна.
@@ -85,5 +114,7 @@
         <input type="submit" value="Отправить" class="button"/>
     </fieldset>
 </form>
+
+*}
 
 </article>

@@ -2,10 +2,20 @@
 
 class CatalogController extends Zend_Controller_Action
 {
+    protected $_user = null;
+
+    protected $_city = 1;
 
     public function init()
     {
+        $storage_data = Zend_Auth::getInstance()->getStorage()->read();
+        $this->_user = TM_User_User::getInstanceById($storage_data->id);
 
+        $mainSession = new Zend_Session_Namespace('main');
+        $this->_city = $mainSession->curCity;
+
+        $this->_helper->AjaxContext()->addActionContext('viewSubMenu', 'html')->initContext('html');
+        $this->_helper->AjaxContext()->addActionContext('viewProduct', 'html')->initContext('html');
         /* Initialize action controller here */
     }
 
@@ -30,9 +40,27 @@ class CatalogController extends Zend_Controller_Action
         $this->view->assign('attributeHashList', EK_Catalog_Hash::getAllInstance());
     }
 
-    public function viewSubMenu()
+    public function viewattributetypeAction()
     {
+        $this->view->assign('attributeTypeList', TM_Attribute_AttributeType::getAllInstance(new EK_Catalog_AttributeTypeMapper()));
+    }
 
+    public function viewhashAction()
+    {
+        $this->view->assign('attributeHashList', EK_Catalog_Hash::getAllInstance());
+    }
+
+    public function viewsubmenuAction()
+    {
+        $rub = $this->getRequest()->getParam('rubric', 0);
+        $this->view->assign('rubricList', EK_Catalog_Rubric::getAllInstance($rub));
+    }
+
+    public function viewproductAction()
+    {
+        $oProduct = EK_Catalog_Product::getInstanceById($this->getRequest()->getParam('id'));
+        $this->view->assign('product', $oProduct);
+        $this->view->assign('galleryList', EK_Gallery_Product::getAllInstance($oProduct));
     }
 
     public function addAction()
@@ -195,7 +223,7 @@ class CatalogController extends Zend_Controller_Action
 
             try {
                 $oType->insertToDb();
-                $this->_redirect('/catalog/index/rubric/' . $this->getRequest()->getParam('rubric', 0));
+                $this->_redirect('/catalog/viewAttributeType/');
             } catch (Exception $e) {
                 $this->view->assign('exception_msg', $e->getMessage());
             }
@@ -218,7 +246,7 @@ class CatalogController extends Zend_Controller_Action
 
             try {
                 $oType->updateToDb();
-                $this->_redirect('/catalog/index/rubric/' . $this->getRequest()->getParam('rubric', 0));
+                $this->_redirect('/catalog/viewAttributeType/');
             } catch (Exception $e) {
                 $this->view->assign('exception_msg', $e->getMessage());
             }
@@ -233,7 +261,7 @@ class CatalogController extends Zend_Controller_Action
         $oType = TM_Attribute_AttributeTypeFactory::getAttributeTypeById(new EK_Catalog_AttributeTypeMapper(), $this->getRequest()->getParam('id'));
         try {
             $oType->deleteFromDB();
-            $this->_redirect('/catalog/index/rubric/' . $this->getRequest()->getParam('rubric', 0));
+            $this->_redirect('/catalog/viewAttributeType/');
         } catch (Exception $e) {
             throw new Exception($e->getMessage());
         }
@@ -253,7 +281,7 @@ class CatalogController extends Zend_Controller_Action
 
             try {
                 $oHash->insertToDb();
-                $this->_redirect('/catalog/index/rubric/' . $this->getRequest()->getParam('rubric', 0));
+                $this->_redirect('/catalog/viewAttributeHash/');
             } catch (Exception $e) {
                 $this->view->assign('exception_msg', $e->getMessage());
             }
@@ -277,7 +305,7 @@ class CatalogController extends Zend_Controller_Action
 
             try {
                 $oHash->updateToDb();
-                $this->_redirect('/catalog/index/rubric/' . $this->getRequest()->getParam('rubric', 0));
+                $this->_redirect('/catalog/viewAttributeHash/');
             } catch (Exception $e) {
                 $this->view->assign('exception_msg', $e->getMessage());
             }
@@ -293,7 +321,81 @@ class CatalogController extends Zend_Controller_Action
         $oHash = EK_Catalog_Hash::getInstanceById($this->getRequest()->getParam('key'));
         try {
             $oHash->deleteFromDB();
-            $this->_redirect('/catalog/index/rubric/' . $this->getRequest()->getParam('rubric', 0));
+            $this->_redirect('/catalog/viewAttributeHash/');
+        } catch (Exception $e) {
+            throw new Exception($e->getMessage());
+        }
+    }
+
+
+    public function viewgalleryAction()
+    {
+        $cur_rubric = EK_Catalog_Rubric::getInstanceById($this->getRequest()->getParam('rubric', 0));
+        $oProduct = EK_Catalog_Product::getInstanceById($this->getRequest()->getParam('idProduct'));
+        $this->view->assign('galleryList', EK_Gallery_Product::getAllInstance($oProduct));
+        $this->view->assign('product', $oProduct);
+        $this->view->assign('cur_rubric', $cur_rubric);
+    }
+
+    public function addgalleryAction()
+    {
+        $cur_rubric = EK_Catalog_Rubric::getInstanceById($this->getRequest()->getParam('rubric', 0));
+        $oProduct = EK_Catalog_Product::getInstanceById($this->getRequest()->getParam('idProduct'));
+
+        $oGallery = new EK_Gallery_Product();
+        $oGallery->setUser($this->_user);
+        $oGallery->setDateCreate(date('d.m.Y H:i:s'));
+
+        if ($this->getRequest()->isPost()) {
+            $data = $this->getRequest()->getParam('data');
+            $oGallery->setTitle($data['title']);
+
+            try {
+                $oGallery->insertToDb($oProduct);
+                $this->_redirect('/catalog/viewGallery/idProduct/' . $this->getRequest()->getParam('idProduct') . '/rubric/' . $this->getRequest()->getParam('rubric', 0));
+            } catch (Exception $e) {
+                $this->view->assign('exception_msg', $e->getMessage());
+            }
+
+        }
+
+        $this->view->assign('gallery', $oGallery);
+        $this->view->assign('company', $oProduct);
+        $this->view->assign('cur_rubric', $cur_rubric);
+    }
+
+    public function editgalleryAction()
+    {
+        $cur_rubric = EK_Catalog_Rubric::getInstanceById($this->getRequest()->getParam('rubric', 0));
+        $oProduct = EK_Catalog_Product::getInstanceById($this->getRequest()->getParam('idProduct'));
+        $oGallery = EK_Gallery_Product::getInstanceById($this->getRequest()->getParam('id'));
+
+        if ($this->getRequest()->isPost()) {
+            $data = $this->getRequest()->getParam('data');
+            $oGallery->setTitle($data['title']);
+
+            try {
+                $oGallery->updateToDb();
+                $this->_redirect('/catalog/viewGallery/idProduct/' . $this->getRequest()->getParam('idProduct') . '/rubric/' . $this->getRequest()->getParam('rubric', 0));
+            } catch (Exception $e) {
+                $this->view->assign('exception_msg', $e->getMessage());
+            }
+
+        }
+
+        $this->view->assign('gallery', $oGallery);
+        $this->view->assign('company', $oProduct);
+        $this->view->assign('cur_rubric', $cur_rubric);
+    }
+
+    public function deletegalleryAction()
+    {
+        $oProduct = EK_Catalog_Product::getInstanceById($this->getRequest()->getParam('idProduct'));
+        $oGallery = EK_Gallery_Product::getInstanceById($this->getRequest()->getParam('id'));
+
+        try {
+            $oGallery->deleteFromDB($oProduct);
+            $this->_redirect('/catalog/viewGallery/idProduct/' . $this->getRequest()->getParam('idProduct') . '/rubric/' . $this->getRequest()->getParam('rubric', 0));
         } catch (Exception $e) {
             throw new Exception($e->getMessage());
         }

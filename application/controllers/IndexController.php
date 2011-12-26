@@ -14,6 +14,16 @@ class IndexController extends Zend_Controller_Action
         $this->view->assign('companyList', EK_Company_Company::getAllInstance());
     }
 
+    public function choosecityAction()
+    {
+        if ($this->getRequest()->isPost()) {
+            $mainSession = new Zend_Session_Namespace('main');
+            $mainSession->curCity = $this->getRequest()->getParam('city_name', 1);
+
+            $this->_redirect('/');
+        }
+    }
+
 
 }
 
