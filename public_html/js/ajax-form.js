@@ -25,6 +25,7 @@ $(document).ready(function() {
                 form.find('fieldset.main').replaceWith($(response).find('fieldset.main'));
             }
             else {
+                $('#form-placeholder').html('Отправлено');
                 // Handle successful submit whatever you need
             }
         });

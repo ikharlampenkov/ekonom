@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.0.9, created on 2011-12-25 23:25:10
+<?php /* Smarty version Smarty-3.0.9, created on 2011-12-26 22:56:48
          compiled from "F:\www\ekonom\application/views/scripts\catalog/child-block.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:120534ef74e66ae1ed7-91247609%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:319654ef899408daf43-01460340%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '9df79449238660fb8315d8c5e46bbc13abd1b136' => 
     array (
       0 => 'F:\\www\\ekonom\\application/views/scripts\\catalog/child-block.tpl',
-      1 => 1324830304,
+      1 => 1324915000,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '120534ef74e66ae1ed7-91247609',
+  'nocache_hash' => '319654ef899408daf43-01460340',
   'function' => 
   array (
   ),
@@ -24,13 +24,13 @@ if ($_smarty_tpl->_count($_from) > 0){
 ?>
 <li id="first_level_<?php echo $_smarty_tpl->getVariable('rubric')->value->id;?>
 ">
-    <a href="<?php echo $_smarty_tpl->getVariable('this')->value->url(array('controller'=>'company','action'=>'index','rubric'=>$_smarty_tpl->getVariable('rubric')->value->getId()));?>
+    <a href="<?php echo $_smarty_tpl->getVariable('this')->value->url(array('controller'=>$_smarty_tpl->getVariable('controllerRub')->value,'action'=>'index','rubric'=>$_smarty_tpl->getVariable('rubric')->value->getId()));?>
 "><?php echo $_smarty_tpl->getVariable('rubric')->value->title;?>
 </a>
     <?php if ($_smarty_tpl->getVariable('rubric')->value->hasChild()){?>
         <ul class="submenu third-level">
         <?php $_template = new Smarty_Internal_Template("catalog/parent-block.tpl", $_smarty_tpl->smarty, $_smarty_tpl, $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null);
-$_template->assign('subrubric',$_smarty_tpl->getVariable('rubric')->value->getChild()); echo $_template->getRenderedTemplate(); $_template->rendered_content = null;?><?php unset($_template);?>
+$_template->assign('subrubric',$_smarty_tpl->getVariable('rubric')->value->getChild());$_template->assign('controllerRub',$_smarty_tpl->getVariable('controllerRub')->value); echo $_template->getRenderedTemplate(); $_template->rendered_content = null;?><?php unset($_template);?>
         </ul>
     <?php }?>
 </li>

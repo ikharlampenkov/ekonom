@@ -46,7 +46,7 @@ class CompanyController extends Zend_Controller_Action
             $oCompany->setTitle($data['title']);
             $oCompany->setDescription($data['description']);
             $oCompany->setCity(EK_City_City::getInstanceById($data['city_id']));
-
+            $oCompany->setOrderEmail($data['order_email']);
 
             try {
                 $oCompany->insertToDb();
@@ -70,6 +70,7 @@ class CompanyController extends Zend_Controller_Action
             $oCompany->setTitle($data['title']);
             $oCompany->setDescription($data['description']);
             $oCompany->setCity(EK_City_City::getInstanceById($data['city_id']));
+            $oCompany->setOrderEmail($data['order_email']);
 
             try {
                 $oCompany->updateToDb();

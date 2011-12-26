@@ -16,6 +16,8 @@ class CatalogController extends Zend_Controller_Action
 
         $this->_helper->AjaxContext()->addActionContext('viewSubMenu', 'html')->initContext('html');
         $this->_helper->AjaxContext()->addActionContext('viewProduct', 'html')->initContext('html');
+        $this->_helper->AjaxContext()->addActionContext('reserve', 'html')->initContext('html');
+        $this->_helper->AjaxContext()->addActionContext('share', 'html')->initContext('html');
         /* Initialize action controller here */
     }
 
@@ -33,7 +35,7 @@ class CatalogController extends Zend_Controller_Action
         $this->view->assign('cur_rubric', $cur_rubric);
 
         $this->view->assign('rubric_list', $o_catalog->getAllRubric($cur_rubric->getId()));
-        $this->view->assign('product_list', $o_catalog->getAllProduct($cur_rubric->getId()));
+        $this->view->assign('productList', $o_catalog->getAllProduct($cur_rubric->getId()));
         $this->view->assign('path', $cur_rubric->getPathToRubric());
 
         $this->view->assign('attributeTypeList', TM_Attribute_AttributeType::getAllInstance(new EK_Catalog_AttributeTypeMapper()));
@@ -61,6 +63,44 @@ class CatalogController extends Zend_Controller_Action
         $oProduct = EK_Catalog_Product::getInstanceById($this->getRequest()->getParam('id'));
         $this->view->assign('product', $oProduct);
         $this->view->assign('galleryList', EK_Gallery_Product::getAllInstance($oProduct));
+    }
+
+    public function reserveAction()
+    {
+        $oProduct = EK_Catalog_Product::getInstanceById($this->getRequest()->getParam('id'));
+        if ($this->getRequest()->isPost()) {
+            $reserve = $this->getRequest()->getParam('reserve');
+            try {
+                $oProduct->reserve($reserve);
+                exit;
+            } catch (Exception $e) {
+                echo $e->getMessage();
+            }
+        }
+        $this->view->assign('product', $oProduct);
+    }
+
+    public function shareAction()
+    {
+        $oProduct = EK_Catalog_Product::getInstanceById($this->getRequest()->getParam('id'));
+        if ($this->getRequest()->isPost()) {
+            $share = $this->getRequest()->getParam('share');
+            try {
+                $message = 'Приглашение от друга: ' . "\r\n";
+                $message .= 'Дата: ' . date('d.m.Y') . "\r\n" .
+                        'Имя: ' . $share['name'] . "\r\n" .
+                        'Комментарий: ' . $share['text'];
+
+                if ($share['email'] != '') {
+                    mail($share['email'], 'Приглашение от друга', $message);
+                }
+                exit;
+            } catch (Exception $e) {
+                echo $e->getMessage();
+            }
+        }
+        $this->view->assign('product', $oProduct);
+
     }
 
     public function addAction()

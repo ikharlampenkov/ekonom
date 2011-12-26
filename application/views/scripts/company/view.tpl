@@ -91,7 +91,8 @@
             {/if}
         </li>
         {/foreach}
-
+        <li>&nbsp;</li>
+        <li class="empty"></li>
     </ul>
 
     <div id="paginator">

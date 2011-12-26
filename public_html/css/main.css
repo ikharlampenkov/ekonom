@@ -1220,6 +1220,18 @@ section.comments #paginator {
     text-align: center;
 }
 
+#companies li .discounta {
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    width: 30px; height: 31px;
+    background: url('/i/discount.png') no-repeat left top;
+    color: #fff;
+    line-height: 30px;
+    font-family: ArialNarrow, Arial, sans-serif;
+    text-align: center;
+}
+
 /* Gallery list */
 #gallery {
     margin: 0 0 0 -12px;

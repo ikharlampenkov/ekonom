@@ -86,12 +86,16 @@
         <nav id="main-nav">
             <ul>
                 <li>
-                    <a href="/offers">Выбрать</a>
+                    <a href="/catalog">Выбрать</a>
                     <ul class="first-level submenu">
                     {foreach from=$headRubricList item=rubric}
                         <li>
                             <a href="{$this->url(['controller' => 'catalog', 'action' => 'index', 'rubric' => $rubric->getId()])}">{$rubric->title}</a>
-                        {*<ul class="submenu second-level"></ul>*}
+                            {if $rubric->hasChild()}
+                                <ul class="submenu second-level">
+                                {include file="catalog/child-block.tpl" subrubric=$rubric->getChild() controllerRub='catalog'}
+                                </ul>
+                            {/if}
                         </li>
 
                     {/foreach}
@@ -127,16 +131,16 @@
             {if_allowed resource="company/index"}
                 <li><a href="/company/">Компании</a>
                     <ul class="first-level submenu">
-                    {foreach from=$headRubricList item=rubric}
-                        <li id="first_level_{$rubric->id}">
-                            <a href="{$this->url(['controller' => 'company', 'action' => 'index', 'rubric' => $rubric->getId()])}">{$rubric->title}</a>
-                            {if $rubric->hasChild()}
-                                <ul class="submenu second-level">
-                                {include file="catalog/child-block.tpl" subrubric=$rubric->getChild()}
-                                </ul>
-                            {/if}
-                        </li>
-                    {/foreach}
+                        {foreach from=$headRubricList item=rubric}
+                            <li id="first_level_{$rubric->id}">
+                                <a href="{$this->url(['controller' => 'company', 'action' => 'index', 'rubric' => $rubric->getId()])}">{$rubric->title}</a>
+                                {if $rubric->hasChild()}
+                                    <ul class="submenu second-level">
+                                    {include file="catalog/child-block.tpl" subrubric=$rubric->getChild() controllerRub='company'}
+                                    </ul>
+                                {/if}
+                            </li>
+                        {/foreach}
                     </ul>
                 </li>
             {/if_allowed}

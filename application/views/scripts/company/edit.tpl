@@ -29,9 +29,13 @@
         <tr>
             <td class="ttovar_title">Лого</td>
             <td class="ttovar">
-                {if $company->file->getName()}<img src="/files/{$company->file->getName()}" />{/if}<br/>
+            {if $company->file->getName()}<img src="/files/{$company->file->getName()}"/>{/if}<br/>
                 <input type="file" name="file"/>
             </td>
+        </tr>
+        <tr>
+            <td class="ttovar_title">Email для заказов</td>
+            <td class="ttovar"><input name="data[order_email]" value="{$company->orderEmail}"/></td>
         </tr>
     </table>
     <input id="save" name="save" type="submit" value="Сохранить"/>

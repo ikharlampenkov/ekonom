@@ -25,6 +25,7 @@ function comment_reply_on(id) {
 
 $(document).ready(function () {
     company.createSubMenu();
+    catalog.createSubMenu();
 
     /*
     $('ul.second-level').mouseout(function() {

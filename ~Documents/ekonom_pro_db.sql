@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Хост: localhost
--- Время создания: Дек 23 2011 г., 23:43
+-- Время создания: Дек 27 2011 г., 01:07
 -- Версия сервера: 5.1.50
 -- Версия PHP: 5.3.8-ZS5.5.0
 
@@ -58,6 +58,7 @@ CREATE TABLE IF NOT EXISTS `company` (
   `title` varchar(255) NOT NULL,
   `file` varchar(255) DEFAULT NULL,
   `description` text,
+  `order_email` varchar(255) NOT NULL DEFAULT '',
   PRIMARY KEY (`id`),
   KEY `fk_company_city1` (`city_id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
@@ -66,9 +67,9 @@ CREATE TABLE IF NOT EXISTS `company` (
 -- Дамп данных таблицы `company`
 --
 
-INSERT INTO `company` (`id`, `city_id`, `title`, `file`, `description`) VALUES
-(1, 1, 'Первая компания', 'file_18-12-2011-19-33-24.jpg', 'Prada – всемирно известный Дом Моды, выпускающий коллекции модной одежды и аксессуаров.'),
-(2, 1, 'Вторая компания', 'file_17-12-2011-13-09-45.png', 'Prada – всемирно известный Дом Моды, выпускающий коллекции модной одежды и аксессуаров.');
+INSERT INTO `company` (`id`, `city_id`, `title`, `file`, `description`, `order_email`) VALUES
+(1, 1, 'Первая компания', 'file_18-12-2011-19-33-24.jpg', 'Prada – всемирно известный Дом Моды, выпускающий коллекции модной одежды и аксессуаров.', 'test@test.com'),
+(2, 1, 'Вторая компания', 'file_17-12-2011-13-09-45.png', 'Prada – всемирно известный Дом Моды, выпускающий коллекции модной одежды и аксессуаров.', '');
 
 -- --------------------------------------------------------
 
@@ -157,7 +158,7 @@ CREATE TABLE IF NOT EXISTS `gallery` (
   `file` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `fk_tm_document_tm_user1` (`user_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=5 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=9 ;
 
 --
 -- Дамп данных таблицы `gallery`
@@ -167,7 +168,11 @@ INSERT INTO `gallery` (`id`, `title`, `date_create`, `user_id`, `file`) VALUES
 (1, 'Первое фото', '2011-12-18 23:10:50', 1, 'img_18-12-2011-23-10-50.jpg'),
 (2, 'Второе фото', '2011-12-18 23:27:19', 1, 'img_18-12-2011-23-27-19.jpg'),
 (3, 'Треть фото', '2011-12-18 23:28:11', 1, 'img_18-12-2011-23-28-11.jpg'),
-(4, 'Четвертое фото', '2011-12-18 23:28:27', 1, 'img_18-12-2011-23-28-27.jpg');
+(4, 'Четвертое фото', '2011-12-18 23:28:27', 1, 'img_18-12-2011-23-28-27.jpg'),
+(5, 'Первое фото', '2011-12-26 16:28:21', 1, 'img_26-12-2011-16-28-21.jpg'),
+(6, 'Второе фото', '2011-12-26 16:30:43', 1, 'img_26-12-2011-16-30-43.jpg'),
+(7, 'Третье фото', '2011-12-26 16:30:58', 1, 'img_26-12-2011-16-30-58.jpg'),
+(8, 'Четвертое фото', '2011-12-26 16:31:15', 1, 'img_26-12-2011-16-31-15.jpg');
 
 -- --------------------------------------------------------
 
@@ -207,6 +212,16 @@ CREATE TABLE IF NOT EXISTS `gallery_product` (
   KEY `fk_table1_product1` (`product_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- Дамп данных таблицы `gallery_product`
+--
+
+INSERT INTO `gallery_product` (`gallery_id`, `product_id`) VALUES
+(5, 1),
+(6, 1),
+(7, 1),
+(8, 1);
+
 -- --------------------------------------------------------
 
 --
@@ -234,7 +249,7 @@ CREATE TABLE IF NOT EXISTS `product` (
 
 INSERT INTO `product` (`id`, `product_rubric_id`, `title`, `img`, `short_text`, `full_text`, `price`, `company_id`) VALUES
 (1, 3, 'Апельсин', 'img_30-06-2011-21-19-07.jpg', 'Просто апельсин', 'Детальная информация об апельсинах', '100.00', 1),
-(3, 3, 'Вишня', 'img_30-06-2011-21-11-19.jpg', 'Просто вишня', 'Просто сладкая вишня', '250.00', 1),
+(3, 3, 'Вишня', 'img_30-06-2011-21-11-19.jpg', 'Просто вишня', 'Просто сладкая вишня', '250.00', 2),
 (4, 5, 'Моющее средство', NULL, 'паоапоаппаоапоап', 'овпоапоапоап', '234.00', 1),
 (11, 1, 'полплпрлп', NULL, '', '', '125.50', 1),
 (12, 1, 'Тест', NULL, '', '', '0.00', 1),
@@ -264,16 +279,20 @@ CREATE TABLE IF NOT EXISTS `product_attribute` (
 --
 
 INSERT INTO `product_attribute` (`product_id`, `attribute_key`, `type_id`, `attribute_value`, `is_fill`) VALUES
+(1, 'description', 2, '', 0),
+(1, 'discount', 1, '20%', 0),
+(1, 'second_price', 1, '80', 0),
+(1, 'terms_of_stock', 2, 'аптатпатпатпатпатпатпата', 0),
+(1, 'test_list', 3, 'Один', 0),
+(3, 'description', 1, '', 0),
+(3, 'test_list', 3, 'Один', 0),
 (11, 'description', 1, '', 0),
-(11, 'description2', 2, 'авравраврварав', 0),
-(11, 'full_text', 2, '', 0),
+(11, 'discount', 1, '', 0),
+(11, 'second_price', 1, '', 0),
+(11, 'terms_of_stock', 2, '', 0),
 (11, 'test_list', 3, 'Один', 0),
-(11, 'Срок', 4, '07.12.2011 17:15:56', 0),
 (13, 'description', 1, '', 0),
-(13, 'description2', 2, 'аптаптптап', 0),
-(13, 'full_text', 2, 'патпатптпатаптаптатпап', 0),
-(13, 'test_list', 3, 'Один', 0),
-(13, 'Срок', 4, '16.12.2011 23:02:06', 0);
+(13, 'test_list', 3, 'Один', 0);
 
 -- --------------------------------------------------------
 
@@ -326,11 +345,11 @@ CREATE TABLE IF NOT EXISTS `product_hash` (
 --
 
 INSERT INTO `product_hash` (`product_id`, `attribute_key`, `title`, `type_id`, `list_value`, `required`, `sort_order`) VALUES
-(NULL, 'description', 'Текстовое описание задачи', 1, '', 0, 10000),
-(NULL, 'description2', 'description', 2, ' ', 0, 10000),
-(NULL, 'full_text', 'Большой текст', 2, '', 0, 10000),
-(NULL, 'test_list', 'Проверка списка', 3, 'Один||Два||Три ', 0, 10000),
-(NULL, 'Срок', 'Срок выполнения задачи', 4, ' ', 0, 10000);
+(NULL, 'description', 'Описание акции', 2, ' ', 0, 10000),
+(NULL, 'discount', 'Скидка', 1, ' ', 0, 1000),
+(NULL, 'second_price', 'Цена со скидкой', 1, ' ', 0, 1000),
+(NULL, 'terms_of_stock', 'Условия и сроки проведения', 2, ' ', 0, 1000),
+(NULL, 'test_list', 'Проверка списка', 3, 'Один||Два||Три ', 0, 10000);
 
 -- --------------------------------------------------------
 
@@ -444,6 +463,23 @@ INSERT INTO `tm_acl_role` (`tm_user_role_id`, `tm_user_resource_id`, `is_allow`,
 (1, 111, 1, 'show'),
 (1, 112, 1, 'show'),
 (1, 113, 1, 'show'),
+(1, 114, 1, 'show'),
+(1, 115, 1, 'show'),
+(1, 116, 1, 'show'),
+(1, 117, 1, 'show'),
+(1, 118, 1, 'show'),
+(1, 119, 1, 'show'),
+(1, 120, 1, 'show'),
+(1, 121, 1, 'show'),
+(1, 122, 1, 'show'),
+(1, 123, 1, 'show'),
+(1, 124, 1, 'show'),
+(1, 125, 1, 'show'),
+(1, 126, 1, 'show'),
+(1, 127, 1, 'show'),
+(1, 128, 1, 'show'),
+(1, 129, 1, 'show'),
+(1, 130, 1, 'show'),
 (3, 1, 1, 'show'),
 (3, 2, 1, 'show'),
 (3, 3, 1, 'show'),
@@ -554,6 +590,27 @@ INSERT INTO `tm_acl_role` (`tm_user_role_id`, `tm_user_resource_id`, `is_allow`,
 (4, 107, 1, 'show'),
 (4, 108, 1, 'show'),
 (4, 109, 1, 'show'),
+(4, 110, 0, 'show'),
+(4, 111, 0, 'show'),
+(4, 112, 0, 'show'),
+(4, 113, 0, 'show'),
+(4, 114, 1, 'show'),
+(4, 115, 1, 'show'),
+(4, 116, 1, 'show'),
+(4, 117, 0, 'show'),
+(4, 118, 0, 'show'),
+(4, 119, 0, 'show'),
+(4, 120, 0, 'show'),
+(4, 121, 0, 'show'),
+(4, 122, 0, 'show'),
+(4, 123, 0, 'show'),
+(4, 124, 0, 'show'),
+(4, 125, 1, 'show'),
+(4, 126, 1, 'show'),
+(4, 127, 1, 'show'),
+(4, 128, 1, 'show'),
+(4, 129, 1, 'show'),
+(4, 130, 1, 'show'),
 (5, 1, 1, 'show'),
 (5, 2, 1, 'show'),
 (5, 3, 1, 'show'),
@@ -606,7 +663,32 @@ INSERT INTO `tm_acl_role` (`tm_user_role_id`, `tm_user_resource_id`, `is_allow`,
 (5, 102, 1, 'show'),
 (5, 103, 1, 'show'),
 (5, 104, 1, 'show'),
-(5, 105, 1, 'show');
+(5, 105, 1, 'show'),
+(5, 106, 0, 'show'),
+(5, 107, 0, 'show'),
+(5, 108, 0, 'show'),
+(5, 109, 0, 'show'),
+(5, 110, 0, 'show'),
+(5, 111, 0, 'show'),
+(5, 112, 0, 'show'),
+(5, 113, 0, 'show'),
+(5, 114, 1, 'show'),
+(5, 115, 1, 'show'),
+(5, 116, 1, 'show'),
+(5, 117, 0, 'show'),
+(5, 118, 0, 'show'),
+(5, 119, 0, 'show'),
+(5, 120, 0, 'show'),
+(5, 121, 0, 'show'),
+(5, 122, 0, 'show'),
+(5, 123, 0, 'show'),
+(5, 124, 0, 'show'),
+(5, 125, 0, 'show'),
+(5, 126, 0, 'show'),
+(5, 127, 0, 'show'),
+(5, 128, 0, 'show'),
+(5, 129, 1, 'show'),
+(5, 130, 1, 'show');
 
 -- --------------------------------------------------------
 
@@ -815,7 +897,7 @@ CREATE TABLE IF NOT EXISTS `tm_user_resource` (
   `rtitle` varchar(255) NOT NULL DEFAULT '',
   PRIMARY KEY (`id`),
   UNIQUE KEY `title` (`title`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=114 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=131 ;
 
 --
 -- Дамп данных таблицы `tm_user_resource`
@@ -845,7 +927,7 @@ INSERT INTO `tm_user_resource` (`id`, `title`, `rtitle`) VALUES
 (70, 'user/addAttributeHash', ''),
 (71, 'user/editAttributeHash', ''),
 (72, 'user/deleteAttributeHash', ''),
-(76, 'city', ''),
+(76, 'city', 'Города'),
 (77, 'city/index', ''),
 (78, 'city/add', ''),
 (79, 'city/edit', ''),
@@ -854,16 +936,16 @@ INSERT INTO `tm_user_resource` (`id`, `title`, `rtitle`) VALUES
 (82, 'company/add', ''),
 (83, 'company/edit', ''),
 (84, 'company/delete', ''),
-(85, 'catalog', ''),
+(85, 'catalog', 'Каталог'),
 (86, 'catalog/index', ''),
 (87, 'company/viewAddress', ''),
 (88, 'company/addAddress', ''),
 (89, 'company/editAddress', ''),
 (90, 'company/deleteAddress', ''),
-(91, 'catalog/addRubric', ''),
+(91, 'catalog/addRubric', 'Каталог/Добавить рубрику'),
 (92, 'catalog/editRubric', ''),
 (93, 'catalog/deleteRubric', ''),
-(94, 'catalog/add', ''),
+(94, 'catalog/add', 'Каталог/Добавить товар'),
 (95, 'catalog/edit', ''),
 (96, 'catalog/delete', ''),
 (97, 'user/viewAttributeType', 'Пользователи/Показать типы атрибутов'),
@@ -882,7 +964,24 @@ INSERT INTO `tm_user_resource` (`id`, `title`, `rtitle`) VALUES
 (110, 'contentPage/index', 'Контентные страницы'),
 (111, 'contentPage/add', 'Контентные страницы/Добавить'),
 (112, 'contentPage/edit', 'Контентные страницы/Редактировать'),
-(113, 'contentPage/delete', 'Контентные страницы/Удалить');
+(113, 'contentPage/delete', 'Контентные страницы/Удалить'),
+(114, 'catalog/viewSubMenu', 'Каталог/Показать подменю'),
+(115, 'index/chooseCity', 'Главная/Выбрать город'),
+(116, 'catalog/viewProduct', 'Каталог/Показать продукт'),
+(117, 'catalog/addAttributeHash', 'Каталог/Добавить атрибут'),
+(118, 'catalog/editAttributeHash', 'Каталог/Редактировать атрибут'),
+(119, 'catalog/deleteAttributeHash', 'Каталог/Удалить атрибут'),
+(120, 'catalog/viewHash', 'Каталог/Список атрибутов'),
+(121, 'catalog/viewAttributeType', 'Каталог/Типы атрибутов'),
+(122, 'catalog/editAttributeType', 'Каталог/Редактировать тип атрибута'),
+(123, 'catalog/addAttributeType', 'Каталог/Добавить тип атрибута'),
+(124, 'catalog/delteAttributeType', 'Каталог/Удалить тип атрибута'),
+(125, 'catalog/viewGallery', 'Каталог/Просмотреть галерею'),
+(126, 'catalog/editGallery', 'Каталог/Редактировать фото'),
+(127, 'catalog/deleteGallery', 'Каталог/Удалить фото'),
+(128, 'catalog/addGallery', 'Каталог/Добавить фото'),
+(129, 'catalog/reserve', 'Каталог/Отложить'),
+(130, 'catalog/share', 'Каталог/Поделиться');
 
 -- --------------------------------------------------------
 

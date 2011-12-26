@@ -55,6 +55,12 @@ class EK_Company_Company
      */
     protected $_addressList = array();
 
+
+    /**
+     * @var string
+     */
+    protected $_orderEmail = '';
+
     /**
      *
      * @var StdLib_DB
@@ -166,6 +172,22 @@ class EK_Company_Company
         return $this->_file;
     }
 
+    /**
+     * @param string $orderEmail
+     */
+    public function setOrderEmail($orderEmail)
+    {
+        $this->_orderEmail = $this->_db->prepareString($orderEmail);
+    }
+
+    /**
+     * @return string
+     */
+    public function getOrderEmail()
+    {
+        return $this->_db->prepareStringToOut($this->_orderEmail);
+    }
+
     public function __get($name)
     {
         $method = "get{$name}";
@@ -195,8 +217,9 @@ class EK_Company_Company
     public function insertToDb()
     {
         try {
-            $sql = 'INSERT INTO company(title, city_id, description, file)
-                    VALUES ("' . $this->_title . '", ' . $this->_city->getId() . ', "' . $this->_description . '", "")';
+            $sql = 'INSERT INTO company(title, city_id, description, file, order_email)
+                    VALUES ("' . $this->_title . '", ' . $this->_city->getId() . ',
+                            "' . $this->_description . '", "", "' . $this->_orderEmail . '")';
             $this->_db->query($sql);
 
             $this->_id = $this->_db->getLastInsertId();
@@ -225,7 +248,8 @@ class EK_Company_Company
     {
         try {
             $sql = 'UPDATE company
-                    SET title="' . $this->_title . '", city_id=' . $this->_city->getId() . ', description="' . $this->_description . '" 
+                    SET title="' . $this->_title . '", city_id=' . $this->_city->getId() . ',
+                        description="' . $this->_description . '", order_email="' . $this->_orderEmail . '"
                     WHERE id=' . $this->_id;
             $this->_db->query($sql);
 
@@ -382,6 +406,7 @@ class EK_Company_Company
         $this->setDescription($values['description']);
         $this->setCity(EK_City_City::getInstanceById($values['city_id']));
         $this->_file->setName($values['file']);
+        $this->setOrderEmail($values['order_email']);
 
         //$this->getAttributeList();
     }
@@ -403,7 +428,7 @@ class EK_Company_Company
             $this->_addressList = EK_Company_Address::getAllInstance($this);
         }
         return $this->_addressList;
-    } // end of member function fillFromArray
+    }
 
     /*
     public function getAttributeList()

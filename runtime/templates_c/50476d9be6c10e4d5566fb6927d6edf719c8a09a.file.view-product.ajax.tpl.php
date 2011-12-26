@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.0.9, created on 2011-12-26 00:25:47
+<?php /* Smarty version Smarty-3.0.9, created on 2011-12-27 00:20:51
          compiled from "F:\www\ekonom\application/views/scripts\catalog/view-product.ajax.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:155924ef75c9ba59556-82268560%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:136944ef8acf3892569-64980914%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '50476d9be6c10e4d5566fb6927d6edf719c8a09a' => 
     array (
       0 => 'F:\\www\\ekonom\\application/views/scripts\\catalog/view-product.ajax.tpl',
-      1 => 1324833941,
+      1 => 1324919765,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '155924ef75c9ba59556-82268560',
+  'nocache_hash' => '136944ef8acf3892569-64980914',
   'function' => 
   array (
   ),
@@ -29,29 +29,30 @@ $_smarty_tpl->decodeProperties(array (
                     <h3><?php echo $_smarty_tpl->getVariable('product')->value->title;?>
 </h3>
 
-                    <?php if ($_smarty_tpl->getVariable('product')->value->searchAttribute('terms_of_stock')){?>
+                <?php if ($_smarty_tpl->getVariable('product')->value->searchAttribute('terms_of_stock')){?>
                     <p><?php echo $_smarty_tpl->getVariable('product')->value->getAttribute('terms_of_stock')->value;?>
 </p>
-                    <?php }?>
+                <?php }?>
                 </section>
 
                 <section class="description">
                     <h3>Краткое описание магазина или товара</h3>
 
-                    <p>Prada – всемирно известный Дом Моды, выпускающий коллекции модной одежды и аксессуаров.</p>
+                    <p><?php echo $_smarty_tpl->getVariable('product')->value->fullText;?>
+</p>
                 </section>
 
                 <section class="discount clearfix">
-                    <?php if ($_smarty_tpl->getVariable('product')->value->searchAttribute('discount')){?>
-                        <h5>Скидка: <?php echo $_smarty_tpl->getVariable('product')->value->getAttribute('discount')->value;?>
+                <?php if ($_smarty_tpl->getVariable('product')->value->searchAttribute('discount')){?>
+                    <h5>Скидка: <?php echo $_smarty_tpl->getVariable('product')->value->getAttribute('discount')->value;?>
 </h5>
-                    <?php }?>
+                <?php }?>
                     <del class="old-price"><?php echo $_smarty_tpl->getVariable('product')->value->price;?>
  р</del>
-                    <?php if ($_smarty_tpl->getVariable('product')->value->searchAttribute('second_price')){?>
+                <?php if ($_smarty_tpl->getVariable('product')->value->searchAttribute('second_price')){?>
                     <ins class="new-price"><?php echo $_smarty_tpl->getVariable('product')->value->getAttribute('second_price')->value;?>
  р</ins>
-                    <?php }?>
+                <?php }?>
                 </section>
 
                 <section class="comments">
@@ -94,37 +95,66 @@ $_smarty_tpl->decodeProperties(array (
                     </div>
                 </section>
             </article>
+
             <aside class="addons">
+            <?php if ($_smarty_tpl->getVariable('galleryList')->value!==false){?>
                 <div class="gallery">
-                    <div class="big-image">
-                        <img src="/uploads/gallery.jpg" width="420" height="270" alt="Комментарий к первому фото" data-preview="/uploads/gallery_preview.jpg" />
-                        <h5 class="title">Комментарий к первому фото</h5>
-                        <a href="#previous" class="previous"></a>
-                        <a href="#next" class="next"></a>
-                    </div>
+                    <?php  $_smarty_tpl->tpl_vars['gallery'] = new Smarty_Variable;
+ $_from = $_smarty_tpl->getVariable('galleryList')->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+ $_smarty_tpl->tpl_vars['gallery']->total= $_smarty_tpl->_count($_from);
+ $_smarty_tpl->tpl_vars['gallery']->iteration=0;
+ $_smarty_tpl->tpl_vars['gallery']->index=-1;
+if ($_smarty_tpl->tpl_vars['gallery']->total > 0){
+    foreach ($_from as $_smarty_tpl->tpl_vars['gallery']->key => $_smarty_tpl->tpl_vars['gallery']->value){
+ $_smarty_tpl->tpl_vars['gallery']->iteration++;
+ $_smarty_tpl->tpl_vars['gallery']->index++;
+ $_smarty_tpl->tpl_vars['gallery']->first = $_smarty_tpl->tpl_vars['gallery']->index === 0;
+ $_smarty_tpl->tpl_vars['gallery']->last = $_smarty_tpl->tpl_vars['gallery']->iteration === $_smarty_tpl->tpl_vars['gallery']->total;
+ $_smarty_tpl->tpl_vars['smarty']->value['foreach']['_gallery']['first'] = $_smarty_tpl->tpl_vars['gallery']->first;
+ $_smarty_tpl->tpl_vars['smarty']->value['foreach']['_gallery']['last'] = $_smarty_tpl->tpl_vars['gallery']->last;
+?>
+                        <?php if ($_smarty_tpl->getVariable('smarty')->value['foreach']['_gallery']['first']){?>
+                            <div class="big-image">
+                                <img src="/gallery<?php echo $_smarty_tpl->getVariable('gallery')->value->file->getSubPath();?>
+/<?php echo $_smarty_tpl->getVariable('gallery')->value->file->getName();?>
+" width="420" height="270" alt="<?php echo $_smarty_tpl->getVariable('gallery')->value->title;?>
+" data-preview="/gallery<?php echo $_smarty_tpl->getVariable('gallery')->value->file->getSubPath();?>
+/<?php echo $_smarty_tpl->getVariable('gallery')->value->file->getPreview();?>
+"/>
+                                <h5 class="title"><?php echo $_smarty_tpl->getVariable('gallery')->value->title;?>
+</h5>
+                                <a href="#previous" class="previous"></a>
+                                <a href="#next" class="next"></a>
+                            </div>
 
-                    <ul class="previews clearfix">
-                        <li>
-                            <a href="/uploads/gallery1.jpg" title="Комментарий ко второму фото">
-                                <img src="/uploads/gallery1_preview.jpg" alt="Превью второго фото" class="shadow-image"/>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="/uploads/gallery2.jpg" title="Комментарий ко второму фото">
-                                <img src="/uploads/gallery2_preview.jpg" alt="Превью второго фото" class="shadow-image"/>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="/uploads/gallery3.jpg" title="Комментарий ко второму фото">
-                                <img src="/uploads/gallery3_preview.jpg" alt="Превью второго фото" class="shadow-image"/>
-                            </a>
-                        </li>
-                    </ul>
+
+                        <ul class="previews clearfix">
+                            <?php }else{ ?>
+                            <li>
+                                <a href="/gallery<?php echo $_smarty_tpl->getVariable('gallery')->value->file->getSubPath();?>
+/<?php echo $_smarty_tpl->getVariable('gallery')->value->file->getName();?>
+" title="<?php echo $_smarty_tpl->getVariable('gallery')->value->title;?>
+">
+                                    <img src="/gallery<?php echo $_smarty_tpl->getVariable('gallery')->value->file->getSubPath();?>
+/<?php echo $_smarty_tpl->getVariable('gallery')->value->file->getPreview();?>
+" alt="<?php echo $_smarty_tpl->getVariable('gallery')->value->title;?>
+" class="shadow-image"/>
+                                </a>
+                            </li>
+                        <?php }?>
+                        <?php if ($_smarty_tpl->getVariable('smarty')->value['foreach']['_gallery']['last']){?>
+                        </ul>
+                        <?php }?>
+                    <?php }} ?>
                 </div>
+            <?php }?>
 
-                <a href="/reserve.html" class="button reserve">Отложить</a>
-                <a href="/share.html" class="button share-with-friend">Поделиться</a>
+                <a href="<?php echo $_smarty_tpl->getVariable('this')->value->url(array('controller'=>$_smarty_tpl->getVariable('controller')->value,'action'=>'reserve','idProduct'=>$_smarty_tpl->getVariable('product')->value->id));?>
+" class="button reserve">Отложить</a>
+                <a href="<?php echo $_smarty_tpl->getVariable('this')->value->url(array('controller'=>$_smarty_tpl->getVariable('controller')->value,'action'=>'share','idProduct'=>$_smarty_tpl->getVariable('product')->value->id));?>
+" class="button share-with-friend">Поделиться</a>
             </aside>
+
         </div>
 
         <div class="controls">

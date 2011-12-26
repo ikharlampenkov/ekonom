@@ -30,6 +30,11 @@
             <td class="ttovar_title">Лого</td>
             <td class="ttovar"><input type="file" name="file"/></td>
         </tr>
+        <tr>
+            <td class="ttovar_title">Email для заказов</td>
+            <td class="ttovar"><input name="data[order_email]" value="{$company->orderEmail}"/></td>
+        </tr>
+
     </table>
     <input id="save" name="save" type="submit" value="Сохранить"/>
 </form>

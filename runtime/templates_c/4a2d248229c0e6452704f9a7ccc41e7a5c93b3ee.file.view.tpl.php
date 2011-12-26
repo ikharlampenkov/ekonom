@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.0.9, created on 2011-12-26 00:16:32
+<?php /* Smarty version Smarty-3.0.9, created on 2011-12-27 00:46:54
          compiled from "F:\www\ekonom\application/views/scripts\company/view.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:89344ef75a70ce70c5-65493420%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:197414ef8b30e260a74-39984155%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '4a2d248229c0e6452704f9a7ccc41e7a5c93b3ee' => 
     array (
       0 => 'F:\\www\\ekonom\\application/views/scripts\\company/view.tpl',
-      1 => 1324833389,
+      1 => 1324921604,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '89344ef75a70ce70c5-65493420',
+  'nocache_hash' => '197414ef8b30e260a74-39984155',
   'function' => 
   array (
   ),
@@ -83,7 +83,7 @@ if ($_smarty_tpl->tpl_vars['gallery']->total > 0){
 " alt="Логотип магазина <?php echo $_smarty_tpl->getVariable('company')->value->title;?>
 "/>
 
-                <h3>Краткое описание магазина или товара</h3>
+                <h3>Краткое описание магазина</h3>
 
                 <p><?php echo $_smarty_tpl->getVariable('company')->value->description;?>
 </p>
@@ -156,7 +156,8 @@ if ($_smarty_tpl->_count($_from) > 0){
             <?php }?>
         </li>
         <?php }} ?>
-
+        <li>&nbsp;</li>
+        <li class="empty"></li>
     </ul>
 
     <div id="paginator">

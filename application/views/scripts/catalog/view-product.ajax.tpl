@@ -16,7 +16,7 @@
                 <section class="description">
                     <h3>Краткое описание магазина или товара</h3>
 
-                    <p>Prada – всемирно известный Дом Моды, выпускающий коллекции модной одежды и аксессуаров.</p>
+                    <p>{$product->fullText}</p>
                 </section>
 
                 <section class="discount clearfix">
@@ -98,8 +98,8 @@
                 </div>
             {/if}
 
-                <a href="/reserve.html" class="button reserve">Отложить</a>
-                <a href="/share.html" class="button share-with-friend">Поделиться</a>
+                <a href="{$this->url(['controller' => $controller,'action' => 'reserve', 'idProduct' => $product->id])}" class="button reserve">Отложить</a>
+                <a href="{$this->url(['controller' => $controller,'action' => 'share', 'idProduct' => $product->id])}" class="button share-with-friend">Поделиться</a>
             </aside>
 
         </div>

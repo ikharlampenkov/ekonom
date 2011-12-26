@@ -343,22 +343,22 @@ class EK_Catalog_Product
      * @throws Exception
      */
     public static function getAllInstanceByCompany($company)
-        {
-            try {
-                $db = StdLib_DB::getInstance();
-                $result = $db->query('SELECT * FROM product WHERE company_id=' . $company->id, StdLib_DB::QUERY_MOD_ASSOC);
-                if (isset($result[0])) {
-                    $productArray = array();
-                    foreach ($result as $value) {
-                        $productArray[] = EK_Catalog_Product::getInstanceByArray($value);
-                    }
-                    return $productArray;
-                } else
-                    return false;
-            } catch (Exception $e) {
-                throw new Exception($e->getMessage());
-            }
+    {
+        try {
+            $db = StdLib_DB::getInstance();
+            $result = $db->query('SELECT * FROM product WHERE company_id=' . $company->id, StdLib_DB::QUERY_MOD_ASSOC);
+            if (isset($result[0])) {
+                $productArray = array();
+                foreach ($result as $value) {
+                    $productArray[] = EK_Catalog_Product::getInstanceByArray($value);
+                }
+                return $productArray;
+            } else
+                return false;
+        } catch (Exception $e) {
+            throw new Exception($e->getMessage());
         }
+    }
 
     public static function getInstanceById($id)
     {
@@ -454,6 +454,18 @@ class EK_Catalog_Product
             foreach ($this->_attributeList as $attribute) {
                 $attribute->updateToDB();
             }
+        }
+    }
+
+    public function reserve($data)
+    {
+        $message = 'Прошу отложить: ' . "\r\n";
+        $message .= 'Дата: ' . date('d.m.Y') . "\r\n" .
+                'Имя: ' . $data['name'] . "\r\n" .
+                'Телефон: ' . $data['tel'] . "\r\n" .
+                'Что?' . $this->getTitle();
+        if (!empty($this->_company->orderEmail)) {
+            mail($this->_company->orderEmail, 'Прошу отложить товар', $message);
         }
     }
 
