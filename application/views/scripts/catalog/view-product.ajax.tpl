@@ -29,45 +29,35 @@
                 {/if}
                 </section>
 
+                {if $commentsList !== false}
                 <section class="comments">
                     <h3>Комментарии</h3>
                     <ul class="comments-list">
+                        {foreach from=$commentsList item=comment}
                         <li>
                             <article class="comment">
-                                <header>Я</header>
+                                <header>{$comment->user}</header>
                                 <div class="content">
-                                    Отличные часы! Только жутко дорого, ага.
+                                    {$comment->message}
                                 </div>
                             </article>
                         </li>
-                        <li>
-                            <article class="comment">
-                                <header>Вася Пупкин</header>
-                                <div class="content">
-                                    Да ну нафиг! За такие смешные деньги не бывает швейцарских часов.
-                                </div>
-                            </article>
-                        </li>
-                        <li>
-                            <article class="comment">
-                                <header>Блондинко</header>
-                                <div class="content">
-                                    А мне нравятся парни со стильными часами:)
-                                </div>
-                            </article>
-                        </li>
+                        {/foreach}
                     </ul>
 
-                    <div id="paginator">
-                        <a href="/actions?page=1">&larr;</a>
-                        <ul class="pages-list">
-                            <li><a href="/actions?page=1">1</a></li>
-                            <li><a href="/actions?page=2" class="active">2</a></li>
-                            <li><a href="/actions?page=3">3</a></li>
-                        </ul>
-                        <a href="/actions?page=3">&rarr;</a>
-                    </div>
+                {*
+                                    <div id="paginator">
+                                        <a href="/actions?page=1">&larr;</a>
+                                        <ul class="pages-list">
+                                            <li><a href="/actions?page=1">1</a></li>
+                                            <li><a href="/actions?page=2" class="active">2</a></li>
+                                            <li><a href="/actions?page=3">3</a></li>
+                                        </ul>
+                                        <a href="/actions?page=3">&rarr;</a>
+                                    </div>
+                *}
                 </section>
+                {/if}
             </article>
 
             <aside class="addons">
@@ -122,7 +112,7 @@
                     <g:plusone></g:plusone>
                 </div>
 
-                <a href="/add-comment.html" class="button add-comment">Комментировать</a>
+                <a href="{$this->url(['controller' => $controller,'action' => 'addComments', 'idProduct' => $product->id])}" class="button add-comment">Комментировать</a>
             </div>
         </div>
 

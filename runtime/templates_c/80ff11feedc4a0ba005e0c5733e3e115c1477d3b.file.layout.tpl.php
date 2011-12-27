@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.0.9, created on 2011-12-27 20:11:06
+<?php /* Smarty version Smarty-3.0.9, created on 2011-12-27 20:54:44
          compiled from "F:\www\ekonom\application/layouts/scripts\layout.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:62904ef899407893f6-21413588%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:70254ef9ce24c926a9-62432328%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '80ff11feedc4a0ba005e0c5733e3e115c1477d3b' => 
     array (
       0 => 'F:\\www\\ekonom\\application/layouts/scripts\\layout.tpl',
-      1 => 1324923033,
+      1 => 1324993561,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '62904ef899407893f6-21413588',
+  'nocache_hash' => '70254ef9ce24c926a9-62432328',
   'function' => 
   array (
   ),
@@ -124,35 +124,7 @@ $_template->assign('subrubric',$_smarty_tpl->getVariable('rubric')->value->getCh
                                 </ul>
                             <?php }?>
                         </li>
-
                     <?php }} ?>
-                        <li><a href="/companies/auto">Автомобили</a></li>
-                        <li>
-                            <a href="/companies/clothes">Одежда</a>
-                            <ul class="submenu second-level">
-                                <li>
-                                    <a href="/companies/clothes/men">Мужская одежда</a>
-                                    <ul class="submenu third-level">
-                                        <li><a href="/companies/clothes/teenagers/shoes">Обувь</a></li>
-                                        <li><a href="/companies/clothes/teenagers/jeans">Джинсы</a></li>
-                                        <li><a href="/companies/clothes/teenagers/sports">Спортивная одежда</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="/companies/clothes/women">Женская одежда</a></li>
-                                <li><a href="/companies/clothes/children">Детская одежда</a></li>
-                                <li>
-                                    <a href="/companies/clothes/teenagers">Одежда для подростков</a>
-                                    <ul class="submenu third-level">
-                                        <li><a href="/companies/clothes/teenagers/shoes">Обувь</a></li>
-                                        <li><a href="/companies/clothes/teenagers/jeans">Джинсы</a></li>
-                                        <li><a href="/companies/clothes/teenagers/sports">Спортивная одежда</a></li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </li>
-                        <li><a href="/companies/household">Бытовая техника</a></li>
-                        <li><a href="/companies/computers">Компьютеры</a></li>
-                        <li><a href="/companies/food">Продукты питания</a></li>
                     </ul>
                 </li>
             <?php $_smarty_tpl->smarty->_tag_stack[] = array('if_allowed', array('resource'=>"company/index")); $_block_repeat=true; smarty_block_if_allowed(array('resource'=>"company/index"), null, $_smarty_tpl, $_block_repeat);while ($_block_repeat) { ob_start();?>
@@ -186,11 +158,6 @@ $_template->assign('subrubric',$_smarty_tpl->getVariable('rubric')->value->getCh
 
                 <li><a href="/city/">Города</a></li>
             <?php $_block_content = ob_get_clean(); $_block_repeat=false; echo smarty_block_if_allowed(array('resource'=>"city/index"), $_block_content, $_smarty_tpl, $_block_repeat);  } array_pop($_smarty_tpl->smarty->_tag_stack);?>
-
-            <?php $_smarty_tpl->smarty->_tag_stack[] = array('if_allowed', array('resource'=>"catalog/index")); $_block_repeat=true; smarty_block_if_allowed(array('resource'=>"catalog/index"), null, $_smarty_tpl, $_block_repeat);while ($_block_repeat) { ob_start();?>
-
-                <li><a href="/catalog/">Каталог</a></li>
-            <?php $_block_content = ob_get_clean(); $_block_repeat=false; echo smarty_block_if_allowed(array('resource'=>"catalog/index"), $_block_content, $_smarty_tpl, $_block_repeat);  } array_pop($_smarty_tpl->smarty->_tag_stack);?>
 
             <?php $_smarty_tpl->smarty->_tag_stack[] = array('if_allowed', array('resource'=>"contentPage/index")); $_block_repeat=true; smarty_block_if_allowed(array('resource'=>"contentPage/index"), null, $_smarty_tpl, $_block_repeat);while ($_block_repeat) { ob_start();?>
 

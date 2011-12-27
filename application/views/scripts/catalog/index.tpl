@@ -71,7 +71,9 @@
                         {if_allowed resource="{$controller}/viewGallery"}
                             <li class="action"><a href="{$this->url(['controller' => $controller,'action' => 'viewGallery', 'idProduct' => $product->id, 'rubric' => $cur_rubric->getId()])}">галерея</a></li>
                         {/if_allowed}
-
+                        {if_allowed resource="{$controller}/viewComments"}
+                            <li class="action"><a href="{$this->url(['controller' => $controller,'action' => 'viewComments', 'idProduct' => $product->id, 'rubric' => $cur_rubric->getId()])}">комментарии</a></li>
+                        {/if_allowed}
                         {if_allowed resource="{$controller}/edit"}
                             <li class="action"><img src="/i/edit.png"/>&nbsp;<a href="{$this->url(['controller' => $controller,'action' => 'edit', 'id' => $product->getId(), 'rubric' => $cur_rubric->getId()])}">редактировать</a></li>
                         {/if_allowed}
@@ -101,38 +103,38 @@
 *}
 {/if}
 
-    {*
+{*
 
-    <table width="100%">
-    {if $product_list}
-        {foreach from=$product_list item=product}
-            <tr>
-                <td class="ttovar">{if $product->img->getName()}<img src="/files/{$product->img->getPreview()}"/>{else}&nbsp;{/if}</td>
-                <td class="ttovar">{$product->title}</td>
-                <td class="ttovar">{$product->shortText}</td>
-                <td class="ttovar">{$product->price}</td>
-                <td class="tedit">
-                    {if_allowed resource="{$controller}/viewGallery"}
-                        <li class="action"><a href="{$this->url(['controller' => $controller,'action' => 'viewGallery', 'idProduct' => $product->id, 'rubric' => $cur_rubric->getId()])}">галерея</a></li>
-                    {/if_allowed}
+<table width="100%">
+{if $product_list}
+    {foreach from=$product_list item=product}
+        <tr>
+            <td class="ttovar">{if $product->img->getName()}<img src="/files/{$product->img->getPreview()}"/>{else}&nbsp;{/if}</td>
+            <td class="ttovar">{$product->title}</td>
+            <td class="ttovar">{$product->shortText}</td>
+            <td class="ttovar">{$product->price}</td>
+            <td class="tedit">
+                {if_allowed resource="{$controller}/viewGallery"}
+                    <li class="action"><a href="{$this->url(['controller' => $controller,'action' => 'viewGallery', 'idProduct' => $product->id, 'rubric' => $cur_rubric->getId()])}">галерея</a></li>
+                {/if_allowed}
 
-                    {if_allowed resource="{$controller}/edit"}
-                        <a href="{$this->url(['controller' => $controller,'action' => 'edit', 'id' => $product->getId(), 'rubric' => $cur_rubric->getId()])}">редактировать</a><br/>
-                    {/if_allowed}
-                    {if_allowed resource="{$controller}/delete"}
-                        <a href="{$this->url(['controller' => $controller,'action' => 'delete', 'id' => $product->getId(), 'rubric' => $cur_rubric->getId()])}" onclick="return confirmDelete('{$product->title}');" style="color: #830000">удалить</a>
-                    {/if_allowed}
-                </td>
-            </tr>
-        {/foreach}
-    {/if}
-    </table>
-    *}
+                {if_allowed resource="{$controller}/edit"}
+                    <a href="{$this->url(['controller' => $controller,'action' => 'edit', 'id' => $product->getId(), 'rubric' => $cur_rubric->getId()])}">редактировать</a><br/>
+                {/if_allowed}
+                {if_allowed resource="{$controller}/delete"}
+                    <a href="{$this->url(['controller' => $controller,'action' => 'delete', 'id' => $product->getId(), 'rubric' => $cur_rubric->getId()])}" onclick="return confirmDelete('{$product->title}');" style="color: #830000">удалить</a>
+                {/if_allowed}
+            </td>
+        </tr>
+    {/foreach}
+{/if}
+</table>
+*}
 
     <script type="text/javascript">
         var updatePlusOne = function () {
-                gapi.plusone.go();
-                };
+        gapi.plusone.go();
+        };
 
         $(document).ready(function () {
         $(".various").fancybox({

@@ -97,35 +97,7 @@
                                 </ul>
                             {/if}
                         </li>
-
                     {/foreach}
-                        <li><a href="/companies/auto">Автомобили</a></li>
-                        <li>
-                            <a href="/companies/clothes">Одежда</a>
-                            <ul class="submenu second-level">
-                                <li>
-                                    <a href="/companies/clothes/men">Мужская одежда</a>
-                                    <ul class="submenu third-level">
-                                        <li><a href="/companies/clothes/teenagers/shoes">Обувь</a></li>
-                                        <li><a href="/companies/clothes/teenagers/jeans">Джинсы</a></li>
-                                        <li><a href="/companies/clothes/teenagers/sports">Спортивная одежда</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="/companies/clothes/women">Женская одежда</a></li>
-                                <li><a href="/companies/clothes/children">Детская одежда</a></li>
-                                <li>
-                                    <a href="/companies/clothes/teenagers">Одежда для подростков</a>
-                                    <ul class="submenu third-level">
-                                        <li><a href="/companies/clothes/teenagers/shoes">Обувь</a></li>
-                                        <li><a href="/companies/clothes/teenagers/jeans">Джинсы</a></li>
-                                        <li><a href="/companies/clothes/teenagers/sports">Спортивная одежда</a></li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </li>
-                        <li><a href="/companies/household">Бытовая техника</a></li>
-                        <li><a href="/companies/computers">Компьютеры</a></li>
-                        <li><a href="/companies/food">Продукты питания</a></li>
                     </ul>
                 </li>
             {if_allowed resource="company/index"}
@@ -147,9 +119,6 @@
                 <li><a href="/about/">О нас</a></li>
             {if_allowed resource="city/index"}
                 <li><a href="/city/">Города</a></li>
-            {/if_allowed}
-            {if_allowed resource="catalog/index"}
-                <li><a href="/catalog/">Каталог</a></li>
             {/if_allowed}
             {if_allowed resource="contentPage/index"}
                 <li><a href="/contentPage/">Контентные страницы</a></li>
