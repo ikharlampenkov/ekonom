@@ -84,10 +84,10 @@
         {foreach from=$productList item=product}
         <li>
             <h3><a href="{$this->url(['controller' => 'catalog','action' => 'viewProduct', 'id' => $product->id])}" class="various fancybox.ajax">{$product->title}</a></h3>
-            <a href="{$this->url(['controller' => 'catalog','action' => 'viewProduct', 'id' => $product->id])}" class="various fancybox.ajax"><img src="{if $product->img->getName()}/files/{$product->img->getPreview()}{else}/uploads/action1.png{/if}" alt="{$product->title}"></a>
+            <a href="{$this->url(['controller' => 'catalog','action' => 'viewProduct', 'id' => $product->id])}" class="various fancybox.ajax"><img src="{if $product->img->getName()}/files/{$product->img->getPreview()}{else}/i/no_foto.png{/if}" alt="{$product->title}"></a>
 
             {if $product->searchAttribute('discount')}
-            <div class="discount">{$product->getAttribute('discount')->value}</div>
+            <div class="discount">{$product->getAttribute('discount')->value}{if $product->searchAttribute('discount_type')}{$product->getAttribute('discount_type')->value}{/if}</div>
             {/if}
         </li>
         {/foreach}
@@ -95,6 +95,7 @@
         <li class="empty"></li>
     </ul>
 
+{*
     <div id="paginator">
         <a href="/actions?page=1">&larr;</a>
         <ul class="pages-list">
@@ -104,6 +105,7 @@
         </ul>
         <a href="/actions?page=3">&rarr;</a>
     </div>
+*}
 {/if}
 
     <script type="text/javascript">

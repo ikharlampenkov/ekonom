@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 
+-- version 3.4.5
 -- http://www.phpmyadmin.net
 --
--- Хост: ekonom.mysql
--- Время создания: Дек 27 2011 г., 20:13
--- Версия сервера: 5.1.41
--- Версия PHP: 5.2.10
+-- Хост: localhost
+-- Время создания: Дек 27 2011 г., 23:33
+-- Версия сервера: 5.1.50
+-- Версия PHP: 5.3.8-ZS5.5.0
 
 SET FOREIGN_KEY_CHECKS=0;
 SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
@@ -27,8 +27,6 @@ SET time_zone = "+00:00";
 
 --
 -- Структура таблицы `city`
---
--- Создание: Дек 26 2011 г., 18:08
 --
 
 DROP TABLE IF EXISTS `city`;
@@ -53,8 +51,6 @@ INSERT INTO `city` (`id`, `title`, `phone_code`) VALUES
 --
 -- Структура таблицы `comments`
 --
--- Создание: Дек 27 2011 г., 05:00
---
 
 DROP TABLE IF EXISTS `comments`;
 CREATE TABLE IF NOT EXISTS `comments` (
@@ -71,15 +67,12 @@ CREATE TABLE IF NOT EXISTS `comments` (
 --
 
 INSERT INTO `comments` (`id`, `message`, `date_create`, `user`, `is_moderate`) VALUES
-(1, 'ghgdhdhfhdfhdfhfdhdreye beyry eryery ryery reyree', '2011-12-27 00:00:00', 'dhhfhdf', 0),
-(2, 'dgnnhgndhndfhnfdhfdhfd', '2011-12-27 00:00:00', 'Ivan', 0);
+(1, 'ghgdhdhfhdfhdfhfdhdreye', '2011-12-27 00:00:00', 'dhhfhdf', 1);
 
 -- --------------------------------------------------------
 
 --
 -- Структура таблицы `comments_product`
---
--- Создание: Дек 27 2011 г., 05:01
 --
 
 DROP TABLE IF EXISTS `comments_product`;
@@ -95,15 +88,12 @@ CREATE TABLE IF NOT EXISTS `comments_product` (
 --
 
 INSERT INTO `comments_product` (`comments_id`, `product_id`) VALUES
-(1, 11),
-(2, 11);
+(1, 11);
 
 -- --------------------------------------------------------
 
 --
 -- Структура таблицы `company`
---
--- Создание: Дек 26 2011 г., 18:08
 --
 
 DROP TABLE IF EXISTS `company`;
@@ -132,8 +122,6 @@ INSERT INTO `company` (`id`, `city_id`, `title`, `file`, `description`, `order_e
 --
 -- Структура таблицы `company_address`
 --
--- Создание: Дек 26 2011 г., 18:08
---
 
 DROP TABLE IF EXISTS `company_address`;
 CREATE TABLE IF NOT EXISTS `company_address` (
@@ -160,8 +148,6 @@ INSERT INTO `company_address` (`id`, `company_id`, `city_id`, `address`, `phone`
 --
 -- Структура таблицы `company_user`
 --
--- Создание: Дек 26 2011 г., 18:08
---
 
 DROP TABLE IF EXISTS `company_user`;
 CREATE TABLE IF NOT EXISTS `company_user` (
@@ -187,8 +173,6 @@ INSERT INTO `company_user` (`company_id`, `user_id`, `is_read`, `is_write`, `is_
 --
 -- Структура таблицы `content_page`
 --
--- Создание: Дек 26 2011 г., 18:08
---
 
 DROP TABLE IF EXISTS `content_page`;
 CREATE TABLE IF NOT EXISTS `content_page` (
@@ -211,8 +195,6 @@ INSERT INTO `content_page` (`page_title`, `title`, `content`) VALUES
 
 --
 -- Структура таблицы `gallery`
---
--- Создание: Дек 26 2011 г., 18:08
 --
 
 DROP TABLE IF EXISTS `gallery`;
@@ -248,8 +230,6 @@ INSERT INTO `gallery` (`id`, `title`, `date_create`, `user_id`, `file`) VALUES
 --
 -- Структура таблицы `gallery_company`
 --
--- Создание: Дек 26 2011 г., 18:08
---
 
 DROP TABLE IF EXISTS `gallery_company`;
 CREATE TABLE IF NOT EXISTS `gallery_company` (
@@ -273,8 +253,6 @@ INSERT INTO `gallery_company` (`gallery_id`, `company_id`) VALUES
 
 --
 -- Структура таблицы `gallery_product`
---
--- Создание: Дек 26 2011 г., 18:08
 --
 
 DROP TABLE IF EXISTS `gallery_product`;
@@ -303,8 +281,6 @@ INSERT INTO `gallery_product` (`gallery_id`, `product_id`) VALUES
 --
 -- Структура таблицы `product`
 --
--- Создание: Дек 26 2011 г., 18:08
---
 
 DROP TABLE IF EXISTS `product`;
 CREATE TABLE IF NOT EXISTS `product` (
@@ -316,6 +292,7 @@ CREATE TABLE IF NOT EXISTS `product` (
   `full_text` text,
   `price` decimal(12,2) unsigned DEFAULT NULL,
   `company_id` int(10) unsigned NOT NULL,
+  `on_first_page` tinyint(1) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`),
   KEY `fk_product_product_rubric1` (`product_rubric_id`),
   KEY `company_id` (`company_id`)
@@ -325,21 +302,19 @@ CREATE TABLE IF NOT EXISTS `product` (
 -- Дамп данных таблицы `product`
 --
 
-INSERT INTO `product` (`id`, `product_rubric_id`, `title`, `img`, `short_text`, `full_text`, `price`, `company_id`) VALUES
-(1, 3, 'Апельсин', 'img_30-06-2011-21-19-07.jpg', 'Просто апельсин', 'Детальная информация об апельсинах', 100.00, 1),
-(3, 3, 'Вишня', 'img_30-06-2011-21-11-19.jpg', 'Просто вишня', 'Просто сладкая вишня', 250.00, 2),
-(4, 5, 'Моющее средство', NULL, 'паоапоаппаоапоап', 'овпоапоапоап', 234.00, 1),
-(11, 1, 'полплпрлп', NULL, '', '', 125.50, 1),
-(12, 1, 'Тест', NULL, '', '', 0.00, 1),
-(13, 2, 'Тест атрибутов', 'img_16-12-2011-23-02-46.png', 'аптаптпатап', '', 0.00, 1),
-(14, 6, 'Косюм!', 'img_27-12-2011-14-05-19.jpg', 'Хорошая вещь!', 'Хорошая вещь!', 1000.00, 3);
+INSERT INTO `product` (`id`, `product_rubric_id`, `title`, `img`, `short_text`, `full_text`, `price`, `company_id`, `on_first_page`) VALUES
+(1, 3, 'Апельсин', 'img_30-06-2011-21-19-07.jpg', 'Просто апельсин', 'Детальная информация об апельсинах', '100.00', 1, 0),
+(3, 3, 'Вишня', 'img_30-06-2011-21-11-19.jpg', 'Просто вишня', 'Просто сладкая вишня', '250.00', 2, 0),
+(4, 5, 'Моющее средство', NULL, 'паоапоаппаоапоап', 'овпоапоапоап', '234.00', 1, 0),
+(11, 1, 'полплпрлп', NULL, '', '', '125.50', 3, 1),
+(12, 1, 'Тест', NULL, '', '', '0.00', 1, 0),
+(13, 2, 'Тест атрибутов', 'img_16-12-2011-23-02-46.png', 'аптаптпатап', '', '0.00', 1, 0),
+(14, 6, 'Косюм!', 'img_27-12-2011-14-05-19.jpg', 'Хорошая вещь!', 'Хорошая вещь!', '1000.00', 3, 0);
 
 -- --------------------------------------------------------
 
 --
 -- Структура таблицы `product_attribute`
---
--- Создание: Дек 26 2011 г., 18:08
 --
 
 DROP TABLE IF EXISTS `product_attribute`;
@@ -364,28 +339,22 @@ INSERT INTO `product_attribute` (`product_id`, `attribute_key`, `type_id`, `attr
 (1, 'discount', 1, '20%', 0),
 (1, 'second_price', 1, '80', 0),
 (1, 'terms_of_stock', 2, 'аптатпатпатпатпатпатпата', 0),
-(1, 'test_list', 3, 'Один', 0),
 (3, 'description', 1, '', 0),
-(3, 'test_list', 3, 'Один', 0),
 (11, 'description', 1, '', 0),
-(11, 'discount', 1, '', 0),
+(11, 'discount', 1, '25', 0),
+(11, 'discount_type', 3, '%', 0),
 (11, 'second_price', 1, '', 0),
 (11, 'terms_of_stock', 2, '', 0),
-(11, 'test_list', 3, 'Один', 0),
 (13, 'description', 1, '', 0),
-(13, 'test_list', 3, 'Один', 0),
 (14, 'description', 2, 'Хорошая скидка', 0),
 (14, 'discount', 1, '50 %', 0),
 (14, 'second_price', 1, '500', 0),
-(14, 'terms_of_stock', 2, '1 января', 0),
-(14, 'test_list', 3, 'Один', 0);
+(14, 'terms_of_stock', 2, '1 января', 0);
 
 -- --------------------------------------------------------
 
 --
 -- Структура таблицы `product_attribute_type`
---
--- Создание: Дек 26 2011 г., 18:08
 --
 
 DROP TABLE IF EXISTS `product_attribute_type`;
@@ -413,8 +382,6 @@ INSERT INTO `product_attribute_type` (`id`, `title`, `handler`, `description`) V
 --
 -- Структура таблицы `product_hash`
 --
--- Создание: Дек 26 2011 г., 18:08
---
 
 DROP TABLE IF EXISTS `product_hash`;
 CREATE TABLE IF NOT EXISTS `product_hash` (
@@ -436,17 +403,15 @@ CREATE TABLE IF NOT EXISTS `product_hash` (
 
 INSERT INTO `product_hash` (`product_id`, `attribute_key`, `title`, `type_id`, `list_value`, `required`, `sort_order`) VALUES
 (NULL, 'description', 'Описание акции', 2, ' ', 0, 10000),
-(NULL, 'discount', 'Скидка', 1, ' ', 0, 1000),
+(NULL, 'discount', 'Скидка', 1, '    ', 1, 1),
+(NULL, 'discount_type', 'В чем измеряется скидка', 3, '*%||р.||$||€  ', 1, 2),
 (NULL, 'second_price', 'Цена со скидкой', 1, ' ', 0, 1000),
-(NULL, 'terms_of_stock', 'Условия и сроки проведения', 2, ' ', 0, 1000),
-(NULL, 'test_list', 'Проверка списка', 3, 'Один||Два||Три ', 0, 10000);
+(NULL, 'terms_of_stock', 'Условия и сроки проведения', 2, ' ', 0, 1000);
 
 -- --------------------------------------------------------
 
 --
 -- Структура таблицы `product_rubric`
---
--- Создание: Дек 26 2011 г., 18:08
 --
 
 DROP TABLE IF EXISTS `product_rubric`;
@@ -477,8 +442,6 @@ INSERT INTO `product_rubric` (`id`, `title`, `parent_id`, `is_root`) VALUES
 
 --
 -- Структура таблицы `tm_acl_role`
---
--- Создание: Дек 26 2011 г., 18:08
 --
 
 DROP TABLE IF EXISTS `tm_acl_role`;
@@ -801,8 +764,6 @@ INSERT INTO `tm_acl_role` (`tm_user_role_id`, `tm_user_resource_id`, `is_allow`,
 --
 -- Структура таблицы `tm_task_attribute`
 --
--- Создание: Дек 26 2011 г., 18:08
---
 
 DROP TABLE IF EXISTS `tm_task_attribute`;
 CREATE TABLE IF NOT EXISTS `tm_task_attribute` (
@@ -820,8 +781,6 @@ CREATE TABLE IF NOT EXISTS `tm_task_attribute` (
 
 --
 -- Структура таблицы `tm_task_attribute_type`
---
--- Создание: Дек 26 2011 г., 18:08
 --
 
 DROP TABLE IF EXISTS `tm_task_attribute_type`;
@@ -848,8 +807,6 @@ INSERT INTO `tm_task_attribute_type` (`id`, `title`, `handler`, `description`) V
 
 --
 -- Структура таблицы `tm_task_hash`
---
--- Создание: Дек 26 2011 г., 18:08
 --
 
 DROP TABLE IF EXISTS `tm_task_hash`;
@@ -880,8 +837,6 @@ INSERT INTO `tm_task_hash` (`task_id`, `attribute_key`, `title`, `type_id`, `lis
 --
 -- Структура таблицы `tm_user`
 --
--- Создание: Дек 26 2011 г., 18:08
---
 
 DROP TABLE IF EXISTS `tm_user`;
 CREATE TABLE IF NOT EXISTS `tm_user` (
@@ -910,8 +865,6 @@ INSERT INTO `tm_user` (`id`, `login`, `password`, `role_id`, `date_create`) VALU
 
 --
 -- Структура таблицы `tm_user_attribute`
---
--- Создание: Дек 26 2011 г., 18:08
 --
 
 DROP TABLE IF EXISTS `tm_user_attribute`;
@@ -942,8 +895,6 @@ INSERT INTO `tm_user_attribute` (`user_id`, `attribute_key`, `type_id`, `attribu
 --
 -- Структура таблицы `tm_user_attribute_type`
 --
--- Создание: Дек 26 2011 г., 18:08
---
 
 DROP TABLE IF EXISTS `tm_user_attribute_type`;
 CREATE TABLE IF NOT EXISTS `tm_user_attribute_type` (
@@ -968,8 +919,6 @@ INSERT INTO `tm_user_attribute_type` (`id`, `title`, `handler`, `description`) V
 
 --
 -- Структура таблицы `tm_user_hash`
---
--- Создание: Дек 26 2011 г., 18:08
 --
 
 DROP TABLE IF EXISTS `tm_user_hash`;
@@ -996,8 +945,6 @@ INSERT INTO `tm_user_hash` (`user_id`, `attribute_key`, `title`, `type_id`, `lis
 --
 -- Структура таблицы `tm_user_profile`
 --
--- Создание: Дек 26 2011 г., 18:08
---
 
 DROP TABLE IF EXISTS `tm_user_profile`;
 CREATE TABLE IF NOT EXISTS `tm_user_profile` (
@@ -1012,8 +959,6 @@ CREATE TABLE IF NOT EXISTS `tm_user_profile` (
 
 --
 -- Структура таблицы `tm_user_resource`
---
--- Создание: Дек 26 2011 г., 18:08
 --
 
 DROP TABLE IF EXISTS `tm_user_resource`;
@@ -1118,8 +1063,6 @@ INSERT INTO `tm_user_resource` (`id`, `title`, `rtitle`) VALUES
 --
 -- Структура таблицы `tm_user_role`
 --
--- Создание: Дек 26 2011 г., 18:08
---
 
 DROP TABLE IF EXISTS `tm_user_role`;
 CREATE TABLE IF NOT EXISTS `tm_user_role` (
@@ -1147,8 +1090,8 @@ INSERT INTO `tm_user_role` (`id`, `title`, `rtitle`) VALUES
 -- Ограничения внешнего ключа таблицы `comments_product`
 --
 ALTER TABLE `comments_product`
-  ADD CONSTRAINT `fk_comments_product_comments1` FOREIGN KEY (`comments_id`) REFERENCES `comments` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  ADD CONSTRAINT `fk_comments_product_product1` FOREIGN KEY (`product_id`) REFERENCES `product` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+  ADD CONSTRAINT `comments_product_ibfk_2` FOREIGN KEY (`product_id`) REFERENCES `product` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `comments_product_ibfk_1` FOREIGN KEY (`comments_id`) REFERENCES `comments` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Ограничения внешнего ключа таблицы `company`
@@ -1258,3 +1201,7 @@ ALTER TABLE `tm_user_hash`
   ADD CONSTRAINT `tm_user_hash_ibfk_1` FOREIGN KEY (`type_id`) REFERENCES `tm_user_attribute_type` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 SET FOREIGN_KEY_CHECKS=1;
 COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

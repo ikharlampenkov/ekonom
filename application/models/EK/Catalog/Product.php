@@ -36,12 +36,17 @@ class EK_Catalog_Product
      */
     protected $_fullText;
     /**
-     *
+     * @var EK_Catalog_Product
      * @access protected
      */
     protected $_rubric = null;
 
     protected $_price = 0;
+
+    /**
+     * @var int - на первой странице?
+     */
+    protected $_onFirstPage = 0;
 
     /**
      * @var EK_Company_Company
@@ -249,12 +254,34 @@ class EK_Catalog_Product
         return $this->_company;
     }
 
+    /**
+     * @param int $onFirstPage
+     */
+    public function setOnFirstPage($onFirstPage)
+    {
+        if ($onFirstPage === 'on') {
+            $this->_onFirstPage = 1;
+        } elseif (empty($onFirstPage)) {
+            $this->_onFirstPage = 0;
+        } else {
+            $this->_onFirstPage = $onFirstPage;
+        }
+    }
+
+    /**
+     * @return int
+     */
+    public function getOnFirstPage()
+    {
+        return $this->_onFirstPage;
+    }
+
     public function insertToDb()
     {
         try {
-            $sql = 'INSERT INTO product (product_rubric_id, title, short_text, full_text, price, company_id)
+            $sql = 'INSERT INTO product (product_rubric_id, title, short_text, full_text, price, company_id, on_first_page)
                     VALUES (' . $this->_rubric->id . ', "' . $this->_title . '", "' . $this->_shortText . '",
-                           "' . $this->_fullText . '", ' . $this->_price . ', ' . $this->_company->id . ')';
+                           "' . $this->_fullText . '", ' . $this->_price . ', ' . $this->_company->id . ', ' . $this->_onFirstPage . ')';
             $this->_db->query($sql);
 
             $this->_id = $this->_db->getLastInsertId();
@@ -278,7 +305,7 @@ class EK_Catalog_Product
             $sql = 'UPDATE product
                     SET product_rubric_id=' . $this->_rubric->id . ', title="' . $this->_title . '",
                         short_text="' . $this->_shortText . '", full_text="' . $this->_fullText . '",
-                        price=' . $this->_price . ', company_id=' . $this->_company->id . '
+                        price=' . $this->_price . ', company_id=' . $this->_company->id . ', on_first_page=' . $this->_onFirstPage . '
                     WHERE id=' . $this->_id;
             $this->_db->query($sql);
             $this->saveAttributeList();
@@ -323,6 +350,30 @@ class EK_Catalog_Product
         try {
             $db = StdLib_DB::getInstance();
             $result = $db->query('SELECT * FROM product WHERE company_id=' . $rubric_id, StdLib_DB::QUERY_MOD_ASSOC);
+            if (isset($result[0])) {
+                $productArray = array();
+                foreach ($result as $value) {
+                    $productArray[] = EK_Catalog_Product::getInstanceByArray($value);
+                }
+                return $productArray;
+            } else
+                return false;
+        } catch (Exception $e) {
+            throw new Exception($e->getMessage());
+        }
+    }
+
+    public static function getAllInstanceFirstPage($city)
+    {
+        try {
+            $db = StdLib_DB::getInstance();
+            $sql = 'SELECT *
+                    FROM product, company
+                    WHERE product.company_id=company.id
+                      AND city_id=' . $city . '
+                      AND on_first_page=1';
+
+            $result = $db->query($sql, StdLib_DB::QUERY_MOD_ASSOC);
             if (isset($result[0])) {
                 $productArray = array();
                 foreach ($result as $value) {
@@ -393,6 +444,7 @@ class EK_Catalog_Product
         $this->setPrice($result['price']);
 
         $this->setCompany(EK_Company_Company::getInstanceById($result['company_id']));
+        $this->setOnFirstPage($result['on_first_page']);
 
         $this->getAttributeList();
     }
@@ -463,14 +515,12 @@ class EK_Catalog_Product
         $message .= 'Дата: ' . date('d.m.Y') . "\r\n" .
                 'Имя: ' . $data['name'] . "\r\n" .
                 'Телефон: ' . $data['tel'] . "\r\n" .
-                'Что?' . $this->getTitle();
+                '<a href="http://ekonom.pro/catalog/index/rubric/' . $this->_rubric->getId() . '">' . $this->getTitle() . '</a>';
         $email = $this->getCompany()->getOrderEmail();
         if (!empty($email)) {
             mail($email, 'Прошу отложить товар', $message);
         }
     }
-
 }
 
-// end of EK_Catalog_Product
 ?>

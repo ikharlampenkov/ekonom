@@ -124,13 +124,13 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap
             $view->assign('authUser', $data->login);
             $view->assign('authUserRole', $data->role);
 
-           /*
-           if ($data->role == 'admin') {
-               $view->getEngine()->getTemplateVars('layout')->setLayout('admin');
-           } elseif ($data->role == 'companyadmin') {
-               $view->getEngine()->getTemplateVars('layout')->setLayout('admin');
-           }
-           */
+            /*
+            if ($data->role == 'admin') {
+                $view->getEngine()->getTemplateVars('layout')->setLayout('admin');
+            } elseif ($data->role == 'companyadmin') {
+                $view->getEngine()->getTemplateVars('layout')->setLayout('admin');
+            }
+            */
         }
 
         $mainSession = new Zend_Session_Namespace('main');
@@ -138,10 +138,15 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap
 
         if (!isset($mainSession->curCity)) {
             $mainSession->curCity = 1;
-            $view->assign('curCity', $mainSession->curCity);
-        } else {
-            $view->assign('curCity', $mainSession->curCity);
+
         }
+        $view->assign('curCity', $mainSession->curCity);
+
+        if (!isset($mainSession->curCompany)) {
+            $mainSession->curCompany = 0;
+        }
+        $view->assign('curCompany', $mainSession->curCompany);
+
 
     }
 

@@ -394,6 +394,41 @@ class EK_Company_Company
 
     /**
      *
+     * @param $user_id
+     *
+     * @return EK_Company_Company
+     * @static
+     * @access public
+     */
+    public static function getInstanceByUser($user_id)
+    {
+        try {
+            $db = StdLib_DB::getInstance();
+
+            $sql = 'SELECT *
+                    FROM company, company_user
+                    WHERE company.id=company_user.company_id
+                      AND is_moderate=1
+                      AND user_id=' . (int)$user_id;
+
+
+            $result = $db->query($sql, StdLib_DB::QUERY_MOD_ASSOC);
+
+            if (isset($result[0])) {
+                $o = new EK_Company_Company();
+                $o->fillFromArray($result[0]);
+                return $o;
+            } else {
+                return false;
+            }
+        } catch (Exception $e) {
+            throw new Exception($e->getMessage());
+        }
+    } // end of member function getAllInstance
+
+
+    /**
+     *
      *
      * @param array $values
      * @return void

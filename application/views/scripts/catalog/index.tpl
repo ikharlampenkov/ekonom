@@ -60,12 +60,13 @@
 {if $productList}
     <ul id="companies" class="clearfix shop-actions">
         {foreach from=$productList item=product}
+            {if $authUserRole!='companyadmin' || ($authUserRole=='companyadmin' && $product->company->getId()==$curCompany)}
             <li>
                 <h3><a href="{$this->url(['controller' => 'catalog','action' => 'viewProduct', 'id' => $product->id])}" class="various fancybox.ajax">{$product->title}</a></h3>
-                <a href="{$this->url(['controller' => 'catalog','action' => 'viewProduct', 'id' => $product->id])}" class="various fancybox.ajax"><img src="{if $product->img->getName()}/files/{$product->img->getPreview()}{else}/uploads/action1.png{/if}" alt="{$product->title}"></a>
+                <a href="{$this->url(['controller' => 'catalog','action' => 'viewProduct', 'id' => $product->id])}" class="various fancybox.ajax"><img src="{if $product->img->getName()}/files/{$product->img->getPreview()}{else}/i/no_foto.png{/if}" alt="{$product->title}"></a>
 
 
-                <div class="discount">{if $product->searchAttribute('discount')}{$product->getAttribute('discount')->value}{/if}</div>
+                <div class="discount">{if $product->searchAttribute('discount')}{$product->getAttribute('discount')->value}{/if}{if $product->searchAttribute('discount_type')}{$product->getAttribute('discount_type')->value}{/if}</div>
                 {if_allowed resource="{$controller}/edit"}
                     <ul id="company_action_{$product->id}" class="company_action_menu">
                         {if_allowed resource="{$controller}/viewGallery"}
@@ -82,9 +83,8 @@
                         {/if_allowed}
                     </ul>
                 {/if_allowed}
-
-
             </li>
+            {/if}
         {/foreach}
         <li>&nbsp;</li>
         <li class="empty"></li>

@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.0.9, created on 2011-12-23 22:04:23
+<?php /* Smarty version Smarty-3.0.9, created on 2011-12-27 23:04:40
          compiled from "F:\www\ekonom\application/views/scripts\index/index.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:122054ef498776ced41-74590526%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:223704ef9ec98464bf4-24939972%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '94b43447258ea62d6154766d1bbba1c4afdc3e80' => 
     array (
       0 => 'F:\\www\\ekonom\\application/views/scripts\\index/index.tpl',
-      1 => 1324652660,
+      1 => 1325001876,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '122054ef498776ced41-74590526',
+  'nocache_hash' => '223704ef9ec98464bf4-24939972',
   'function' => 
   array (
   ),
@@ -39,32 +39,34 @@ $_smarty_tpl->decodeProperties(array (
 
 
 <article id="main-content">
+<?php if ($_smarty_tpl->getVariable('productList')->value!==false){?>
     <h1 class="heading">Акции города</h1>
 
     <ul id="actions" class="clearfix">
-        <li>
-            <h3><a href="<?php echo $_smarty_tpl->getVariable('this')->value->url(array('controller'=>'actions','action'=>'view','id'=>'1'));?>
-" class="various fancybox.ajax">Телефон LG Prada</a></h3>
-            <a href="<?php echo $_smarty_tpl->getVariable('this')->value->url(array('controller'=>'actions','action'=>'view','id'=>'1'));?>
-" class="various fancybox.ajax"><img src="/uploads/action1.png" alt=""></a>
+        <?php  $_smarty_tpl->tpl_vars['product'] = new Smarty_Variable;
+ $_from = $_smarty_tpl->getVariable('productList')->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+if ($_smarty_tpl->_count($_from) > 0){
+    foreach ($_from as $_smarty_tpl->tpl_vars['product']->key => $_smarty_tpl->tpl_vars['product']->value){
+?>
+            <li>
+                <h3><a href="<?php echo $_smarty_tpl->getVariable('this')->value->url(array('controller'=>'catalog','action'=>'viewProduct','id'=>$_smarty_tpl->getVariable('product')->value->id));?>
+" class="various fancybox.ajax"><?php echo $_smarty_tpl->getVariable('product')->value->title;?>
+</a></h3>
+                <a href="<?php echo $_smarty_tpl->getVariable('this')->value->url(array('controller'=>'catalog','action'=>'viewProduct','id'=>$_smarty_tpl->getVariable('product')->value->id));?>
+" class="various fancybox.ajax"><img src="<?php if ($_smarty_tpl->getVariable('product')->value->img->getName()){?>/files/<?php echo $_smarty_tpl->getVariable('product')->value->img->getPreview();?>
+<?php }else{ ?>/i/no_foto.png<?php }?>" alt="<?php echo $_smarty_tpl->getVariable('product')->value->title;?>
+"></a>
 
-            <div class="discount">20%</div>
-        </li>
-        <li>
-            <h3><a href="<?php echo $_smarty_tpl->getVariable('this')->value->url(array('controller'=>'actions','action'=>'view','id'=>'1'));?>
-" class="various fancybox.ajax">Суперджинсы</a></h3>
-            <img src="/uploads/action2.jpg" alt="">
-
-            <div class="discount">21%</div>
-        </li>
-        <li>
-            <h3><a href="<?php echo $_smarty_tpl->getVariable('this')->value->url(array('controller'=>'actions','action'=>'view','id'=>'1'));?>
-" class="various fancybox.ajax">Башмаки со скидкой</a></h3>
-            <img src="/uploads/action3.jpg" alt="">
-
-            <div class="discount">73%</div>
-        </li>
+                <?php if ($_smarty_tpl->getVariable('product')->value->searchAttribute('discount')){?>
+                    <div class="discount"><?php echo $_smarty_tpl->getVariable('product')->value->getAttribute('discount')->value;?>
+<?php if ($_smarty_tpl->getVariable('product')->value->searchAttribute('discount_type')){?><?php echo $_smarty_tpl->getVariable('product')->value->getAttribute('discount_type')->value;?>
+<?php }?></div>
+                <?php }?>
+            </li>
+        <?php }} ?>
     </ul>
+
+
     <script type="text/javascript">
         var updatePlusOne = function () {
         gapi.plusone.go();
@@ -86,16 +88,7 @@ $_smarty_tpl->decodeProperties(array (
         });
         });
     </script>
-
-    <div id="paginator">
-        <a href="/actions?page=1">&larr;</a>
-        <ul class="pages-list">
-            <li><a href="/actions?page=1">1</a></li>
-            <li><a href="/actions?page=2" class="active">2</a></li>
-            <li><a href="/actions?page=3">3</a></li>
-        </ul>
-        <a href="/actions?page=3">&rarr;</a>
-    </div>
+<?php }?>
 
     <aside>
         <div id="banners" class="clearfix">
@@ -110,13 +103,13 @@ $_smarty_tpl->decodeProperties(array (
         <div id="share">
                     <span class="share42">
                         <a target="_blank" title="Поделиться в Facebook" class="facebook" href="#" rel="nofollow"
-                           onclick="window.open('http://www.facebook.com/sharer.php?u={ url }&amp;t={ title }', '_blank', 'scrollbars=0, resizable=1, menubar=0, left=200, top=200, width=550, height=440, toolbar=0, status=0');return false">
+                           onclick="window.open('http://www.facebook.com/sharer.php?u=http://ekonom.pro/&amp;t=Ekonom.pro', '_blank', 'scrollbars=0, resizable=1, menubar=0, left=200, top=200, width=550, height=440, toolbar=0, status=0');return false">
                         </a>
                         <a target="_blank" title="Добавить в Twitter" class="twitter" href="#" rel="nofollow"
-                           onclick="window.open('http://twitter.com/share?text={ title }&amp;url={ url }', '_blank', 'scrollbars=0, resizable=1, menubar=0, left=200, top=200, width=550, height=440, toolbar=0, status=0');return false">
+                           onclick="window.open('http://twitter.com/share?text=Ekonom.pro&amp;url=http://ekonom.pro/', '_blank', 'scrollbars=0, resizable=1, menubar=0, left=200, top=200, width=550, height=440, toolbar=0, status=0');return false">
                         </a>
                         <a target="_blank" title="Поделиться В Контакте" class="vkontakte" href="#" rel="nofollow"
-                           onclick="window.open('http://vkontakte.ru/share.php?url={ url }', '_blank', 'scrollbars=0, resizable=1, menubar=0, left=200, top=200, width=554, height=421, toolbar=0, status=0');return false">
+                           onclick="window.open('http://vkontakte.ru/share.php?url=http://ekonom.pro/', '_blank', 'scrollbars=0, resizable=1, menubar=0, left=200, top=200, width=554, height=421, toolbar=0, status=0');return false">
                         </a>
                     </span>
 

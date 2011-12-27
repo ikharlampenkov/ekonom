@@ -2,9 +2,12 @@
 
 class IndexController extends Zend_Controller_Action
 {
+    protected $_city = 1;
 
     public function init()
     {
+        $mainSession = new Zend_Session_Namespace('main');
+        $this->_city = $mainSession->curCity;
         /* Initialize action controller here */
     }
 
@@ -12,6 +15,8 @@ class IndexController extends Zend_Controller_Action
     {
         $this->view->assign('cityList', EK_City_City::getAllInstance());
         $this->view->assign('companyList', EK_Company_Company::getAllInstance());
+
+        $this->view->assign('productList', EK_Catalog_Product::getAllInstanceFirstPage($this->_city));
     }
 
     public function choosecityAction()

@@ -21,7 +21,7 @@
 
                 <section class="discount clearfix">
                 {if $product->searchAttribute('discount')}
-                    <h5>Скидка: {$product->getAttribute('discount')->value}</h5>
+                    <h5>Скидка: {$product->getAttribute('discount')->value}{if $product->searchAttribute('discount_type')}{$product->getAttribute('discount_type')->value}{/if}</h5>
                 {/if}
                     <del class="old-price">{$product->price} р</del>
                 {if $product->searchAttribute('second_price')}
@@ -91,8 +91,8 @@
                 <a href="{$this->url(['controller' => $controller,'action' => 'reserve', 'idProduct' => $product->id])}" class="button reserve">Отложить</a>
                 <a href="{$this->url(['controller' => $controller,'action' => 'share', 'idProduct' => $product->id])}" class="button share-with-friend">Поделиться</a>
             </aside>
-
         </div>
+
 
         <div class="controls">
             <div class="clearfix">
@@ -120,5 +120,6 @@
         <div id="form-placeholder">
 
         </div>
+
     </div>
 </div>

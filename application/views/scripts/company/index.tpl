@@ -57,7 +57,7 @@
 {*
 <li>
     <h3><a href="/item.html" class="various fancybox.ajax">Телефон LG Prada</a></h3>
-    <img src="/uploads/action1.png" alt="">
+    <img src="/i/no_foto.png" alt="">
 
     <div class="discount">20%</div>
 </li>
