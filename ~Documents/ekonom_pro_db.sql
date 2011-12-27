@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 3.4.5
+-- version 
 -- http://www.phpmyadmin.net
 --
--- Хост: localhost
--- Время создания: Дек 27 2011 г., 01:07
--- Версия сервера: 5.1.50
--- Версия PHP: 5.3.8-ZS5.5.0
+-- Хост: ekonom.mysql
+-- Время создания: Дек 27 2011 г., 20:13
+-- Версия сервера: 5.1.41
+-- Версия PHP: 5.2.10
 
 SET FOREIGN_KEY_CHECKS=0;
 SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
@@ -28,6 +28,8 @@ SET time_zone = "+00:00";
 --
 -- Структура таблицы `city`
 --
+-- Создание: Дек 26 2011 г., 18:08
+--
 
 DROP TABLE IF EXISTS `city`;
 CREATE TABLE IF NOT EXISTS `city` (
@@ -35,7 +37,7 @@ CREATE TABLE IF NOT EXISTS `city` (
   `title` varchar(255) NOT NULL,
   `phone_code` varchar(5) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
 
 --
 -- Дамп данных таблицы `city`
@@ -43,12 +45,65 @@ CREATE TABLE IF NOT EXISTS `city` (
 
 INSERT INTO `city` (`id`, `title`, `phone_code`) VALUES
 (1, 'Кемерово', '3842'),
-(2, 'Новокузнецк', '3843');
+(2, 'Новокузнецк', '3843'),
+(3, 'Москва', '495');
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `comments`
+--
+-- Создание: Дек 27 2011 г., 05:00
+--
+
+DROP TABLE IF EXISTS `comments`;
+CREATE TABLE IF NOT EXISTS `comments` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `message` text NOT NULL,
+  `date_create` datetime NOT NULL,
+  `user` varchar(20) NOT NULL,
+  `is_moderate` tinyint(1) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
+
+--
+-- Дамп данных таблицы `comments`
+--
+
+INSERT INTO `comments` (`id`, `message`, `date_create`, `user`, `is_moderate`) VALUES
+(1, 'ghgdhdhfhdfhdfhfdhdreye beyry eryery ryery reyree', '2011-12-27 00:00:00', 'dhhfhdf', 0),
+(2, 'dgnnhgndhndfhnfdhfdhfd', '2011-12-27 00:00:00', 'Ivan', 0);
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `comments_product`
+--
+-- Создание: Дек 27 2011 г., 05:01
+--
+
+DROP TABLE IF EXISTS `comments_product`;
+CREATE TABLE IF NOT EXISTS `comments_product` (
+  `comments_id` int(10) unsigned NOT NULL,
+  `product_id` int(10) unsigned NOT NULL,
+  PRIMARY KEY (`comments_id`,`product_id`),
+  KEY `fk_comments_product_product1` (`product_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Дамп данных таблицы `comments_product`
+--
+
+INSERT INTO `comments_product` (`comments_id`, `product_id`) VALUES
+(1, 11),
+(2, 11);
 
 -- --------------------------------------------------------
 
 --
 -- Структура таблицы `company`
+--
+-- Создание: Дек 26 2011 г., 18:08
 --
 
 DROP TABLE IF EXISTS `company`;
@@ -61,20 +116,23 @@ CREATE TABLE IF NOT EXISTS `company` (
   `order_email` varchar(255) NOT NULL DEFAULT '',
   PRIMARY KEY (`id`),
   KEY `fk_company_city1` (`city_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
 
 --
 -- Дамп данных таблицы `company`
 --
 
 INSERT INTO `company` (`id`, `city_id`, `title`, `file`, `description`, `order_email`) VALUES
-(1, 1, 'Первая компания', 'file_18-12-2011-19-33-24.jpg', 'Prada – всемирно известный Дом Моды, выпускающий коллекции модной одежды и аксессуаров.', 'test@test.com'),
-(2, 1, 'Вторая компания', 'file_17-12-2011-13-09-45.png', 'Prada – всемирно известный Дом Моды, выпускающий коллекции модной одежды и аксессуаров.', '');
+(1, 1, 'Первая компания', 'file_18-12-2011-19-33-24.jpg', 'Prada – всемирно известный Дом Моды, выпускающий коллекции модной одежды и аксессуаров.', 'ivan87kharlampenkov@gmail.com'),
+(2, 1, 'Вторая компания', 'file_17-12-2011-13-09-45.png', 'Prada – всемирно известный Дом Моды, выпускающий коллекции модной одежды и аксессуаров.', ''),
+(3, 3, 'Адидас', 'file_27-12-2011-15-37-39.jpg', 'Адидас - просто класс!!!', 'nikencmoscow@yandex.ru');
 
 -- --------------------------------------------------------
 
 --
 -- Структура таблицы `company_address`
+--
+-- Создание: Дек 26 2011 г., 18:08
 --
 
 DROP TABLE IF EXISTS `company_address`;
@@ -102,6 +160,8 @@ INSERT INTO `company_address` (`id`, `company_id`, `city_id`, `address`, `phone`
 --
 -- Структура таблицы `company_user`
 --
+-- Создание: Дек 26 2011 г., 18:08
+--
 
 DROP TABLE IF EXISTS `company_user`;
 CREATE TABLE IF NOT EXISTS `company_user` (
@@ -119,12 +179,15 @@ CREATE TABLE IF NOT EXISTS `company_user` (
 --
 
 INSERT INTO `company_user` (`company_id`, `user_id`, `is_read`, `is_write`, `is_moderate`) VALUES
-(1, 7, 0, 0, 1);
+(1, 7, 0, 0, 1),
+(3, 8, 0, 0, 1);
 
 -- --------------------------------------------------------
 
 --
 -- Структура таблицы `content_page`
+--
+-- Создание: Дек 26 2011 г., 18:08
 --
 
 DROP TABLE IF EXISTS `content_page`;
@@ -140,13 +203,16 @@ CREATE TABLE IF NOT EXISTS `content_page` (
 --
 
 INSERT INTO `content_page` (`page_title`, `title`, `content`) VALUES
-('about', 'О нас', 'Постиндустриализм представляет собой прагматический гуманизм (терминология М.Фуко). Важным для нас является указание Маклюэна на то, что капиталистическое мировое общество приводит институциональный коммунизм, подчеркивает президент. Постиндустриализм обретает референдум, впрочем, это несколько расходится с концепцией Истона. Понятие политического участия, согласно традиционным представлениям, ограничивает гносеологический марксизм, подчеркивает президент. Тоталитарный тип политической культуры неравномерен. Конфедерация вероятна. Проверка'),
-('contacts', 'Контактная информация', 'Как уже отмечалось, политические учения Гоббса иллюстрирует механизм власти, хотя на первый взгляд, российские власти тут ни при чем. Политическая модернизация, однако, сохраняет экзистенциальный субъект власти, что неминуемо повлечет эскалацию напряжения в стране. Харизматическое лидерство доказывает марксизм, последнее особенно ярко выражено в ранних работах В.И.Ленина. Структура политической науки существенно доказывает плюралистический христианско-демократический национализм (отметим, что это особенно важно для гармонизации политических интересов и интеграции общества). Согласно теории Э.Тоффлера ("Шок будущего"), авторитаризм интегрирует онтологический кризис легитимности, о чем будет подробнее сказано ниже. Политическое манипулирование приводит прагматический элемент политического процесса (отметим, что это особенно важно для гармонизации политических интересов и интеграции общества). Проверка');
+('about', 'О нас', '<p>\r\n	Постиндустриализм представляет собой прагматический гуманизм (терминология М.Фуко). Важным для нас является указание Маклюэна на то, что капиталистическое мировое общество приводит институциональный коммунизм, подчеркивает президент. Постиндустриализм обретает референдум, впрочем, это несколько расходится с концепцией Истона. Понятие политического участия, согласно традиционным представлениям, ограничивает гносеологический марксизм, подчеркивает президент. Тоталитарный тип политической культуры неравномерен. Конфедерация вероятна. ПроверкаКонтактов</p>\r\n'),
+('contacts', 'Контактная информация', '<p>\r\n	Как уже отмечалось, политические учения Гоббса иллюстрирует механизм власти, хотя на первый взгляд, российские власти тут ни при чем. Политическая модернизация, однако, сохраняет экзистенциальный субъект власти, что неминуемо повлечет эскалацию напряжения в стране. Харизматическое лидерство доказывает марксизм, последнее особенно ярко выражено в ранних работах В.И.Ленина. Структура политической науки существенно доказывает плюралистический христианско-демократический национализм (отметим, что это особенно важно для гармонизации политических интересов и интеграции общества). Согласно теории Э.Тоффлера (&quot;Шок будущего&quot;), авторитаризм интегрирует онтологический кризис легитимности, о чем будет подробнее сказано ниже. Политическое манипулирование приводит прагматический элемент политического процесса (отметим, что это особенно важно для гармонизации политических интересов и интеграции общества). ПроверкаРедактора</p>\r\n'),
+('test', 'Тест', '<p>\r\n	аптьаптаптпатаптпатптпатм мс рвава</p>\r\n<p>\r\n	вараврва</p>\r\n');
 
 -- --------------------------------------------------------
 
 --
 -- Структура таблицы `gallery`
+--
+-- Создание: Дек 26 2011 г., 18:08
 --
 
 DROP TABLE IF EXISTS `gallery`;
@@ -158,7 +224,7 @@ CREATE TABLE IF NOT EXISTS `gallery` (
   `file` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `fk_tm_document_tm_user1` (`user_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=9 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=12 ;
 
 --
 -- Дамп данных таблицы `gallery`
@@ -172,12 +238,17 @@ INSERT INTO `gallery` (`id`, `title`, `date_create`, `user_id`, `file`) VALUES
 (5, 'Первое фото', '2011-12-26 16:28:21', 1, 'img_26-12-2011-16-28-21.jpg'),
 (6, 'Второе фото', '2011-12-26 16:30:43', 1, 'img_26-12-2011-16-30-43.jpg'),
 (7, 'Третье фото', '2011-12-26 16:30:58', 1, 'img_26-12-2011-16-30-58.jpg'),
-(8, 'Четвертое фото', '2011-12-26 16:31:15', 1, 'img_26-12-2011-16-31-15.jpg');
+(8, 'Четвертое фото', '2011-12-26 16:31:15', 1, 'img_26-12-2011-16-31-15.jpg'),
+(9, 'Первое фото!', '2011-12-27 14:09:26', 8, 'img_27-12-2011-14-09-26.jpg'),
+(10, 'Второе фото!', '2011-12-27 14:09:45', 8, 'img_27-12-2011-14-09-45.jpg'),
+(11, 'Третье фото!', '2011-12-27 14:10:07', 8, 'img_27-12-2011-14-10-07.jpg');
 
 -- --------------------------------------------------------
 
 --
 -- Структура таблицы `gallery_company`
+--
+-- Создание: Дек 26 2011 г., 18:08
 --
 
 DROP TABLE IF EXISTS `gallery_company`;
@@ -203,6 +274,8 @@ INSERT INTO `gallery_company` (`gallery_id`, `company_id`) VALUES
 --
 -- Структура таблицы `gallery_product`
 --
+-- Создание: Дек 26 2011 г., 18:08
+--
 
 DROP TABLE IF EXISTS `gallery_product`;
 CREATE TABLE IF NOT EXISTS `gallery_product` (
@@ -220,12 +293,17 @@ INSERT INTO `gallery_product` (`gallery_id`, `product_id`) VALUES
 (5, 1),
 (6, 1),
 (7, 1),
-(8, 1);
+(8, 1),
+(9, 14),
+(10, 14),
+(11, 14);
 
 -- --------------------------------------------------------
 
 --
 -- Структура таблицы `product`
+--
+-- Создание: Дек 26 2011 г., 18:08
 --
 
 DROP TABLE IF EXISTS `product`;
@@ -241,24 +319,27 @@ CREATE TABLE IF NOT EXISTS `product` (
   PRIMARY KEY (`id`),
   KEY `fk_product_product_rubric1` (`product_rubric_id`),
   KEY `company_id` (`company_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=14 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=15 ;
 
 --
 -- Дамп данных таблицы `product`
 --
 
 INSERT INTO `product` (`id`, `product_rubric_id`, `title`, `img`, `short_text`, `full_text`, `price`, `company_id`) VALUES
-(1, 3, 'Апельсин', 'img_30-06-2011-21-19-07.jpg', 'Просто апельсин', 'Детальная информация об апельсинах', '100.00', 1),
-(3, 3, 'Вишня', 'img_30-06-2011-21-11-19.jpg', 'Просто вишня', 'Просто сладкая вишня', '250.00', 2),
-(4, 5, 'Моющее средство', NULL, 'паоапоаппаоапоап', 'овпоапоапоап', '234.00', 1),
-(11, 1, 'полплпрлп', NULL, '', '', '125.50', 1),
-(12, 1, 'Тест', NULL, '', '', '0.00', 1),
-(13, 2, 'Тест атрибутов', 'img_16-12-2011-23-02-46.png', 'аптаптпатап', '', '0.00', 1);
+(1, 3, 'Апельсин', 'img_30-06-2011-21-19-07.jpg', 'Просто апельсин', 'Детальная информация об апельсинах', 100.00, 1),
+(3, 3, 'Вишня', 'img_30-06-2011-21-11-19.jpg', 'Просто вишня', 'Просто сладкая вишня', 250.00, 2),
+(4, 5, 'Моющее средство', NULL, 'паоапоаппаоапоап', 'овпоапоапоап', 234.00, 1),
+(11, 1, 'полплпрлп', NULL, '', '', 125.50, 1),
+(12, 1, 'Тест', NULL, '', '', 0.00, 1),
+(13, 2, 'Тест атрибутов', 'img_16-12-2011-23-02-46.png', 'аптаптпатап', '', 0.00, 1),
+(14, 6, 'Косюм!', 'img_27-12-2011-14-05-19.jpg', 'Хорошая вещь!', 'Хорошая вещь!', 1000.00, 3);
 
 -- --------------------------------------------------------
 
 --
 -- Структура таблицы `product_attribute`
+--
+-- Создание: Дек 26 2011 г., 18:08
 --
 
 DROP TABLE IF EXISTS `product_attribute`;
@@ -292,12 +373,19 @@ INSERT INTO `product_attribute` (`product_id`, `attribute_key`, `type_id`, `attr
 (11, 'terms_of_stock', 2, '', 0),
 (11, 'test_list', 3, 'Один', 0),
 (13, 'description', 1, '', 0),
-(13, 'test_list', 3, 'Один', 0);
+(13, 'test_list', 3, 'Один', 0),
+(14, 'description', 2, 'Хорошая скидка', 0),
+(14, 'discount', 1, '50 %', 0),
+(14, 'second_price', 1, '500', 0),
+(14, 'terms_of_stock', 2, '1 января', 0),
+(14, 'test_list', 3, 'Один', 0);
 
 -- --------------------------------------------------------
 
 --
 -- Структура таблицы `product_attribute_type`
+--
+-- Создание: Дек 26 2011 г., 18:08
 --
 
 DROP TABLE IF EXISTS `product_attribute_type`;
@@ -324,6 +412,8 @@ INSERT INTO `product_attribute_type` (`id`, `title`, `handler`, `description`) V
 
 --
 -- Структура таблицы `product_hash`
+--
+-- Создание: Дек 26 2011 г., 18:08
 --
 
 DROP TABLE IF EXISTS `product_hash`;
@@ -356,6 +446,8 @@ INSERT INTO `product_hash` (`product_id`, `attribute_key`, `title`, `type_id`, `
 --
 -- Структура таблицы `product_rubric`
 --
+-- Создание: Дек 26 2011 г., 18:08
+--
 
 DROP TABLE IF EXISTS `product_rubric`;
 CREATE TABLE IF NOT EXISTS `product_rubric` (
@@ -385,6 +477,8 @@ INSERT INTO `product_rubric` (`id`, `title`, `parent_id`, `is_root`) VALUES
 
 --
 -- Структура таблицы `tm_acl_role`
+--
+-- Создание: Дек 26 2011 г., 18:08
 --
 
 DROP TABLE IF EXISTS `tm_acl_role`;
@@ -480,6 +574,10 @@ INSERT INTO `tm_acl_role` (`tm_user_role_id`, `tm_user_resource_id`, `is_allow`,
 (1, 128, 1, 'show'),
 (1, 129, 1, 'show'),
 (1, 130, 1, 'show'),
+(1, 131, 1, 'show'),
+(1, 132, 1, 'show'),
+(1, 133, 1, 'show'),
+(1, 134, 1, 'show'),
 (3, 1, 1, 'show'),
 (3, 2, 1, 'show'),
 (3, 3, 1, 'show'),
@@ -611,6 +709,10 @@ INSERT INTO `tm_acl_role` (`tm_user_role_id`, `tm_user_resource_id`, `is_allow`,
 (4, 128, 1, 'show'),
 (4, 129, 1, 'show'),
 (4, 130, 1, 'show'),
+(4, 131, 1, 'show'),
+(4, 132, 1, 'show'),
+(4, 133, 1, 'show'),
+(4, 134, 1, 'show'),
 (5, 1, 1, 'show'),
 (5, 2, 1, 'show'),
 (5, 3, 1, 'show'),
@@ -688,12 +790,18 @@ INSERT INTO `tm_acl_role` (`tm_user_role_id`, `tm_user_resource_id`, `is_allow`,
 (5, 127, 0, 'show'),
 (5, 128, 0, 'show'),
 (5, 129, 1, 'show'),
-(5, 130, 1, 'show');
+(5, 130, 1, 'show'),
+(5, 131, 1, 'show'),
+(5, 132, 1, 'show'),
+(5, 133, 0, 'show'),
+(5, 134, 0, 'show');
 
 -- --------------------------------------------------------
 
 --
 -- Структура таблицы `tm_task_attribute`
+--
+-- Создание: Дек 26 2011 г., 18:08
 --
 
 DROP TABLE IF EXISTS `tm_task_attribute`;
@@ -712,6 +820,8 @@ CREATE TABLE IF NOT EXISTS `tm_task_attribute` (
 
 --
 -- Структура таблицы `tm_task_attribute_type`
+--
+-- Создание: Дек 26 2011 г., 18:08
 --
 
 DROP TABLE IF EXISTS `tm_task_attribute_type`;
@@ -738,6 +848,8 @@ INSERT INTO `tm_task_attribute_type` (`id`, `title`, `handler`, `description`) V
 
 --
 -- Структура таблицы `tm_task_hash`
+--
+-- Создание: Дек 26 2011 г., 18:08
 --
 
 DROP TABLE IF EXISTS `tm_task_hash`;
@@ -768,6 +880,8 @@ INSERT INTO `tm_task_hash` (`task_id`, `attribute_key`, `title`, `type_id`, `lis
 --
 -- Структура таблицы `tm_user`
 --
+-- Создание: Дек 26 2011 г., 18:08
+--
 
 DROP TABLE IF EXISTS `tm_user`;
 CREATE TABLE IF NOT EXISTS `tm_user` (
@@ -779,7 +893,7 @@ CREATE TABLE IF NOT EXISTS `tm_user` (
   PRIMARY KEY (`id`),
   UNIQUE KEY `login_UNIQUE` (`login`),
   KEY `fk_tm_user_tm_user_role1` (`role_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=8 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=9 ;
 
 --
 -- Дамп данных таблицы `tm_user`
@@ -789,12 +903,15 @@ INSERT INTO `tm_user` (`id`, `login`, `password`, `role_id`, `date_create`) VALU
 (1, 'admin', '123', 1, '2011-11-16 16:26:00'),
 (2, 'user', '321', 4, '2011-11-17 23:35:18'),
 (6, 'user2', '333', 4, '2011-11-25 21:50:32'),
-(7, 'moder', '654', 4, '2011-12-16 21:58:00');
+(7, 'moder', '654', 4, '2011-12-16 21:58:00'),
+(8, 'Adidas', '111', 4, '2011-12-27 12:32:00');
 
 -- --------------------------------------------------------
 
 --
 -- Структура таблицы `tm_user_attribute`
+--
+-- Создание: Дек 26 2011 г., 18:08
 --
 
 DROP TABLE IF EXISTS `tm_user_attribute`;
@@ -817,12 +934,15 @@ INSERT INTO `tm_user_attribute` (`user_id`, `attribute_key`, `type_id`, `attribu
 (1, 'name', 1, 'Администратор', 1),
 (2, 'name', 1, 'Первый пользователь', 1),
 (6, 'name', 1, 'Второй пользователь', 1),
-(7, 'name', 1, 'Модератор первой компании', 1);
+(7, 'name', 1, 'Модератор первой компании', 1),
+(8, 'name', 1, 'Адик', 1);
 
 -- --------------------------------------------------------
 
 --
 -- Структура таблицы `tm_user_attribute_type`
+--
+-- Создание: Дек 26 2011 г., 18:08
 --
 
 DROP TABLE IF EXISTS `tm_user_attribute_type`;
@@ -849,6 +969,8 @@ INSERT INTO `tm_user_attribute_type` (`id`, `title`, `handler`, `description`) V
 --
 -- Структура таблицы `tm_user_hash`
 --
+-- Создание: Дек 26 2011 г., 18:08
+--
 
 DROP TABLE IF EXISTS `tm_user_hash`;
 CREATE TABLE IF NOT EXISTS `tm_user_hash` (
@@ -874,6 +996,8 @@ INSERT INTO `tm_user_hash` (`user_id`, `attribute_key`, `title`, `type_id`, `lis
 --
 -- Структура таблицы `tm_user_profile`
 --
+-- Создание: Дек 26 2011 г., 18:08
+--
 
 DROP TABLE IF EXISTS `tm_user_profile`;
 CREATE TABLE IF NOT EXISTS `tm_user_profile` (
@@ -889,6 +1013,8 @@ CREATE TABLE IF NOT EXISTS `tm_user_profile` (
 --
 -- Структура таблицы `tm_user_resource`
 --
+-- Создание: Дек 26 2011 г., 18:08
+--
 
 DROP TABLE IF EXISTS `tm_user_resource`;
 CREATE TABLE IF NOT EXISTS `tm_user_resource` (
@@ -897,7 +1023,7 @@ CREATE TABLE IF NOT EXISTS `tm_user_resource` (
   `rtitle` varchar(255) NOT NULL DEFAULT '',
   PRIMARY KEY (`id`),
   UNIQUE KEY `title` (`title`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=131 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=135 ;
 
 --
 -- Дамп данных таблицы `tm_user_resource`
@@ -981,12 +1107,18 @@ INSERT INTO `tm_user_resource` (`id`, `title`, `rtitle`) VALUES
 (127, 'catalog/deleteGallery', 'Каталог/Удалить фото'),
 (128, 'catalog/addGallery', 'Каталог/Добавить фото'),
 (129, 'catalog/reserve', 'Каталог/Отложить'),
-(130, 'catalog/share', 'Каталог/Поделиться');
+(130, 'catalog/share', 'Каталог/Поделиться'),
+(131, 'catalog/addComments', 'Каталог/Добавить комментарий'),
+(132, 'catalog/viewComments', 'Каталог/Просмотреть комментарии'),
+(133, 'catalog/editComments', 'Каталог/Редактировать комментарий'),
+(134, 'catalog/deleteComments', 'Каталог/Удалить комментарий');
 
 -- --------------------------------------------------------
 
 --
 -- Структура таблицы `tm_user_role`
+--
+-- Создание: Дек 26 2011 г., 18:08
 --
 
 DROP TABLE IF EXISTS `tm_user_role`;
@@ -1010,6 +1142,13 @@ INSERT INTO `tm_user_role` (`id`, `title`, `rtitle`) VALUES
 --
 -- Ограничения внешнего ключа сохраненных таблиц
 --
+
+--
+-- Ограничения внешнего ключа таблицы `comments_product`
+--
+ALTER TABLE `comments_product`
+  ADD CONSTRAINT `fk_comments_product_comments1` FOREIGN KEY (`comments_id`) REFERENCES `comments` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  ADD CONSTRAINT `fk_comments_product_product1` FOREIGN KEY (`product_id`) REFERENCES `product` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 --
 -- Ограничения внешнего ключа таблицы `company`
@@ -1119,7 +1258,3 @@ ALTER TABLE `tm_user_hash`
   ADD CONSTRAINT `tm_user_hash_ibfk_1` FOREIGN KEY (`type_id`) REFERENCES `tm_user_attribute_type` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 SET FOREIGN_KEY_CHECKS=1;
 COMMIT;
-
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
