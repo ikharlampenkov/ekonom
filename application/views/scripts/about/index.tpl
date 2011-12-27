@@ -5,11 +5,12 @@
     <form action="{$this->url(['controller' => $controller, 'action' => 'index'])}" method="POST">
         <h1 class="heading">О нас</h1>
 
-        <textarea name="data_about[content]" style="width: 100%; height: 200px;">{$contentAbout->content}</textarea>
+        {$ckeditorAbout}
+        {*<textarea name="dataabout[content]" style="width: 100%; height: 200px;">{$contentAbout->content}</textarea>*}
 
         <h1 class="heading">Контактная информация</h1>
 
-        <textarea name="data_contacts[content]" style="width: 100%; height: 200px;">{$contentContacts->content}</textarea>
+        {$ckeditorContacts} {*<textarea name="datacontacts[content]" style="width: 100%; height: 200px;">{$contentContacts->content}</textarea>*}
 
         <input type="submit" value="Сохранить" class="button"/>
 

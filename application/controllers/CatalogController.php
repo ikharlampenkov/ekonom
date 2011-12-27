@@ -18,6 +18,8 @@ class CatalogController extends Zend_Controller_Action
         $this->_helper->AjaxContext()->addActionContext('viewProduct', 'html')->initContext('html');
         $this->_helper->AjaxContext()->addActionContext('reserve', 'html')->initContext('html');
         $this->_helper->AjaxContext()->addActionContext('share', 'html')->initContext('html');
+        $this->_helper->AjaxContext()->addActionContext('addComments', 'html')->initContext('html');
+        $this->_helper->AjaxContext()->addActionContext('viewComments', 'html')->initContext('html');
         /* Initialize action controller here */
     }
 
@@ -63,6 +65,7 @@ class CatalogController extends Zend_Controller_Action
         $oProduct = EK_Catalog_Product::getInstanceById($this->getRequest()->getParam('id'));
         $this->view->assign('product', $oProduct);
         $this->view->assign('galleryList', EK_Gallery_Product::getAllInstance($oProduct));
+        $this->view->assign('commentsList', EK_Comments_Product::getAllInstance($oProduct));
     }
 
     public function reserveAction()
@@ -71,6 +74,7 @@ class CatalogController extends Zend_Controller_Action
         if ($this->getRequest()->isPost()) {
             $reserve = $this->getRequest()->getParam('reserve');
             try {
+                //echo $oProduct->getCompany()->getOrderEmail();
                 $oProduct->reserve($reserve);
                 exit;
             } catch (Exception $e) {
@@ -136,7 +140,8 @@ class CatalogController extends Zend_Controller_Action
         }
 
         $this->view->assign('rubric_tree', EK_Catalog_Rubric::getRubricTree());
-        $this->view->assign('companyList', EK_Company_Company::getAllInstance());
+        $this->view->assign('companyList', EK_Company_Company::getAllInstance($this->_city));
+
         $this->view->assign('attributeHashList', EK_Catalog_Hash::getAllInstance());
         $this->view->assign('product', $oProduct);
         $this->view->assign('cur_rubric', $cur_rubric);
@@ -170,7 +175,7 @@ class CatalogController extends Zend_Controller_Action
         }
 
         $this->view->assign('rubric_tree', EK_Catalog_Rubric::getRubricTree());
-        $this->view->assign('companyList', EK_Company_Company::getAllInstance());
+        $this->view->assign('companyList', EK_Company_Company::getAllInstance($this->_city));
         $this->view->assign('product', $oProduct);
         $this->view->assign('attributeHashList', EK_Catalog_Hash::getAllInstance($oProduct));
         $this->view->assign('cur_rubric', $cur_rubric);
@@ -439,6 +444,43 @@ class CatalogController extends Zend_Controller_Action
         } catch (Exception $e) {
             throw new Exception($e->getMessage());
         }
+    }
+
+    public function viewcommentsAction()
+    {
+        $cur_rubric = EK_Catalog_Rubric::getInstanceById($this->getRequest()->getParam('rubric', 0));
+        $oProduct = EK_Catalog_Product::getInstanceById($this->getRequest()->getParam('idProduct'));
+
+        $this->view->assign('commentsList', EK_Comments_Product::getAllInstance($oProduct));
+        $this->view->assign('company', $oProduct);
+        $this->view->assign('cur_rubric', $cur_rubric);
+    }
+
+    public function addcommentsAction()
+    {
+        //$cur_rubric = EK_Catalog_Rubric::getInstanceById($this->getRequest()->getParam('rubric', 0));
+        $oProduct = EK_Catalog_Product::getInstanceById($this->getRequest()->getParam('idProduct'));
+
+        $oComments = new EK_Comments_Product();
+        if ($this->getRequest()->isPost()) {
+            $data = $this->getRequest()->getParam('comment');
+            $oComments->setDateCreate(date('Y-m-d'));
+            $oComments->setUser($data['name']);
+            $oComments->setMessage($data['text']);
+
+
+            try {
+                $oComments->insertToDb($oProduct);
+                exit;
+                //$this->_redirect('/catalog/viewGallery/idProduct/' . $this->getRequest()->getParam('idProduct') . '/rubric/' . $this->getRequest()->getParam('rubric', 0));
+            } catch (Exception $e) {
+                $this->view->assign('exception_msg', $e->getMessage());
+            }
+
+        }
+
+        $this->view->assign('product', $oProduct);
+        //$this->view->assign('cur_rubric', $cur_rubric);
     }
 }
 

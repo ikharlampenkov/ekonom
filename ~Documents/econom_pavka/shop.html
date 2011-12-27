@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ekonom.pro - Экономь профессионально.</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <!-- This script describes some html5 specific things for IE8- -->
+    <!--[if lte IE 8]>
+        <script type="text/javascript" src="/js/html5.js"></script>
+    <![endif]-->
+
+    <!-- fancybox assets -->
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+    <script type="text/javascript" src="/fancybox/lib/jquery.mousewheel-3.0.6.pack.js"></script>
+    <link rel="stylesheet" href="/fancybox/source/jquery.fancybox.css?v=2.0.4" type="text/css" media="screen" />
+    <script type="text/javascript" src="/fancybox/source/jquery.fancybox.js?v=2.0.4"></script>
+
+    <link rel="stylesheet" href="/css/main.css"/> <!-- Include last! It overrides default fancybox styles -->
+    <!-- read comments in js files for better understanding of its purpose -->
+    <script type="text/javascript" src="/js/gallery.js"></script>
+</head>
+<body>
+<div id="page">
+    <header>
+        <h1 id="logo"><a href="/" title="Вернуться на главную"><span>Ekonom.pro &mdash; мегавъебенный сайт</span></a></h1>
+
+        <div id="choose-city-form">
+            <h4><label for="city_name">Выбрать город</label></h4>
+            <form class="b-form" action="/choose-city" method="post">
+                <select name="city_name" id="city_name">
+                    <option value="1" selected="selected">Кемерово</option>
+                    <option value="2">Новосибирк</option>
+                    <option value="3">Новокузнецк</option>
+                </select>
+            </form>
+        </div>
+
+        <div id="search-form">
+            <h4><label for="search_query">Поиск по сайту</label></h4>
+            <form action="/search" method="get">
+                <fieldset>
+                    <input type="text" name="query" id="search_query" placeholder="Я ищу:">
+                    <input type="submit" value="Найти" id="submit">
+                </fieldset>
+            </form>
+        </div>
+    </header>
+
+    <div id="content" class="clearfix">
+        <nav id="main-nav">
+            <ul>
+                <li>
+                    <a href="/offers">Выбрать</a>
+                    <ul class="first-level submenu">
+                        <li><a href="/companies/auto">Автомобили</a></li>
+                        <li>
+                            <a href="/companies/clothes">Одежда</a>
+                            <ul class="submenu second-level">
+                                <li>
+                                    <a href="/companies/clothes/men">Мужская одежда</a>
+                                    <ul class="submenu third-level">
+                                        <li><a href="/companies/clothes/teenagers/shoes">Обувь</a></li>
+                                        <li><a href="/companies/clothes/teenagers/jeans">Джинсы</a></li>
+                                        <li><a href="/companies/clothes/teenagers/sports">Спортивная одежда</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="/companies/clothes/women">Женская одежда</a></li>
+                                <li><a href="/companies/clothes/children">Детская одежда</a></li>
+                                <li>
+                                    <a href="/companies/clothes/teenagers">Одежда для подростков</a>
+                                    <ul class="submenu third-level">
+                                        <li><a href="/companies/clothes/teenagers/shoes">Обувь</a></li>
+                                        <li><a href="/companies/clothes/teenagers/jeans">Джинсы</a></li>
+                                        <li><a href="/companies/clothes/teenagers/sports">Спортивная одежда</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><a href="/companies/household">Бытовая техника</a></li>
+                        <li><a href="/companies/computers">Компьютеры</a></li>
+                        <li><a href="/companies/food">Продукты питания</a></li>
+                    </ul>
+                </li>
+                <li><a href="/companies">Компании</a></li>
+                <li><a href="/about.html">О нас</a></li>
+            </ul>
+        </nav>
+
+        <article id="main-content" class="item-description shop">
+            <div class="inner">
+                <h1 class="heading">Prada</h1>
+
+                <div class="clearfix">
+                <div class="gallery">
+                    <div class="big-image">
+                        <img src="/uploads/gallery.jpg" width="420" height="270" alt="Комментарий к первому фото" data-preview="/uploads/gallery_preview.jpg" />
+                        <h5 class="title">Комментарий к первому фото</h5>
+                        <a href="#previous" class="previous"></a>
+                        <a href="#next" class="next"></a>
+                    </div>
+
+                    <ul class="previews clearfix">
+                        <li>
+                            <a href="/uploads/gallery1.jpg" title="Комментарий ко второму фото">
+                                <img src="/uploads/gallery1_preview.jpg" alt="Превью второго фото" class="shadow-image"/>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/uploads/gallery2.jpg" title="Комментарий ко второму фото">
+                                <img src="/uploads/gallery2_preview.jpg" alt="Превью второго фото" class="shadow-image"/>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/uploads/gallery3.jpg" title="Комментарий ко второму фото">
+                                <img src="/uploads/gallery3_preview.jpg" alt="Превью второго фото" class="shadow-image"/>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="information">
+                    <img class="shop-logo shadow-image" src="/uploads/prada_logo.jpg" alt="Логотип магазина Prada" />
+
+                    <h3>Краткое описание магазина или товара</h3>
+                    <p>Prada – всемирно известный Дом Моды, выпускающий коллекции модной одежды и аксессуаров.</p>
+
+                    <h3>Адреса магазинов</h3>
+                    <ul class="addresses-list">
+                        <li>
+                            <span class="nobr">Пр. Ленина, 90/1, ТРК "Променад"</span>,<br/>
+                            <span class="phone nobr">+7 (3842) 77-77-77</span>
+                        </li>
+                        <li>
+                            <span class="nobr">Пр. Ленина, 90/1, ТРК "Променад"</span>,<br/>
+                            <span class="phone nobr">+7 (3842) 77-77-77</span>
+                        </li>
+                    </ul>
+                </div>
+
+
+                <div id="share" class="clear">
+                    <script type="text/javascript">
+                    //<!--
+                        share42('/images/');
+                    //-->
+                    </script>
+
+                    <div id="plusone">
+                        <g:plusone></g:plusone>
+                    </div>
+
+
+                    <script type="text/javascript">//<!--
+                      window.___gcfg = {lang: 'ru'};
+
+                      (function() {
+                        var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+                        po.src = 'https://apis.google.com/js/plusone.js';
+                        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+                      })();
+                    //-->
+                    </script>
+                </div>
+                </div>
+            </div>
+
+            <ul id="actions" class="clearfix shop-actions">
+                <li>
+                    <h3><a href="/item.html" class="various fancybox.ajax">Телефон LG Prada</a></h3>
+                    <a href="/item.html" class="various fancybox.ajax"><img src="/uploads/action1.png" alt=""></a>
+                    <div class="discount">20%</div>
+                </li>
+                <li>
+                    <h3><a href="/item.html" class="various fancybox.ajax">Суперджинсы</a></h3>
+                    <a href="/item.html" class="various fancybox.ajax"><img src="/uploads/action2.jpg" alt=""></a>
+                    <div class="discount">21%</div>
+                </li>
+                <li>
+                    <h3><a href="/item.html" class="various fancybox.ajax">Башмаки со скидкой</a></h3>
+                    <a href="/item.html" class="various fancybox.ajax"><img src="/uploads/action3.jpg" alt=""></a>
+                    <div class="discount">73%</div>
+                </li>
+                <li>
+                    <h3><a href="/item.html" class="various fancybox.ajax">Телефон LG Prada</a></h3>
+                    <a href="/item.html" class="various fancybox.ajax"><img src="/uploads/action1.png" alt=""></a>
+                    <div class="discount">20%</div>
+                </li>
+                <li>
+                    <h3><a href="/item.html" class="various fancybox.ajax">Суперджинсы</a></h3>
+                    <a href="/item.html" class="various fancybox.ajax"><img src="/uploads/action2.jpg" alt=""></a>
+                    <div class="discount">21%</div>
+                </li>
+                <li>
+                    <h3><a href="/item.html" class="various fancybox.ajax">Башмаки со скидкой</a></h3>
+                    <a href="/item.html" class="various fancybox.ajax"><img src="/uploads/action3.jpg" alt=""></a>
+                    <div class="discount">73%</div>
+                </li>
+                <li class="empty"></li>
+            </ul>
+
+            <div id="paginator">
+                <a href="/actions?page=1">&larr;</a>
+                <ul class="pages-list">
+                    <li><a href="/actions?page=1">1</a></li>
+                    <li><a href="/actions?page=2" class="active">2</a></li>
+                    <li><a href="/actions?page=3">3</a></li>
+                </ul>
+                <a href="/actions?page=3">&rarr;</a>
+            </div>
+
+            <script type="text/javascript">
+                var updatePlusOne = function() {
+                    gapi.plusone.go();
+                };
+
+                $(document).ready(function() {
+                    $(".various").fancybox({
+                        maxWidth	: 800,
+                        maxHeight	: 600,
+                        fitToView	: false,
+                        width		: 800,
+                        autoSize	: false,
+                        closeClick	: false,
+                        openEffect	: 'none',
+                        closeEffect	: 'none',
+                        padding: 0,
+                        scrolling: 'no',
+                        afterShow: updatePlusOne
+                    });
+                });
+            </script>
+
+            <a href="javascript:history.go(-1);" class="button back">Назад</a>
+        </article>
+
+        <aside id="sidebar">
+            <section id="adv">
+                <a href="http://yandex.ru">
+                    <img src="/uploads/banner.jpg" width="187" height="357"/>
+                </a>
+            </section>
+        </aside>
+    </div>
+</div>
+
+<footer>
+    <div id="footer-inner" class="clearfix">
+        <p id="copyright">Ekonom.pro &copy; 2011</p>
+        <p id="conditions"><a href="/conditions">Общие условия пользования сайтом</a></p>
+        <div id="phone" class="nobr">+7 (3842) 33-86-86</div>
+    </div>
+</footer>
+</body>
+</html>

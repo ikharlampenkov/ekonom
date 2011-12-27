@@ -464,8 +464,9 @@ class EK_Catalog_Product
                 'Имя: ' . $data['name'] . "\r\n" .
                 'Телефон: ' . $data['tel'] . "\r\n" .
                 'Что?' . $this->getTitle();
-        if (!empty($this->_company->orderEmail)) {
-            mail($this->_company->orderEmail, 'Прошу отложить товар', $message);
+        $email = $this->getCompany()->getOrderEmail();
+        if (!empty($email)) {
+            mail($email, 'Прошу отложить товар', $message);
         }
     }
 
