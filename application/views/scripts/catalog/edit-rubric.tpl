@@ -1,6 +1,6 @@
 <article id="main-content">
 
-<h1 class="heading">Добавить рубрику</h1>
+<h1 class="heading">Редактировать рубрику</h1>
 
     <form action="{$this->url(['controller' => $controller, 'action' => 'editRubric', 'id' => $rubric->getId(), 'rubric' => $cur_rubric->getId()])}" method="post">
         <table width="100%">

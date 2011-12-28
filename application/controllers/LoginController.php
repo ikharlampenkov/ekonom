@@ -23,6 +23,16 @@ class LoginController extends Zend_Controller_Action
             $authResult = $auth->authenticate($o_userManager);
 
             if ($authResult->isValid()) {
+                $data = $auth->getStorage()->read();
+
+                $oCompany = EK_Company_Company::getInstanceByUser($data->id);
+
+                if (is_object($oCompany)) {
+                    $mainSession = new Zend_Session_Namespace('main');
+                    $mainSession->curCity = $oCompany->getCity()->getId();
+                    $mainSession->curCompany = $oCompany->getId();
+                }
+
                 $this->_redirect('/');
             } else {
                 $this->view->assign('result', $authResult->getMessages());

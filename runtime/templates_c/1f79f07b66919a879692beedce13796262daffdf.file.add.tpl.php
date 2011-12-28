@@ -1,24 +1,26 @@
-<?php /* Smarty version Smarty-3.0.9, created on 2011-12-16 23:00:34
+<?php /* Smarty version Smarty-3.0.9, created on 2011-12-27 22:12:02
          compiled from "F:\www\ekonom\application/views/scripts\catalog/add.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:250304eeb6b228034e5-93662111%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:136604ef9e0420690c7-81656840%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '1f79f07b66919a879692beedce13796262daffdf' => 
     array (
       0 => 'F:\\www\\ekonom\\application/views/scripts\\catalog/add.tpl',
-      1 => 1324051230,
+      1 => 1324219071,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '250304eeb6b228034e5-93662111',
+  'nocache_hash' => '136604ef9e0420690c7-81656840',
   'function' => 
   array (
   ),
   'has_nocache_code' => false,
 )); /*/%%SmartyHeaderCode%%*/?>
 <?php if (!is_callable('smarty_block_if_object_allowed')) include 'F:\www\ekonom\library\Smarty\plugins\block.if_object_allowed.php';
-?><div class="page"><h1>Добавить товар</h1></div><br/>
+?><article id="main-content">
+
+<h1 class="heading">Добавить товар</h1>
 
 <form action="<?php echo $_smarty_tpl->getVariable('this')->value->url(array('controller'=>$_smarty_tpl->getVariable('controller')->value,'action'=>'add','rubric'=>$_smarty_tpl->getVariable('cur_rubric')->value->getId()));?>
 " method="post" enctype="multipart/form-data">
@@ -100,3 +102,5 @@ if ($_smarty_tpl->_count($_from) > 0){
     </table>
     <input id="save" name="save" type="submit" value="Сохранить"/>
 </form>
+
+</article>

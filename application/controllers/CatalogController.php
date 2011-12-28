@@ -6,6 +6,8 @@ class CatalogController extends Zend_Controller_Action
 
     protected $_city = 1;
 
+    //protected
+
     public function init()
     {
         $storage_data = Zend_Auth::getInstance()->getStorage()->read();
@@ -36,8 +38,8 @@ class CatalogController extends Zend_Controller_Action
 
         $this->view->assign('cur_rubric', $cur_rubric);
 
-        $this->view->assign('rubric_list', $o_catalog->getAllRubric($cur_rubric->getId()));
-        $this->view->assign('productList', $o_catalog->getAllProduct($cur_rubric->getId()));
+        $this->view->assign('rubric_list', EK_Catalog_Rubric::getAllInstance($cur_rubric->getId()));
+        $this->view->assign('productList', EK_Catalog_Product::getAllInstance($cur_rubric->getId(), $this->_city));
         $this->view->assign('path', $cur_rubric->getPathToRubric());
 
         $this->view->assign('attributeTypeList', TM_Attribute_AttributeType::getAllInstance(new EK_Catalog_AttributeTypeMapper()));
@@ -93,7 +95,8 @@ class CatalogController extends Zend_Controller_Action
                 $message = 'Приглашение от друга: ' . "\r\n";
                 $message .= 'Дата: ' . date('d.m.Y') . "\r\n" .
                         'Имя: ' . $share['name'] . "\r\n" .
-                        'Комментарий: ' . $share['text'];
+                        'Комментарий: ' . $share['text'] . "\r\n" .
+                        'Тебе понравиться <a href="http://ekonom.pro/">Ekonom.pro</a>';
 
                 if ($share['email'] != '') {
                     mail($share['email'], 'Приглашение от друга', $message);
@@ -124,6 +127,7 @@ class CatalogController extends Zend_Controller_Action
             $oProduct->setShortText($data['short_text']);
             $oProduct->setFullText($data['full_text']);
             $oProduct->setPrice($data['price']);
+            $oProduct->setOnFirstPage($data['on_first_page']);
 
             try {
                 $oProduct->insertToDb();
@@ -161,6 +165,7 @@ class CatalogController extends Zend_Controller_Action
             $oProduct->setShortText($data['short_text']);
             $oProduct->setFullText($data['full_text']);
             $oProduct->setPrice($data['price']);
+            $oProduct->setOnFirstPage($data['on_first_page']);
 
             foreach ($data['attribute'] as $key => $value) {
                 $oProduct->setAttribute($key, $value);
@@ -323,10 +328,12 @@ class CatalogController extends Zend_Controller_Action
             $oHash->setTitle($data['title']);
             $oHash->setType(TM_Attribute_AttributeTypeFactory::getAttributeTypeById(new EK_Catalog_AttributeTypeMapper(), $data['type_id']));
             $oHash->setValueList($data['list_value']);
+            $oHash->setIsRequired($data['required']);
+            $oHash->setSortOrder($data['sort_order']);
 
             try {
                 $oHash->insertToDb();
-                $this->_redirect('/catalog/viewAttributeHash/');
+                $this->_redirect('/catalog/viewHash/');
             } catch (Exception $e) {
                 $this->view->assign('exception_msg', $e->getMessage());
             }
@@ -347,10 +354,12 @@ class CatalogController extends Zend_Controller_Action
             $oHash->setTitle($data['title']);
             $oHash->setType(TM_Attribute_AttributeTypeFactory::getAttributeTypeById(new EK_Catalog_AttributeTypeMapper(), $data['type_id']));
             $oHash->setValueList($data['list_value']);
+            $oHash->setIsRequired($data['required']);
+            $oHash->setSortOrder($data['sort_order']);
 
             try {
                 $oHash->updateToDb();
-                $this->_redirect('/catalog/viewAttributeHash/');
+                $this->_redirect('/catalog/viewHash/');
             } catch (Exception $e) {
                 $this->view->assign('exception_msg', $e->getMessage());
             }
@@ -366,7 +375,7 @@ class CatalogController extends Zend_Controller_Action
         $oHash = EK_Catalog_Hash::getInstanceById($this->getRequest()->getParam('key'));
         try {
             $oHash->deleteFromDB();
-            $this->_redirect('/catalog/viewAttributeHash/');
+            $this->_redirect('/catalog/viewHash/');
         } catch (Exception $e) {
             throw new Exception($e->getMessage());
         }
@@ -452,7 +461,7 @@ class CatalogController extends Zend_Controller_Action
         $oProduct = EK_Catalog_Product::getInstanceById($this->getRequest()->getParam('idProduct'));
 
         $this->view->assign('commentsList', EK_Comments_Product::getAllInstance($oProduct));
-        $this->view->assign('company', $oProduct);
+        $this->view->assign('product', $oProduct);
         $this->view->assign('cur_rubric', $cur_rubric);
     }
 
@@ -482,6 +491,45 @@ class CatalogController extends Zend_Controller_Action
         $this->view->assign('product', $oProduct);
         //$this->view->assign('cur_rubric', $cur_rubric);
     }
+
+    public function editcommentsAction()
+        {
+            $cur_rubric = EK_Catalog_Rubric::getInstanceById($this->getRequest()->getParam('rubric', 0));
+            $oProduct = EK_Catalog_Product::getInstanceById($this->getRequest()->getParam('idProduct'));
+            $oComments = EK_Comments_Product::getInstanceById($this->getRequest()->getParam('id'));
+
+            if ($this->getRequest()->isPost()) {
+                $data = $this->getRequest()->getParam('data');
+                $oComments->setUser($data['name']);
+                $oComments->setMessage($data['text']);
+                $oComments->setIsModerate($data['is_moderate']);
+
+                try {
+                    $oComments->updateToDb();
+                    $this->_redirect('/catalog/viewComments/idProduct/' . $this->getRequest()->getParam('idProduct') . '/rubric/' . $this->getRequest()->getParam('rubric', 0));
+                } catch (Exception $e) {
+                    $this->view->assign('exception_msg', $e->getMessage());
+                }
+
+            }
+
+            $this->view->assign('comment', $oComments);
+            $this->view->assign('product', $oProduct);
+            $this->view->assign('cur_rubric', $cur_rubric);
+        }
+
+        public function deletecommentsAction()
+        {
+            $oProduct = EK_Catalog_Product::getInstanceById($this->getRequest()->getParam('idProduct'));
+            $oComments = EK_Comments_Product::getInstanceById($this->getRequest()->getParam('id'));
+
+            try {
+                $oComments->deleteFromDB($oProduct);
+                $this->_redirect('/catalog/viewComments/idProduct/' . $this->getRequest()->getParam('idProduct') . '/rubric/' . $this->getRequest()->getParam('rubric', 0));
+            } catch (Exception $e) {
+                throw new Exception($e->getMessage());
+            }
+        }
 }
 
 /*

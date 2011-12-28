@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.0.9, created on 2011-12-27 00:20:51
+<?php /* Smarty version Smarty-3.0.9, created on 2011-12-27 22:47:54
          compiled from "F:\www\ekonom\application/views/scripts\catalog/view-product.ajax.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:136944ef8acf3892569-64980914%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:104514ef9e8aa35c240-45223305%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '50476d9be6c10e4d5566fb6927d6edf719c8a09a' => 
     array (
       0 => 'F:\\www\\ekonom\\application/views/scripts\\catalog/view-product.ajax.tpl',
-      1 => 1324919765,
+      1 => 1325000824,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '136944ef8acf3892569-64980914',
+  'nocache_hash' => '104514ef9e8aa35c240-45223305',
   'function' => 
   array (
   ),
@@ -45,7 +45,8 @@ $_smarty_tpl->decodeProperties(array (
                 <section class="discount clearfix">
                 <?php if ($_smarty_tpl->getVariable('product')->value->searchAttribute('discount')){?>
                     <h5>Скидка: <?php echo $_smarty_tpl->getVariable('product')->value->getAttribute('discount')->value;?>
-</h5>
+<?php if ($_smarty_tpl->getVariable('product')->value->searchAttribute('discount_type')){?><?php echo $_smarty_tpl->getVariable('product')->value->getAttribute('discount_type')->value;?>
+<?php }?></h5>
                 <?php }?>
                     <del class="old-price"><?php echo $_smarty_tpl->getVariable('product')->value->price;?>
  р</del>
@@ -55,45 +56,29 @@ $_smarty_tpl->decodeProperties(array (
                 <?php }?>
                 </section>
 
+                <?php if ($_smarty_tpl->getVariable('commentsList')->value!==false){?>
                 <section class="comments">
                     <h3>Комментарии</h3>
                     <ul class="comments-list">
+                        <?php  $_smarty_tpl->tpl_vars['comment'] = new Smarty_Variable;
+ $_from = $_smarty_tpl->getVariable('commentsList')->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+if ($_smarty_tpl->_count($_from) > 0){
+    foreach ($_from as $_smarty_tpl->tpl_vars['comment']->key => $_smarty_tpl->tpl_vars['comment']->value){
+?>
                         <li>
                             <article class="comment">
-                                <header>Я</header>
+                                <header><?php echo $_smarty_tpl->getVariable('comment')->value->user;?>
+</header>
                                 <div class="content">
-                                    Отличные часы! Только жутко дорого, ага.
-                                </div>
-                            </article>
-                        </li>
-                        <li>
-                            <article class="comment">
-                                <header>Вася Пупкин</header>
-                                <div class="content">
-                                    Да ну нафиг! За такие смешные деньги не бывает швейцарских часов.
-                                </div>
-                            </article>
-                        </li>
-                        <li>
-                            <article class="comment">
-                                <header>Блондинко</header>
-                                <div class="content">
-                                    А мне нравятся парни со стильными часами:)
-                                </div>
-                            </article>
-                        </li>
-                    </ul>
+                                    <?php echo $_smarty_tpl->getVariable('comment')->value->message;?>
 
-                    <div id="paginator">
-                        <a href="/actions?page=1">&larr;</a>
-                        <ul class="pages-list">
-                            <li><a href="/actions?page=1">1</a></li>
-                            <li><a href="/actions?page=2" class="active">2</a></li>
-                            <li><a href="/actions?page=3">3</a></li>
-                        </ul>
-                        <a href="/actions?page=3">&rarr;</a>
-                    </div>
+                                </div>
+                            </article>
+                        </li>
+                        <?php }} ?>
+                    </ul>
                 </section>
+                <?php }?>
             </article>
 
             <aside class="addons">
@@ -154,8 +139,8 @@ if ($_smarty_tpl->tpl_vars['gallery']->total > 0){
                 <a href="<?php echo $_smarty_tpl->getVariable('this')->value->url(array('controller'=>$_smarty_tpl->getVariable('controller')->value,'action'=>'share','idProduct'=>$_smarty_tpl->getVariable('product')->value->id));?>
 " class="button share-with-friend">Поделиться</a>
             </aside>
-
         </div>
+
 
         <div class="controls">
             <div class="clearfix">
@@ -175,7 +160,8 @@ if ($_smarty_tpl->tpl_vars['gallery']->total > 0){
                     <g:plusone></g:plusone>
                 </div>
 
-                <a href="/add-comment.html" class="button add-comment">Комментировать</a>
+                <a href="<?php echo $_smarty_tpl->getVariable('this')->value->url(array('controller'=>$_smarty_tpl->getVariable('controller')->value,'action'=>'addComments','idProduct'=>$_smarty_tpl->getVariable('product')->value->id));?>
+" class="button add-comment">Комментировать</a>
             </div>
         </div>
 
@@ -183,5 +169,6 @@ if ($_smarty_tpl->tpl_vars['gallery']->total > 0){
         <div id="form-placeholder">
 
         </div>
+
     </div>
 </div>

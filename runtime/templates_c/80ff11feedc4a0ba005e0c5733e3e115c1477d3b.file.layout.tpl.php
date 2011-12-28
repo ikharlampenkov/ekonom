@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.0.9, created on 2011-12-26 22:56:48
+<?php /* Smarty version Smarty-3.0.9, created on 2011-12-27 23:32:42
          compiled from "F:\www\ekonom\application/layouts/scripts\layout.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:62904ef899407893f6-21413588%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:112954ef9f32ae54f38-85092250%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '80ff11feedc4a0ba005e0c5733e3e115c1477d3b' => 
     array (
       0 => 'F:\\www\\ekonom\\application/layouts/scripts\\layout.tpl',
-      1 => 1324915000,
+      1 => 1325003560,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '62904ef899407893f6-21413588',
+  'nocache_hash' => '112954ef9f32ae54f38-85092250',
   'function' => 
   array (
   ),
@@ -124,35 +124,7 @@ $_template->assign('subrubric',$_smarty_tpl->getVariable('rubric')->value->getCh
                                 </ul>
                             <?php }?>
                         </li>
-
                     <?php }} ?>
-                        <li><a href="/companies/auto">Автомобили</a></li>
-                        <li>
-                            <a href="/companies/clothes">Одежда</a>
-                            <ul class="submenu second-level">
-                                <li>
-                                    <a href="/companies/clothes/men">Мужская одежда</a>
-                                    <ul class="submenu third-level">
-                                        <li><a href="/companies/clothes/teenagers/shoes">Обувь</a></li>
-                                        <li><a href="/companies/clothes/teenagers/jeans">Джинсы</a></li>
-                                        <li><a href="/companies/clothes/teenagers/sports">Спортивная одежда</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="/companies/clothes/women">Женская одежда</a></li>
-                                <li><a href="/companies/clothes/children">Детская одежда</a></li>
-                                <li>
-                                    <a href="/companies/clothes/teenagers">Одежда для подростков</a>
-                                    <ul class="submenu third-level">
-                                        <li><a href="/companies/clothes/teenagers/shoes">Обувь</a></li>
-                                        <li><a href="/companies/clothes/teenagers/jeans">Джинсы</a></li>
-                                        <li><a href="/companies/clothes/teenagers/sports">Спортивная одежда</a></li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </li>
-                        <li><a href="/companies/household">Бытовая техника</a></li>
-                        <li><a href="/companies/computers">Компьютеры</a></li>
-                        <li><a href="/companies/food">Продукты питания</a></li>
                     </ul>
                 </li>
             <?php $_smarty_tpl->smarty->_tag_stack[] = array('if_allowed', array('resource'=>"company/index")); $_block_repeat=true; smarty_block_if_allowed(array('resource'=>"company/index"), null, $_smarty_tpl, $_block_repeat);while ($_block_repeat) { ob_start();?>
@@ -187,11 +159,6 @@ $_template->assign('subrubric',$_smarty_tpl->getVariable('rubric')->value->getCh
                 <li><a href="/city/">Города</a></li>
             <?php $_block_content = ob_get_clean(); $_block_repeat=false; echo smarty_block_if_allowed(array('resource'=>"city/index"), $_block_content, $_smarty_tpl, $_block_repeat);  } array_pop($_smarty_tpl->smarty->_tag_stack);?>
 
-            <?php $_smarty_tpl->smarty->_tag_stack[] = array('if_allowed', array('resource'=>"catalog/index")); $_block_repeat=true; smarty_block_if_allowed(array('resource'=>"catalog/index"), null, $_smarty_tpl, $_block_repeat);while ($_block_repeat) { ob_start();?>
-
-                <li><a href="/catalog/">Каталог</a></li>
-            <?php $_block_content = ob_get_clean(); $_block_repeat=false; echo smarty_block_if_allowed(array('resource'=>"catalog/index"), $_block_content, $_smarty_tpl, $_block_repeat);  } array_pop($_smarty_tpl->smarty->_tag_stack);?>
-
             <?php $_smarty_tpl->smarty->_tag_stack[] = array('if_allowed', array('resource'=>"contentPage/index")); $_block_repeat=true; smarty_block_if_allowed(array('resource'=>"contentPage/index"), null, $_smarty_tpl, $_block_repeat);while ($_block_repeat) { ob_start();?>
 
                 <li><a href="/contentPage/">Контентные страницы</a></li>
@@ -216,7 +183,31 @@ $_template->assign('subrubric',$_smarty_tpl->getVariable('rubric')->value->getCh
     <div id="footer-inner" class="clearfix">
         <p id="copyright">Ekonom.pro &copy; 2011</p>
 
-        <p id="conditions"><a href="/conditions">Общие условия пользования сайтом</a></p>
+        <p id="conditions">
+            <a href="/conditions">Общие условия пользования сайтом</a><br/>
+
+            <!-- Yandex.Metrika informer -->
+            <a href="http://metrika.yandex.ru/stat/?id=11564479&amp;from=informer"
+            target="_blank" rel="nofollow"><img src="//bs.yandex.ru/informer/11564479/3_0_FFFFFFFF_EFEFEFFF_0_pageviews"
+            style="width:88px; height:31px; border:0;" alt="Яндекс.Метрика" title="Яндекс.Метрика: данные за сегодня (просмотры, визиты и уникальные посетители)" onclick="try { Ya.Metrika.informer( { i:this,id:11564479,type:0,lang:'ru' } );return false } catch(e) { } "/></a>
+            <!-- /Yandex.Metrika informer -->
+
+            <!-- Yandex.Metrika counter -->
+            <div style="display:none;"><script type="text/javascript">
+            (function(w, c) {
+                (w[c] = w[c] || []).push(function() {
+                    try {
+                        w.yaCounter11564479 = new Ya.Metrika( { id:11564479, enableAll: true, trackHash:true, webvisor:true } );
+                    }
+                    catch(e) { }
+                });
+            })(window, "yandex_metrika_callbacks");
+            </script></div>
+            <script src="//mc.yandex.ru/metrika/watch.js" type="text/javascript" defer="defer"></script>
+            <noscript><div><img src="//mc.yandex.ru/watch/11564479" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+            <!-- /Yandex.Metrika counter -->
+
+        </p>
 
         <div id="phone" class="nobr">+7 (3842) 33-86-86</div>
     </div>

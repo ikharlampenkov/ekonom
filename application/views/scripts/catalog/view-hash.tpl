@@ -3,7 +3,7 @@
 
 <table width="100%">
     <tr>
-        <td class="ttovar" align="center" colspan="4">
+        <td class="ttovar" align="center" colspan="6">
             <img src="/i/add.png"/>&nbsp;<a href="{$this->url(['controller' => $controller,'action' => 'addAttributeHash'])}">добавить</a></td>
     </tr>
 
@@ -13,6 +13,8 @@
             <td class="ttovar">{$attributeHash->title}</td>
             <td class="ttovar">{$attributeHash->attributeKey}</td>
             <td class="ttovar">{$attributeHash->type->title}</td>
+            <td class="ttovar">{$attributeHash->isRequired}</td>
+            <td class="ttovar">{$attributeHash->sortOrder}</td>
             <td class="tedit">
                 <img src="/i/edit.png"/>&nbsp;<a href="{$this->url(['controller' => $controller,'action' => 'editAttributeHash', 'key' => $attributeHash->attributeKey])}">редактировать</a><br/>
                 <img src="/i/delete.png"/>&nbsp;<a href="{$this->url(['controller' => $controller,'action' => 'deleteAttributeHash', 'key' => $attributeHash->attributeKey])}" onclick="return confirmDelete('{$attributeHash->title}');" style="color: #830000">удалить</a>
