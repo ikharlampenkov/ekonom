@@ -264,3 +264,4 @@ class CompanyController extends Zend_Controller_Action
 
 }
 
+?>

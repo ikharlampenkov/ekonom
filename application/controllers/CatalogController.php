@@ -115,7 +115,7 @@ class CatalogController extends Zend_Controller_Action
         $cur_rubric = EK_Catalog_Rubric::getInstanceById($this->getRequest()->getParam('rubric', 0));
         $oProduct = new EK_Catalog_Product();
         $oProduct->setRubric($cur_rubric);
-        $oProduct->setCompany(EK_Company_Company::getInstanceById(1));
+        $oProduct->setCompany(EK_Company_Company::getInstanceById(4));
 
 
         if ($this->getRequest()->isPost()) {

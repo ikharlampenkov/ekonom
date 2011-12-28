@@ -1,11 +1,15 @@
+
+{if $bannerList!==false}
 <div id="slider">
 
     <ul id="slides">
+        {foreach from=$bannerList item=banner}
         <li class="slide">
-            <img src="/uploads/slide1.jpg" alt="Слайд №2">
+            <img src="/banners/{$banner->getBanner()->img->getName()}" alt="{$banner->getBanner()->title}">
 
-            <p class="description"><a href="http://yandex.ru">Абонемент на 1 занятие в неделю в спорткомплексе Олимпийский</a>.</p>
+            <p class="description"><a href="http://{$banner->getBanner()->link}">{$banner->getBanner()->title}</a></p>
         </li>
+        {/foreach}
         <li class="slide">
             <img src="/uploads/slide1.jpg" alt="Слайд №1">
 
@@ -16,7 +20,9 @@
     <a href="#next" class="next"></a>
 
     <div id="shadow"></div>
+
 </div>
+{/if}
 
 
 <article id="main-content">

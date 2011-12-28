@@ -123,6 +123,9 @@
             {if_allowed resource="contentPage/index"}
                 <li><a href="/contentPage/">Контентные страницы</a></li>
             {/if_allowed}
+            {if_allowed resource="banner/index"}
+                <li><a href="/banner/">Баннеры</a></li>
+            {/if_allowed}
             {if_allowed resource="user/index"}
                 <li><a href="/user/">Пользователи</a></li>
             {/if_allowed}
@@ -150,24 +153,29 @@
 
             <!-- Yandex.Metrika informer -->
             <a href="http://metrika.yandex.ru/stat/?id=11564479&amp;from=informer"
-            target="_blank" rel="nofollow"><img src="//bs.yandex.ru/informer/11564479/3_0_FFFFFFFF_EFEFEFFF_0_pageviews"
-            style="width:88px; height:31px; border:0;" alt="Яндекс.Метрика" title="Яндекс.Метрика: данные за сегодня (просмотры, визиты и уникальные посетители)" onclick="try { Ya.Metrika.informer( { i:this,id:11564479,type:0,lang:'ru' } );return false } catch(e) { } "/></a>
+               target="_blank" rel="nofollow"><img src="//bs.yandex.ru/informer/11564479/3_0_FFFFFFFF_EFEFEFFF_0_pageviews"
+                                                   style="width:88px; height:31px; border:0;" alt="Яндекс.Метрика" title="Яндекс.Метрика: данные за сегодня (просмотры, визиты и уникальные посетители)" onclick="try { Ya.Metrika.informer( { i:this,id:11564479,type:0,lang:'ru' } );return false } catch(e) { } "/></a>
             <!-- /Yandex.Metrika informer -->
 
             <!-- Yandex.Metrika counter -->
-            <div style="display:none;"><script type="text/javascript">
-            (function(w, c) {
+
+        <div style="display:none;">
+            <script type="text/javascript">
+                (function (w, c) {
                 (w[c] = w[c] || []).push(function() {
-                    try {
-                        w.yaCounter11564479 = new Ya.Metrika( { id:11564479, enableAll: true, trackHash:true, webvisor:true } );
-                    }
-                    catch(e) { }
+                try {
+                w.yaCounter11564479 = new Ya.Metrika( { id:11564479, enableAll: true, trackHash:true, webvisor:true } );
+                }
+                catch(e) { }
                 });
-            })(window, "yandex_metrika_callbacks");
-            </script></div>
-            <script src="//mc.yandex.ru/metrika/watch.js" type="text/javascript" defer="defer"></script>
-            <noscript><div><img src="//mc.yandex.ru/watch/11564479" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-            <!-- /Yandex.Metrika counter -->
+                })(window, "yandex_metrika_callbacks");
+            </script>
+        </div>
+        <script src="//mc.yandex.ru/metrika/watch.js" type="text/javascript" defer="defer"></script>
+        <noscript>
+            <div><img src="//mc.yandex.ru/watch/11564479" style="position:absolute; left:-9999px;" alt=""/></div>
+        </noscript>
+        <!-- /Yandex.Metrika counter -->
 
         </p>
 
