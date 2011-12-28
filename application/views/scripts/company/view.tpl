@@ -135,10 +135,13 @@
 </article>
 
 <aside id="sidebar">
+{if $bannerList!==false}
+    {foreach from=$bannerList item=banner}
     <section id="adv">
-        <a href="http://yandex.ru">
-            <img src="/uploads/banner.jpg" width="187" height="357"/>
+        <a href="http://{$banner->getBanner()->link}">
+            <img src="/banners/{$banner->getBanner()->img->getName()}" width="187" height="357" alt="{$banner->getBanner()->title}"/>
         </a>
     </section>
+    {/foreach}
+{/if}
 </aside>
-
