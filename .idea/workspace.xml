@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7151d89e-e84a-4788-b442-a723b5b4a6eb" name="New changelist" comment="Интеллектуальное изменение размеров фото">
+    <list default="true" id="7151d89e-e84a-4788-b442-a723b5b4a6eb" name="New changelist" comment="Баннеры">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/~Documents/model.mwb.bak" afterPath="$PROJECT_DIR$/~Documents/model.mwb.bak" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/~Documents/model.mwb" afterPath="$PROJECT_DIR$/~Documents/model.mwb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/CompanyController.php" afterPath="$PROJECT_DIR$/application/controllers/CompanyController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/IndexController.php" afterPath="$PROJECT_DIR$/application/controllers/IndexController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/scripts/company/view.tpl" afterPath="$PROJECT_DIR$/application/views/scripts/company/view.tpl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/~Documents/ekonom_pro_db.sql" afterPath="$PROJECT_DIR$/~Documents/ekonom_pro_db.sql" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/scripts/index/index.tpl" afterPath="$PROJECT_DIR$/application/views/scripts/index/index.tpl" />
     </list>
     <ignored path="ekonom.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -30,16 +33,16 @@
       <file leaf-file-name="index.tpl" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/views/scripts/index/index.tpl">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="5" selection-start="1" selection-end="770" vertical-scroll-proportion="-15.692307">
+            <state line="95" column="0" selection-start="3393" selection-end="3393" vertical-scroll-proportion="-16.423077">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="view.tpl" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="view.tpl" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/views/scripts/company/view.tpl">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="146" column="8" selection-start="5550" selection-end="5550" vertical-scroll-proportion="-28.192308">
+            <state line="52" column="17" selection-start="2409" selection-end="2409" vertical-scroll-proportion="0.716141">
               <folding />
             </state>
           </provider>
@@ -48,16 +51,16 @@
       <file leaf-file-name="IndexController.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/controllers/IndexController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="88" selection-start="590" selection-end="725" vertical-scroll-proportion="0.0">
+            <state line="27" column="43" selection-start="975" selection-end="975" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CompanyController.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="CompanyController.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/controllers/CompanyController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="38" column="52" selection-start="1426" selection-end="1426" vertical-scroll-proportion="0.33097345">
+            <state line="42" column="45" selection-start="1619" selection-end="1619" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -99,8 +102,8 @@
         <option value="$PROJECT_DIR$/application/models/EK/Banner/PlaceMark.php" />
         <option value="$PROJECT_DIR$/application/controllers/IndexController.php" />
         <option value="$PROJECT_DIR$/application/views/scripts/index/index.tpl" />
-        <option value="$PROJECT_DIR$/application/views/scripts/company/view.tpl" />
         <option value="$PROJECT_DIR$/application/controllers/CompanyController.php" />
+        <option value="$PROJECT_DIR$/application/views/scripts/company/view.tpl" />
       </list>
     </option>
   </component>
@@ -986,8 +989,8 @@
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="true" />
     <property name="options.lastSelected" value="reference.webide.settings.project.settings.php" />
-    <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="PublishConfig" serverName="ftp.ekonom.nichost.ru" serverId="3e210fe7-de3e-44a8-a89f-902305fafa1d" autoUpload="true">
     <servers>
@@ -1099,7 +1102,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32925472" sideWeight="0.0" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.38408118" sideWeight="0.67074525" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3888889" sideWeight="0.67074525" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="DB Browser" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1149,7 +1152,7 @@
     <option name="INCLUDE_TEXT_INTO_SHELF" value="false" />
     <option name="CREATE_PATCH_EXPAND_DETAILS_DEFAULT" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Интеллектуальное изменение размеров фото" />
+    <option name="LAST_COMMIT_MESSAGE" value="Баннеры" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -1178,6 +1181,7 @@
     <MESSAGE value="New changelist" />
     <MESSAGE value="Merge branch 'master' of github.com:ikharlampenkov/ekonom&#10;&#10;Conflicts:&#10;&#9;.idea/workspace.xml&#10;" />
     <MESSAGE value="Интеллектуальное изменение размеров фото" />
+    <MESSAGE value="Баннеры" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1185,112 +1189,88 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/application/views/scripts/banner/edit-place.tpl">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="33" selection-start="33" selection-end="33" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="0" column="33" selection-start="33" selection-end="33" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/scripts/banner/view-place.tpl">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="88" selection-start="711" selection-end="711" vertical-scroll-proportion="-8.16">
-          <folding />
-        </state>
+        <state line="24" column="88" selection-start="711" selection-end="711" vertical-scroll-proportion="-8.16" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/models/TM/Acl/UserAcl.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="117" column="5" selection-start="1383" selection-end="1857" vertical-scroll-proportion="0.6498856">
-          <folding />
-        </state>
+        <state line="117" column="5" selection-start="1383" selection-end="1857" vertical-scroll-proportion="0.6498856" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/models/EK/Acl/CompanyAcl.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="150" column="5" selection-start="1599" selection-end="3802" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="150" column="5" selection-start="1599" selection-end="3802" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/models/EK/Banner/Place.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="12" selection-start="490" selection-end="537" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="20" column="12" selection-start="490" selection-end="537" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/scripts/banner/index.tpl">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="0" selection-start="303" selection-end="526" vertical-scroll-proportion="0.25987262">
-          <folding />
-        </state>
+        <state line="12" column="0" selection-start="303" selection-end="526" vertical-scroll-proportion="0.25987262" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/BannerController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="146" column="7" selection-start="4257" selection-end="4257" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="146" column="7" selection-start="4257" selection-end="4257" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/scripts/banner/placemark.tpl">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="146" selection-start="836" selection-end="836" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="18" column="146" selection-start="836" selection-end="836" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/scripts/catalog/add.tpl">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="92" selection-start="874" selection-end="874" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="16" column="92" selection-start="874" selection-end="874" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/CatalogController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="117" column="67" selection-start="4657" selection-end="4657" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="117" column="67" selection-start="4657" selection-end="4657" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/scripts/company/show-acl.tpl">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="1663" vertical-scroll-proportion="-0.0">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="1663" vertical-scroll-proportion="-0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/models/EK/Banner/PlaceMark.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="146" column="74" selection-start="3074" selection-end="3074" vertical-scroll-proportion="0.0">
+        <state line="146" column="74" selection-start="3074" selection-end="3074" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/IndexController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="43" selection-start="975" selection-end="975" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/scripts/index/index.tpl">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="5" selection-start="1" selection-end="770" vertical-scroll-proportion="-15.692307">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/scripts/company/view.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="146" column="8" selection-start="5550" selection-end="5550" vertical-scroll-proportion="-28.192308">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/IndexController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="88" selection-start="590" selection-end="725" vertical-scroll-proportion="0.0">
+        <state line="95" column="0" selection-start="3393" selection-end="3393" vertical-scroll-proportion="-16.423077">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/CompanyController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="52" selection-start="1426" selection-end="1426" vertical-scroll-proportion="0.33097345">
+        <state line="42" column="45" selection-start="1619" selection-end="1619" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/scripts/company/view.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="52" column="17" selection-start="2409" selection-end="2409" vertical-scroll-proportion="0.716141">
           <folding />
         </state>
       </provider>

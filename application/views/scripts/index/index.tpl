@@ -1,14 +1,13 @@
-
 {if $bannerList!==false}
 <div id="slider">
 
     <ul id="slides">
         {foreach from=$bannerList item=banner}
-        <li class="slide">
-            <img src="/banners/{$banner->getBanner()->img->getName()}" alt="{$banner->getBanner()->title}">
+            <li class="slide">
+                <img src="/banners/{$banner->getBanner()->img->getName()}" alt="{$banner->getBanner()->title}">
 
-            <p class="description"><a href="http://{$banner->getBanner()->link}">{$banner->getBanner()->title}</a></p>
-        </li>
+                <p class="description"><a href="http://{$banner->getBanner()->link}">{$banner->getBanner()->title}</a></p>
+            </li>
         {/foreach}
         <li class="slide">
             <img src="/uploads/slide1.jpg" alt="Слайд №1">
@@ -80,12 +79,21 @@
 
     <aside>
         <div id="banners" class="clearfix">
-            <div class="banner size490_84">
-                <a href="http://yandex.ru"><img src="/uploads/banner.png"/></a>
-            </div>
-            <div class="banner size490_84">
-                <a href="http://yandex.ru"><img src="/uploads/banner.png"/></a>
-            </div>
+        {if $bannerListLeft!==false}
+            {foreach from=$bannerListLeft item=banner}
+                <div class="banner size490_84">
+                    <a href="http://{$banner->getBanner()->link}"><img src="/banners/{$banner->getBanner()->img->getName()}"/></a>
+                </div>
+            {/foreach}
+        {/if}
+        {if $bannerListRight!==false}
+            {foreach from=$bannerListRight item=banner}
+                <div class="banner size490_84">
+                    <a href="http://{$banner->getBanner()->link}"><img src="/banners/{$banner->getBanner()->img->getName()}"/></a>
+                </div>
+            {/foreach}
+        {/if}
+
         </div>
 
         <div id="share">

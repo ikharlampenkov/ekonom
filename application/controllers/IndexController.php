@@ -20,6 +20,12 @@ class IndexController extends Zend_Controller_Action
 
         $oPlace = EK_Banner_Place::getInstanceById(1);
         $this->view->assign('bannerList', EK_Banner_PlaceMark::getAllInstance($oPlace));
+
+        $oPlace = EK_Banner_Place::getInstanceById(4);
+        $this->view->assign('bannerListRight', EK_Banner_PlaceMark::getAllInstance($oPlace));
+
+        $oPlace = EK_Banner_Place::getInstanceById(5);
+        $this->view->assign('bannerListLeft', EK_Banner_PlaceMark::getAllInstance($oPlace));
     }
 
     public function choosecityAction()
