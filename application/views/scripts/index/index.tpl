@@ -9,11 +9,6 @@
                 <p class="description"><a href="http://{$banner->getBanner()->link}">{$banner->getBanner()->title}</a></p>
             </li>
         {/foreach}
-        <li class="slide">
-            <img src="/uploads/slide1.jpg" alt="Слайд №1">
-
-            <p class="description"><a href="http://google.ru">Абонемент на 2 занятие в неделю в спорткомплексе Олимпийский</a>.</p>
-        </li>
     </ul>
     <a href="#previous" class="previous"></a>
     <a href="#next" class="next"></a>
