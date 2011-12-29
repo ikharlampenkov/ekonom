@@ -291,7 +291,7 @@ class EK_Catalog_Product
 
             $fileName = $this->_img->download('img');
             if ($fileName !== false) {
-                $this->_img->createPreview();
+                $this->_img->createPreview(190, 110);
                 $this->_db->query('UPDATE product SET img="' . $fileName . '" WHERE id=' . $this->_id);
             }
         } catch (Exception $e) {
@@ -312,7 +312,7 @@ class EK_Catalog_Product
 
             $fileName = $this->_img->download('img');
             if ($fileName !== false) {
-                $this->_img->createPreview();
+                $this->_img->createPreview(190, 110);
                 $this->_db->query('UPDATE product SET img="' . $fileName . '" WHERE id=' . $this->_id);
             }
         } catch (Exception $e) {
@@ -345,11 +345,16 @@ class EK_Catalog_Product
         }
     }
 
-    public static function getAllInstance($rubric_id)
+    public static function getAllInstance($rubric_id, $city=1)
     {
         try {
             $db = StdLib_DB::getInstance();
-            $result = $db->query('SELECT * FROM product WHERE company_id=' . $rubric_id, StdLib_DB::QUERY_MOD_ASSOC);
+            $sql = 'SELECT product.id AS id, product.title AS title, product_rubric_id, product.img, short_text, full_text, on_first_page, price, company_id
+                    FROM product, company
+                    WHERE product.company_id=company.id
+                      AND city_id=' . $city . '
+                      AND product_rubric_id=' . $rubric_id;
+            $result = $db->query($sql, StdLib_DB::QUERY_MOD_ASSOC);
             if (isset($result[0])) {
                 $productArray = array();
                 foreach ($result as $value) {
@@ -367,7 +372,7 @@ class EK_Catalog_Product
     {
         try {
             $db = StdLib_DB::getInstance();
-            $sql = 'SELECT *
+            $sql = 'SELECT product.id AS id, product.title AS title, product_rubric_id, product.img, short_text, full_text, on_first_page, price, company_id
                     FROM product, company
                     WHERE product.company_id=company.id
                       AND city_id=' . $city . '

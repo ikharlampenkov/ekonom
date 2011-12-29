@@ -38,8 +38,8 @@ class CatalogController extends Zend_Controller_Action
 
         $this->view->assign('cur_rubric', $cur_rubric);
 
-        $this->view->assign('rubric_list', $o_catalog->getAllRubric($cur_rubric->getId()));
-        $this->view->assign('productList', $o_catalog->getAllProduct($cur_rubric->getId()));
+        $this->view->assign('rubric_list', EK_Catalog_Rubric::getAllInstance($cur_rubric->getId()));
+        $this->view->assign('productList', EK_Catalog_Product::getAllInstance($cur_rubric->getId(), $this->_city));
         $this->view->assign('path', $cur_rubric->getPathToRubric());
 
         $this->view->assign('attributeTypeList', TM_Attribute_AttributeType::getAllInstance(new EK_Catalog_AttributeTypeMapper()));
@@ -115,7 +115,7 @@ class CatalogController extends Zend_Controller_Action
         $cur_rubric = EK_Catalog_Rubric::getInstanceById($this->getRequest()->getParam('rubric', 0));
         $oProduct = new EK_Catalog_Product();
         $oProduct->setRubric($cur_rubric);
-        $oProduct->setCompany(EK_Company_Company::getInstanceById(1));
+        $oProduct->setCompany(EK_Company_Company::getInstanceById(4));
 
 
         if ($this->getRequest()->isPost()) {

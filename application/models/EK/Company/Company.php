@@ -205,7 +205,7 @@ class EK_Company_Company
     public function __construct()
     {
         $this->_db = StdLib_DB::getInstance();
-        $this->_file = new TM_FileManager_File(Zend_Registry::get('production')->files->path);
+        $this->_file = new TM_FileManager_Image(Zend_Registry::get('production')->files->path);
     } // end of member function __construct
 
     /**
@@ -226,6 +226,7 @@ class EK_Company_Company
 
             $fName = $this->_file->download('file');
             if ($fName !== false) {
+                $this->_file->createPreview(190, 110);
                 $sql = 'UPDATE company SET file="' . $fName . '" WHERE id=' . $this->_id;
                 $this->_db->query($sql);
             }
@@ -255,6 +256,7 @@ class EK_Company_Company
 
             $fName = $this->_file->download('file');
             if ($fName !== false) {
+                $this->_file->createPreview(190, 110);
                 $sql = 'UPDATE company SET file="' . $fName . '" WHERE id=' . $this->_id;
                 $this->_db->query($sql);
             }
@@ -528,3 +530,4 @@ class EK_Company_Company
     */
 
 }
+?>

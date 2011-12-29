@@ -17,7 +17,7 @@
             {if_object_allowed type="{$controller|capitalize}" object="{$company}" priv="moderate"}
                 <li>
                     <h3><a href="{$this->url(['controller' => $controller,'action' => 'view', 'id' => $company->id])}" class="various fancybox.ajax">{$company->title}</a></h3>
-                    <a href="{$this->url(['controller' => $controller,'action' => 'view', 'id' => $company->id])}" class="various fancybox.ajax"><img src="/files/{$company->file->getName()}" alt="{$company->title}"></a>
+                    <a href="{$this->url(['controller' => $controller,'action' => 'view', 'id' => $company->id])}" class="various fancybox.ajax"><img src="{if $company->file->getName()}/files/{$company->file->getPreview()}{else}/i/no_foto.png{/if}" alt="{$company->title}"></a>
 
                     {if_allowed resource="{$controller}/edit"}
                     <div class="discount">A</div>

@@ -1,41 +1,49 @@
-<?php /* Smarty version Smarty-3.0.9, created on 2011-12-27 23:04:40
+<?php /* Smarty version Smarty-3.0.9, created on 2011-12-29 21:16:15
          compiled from "F:\www\ekonom\application/views/scripts\index/index.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:223704ef9ec98464bf4-24939972%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:36784efc762f2aa072-51190285%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '94b43447258ea62d6154766d1bbba1c4afdc3e80' => 
     array (
       0 => 'F:\\www\\ekonom\\application/views/scripts\\index/index.tpl',
-      1 => 1325001876,
+      1 => 1325167932,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '223704ef9ec98464bf4-24939972',
+  'nocache_hash' => '36784efc762f2aa072-51190285',
   'function' => 
   array (
   ),
   'has_nocache_code' => false,
 )); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_smarty_tpl->getVariable('bannerList')->value!==false){?>
 <div id="slider">
 
     <ul id="slides">
-        <li class="slide">
-            <img src="/uploads/slide1.jpg" alt="Слайд №2">
+        <?php  $_smarty_tpl->tpl_vars['banner'] = new Smarty_Variable;
+ $_from = $_smarty_tpl->getVariable('bannerList')->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+if ($_smarty_tpl->_count($_from) > 0){
+    foreach ($_from as $_smarty_tpl->tpl_vars['banner']->key => $_smarty_tpl->tpl_vars['banner']->value){
+?>
+            <li class="slide">
+                <img src="/banners/<?php echo $_smarty_tpl->getVariable('banner')->value->getBanner()->img->getName();?>
+" alt="<?php echo $_smarty_tpl->getVariable('banner')->value->getBanner()->title;?>
+">
 
-            <p class="description"><a href="http://yandex.ru">Абонемент на 1 занятие в неделю в спорткомплексе Олимпийский</a>.</p>
-        </li>
-        <li class="slide">
-            <img src="/uploads/slide1.jpg" alt="Слайд №1">
-
-            <p class="description"><a href="http://google.ru">Абонемент на 2 занятие в неделю в спорткомплексе Олимпийский</a>.</p>
-        </li>
+                <p class="description"><a href="http://<?php echo $_smarty_tpl->getVariable('banner')->value->getBanner()->link;?>
+"><?php echo $_smarty_tpl->getVariable('banner')->value->getBanner()->title;?>
+</a></p>
+            </li>
+        <?php }} ?>
     </ul>
     <a href="#previous" class="previous"></a>
     <a href="#next" class="next"></a>
 
     <div id="shadow"></div>
+
 </div>
+<?php }?>
 
 
 <article id="main-content">
@@ -92,12 +100,33 @@ if ($_smarty_tpl->_count($_from) > 0){
 
     <aside>
         <div id="banners" class="clearfix">
-            <div class="banner size490_84">
-                <a href="http://yandex.ru"><img src="/uploads/banner.png"/></a>
-            </div>
-            <div class="banner size490_84">
-                <a href="http://yandex.ru"><img src="/uploads/banner.png"/></a>
-            </div>
+        <?php if ($_smarty_tpl->getVariable('bannerListLeft')->value!==false){?>
+            <?php  $_smarty_tpl->tpl_vars['banner'] = new Smarty_Variable;
+ $_from = $_smarty_tpl->getVariable('bannerListLeft')->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+if ($_smarty_tpl->_count($_from) > 0){
+    foreach ($_from as $_smarty_tpl->tpl_vars['banner']->key => $_smarty_tpl->tpl_vars['banner']->value){
+?>
+                <div class="banner size490_84">
+                    <a href="http://<?php echo $_smarty_tpl->getVariable('banner')->value->getBanner()->link;?>
+"><img src="/banners/<?php echo $_smarty_tpl->getVariable('banner')->value->getBanner()->img->getName();?>
+"/></a>
+                </div>
+            <?php }} ?>
+        <?php }?>
+        <?php if ($_smarty_tpl->getVariable('bannerListRight')->value!==false){?>
+            <?php  $_smarty_tpl->tpl_vars['banner'] = new Smarty_Variable;
+ $_from = $_smarty_tpl->getVariable('bannerListRight')->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+if ($_smarty_tpl->_count($_from) > 0){
+    foreach ($_from as $_smarty_tpl->tpl_vars['banner']->key => $_smarty_tpl->tpl_vars['banner']->value){
+?>
+                <div class="banner size490_84">
+                    <a href="http://<?php echo $_smarty_tpl->getVariable('banner')->value->getBanner()->link;?>
+"><img src="/banners/<?php echo $_smarty_tpl->getVariable('banner')->value->getBanner()->img->getName();?>
+"/></a>
+                </div>
+            <?php }} ?>
+        <?php }?>
+
         </div>
 
         <div id="share">

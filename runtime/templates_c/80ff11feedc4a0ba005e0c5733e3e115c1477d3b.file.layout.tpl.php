@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.0.9, created on 2011-12-27 23:32:42
+<?php /* Smarty version Smarty-3.0.9, created on 2011-12-29 21:24:51
          compiled from "F:\www\ekonom\application/layouts/scripts\layout.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:112954ef9f32ae54f38-85092250%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:301164efc7833eed3b1-30686294%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '80ff11feedc4a0ba005e0c5733e3e115c1477d3b' => 
     array (
       0 => 'F:\\www\\ekonom\\application/layouts/scripts\\layout.tpl',
-      1 => 1325003560,
+      1 => 1325168556,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '112954ef9f32ae54f38-85092250',
+  'nocache_hash' => '301164efc7833eed3b1-30686294',
   'function' => 
   array (
   ),
@@ -35,6 +35,7 @@ $_smarty_tpl->decodeProperties(array (
 
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
     <script type="text/javascript" language="javascript" src="/js/jquery-ui.js"></script>
+    <script type="text/javascript" language="javascript" src="/js/jquery.timers.js"></script>
 
     <!-- fancybox assets -->
     <script type="text/javascript" src="/fancybox/lib/jquery.mousewheel-3.0.6.pack.js"></script>
@@ -164,6 +165,11 @@ $_template->assign('subrubric',$_smarty_tpl->getVariable('rubric')->value->getCh
                 <li><a href="/contentPage/">Контентные страницы</a></li>
             <?php $_block_content = ob_get_clean(); $_block_repeat=false; echo smarty_block_if_allowed(array('resource'=>"contentPage/index"), $_block_content, $_smarty_tpl, $_block_repeat);  } array_pop($_smarty_tpl->smarty->_tag_stack);?>
 
+            <?php $_smarty_tpl->smarty->_tag_stack[] = array('if_allowed', array('resource'=>"banner/index")); $_block_repeat=true; smarty_block_if_allowed(array('resource'=>"banner/index"), null, $_smarty_tpl, $_block_repeat);while ($_block_repeat) { ob_start();?>
+
+                <li><a href="/banner/">Баннеры</a></li>
+            <?php $_block_content = ob_get_clean(); $_block_repeat=false; echo smarty_block_if_allowed(array('resource'=>"banner/index"), $_block_content, $_smarty_tpl, $_block_repeat);  } array_pop($_smarty_tpl->smarty->_tag_stack);?>
+
             <?php $_smarty_tpl->smarty->_tag_stack[] = array('if_allowed', array('resource'=>"user/index")); $_block_repeat=true; smarty_block_if_allowed(array('resource'=>"user/index"), null, $_smarty_tpl, $_block_repeat);while ($_block_repeat) { ob_start();?>
 
                 <li><a href="/user/">Пользователи</a></li>
@@ -188,24 +194,29 @@ $_template->assign('subrubric',$_smarty_tpl->getVariable('rubric')->value->getCh
 
             <!-- Yandex.Metrika informer -->
             <a href="http://metrika.yandex.ru/stat/?id=11564479&amp;from=informer"
-            target="_blank" rel="nofollow"><img src="//bs.yandex.ru/informer/11564479/3_0_FFFFFFFF_EFEFEFFF_0_pageviews"
-            style="width:88px; height:31px; border:0;" alt="Яндекс.Метрика" title="Яндекс.Метрика: данные за сегодня (просмотры, визиты и уникальные посетители)" onclick="try { Ya.Metrika.informer( { i:this,id:11564479,type:0,lang:'ru' } );return false } catch(e) { } "/></a>
+               target="_blank" rel="nofollow"><img src="//bs.yandex.ru/informer/11564479/3_0_FFFFFFFF_EFEFEFFF_0_pageviews"
+                                                   style="width:88px; height:31px; border:0;" alt="Яндекс.Метрика" title="Яндекс.Метрика: данные за сегодня (просмотры, визиты и уникальные посетители)" onclick="try { Ya.Metrika.informer( { i:this,id:11564479,type:0,lang:'ru' } );return false } catch(e) { } "/></a>
             <!-- /Yandex.Metrika informer -->
 
             <!-- Yandex.Metrika counter -->
-            <div style="display:none;"><script type="text/javascript">
-            (function(w, c) {
+
+        <div style="display:none;">
+            <script type="text/javascript">
+                (function (w, c) {
                 (w[c] = w[c] || []).push(function() {
-                    try {
-                        w.yaCounter11564479 = new Ya.Metrika( { id:11564479, enableAll: true, trackHash:true, webvisor:true } );
-                    }
-                    catch(e) { }
+                try {
+                w.yaCounter11564479 = new Ya.Metrika( { id:11564479, enableAll: true, trackHash:true, webvisor:true } );
+                }
+                catch(e) { }
                 });
-            })(window, "yandex_metrika_callbacks");
-            </script></div>
-            <script src="//mc.yandex.ru/metrika/watch.js" type="text/javascript" defer="defer"></script>
-            <noscript><div><img src="//mc.yandex.ru/watch/11564479" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-            <!-- /Yandex.Metrika counter -->
+                })(window, "yandex_metrika_callbacks");
+            </script>
+        </div>
+        <script src="//mc.yandex.ru/metrika/watch.js" type="text/javascript" defer="defer"></script>
+        <noscript>
+            <div><img src="//mc.yandex.ru/watch/11564479" style="position:absolute; left:-9999px;" alt=""/></div>
+        </noscript>
+        <!-- /Yandex.Metrika counter -->
 
         </p>
 

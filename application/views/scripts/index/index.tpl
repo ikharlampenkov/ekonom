@@ -1,22 +1,22 @@
+{if $bannerList!==false}
 <div id="slider">
 
     <ul id="slides">
-        <li class="slide">
-            <img src="/uploads/slide1.jpg" alt="Слайд №2">
+        {foreach from=$bannerList item=banner}
+            <li class="slide">
+                <img src="/banners/{$banner->getBanner()->img->getName()}" alt="{$banner->getBanner()->title}">
 
-            <p class="description"><a href="http://yandex.ru">Абонемент на 1 занятие в неделю в спорткомплексе Олимпийский</a>.</p>
-        </li>
-        <li class="slide">
-            <img src="/uploads/slide1.jpg" alt="Слайд №1">
-
-            <p class="description"><a href="http://google.ru">Абонемент на 2 занятие в неделю в спорткомплексе Олимпийский</a>.</p>
-        </li>
+                <p class="description"><a href="http://{$banner->getBanner()->link}">{$banner->getBanner()->title}</a></p>
+            </li>
+        {/foreach}
     </ul>
     <a href="#previous" class="previous"></a>
     <a href="#next" class="next"></a>
 
     <div id="shadow"></div>
+
 </div>
+{/if}
 
 
 <article id="main-content">
@@ -74,12 +74,21 @@
 
     <aside>
         <div id="banners" class="clearfix">
-            <div class="banner size490_84">
-                <a href="http://yandex.ru"><img src="/uploads/banner.png"/></a>
-            </div>
-            <div class="banner size490_84">
-                <a href="http://yandex.ru"><img src="/uploads/banner.png"/></a>
-            </div>
+        {if $bannerListLeft!==false}
+            {foreach from=$bannerListLeft item=banner}
+                <div class="banner size490_84">
+                    <a href="http://{$banner->getBanner()->link}"><img src="/banners/{$banner->getBanner()->img->getName()}"/></a>
+                </div>
+            {/foreach}
+        {/if}
+        {if $bannerListRight!==false}
+            {foreach from=$bannerListRight item=banner}
+                <div class="banner size490_84">
+                    <a href="http://{$banner->getBanner()->link}"><img src="/banners/{$banner->getBanner()->img->getName()}"/></a>
+                </div>
+            {/foreach}
+        {/if}
+
         </div>
 
         <div id="share">

@@ -17,6 +17,15 @@ class IndexController extends Zend_Controller_Action
         $this->view->assign('companyList', EK_Company_Company::getAllInstance());
 
         $this->view->assign('productList', EK_Catalog_Product::getAllInstanceFirstPage($this->_city));
+
+        $oPlace = EK_Banner_Place::getInstanceById(1);
+        $this->view->assign('bannerList', EK_Banner_PlaceMark::getAllInstance($oPlace));
+
+        $oPlace = EK_Banner_Place::getInstanceById(4);
+        $this->view->assign('bannerListRight', EK_Banner_PlaceMark::getAllInstance($oPlace));
+
+        $oPlace = EK_Banner_Place::getInstanceById(5);
+        $this->view->assign('bannerListLeft', EK_Banner_PlaceMark::getAllInstance($oPlace));
     }
 
     public function choosecityAction()

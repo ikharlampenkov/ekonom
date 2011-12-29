@@ -34,7 +34,7 @@
         {/if}
 
             <div class="information">
-                <img class="shop-logo shadow-image" src="/files/{$company->file->getName()}" alt="Логотип магазина {$company->title}"/>
+                <img class="shop-logo shadow-image" src="{if $company->file->getName()}/files/{$company->file->getPreview()}{else}/i/no_foto.png{/if}" alt="Логотип магазина {$company->title}"/>
 
                 <h3>Краткое описание магазина</h3>
 
@@ -46,7 +46,7 @@
                     {foreach from=$company->getAddressList() item=address}
                         <li>
                             <span class="nobr">{$address->city->title}, {$address->address}</span>,<br/>
-                            <span class="phone nobr">+7 {$address->phone}</span>
+                            <span class="phone nobr">{$address->phone}</span>
                         </li>
                     {/foreach}
                 </ul>
@@ -135,10 +135,23 @@
 </article>
 
 <aside id="sidebar">
+{if $bannerList!==false}
+    {foreach from=$bannerList item=banner}
     <section id="adv">
-        <a href="http://yandex.ru">
-            <img src="/uploads/banner.jpg" width="187" height="357"/>
+        <a href="http://{$banner->getBanner()->link}">
+            <img src="/banners/{$banner->getBanner()->img->getName()}" width="187" height="357" alt="{$banner->getBanner()->title}"/>
         </a>
     </section>
-</aside>
+    {/foreach}
+{/if}
 
+{if $bannerListBottom!==false}
+    {foreach from=$bannerListBottom item=banner}
+    <section id="adv">
+        <a href="http://{$banner->getBanner()->link}">
+            <img src="/banners/{$banner->getBanner()->img->getName()}" width="187" height="357" alt="{$banner->getBanner()->title}"/>
+        </a>
+    </section>
+    {/foreach}
+{/if}
+</aside>
