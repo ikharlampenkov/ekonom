@@ -144,6 +144,7 @@ class BannerController extends Zend_Controller_Action
         if ($this->getRequest()->isPost()) {
             $data = $this->getRequest()->getParam('data');
 
+            EK_Banner_PlaceMark::deleteFromDB($oPlace);
             try {
                 foreach ($data as $idBanner => $values) {
 

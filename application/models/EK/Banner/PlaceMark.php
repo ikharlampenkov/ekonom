@@ -86,6 +86,19 @@ class EK_Banner_PlaceMark
         }
     }
 
+    public static function deleteFromDB($place)
+    {
+        try {
+            $db = StdLib_DB::getInstance();
+            $sql = 'DELETE FROM banner_place WHERE bplace_id=' . $place->getId();
+            $db->query($sql);
+
+        } catch (Exception $e) {
+            throw new Exception($e->getMessage());
+        }
+
+    }
+
     //banner_id, bplace_id
 
     /**

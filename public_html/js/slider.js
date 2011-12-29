@@ -32,6 +32,8 @@ $(function() {
 
                 return false;
             });
+
+
         }
         else {
             $('#slider > a').hide();
