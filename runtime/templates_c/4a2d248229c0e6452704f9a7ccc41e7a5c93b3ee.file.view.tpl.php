@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.0.9, created on 2011-12-27 22:47:41
+<?php /* Smarty version Smarty-3.0.9, created on 2011-12-30 22:42:48
          compiled from "F:\www\ekonom\application/views/scripts\company/view.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:312024ef9e89ddda937-84367624%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:321834efddbf8837765-15372550%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '4a2d248229c0e6452704f9a7ccc41e7a5c93b3ee' => 
     array (
       0 => 'F:\\www\\ekonom\\application/views/scripts\\company/view.tpl',
-      1 => 1325000853,
+      1 => 1325259762,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '312024ef9e89ddda937-84367624',
+  'nocache_hash' => '321834efddbf8837765-15372550',
   'function' => 
   array (
   ),
@@ -79,8 +79,8 @@ if ($_smarty_tpl->tpl_vars['gallery']->total > 0){
         <?php }?>
 
             <div class="information">
-                <img class="shop-logo shadow-image" src="/files/<?php echo $_smarty_tpl->getVariable('company')->value->file->getName();?>
-" alt="Логотип магазина <?php echo $_smarty_tpl->getVariable('company')->value->title;?>
+                <img class="shop-logo shadow-image" src="<?php if ($_smarty_tpl->getVariable('company')->value->file->getName()){?>/files/<?php echo $_smarty_tpl->getVariable('company')->value->file->getPreview();?>
+<?php }else{ ?>/i/no_foto.png<?php }?>" alt="Логотип магазина <?php echo $_smarty_tpl->getVariable('company')->value->title;?>
 "/>
 
                 <h3>Краткое описание магазина</h3>
@@ -100,7 +100,7 @@ if ($_smarty_tpl->_count($_from) > 0){
                             <span class="nobr"><?php echo $_smarty_tpl->getVariable('address')->value->city->title;?>
 , <?php echo $_smarty_tpl->getVariable('address')->value->address;?>
 </span>,<br/>
-                            <span class="phone nobr">+7 <?php echo $_smarty_tpl->getVariable('address')->value->phone;?>
+                            <span class="phone nobr"><?php echo $_smarty_tpl->getVariable('address')->value->phone;?>
 </span>
                         </li>
                     <?php }} ?>
@@ -147,7 +147,7 @@ if ($_smarty_tpl->_count($_from) > 0){
 </a></h3>
             <a href="<?php echo $_smarty_tpl->getVariable('this')->value->url(array('controller'=>'catalog','action'=>'viewProduct','id'=>$_smarty_tpl->getVariable('product')->value->id));?>
 " class="various fancybox.ajax"><img src="<?php if ($_smarty_tpl->getVariable('product')->value->img->getName()){?>/files/<?php echo $_smarty_tpl->getVariable('product')->value->img->getPreview();?>
-<?php }else{ ?>/uploads/action1.png<?php }?>" alt="<?php echo $_smarty_tpl->getVariable('product')->value->title;?>
+<?php }else{ ?>/i/no_foto.png<?php }?>" alt="<?php echo $_smarty_tpl->getVariable('product')->value->title;?>
 "></a>
 
             <?php if ($_smarty_tpl->getVariable('product')->value->searchAttribute('discount')){?>
@@ -189,10 +189,37 @@ if ($_smarty_tpl->_count($_from) > 0){
 </article>
 
 <aside id="sidebar">
+<?php if ($_smarty_tpl->getVariable('bannerList')->value!==false){?>
+    <?php  $_smarty_tpl->tpl_vars['banner'] = new Smarty_Variable;
+ $_from = $_smarty_tpl->getVariable('bannerList')->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+if ($_smarty_tpl->_count($_from) > 0){
+    foreach ($_from as $_smarty_tpl->tpl_vars['banner']->key => $_smarty_tpl->tpl_vars['banner']->value){
+?>
     <section id="adv">
-        <a href="http://yandex.ru">
-            <img src="/uploads/banner.jpg" width="187" height="357"/>
+        <a href="http://<?php echo $_smarty_tpl->getVariable('banner')->value->getBanner()->link;?>
+">
+            <img src="/banners/<?php echo $_smarty_tpl->getVariable('banner')->value->getBanner()->img->getName();?>
+" width="187" height="357" alt="<?php echo $_smarty_tpl->getVariable('banner')->value->getBanner()->title;?>
+"/>
         </a>
     </section>
+    <?php }} ?>
+<?php }?>
+<br/>
+<?php if ($_smarty_tpl->getVariable('bannerListBottom')->value!==false){?>
+    <?php  $_smarty_tpl->tpl_vars['banner'] = new Smarty_Variable;
+ $_from = $_smarty_tpl->getVariable('bannerListBottom')->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+if ($_smarty_tpl->_count($_from) > 0){
+    foreach ($_from as $_smarty_tpl->tpl_vars['banner']->key => $_smarty_tpl->tpl_vars['banner']->value){
+?>
+    <section id="adv">
+        <a href="http://<?php echo $_smarty_tpl->getVariable('banner')->value->getBanner()->link;?>
+">
+            <img src="/banners/<?php echo $_smarty_tpl->getVariable('banner')->value->getBanner()->img->getName();?>
+" width="187" height="357" alt="<?php echo $_smarty_tpl->getVariable('banner')->value->getBanner()->title;?>
+"/>
+        </a>
+    </section>
+    <?php }} ?>
+<?php }?>
 </aside>
-

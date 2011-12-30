@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.0.9, created on 2011-12-26 22:45:16
+<?php /* Smarty version Smarty-3.0.9, created on 2011-12-30 22:37:10
          compiled from "F:\www\ekonom\application/views/scripts\company/index.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:248564ef8968c0a1e50-97412379%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:251204efddaa67845b9-98941604%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '4528c0f58b5ad95b2e77897251943699034d7647' => 
     array (
       0 => 'F:\\www\\ekonom\\application/views/scripts\\company/index.tpl',
-      1 => 1324905358,
+      1 => 1325169332,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '248564ef8968c0a1e50-97412379',
+  'nocache_hash' => '251204efddaa67845b9-98941604',
   'function' => 
   array (
   ),
@@ -52,8 +52,8 @@ if ($_smarty_tpl->_count($_from) > 0){
 " class="various fancybox.ajax"><?php echo $_smarty_tpl->getVariable('company')->value->title;?>
 </a></h3>
                     <a href="<?php echo $_smarty_tpl->getVariable('this')->value->url(array('controller'=>$_smarty_tpl->getVariable('controller')->value,'action'=>'view','id'=>$_smarty_tpl->getVariable('company')->value->id));?>
-" class="various fancybox.ajax"><img src="/files/<?php echo $_smarty_tpl->getVariable('company')->value->file->getName();?>
-" alt="<?php echo $_smarty_tpl->getVariable('company')->value->title;?>
+" class="various fancybox.ajax"><img src="<?php if ($_smarty_tpl->getVariable('company')->value->file->getName()){?>/files/<?php echo $_smarty_tpl->getVariable('company')->value->file->getPreview();?>
+<?php }else{ ?>/i/no_foto.png<?php }?>" alt="<?php echo $_smarty_tpl->getVariable('company')->value->title;?>
 "></a>
 
                     <?php $_smarty_tpl->smarty->_tag_stack[] = array('if_allowed', array('resource'=>($_smarty_tpl->getVariable('controller')->value)."/edit")); $_block_repeat=true; smarty_block_if_allowed(array('resource'=>($_smarty_tpl->getVariable('controller')->value)."/edit"), null, $_smarty_tpl, $_block_repeat);while ($_block_repeat) { ob_start();?>

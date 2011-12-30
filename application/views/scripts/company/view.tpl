@@ -144,7 +144,7 @@
     </section>
     {/foreach}
 {/if}
-
+<br/>
 {if $bannerListBottom!==false}
     {foreach from=$bannerListBottom item=banner}
     <section id="adv">
