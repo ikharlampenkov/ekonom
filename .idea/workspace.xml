@@ -2,52 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d0b1c174-27bf-4d01-a853-aaef73e1aaba" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/banners/img_28-12-2011-13-36-20.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/banners/img_28-12-2011-13-36-20_prew.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/banners/img_28-12-2011-13-38-35.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/banners/img_28-12-2011-13-38-35_prew.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/banners/img_28-12-2011-14-11-32.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/banners/img_28-12-2011-14-11-32_prew.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/banners/img_28-12-2011-16-01-45.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/banners/img_28-12-2011-16-01-45_prew.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/banners/img_28-12-2011-16-03-17.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/banners/img_28-12-2011-16-03-17_prew.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/banners/img_29-12-2011-12-47-06.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/banners/img_29-12-2011-12-47-06_prew.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/files/img_28-12-2011-11-26-43.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/files/img_28-12-2011-11-26-43_prew.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/files/img_28-12-2011-14-29-55.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/files/img_28-12-2011-14-29-55_prew.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/files/img_28-12-2011-15-24-28.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/files/img_28-12-2011-15-24-28_prew.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/files/img_28-12-2011-15-41-56.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/files/img_28-12-2011-15-41-56_prew.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/files/img_28-12-2011-15-48-24.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/files/img_28-12-2011-15-48-24_prew.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/files/img_28-12-2011-15-49-13.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/files/img_28-12-2011-15-49-13_prew.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/files/img_28-12-2011-16-26-00.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/files/img_28-12-2011-16-26-00_prew.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/files/img_28-12-2011-16-47-55.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/files/img_28-12-2011-16-47-55_prew.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/files/img_29-12-2011-17-54-08.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/files/img_29-12-2011-17-54-08_prew.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/files/img_29-12-2011-17-54-09.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/files/img_29-12-2011-17-54-09_prew.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/gallery/company/img_28-12-2011-14-39-04.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/gallery/company/img_28-12-2011-14-39-04_prew.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/gallery/company/img_28-12-2011-14-39-18.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/gallery/company/img_28-12-2011-14-39-18_prew.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/gallery/company/img_28-12-2011-14-39-30.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/gallery/company/img_28-12-2011-14-39-30_prew.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/gallery/product/img_28-12-2011-16-33-52.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/gallery/product/img_28-12-2011-16-33-52_prew.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/gallery/product/img_28-12-2011-16-46-44.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/gallery/product/img_28-12-2011-16-46-44_prew.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/gallery/product/img_28-12-2011-16-46-56.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/gallery/product/img_28-12-2011-16-46-56_prew.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/gallery/product/img_29-12-2011-17-55-05.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/gallery/product/img_29-12-2011-17-55-05_prew.jpg" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <list id="ad86b5e8-338a-4c37-be49-497b5521d5ba" name="Failed commit: Default" comment="Интеграция интерфейса" />
@@ -83,7 +37,7 @@
       <file leaf-file-name="layout.tpl" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/layouts/scripts/layout.tpl">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="93" selection-start="952" selection-end="952" vertical-scroll-proportion="0.4544025">
+            <state line="19" column="93" selection-start="952" selection-end="952" vertical-scroll-proportion="0.02672956">
               <folding />
             </state>
           </provider>
@@ -625,8 +579,8 @@
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="true" />
     <property name="options.lastSelected" value="reference.webide.settings.project.settings.php" />
-    <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="PublishConfig">
     <servers>
@@ -677,13 +631,6 @@
         <option name="PhingTarget" enabled="false" />
       </method>
     </configuration>
-    <configuration default="true" type="JavascriptDebugSession" factoryName="Local">
-      <JSDebuggerConfigurationSettings>
-        <option name="engineId" value="embedded" />
-        <option name="fileUrl" />
-      </JSDebuggerConfigurationSettings>
-      <method />
-    </configuration>
     <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server">
       <method>
         <option name="FtpUpload" enabled="false">
@@ -692,6 +639,13 @@
         </option>
         <option name="PhingTarget" enabled="false" />
       </method>
+    </configuration>
+    <configuration default="true" type="JavascriptDebugSession" factoryName="Local">
+      <JSDebuggerConfigurationSettings>
+        <option name="engineId" value="embedded" />
+        <option name="fileUrl" />
+      </JSDebuggerConfigurationSettings>
+      <method />
     </configuration>
     <list size="0" />
   </component>
@@ -742,7 +696,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.35576922" sideWeight="0.6704981" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.36004272" sideWeight="0.6704981" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32950193" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -795,7 +749,7 @@
     <option name="INCLUDE_TEXT_INTO_SHELF" value="false" />
     <option name="CREATE_PATCH_EXPAND_DETAILS_DEFAULT" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Счетчик, акции на первой странице, Исправление глюков по компаниям и городам" />
+    <option name="LAST_COMMIT_MESSAGE" value="Служебный" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -817,8 +771,8 @@
     <MESSAGE value="Выбор города&#10;Вывод информации об акции&#10;" />
     <MESSAGE value="Кнопки Поделиться и Зарезервировать&#10;Оформление каталога" />
     <MESSAGE value="Merge branch 'master' of github.com:ikharlampenkov/ekonom&#10;&#10;Conflicts:&#10;&#9;.idea/workspace.xml&#10;" />
-    <MESSAGE value="Служебный" />
     <MESSAGE value="Счетчик, акции на первой странице, Исправление глюков по компаниям и городам" />
+    <MESSAGE value="Служебный" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -883,16 +837,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/configs/application.ini">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="36" selection-start="1366" selection-end="1366" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="40" column="36" selection-start="1366" selection-end="1366" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/models/EK/Catalog/Product.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="393" column="0" selection-start="9067" selection-end="9067" vertical-scroll-proportion="0.53385675">
-          <folding />
-        </state>
+        <state line="393" column="0" selection-start="9067" selection-end="9067" vertical-scroll-proportion="0.53385675" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public_html/css/main.css">
@@ -902,30 +852,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/scripts/catalog/view-product.ajax.tpl">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="96" selection-start="1263" selection-end="1263" vertical-scroll-proportion="0.46836734">
+        <state line="27" column="96" selection-start="1263" selection-end="1263" vertical-scroll-proportion="0.46836734" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public_html/js/slider.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="0" selection-start="1085" selection-end="1085" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/layouts/scripts/layout.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="93" selection-start="952" selection-end="952" vertical-scroll-proportion="0.02672956">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/scripts/index/index.tpl">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="20" selection-start="64" selection-end="64" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public_html/js/slider.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="0" selection-start="1085" selection-end="1085" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/layouts/scripts/layout.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="93" selection-start="952" selection-end="952" vertical-scroll-proportion="0.4544025">
-          <folding />
-        </state>
+        <state line="3" column="20" selection-start="64" selection-end="64" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
   </component>
