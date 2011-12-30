@@ -17,6 +17,7 @@
 
 {*<script type="text/javascript" language="javascript" src="/js/jquery.js"></script>*}
     <script type="text/javascript" language="javascript" src="/js/jquery-ui.js"></script>
+    <script type="text/javascript" language="javascript" src="/js/jquery.timers.js"></script>
 {*
 <script type="text/javascript" language="javascript" src="/js/i18n/jquery.ui.datepicker-ru.js"></script>
 <script type="text/javascript" language="javascript" src="/js/jquery-ui.timepicker.js"></script>

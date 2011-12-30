@@ -392,30 +392,6 @@ class EK_Catalog_Product
         }
     }
 
-    public static function getAllInstanceFirstPage($city)
-    {
-        try {
-            $db = StdLib_DB::getInstance();
-            $sql = 'SELECT *
-                    FROM product, company
-                    WHERE product.company_id=company.id
-                      AND city_id=' . $city . '
-                      AND on_first_page=1';
-
-            $result = $db->query($sql, StdLib_DB::QUERY_MOD_ASSOC);
-            if (isset($result[0])) {
-                $productArray = array();
-                foreach ($result as $value) {
-                    $productArray[] = EK_Catalog_Product::getInstanceByArray($value);
-                }
-                return $productArray;
-            } else
-                return false;
-        } catch (Exception $e) {
-            throw new Exception($e->getMessage());
-        }
-    }
-
     /**
      * @static
      * @param EK_Company_Company $company

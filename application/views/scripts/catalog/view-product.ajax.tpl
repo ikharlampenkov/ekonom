@@ -25,7 +25,7 @@
                 {/if}
                     <del class="old-price">{$product->price} р</del>
                 {if $product->searchAttribute('second_price')}
-                    <ins class="new-price">{$product->getAttribute('second_price')->value} р</ins>
+                    <ins class="new-price">{$product->getAttribute('second_price')->value}&nbsp;р</ins>
                 {/if}
                 </section>
 

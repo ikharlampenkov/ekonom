@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Хост: ekonom.mysql
--- Время создания: Дек 28 2011 г., 15:50
+-- Время создания: Дек 29 2011 г., 21:10
 -- Версия сервера: 5.1.41
 -- Версия PHP: 5.2.10
 
@@ -38,16 +38,17 @@ CREATE TABLE IF NOT EXISTS `banner` (
   `link` varchar(255) NOT NULL,
   `title` varchar(255) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=5 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=6 ;
 
 --
 -- Дамп данных таблицы `banner`
 --
 
 INSERT INTO `banner` (`id`, `img`, `link`, `title`) VALUES
-(1, 'img_28-12-2011-13-36-20.jpg', 'ekonom.pro', 'Тест'),
+(1, 'img_28-12-2011-16-03-17.jpg', 'ekonom.pro', 'Клуб ярких путешествий «Мир Без Границ»'),
 (2, 'img_28-12-2011-13-38-35.jpg', 'ekonom.pro', 'Еще тест'),
-(4, 'img_28-12-2011-14-11-32.jpg', 'ekonom.pro', 'Счастья!');
+(4, 'img_28-12-2011-14-11-32.jpg', 'ekonom.pro', 'Счастья!'),
+(5, 'img_29-12-2011-12-47-06.jpg', 'ekonom.pro', 'Мир Без Границ');
 
 -- --------------------------------------------------------
 
@@ -72,7 +73,11 @@ CREATE TABLE IF NOT EXISTS `banner_place` (
 
 INSERT INTO `banner_place` (`banner_id`, `bplace_id`) VALUES
 (1, 1),
-(2, 2);
+(2, 2),
+(2, 6),
+(4, 1),
+(5, 4),
+(5, 5);
 
 -- --------------------------------------------------------
 
@@ -89,7 +94,7 @@ CREATE TABLE IF NOT EXISTS `bplace` (
   `width` int(10) unsigned NOT NULL,
   `height` int(10) unsigned NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=7 ;
 
 --
 -- Дамп данных таблицы `bplace`
@@ -97,7 +102,10 @@ CREATE TABLE IF NOT EXISTS `bplace` (
 
 INSERT INTO `bplace` (`id`, `title`, `width`, `height`) VALUES
 (1, 'Главная', 994, 230),
-(2, 'Справа от компании', 187, 357);
+(2, 'Справа от компании', 187, 357),
+(4, 'На главной снизу справа', 490, 83),
+(5, 'На главной снизу слева', 490, 83),
+(6, 'Справа от компании нижний', 187, 357);
 
 -- --------------------------------------------------------
 
@@ -140,14 +148,18 @@ CREATE TABLE IF NOT EXISTS `comments` (
   `user` varchar(20) NOT NULL,
   `is_moderate` tinyint(1) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=7 ;
 
 --
 -- Дамп данных таблицы `comments`
 --
 
 INSERT INTO `comments` (`id`, `message`, `date_create`, `user`, `is_moderate`) VALUES
-(1, 'ghgdhdhfhdfhdfhfdhdreye', '2011-12-27 00:00:00', 'dhhfhdf', 1);
+(1, 'ghgdhdhfhdfhdfhfdhdreye', '2011-12-27 00:00:00', 'dhhfhdf', 1),
+(3, 'Хочу туда. Пошлите меня пожалуйста!!!', '2011-12-28 00:00:00', 'Константин', 0),
+(4, 'Хочу туда. Пошлите меня пожалуйста!!!', '2011-12-28 00:00:00', 'Константин', 0),
+(5, 'Хочу туда. Пошлите меня пожалуйста!!!', '2011-12-28 00:00:00', 'Константин', 0),
+(6, 'Хочу туда. Пошлите меня пожалуйста!!!', '2011-12-28 00:00:00', 'Константин', 0);
 
 -- --------------------------------------------------------
 
@@ -170,7 +182,11 @@ CREATE TABLE IF NOT EXISTS `comments_product` (
 --
 
 INSERT INTO `comments_product` (`comments_id`, `product_id`) VALUES
-(1, 11);
+(1, 11),
+(3, 15),
+(4, 15),
+(5, 15),
+(6, 15);
 
 -- --------------------------------------------------------
 
@@ -297,7 +313,7 @@ CREATE TABLE IF NOT EXISTS `gallery` (
   `file` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `fk_tm_document_tm_user1` (`user_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=15 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=23 ;
 
 --
 -- Дамп данных таблицы `gallery`
@@ -317,7 +333,11 @@ INSERT INTO `gallery` (`id`, `title`, `date_create`, `user_id`, `file`) VALUES
 (11, 'Третье фото!', '2011-12-27 14:10:07', 8, 'img_27-12-2011-14-10-07.jpg'),
 (12, 'ОАЭ', '2011-12-28 14:39:04', 1, 'img_28-12-2011-14-39-04.jpg'),
 (13, 'ОАЭ', '2011-12-28 14:39:18', 1, 'img_28-12-2011-14-39-18.jpg'),
-(14, 'ОАЭ', '2011-12-28 14:39:30', 1, 'img_28-12-2011-14-39-30.jpg');
+(14, 'ОАЭ', '2011-12-28 14:39:30', 1, 'img_28-12-2011-14-39-30.jpg'),
+(19, 'Тайланд.', '2011-12-28 16:33:51', 9, 'img_28-12-2011-16-33-52.jpg'),
+(20, 'Тайланд.', '2011-12-28 16:46:44', 9, 'img_28-12-2011-16-46-44.jpg'),
+(21, 'Тайланд.', '2011-12-28 16:46:56', 9, 'img_28-12-2011-16-46-56.jpg'),
+(22, 'оаэ', '2011-12-29 17:55:05', 9, 'img_29-12-2011-17-55-05.jpg');
 
 -- --------------------------------------------------------
 
@@ -367,7 +387,11 @@ CREATE TABLE IF NOT EXISTS `gallery_product` (
 INSERT INTO `gallery_product` (`gallery_id`, `product_id`) VALUES
 (9, 14),
 (10, 14),
-(11, 14);
+(11, 14),
+(19, 15),
+(20, 15),
+(21, 15),
+(22, 16);
 
 -- --------------------------------------------------------
 
@@ -391,7 +415,7 @@ CREATE TABLE IF NOT EXISTS `product` (
   PRIMARY KEY (`id`),
   KEY `fk_product_product_rubric1` (`product_rubric_id`),
   KEY `company_id` (`company_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=16 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=17 ;
 
 --
 -- Дамп данных таблицы `product`
@@ -400,7 +424,8 @@ CREATE TABLE IF NOT EXISTS `product` (
 INSERT INTO `product` (`id`, `product_rubric_id`, `title`, `img`, `short_text`, `full_text`, `price`, `company_id`, `on_first_page`) VALUES
 (11, 1, 'полплпрлп', NULL, '', '', 125.50, 3, 1),
 (14, 6, 'Косюм!', 'img_27-12-2011-14-05-19.jpg', 'Хорошая вещь!', 'Хорошая вещь!', 1000.00, 3, 0),
-(15, 9, 'Таиланд! 12 дней! 21.01.2012', 'img_28-12-2011-15-49-13.jpg', '', 'Прямой вылет из Кемерово в Паттайю! 21 января 2012! на 12 дней!\r\nЦена указана на 1 человека при условии 2х местного размещения!\r\n\r\nОтели 3 — от 24000 т. р.\r\nОтели 4 — от 28500 т. р.\r\nОтели 5* — от 37500 т. р.\r\n\r\nСПЕШИТЕ БРОНИРОВАТЬ! РЕЙСЫ РАСКУПАЮТСЯ!', 29400.00, 4, 1);
+(15, 9, 'Таиланд! 12 дней! 21.01.2012', 'img_28-12-2011-16-47-55.jpg', '', 'Прямой вылет из Кемерово в Паттайю! 21 января 2012! на 12 дней!\r\nЦена указана на 1 человека при условии 2х местного размещения!\r\n\r\nОтели 3 — от 24000 т. р.\r\nОтели 4 — от 28500 т. р.\r\nОтели 5* — от 37500 т. р.\r\n\r\nСПЕШИТЕ БРОНИРОВАТЬ! РЕЙСЫ РАСКУПАЮТСЯ!', 29400.00, 4, 1),
+(16, 9, 'ОАЭ из Новосибирска! 24.01.2012 на 7 дней! ', 'img_29-12-2011-17-54-09.jpg', 'Горящий тур в ОАЭ из Новосибирска! Вылеты по вторникам и субботам! Горящий на 24.01.2012 — 7 дней / 6 ночей!', 'Горящий тур в ОАЭ из Новосибирска! Вылеты по вторникам и субботам! Горящий на 24.01.2012 — 7 дней / 6 ночей! Дополнительно оплачивается виза 75 у. е. с человека! Есть туры на 14 дней! Цену нужно уточнять! Цена указана на 1 человека при условии 2х местного размещения!\r\n\r\nДубаи — город — от 17500 т. р.\r\n\r\nЭмират Фуджейра! Пляжные отели, первая береговая линия.\r\nFUJAIRAH ROTANA RESORT & SPA 5 — 22000 т. р.\r\nHILTON FUJAIRAH 5 — 25000 т. р.\r\nLE MERIDIEN AL AQAH BEACH RESO 5* — 25500 т. р.\r\n\r\nПитание только завтраки! (Возможно купить концепцию завтрак+ужин)\r\n', 21000.00, 4, 0);
 
 -- --------------------------------------------------------
 
@@ -441,7 +466,12 @@ INSERT INTO `product_attribute` (`product_id`, `attribute_key`, `type_id`, `attr
 (15, 'discount', 1, '20', 0),
 (15, 'discount_type', 3, '%', 0),
 (15, 'second_price', 1, '24500', 0),
-(15, 'terms_of_stock', 2, '', 0);
+(15, 'terms_of_stock', 2, '', 0),
+(16, 'description', 2, '', 0),
+(16, 'discount', 1, '20', 0),
+(16, 'discount_type', 3, '%', 0),
+(16, 'second_price', 1, '17500', 0),
+(16, 'terms_of_stock', 2, '', 0);
 
 -- --------------------------------------------------------
 

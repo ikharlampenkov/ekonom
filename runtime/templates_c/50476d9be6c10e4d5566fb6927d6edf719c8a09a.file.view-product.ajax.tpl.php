@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.0.9, created on 2011-12-27 22:47:54
+<?php /* Smarty version Smarty-3.0.9, created on 2011-12-29 21:18:41
          compiled from "F:\www\ekonom\application/views/scripts\catalog/view-product.ajax.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:104514ef9e8aa35c240-45223305%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:156624efc76c1e64d21-28535693%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '50476d9be6c10e4d5566fb6927d6edf719c8a09a' => 
     array (
       0 => 'F:\\www\\ekonom\\application/views/scripts\\catalog/view-product.ajax.tpl',
-      1 => 1325000824,
+      1 => 1325168311,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '104514ef9e8aa35c240-45223305',
+  'nocache_hash' => '156624efc76c1e64d21-28535693',
   'function' => 
   array (
   ),
@@ -52,7 +52,7 @@ $_smarty_tpl->decodeProperties(array (
  р</del>
                 <?php if ($_smarty_tpl->getVariable('product')->value->searchAttribute('second_price')){?>
                     <ins class="new-price"><?php echo $_smarty_tpl->getVariable('product')->value->getAttribute('second_price')->value;?>
- р</ins>
+&nbsp;р</ins>
                 <?php }?>
                 </section>
 
