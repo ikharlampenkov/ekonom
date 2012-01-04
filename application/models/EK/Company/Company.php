@@ -62,6 +62,16 @@ class EK_Company_Company
     protected $_orderEmail = '';
 
     /**
+     * @var string - ссылка на официальный сайт
+     */
+    protected $_ofSite = '';
+
+    /**
+     * @var int - величина постоянной скидки, 0 - нет скидки
+     */
+    protected $_constantDiscount = 0;
+
+    /**
      *
      * @var StdLib_DB
      * @access protected
@@ -188,6 +198,38 @@ class EK_Company_Company
         return $this->_db->prepareStringToOut($this->_orderEmail);
     }
 
+    /**
+     * @param int $constantDiscount
+     */
+    public function setConstantDiscount($constantDiscount)
+    {
+        $this->_constantDiscount = $this->_db->prepareString($constantDiscount);
+    }
+
+    /**
+     * @return int
+     */
+    public function getConstantDiscount()
+    {
+        return $this->_db->prepareStringToOut($this->_constantDiscount);
+    }
+
+    /**
+     * @param string $ofSite
+     */
+    public function setOfSite($ofSite)
+    {
+        $this->_ofSite = str_replace('http://', '', $this->_db->prepareString($ofSite));
+    }
+
+    /**
+     * @return string
+     */
+    public function getOfSite()
+    {
+        return $this->_db->prepareStringToOut($this->_ofSite);
+    }
+
     public function __get($name)
     {
         $method = "get{$name}";
@@ -217,9 +259,10 @@ class EK_Company_Company
     public function insertToDb()
     {
         try {
-            $sql = 'INSERT INTO company(title, city_id, description, file, order_email)
+            $sql = 'INSERT INTO company(title, city_id, description, file, order_email, ofsite, constant_discount)
                     VALUES ("' . $this->_title . '", ' . $this->_city->getId() . ',
-                            "' . $this->_description . '", "", "' . $this->_orderEmail . '")';
+                            "' . $this->_description . '", "", "' . $this->_orderEmail . '",
+                            "' . $this->_ofSite . '", "' . $this->_constantDiscount . '")';
             $this->_db->query($sql);
 
             $this->_id = $this->_db->getLastInsertId();
@@ -250,7 +293,8 @@ class EK_Company_Company
         try {
             $sql = 'UPDATE company
                     SET title="' . $this->_title . '", city_id=' . $this->_city->getId() . ',
-                        description="' . $this->_description . '", order_email="' . $this->_orderEmail . '"
+                        description="' . $this->_description . '", order_email="' . $this->_orderEmail . '",
+                        ofsite="' . $this->_ofSite . '", constant_discount="' . $this->_constantDiscount . '"
                     WHERE id=' . $this->_id;
             $this->_db->query($sql);
 
@@ -444,6 +488,8 @@ class EK_Company_Company
         $this->setCity(EK_City_City::getInstanceById($values['city_id']));
         $this->_file->setName($values['file']);
         $this->setOrderEmail($values['order_email']);
+        $this->setOfSite($values['ofsite']);
+        $this->setConstantDiscount($values['constant_discount']);
 
         //$this->getAttributeList();
     }
@@ -530,4 +576,5 @@ class EK_Company_Company
     */
 
 }
+
 ?>

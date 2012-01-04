@@ -37,6 +37,14 @@
             <td class="ttovar_title">Email для заказов</td>
             <td class="ttovar"><input name="data[order_email]" value="{$company->orderEmail}"/></td>
         </tr>
+        <tr>
+            <td class="ttovar_title">Официальный сайт</td>
+            <td class="ttovar"><input name="data[ofsite]" value="{$company->ofSite}"/></td>
+        </tr>
+        <tr>
+            <td class="ttovar_title">Постоянная скидка</td>
+            <td class="ttovar"><input name="data[constant_discount]" value="{$company->constantDiscount}"/></td>
+        </tr>
     </table>
     <input id="save" name="save" type="submit" value="Сохранить"/>
 </form>

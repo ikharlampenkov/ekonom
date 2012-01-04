@@ -51,6 +51,13 @@
                     {/foreach}
                 </ul>
             {/if}
+
+            {if $company->ofSite}
+                <h3>Официальный сайт</h3>
+            
+                <p>{$company->ofSite}</p>
+            {/if}
+
             </div>
 
             <div id="share" class="clear">
@@ -82,14 +89,14 @@
 {if $productList}
     <ul id="actions" class="clearfix shop-actions">
         {foreach from=$productList item=product}
-        <li>
-            <h3><a href="{$this->url(['controller' => 'catalog','action' => 'viewProduct', 'id' => $product->id])}" class="various fancybox.ajax">{$product->title}</a></h3>
-            <a href="{$this->url(['controller' => 'catalog','action' => 'viewProduct', 'id' => $product->id])}" class="various fancybox.ajax"><img src="{if $product->img->getName()}/files/{$product->img->getPreview()}{else}/i/no_foto.png{/if}" alt="{$product->title}"></a>
+            <li>
+                <h3><a href="{$this->url(['controller' => 'catalog','action' => 'viewProduct', 'id' => $product->id])}" class="various fancybox.ajax">{$product->title}</a></h3>
+                <a href="{$this->url(['controller' => 'catalog','action' => 'viewProduct', 'id' => $product->id])}" class="various fancybox.ajax"><img src="{if $product->img->getName()}/files/{$product->img->getPreview()}{else}/i/no_foto.png{/if}" alt="{$product->title}"></a>
 
-            {if $product->searchAttribute('discount')}
-            <div class="discount">{$product->getAttribute('discount')->value}{if $product->searchAttribute('discount_type')}{$product->getAttribute('discount_type')->value}{/if}</div>
-            {/if}
-        </li>
+                {if $product->searchAttribute('discount')}
+                    <div class="discount">{$product->getAttribute('discount')->value}{if $product->searchAttribute('discount_type')}{$product->getAttribute('discount_type')->value}{/if}</div>
+                {/if}
+            </li>
         {/foreach}
         <li>&nbsp;</li>
         <li class="empty"></li>
@@ -137,21 +144,21 @@
 <aside id="sidebar">
 {if $bannerList!==false}
     {foreach from=$bannerList item=banner}
-    <section id="adv">
-        <a href="http://{$banner->getBanner()->link}">
-            <img src="/banners/{$banner->getBanner()->img->getName()}" width="187" height="357" alt="{$banner->getBanner()->title}"/>
-        </a>
-    </section>
+        <section id="adv">
+            <a href="http://{$banner->getBanner()->link}">
+                <img src="/banners/{$banner->getBanner()->img->getName()}" width="187" height="357" alt="{$banner->getBanner()->title}"/>
+            </a>
+        </section>
     {/foreach}
 {/if}
-<br/>
+    <br/>
 {if $bannerListBottom!==false}
     {foreach from=$bannerListBottom item=banner}
-    <section id="adv">
-        <a href="http://{$banner->getBanner()->link}">
-            <img src="/banners/{$banner->getBanner()->img->getName()}" width="187" height="357" alt="{$banner->getBanner()->title}"/>
-        </a>
-    </section>
+        <section id="adv">
+            <a href="http://{$banner->getBanner()->link}">
+                <img src="/banners/{$banner->getBanner()->img->getName()}" width="187" height="357" alt="{$banner->getBanner()->title}"/>
+            </a>
+        </section>
     {/foreach}
 {/if}
 </aside>

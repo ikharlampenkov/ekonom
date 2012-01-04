@@ -1,17 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d0b1c174-27bf-4d01-a853-aaef73e1aaba" name="Default" comment="Служебный">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/banners/img_30-12-2011-11-06-14.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/banners/img_30-12-2011-11-06-14_prew.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/files/img_30-12-2011-13-48-12.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/files/img_30-12-2011-13-48-12_prew.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/files/img_30-12-2011-13-52-01.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/files/img_30-12-2011-13-52-01_prew.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtime/templates_c/f862cd5a0cfb33ded8658b030c8778cf1e413fdf.file.index.tpl.php" />
+    <list default="true" id="d0b1c174-27bf-4d01-a853-aaef73e1aaba" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public_html/js/slider.js" afterPath="$PROJECT_DIR$/public_html/js/slider.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/CompanyController.php" afterPath="$PROJECT_DIR$/application/controllers/CompanyController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/models/EK/Company/Company.php" afterPath="$PROJECT_DIR$/application/models/EK/Company/Company.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/scripts/company/add.tpl" afterPath="$PROJECT_DIR$/application/views/scripts/company/add.tpl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/scripts/company/edit.tpl" afterPath="$PROJECT_DIR$/application/views/scripts/company/edit.tpl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/scripts/company/view.tpl" afterPath="$PROJECT_DIR$/application/views/scripts/company/view.tpl" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/runtime/logs/syslog.txt" afterPath="$PROJECT_DIR$/runtime/logs/syslog.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/runtime/templates_c/2d6ef4ca997c21602a120368d58adb0c88c68517.file.edit.tpl.php" afterPath="$PROJECT_DIR$/runtime/templates_c/2d6ef4ca997c21602a120368d58adb0c88c68517.file.edit.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/runtime/templates_c/4a2d248229c0e6452704f9a7ccc41e7a5c93b3ee.file.view.tpl.php" afterPath="$PROJECT_DIR$/runtime/templates_c/4a2d248229c0e6452704f9a7ccc41e7a5c93b3ee.file.view.tpl.php" />
     </list>
     <list id="ad86b5e8-338a-4c37-be49-497b5521d5ba" name="Failed commit: Default" comment="Интеграция интерфейса" />
     <ignored path="ekonom.iws" />
@@ -34,19 +33,46 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="view.tpl" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/views/scripts/company/view.tpl">
+      <file leaf-file-name="Company.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/models/EK/Company/Company.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="122" column="30" selection-start="4922" selection-end="4922" vertical-scroll-proportion="-44.884617">
+            <state line="491" column="61" selection-start="11583" selection-end="11600" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="slider.js" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/public_html/js/slider.js">
+      <file leaf-file-name="edit.tpl" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/views/scripts/company/edit.tpl">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="48" column="21" selection-start="1896" selection-end="1896" vertical-scroll-proportion="0.80078506">
+            <state line="39" column="8" selection-start="1600" selection-end="1969" vertical-scroll-proportion="-25.5">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="add.tpl" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/views/scripts/company/add.tpl">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="38" column="82" selection-start="1611" selection-end="1617" vertical-scroll-proportion="-24.846153">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="view.tpl" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/application/views/scripts/company/view.tpl">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="63" column="37" selection-start="2661" selection-end="2661" vertical-scroll-proportion="0.76632655">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CompanyController.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/controllers/CompanyController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="82" column="71" selection-start="3223" selection-end="3223" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -85,10 +111,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/application/views/scripts/catalog/index.tpl" />
-        <option value="$PROJECT_DIR$/application/views/scripts/company/index.tpl" />
-        <option value="$PROJECT_DIR$/application/views/scripts/index/index.tpl" />
-        <option value="$PROJECT_DIR$/application/controllers/CatalogController.php" />
         <option value="$PROJECT_DIR$/application/views/scripts/catalog/add.tpl" />
         <option value="$PROJECT_DIR$/application/views/scripts/catalog/edit.tpl" />
         <option value="$PROJECT_DIR$/application/controllers/IndexController.php" />
@@ -99,8 +121,12 @@
         <option value="$PROJECT_DIR$/application/controllers/SearchController.php" />
         <option value="$PROJECT_DIR$/application/views/scripts/search/index.tpl" />
         <option value="$PROJECT_DIR$/application/models/EK/Catalog/ProductCatalog.php" />
-        <option value="$PROJECT_DIR$/application/views/scripts/company/view.tpl" />
         <option value="$PROJECT_DIR$/public_html/js/slider.js" />
+        <option value="$PROJECT_DIR$/application/models/EK/Company/Company.php" />
+        <option value="$PROJECT_DIR$/application/views/scripts/company/edit.tpl" />
+        <option value="$PROJECT_DIR$/application/controllers/CompanyController.php" />
+        <option value="$PROJECT_DIR$/application/views/scripts/company/add.tpl" />
+        <option value="$PROJECT_DIR$/application/views/scripts/company/view.tpl" />
       </list>
     </option>
   </component>
@@ -161,6 +187,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -426,32 +453,6 @@
               <option name="myItemId" value="views" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="scripts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="catalog" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ekonom" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ekonom" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="application" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -661,7 +662,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="Favorites" />
     </panes>
   </component>
@@ -669,8 +669,8 @@
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="true" />
     <property name="options.lastSelected" value="reference.webide.settings.project.settings.php" />
-    <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="PublishConfig">
     <servers>
@@ -721,13 +721,6 @@
         <option name="PhingTarget" enabled="false" />
       </method>
     </configuration>
-    <configuration default="true" type="JavascriptDebugSession" factoryName="Local">
-      <JSDebuggerConfigurationSettings>
-        <option name="engineId" value="embedded" />
-        <option name="fileUrl" />
-      </JSDebuggerConfigurationSettings>
-      <method />
-    </configuration>
     <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server">
       <method>
         <option name="FtpUpload" enabled="false">
@@ -736,6 +729,13 @@
         </option>
         <option name="PhingTarget" enabled="false" />
       </method>
+    </configuration>
+    <configuration default="true" type="JavascriptDebugSession" factoryName="Local">
+      <JSDebuggerConfigurationSettings>
+        <option name="engineId" value="embedded" />
+        <option name="fileUrl" />
+      </JSDebuggerConfigurationSettings>
+      <method />
     </configuration>
     <list size="0" />
   </component>
@@ -786,7 +786,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.37446582" sideWeight="0.6704981" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.31623933" sideWeight="0.6704981" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32950193" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -839,7 +839,7 @@
     <option name="INCLUDE_TEXT_INTO_SHELF" value="false" />
     <option name="CREATE_PATCH_EXPAND_DETAILS_DEFAULT" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Служебный" />
+    <option name="LAST_COMMIT_MESSAGE" value="Перемещение баннера на главной" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -863,6 +863,7 @@
     <MESSAGE value="Merge branch 'master' of github.com:ikharlampenkov/ekonom&#10;&#10;Conflicts:&#10;&#9;.idea/workspace.xml&#10;" />
     <MESSAGE value="Счетчик, акции на первой странице, Исправление глюков по компаниям и городам" />
     <MESSAGE value="Служебный" />
+    <MESSAGE value="Перемещение баннера на главной" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -880,26 +881,6 @@
     </PATH>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/application/models/EK/Company/Company.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="346" column="55" selection-start="7303" selection-end="7310" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/CatalogController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="45" selection-start="325" selection-end="421" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/IndexController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="99" selection-start="577" selection-end="577" vertical-scroll-proportion="0.3002944" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/configs/application.ini">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="36" selection-start="1366" selection-end="1366" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/models/EK/Catalog/Product.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="393" column="0" selection-start="9067" selection-end="9067" vertical-scroll-proportion="0.53385675" />
@@ -950,16 +931,44 @@
         <state line="19" column="93" selection-start="952" selection-end="952" vertical-scroll-proportion="0.01734694" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/scripts/company/view.tpl">
+    <entry file="file://$PROJECT_DIR$/public_html/js/slider.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="122" column="30" selection-start="4922" selection-end="4922" vertical-scroll-proportion="-44.884617">
+        <state line="48" column="21" selection-start="1896" selection-end="1896" vertical-scroll-proportion="0.7330716">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public_html/js/slider.js">
+    <entry file="file://$PROJECT_DIR$/application/models/EK/Company/Company.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="48" column="21" selection-start="1896" selection-end="1896" vertical-scroll-proportion="0.80078506">
+        <state line="491" column="61" selection-start="11583" selection-end="11600" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/CompanyController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="82" column="71" selection-start="3223" selection-end="3223" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/scripts/company/edit.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="39" column="8" selection-start="1600" selection-end="1969" vertical-scroll-proportion="-25.5">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/scripts/company/add.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="38" column="82" selection-start="1611" selection-end="1617" vertical-scroll-proportion="-24.846153">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/scripts/company/view.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="63" column="37" selection-start="2661" selection-end="2661" vertical-scroll-proportion="0.76632655">
           <folding />
         </state>
       </provider>
