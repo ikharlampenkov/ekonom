@@ -1,22 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d0b1c174-27bf-4d01-a853-aaef73e1aaba" name="Default" comment="Служебный">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/gallery/company/img_06-01-2012-23-12-59.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/gallery/company/img_06-01-2012-23-12-59_prew.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/gallery/company/img_06-01-2012-23-13-56.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/gallery/company/img_06-01-2012-23-13-56_prew.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/gallery/company/img_06-01-2012-23-15-42.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/gallery/company/img_06-01-2012-23-15-42_prew.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtime/templates_c/12057dd814e4da6628fcd8a285097da7ce8dc950.file.add-gallery.tpl.php" />
-      <change type="DELETED" beforePath="F:\www\ekonom\public_html\gallery\company\img_06-01-2012-22-26-13.jpg" afterPath="" />
-      <change type="DELETED" beforePath="F:\www\ekonom\public_html\gallery\company\img_06-01-2012-22-26-13_prew.jpg" afterPath="" />
-      <change type="DELETED" beforePath="F:\www\ekonom\public_html\gallery\company\img_06-01-2012-22-26-24.jpg" afterPath="" />
-      <change type="DELETED" beforePath="F:\www\ekonom\public_html\gallery\company\img_06-01-2012-22-26-24_prew.jpg" afterPath="" />
-      <change type="DELETED" beforePath="F:\www\ekonom\public_html\gallery\company\img_06-01-2012-22-26-42.jpg" afterPath="" />
-      <change type="DELETED" beforePath="F:\www\ekonom\public_html\gallery\company\img_06-01-2012-22-26-42_prew.jpg" afterPath="" />
+    <list default="true" id="d0b1c174-27bf-4d01-a853-aaef73e1aaba" name="Default" comment="В галлереи удаляются старые фото">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/kcaptcha/fonts/palatino_linotype_bold.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/kcaptcha/fonts/perpetua_bold.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/kcaptcha/fonts/times_bold.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/kcaptcha/fonts/.htaccess" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/kcaptcha/form_example.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/kcaptcha/index.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/kcaptcha/kcaptcha.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/kcaptcha/kcaptcha_config.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/kcaptcha/util/font_preparer.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtime/templates_c/01cb5fc755dd451db9b876f36bb7a73be84e01f7.file.edit.tpl.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtime/templates_c/08ccb423618ea4731483238e02e18d7255cb88d9.file.edit-place.tpl.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtime/templates_c/1233455740c9efe9de375974f87ca15f934cbd6c.file.index.tpl.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtime/templates_c/745bad7d02d157fda699307c36362385ac7b42a3.file.view-place.tpl.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtime/templates_c/dc7d22eba3ad537ec318f48d3f4df25db84e0df2.file.error.tpl.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/models/EK/Gallery/Gallery.php" afterPath="$PROJECT_DIR$/application/models/EK/Gallery/Gallery.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/BannerController.php" afterPath="$PROJECT_DIR$/application/controllers/BannerController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/IndexController.php" afterPath="$PROJECT_DIR$/application/controllers/IndexController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/models/EK/Banner/Place.php" afterPath="$PROJECT_DIR$/application/models/EK/Banner/Place.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/scripts/banner/add-place.tpl" afterPath="$PROJECT_DIR$/application/views/scripts/banner/add-place.tpl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/scripts/banner/edit-place.tpl" afterPath="$PROJECT_DIR$/application/views/scripts/banner/edit-place.tpl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/scripts/banner/view-place.tpl" afterPath="$PROJECT_DIR$/application/views/scripts/banner/view-place.tpl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/scripts/index/index.tpl" afterPath="$PROJECT_DIR$/application/views/scripts/index/index.tpl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public_html/js/slider.js" afterPath="$PROJECT_DIR$/public_html/js/slider.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/runtime/templates_c/94b43447258ea62d6154766d1bbba1c4afdc3e80.file.index.tpl.php" afterPath="$PROJECT_DIR$/runtime/templates_c/94b43447258ea62d6154766d1bbba1c4afdc3e80.file.index.tpl.php" />
     </list>
     <list id="ad86b5e8-338a-4c37-be49-497b5521d5ba" name="Failed commit: Default" comment="Интеграция интерфейса" />
     <ignored path="ekonom.iws" />
@@ -39,44 +48,35 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Image.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/library/TM/FileManager/Image.php">
+      <file leaf-file-name="view-place.tpl" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/views/scripts/banner/view-place.tpl">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="43" selection-start="76" selection-end="76" vertical-scroll-proportion="0.0">
+            <state line="23" column="50" selection-start="632" selection-end="642" vertical-scroll-proportion="-15.038462">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="File.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/library/TM/FileManager/File.php">
+      <file leaf-file-name="index.tpl" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/views/scripts/index/index.tpl">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="87" column="34" selection-start="1224" selection-end="1224" vertical-scroll-proportion="0.0">
+            <state line="20" column="8" selection-start="588" selection-end="598" vertical-scroll-proportion="-13.076923">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.css" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public_html/css/main.css">
+      <file leaf-file-name="slider.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public_html/js/slider.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1237" column="20" selection-start="21602" selection-end="21602" vertical-scroll-proportion="0.0">
+            <state line="35" column="52" selection-start="1208" selection-end="1208" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Company.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/models/EK/Company/Company.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="298" column="36" selection-start="6103" selection-end="6103" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Company.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/models/EK/Gallery/Company.php">
+      <file leaf-file-name="form_example.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/public_html/kcaptcha/form_example.php">
           <provider selected="true" editor-type-id="text-editor">
             <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding />
@@ -84,10 +84,37 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Gallery.php" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/application/models/EK/Gallery/Gallery.php">
+      <file leaf-file-name="index.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public_html/kcaptcha/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="257" column="109" selection-start="5218" selection-end="5218" vertical-scroll-proportion="0.73037034">
+            <state line="11" column="51" selection-start="184" selection-end="184" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="kcaptcha.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public_html/kcaptcha/kcaptcha.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="22" column="23" selection-start="725" selection-end="725" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="kcaptcha_config.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public_html/kcaptcha/kcaptcha_config.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="IndexController.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/controllers/IndexController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="22" column="48" selection-start="774" selection-end="774" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -126,15 +153,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/application/views/scripts/catalog/view-product.ajax.tpl" />
-        <option value="$PROJECT_DIR$/application/layouts/scripts/layout.tpl" />
-        <option value="$PROJECT_DIR$/application/controllers/SearchController.php" />
-        <option value="$PROJECT_DIR$/application/views/scripts/search/index.tpl" />
-        <option value="$PROJECT_DIR$/application/models/EK/Catalog/ProductCatalog.php" />
-        <option value="$PROJECT_DIR$/public_html/js/slider.js" />
-        <option value="$PROJECT_DIR$/application/controllers/CompanyController.php" />
-        <option value="$PROJECT_DIR$/application/views/scripts/company/edit.tpl" />
-        <option value="$PROJECT_DIR$/application/views/scripts/company/add.tpl" />
         <option value="$PROJECT_DIR$/application/views/scripts/company/view.tpl" />
         <option value="$PROJECT_DIR$/public_html/css/main.css" />
         <option value="$PROJECT_DIR$/library/TM/FileManager/Image.php" />
@@ -142,6 +160,15 @@
         <option value="$PROJECT_DIR$/application/configs/application.ini" />
         <option value="$PROJECT_DIR$/application/models/EK/Company/Company.php" />
         <option value="$PROJECT_DIR$/application/models/EK/Gallery/Gallery.php" />
+        <option value="$PROJECT_DIR$/application/models/EK/Banner/Place.php" />
+        <option value="$PROJECT_DIR$/application/views/scripts/banner/add-place.tpl" />
+        <option value="$PROJECT_DIR$/application/views/scripts/banner/edit-place.tpl" />
+        <option value="$PROJECT_DIR$/application/controllers/BannerController.php" />
+        <option value="$PROJECT_DIR$/application/views/scripts/banner/view-place.tpl" />
+        <option value="$PROJECT_DIR$/application/controllers/IndexController.php" />
+        <option value="$PROJECT_DIR$/application/views/scripts/index/index.tpl" />
+        <option value="$PROJECT_DIR$/public_html/js/slider.js" />
+        <option value="$PROJECT_DIR$/public_html/kcaptcha/kcaptcha.php" />
       </list>
     </option>
   </component>
@@ -300,6 +327,64 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="public_html" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ekonom" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ekonom" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public_html" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="kcaptcha" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ekonom" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ekonom" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public_html" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="kcaptcha" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="util" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ekonom" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ekonom" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public_html" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -480,6 +565,32 @@
               <option name="myItemId" value="views" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scripts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="banner" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ekonom" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ekonom" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -625,6 +736,32 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="Banner" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ekonom" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ekonom" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="models" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="EK" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="Acl" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -648,6 +785,24 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="scripts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ekonom" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ekonom" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controllers" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -792,7 +947,7 @@
     <layout>
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32950193" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32950193" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32950193" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -848,7 +1003,7 @@
     <option name="INCLUDE_TEXT_INTO_SHELF" value="false" />
     <option name="CREATE_PATCH_EXPAND_DETAILS_DEFAULT" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Служебный" />
+    <option name="LAST_COMMIT_MESSAGE" value="В галлереи удаляются старые фото" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -875,6 +1030,7 @@
     <MESSAGE value="Компании: официальный сайт и постоянная скидка" />
     <MESSAGE value="Вывод постоянной скидки, масштабирование фото" />
     <MESSAGE value="Служебный" />
+    <MESSAGE value="В галлереи удаляются старые фото" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -892,95 +1048,6 @@
     </PATH>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/public_html/js/slider.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="48" column="21" selection-start="1896" selection-end="1896" vertical-scroll-proportion="0.7330716" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/scripts/company/add.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="129" selection-start="1843" selection-end="1843" vertical-scroll-proportion="0.71903324">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/scripts/company/edit.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="45" column="129" selection-start="1972" selection-end="1972" vertical-scroll-proportion="0.7703928">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public_html/css/main2.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/scripts/company/view.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="26" selection-start="102" selection-end="109" vertical-scroll-proportion="-1.9615384">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/application/controllers/IndexControllerTest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/CompanyController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="82" column="71" selection-start="3223" selection-end="3223" vertical-scroll-proportion="0.016898608">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/library/TM/FileManager/Folder.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public_html/css/main.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1237" column="20" selection-start="21602" selection-end="21602" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/runtime/logs/syslog.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/configs/application.ini">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="12" selection-start="1104" selection-end="1104" vertical-scroll-proportion="0.8059259">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/library/TM/FileManager/File.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="87" column="34" selection-start="1224" selection-end="1224" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/library/TM/FileManager/Image.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="43" selection-start="76" selection-end="76" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/models/EK/Gallery/Company.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
@@ -997,7 +1064,98 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/models/EK/Gallery/Gallery.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="257" column="109" selection-start="5218" selection-end="5218" vertical-scroll-proportion="0.73037034">
+        <state line="257" column="109" selection-start="5218" selection-end="5218" vertical-scroll-proportion="0.48380765">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/models/EK/Banner/Place.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="342" column="18" selection-start="7584" selection-end="7584" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/scripts/banner/add-place.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="0" selection-start="737" selection-end="932" vertical-scroll-proportion="-13.076923">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/scripts/banner/edit-place.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="60" selection-start="895" selection-end="906" vertical-scroll-proportion="-14.384615">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/BannerController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="115" column="57" selection-start="3411" selection-end="3411" vertical-scroll-proportion="0.76741904">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/IndexController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="48" selection-start="774" selection-end="774" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/scripts/banner/view-place.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="50" selection-start="632" selection-end="642" vertical-scroll-proportion="-15.038462">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/scripts/index/index.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="8" selection-start="588" selection-end="598" vertical-scroll-proportion="-13.076923">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public_html/kcaptcha/util/font_preparer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public_html/js/slider.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="35" column="52" selection-start="1208" selection-end="1208" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public_html/kcaptcha/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="51" selection-start="184" selection-end="184" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public_html/kcaptcha/kcaptcha.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="23" selection-start="725" selection-end="725" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public_html/kcaptcha/kcaptcha_config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public_html/kcaptcha/form_example.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>

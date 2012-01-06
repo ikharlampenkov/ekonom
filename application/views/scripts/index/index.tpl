@@ -16,6 +16,10 @@
     <div id="shadow"></div>
 
 </div>
+
+<script type="text/javascript">
+    var changeTime = {$mainPlace->changeTime};
+</script>
 {/if}
 
 

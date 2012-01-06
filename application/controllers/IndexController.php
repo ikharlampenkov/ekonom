@@ -20,6 +20,7 @@ class IndexController extends Zend_Controller_Action
 
         $oPlace = EK_Banner_Place::getInstanceById(1);
         $this->view->assign('bannerList', EK_Banner_PlaceMark::getAllInstance($oPlace));
+        $this->view->assign('mainPlace', $oPlace);
 
         $oPlace = EK_Banner_Place::getInstanceById(4);
         $this->view->assign('bannerListRight', EK_Banner_PlaceMark::getAllInstance($oPlace));

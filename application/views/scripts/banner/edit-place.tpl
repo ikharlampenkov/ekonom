@@ -18,6 +18,10 @@
             <td class="ttovar_title">Высота</td>
             <td class="ttovar"><input name="data[height]" value="{$place->height}"/></td>
         </tr>
+        <tr>
+            <td class="ttovar_title">Время между сменой баннеров</td>
+            <td class="ttovar"><input name="data[change_time]" value="{$place->changeTime}"/></td>
+        </tr>
     </table>
     <input id="save" name="save" type="submit" value="Сохранить"/>
 </form>

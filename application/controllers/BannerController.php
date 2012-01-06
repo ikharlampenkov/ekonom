@@ -89,6 +89,7 @@ class BannerController extends Zend_Controller_Action
             $oPlace->setTitle($data['title']);
             $oPlace->setWidth($data['width']);
             $oPlace->setHeight($data['height']);
+            $oPlace->setChangeTime($data['change_time']);
 
             try {
                 $oPlace->insertToDb();
@@ -112,6 +113,7 @@ class BannerController extends Zend_Controller_Action
             $oPlace->setTitle($data['title']);
             $oPlace->setWidth($data['width']);
             $oPlace->setHeight($data['height']);
+            $oPlace->setChangeTime($data['change_time']);
 
             try {
                 $oPlace->updateToDb();

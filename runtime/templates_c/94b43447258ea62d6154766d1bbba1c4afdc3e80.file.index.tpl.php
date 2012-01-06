@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.0.9, created on 2012-01-06 22:02:58
+<?php /* Smarty version Smarty-3.0.9, created on 2012-01-06 23:48:19
          compiled from "F:\www\ekonom\application/views/scripts\index/index.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:250074f070d227dd6b6-02104428%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:320054f0725d33ccc78-24164703%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '94b43447258ea62d6154766d1bbba1c4afdc3e80' => 
     array (
       0 => 'F:\\www\\ekonom\\application/views/scripts\\index/index.tpl',
-      1 => 1325169332,
+      1 => 1325868495,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '250074f070d227dd6b6-02104428',
+  'nocache_hash' => '320054f0725d33ccc78-24164703',
   'function' => 
   array (
   ),
@@ -43,6 +43,11 @@ if ($_smarty_tpl->_count($_from) > 0){
     <div id="shadow"></div>
 
 </div>
+
+<script type="text/javascript">
+    var changeTime = <?php echo $_smarty_tpl->getVariable('mainPlace')->value->changeTime;?>
+;
+</script>
 <?php }?>
 
 

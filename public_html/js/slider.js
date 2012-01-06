@@ -33,7 +33,7 @@ $(function () {
                 return false;
             });
 
-            $("#slides").everyTime(5000, 'slider', function () {
+            $("#slides").everyTime(changeTime * 1000, 'slider', function () {
                 if (current_position > (wrapper_width - slider_width) && right) {
                     $('#slides').animate({'left':current_position - event_width + 'px'}, speed);
                     current_position -= event_width;
