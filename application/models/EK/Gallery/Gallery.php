@@ -246,11 +246,18 @@ class EK_Gallery_Gallery
                     WHERE id=' . $this->_id;
             $this->_db->query($sql);
 
+            $tempFName = $this->_file->getName();
+
             $fName = $this->_file->download('file');
             if ($fName !== false) {
+
                 $this->_file->createPreview(130, 83);
                 $sql = 'UPDATE gallery SET file="' . $fName . '" WHERE id=' . $this->_id;
                 $this->_db->query($sql);
+
+                $oFile = new TM_FileManager_Image(Zend_Registry::get('production')->gallery->path, $tempFName);
+                $oFile->setSubPath($this->_file->getSubPath());
+                $oFile->delete();
             }
         } catch (Exception $e) {
             throw new Exception($e->getMessage());

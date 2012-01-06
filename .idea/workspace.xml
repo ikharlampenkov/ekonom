@@ -1,29 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d0b1c174-27bf-4d01-a853-aaef73e1aaba" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/gallery/company/img_06-01-2012-22-23-22.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/gallery/company/img_06-01-2012-22-23-22_prew.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/gallery/company/img_06-01-2012-22-24-57.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/gallery/company/img_06-01-2012-22-24-57_prew.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/gallery/company/img_06-01-2012-22-26-13.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/gallery/company/img_06-01-2012-22-26-13_prew.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/gallery/company/img_06-01-2012-22-26-24.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/gallery/company/img_06-01-2012-22-26-24_prew.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/gallery/company/img_06-01-2012-22-26-42.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/gallery/company/img_06-01-2012-22-26-42_prew.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/gallery/product/img_06-01-2012-22-27-25.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/gallery/product/img_06-01-2012-22-27-25_prew.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/gallery/product/img_06-01-2012-22-27-54.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/gallery/product/img_06-01-2012-22-27-54_prew.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/gallery/product/img_06-01-2012-22-28-11.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/gallery/product/img_06-01-2012-22-28-11_prew.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/gallery/product/img_06-01-2012-22-28-31.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/gallery/product/img_06-01-2012-22-28-31_prew.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtime/templates_c/4ae7eae07dd76826569daf4fb61833d2d9c24ad3.file.edit-gallery.tpl.php" />
+    <list default="true" id="d0b1c174-27bf-4d01-a853-aaef73e1aaba" name="Default" comment="Служебный">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/gallery/company/img_06-01-2012-23-12-59.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/gallery/company/img_06-01-2012-23-12-59_prew.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/gallery/company/img_06-01-2012-23-13-56.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/gallery/company/img_06-01-2012-23-13-56_prew.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/gallery/company/img_06-01-2012-23-15-42.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/gallery/company/img_06-01-2012-23-15-42_prew.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtime/templates_c/12057dd814e4da6628fcd8a285097da7ce8dc950.file.add-gallery.tpl.php" />
+      <change type="DELETED" beforePath="F:\www\ekonom\public_html\gallery\company\img_06-01-2012-22-26-13.jpg" afterPath="" />
+      <change type="DELETED" beforePath="F:\www\ekonom\public_html\gallery\company\img_06-01-2012-22-26-13_prew.jpg" afterPath="" />
+      <change type="DELETED" beforePath="F:\www\ekonom\public_html\gallery\company\img_06-01-2012-22-26-24.jpg" afterPath="" />
+      <change type="DELETED" beforePath="F:\www\ekonom\public_html\gallery\company\img_06-01-2012-22-26-24_prew.jpg" afterPath="" />
+      <change type="DELETED" beforePath="F:\www\ekonom\public_html\gallery\company\img_06-01-2012-22-26-42.jpg" afterPath="" />
+      <change type="DELETED" beforePath="F:\www\ekonom\public_html\gallery\company\img_06-01-2012-22-26-42_prew.jpg" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/configs/application.ini" afterPath="$PROJECT_DIR$/application/configs/application.ini" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/runtime/logs/syslog.txt" afterPath="$PROJECT_DIR$/runtime/logs/syslog.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/models/EK/Gallery/Gallery.php" afterPath="$PROJECT_DIR$/application/models/EK/Gallery/Gallery.php" />
     </list>
     <list id="ad86b5e8-338a-4c37-be49-497b5521d5ba" name="Failed commit: Default" comment="Интеграция интерфейса" />
     <ignored path="ekonom.iws" />
@@ -49,16 +42,16 @@
       <file leaf-file-name="Image.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/library/TM/FileManager/Image.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="70" column="38" selection-start="2086" selection-end="2086" vertical-scroll-proportion="0.0">
+            <state line="6" column="43" selection-start="76" selection-end="76" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="application.ini" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/application/configs/application.ini">
+      <file leaf-file-name="File.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/library/TM/FileManager/File.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="32" column="12" selection-start="1104" selection-end="1104" vertical-scroll-proportion="0.8059259">
+            <state line="87" column="34" selection-start="1224" selection-end="1224" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -76,7 +69,7 @@
       <file leaf-file-name="Company.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/models/EK/Company/Company.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="491" column="61" selection-start="11583" selection-end="11600" vertical-scroll-proportion="0.0">
+            <state line="298" column="36" selection-start="6103" selection-end="6103" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -91,10 +84,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Gallery.php" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="Gallery.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/models/EK/Gallery/Gallery.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="233" column="0" selection-start="4401" selection-end="4401" vertical-scroll-proportion="0.0">
+            <state line="257" column="109" selection-start="5218" selection-end="5218" vertical-scroll-proportion="0.73037034">
               <folding />
             </state>
           </provider>
@@ -139,16 +132,16 @@
         <option value="$PROJECT_DIR$/application/views/scripts/search/index.tpl" />
         <option value="$PROJECT_DIR$/application/models/EK/Catalog/ProductCatalog.php" />
         <option value="$PROJECT_DIR$/public_html/js/slider.js" />
-        <option value="$PROJECT_DIR$/application/models/EK/Company/Company.php" />
         <option value="$PROJECT_DIR$/application/controllers/CompanyController.php" />
         <option value="$PROJECT_DIR$/application/views/scripts/company/edit.tpl" />
         <option value="$PROJECT_DIR$/application/views/scripts/company/add.tpl" />
         <option value="$PROJECT_DIR$/application/views/scripts/company/view.tpl" />
         <option value="$PROJECT_DIR$/public_html/css/main.css" />
-        <option value="$PROJECT_DIR$/application/models/EK/Gallery/Gallery.php" />
         <option value="$PROJECT_DIR$/library/TM/FileManager/Image.php" />
         <option value="$PROJECT_DIR$/runtime/logs/syslog.txt" />
         <option value="$PROJECT_DIR$/application/configs/application.ini" />
+        <option value="$PROJECT_DIR$/application/models/EK/Company/Company.php" />
+        <option value="$PROJECT_DIR$/application/models/EK/Gallery/Gallery.php" />
       </list>
     </option>
   </component>
@@ -855,7 +848,7 @@
     <option name="INCLUDE_TEXT_INTO_SHELF" value="false" />
     <option name="CREATE_PATCH_EXPAND_DETAILS_DEFAULT" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Вывод постоянной скидки, масштабирование фото" />
+    <option name="LAST_COMMIT_MESSAGE" value="Служебный" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -878,10 +871,10 @@
     <MESSAGE value="Кнопки Поделиться и Зарезервировать&#10;Оформление каталога" />
     <MESSAGE value="Merge branch 'master' of github.com:ikharlampenkov/ekonom&#10;&#10;Conflicts:&#10;&#9;.idea/workspace.xml&#10;" />
     <MESSAGE value="Счетчик, акции на первой странице, Исправление глюков по компаниям и городам" />
-    <MESSAGE value="Служебный" />
     <MESSAGE value="Перемещение баннера на главной" />
     <MESSAGE value="Компании: официальный сайт и постоянная скидка" />
     <MESSAGE value="Вывод постоянной скидки, масштабирование фото" />
+    <MESSAGE value="Служебный" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -899,11 +892,6 @@
     </PATH>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/application/layouts/scripts/layout.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="93" selection-start="952" selection-end="952" vertical-scroll-proportion="0.01734694" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public_html/js/slider.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="48" column="21" selection-start="1896" selection-end="1896" vertical-scroll-proportion="0.7330716" />
@@ -958,30 +946,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/models/EK/Company/Company.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="491" column="61" selection-start="11583" selection-end="11600" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/models/EK/Gallery/Company.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public_html/css/main.css">
       <provider selected="true" editor-type-id="text-editor">
         <state line="1237" column="20" selection-start="21602" selection-end="21602" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/models/EK/Gallery/Gallery.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="233" column="0" selection-start="4401" selection-end="4401" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -993,16 +960,44 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/library/TM/FileManager/Image.php">
+    <entry file="file://$PROJECT_DIR$/application/configs/application.ini">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="70" column="38" selection-start="2086" selection-end="2086" vertical-scroll-proportion="0.0">
+        <state line="32" column="12" selection-start="1104" selection-end="1104" vertical-scroll-proportion="0.8059259">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/configs/application.ini">
+    <entry file="file://$PROJECT_DIR$/library/TM/FileManager/File.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="12" selection-start="1104" selection-end="1104" vertical-scroll-proportion="0.8059259">
+        <state line="87" column="34" selection-start="1224" selection-end="1224" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/library/TM/FileManager/Image.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="43" selection-start="76" selection-end="76" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/models/EK/Gallery/Company.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/models/EK/Company/Company.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="298" column="36" selection-start="6103" selection-end="6103" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/models/EK/Gallery/Gallery.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="257" column="109" selection-start="5218" selection-end="5218" vertical-scroll-proportion="0.73037034">
           <folding />
         </state>
       </provider>
