@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 
+-- version 3.4.9
 -- http://www.phpmyadmin.net
 --
--- Хост: ekonom.mysql
--- Время создания: Дек 30 2011 г., 21:19
--- Версия сервера: 5.1.41
--- Версия PHP: 5.2.10
+-- Хост: localhost
+-- Время создания: Янв 04 2012 г., 18:56
+-- Версия сервера: 5.1.50
+-- Версия PHP: 5.3.8-ZS5.5.0
 
 SET FOREIGN_KEY_CHECKS=0;
 SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
@@ -27,8 +27,6 @@ SET time_zone = "+00:00";
 
 --
 -- Структура таблицы `banner`
---
--- Создание: Дек 28 2011 г., 05:43
 --
 
 DROP TABLE IF EXISTS `banner`;
@@ -55,8 +53,6 @@ INSERT INTO `banner` (`id`, `img`, `link`, `title`) VALUES
 
 --
 -- Структура таблицы `banner_place`
---
--- Создание: Дек 28 2011 г., 06:12
 --
 
 DROP TABLE IF EXISTS `banner_place`;
@@ -86,8 +82,6 @@ INSERT INTO `banner_place` (`banner_id`, `bplace_id`) VALUES
 --
 -- Структура таблицы `bplace`
 --
--- Создание: Дек 28 2011 г., 05:44
---
 
 DROP TABLE IF EXISTS `bplace`;
 CREATE TABLE IF NOT EXISTS `bplace` (
@@ -114,8 +108,6 @@ INSERT INTO `bplace` (`id`, `title`, `width`, `height`) VALUES
 --
 -- Структура таблицы `city`
 --
--- Создание: Дек 27 2011 г., 16:34
---
 
 DROP TABLE IF EXISTS `city`;
 CREATE TABLE IF NOT EXISTS `city` (
@@ -138,8 +130,6 @@ INSERT INTO `city` (`id`, `title`, `phone_code`) VALUES
 
 --
 -- Структура таблицы `comments`
---
--- Создание: Дек 27 2011 г., 16:34
 --
 
 DROP TABLE IF EXISTS `comments`;
@@ -169,8 +159,6 @@ INSERT INTO `comments` (`id`, `message`, `date_create`, `user`, `is_moderate`) V
 --
 -- Структура таблицы `comments_product`
 --
--- Создание: Дек 27 2011 г., 16:34
---
 
 DROP TABLE IF EXISTS `comments_product`;
 CREATE TABLE IF NOT EXISTS `comments_product` (
@@ -197,8 +185,6 @@ INSERT INTO `comments_product` (`comments_id`, `product_id`) VALUES
 --
 -- Структура таблицы `company`
 --
--- Создание: Дек 27 2011 г., 16:34
---
 
 DROP TABLE IF EXISTS `company`;
 CREATE TABLE IF NOT EXISTS `company` (
@@ -208,6 +194,8 @@ CREATE TABLE IF NOT EXISTS `company` (
   `file` varchar(255) DEFAULT NULL,
   `description` text,
   `order_email` varchar(255) NOT NULL DEFAULT '',
+  `ofsite` varchar(255) NOT NULL DEFAULT '',
+  `constant_discount` varchar(25) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`),
   KEY `fk_company_city1` (`city_id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=5 ;
@@ -216,16 +204,14 @@ CREATE TABLE IF NOT EXISTS `company` (
 -- Дамп данных таблицы `company`
 --
 
-INSERT INTO `company` (`id`, `city_id`, `title`, `file`, `description`, `order_email`) VALUES
-(3, 3, 'Адидас', 'file_27-12-2011-15-37-39.jpg', 'Адидас - просто класс!!!', 'nikencmoscow@yandex.ru'),
-(4, 1, 'Мир Без Границ', 'img_28-12-2011-15-24-28.jpg', 'Для ценителей солнца и моря клуб ярких путешествий \\"МИР БЕЗ ГРАНИЦ\\" предоставляет широкий спектр туристических услуг полного цикла, у нас можно осуществить подбор туров, заказать путевки оптимальные по соотношению «цена-качество», к тому же получить скидку. С нами вы можете посетить любой уголок земного шара!\r\nНаши потенциальные клиенты – те, кому важны не только относительно низкая цена путевок, но и качество заявленных услуг. Семейный отдых или романтическое путешествие, в пределах России и за границей, туристический поход или интересное спортивное мероприятие – вот далеко неполный перечень услуг клуба \\"МИР БЕЗ ГРАНИЦ\\".', 'mir-tour2011@ya.ru');
+INSERT INTO `company` (`id`, `city_id`, `title`, `file`, `description`, `order_email`, `ofsite`, `constant_discount`) VALUES
+(3, 3, 'Адидас', 'file_27-12-2011-15-37-39.jpg', 'Адидас - просто класс!!!', 'nikencmoscow@yandex.ru', '', '0'),
+(4, 1, 'Мир Без Границ', 'img_28-12-2011-15-24-28.jpg', 'Для ценителей солнца и моря клуб ярких путешествий "МИР БЕЗ ГРАНИЦ" предоставляет широкий спектр туристических услуг полного цикла, у нас можно осуществить подбор туров, заказать путевки оптимальные по соотношению «цена-качество», к тому же получить скидку. С нами вы можете посетить любой уголок земного шара!\r\nНаши потенциальные клиенты – те, кому важны не только относительно низкая цена путевок, но и качество заявленных услуг. Семейный отдых или романтическое путешествие, в пределах России и за границей, туристический поход или интересное спортивное мероприятие – вот далеко неполный перечень услуг клуба "МИР БЕЗ ГРАНИЦ".', 'mir-tour2011@ya.ru', 'mbgtours.ru', '0');
 
 -- --------------------------------------------------------
 
 --
 -- Структура таблицы `company_address`
---
--- Создание: Дек 28 2011 г., 07:53
 --
 
 DROP TABLE IF EXISTS `company_address`;
@@ -253,8 +239,6 @@ INSERT INTO `company_address` (`id`, `company_id`, `city_id`, `address`, `phone`
 --
 -- Структура таблицы `company_user`
 --
--- Создание: Дек 27 2011 г., 16:34
---
 
 DROP TABLE IF EXISTS `company_user`;
 CREATE TABLE IF NOT EXISTS `company_user` (
@@ -280,8 +264,6 @@ INSERT INTO `company_user` (`company_id`, `user_id`, `is_read`, `is_write`, `is_
 --
 -- Структура таблицы `content_page`
 --
--- Создание: Дек 27 2011 г., 16:34
---
 
 DROP TABLE IF EXISTS `content_page`;
 CREATE TABLE IF NOT EXISTS `content_page` (
@@ -304,8 +286,6 @@ INSERT INTO `content_page` (`page_title`, `title`, `content`) VALUES
 
 --
 -- Структура таблицы `gallery`
---
--- Создание: Дек 27 2011 г., 16:34
 --
 
 DROP TABLE IF EXISTS `gallery`;
@@ -348,8 +328,6 @@ INSERT INTO `gallery` (`id`, `title`, `date_create`, `user_id`, `file`) VALUES
 --
 -- Структура таблицы `gallery_company`
 --
--- Создание: Дек 28 2011 г., 07:53
---
 
 DROP TABLE IF EXISTS `gallery_company`;
 CREATE TABLE IF NOT EXISTS `gallery_company` (
@@ -372,8 +350,6 @@ INSERT INTO `gallery_company` (`gallery_id`, `company_id`) VALUES
 
 --
 -- Структура таблицы `gallery_product`
---
--- Создание: Дек 28 2011 г., 07:54
 --
 
 DROP TABLE IF EXISTS `gallery_product`;
@@ -402,8 +378,6 @@ INSERT INTO `gallery_product` (`gallery_id`, `product_id`) VALUES
 --
 -- Структура таблицы `product`
 --
--- Создание: Дек 27 2011 г., 16:34
---
 
 DROP TABLE IF EXISTS `product`;
 CREATE TABLE IF NOT EXISTS `product` (
@@ -426,17 +400,15 @@ CREATE TABLE IF NOT EXISTS `product` (
 --
 
 INSERT INTO `product` (`id`, `product_rubric_id`, `title`, `img`, `short_text`, `full_text`, `price`, `company_id`, `on_first_page`) VALUES
-(11, 1, 'полплпрлп', NULL, '', '', 125.50, 3, 1),
-(14, 6, 'Косюм!', 'img_27-12-2011-14-05-19.jpg', 'Хорошая вещь!', 'Хорошая вещь!', 1000.00, 3, 0),
-(15, 9, 'Таиланд! 12 дней! 21.01.2012', 'img_30-12-2011-13-48-12.jpg', '', 'Прямой вылет из Кемерово в Паттайю! 21 января 2012! на 12 дней!\r\nЦена указана на 1 человека при условии 2х местного размещения!\r\n\r\nОтели 3 — от 24000 т. р.\r\nОтели 4 — от 28500 т. р.\r\nОтели 5* — от 37500 т. р.\r\n\r\nСПЕШИТЕ БРОНИРОВАТЬ! РЕЙСЫ РАСКУПАЮТСЯ!', 29400.00, 4, 1),
-(16, 9, 'ОАЭ 24.01.2012 7 дней! ', 'img_30-12-2011-13-52-01.jpg', 'Горящий тур в ОАЭ из Новосибирска! Вылеты по вторникам и субботам! Горящий на 24.01.2012 — 7 дней / 6 ночей!', 'Горящий тур в ОАЭ из Новосибирска! Вылеты по вторникам и субботам! Горящий на 24.01.2012 — 7 дней / 6 ночей! Дополнительно оплачивается виза 75 у. е. с человека! Есть туры на 14 дней! Цену нужно уточнять! Цена указана на 1 человека при условии 2х местного размещения!\r\n\r\nДубаи — город — от 17500 т. р.\r\n\r\nЭмират Фуджейра! Пляжные отели, первая береговая линия.\r\nFUJAIRAH ROTANA RESORT & SPA 5 — 22000 т. р.\r\nHILTON FUJAIRAH 5 — 25000 т. р.\r\nLE MERIDIEN AL AQAH BEACH RESO 5* — 25500 т. р.\r\n\r\nПитание только завтраки! (Возможно купить концепцию завтрак+ужин)\r\n', 21000.00, 4, 1);
+(11, 1, 'полплпрлп', NULL, '', '', '125.50', 3, 1),
+(14, 6, 'Косюм!', 'img_27-12-2011-14-05-19.jpg', 'Хорошая вещь!', 'Хорошая вещь!', '1000.00', 3, 0),
+(15, 9, 'Таиланд! 12 дней! 21.01.2012', 'img_30-12-2011-13-48-12.jpg', '', 'Прямой вылет из Кемерово в Паттайю! 21 января 2012! на 12 дней!\r\nЦена указана на 1 человека при условии 2х местного размещения!\r\n\r\nОтели 3 — от 24000 т. р.\r\nОтели 4 — от 28500 т. р.\r\nОтели 5* — от 37500 т. р.\r\n\r\nСПЕШИТЕ БРОНИРОВАТЬ! РЕЙСЫ РАСКУПАЮТСЯ!', '29400.00', 4, 1),
+(16, 9, 'ОАЭ 24.01.2012 7 дней! ', 'img_30-12-2011-13-52-01.jpg', 'Горящий тур в ОАЭ из Новосибирска! Вылеты по вторникам и субботам! Горящий на 24.01.2012 — 7 дней / 6 ночей!', 'Горящий тур в ОАЭ из Новосибирска! Вылеты по вторникам и субботам! Горящий на 24.01.2012 — 7 дней / 6 ночей! Дополнительно оплачивается виза 75 у. е. с человека! Есть туры на 14 дней! Цену нужно уточнять! Цена указана на 1 человека при условии 2х местного размещения!\r\n\r\nДубаи — город — от 17500 т. р.\r\n\r\nЭмират Фуджейра! Пляжные отели, первая береговая линия.\r\nFUJAIRAH ROTANA RESORT & SPA 5 — 22000 т. р.\r\nHILTON FUJAIRAH 5 — 25000 т. р.\r\nLE MERIDIEN AL AQAH BEACH RESO 5* — 25500 т. р.\r\n\r\nПитание только завтраки! (Возможно купить концепцию завтрак+ужин)\r\n', '21000.00', 4, 1);
 
 -- --------------------------------------------------------
 
 --
 -- Структура таблицы `product_attribute`
---
--- Создание: Дек 27 2011 г., 16:34
 --
 
 DROP TABLE IF EXISTS `product_attribute`;
@@ -482,8 +454,6 @@ INSERT INTO `product_attribute` (`product_id`, `attribute_key`, `type_id`, `attr
 --
 -- Структура таблицы `product_attribute_type`
 --
--- Создание: Дек 27 2011 г., 16:34
---
 
 DROP TABLE IF EXISTS `product_attribute_type`;
 CREATE TABLE IF NOT EXISTS `product_attribute_type` (
@@ -509,8 +479,6 @@ INSERT INTO `product_attribute_type` (`id`, `title`, `handler`, `description`) V
 
 --
 -- Структура таблицы `product_hash`
---
--- Создание: Дек 27 2011 г., 16:34
 --
 
 DROP TABLE IF EXISTS `product_hash`;
@@ -543,8 +511,6 @@ INSERT INTO `product_hash` (`product_id`, `attribute_key`, `title`, `type_id`, `
 --
 -- Структура таблицы `product_rubric`
 --
--- Создание: Дек 27 2011 г., 16:34
---
 
 DROP TABLE IF EXISTS `product_rubric`;
 CREATE TABLE IF NOT EXISTS `product_rubric` (
@@ -554,7 +520,7 @@ CREATE TABLE IF NOT EXISTS `product_rubric` (
   `is_root` tinyint(1) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`),
   KEY `fk_product_rubric_product_rubric` (`parent_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=11 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=10 ;
 
 --
 -- Дамп данных таблицы `product_rubric`
@@ -574,8 +540,6 @@ INSERT INTO `product_rubric` (`id`, `title`, `parent_id`, `is_root`) VALUES
 
 --
 -- Структура таблицы `tm_acl_role`
---
--- Создание: Дек 27 2011 г., 16:34
 --
 
 DROP TABLE IF EXISTS `tm_acl_role`;
@@ -928,8 +892,6 @@ INSERT INTO `tm_acl_role` (`tm_user_role_id`, `tm_user_resource_id`, `is_allow`,
 --
 -- Структура таблицы `tm_task_attribute`
 --
--- Создание: Дек 27 2011 г., 16:34
---
 
 DROP TABLE IF EXISTS `tm_task_attribute`;
 CREATE TABLE IF NOT EXISTS `tm_task_attribute` (
@@ -947,8 +909,6 @@ CREATE TABLE IF NOT EXISTS `tm_task_attribute` (
 
 --
 -- Структура таблицы `tm_task_attribute_type`
---
--- Создание: Дек 27 2011 г., 16:34
 --
 
 DROP TABLE IF EXISTS `tm_task_attribute_type`;
@@ -975,8 +935,6 @@ INSERT INTO `tm_task_attribute_type` (`id`, `title`, `handler`, `description`) V
 
 --
 -- Структура таблицы `tm_task_hash`
---
--- Создание: Дек 27 2011 г., 16:34
 --
 
 DROP TABLE IF EXISTS `tm_task_hash`;
@@ -1006,8 +964,6 @@ INSERT INTO `tm_task_hash` (`task_id`, `attribute_key`, `title`, `type_id`, `lis
 
 --
 -- Структура таблицы `tm_user`
---
--- Создание: Дек 27 2011 г., 16:34
 --
 
 DROP TABLE IF EXISTS `tm_user`;
@@ -1039,8 +995,6 @@ INSERT INTO `tm_user` (`id`, `login`, `password`, `role_id`, `date_create`) VALU
 --
 -- Структура таблицы `tm_user_attribute`
 --
--- Создание: Дек 27 2011 г., 16:34
---
 
 DROP TABLE IF EXISTS `tm_user_attribute`;
 CREATE TABLE IF NOT EXISTS `tm_user_attribute` (
@@ -1070,8 +1024,6 @@ INSERT INTO `tm_user_attribute` (`user_id`, `attribute_key`, `type_id`, `attribu
 --
 -- Структура таблицы `tm_user_attribute_type`
 --
--- Создание: Дек 27 2011 г., 16:34
---
 
 DROP TABLE IF EXISTS `tm_user_attribute_type`;
 CREATE TABLE IF NOT EXISTS `tm_user_attribute_type` (
@@ -1096,8 +1048,6 @@ INSERT INTO `tm_user_attribute_type` (`id`, `title`, `handler`, `description`) V
 
 --
 -- Структура таблицы `tm_user_hash`
---
--- Создание: Дек 27 2011 г., 16:35
 --
 
 DROP TABLE IF EXISTS `tm_user_hash`;
@@ -1124,8 +1074,6 @@ INSERT INTO `tm_user_hash` (`user_id`, `attribute_key`, `title`, `type_id`, `lis
 --
 -- Структура таблицы `tm_user_profile`
 --
--- Создание: Дек 27 2011 г., 16:34
---
 
 DROP TABLE IF EXISTS `tm_user_profile`;
 CREATE TABLE IF NOT EXISTS `tm_user_profile` (
@@ -1140,8 +1088,6 @@ CREATE TABLE IF NOT EXISTS `tm_user_profile` (
 
 --
 -- Структура таблицы `tm_user_resource`
---
--- Создание: Дек 27 2011 г., 16:34
 --
 
 DROP TABLE IF EXISTS `tm_user_resource`;
@@ -1256,8 +1202,6 @@ INSERT INTO `tm_user_resource` (`id`, `title`, `rtitle`) VALUES
 --
 -- Структура таблицы `tm_user_role`
 --
--- Создание: Дек 27 2011 г., 16:34
---
 
 DROP TABLE IF EXISTS `tm_user_role`;
 CREATE TABLE IF NOT EXISTS `tm_user_role` (
@@ -1285,15 +1229,15 @@ INSERT INTO `tm_user_role` (`id`, `title`, `rtitle`) VALUES
 -- Ограничения внешнего ключа таблицы `banner_place`
 --
 ALTER TABLE `banner_place`
-  ADD CONSTRAINT `banner_place_ibfk_2` FOREIGN KEY (`bplace_id`) REFERENCES `bplace` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `banner_place_ibfk_1` FOREIGN KEY (`banner_id`) REFERENCES `banner` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `banner_place_ibfk_1` FOREIGN KEY (`banner_id`) REFERENCES `banner` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `banner_place_ibfk_2` FOREIGN KEY (`bplace_id`) REFERENCES `bplace` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Ограничения внешнего ключа таблицы `comments_product`
 --
 ALTER TABLE `comments_product`
-  ADD CONSTRAINT `comments_product_ibfk_2` FOREIGN KEY (`product_id`) REFERENCES `product` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `comments_product_ibfk_1` FOREIGN KEY (`comments_id`) REFERENCES `comments` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `comments_product_ibfk_1` FOREIGN KEY (`comments_id`) REFERENCES `comments` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `comments_product_ibfk_2` FOREIGN KEY (`product_id`) REFERENCES `product` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Ограничения внешнего ключа таблицы `company`
@@ -1305,8 +1249,8 @@ ALTER TABLE `company`
 -- Ограничения внешнего ключа таблицы `company_address`
 --
 ALTER TABLE `company_address`
-  ADD CONSTRAINT `company_address_ibfk_4` FOREIGN KEY (`city_id`) REFERENCES `city` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `company_address_ibfk_3` FOREIGN KEY (`company_id`) REFERENCES `company` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `company_address_ibfk_3` FOREIGN KEY (`company_id`) REFERENCES `company` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `company_address_ibfk_4` FOREIGN KEY (`city_id`) REFERENCES `city` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Ограничения внешнего ключа таблицы `company_user`
@@ -1332,8 +1276,8 @@ ALTER TABLE `gallery_company`
 -- Ограничения внешнего ключа таблицы `gallery_product`
 --
 ALTER TABLE `gallery_product`
-  ADD CONSTRAINT `gallery_product_ibfk_2` FOREIGN KEY (`product_id`) REFERENCES `product` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `gallery_product_ibfk_1` FOREIGN KEY (`gallery_id`) REFERENCES `gallery` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `gallery_product_ibfk_1` FOREIGN KEY (`gallery_id`) REFERENCES `gallery` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `gallery_product_ibfk_2` FOREIGN KEY (`product_id`) REFERENCES `product` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Ограничения внешнего ключа таблицы `product`
@@ -1403,3 +1347,7 @@ ALTER TABLE `tm_user_hash`
   ADD CONSTRAINT `tm_user_hash_ibfk_1` FOREIGN KEY (`type_id`) REFERENCES `tm_user_attribute_type` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 SET FOREIGN_KEY_CHECKS=1;
 COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

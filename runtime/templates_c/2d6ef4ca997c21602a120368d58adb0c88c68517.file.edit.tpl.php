@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.0.9, created on 2012-01-04 18:37:14
+<?php /* Smarty version Smarty-3.0.9, created on 2012-01-06 22:05:11
          compiled from "F:\www\ekonom\application/views/scripts\company/edit.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:84434f0439ea41fa31-08202437%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:267654f070da74b5f82-17029001%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '2d6ef4ca997c21602a120368d58adb0c88c68517' => 
     array (
       0 => 'F:\\www\\ekonom\\application/views/scripts\\company/edit.tpl',
-      1 => 1325676922,
+      1 => 1325862305,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '84434f0439ea41fa31-08202437',
+  'nocache_hash' => '267654f070da74b5f82-17029001',
   'function' => 
   array (
   ),
@@ -76,7 +76,7 @@ if ($_smarty_tpl->_count($_from) > 0){
         <tr>
             <td class="ttovar_title">Постоянная скидка</td>
             <td class="ttovar"><input name="data[constant_discount]" value="<?php echo $_smarty_tpl->getVariable('company')->value->constantDiscount;?>
-"/></td>
+" style="width: 50px;"/>%</td>
         </tr>
     </table>
     <input id="save" name="save" type="submit" value="Сохранить"/>

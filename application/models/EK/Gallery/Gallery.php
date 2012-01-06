@@ -220,7 +220,7 @@ class EK_Gallery_Gallery
 
             $fName = $this->_file->download('file');
             if ($fName !== false) {
-                $this->_file->createPreview(130, 90);
+                $this->_file->createPreview(130, 83);
                 $sql = 'UPDATE gallery SET file="' . $fName . '" WHERE id=' . $this->_id;
                 $this->_db->query($sql);
             }
@@ -248,7 +248,7 @@ class EK_Gallery_Gallery
 
             $fName = $this->_file->download('file');
             if ($fName !== false) {
-                $this->_file->createPreview(130, 90);
+                $this->_file->createPreview(130, 83);
                 $sql = 'UPDATE gallery SET file="' . $fName . '" WHERE id=' . $this->_id;
                 $this->_db->query($sql);
             }

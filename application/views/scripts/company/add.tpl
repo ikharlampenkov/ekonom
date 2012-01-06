@@ -40,7 +40,7 @@
         </tr>
         <tr>
             <td class="ttovar_title">Постоянная скидка</td>
-            <td class="ttovar"><input name="data[constant_discount]" value="{$company->constantDiscount}"/></td>
+            <td class="ttovar"><input name="data[constant_discount]" value="{$company->constantDiscount}" style="width: 50px;"/>%</td>
         </tr>
     </table>
     <input id="save" name="save" type="submit" value="Сохранить"/>

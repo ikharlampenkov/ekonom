@@ -2,15 +2,69 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d0b1c174-27bf-4d01-a853-aaef73e1aaba" name="Default" comment="">
+      <change type="DELETED" beforePath="F:\www\ekonom\public_html\css\main.css.bak" afterPath="" />
+      <change type="DELETED" beforePath="F:\www\ekonom\runtime\templates_c\01cb5fc755dd451db9b876f36bb7a73be84e01f7.file.edit.tpl.php" afterPath="" />
+      <change type="DELETED" beforePath="F:\www\ekonom\runtime\templates_c\07ccc328a57070777d46e6a91656dc5fcb2efd4d.file.edit-resource.tpl.php" afterPath="" />
+      <change type="DELETED" beforePath="F:\www\ekonom\runtime\templates_c\12057dd814e4da6628fcd8a285097da7ce8dc950.file.add-gallery.tpl.php" afterPath="" />
+      <change type="DELETED" beforePath="F:\www\ekonom\runtime\templates_c\17f03bd37db2e7ea1bc368f39fcfa3bff0912c48.file.reserve.tpl.php" afterPath="" />
+      <change type="DELETED" beforePath="F:\www\ekonom\runtime\templates_c\19d70d6486444763dbbb21bdd8cc44a009e63034.file.index.tpl.php" afterPath="" />
+      <change type="DELETED" beforePath="F:\www\ekonom\runtime\templates_c\1c1d54966bbae18fd578d732c578ce6691a7e938.file.edit-comments.tpl.php" afterPath="" />
+      <change type="DELETED" beforePath="F:\www\ekonom\runtime\templates_c\1dbf3c4f2f8d7f578c38270eebcbe1876ec7f588.file.add-comments.ajax.tpl.php" afterPath="" />
+      <change type="DELETED" beforePath="F:\www\ekonom\runtime\templates_c\1f79f07b66919a879692beedce13796262daffdf.file.add.tpl.php" afterPath="" />
+      <change type="DELETED" beforePath="F:\www\ekonom\runtime\templates_c\2ca4d9fb8fa4f27acecf2d1ea2f12e9837e0db14.file.index.tpl.php" afterPath="" />
+      <change type="DELETED" beforePath="F:\www\ekonom\runtime\templates_c\4711e375810acdb84af75df1630f88461af3fc17.file.edit.tpl.php" afterPath="" />
+      <change type="DELETED" beforePath="F:\www\ekonom\runtime\templates_c\4930df03c4f53f8e018377f92315f9fb07706314.file.share.ajax.tpl.php" afterPath="" />
+      <change type="DELETED" beforePath="F:\www\ekonom\runtime\templates_c\49b36ad6efe5dc6d4571b600955bfca8c202fe60.file.add-attribute-hash.tpl.php" afterPath="" />
+      <change type="DELETED" beforePath="F:\www\ekonom\runtime\templates_c\543495dcdeddc2bb7d7dd9bc7b41f14689bebe99.file.edit.tpl.php" afterPath="" />
+      <change type="DELETED" beforePath="F:\www\ekonom\runtime\templates_c\550c9c0b3fec2e2d85cc31229c0ef1b79116c8e7.file.edit-role.tpl.php" afterPath="" />
+      <change type="DELETED" beforePath="F:\www\ekonom\runtime\templates_c\565fb754d2fd421be3f4e93bcda76984f7d3d761.file.edit-address.tpl.php" afterPath="" />
+      <change type="DELETED" beforePath="F:\www\ekonom\runtime\templates_c\5eba87bd87f777b21e44375d30fc5d7ce33072f5.file.view.tpl.php" afterPath="" />
+      <change type="DELETED" beforePath="F:\www\ekonom\runtime\templates_c\75280f7c76d8e5b51962a67ed7518c82f3183211.file.view-sub-menu.ajax.tpl.php" afterPath="" />
+      <change type="DELETED" beforePath="F:\www\ekonom\runtime\templates_c\77d6a8cdda5ab6ff4647bb930614cb37ebbe488e.file.view-address.tpl.php" afterPath="" />
+      <change type="DELETED" beforePath="F:\www\ekonom\runtime\templates_c\839c289df6b720c342dbf52af6f901788ba98b9c.file.add.tpl.php" afterPath="" />
+      <change type="DELETED" beforePath="F:\www\ekonom\runtime\templates_c\83c00589f4a36fa872e614caa332157d1905bbcf.file.view-comments.tpl.php" afterPath="" />
+      <change type="DELETED" beforePath="F:\www\ekonom\runtime\templates_c\85fd52c8805cbb71d751360fee543824acb7a0fe.file.add.tpl.php" afterPath="" />
+      <change type="DELETED" beforePath="F:\www\ekonom\runtime\templates_c\892a1daed2742fe5419406f9db33602bd2c49c79.file.add.tpl.php" afterPath="" />
+      <change type="DELETED" beforePath="F:\www\ekonom\runtime\templates_c\8f8b343cd367368542564d049117460e1a840f94.file.index.tpl.php" afterPath="" />
+      <change type="DELETED" beforePath="F:\www\ekonom\runtime\templates_c\8fb919e54d42945bae039d05312e0bf139248419.file.show-acl.tpl.php" afterPath="" />
+      <change type="DELETED" beforePath="F:\www\ekonom\runtime\templates_c\9d8ebf29805ba26ea37e23a5195f5e7fcc8603bd.file.view.ajax.tpl.php" afterPath="" />
+      <change type="DELETED" beforePath="F:\www\ekonom\runtime\templates_c\a469eeb31924a87f6bbe033e82fdfe3e13335576.file.admin.tpl.php" afterPath="" />
+      <change type="DELETED" beforePath="F:\www\ekonom\runtime\templates_c\a5c68603bbe346bf65e3bede36b8e77b606e39aa.file.index.tpl.php" afterPath="" />
+      <change type="DELETED" beforePath="F:\www\ekonom\runtime\templates_c\aa2f40d2fed0221f1a1736ce280c0f55fb16dedd.file.view-resource.tpl.php" afterPath="" />
+      <change type="DELETED" beforePath="F:\www\ekonom\runtime\templates_c\b7d0c95d218e46d4c40cd6c7fbf5579da2689052.file.reserve.ajax.tpl.php" afterPath="" />
+      <change type="DELETED" beforePath="F:\www\ekonom\runtime\templates_c\c0bfc42c119da6b62fe73da3fc328608a12244cf.file.edit-rubric.tpl.php" afterPath="" />
+      <change type="DELETED" beforePath="F:\www\ekonom\runtime\templates_c\c77ef0bded455b3c083406fd25ecdc9632c15307.file.index.tpl.php" afterPath="" />
+      <change type="DELETED" beforePath="F:\www\ekonom\runtime\templates_c\cc2ce09ef193ad0410edc894be8c2dd01b539921.file.view-attribute-type.tpl.php" afterPath="" />
+      <change type="DELETED" beforePath="F:\www\ekonom\runtime\templates_c\dc7d22eba3ad537ec318f48d3f4df25db84e0df2.file.error.tpl.php" afterPath="" />
+      <change type="DELETED" beforePath="F:\www\ekonom\runtime\templates_c\dda09ba04928690b37da0bd16e22d04e7d94878f.file.view-hash.tpl.php" afterPath="" />
+      <change type="DELETED" beforePath="F:\www\ekonom\runtime\templates_c\eb2b16b47d3eeaa15f66ac8eb95c4fb94fd76ffa.file.add-resource.tpl.php" afterPath="" />
+      <change type="DELETED" beforePath="F:\www\ekonom\runtime\templates_c\f0a0c624d55f414fc5584bccb2f3279b3a132d30.file.view-hash.tpl.php" afterPath="" />
+      <change type="DELETED" beforePath="F:\www\ekonom\runtime\templates_c\f1cd2f2ba3c0923bb94a9e4f4ff2770329493840.file.show-role-acl.tpl.php" afterPath="" />
+      <change type="DELETED" beforePath="F:\www\ekonom\runtime\templates_c\f4156eae42dd7d3926134f3362c666d0e6d08991.file.edit.tpl.php" afterPath="" />
+      <change type="DELETED" beforePath="F:\www\ekonom\runtime\templates_c\f862cd5a0cfb33ded8658b030c8778cf1e413fdf.file.index.tpl.php" afterPath="" />
+      <change type="DELETED" beforePath="F:\www\ekonom\runtime\templates_c\fdac397dd5e94fe02ce8b945e33c254b7697dbb8.file.edit-attribute-hash.tpl.php" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/ekonom.iml" afterPath="$PROJECT_DIR$/.idea/ekonom.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/CompanyController.php" afterPath="$PROJECT_DIR$/application/controllers/CompanyController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/models/EK/Company/Company.php" afterPath="$PROJECT_DIR$/application/models/EK/Company/Company.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/models/EK/Gallery/Gallery.php" afterPath="$PROJECT_DIR$/application/models/EK/Gallery/Gallery.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/scripts/company/add.tpl" afterPath="$PROJECT_DIR$/application/views/scripts/company/add.tpl" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/scripts/company/edit.tpl" afterPath="$PROJECT_DIR$/application/views/scripts/company/edit.tpl" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/scripts/company/view.tpl" afterPath="$PROJECT_DIR$/application/views/scripts/company/view.tpl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/library/TM/FileManager/Image.php" afterPath="$PROJECT_DIR$/library/TM/FileManager/Image.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public_html/css/main.css" afterPath="$PROJECT_DIR$/public_html/css/main.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/runtime/logs/syslog.txt" afterPath="$PROJECT_DIR$/runtime/logs/syslog.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/runtime/templates_c/24df40ffa7f00fc7b929cf5e8e71b08fa18e026c.file.view-gallery.tpl.php" afterPath="$PROJECT_DIR$/runtime/templates_c/24df40ffa7f00fc7b929cf5e8e71b08fa18e026c.file.view-gallery.tpl.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/runtime/templates_c/2d6ef4ca997c21602a120368d58adb0c88c68517.file.edit.tpl.php" afterPath="$PROJECT_DIR$/runtime/templates_c/2d6ef4ca997c21602a120368d58adb0c88c68517.file.edit.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/runtime/templates_c/4528c0f58b5ad95b2e77897251943699034d7647.file.index.tpl.php" afterPath="$PROJECT_DIR$/runtime/templates_c/4528c0f58b5ad95b2e77897251943699034d7647.file.index.tpl.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/runtime/templates_c/4a2d248229c0e6452704f9a7ccc41e7a5c93b3ee.file.view.tpl.php" afterPath="$PROJECT_DIR$/runtime/templates_c/4a2d248229c0e6452704f9a7ccc41e7a5c93b3ee.file.view.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/runtime/templates_c/50476d9be6c10e4d5566fb6927d6edf719c8a09a.file.view-product.ajax.tpl.php" afterPath="$PROJECT_DIR$/runtime/templates_c/50476d9be6c10e4d5566fb6927d6edf719c8a09a.file.view-product.ajax.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/runtime/templates_c/633c28ddf0345904e135763bae3bf8dc93318da6.file.view-gallery.tpl.php" afterPath="$PROJECT_DIR$/runtime/templates_c/633c28ddf0345904e135763bae3bf8dc93318da6.file.view-gallery.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/runtime/templates_c/80ff11feedc4a0ba005e0c5733e3e115c1477d3b.file.layout.tpl.php" afterPath="$PROJECT_DIR$/runtime/templates_c/80ff11feedc4a0ba005e0c5733e3e115c1477d3b.file.layout.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/runtime/templates_c/94b43447258ea62d6154766d1bbba1c4afdc3e80.file.index.tpl.php" afterPath="$PROJECT_DIR$/runtime/templates_c/94b43447258ea62d6154766d1bbba1c4afdc3e80.file.index.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/runtime/templates_c/9df79449238660fb8315d8c5e46bbc13abd1b136.file.child-block.tpl.php" afterPath="$PROJECT_DIR$/runtime/templates_c/9df79449238660fb8315d8c5e46bbc13abd1b136.file.child-block.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/runtime/templates_c/a943f4c37583ea01c7979b69872ea4115840ecec.file.index.tpl.php" afterPath="$PROJECT_DIR$/runtime/templates_c/a943f4c37583ea01c7979b69872ea4115840ecec.file.index.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/runtime/templates_c/ca35f7a3852ec8c1a5c7655a0831a90ff115e8c3.file.index.tpl.php" afterPath="$PROJECT_DIR$/runtime/templates_c/ca35f7a3852ec8c1a5c7655a0831a90ff115e8c3.file.index.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/runtime/templates_c/d492600fb384683736d6bc2f2539f0a0da3fef35.file.edit-gallery.tpl.php" afterPath="$PROJECT_DIR$/runtime/templates_c/d492600fb384683736d6bc2f2539f0a0da3fef35.file.edit-gallery.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/~Documents/ekonom_pro_db.sql" afterPath="$PROJECT_DIR$/~Documents/ekonom_pro_db.sql" />
     </list>
     <list id="ad86b5e8-338a-4c37-be49-497b5521d5ba" name="Failed commit: Default" comment="Интеграция интерфейса" />
     <ignored path="ekonom.iws" />
@@ -33,6 +87,24 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
+      <file leaf-file-name="Image.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/library/TM/FileManager/Image.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="70" column="38" selection-start="2086" selection-end="2086" vertical-scroll-proportion="0.71737">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.css" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public_html/css/main.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="1237" column="20" selection-start="21602" selection-end="21602" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="Company.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/models/EK/Company/Company.php">
           <provider selected="true" editor-type-id="text-editor">
@@ -42,37 +114,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="edit.tpl" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/views/scripts/company/edit.tpl">
+      <file leaf-file-name="Company.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/models/EK/Gallery/Company.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="39" column="8" selection-start="1600" selection-end="1969" vertical-scroll-proportion="-25.5">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="add.tpl" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/views/scripts/company/add.tpl">
+      <file leaf-file-name="Gallery.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/models/EK/Gallery/Gallery.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="38" column="82" selection-start="1611" selection-end="1617" vertical-scroll-proportion="-24.846153">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="view.tpl" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/application/views/scripts/company/view.tpl">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="63" column="37" selection-start="2661" selection-end="2661" vertical-scroll-proportion="0.76632655">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CompanyController.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/controllers/CompanyController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="82" column="71" selection-start="3223" selection-end="3223" vertical-scroll-proportion="0.0">
+            <state line="233" column="0" selection-start="4401" selection-end="4401" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -111,9 +165,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/application/views/scripts/catalog/add.tpl" />
-        <option value="$PROJECT_DIR$/application/views/scripts/catalog/edit.tpl" />
-        <option value="$PROJECT_DIR$/application/controllers/IndexController.php" />
         <option value="$PROJECT_DIR$/application/configs/application.ini" />
         <option value="$PROJECT_DIR$/application/models/EK/Catalog/Product.php" />
         <option value="$PROJECT_DIR$/application/views/scripts/catalog/view-product.ajax.tpl" />
@@ -123,10 +174,13 @@
         <option value="$PROJECT_DIR$/application/models/EK/Catalog/ProductCatalog.php" />
         <option value="$PROJECT_DIR$/public_html/js/slider.js" />
         <option value="$PROJECT_DIR$/application/models/EK/Company/Company.php" />
-        <option value="$PROJECT_DIR$/application/views/scripts/company/edit.tpl" />
         <option value="$PROJECT_DIR$/application/controllers/CompanyController.php" />
+        <option value="$PROJECT_DIR$/application/views/scripts/company/edit.tpl" />
         <option value="$PROJECT_DIR$/application/views/scripts/company/add.tpl" />
         <option value="$PROJECT_DIR$/application/views/scripts/company/view.tpl" />
+        <option value="$PROJECT_DIR$/public_html/css/main.css" />
+        <option value="$PROJECT_DIR$/application/models/EK/Gallery/Gallery.php" />
+        <option value="$PROJECT_DIR$/library/TM/FileManager/Image.php" />
       </list>
     </option>
   </component>
@@ -195,18 +249,6 @@
               <option name="myItemId" value="ekonom" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="External Libraries" />
-              <option name="myItemType" value="com.jetbrains.php.config.PhpExternalLibrariesNodePatcher$PatchedExternalLibrariesNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PHP" />
-              <option name="myItemType" value="com.jetbrains.php.config.PhpExternalLibrariesNodePatcher$PatchedLibraryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="library" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -228,7 +270,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="~Documents" />
+              <option name="myItemId" value="tests" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -242,25 +284,15 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="public_html" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ekonom" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ekonom" />
+              <option name="myItemId" value="tests" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="public_html" />
+              <option name="myItemId" value="application" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
+              <option name="myItemId" value="controllers" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -275,32 +307,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="public_html" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fancybox" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="source" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ekonom" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ekonom" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public_html" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fancybox" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -319,6 +325,60 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="css" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ekonom" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ekonom" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="library" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TM" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FileManager" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ekonom" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ekonom" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="library" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TM" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ekonom" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ekonom" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="library" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -427,32 +487,6 @@
               <option name="myItemId" value="views" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="scripts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="company" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ekonom" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ekonom" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="application" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -546,7 +580,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Company" />
+              <option name="myItemId" value="Gallery" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -572,7 +606,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Catalog" />
+              <option name="myItemId" value="Company" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -638,24 +672,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="controllers" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ekonom" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ekonom" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="application" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="configs" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -669,8 +685,8 @@
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="true" />
     <property name="options.lastSelected" value="reference.webide.settings.project.settings.php" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
   </component>
   <component name="PublishConfig">
     <servers>
@@ -721,6 +737,13 @@
         <option name="PhingTarget" enabled="false" />
       </method>
     </configuration>
+    <configuration default="true" type="JavascriptDebugSession" factoryName="Local">
+      <JSDebuggerConfigurationSettings>
+        <option name="engineId" value="embedded" />
+        <option name="fileUrl" />
+      </JSDebuggerConfigurationSettings>
+      <method />
+    </configuration>
     <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server">
       <method>
         <option name="FtpUpload" enabled="false">
@@ -729,13 +752,6 @@
         </option>
         <option name="PhingTarget" enabled="false" />
       </method>
-    </configuration>
-    <configuration default="true" type="JavascriptDebugSession" factoryName="Local">
-      <JSDebuggerConfigurationSettings>
-        <option name="engineId" value="embedded" />
-        <option name="fileUrl" />
-      </JSDebuggerConfigurationSettings>
-      <method />
     </configuration>
     <list size="0" />
   </component>
@@ -786,7 +802,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.31623933" sideWeight="0.6704981" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32799146" sideWeight="0.6704981" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32950193" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -839,7 +855,7 @@
     <option name="INCLUDE_TEXT_INTO_SHELF" value="false" />
     <option name="CREATE_PATCH_EXPAND_DETAILS_DEFAULT" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Перемещение баннера на главной" />
+    <option name="LAST_COMMIT_MESSAGE" value="Вывод постоянной скидки, масштабирование фото" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -864,6 +880,8 @@
     <MESSAGE value="Счетчик, акции на первой странице, Исправление глюков по компаниям и городам" />
     <MESSAGE value="Служебный" />
     <MESSAGE value="Перемещение баннера на главной" />
+    <MESSAGE value="Компании: официальный сайт и постоянная скидка" />
+    <MESSAGE value="Вывод постоянной скидки, масштабирование фото" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -881,41 +899,6 @@
     </PATH>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/application/models/EK/Catalog/Product.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="393" column="0" selection-start="9067" selection-end="9067" vertical-scroll-proportion="0.53385675" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public_html/css/main.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1159" column="21" selection-start="20108" selection-end="20111" vertical-scroll-proportion="0.33299798" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/scripts/catalog/view-product.ajax.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="96" selection-start="1263" selection-end="1263" vertical-scroll-proportion="0.46836734" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/models/EK/Catalog/Status.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-2.6025515" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/scripts/index/index.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="20" selection-start="64" selection-end="64" vertical-scroll-proportion="0.01734694" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/models/EK/Catalog/ProductCatalog.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="155" selection-start="492" selection-end="492" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/scripts/catalog/index.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="0" selection-start="911" selection-end="911" vertical-scroll-proportion="-0.22551021" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/SearchController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="32" column="81" selection-start="966" selection-end="966" vertical-scroll-proportion="0.53385675" />
@@ -933,7 +916,54 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public_html/js/slider.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="48" column="21" selection-start="1896" selection-end="1896" vertical-scroll-proportion="0.7330716">
+        <state line="48" column="21" selection-start="1896" selection-end="1896" vertical-scroll-proportion="0.7330716" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/scripts/company/add.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="42" column="129" selection-start="1843" selection-end="1843" vertical-scroll-proportion="0.71903324">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/scripts/company/edit.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="45" column="129" selection-start="1972" selection-end="1972" vertical-scroll-proportion="0.7703928">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public_html/css/main2.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/scripts/company/view.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="26" selection-start="102" selection-end="109" vertical-scroll-proportion="-1.9615384">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/application/controllers/IndexControllerTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/CompanyController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="82" column="71" selection-start="3223" selection-end="3223" vertical-scroll-proportion="0.016898608">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/library/TM/FileManager/Folder.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -945,30 +975,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/CompanyController.php">
+    <entry file="file://$PROJECT_DIR$/application/models/EK/Gallery/Company.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="82" column="71" selection-start="3223" selection-end="3223" vertical-scroll-proportion="0.0">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/scripts/company/edit.tpl">
+    <entry file="file://$PROJECT_DIR$/public_html/css/main.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="8" selection-start="1600" selection-end="1969" vertical-scroll-proportion="-25.5">
+        <state line="1237" column="20" selection-start="21602" selection-end="21602" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/scripts/company/add.tpl">
+    <entry file="file://$PROJECT_DIR$/application/models/EK/Gallery/Gallery.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="82" selection-start="1611" selection-end="1617" vertical-scroll-proportion="-24.846153">
+        <state line="233" column="0" selection-start="4401" selection-end="4401" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/scripts/company/view.tpl">
+    <entry file="file://$PROJECT_DIR$/library/TM/FileManager/Image.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="63" column="37" selection-start="2661" selection-end="2661" vertical-scroll-proportion="0.76632655">
+        <state line="70" column="38" selection-start="2086" selection-end="2086" vertical-scroll-proportion="0.71737">
           <folding />
         </state>
       </provider>

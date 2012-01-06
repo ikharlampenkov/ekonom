@@ -1,6 +1,6 @@
-<?php /* Smarty version Smarty-3.0.9, created on 2011-12-30 21:18:45
+<?php /* Smarty version Smarty-3.0.9, created on 2012-01-06 22:02:58
          compiled from "F:\www\ekonom\application/views/scripts\index/index.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:36784efc762f2aa072-51190285%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:250074f070d227dd6b6-02104428%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
@@ -11,7 +11,7 @@ $_smarty_tpl->decodeProperties(array (
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '36784efc762f2aa072-51190285',
+  'nocache_hash' => '250074f070d227dd6b6-02104428',
   'function' => 
   array (
   ),

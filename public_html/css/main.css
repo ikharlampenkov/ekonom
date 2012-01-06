@@ -1233,6 +1233,11 @@ section.comments #paginator {
     text-align: center;
 }
 
+.constant-discount {
+    color: #ff0000;
+    font-size: 16px;
+}
+
 /* Gallery list */
 #gallery {
     margin: 0 0 0 -12px;
