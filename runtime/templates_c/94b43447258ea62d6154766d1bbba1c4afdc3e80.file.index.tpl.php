@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.0.9, created on 2012-01-06 23:48:19
+<?php /* Smarty version Smarty-3.0.9, created on 2012-01-07 19:16:20
          compiled from "F:\www\ekonom\application/views/scripts\index/index.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:320054f0725d33ccc78-24164703%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:50344f083794461789-38712694%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '94b43447258ea62d6154766d1bbba1c4afdc3e80' => 
     array (
       0 => 'F:\\www\\ekonom\\application/views/scripts\\index/index.tpl',
-      1 => 1325868495,
+      1 => 1325938577,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '320054f0725d33ccc78-24164703',
+  'nocache_hash' => '50344f083794461789-38712694',
   'function' => 
   array (
   ),
@@ -136,15 +136,11 @@ if ($_smarty_tpl->_count($_from) > 0){
 
         <div id="share">
                     <span class="share42">
-                        <a target="_blank" title="Поделиться в Facebook" class="facebook" href="#" rel="nofollow"
-                           onclick="window.open('http://www.facebook.com/sharer.php?u=http://ekonom.pro/&amp;t=Ekonom.pro', '_blank', 'scrollbars=0, resizable=1, menubar=0, left=200, top=200, width=550, height=440, toolbar=0, status=0');return false">
-                        </a>
-                        <a target="_blank" title="Добавить в Twitter" class="twitter" href="#" rel="nofollow"
-                           onclick="window.open('http://twitter.com/share?text=Ekonom.pro&amp;url=http://ekonom.pro/', '_blank', 'scrollbars=0, resizable=1, menubar=0, left=200, top=200, width=550, height=440, toolbar=0, status=0');return false">
-                        </a>
-                        <a target="_blank" title="Поделиться В Контакте" class="vkontakte" href="#" rel="nofollow"
-                           onclick="window.open('http://vkontakte.ru/share.php?url=http://ekonom.pro/', '_blank', 'scrollbars=0, resizable=1, menubar=0, left=200, top=200, width=554, height=421, toolbar=0, status=0');return false">
-                        </a>
+                        <script type="text/javascript">
+                            //<!--
+                            share42('/i/');
+                            //-->
+                        </script>
                     </span>
 
             <div id="plusone">

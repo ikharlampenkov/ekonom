@@ -744,7 +744,7 @@ section.comments #paginator {
 .fancybox-outer .share42 {
     float: left;
     margin: 5px 0 0 30px;
-    width: 100px;
+    width: 180px;
     border-left: 1px #c8c8c8 solid !important;
     padding-left: 30px !important;
 }
@@ -762,13 +762,23 @@ section.comments #paginator {
     background:url(/i/icons.png) -0px 0;
 }
 
-.share42 .twitter {
+.share42 .mail-ru {
     background:url(/i/icons.png) -24px 0;
 }
 
-.share42 .vkontakte {
+.share42 .odnoklassniki {
     background:url(/i/icons.png) -48px 0;
 }
+
+.share42 .twitter {
+    background:url(/i/icons.png) -72px 0;
+}
+
+.share42 .vkontakte {
+    background:url(/i/icons.png) -96px 0;
+}
+
+
 
 #plusone {
     padding-left: 30px;

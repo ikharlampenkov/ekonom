@@ -29,19 +29,19 @@
                 {/if}
                 </section>
 
-                {if $commentsList !== false}
+            {if $commentsList !== false}
                 <section class="comments">
                     <h3>Комментарии</h3>
                     <ul class="comments-list">
                         {foreach from=$commentsList item=comment}
-                        <li>
-                            <article class="comment">
-                                <header>{$comment->user}</header>
-                                <div class="content">
-                                    {$comment->message}
-                                </div>
-                            </article>
-                        </li>
+                            <li>
+                                <article class="comment">
+                                    <header>{$comment->user}</header>
+                                    <div class="content">
+                                        {$comment->message}
+                                    </div>
+                                </article>
+                            </li>
                         {/foreach}
                     </ul>
 
@@ -57,7 +57,7 @@
                                     </div>
                 *}
                 </section>
-                {/if}
+            {/if}
             </article>
 
             <aside class="addons">
@@ -97,20 +97,29 @@
         <div class="controls">
             <div class="clearfix">
                 <span class="share42">
-                        <a target="_blank" title="Поделиться в Facebook" class="facebook" href="#" rel="nofollow"
-                           onclick="window.open('http://www.facebook.com/sharer.php?u={ url }&amp;t={ title }', '_blank', 'scrollbars=0, resizable=1, menubar=0, left=200, top=200, width=550, height=440, toolbar=0, status=0');return false">
-                        </a>
-                        <a target="_blank" title="Добавить в Twitter" class="twitter" href="#" rel="nofollow"
-                           onclick="window.open('http://twitter.com/share?text={ title }&amp;url={ url }', '_blank', 'scrollbars=0, resizable=1, menubar=0, left=200, top=200, width=550, height=440, toolbar=0, status=0');return false">
-                        </a>
-                        <a target="_blank" title="Поделиться В Контакте" class="vkontakte" href="#" rel="nofollow"
-                           onclick="window.open('http://vkontakte.ru/share.php?url={ url }', '_blank', 'scrollbars=0, resizable=1, menubar=0, left=200, top=200, width=554, height=421, toolbar=0, status=0');return false">
-                        </a>
+                    <a target="_blank" title="Поделиться в Facebook" class="facebook" href="#" rel="nofollow"
+                       onclick="window.open('http://www.facebook.com/sharer.php?u={$this->url(['controller' => 'catalog','action' => 'viewProduct', 'id' => $product->id])}&amp;t={$product->title}', '_blank', 'scrollbars=0, resizable=1, menubar=0, left=200, top=200, width=550, height=440, toolbar=0, status=0');return false">
+                    </a>
+                    <a target="_blank" title="Поделиться в Моем Мире@Mail.Ru" class="mail-ru" href="#" rel="nofollow"
+                       onclick="window.open('http://connect.mail.ru/share?url={$this->url(['controller' => 'catalog','action' => 'viewProduct', 'id' => $product->id])}&amp;title={$product->title}', '_blank', 'scrollbars=0, resizable=1, menubar=0, left=200, top=200, width=554, height=421, toolbar=0, status=0');return false">
+                    </a>
+                    <a target="_blank" title="Добавить в Одноклассники" class="odnoklassniki" href="#" rel="nofollow"
+                       onclick="window.open('http://www.odnoklassniki.ru/dk?st.cmd=addShare&amp;st._surl={$this->url(['controller' => 'catalog','action' => 'viewProduct', 'id' => $product->id])}&amp;title={$product->title}', '_blank', 'scrollbars=0, resizable=1, menubar=0, left=200, top=200, width=554, height=421, toolbar=0, status=0');return false">
+                    </a>
+                    <a target="_blank" title="Добавить в Twitter" class="twitter" href="#" rel="nofollow"
+                       onclick="window.open('http://twitter.com/share?text={$product->title}&amp;url={$this->url(['controller' => 'catalog','action' => 'viewProduct', 'id' => $product->id])}', '_blank', 'scrollbars=0, resizable=1, menubar=0, left=200, top=200, width=550, height=440, toolbar=0, status=0');return false">
+                    </a>
+                    <a target="_blank" title="Поделиться В Контакте" class="vkontakte" href="#" rel="nofollow"
+                       onclick="window.open('http://vkontakte.ru/share.php?url={$this->url(['controller' => 'catalog','action' => 'viewProduct', 'id' => $product->id])}', '_blank', 'scrollbars=0, resizable=1, menubar=0, left=200, top=200, width=554, height=421, toolbar=0, status=0');return false">
+                    </a>
                     </span>
 
                 <div id="plusone">
                     <g:plusone></g:plusone>
                 </div>
+                <script type="text/javascript">
+                    plusone();
+                </script>
 
                 <a href="{$this->url(['controller' => $controller,'action' => 'addComments', 'idProduct' => $product->id])}" class="button add-comment">Комментировать</a>
             </div>

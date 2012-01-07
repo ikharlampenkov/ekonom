@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.0.9, created on 2012-01-06 22:10:24
+<?php /* Smarty version Smarty-3.0.9, created on 2012-01-07 19:59:33
          compiled from "F:\www\ekonom\application/views/scripts\catalog/view-product.ajax.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:54464f070ee06134f5-67426920%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:152534f0841b5f13a91-59480279%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '50476d9be6c10e4d5566fb6927d6edf719c8a09a' => 
     array (
       0 => 'F:\\www\\ekonom\\application/views/scripts\\catalog/view-product.ajax.tpl',
-      1 => 1325168311,
+      1 => 1325941168,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '54464f070ee06134f5-67426920',
+  'nocache_hash' => '152534f0841b5f13a91-59480279',
   'function' => 
   array (
   ),
@@ -56,7 +56,7 @@ $_smarty_tpl->decodeProperties(array (
                 <?php }?>
                 </section>
 
-                <?php if ($_smarty_tpl->getVariable('commentsList')->value!==false){?>
+            <?php if ($_smarty_tpl->getVariable('commentsList')->value!==false){?>
                 <section class="comments">
                     <h3>Комментарии</h3>
                     <ul class="comments-list">
@@ -65,20 +65,20 @@ $_smarty_tpl->decodeProperties(array (
 if ($_smarty_tpl->_count($_from) > 0){
     foreach ($_from as $_smarty_tpl->tpl_vars['comment']->key => $_smarty_tpl->tpl_vars['comment']->value){
 ?>
-                        <li>
-                            <article class="comment">
-                                <header><?php echo $_smarty_tpl->getVariable('comment')->value->user;?>
+                            <li>
+                                <article class="comment">
+                                    <header><?php echo $_smarty_tpl->getVariable('comment')->value->user;?>
 </header>
-                                <div class="content">
-                                    <?php echo $_smarty_tpl->getVariable('comment')->value->message;?>
+                                    <div class="content">
+                                        <?php echo $_smarty_tpl->getVariable('comment')->value->message;?>
 
-                                </div>
-                            </article>
-                        </li>
+                                    </div>
+                                </article>
+                            </li>
                         <?php }} ?>
                     </ul>
                 </section>
-                <?php }?>
+            <?php }?>
             </article>
 
             <aside class="addons">
@@ -145,20 +145,38 @@ if ($_smarty_tpl->tpl_vars['gallery']->total > 0){
         <div class="controls">
             <div class="clearfix">
                 <span class="share42">
-                        <a target="_blank" title="Поделиться в Facebook" class="facebook" href="#" rel="nofollow"
-                           onclick="window.open('http://www.facebook.com/sharer.php?u={ url }&amp;t={ title }', '_blank', 'scrollbars=0, resizable=1, menubar=0, left=200, top=200, width=550, height=440, toolbar=0, status=0');return false">
-                        </a>
-                        <a target="_blank" title="Добавить в Twitter" class="twitter" href="#" rel="nofollow"
-                           onclick="window.open('http://twitter.com/share?text={ title }&amp;url={ url }', '_blank', 'scrollbars=0, resizable=1, menubar=0, left=200, top=200, width=550, height=440, toolbar=0, status=0');return false">
-                        </a>
-                        <a target="_blank" title="Поделиться В Контакте" class="vkontakte" href="#" rel="nofollow"
-                           onclick="window.open('http://vkontakte.ru/share.php?url={ url }', '_blank', 'scrollbars=0, resizable=1, menubar=0, left=200, top=200, width=554, height=421, toolbar=0, status=0');return false">
-                        </a>
+                    <a target="_blank" title="Поделиться в Facebook" class="facebook" href="#" rel="nofollow"
+                       onclick="window.open('http://www.facebook.com/sharer.php?u=<?php echo $_smarty_tpl->getVariable('this')->value->url(array('controller'=>'catalog','action'=>'viewProduct','id'=>$_smarty_tpl->getVariable('product')->value->id));?>
+&amp;t=<?php echo $_smarty_tpl->getVariable('product')->value->title;?>
+', '_blank', 'scrollbars=0, resizable=1, menubar=0, left=200, top=200, width=550, height=440, toolbar=0, status=0');return false">
+                    </a>
+                    <a target="_blank" title="Поделиться в Моем Мире@Mail.Ru" class="mail-ru" href="#" rel="nofollow"
+                       onclick="window.open('http://connect.mail.ru/share?url=<?php echo $_smarty_tpl->getVariable('this')->value->url(array('controller'=>'catalog','action'=>'viewProduct','id'=>$_smarty_tpl->getVariable('product')->value->id));?>
+&amp;title=<?php echo $_smarty_tpl->getVariable('product')->value->title;?>
+', '_blank', 'scrollbars=0, resizable=1, menubar=0, left=200, top=200, width=554, height=421, toolbar=0, status=0');return false">
+                    </a>
+                    <a target="_blank" title="Добавить в Одноклассники" class="odnoklassniki" href="#" rel="nofollow"
+                       onclick="window.open('http://www.odnoklassniki.ru/dk?st.cmd=addShare&amp;st._surl=<?php echo $_smarty_tpl->getVariable('this')->value->url(array('controller'=>'catalog','action'=>'viewProduct','id'=>$_smarty_tpl->getVariable('product')->value->id));?>
+&amp;title=<?php echo $_smarty_tpl->getVariable('product')->value->title;?>
+', '_blank', 'scrollbars=0, resizable=1, menubar=0, left=200, top=200, width=554, height=421, toolbar=0, status=0');return false">
+                    </a>
+                    <a target="_blank" title="Добавить в Twitter" class="twitter" href="#" rel="nofollow"
+                       onclick="window.open('http://twitter.com/share?text=<?php echo $_smarty_tpl->getVariable('product')->value->title;?>
+&amp;url=<?php echo $_smarty_tpl->getVariable('this')->value->url(array('controller'=>'catalog','action'=>'viewProduct','id'=>$_smarty_tpl->getVariable('product')->value->id));?>
+', '_blank', 'scrollbars=0, resizable=1, menubar=0, left=200, top=200, width=550, height=440, toolbar=0, status=0');return false">
+                    </a>
+                    <a target="_blank" title="Поделиться В Контакте" class="vkontakte" href="#" rel="nofollow"
+                       onclick="window.open('http://vkontakte.ru/share.php?url=<?php echo $_smarty_tpl->getVariable('this')->value->url(array('controller'=>'catalog','action'=>'viewProduct','id'=>$_smarty_tpl->getVariable('product')->value->id));?>
+', '_blank', 'scrollbars=0, resizable=1, menubar=0, left=200, top=200, width=554, height=421, toolbar=0, status=0');return false">
+                    </a>
                     </span>
 
                 <div id="plusone">
                     <g:plusone></g:plusone>
                 </div>
+                <script type="text/javascript">
+                    plusone();
+                </script>
 
                 <a href="<?php echo $_smarty_tpl->getVariable('this')->value->url(array('controller'=>$_smarty_tpl->getVariable('controller')->value,'action'=>'addComments','idProduct'=>$_smarty_tpl->getVariable('product')->value->id));?>
 " class="button add-comment">Комментировать</a>
