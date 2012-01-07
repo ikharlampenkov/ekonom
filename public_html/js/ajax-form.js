@@ -32,6 +32,7 @@ $(document).ready(function () {
                             $('ul.comments-list').html(data);
                         }
                     }, 'html');
+                    $('#form-placeholder').html();
                 } else {
                     $('#form-placeholder').html('Отправлено');
                 }
