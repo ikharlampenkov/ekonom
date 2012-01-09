@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.0.9, created on 2012-01-06 22:09:29
+<?php /* Smarty version Smarty-3.0.9, created on 2012-01-09 18:28:29
          compiled from "F:\www\ekonom\application/views/scripts\company/view.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:179274f070ea9bc43a3-80177260%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:236344f0acf5d9e7069-78828381%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '4a2d248229c0e6452704f9a7ccc41e7a5c93b3ee' => 
     array (
       0 => 'F:\\www\\ekonom\\application/views/scripts\\company/view.tpl',
-      1 => 1325862398,
+      1 => 1326108498,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '179274f070ea9bc43a3-80177260',
+  'nocache_hash' => '236344f0acf5d9e7069-78828381',
   'function' => 
   array (
   ),
@@ -21,8 +21,8 @@ $_smarty_tpl->decodeProperties(array (
     <div class="inner">
 
         <h1 class="heading"><?php echo $_smarty_tpl->getVariable('company')->value->title;?>
- <?php if ($_smarty_tpl->getVariable('company')->value->constantDiscount!=''&&$_smarty_tpl->getVariable('company')->value->constantDiscount>0){?><span class="constant-discount">постоянная скидка <?php echo $_smarty_tpl->getVariable('company')->value->constantDiscount;?>
-%<?php }?></span></h1>
+ <?php if ($_smarty_tpl->getVariable('company')->value->constantDiscount!=''&&$_smarty_tpl->getVariable('company')->value->constantDiscount>0){?><span class="constant-discount">постоянная скидка <span class="constant-discount-red"><?php echo $_smarty_tpl->getVariable('company')->value->constantDiscount;?>
+%</span><?php }?></span></h1>
 
         <div class="clearfix">
         <?php if ($_smarty_tpl->getVariable('galleryList')->value!==false){?>

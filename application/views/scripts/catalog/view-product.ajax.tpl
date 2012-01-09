@@ -117,9 +117,21 @@
                 <div id="plusone">
                     <g:plusone></g:plusone>
                 </div>
-                <script type="text/javascript">
-                    plusone();
+                <script type="text/javascript">//<!--
+                window.___gcfg = { lang: 'ru' };
+
+                (function () {
+                var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+                po.src = 'https://apis.google.com/js/plusone.js';
+                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+                })();
+                //-->
                 </script>
+            {*
+                            <script type="text/javascript">
+                                plusone();
+                            </script>
+            *}
 
                 <a href="{$this->url(['controller' => $controller,'action' => 'addComments', 'idProduct' => $product->id])}" class="button add-comment">Комментировать</a>
             </div>

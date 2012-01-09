@@ -1,7 +1,7 @@
 <article id="main-content" class="item-description shop">
     <div class="inner">
 
-        <h1 class="heading">{$company->title} {if $company->constantDiscount != '' && $company->constantDiscount > 0}<span class="constant-discount">постоянная скидка {$company->constantDiscount}%{/if}</span></h1>
+        <h1 class="heading">{$company->title} {if $company->constantDiscount != '' && $company->constantDiscount > 0}<span class="constant-discount">постоянная скидка <span class="constant-discount-red">{$company->constantDiscount}%</span>{/if}</span></h1>
 
         <div class="clearfix">
         {if $galleryList !== false}

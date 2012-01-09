@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.0.9, created on 2012-01-07 19:59:33
+<?php /* Smarty version Smarty-3.0.9, created on 2012-01-09 18:24:22
          compiled from "F:\www\ekonom\application/views/scripts\catalog/view-product.ajax.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:152534f0841b5f13a91-59480279%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:13254f0ace663b95d8-60323637%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '50476d9be6c10e4d5566fb6927d6edf719c8a09a' => 
     array (
       0 => 'F:\\www\\ekonom\\application/views/scripts\\catalog/view-product.ajax.tpl',
-      1 => 1325941168,
+      1 => 1326108159,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '152534f0841b5f13a91-59480279',
+  'nocache_hash' => '13254f0ace663b95d8-60323637',
   'function' => 
   array (
   ),
@@ -174,8 +174,15 @@ if ($_smarty_tpl->tpl_vars['gallery']->total > 0){
                 <div id="plusone">
                     <g:plusone></g:plusone>
                 </div>
-                <script type="text/javascript">
-                    plusone();
+                <script type="text/javascript">//<!--
+                window.___gcfg = { lang: 'ru' };
+
+                (function () {
+                var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+                po.src = 'https://apis.google.com/js/plusone.js';
+                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+                })();
+                //-->
                 </script>
 
                 <a href="<?php echo $_smarty_tpl->getVariable('this')->value->url(array('controller'=>$_smarty_tpl->getVariable('controller')->value,'action'=>'addComments','idProduct'=>$_smarty_tpl->getVariable('product')->value->id));?>
