@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.0.9, created on 2012-01-09 18:06:40
+<?php /* Smarty version Smarty-3.0.9, created on 2012-01-10 23:03:48
          compiled from "F:\www\ekonom\application/layouts/scripts\layout.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:9464f0aca40389608-76608109%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:216474f0c6164d87683-90501810%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '80ff11feedc4a0ba005e0c5733e3e115c1477d3b' => 
     array (
       0 => 'F:\\www\\ekonom\\application/layouts/scripts\\layout.tpl',
-      1 => 1326107197,
+      1 => 1326211425,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '9464f0aca40389608-76608109',
+  'nocache_hash' => '216474f0c6164d87683-90501810',
   'function' => 
   array (
   ),
@@ -229,7 +229,8 @@ $_template->assign('subrubric',$_smarty_tpl->getVariable('rubric')->value->getCh
 
         </p>
 
-        <div id="phone" class="nobr">+7 (3842) 33-86-86</div>
+        <div id="phone" class="nobr"><?php echo $_smarty_tpl->getVariable('bottomCityNumber')->value;?>
+</div>
     </div>
 </footer>
 </body>

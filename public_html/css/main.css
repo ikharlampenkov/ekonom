@@ -1132,6 +1132,10 @@ section.comments #paginator {
     background-color: #ededed;
 }
 
+#form-placeholder div {
+    margin-left: 10px;
+}
+
 .item-description.shop #actions {
     margin-top: 50px;
 }

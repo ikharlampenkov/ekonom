@@ -190,7 +190,7 @@
 
         </p>
 
-        <div id="phone" class="nobr">+7 (3842) 33-86-86</div>
+        <div id="phone" class="nobr">{$bottomCityNumber}{*+7 (3842) 33-86-86*}</div>
     </div>
 </footer>
 </body>
