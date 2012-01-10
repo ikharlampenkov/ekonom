@@ -22,6 +22,7 @@ class CatalogController extends Zend_Controller_Action
         $this->_helper->AjaxContext()->addActionContext('share', 'html')->initContext('html');
         $this->_helper->AjaxContext()->addActionContext('addComments', 'html')->initContext('html');
         $this->_helper->AjaxContext()->addActionContext('viewComments', 'html')->initContext('html');
+        $this->_helper->AjaxContext()->addActionContext('setLike', 'html')->initContext('html');
         /* Initialize action controller here */
     }
 
@@ -68,6 +69,7 @@ class CatalogController extends Zend_Controller_Action
         $this->view->assign('product', $oProduct);
         $this->view->assign('galleryList', EK_Gallery_Product::getAllInstance($oProduct));
         $this->view->assign('commentsList', EK_Comments_Product::getAllInstance($oProduct));
+        $this->view->assign('productLike', EK_Catalog_ProductLike::getInstanceByProduct($oProduct));
     }
 
     public function reserveAction()
@@ -107,7 +109,24 @@ class CatalogController extends Zend_Controller_Action
             }
         }
         $this->view->assign('product', $oProduct);
+    }
 
+    public function addlikeAction()
+    {
+        $oProduct = EK_Catalog_Product::getInstanceById($this->getRequest()->getParam('id'));
+
+        $oProductLike = EK_Catalog_ProductLike::getInstanceByProduct($oProduct);
+        if ($this->getRequest()->getParam('like')) {
+            $oProductLike->setLike($oProductLike->getLike() + 1);
+            $oProductLike->setToDb();
+        }
+
+        if ($this->getRequest()->getParam('unlike')) {
+            $oProductLike->setUnlike($oProductLike->getUnlike() + 1);
+            $oProductLike->setToDb();
+        }
+
+        $this->view->assign('productLike', EK_Catalog_ProductLike::getInstanceByProduct($oProduct));
     }
 
     public function addAction()
