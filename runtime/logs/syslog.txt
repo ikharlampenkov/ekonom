@@ -1,0 +1,1 @@
+error   Can`t complit query: DELETE FROM city WHERE id=3 No error: 1451:: Error msg: Cannot delete or update a parent row: a foreign key constraint fails (`ekonom_pro_db`.`company`, CONSTRAINT `fk_company_city1` FOREIGN KEY (`city_id`) REFERENCES `city` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION) ;  10.01.2012 23:05

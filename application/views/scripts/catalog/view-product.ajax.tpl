@@ -90,6 +90,8 @@
 
                 <a href="{$this->url(['controller' => $controller,'action' => 'reserve', 'idProduct' => $product->id])}" class="button reserve">Отложить</a>
                 <a href="{$this->url(['controller' => $controller,'action' => 'share', 'idProduct' => $product->id])}" class="button share-with-friend">Поделиться</a>
+
+                <div class="product-like">Нравиться? <a href="{$this->url(['controller' => $controller,'action' => 'addLike', 'idProduct' => $product->id, 'like' => 1, 'unlike' => 0])}" class="like">Да</a> {if is_object($productLike)}{$productLike->like}{/if} / <a href="{$this->url(['controller' => $controller,'action' => 'addLike', 'idProduct' => $product->id, 'like' => 0, 'unlike' => 1])}" class="unlike">Нет</a> {if is_object($productLike)}{$productLike->unlike}{/if}</div>
             </aside>
         </div>
 

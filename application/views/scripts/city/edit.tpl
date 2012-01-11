@@ -14,6 +14,10 @@
             <td class="ttovar_title">Код города</td>
             <td class="ttovar"><input name="data[phone_code]" value="{$city->phoneCode}"/></td>
         </tr>
+        <tr>
+            <td class="ttovar_title">Телефон</td>
+            <td class="ttovar"><input name="data[phone_number]" value="{$city->phoneNumber}"/></td>
+        </tr>
     </table>
     <input id="save" name="save" type="submit" value="Сохранить"/>
 </form>

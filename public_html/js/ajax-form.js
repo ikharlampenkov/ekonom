@@ -9,11 +9,13 @@ $(document).ready(function () {
     $('.reserve, .share-with-friend, .add-comment').live('click', function () {
         $.get($(this).attr('href'), function (response) {
             $('#form-placeholder').empty().append(response);
-        });
 
+            destination = $('#form-placeholder').offset().top;
+            $('.inner').animate({ scrollTop:destination }, 1100);
+
+        });
         return false;
     });
-
     // submit is 'live' event since jQuery 1.4
     // This handler fires when form in placeholder is submitted
     $('#form-placeholder .b-form').live('submit', function () {
@@ -41,6 +43,13 @@ $(document).ready(function () {
             }
         });
 
+        return false;
+    });
+
+    $('.like, .unlike').live('click', function() {
+        $.get($(this).attr('href'), function (response) {
+            $('.product-like').empty().html(response);
+        });
         return false;
     });
 });
