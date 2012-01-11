@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.0.9, created on 2011-12-27 22:31:29
+<?php /* Smarty version Smarty-3.0.9, created on 2012-01-07 12:51:08
          compiled from "F:\www\ekonom\application/views/scripts\catalog/add-comments.ajax.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:297364ef9e4d18d6145-01143769%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:170824f07dd4cd4d363-04117626%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '1dbf3c4f2f8d7f578c38270eebcbe1876ec7f588' => 
     array (
       0 => 'F:\\www\\ekonom\\application/views/scripts\\catalog/add-comments.ajax.tpl',
-      1 => 1324996298,
+      1 => 1325915369,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '297364ef9e4d18d6145-01143769',
+  'nocache_hash' => '170824f07dd4cd4d363-04117626',
   'function' => 
   array (
   ),
@@ -28,6 +28,13 @@ $_smarty_tpl->decodeProperties(array (
             <div class="field">
                 <label for="comment_text">Комментарий</label>
                 <textarea id="comment_text" name="comment[text]" cols="30" rows="4"></textarea>
+            </div>
+            <div class="field">
+                <label for="comment_captcha">Введите текст с картинки</label>
+                <img src="/kcaptcha/?<?php echo session_name();?>
+=<?php echo session_id();?>
+">
+                <input type="text" id="comment_captcha" value="" name="comment[captcha]"/>
             </div>
         </fieldset>
         <fieldset class="submit">

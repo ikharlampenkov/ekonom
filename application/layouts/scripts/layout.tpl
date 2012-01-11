@@ -132,10 +132,20 @@
             {/if_allowed}
             </ul>
         </nav>
+        <script type="text/javascript">
+            $('#main-nav > ul > li:first-child').hover(
+                    function () {
+            $(this).closest('nav').css('borderRadius', '0 0 20px 0');
+            }, function () {
+            $(this).closest('nav').css('borderRadius', '0 0 20px 20px');
+            }
+            );
+        </script>
 
     {$this->layout()->content}
 
     </div>
+
 
 {*
 {if $controller != 'index'}

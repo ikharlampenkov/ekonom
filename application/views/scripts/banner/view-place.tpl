@@ -21,6 +21,7 @@
             <td class="ttovar">{$place->title}</td>
             <td class="ttovar">{$place->width}</td>
             <td class="ttovar">{$place->height}</td>
+            <td class="ttovar">{$place->changeTime}</td>
             <td class="tedit">
                 <a href="{$this->url(['controller' => $controller,'action' => 'placemark', 'id' => $place->id])}">размещение</a><br/>
                     <a href="{$this->url(['controller' => $controller,'action' => 'editPlace', 'id' => $place->id])}">редактировать</a><br/>

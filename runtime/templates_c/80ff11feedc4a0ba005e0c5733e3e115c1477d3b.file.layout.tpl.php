@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.0.9, created on 2011-12-29 21:24:51
+<?php /* Smarty version Smarty-3.0.9, created on 2012-01-09 18:06:40
          compiled from "F:\www\ekonom\application/layouts/scripts\layout.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:301164efc7833eed3b1-30686294%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:9464f0aca40389608-76608109%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '80ff11feedc4a0ba005e0c5733e3e115c1477d3b' => 
     array (
       0 => 'F:\\www\\ekonom\\application/layouts/scripts\\layout.tpl',
-      1 => 1325168556,
+      1 => 1326107197,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '301164efc7833eed3b1-30686294',
+  'nocache_hash' => '9464f0aca40389608-76608109',
   'function' => 
   array (
   ),
@@ -177,6 +177,15 @@ $_template->assign('subrubric',$_smarty_tpl->getVariable('rubric')->value->getCh
 
             </ul>
         </nav>
+        <script type="text/javascript">
+            $('#main-nav > ul > li:first-child').hover(
+                    function () {
+            $(this).closest('nav').css('borderRadius', '0 0 20px 0');
+            }, function () {
+            $(this).closest('nav').css('borderRadius', '0 0 20px 20px');
+            }
+            );
+        </script>
 
     <?php echo $_smarty_tpl->getVariable('this')->value->layout()->content;?>
 

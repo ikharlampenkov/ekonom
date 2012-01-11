@@ -473,17 +473,21 @@ class CatalogController extends Zend_Controller_Action
         $oComments = new EK_Comments_Product();
         if ($this->getRequest()->isPost()) {
             $data = $this->getRequest()->getParam('comment');
-            $oComments->setDateCreate(date('Y-m-d'));
-            $oComments->setUser($data['name']);
-            $oComments->setMessage($data['text']);
 
+            if (isset($_SESSION['captcha_keystring']) && $_SESSION['captcha_keystring'] === $data['captcha']) {
+                $oComments->setDateCreate(date('Y-m-d'));
+                $oComments->setUser($data['name']);
+                $oComments->setMessage($data['text']);
 
-            try {
-                $oComments->insertToDb($oProduct);
+                try {
+                    $oComments->insertToDb($oProduct);
+                    exit;
+                    //$this->_redirect('/catalog/viewGallery/idProduct/' . $this->getRequest()->getParam('idProduct') . '/rubric/' . $this->getRequest()->getParam('rubric', 0));
+                } catch (Exception $e) {
+                    $this->view->assign('exception_msg', $e->getMessage());
+                }
+            } else {
                 exit;
-                //$this->_redirect('/catalog/viewGallery/idProduct/' . $this->getRequest()->getParam('idProduct') . '/rubric/' . $this->getRequest()->getParam('rubric', 0));
-            } catch (Exception $e) {
-                $this->view->assign('exception_msg', $e->getMessage());
             }
 
         }
@@ -493,43 +497,43 @@ class CatalogController extends Zend_Controller_Action
     }
 
     public function editcommentsAction()
-        {
-            $cur_rubric = EK_Catalog_Rubric::getInstanceById($this->getRequest()->getParam('rubric', 0));
-            $oProduct = EK_Catalog_Product::getInstanceById($this->getRequest()->getParam('idProduct'));
-            $oComments = EK_Comments_Product::getInstanceById($this->getRequest()->getParam('id'));
+    {
+        $cur_rubric = EK_Catalog_Rubric::getInstanceById($this->getRequest()->getParam('rubric', 0));
+        $oProduct = EK_Catalog_Product::getInstanceById($this->getRequest()->getParam('idProduct'));
+        $oComments = EK_Comments_Product::getInstanceById($this->getRequest()->getParam('id'));
 
-            if ($this->getRequest()->isPost()) {
-                $data = $this->getRequest()->getParam('data');
-                $oComments->setUser($data['name']);
-                $oComments->setMessage($data['text']);
-                $oComments->setIsModerate($data['is_moderate']);
-
-                try {
-                    $oComments->updateToDb();
-                    $this->_redirect('/catalog/viewComments/idProduct/' . $this->getRequest()->getParam('idProduct') . '/rubric/' . $this->getRequest()->getParam('rubric', 0));
-                } catch (Exception $e) {
-                    $this->view->assign('exception_msg', $e->getMessage());
-                }
-
-            }
-
-            $this->view->assign('comment', $oComments);
-            $this->view->assign('product', $oProduct);
-            $this->view->assign('cur_rubric', $cur_rubric);
-        }
-
-        public function deletecommentsAction()
-        {
-            $oProduct = EK_Catalog_Product::getInstanceById($this->getRequest()->getParam('idProduct'));
-            $oComments = EK_Comments_Product::getInstanceById($this->getRequest()->getParam('id'));
+        if ($this->getRequest()->isPost()) {
+            $data = $this->getRequest()->getParam('data');
+            $oComments->setUser($data['name']);
+            $oComments->setMessage($data['text']);
+            $oComments->setIsModerate($data['is_moderate']);
 
             try {
-                $oComments->deleteFromDB($oProduct);
+                $oComments->updateToDb();
                 $this->_redirect('/catalog/viewComments/idProduct/' . $this->getRequest()->getParam('idProduct') . '/rubric/' . $this->getRequest()->getParam('rubric', 0));
             } catch (Exception $e) {
-                throw new Exception($e->getMessage());
+                $this->view->assign('exception_msg', $e->getMessage());
             }
+
         }
+
+        $this->view->assign('comment', $oComments);
+        $this->view->assign('product', $oProduct);
+        $this->view->assign('cur_rubric', $cur_rubric);
+    }
+
+    public function deletecommentsAction()
+    {
+        $oProduct = EK_Catalog_Product::getInstanceById($this->getRequest()->getParam('idProduct'));
+        $oComments = EK_Comments_Product::getInstanceById($this->getRequest()->getParam('id'));
+
+        try {
+            $oComments->deleteFromDB($oProduct);
+            $this->_redirect('/catalog/viewComments/idProduct/' . $this->getRequest()->getParam('idProduct') . '/rubric/' . $this->getRequest()->getParam('rubric', 0));
+        } catch (Exception $e) {
+            throw new Exception($e->getMessage());
+        }
+    }
 }
 
 /*

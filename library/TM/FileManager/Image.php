@@ -68,8 +68,16 @@ class TM_FileManager_Image extends TM_FileManager_File {
         $imagePrew = imagecreatetruecolor($sizeX, $sizeY);
         imagefill($imagePrew, 0, 0, imagecolorallocate($imagePrew, 255, 255, 255));
 
-        $dst_x = (int)(($sizeX - $newXsize) / 2);
+        if (($sizeX - $newXsize) <= 25 ) {
+            $newXsize = $sizeX;
+            $dst_x = 0;
+        } else {
+            $dst_x = (int)(($sizeX - $newXsize) / 2);
+        }
+
         $dst_y = (int)(($sizeY - $newYsize) / 2);
+
+
 
         $result = imagecopyresampled($imagePrew, $image, $dst_x, $dst_y, 0, 0, $newXsize, $newYsize, $oldXsize, $oldYsize);
 

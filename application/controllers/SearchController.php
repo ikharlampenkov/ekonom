@@ -26,23 +26,13 @@ class SearchController extends Zend_Controller_Action
 
     public function indexAction()
     {
-        $o_catalog = new EK_Catalog_ProductCatalog();
-        $rub = $this->getRequest()->getParam('rubric', 0);
+        $oCatalog = new EK_Catalog_ProductCatalog();
 
-        if ($rub != 0) {
-            $cur_rubric = EK_Catalog_Rubric::getInstanceById($rub);
-        } else {
-            $cur_rubric = EK_Catalog_Rubric::getRootRubric();
+        if ($this->getRequest()->getParam('query')) {
+            $this->view->assign('productList', $oCatalog->searchProduct($this->getRequest()->getParam('query')));
+            $this->view->assign('query', $this->getRequest()->getParam('query'));
         }
 
-        $this->view->assign('cur_rubric', $cur_rubric);
-
-        $this->view->assign('rubric_list', EK_Catalog_Rubric::getAllInstance($cur_rubric->getId()));
-        $this->view->assign('productList', EK_Catalog_Product::getAllInstance($cur_rubric->getId(), $this->_city));
-        $this->view->assign('path', $cur_rubric->getPathToRubric());
-
-        $this->view->assign('attributeTypeList', TM_Attribute_AttributeType::getAllInstance(new EK_Catalog_AttributeTypeMapper()));
-        $this->view->assign('attributeHashList', EK_Catalog_Hash::getAllInstance());
     }
 
 }

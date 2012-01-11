@@ -16,6 +16,10 @@
     <div id="shadow"></div>
 
 </div>
+
+<script type="text/javascript">
+    var changeTime = {$mainPlace->changeTime};
+</script>
 {/if}
 
 
@@ -93,15 +97,23 @@
 
         <div id="share">
                     <span class="share42">
-                        <a target="_blank" title="Поделиться в Facebook" class="facebook" href="#" rel="nofollow"
-                           onclick="window.open('http://www.facebook.com/sharer.php?u=http://ekonom.pro/&amp;t=Ekonom.pro', '_blank', 'scrollbars=0, resizable=1, menubar=0, left=200, top=200, width=550, height=440, toolbar=0, status=0');return false">
-                        </a>
-                        <a target="_blank" title="Добавить в Twitter" class="twitter" href="#" rel="nofollow"
-                           onclick="window.open('http://twitter.com/share?text=Ekonom.pro&amp;url=http://ekonom.pro/', '_blank', 'scrollbars=0, resizable=1, menubar=0, left=200, top=200, width=550, height=440, toolbar=0, status=0');return false">
-                        </a>
-                        <a target="_blank" title="Поделиться В Контакте" class="vkontakte" href="#" rel="nofollow"
-                           onclick="window.open('http://vkontakte.ru/share.php?url=http://ekonom.pro/', '_blank', 'scrollbars=0, resizable=1, menubar=0, left=200, top=200, width=554, height=421, toolbar=0, status=0');return false">
-                        </a>
+                        <script type="text/javascript">
+                            //<!--
+                            share42('/i/');
+                            //-->
+                        </script>
+
+                    {*
+                                            <a target="_blank" title="Поделиться в Facebook" class="facebook" href="#" rel="nofollow"
+                                               onclick="window.open('http://www.facebook.com/sharer.php?u=http://ekonom.pro/&amp;t=Ekonom.pro', '_blank', 'scrollbars=0, resizable=1, menubar=0, left=200, top=200, width=550, height=440, toolbar=0, status=0');return false">
+                                            </a>
+                                            <a target="_blank" title="Добавить в Twitter" class="twitter" href="#" rel="nofollow"
+                                               onclick="window.open('http://twitter.com/share?text=Ekonom.pro&amp;url=http://ekonom.pro/', '_blank', 'scrollbars=0, resizable=1, menubar=0, left=200, top=200, width=550, height=440, toolbar=0, status=0');return false">
+                                            </a>
+                                            <a target="_blank" title="Поделиться В Контакте" class="vkontakte" href="#" rel="nofollow"
+                                               onclick="window.open('http://vkontakte.ru/share.php?url=http://ekonom.pro/', '_blank', 'scrollbars=0, resizable=1, menubar=0, left=200, top=200, width=554, height=421, toolbar=0, status=0');return false">
+                                            </a>
+                    *}
                     </span>
 
             <div id="plusone">

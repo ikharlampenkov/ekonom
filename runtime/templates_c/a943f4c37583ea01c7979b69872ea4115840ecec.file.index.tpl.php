@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.0.9, created on 2011-12-27 23:14:34
+<?php /* Smarty version Smarty-3.0.9, created on 2012-01-07 12:52:55
          compiled from "F:\www\ekonom\application/views/scripts\catalog/index.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:313414ef9eeeab5b1e0-15741519%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:111874f07ddb7ebd119-47037784%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'a943f4c37583ea01c7979b69872ea4115840ecec' => 
     array (
       0 => 'F:\\www\\ekonom\\application/views/scripts\\catalog/index.tpl',
-      1 => 1325001320,
+      1 => 1325915572,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '313414ef9eeeab5b1e0-15741519',
+  'nocache_hash' => '111874f07ddb7ebd119-47037784',
   'function' => 
   array (
   ),
@@ -53,7 +53,7 @@ if ($_smarty_tpl->tpl_vars['prub']->total > 0){
 ?>
             <a href="<?php echo $_smarty_tpl->getVariable('this')->value->url(array('controller'=>$_smarty_tpl->getVariable('controller')->value,'action'=>'index','rubric'=>$_smarty_tpl->getVariable('prub')->value->getId()));?>
 "><?php if (!$_smarty_tpl->getVariable('prub')->value->isRoot){?><?php echo $_smarty_tpl->getVariable('prub')->value->title;?>
-<?php }else{ ?><< Назад<?php }?></a> <?php if (!$_smarty_tpl->getVariable('smarty')->value['foreach']['_prub']['last']){?>/<?php }?>
+<?php }else{ ?>Каталог<?php }?></a> <?php if (!$_smarty_tpl->getVariable('smarty')->value['foreach']['_prub']['last']){?>/<?php }?>
         <?php }} ?>
     </div>
 <?php }?>

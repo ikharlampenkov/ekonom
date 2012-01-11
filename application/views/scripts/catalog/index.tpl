@@ -16,7 +16,7 @@
 {if $path}
     <div>
         {foreach from=$path item=prub name=_prub}
-            <a href="{$this->url(['controller' => $controller,'action' => 'index', 'rubric' => $prub->getId()])}">{if !$prub->isRoot}{$prub->title}{else}<< Назад{/if}</a> {if !$smarty.foreach._prub.last}/{/if}
+            <a href="{$this->url(['controller' => $controller,'action' => 'index', 'rubric' => $prub->getId()])}">{if !$prub->isRoot}{$prub->title}{else}Каталог{/if}</a> {if !$smarty.foreach._prub.last}/{/if}
         {/foreach}
     </div>
 {/if}

@@ -59,6 +59,11 @@ class EK_Banner_Place
      * @access protected
      */
     protected $_height;
+
+    /**
+     * @var int - время между сменой баннеров
+     */
+    protected $_changeTime = 5;
     /**
      *
      * @var StdLib_DB
@@ -188,8 +193,8 @@ class EK_Banner_Place
     public function insertToDb()
     {
         try {
-            $sql = 'INSERT INTO bplace(title, width, height)
-                        VALUES ("' . $this->_title . '", ' . $this->_width . ', ' . $this->_height . ')';
+            $sql = 'INSERT INTO bplace(title, width, height, change_time)
+                        VALUES ("' . $this->_title . '", ' . $this->_width . ', ' . $this->_height . ', ' . $this->_changeTime . ')';
             $this->_db->query($sql);
 
             $this->_id = $this->_db->getLastInsertId();
@@ -210,7 +215,8 @@ class EK_Banner_Place
     {
         try {
             $sql = 'UPDATE bplace
-                        SET title="' . $this->_title . '", width=' . $this->_width . ', height=' . $this->_height . '
+                        SET title="' . $this->_title . '", width=' . $this->_width . ',
+                            height=' . $this->_height . ', change_time=' . $this->_changeTime . '
                         WHERE id=' . $this->_id;
             $this->_db->query($sql);
         } catch (Exception $e) {
@@ -322,6 +328,23 @@ class EK_Banner_Place
         $this->setTitle($values['title']);
         $this->setWidth($values['width']);
         $this->setHeight($values['height']);
+        $this->setChangeTime($values['change_time']);
+    }
+
+    /**
+     * @param int $changeTime
+     */
+    public function setChangeTime($changeTime)
+    {
+        $this->_changeTime = (int)$changeTime;
+    }
+
+    /**
+     * @return int
+     */
+    public function getChangeTime()
+    {
+        return $this->_changeTime;
     } // end of member function fillFromArray
 
 
