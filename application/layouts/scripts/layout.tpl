@@ -11,6 +11,7 @@
 
     <link rel="stylesheet" type="text/css" href="/css/jquery-ui.css"/>
     <link rel="stylesheet" type="text/css" href="/css/jquery-ui-timepicker-addon.css"/>
+    <link rel="stylesheet" type="text/css" href="/css/cloud-zoom.css" />
 
 
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
@@ -39,6 +40,8 @@
 
     <script type="text/javascript" language="javascript" src="/js/func.js"></script>
     <script type="text/javascript" language="javascript" src="/js/main.js"></script>
+
+    <script type="text/javascript" language="javascript" src="/js/cloud-zoom.1.0.2.js"></script>
 
     <script type="text/javascript" language="javascript" src="/js/share42.js"></script>
 

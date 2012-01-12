@@ -1042,6 +1042,7 @@ section.comments #paginator {
 
 .button.add-comment {
     float: right;
+    padding-right: 15px;
 }
 
 .button.reserve {
@@ -1254,7 +1255,7 @@ section.comments #paginator {
 }
 
 .constant-discount-red {
-    color: #ff0000;
+    color: #cf2121;
     font-size: 22px;
 }
 
@@ -1381,10 +1382,10 @@ td textarea {
 
 .product-like {
     float: right;
-    width: 150px;
+    width: 170px;
     color: #293f4a;
     padding-top: 5px;
-    margin-right: 5px;
+    margin-right: 7px;
 }
 
 .like {
@@ -1394,7 +1395,7 @@ td textarea {
 }
 
 .unlike {
-    color: #e50604;
+    color: #cf2121;
     text-decoration: none;
-    border-bottom: 1px dashed #e50604;
+    border-bottom: 1px dashed #cf2121;
 }

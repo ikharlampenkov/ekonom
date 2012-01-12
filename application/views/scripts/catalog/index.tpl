@@ -1,6 +1,14 @@
 <article id="main-content">
 
-    <h1 class="heading">Каталог</h1>
+    <h1 class="heading">Каталог
+    {if $path}
+        <span>
+             /
+            {foreach from=$path item=prub name=_prub}
+                <a href="{$this->url(['controller' => $controller,'action' => 'index', 'rubric' => $prub->getId()])}">{if !$prub->isRoot}{$prub->title}{else}Каталог{/if}</a> {if !$smarty.foreach._prub.last}/{/if}
+            {/foreach}
+        </span>
+    {/if}</h1>
 
     <div class="page_block">
     {if_allowed resource="{$controller}/index" priv="show-attribute-hash"}
@@ -13,13 +21,7 @@
     </div>
     <br/>
 
-{if $path}
-    <div>
-        {foreach from=$path item=prub name=_prub}
-            <a href="{$this->url(['controller' => $controller,'action' => 'index', 'rubric' => $prub->getId()])}">{if !$prub->isRoot}{$prub->title}{else}Каталог{/if}</a> {if !$smarty.foreach._prub.last}/{/if}
-        {/foreach}
-    </div>
-{/if}
+
 
 {if !$cur_rubric->isRoot}
     <h1>{$cur_rubric->title}</h1>
