@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.0.9, created on 2012-01-12 23:10:24
+<?php /* Smarty version Smarty-3.0.9, created on 2012-01-12 23:32:40
          compiled from "F:\www\ekonom\application/layouts/scripts\layout.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:255134f0f05f0975f86-83858766%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:69314f0f0b28ddf739-26342558%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '80ff11feedc4a0ba005e0c5733e3e115c1477d3b' => 
     array (
       0 => 'F:\\www\\ekonom\\application/layouts/scripts\\layout.tpl',
-      1 => 1326384621,
+      1 => 1326385957,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '255134f0f05f0975f86-83858766',
+  'nocache_hash' => '69314f0f0b28ddf739-26342558',
   'function' => 
   array (
   ),
@@ -53,7 +53,7 @@ $_smarty_tpl->decodeProperties(array (
     <script type="text/javascript" language="javascript" src="/js/func.js"></script>
     <script type="text/javascript" language="javascript" src="/js/main.js"></script>
 
-    <script type="text/javascript" language="javascript" src="/js/cloud-zoom.1.0.2.js"></script>
+    <script type="text/javascript" language="javascript" src="/js/cloud-zoom.1.0.2.min.js"></script>
 
     <script type="text/javascript" language="javascript" src="/js/share42.js"></script>
 

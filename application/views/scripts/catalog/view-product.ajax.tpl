@@ -66,7 +66,7 @@
                     {foreach from=$galleryList item=gallery name=_gallery}
                         {if $smarty.foreach._gallery.first}
                             <div class="big-image">
-                                <a href='/gallery{$gallery->file->getSubPath()}/{$gallery->file->getName()}' class='cloud-zoom' id='zoom1' rel="position: inside">
+                                <a href='/gallery{$gallery->file->getSubPath()}/{$gallery->file->getName()}' class='cloud-zoom' id='zoom' rel="position: 'inside' , showTitle: false">
                                     <img src="/gallery{$gallery->file->getSubPath()}/{$gallery->file->getName()}" width="420" height="270" alt="{$gallery->title}" data-preview="/gallery{$gallery->file->getSubPath()}/{$gallery->file->getPreview()}"/>
                                 </a>
                                 <h5 class="title">{$gallery->title}</h5>
@@ -88,9 +88,6 @@
                         {/if}
                     {/foreach}
                 </div>
-            {*
-                <script type="text/javascript" language="javascript" src="/js/cloud-zoom.1.0.2.min.js"></script>
-                *}
             {/if}
 
                 <a href="{$this->url(['controller' => $controller,'action' => 'reserve', 'idProduct' => $product->id])}" class="button reserve">Отложить</a>

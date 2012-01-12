@@ -14,10 +14,12 @@ $(document).ready(function() {
         var new_title = $(this).attr('title');
         var new_image = $(this).attr('href');
 
+        $('.gallery .big-image #zoom').attr('href', new_image);
         $('.gallery .big-image img').attr('src', new_image).attr('data-preview', new_preview);
         $('.gallery .big-image h5').empty().append(new_title);
 
         $(this).attr('title', current_title).attr('href', current_image).find('img').attr('src', current_preview);
+        $('.cloud-zoom, .cloud-zoom-gallery').CloudZoom();
 
         return false;
     });

@@ -965,6 +965,7 @@ section.comments #paginator {
     height: 50px;
     position: absolute;
     top: 110px;
+    z-index: 10000;
 }
 
 .item-description .gallery .previous {
@@ -986,6 +987,7 @@ section.comments #paginator {
     border-radius: 0 0 12px 12px;
     padding: 5px 20px;
     color: #fff;
+    z-index: 10000;
 }
 
 .item-description .gallery .previews {

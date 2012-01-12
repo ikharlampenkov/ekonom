@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.0.9, created on 2012-01-12 22:33:28
+<?php /* Smarty version Smarty-3.0.9, created on 2012-01-12 23:35:25
          compiled from "F:\www\ekonom\application/views/scripts\catalog/view-product.ajax.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:168104f0efd48b235f5-25243372%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:198904f0f0bcdddbfa8-82587116%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '50476d9be6c10e4d5566fb6927d6edf719c8a09a' => 
     array (
       0 => 'F:\\www\\ekonom\\application/views/scripts\\catalog/view-product.ajax.tpl',
-      1 => 1326382402,
+      1 => 1326386007,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '168104f0efd48b235f5-25243372',
+  'nocache_hash' => '198904f0f0bcdddbfa8-82587116',
   'function' => 
   array (
   ),
@@ -102,7 +102,7 @@ if ($_smarty_tpl->tpl_vars['gallery']->total > 0){
                             <div class="big-image">
                                 <a href='/gallery<?php echo $_smarty_tpl->getVariable('gallery')->value->file->getSubPath();?>
 /<?php echo $_smarty_tpl->getVariable('gallery')->value->file->getName();?>
-' class='cloud-zoom' id='zoom1' rel="position: inside">
+' class='cloud-zoom' id='zoom' rel="position: 'inside' , showTitle: false">
                                     <img src="/gallery<?php echo $_smarty_tpl->getVariable('gallery')->value->file->getSubPath();?>
 /<?php echo $_smarty_tpl->getVariable('gallery')->value->file->getName();?>
 " width="420" height="270" alt="<?php echo $_smarty_tpl->getVariable('gallery')->value->title;?>

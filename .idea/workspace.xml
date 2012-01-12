@@ -3,10 +3,14 @@
   <component name="ChangeListManager">
     <list default="true" id="d0b1c174-27bf-4d01-a853-aaef73e1aaba" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/IndexController.php" afterPath="$PROJECT_DIR$/application/controllers/IndexController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/layouts/scripts/layout.tpl" afterPath="$PROJECT_DIR$/application/layouts/scripts/layout.tpl" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/scripts/catalog/index.tpl" afterPath="$PROJECT_DIR$/application/views/scripts/catalog/index.tpl" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/scripts/catalog/view-product.ajax.tpl" afterPath="$PROJECT_DIR$/application/views/scripts/catalog/view-product.ajax.tpl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/scripts/company/view.tpl" afterPath="$PROJECT_DIR$/application/views/scripts/company/view.tpl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/scripts/index/index.tpl" afterPath="$PROJECT_DIR$/application/views/scripts/index/index.tpl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/scripts/search/index.tpl" afterPath="$PROJECT_DIR$/application/views/scripts/search/index.tpl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public_html/css/main.css" afterPath="$PROJECT_DIR$/public_html/css/main.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public_html/js/gallery.js" afterPath="$PROJECT_DIR$/public_html/js/gallery.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/runtime/templates_c/50476d9be6c10e4d5566fb6927d6edf719c8a09a.file.view-product.ajax.tpl.php" afterPath="$PROJECT_DIR$/runtime/templates_c/50476d9be6c10e4d5566fb6927d6edf719c8a09a.file.view-product.ajax.tpl.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/runtime/templates_c/80ff11feedc4a0ba005e0c5733e3e115c1477d3b.file.layout.tpl.php" afterPath="$PROJECT_DIR$/runtime/templates_c/80ff11feedc4a0ba005e0c5733e3e115c1477d3b.file.layout.tpl.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/runtime/templates_c/a943f4c37583ea01c7979b69872ea4115840ecec.file.index.tpl.php" afterPath="$PROJECT_DIR$/runtime/templates_c/a943f4c37583ea01c7979b69872ea4115840ecec.file.index.tpl.php" />
@@ -35,7 +39,7 @@
       <file leaf-file-name="view-product.ajax.tpl" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/views/scripts/catalog/view-product.ajax.tpl">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="89" column="22" selection-start="4500" selection-end="4500" vertical-scroll-proportion="-18.961538">
+            <state line="68" column="136" selection-start="3236" selection-end="3240" vertical-scroll-proportion="-1.9615384">
               <folding />
             </state>
           </provider>
@@ -44,25 +48,16 @@
       <file leaf-file-name="index.tpl" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/views/scripts/catalog/index.tpl">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="158" column="13" selection-start="7724" selection-end="7724" vertical-scroll-proportion="-34.423077">
+            <state line="154" column="58" selection-start="7626" selection-end="7676" vertical-scroll-proportion="-30.846153">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="layout.tpl" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/application/layouts/scripts/layout.tpl">
+      <file leaf-file-name="gallery.js" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/public_html/js/gallery.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="182" column="32" selection-start="8218" selection-end="8218" vertical-scroll-proportion="0.47959185">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="jquery.fancybox.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public_html/fancybox/source/jquery.fancybox.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="126" column="12" selection-start="3771" selection-end="3781" vertical-scroll-proportion="0.0">
+            <state line="21" column="58" selection-start="1093" selection-end="1093" vertical-scroll-proportion="0.35487077">
               <folding />
             </state>
           </provider>
@@ -101,10 +96,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/application/views/scripts/company/view.tpl" />
-        <option value="$PROJECT_DIR$/application/models/EK/City/City.php" />
-        <option value="$PROJECT_DIR$/application/views/scripts/city/index.tpl" />
-        <option value="$PROJECT_DIR$/application/views/scripts/city/add.tpl" />
         <option value="$PROJECT_DIR$/application/views/scripts/city/edit.tpl" />
         <option value="$PROJECT_DIR$/application/controllers/CityController.php" />
         <option value="$PROJECT_DIR$/application/plugins/ShowCityList.php" />
@@ -112,11 +103,15 @@
         <option value="$PROJECT_DIR$/application/models/EK/Catalog/EK_Catalog_ProductLike.php" />
         <option value="$PROJECT_DIR$/application/controllers/CatalogController.php" />
         <option value="$PROJECT_DIR$/application/models/EK/Catalog/ProductLike.php" />
-        <option value="$PROJECT_DIR$/public_html/css/main.css" />
         <option value="$PROJECT_DIR$/application/controllers/IndexController.php" />
-        <option value="$PROJECT_DIR$/application/views/scripts/catalog/view-product.ajax.tpl" />
         <option value="$PROJECT_DIR$/application/views/scripts/catalog/index.tpl" />
+        <option value="$PROJECT_DIR$/application/views/scripts/company/view.tpl" />
+        <option value="$PROJECT_DIR$/application/views/scripts/search/index.tpl" />
+        <option value="$PROJECT_DIR$/application/views/scripts/index/index.tpl" />
+        <option value="$PROJECT_DIR$/public_html/css/main.css" />
         <option value="$PROJECT_DIR$/application/layouts/scripts/layout.tpl" />
+        <option value="$PROJECT_DIR$/application/views/scripts/catalog/view-product.ajax.tpl" />
+        <option value="$PROJECT_DIR$/public_html/js/gallery.js" />
       </list>
     </option>
   </component>
@@ -502,7 +497,59 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="search" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ekonom" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ekonom" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scripts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="index" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ekonom" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ekonom" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scripts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="company" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -901,7 +948,7 @@
     <option name="INCLUDE_TEXT_INTO_SHELF" value="false" />
     <option name="CREATE_PATCH_EXPAND_DETAILS_DEFAULT" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Like" />
+    <option name="LAST_COMMIT_MESSAGE" value="Счетчик" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -935,6 +982,7 @@
     <MESSAGE value="Мелкие исправления" />
     <MESSAGE value="Мелкие исправления: Комментарии с фокусом&#10;Телефон внизу страницы&#10;Удаление города" />
     <MESSAGE value="Like" />
+    <MESSAGE value="Счетчик" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -952,26 +1000,6 @@
     </PATH>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/application/controllers/CityController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="12" selection-start="749" selection-end="749" vertical-scroll-proportion="0.20019627" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/plugins/ShowCityList.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="39" selection-start="627" selection-end="643" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/scripts/catalog/view-comments.ajax.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/scripts/catalog/add-comments.ajax.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="70" selection-start="792" selection-end="792" vertical-scroll-proportion="-8.5" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/~Documents/econom_pavka/js/ajax-form.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="11" column="11" selection-start="549" selection-end="549" vertical-scroll-proportion="0.18351325" />
@@ -999,13 +1027,6 @@
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public_html/css/main.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1257" column="0" selection-start="21867" selection-end="21867" vertical-scroll-proportion="0.016683023">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/IndexController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="28" column="92" selection-start="1075" selection-end="1075" vertical-scroll-proportion="0.0">
@@ -1022,28 +1043,63 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public_html/fancybox/source/jquery.fancybox.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="126" column="12" selection-start="3771" selection-end="3781" vertical-scroll-proportion="0.0">
+        <state line="128" column="21" selection-start="3868" selection-end="3877" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/scripts/catalog/view-product.ajax.tpl">
+    <entry file="file://$PROJECT_DIR$/application/views/scripts/company/view.tpl">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="89" column="22" selection-start="4500" selection-end="4500" vertical-scroll-proportion="-18.961538">
+        <state line="137" column="17" selection-start="5629" selection-end="5629" vertical-scroll-proportion="-26.807692">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/scripts/catalog/index.tpl">
+    <entry file="file://$PROJECT_DIR$/application/views/scripts/search/index.tpl">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="158" column="13" selection-start="7724" selection-end="7724" vertical-scroll-proportion="-34.423077">
+        <state line="68" column="17" selection-start="2833" selection-end="2833" vertical-scroll-proportion="-33.76923">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public_html/css/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="986" column="33" selection-start="16960" selection-end="16960" vertical-scroll-proportion="0.5724346">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/layouts/scripts/layout.tpl">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="182" column="32" selection-start="8218" selection-end="8218" vertical-scroll-proportion="0.47959185">
+        <state line="43" column="86" selection-start="2411" selection-end="2411" vertical-scroll-proportion="-28.115385">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/scripts/index/index.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="63" column="17" selection-start="2250" selection-end="2250" vertical-scroll-proportion="0.6765306">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/scripts/catalog/view-product.ajax.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="68" column="136" selection-start="3236" selection-end="3240" vertical-scroll-proportion="-1.9615384">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/scripts/catalog/index.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="154" column="58" selection-start="7626" selection-end="7676" vertical-scroll-proportion="-30.846153">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public_html/js/gallery.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="58" selection-start="1093" selection-end="1093" vertical-scroll-proportion="0.35487077">
           <folding />
         </state>
       </provider>

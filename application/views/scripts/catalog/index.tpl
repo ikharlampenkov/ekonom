@@ -151,7 +151,7 @@
         padding: 0,
         scrolling: 'no',
         afterShow: updatePlusOne,
-        afterLoad: function () {
+        afterShow: function () {
         $('.cloud-zoom, .cloud-zoom-gallery').CloudZoom();
         }
         });

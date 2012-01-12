@@ -132,7 +132,10 @@
         closeEffect    : 'none',
         padding: 0,
         scrolling: 'no',
-        afterShow: updatePlusOne
+        afterShow: updatePlusOne,
+        afterShow: function () {
+                $('.cloud-zoom, .cloud-zoom-gallery').CloudZoom();
+                }
         });
         });
     </script>

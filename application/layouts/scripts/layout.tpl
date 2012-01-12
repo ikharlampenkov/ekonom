@@ -41,7 +41,7 @@
     <script type="text/javascript" language="javascript" src="/js/func.js"></script>
     <script type="text/javascript" language="javascript" src="/js/main.js"></script>
 
-    <script type="text/javascript" language="javascript" src="/js/cloud-zoom.1.0.2.js"></script>
+    <script type="text/javascript" language="javascript" src="/js/cloud-zoom.1.0.2.min.js"></script>
 
     <script type="text/javascript" language="javascript" src="/js/share42.js"></script>
 
