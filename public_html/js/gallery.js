@@ -34,9 +34,12 @@ $(document).ready(function() {
         var new_preview = first_item.find('img').attr('src');
         var new_title = first_item.find('a').attr('title');
         var new_image = first_item.find('a').attr('href');
+        $('.gallery .big-image #zoom').attr('href', new_image);
         $('.gallery .big-image img').attr('src', new_image);
         $('.gallery .big-image img').attr('data-preview', new_preview);
         $('.gallery .big-image h5').empty().append(new_title);
+
+        $('.cloud-zoom, .cloud-zoom-gallery').CloudZoom();
 
         first_item.remove();
         $('.previews').append($('<li><a href="'+current_image+'" title="'+current_title+'"><img src="'+current_preview+'" alt="" class="shadow-image" /></a></li>'));
@@ -54,9 +57,13 @@ $(document).ready(function() {
         var new_preview = last_item.find('img').attr('src');
         var new_title = last_item.find('a').attr('title');
         var new_image = last_item.find('a').attr('href');
+
+        $('.gallery .big-image #zoom').attr('href', new_image);
         $('.gallery .big-image img').attr('src', new_image);
         $('.gallery .big-image img').attr('data-preview', new_preview);
         $('.gallery .big-image h5').empty().append(new_title);
+
+        $('.cloud-zoom, .cloud-zoom-gallery').CloudZoom();
 
         last_item.remove();
         $('.previews').prepend($('<li><a href="'+current_image+'" title="'+current_title+'"><img src="'+current_preview+'" alt="" class="shadow-image" /></a></li>'));
