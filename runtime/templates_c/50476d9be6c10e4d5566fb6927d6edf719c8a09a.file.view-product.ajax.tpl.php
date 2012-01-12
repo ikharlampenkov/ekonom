@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.0.9, created on 2012-01-12 21:14:16
+<?php /* Smarty version Smarty-3.0.9, created on 2012-01-12 22:33:28
          compiled from "F:\www\ekonom\application/views/scripts\catalog/view-product.ajax.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:257054f0eeab8232015-72764619%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:168104f0efd48b235f5-25243372%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '50476d9be6c10e4d5566fb6927d6edf719c8a09a' => 
     array (
       0 => 'F:\\www\\ekonom\\application/views/scripts\\catalog/view-product.ajax.tpl',
-      1 => 1326374663,
+      1 => 1326382402,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '257054f0eeab8232015-72764619',
+  'nocache_hash' => '168104f0efd48b235f5-25243372',
   'function' => 
   array (
   ),
@@ -136,26 +136,6 @@ if ($_smarty_tpl->tpl_vars['gallery']->total > 0){
                         <?php }?>
                     <?php }} ?>
                 </div>
-
-                <script type="text/javascript">
-                    $('div#item').load(function () {
-                    $.fn.CloudZoom.defaults = {
-                    zoomWidth: 'auto',
-                    zoomHeight: 'auto',
-                    position: 'right',
-                    tint: false,
-                    tintOpacity: 0.5,
-                    lensOpacity: 0.5,
-                    softFocus: false,
-                    smoothMove: 3,
-                    showTitle: true,
-                    titleOpacity: 0.5,
-                    adjustX: 0,
-                    adjustY: 0
-                    };
-                    $('.cloud-zoom, .cloud-zoom-gallery').CloudZoom();
-                    });
-                </script>
             <?php }?>
 
                 <a href="<?php echo $_smarty_tpl->getVariable('this')->value->url(array('controller'=>$_smarty_tpl->getVariable('controller')->value,'action'=>'reserve','idProduct'=>$_smarty_tpl->getVariable('product')->value->id));?>

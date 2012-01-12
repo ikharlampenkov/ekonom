@@ -88,27 +88,6 @@
                         {/if}
                     {/foreach}
                 </div>
-
-                <script type="text/javascript">
-                    $('div#item').load(function () {
-                    $.fn.CloudZoom.defaults = {
-                    zoomWidth: 'auto',
-                    zoomHeight: 'auto',
-                    position: 'right',
-                    tint: false,
-                    tintOpacity: 0.5,
-                    lensOpacity: 0.5,
-                    softFocus: false,
-                    smoothMove: 3,
-                    showTitle: true,
-                    titleOpacity: 0.5,
-                    adjustX: 0,
-                    adjustY: 0
-                    };
-                    $('.cloud-zoom, .cloud-zoom-gallery').CloudZoom();
-                    });
-                </script>
-
             {*
                 <script type="text/javascript" language="javascript" src="/js/cloud-zoom.1.0.2.min.js"></script>
                 *}
