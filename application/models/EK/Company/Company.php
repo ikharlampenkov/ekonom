@@ -390,16 +390,16 @@ class EK_Company_Company
         try {
             $db = StdLib_DB::getInstance();
 
-            $sql = 'SELECT * FROM company WHERE city_id=' . (int)$city;
+            $sql = 'SELECT * FROM company '; // WHERE city_id=' . (int)$city
 
             if (!is_null($rubric)) {
-                $sql .= ' AND id IN (
+                $sql .= ' WHERE id IN (
                  SELECT DISTINCT company_id
                  FROM product, product_rubric
                  WHERE product.product_rubric_id=product_rubric.id
                    AND product_rubric.id=' . $rubric->id . '
                  )';
-            }
+            } // AND
 
             $result = $db->query($sql, StdLib_DB::QUERY_MOD_ASSOC);
 
@@ -416,6 +416,30 @@ class EK_Company_Company
             throw new Exception($e->getMessage());
         }
     } // end of member function getAllInstance
+
+    public static function search($search)
+    {
+        try {
+            $db = StdLib_DB::getInstance();
+            $search = $db->prepareString($search);
+
+            $sql = 'SELECT * FROM company WHERE title LIKE "%' . $search . '%" OR description LIKE "%' . $search . '%"'; // WHERE city_id=' . (int)$city
+
+            $result = $db->query($sql, StdLib_DB::QUERY_MOD_ASSOC);
+
+            if (isset($result[0])) {
+                $retArray = array();
+                foreach ($result as $res) {
+                    $retArray[] = EK_Company_Company::getInstanceByArray($res);
+                }
+                return $retArray;
+            } else {
+                return false;
+            }
+        } catch (Exception $e) {
+            throw new Exception($e->getMessage());
+        }
+    }
 
     public static function getDocumentByCity(EK_City_City $city)
     {

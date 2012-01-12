@@ -45,4 +45,11 @@ $(document).ready(function () {
 
         return false;
     });
+
+    $('.like, .unlike').live('click', function() {
+        $.get($(this).attr('href'), function (response) {
+            $('.product-like').empty().html(response);
+        });
+        return false;
+    });
 });

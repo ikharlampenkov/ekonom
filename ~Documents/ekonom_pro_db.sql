@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 3.4.9
+-- version 
 -- http://www.phpmyadmin.net
 --
--- Хост: localhost
--- Время создания: Янв 04 2012 г., 18:56
--- Версия сервера: 5.1.50
--- Версия PHP: 5.3.8-ZS5.5.0
+-- Хост: ekonom.mysql
+-- Время создания: Янв 12 2012 г., 20:27
+-- Версия сервера: 5.1.41
+-- Версия PHP: 5.2.10
 
 SET FOREIGN_KEY_CHECKS=0;
 SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
@@ -28,6 +28,8 @@ SET time_zone = "+00:00";
 --
 -- Структура таблицы `banner`
 --
+-- Создание: Янв 04 2012 г., 10:57
+--
 
 DROP TABLE IF EXISTS `banner`;
 CREATE TABLE IF NOT EXISTS `banner` (
@@ -46,13 +48,14 @@ INSERT INTO `banner` (`id`, `img`, `link`, `title`) VALUES
 (1, 'img_28-12-2011-16-03-17.jpg', 'ekonom.pro', 'Клуб ярких путешествий «Мир Без Границ»'),
 (2, 'img_28-12-2011-13-38-35.jpg', 'ekonom.pro', 'Еще тест'),
 (4, 'img_28-12-2011-14-11-32.jpg', 'ekonom.pro', 'Счастья!'),
-(5, 'img_29-12-2011-12-47-06.jpg', 'ekonom.pro', 'Мир Без Границ'),
-(6, 'img_30-12-2011-11-06-14.jpg', 'ekonom.pro', 'Удачи!');
+(5, 'img_29-12-2011-12-47-06.jpg', 'ekonom.pro', 'Мир Без Границ');
 
 -- --------------------------------------------------------
 
 --
 -- Структура таблицы `banner_place`
+--
+-- Создание: Янв 04 2012 г., 10:57
 --
 
 DROP TABLE IF EXISTS `banner_place`;
@@ -74,13 +77,14 @@ INSERT INTO `banner_place` (`banner_id`, `bplace_id`) VALUES
 (2, 6),
 (4, 1),
 (5, 4),
-(5, 5),
-(6, 1);
+(5, 5);
 
 -- --------------------------------------------------------
 
 --
 -- Структура таблицы `bplace`
+--
+-- Создание: Янв 06 2012 г., 17:12
 --
 
 DROP TABLE IF EXISTS `bplace`;
@@ -89,6 +93,7 @@ CREATE TABLE IF NOT EXISTS `bplace` (
   `title` varchar(255) NOT NULL,
   `width` int(10) unsigned NOT NULL,
   `height` int(10) unsigned NOT NULL,
+  `change_time` int(10) unsigned NOT NULL DEFAULT '5',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=7 ;
 
@@ -96,17 +101,19 @@ CREATE TABLE IF NOT EXISTS `bplace` (
 -- Дамп данных таблицы `bplace`
 --
 
-INSERT INTO `bplace` (`id`, `title`, `width`, `height`) VALUES
-(1, 'Главная', 994, 230),
-(2, 'Справа от компании', 187, 357),
-(4, 'На главной снизу справа', 490, 83),
-(5, 'На главной снизу слева', 490, 83),
-(6, 'Справа от компании нижний', 187, 357);
+INSERT INTO `bplace` (`id`, `title`, `width`, `height`, `change_time`) VALUES
+(1, 'Главная', 994, 230, 5),
+(2, 'Справа от компании', 187, 357, 5),
+(4, 'На главной снизу справа', 490, 83, 5),
+(5, 'На главной снизу слева', 490, 83, 5),
+(6, 'Справа от компании нижний', 187, 357, 5);
 
 -- --------------------------------------------------------
 
 --
 -- Структура таблицы `city`
+--
+-- Создание: Янв 10 2012 г., 16:48
 --
 
 DROP TABLE IF EXISTS `city`;
@@ -114,6 +121,7 @@ CREATE TABLE IF NOT EXISTS `city` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `title` varchar(255) NOT NULL,
   `phone_code` varchar(5) DEFAULT NULL,
+  `phone_number` varchar(20) NOT NULL DEFAULT '',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
 
@@ -121,15 +129,16 @@ CREATE TABLE IF NOT EXISTS `city` (
 -- Дамп данных таблицы `city`
 --
 
-INSERT INTO `city` (`id`, `title`, `phone_code`) VALUES
-(1, 'Кемерово', '3842'),
-(2, 'Новокузнецк', '3843'),
-(3, 'Москва', '495');
+INSERT INTO `city` (`id`, `title`, `phone_code`, `phone_number`) VALUES
+(1, 'Кемерово', '3842', '+7 (3842) 33-86-86'),
+(2, 'Новокузнецк', '3843', '+7 (3843) 55-55-55');
 
 -- --------------------------------------------------------
 
 --
 -- Структура таблицы `comments`
+--
+-- Создание: Янв 04 2012 г., 10:57
 --
 
 DROP TABLE IF EXISTS `comments`;
@@ -140,7 +149,7 @@ CREATE TABLE IF NOT EXISTS `comments` (
   `user` varchar(20) NOT NULL,
   `is_moderate` tinyint(1) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=8 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=14 ;
 
 --
 -- Дамп данных таблицы `comments`
@@ -152,12 +161,20 @@ INSERT INTO `comments` (`id`, `message`, `date_create`, `user`, `is_moderate`) V
 (4, 'Хочу туда. Пошлите меня пожалуйста!!!', '2011-12-28 00:00:00', 'Константин', 0),
 (5, 'Хочу туда. Пошлите меня пожалуйста!!!', '2011-12-28 00:00:00', 'Константин', 0),
 (6, 'Хочу туда. Пошлите меня пожалуйста!!!', '2011-12-28 00:00:00', 'Константин', 0),
-(7, 'Прям не цены, а сказки!!! Хочу, летим!!!)))', '2011-12-30 00:00:00', 'Никита', 0);
+(7, 'Прям не цены, а сказки!!! Хочу, летим!!!)))', '2011-12-30 00:00:00', 'Никита', 0),
+(8, 'а я сюда хочу', '2012-01-07 00:00:00', 'Иван', 0),
+(9, 'Еще комментарий', '2012-01-07 00:00:00', 'Иван', 0),
+(10, 'Тест', '2012-01-07 00:00:00', 'Тест', 0),
+(11, 'Отправлено', '2012-01-07 00:00:00', 'Тест', 0),
+(12, 'Классные деУки!', '2012-01-11 00:00:00', 'паха', 0),
+(13, 'Красивые фотографии', '2012-01-11 00:00:00', 'Саша', 0);
 
 -- --------------------------------------------------------
 
 --
 -- Структура таблицы `comments_product`
+--
+-- Создание: Янв 04 2012 г., 10:57
 --
 
 DROP TABLE IF EXISTS `comments_product`;
@@ -173,17 +190,24 @@ CREATE TABLE IF NOT EXISTS `comments_product` (
 --
 
 INSERT INTO `comments_product` (`comments_id`, `product_id`) VALUES
-(1, 11),
 (3, 15),
 (4, 15),
 (5, 15),
 (6, 15),
-(7, 15);
+(7, 15),
+(8, 16),
+(9, 16),
+(10, 16),
+(11, 16),
+(13, 16),
+(12, 17);
 
 -- --------------------------------------------------------
 
 --
 -- Структура таблицы `company`
+--
+-- Создание: Янв 10 2012 г., 16:49
 --
 
 DROP TABLE IF EXISTS `company`;
@@ -198,20 +222,22 @@ CREATE TABLE IF NOT EXISTS `company` (
   `constant_discount` varchar(25) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`),
   KEY `fk_company_city1` (`city_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=5 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=6 ;
 
 --
 -- Дамп данных таблицы `company`
 --
 
 INSERT INTO `company` (`id`, `city_id`, `title`, `file`, `description`, `order_email`, `ofsite`, `constant_discount`) VALUES
-(3, 3, 'Адидас', 'file_27-12-2011-15-37-39.jpg', 'Адидас - просто класс!!!', 'nikencmoscow@yandex.ru', '', '0'),
-(4, 1, 'Мир Без Границ', 'img_28-12-2011-15-24-28.jpg', 'Для ценителей солнца и моря клуб ярких путешествий "МИР БЕЗ ГРАНИЦ" предоставляет широкий спектр туристических услуг полного цикла, у нас можно осуществить подбор туров, заказать путевки оптимальные по соотношению «цена-качество», к тому же получить скидку. С нами вы можете посетить любой уголок земного шара!\r\nНаши потенциальные клиенты – те, кому важны не только относительно низкая цена путевок, но и качество заявленных услуг. Семейный отдых или романтическое путешествие, в пределах России и за границей, туристический поход или интересное спортивное мероприятие – вот далеко неполный перечень услуг клуба "МИР БЕЗ ГРАНИЦ".', 'mir-tour2011@ya.ru', 'mbgtours.ru', '0');
+(4, 1, 'Мир Без Границ', 'img_28-12-2011-15-24-28.jpg', 'Для ценителей солнца и моря клуб ярких путешествий \\"МИР БЕЗ ГРАНИЦ\\" предоставляет широкий спектр туристических услуг полного цикла, у нас можно осуществить подбор туров, заказать путевки оптимальные по соотношению «цена-качество», к тому же получить скидку. С нами вы можете посетить любой уголок земного шара!\r\nНаши потенциальные клиенты – те, кому важны не только относительно низкая цена путевок, но и качество заявленных услуг. Семейный отдых или романтическое путешествие, в пределах России и за границей, туристический поход или интересное спортивное мероприятие – вот далеко неполный перечень услуг клуба \\"МИР БЕЗ ГРАНИЦ\\".', 'mir-tour2011@ya.ru', 'mbgtours.ru', '5'),
+(5, 1, 'Бутик нижнего белья', '', 'Изысканно!!!', 'koka0@yandex.ru', '', '5');
 
 -- --------------------------------------------------------
 
 --
 -- Структура таблицы `company_address`
+--
+-- Создание: Янв 04 2012 г., 10:57
 --
 
 DROP TABLE IF EXISTS `company_address`;
@@ -239,6 +265,8 @@ INSERT INTO `company_address` (`id`, `company_id`, `city_id`, `address`, `phone`
 --
 -- Структура таблицы `company_user`
 --
+-- Создание: Янв 04 2012 г., 10:57
+--
 
 DROP TABLE IF EXISTS `company_user`;
 CREATE TABLE IF NOT EXISTS `company_user` (
@@ -256,13 +284,15 @@ CREATE TABLE IF NOT EXISTS `company_user` (
 --
 
 INSERT INTO `company_user` (`company_id`, `user_id`, `is_read`, `is_write`, `is_moderate`) VALUES
-(3, 8, 0, 0, 1),
-(4, 9, 0, 0, 1);
+(4, 9, 0, 0, 1),
+(5, 8, 0, 0, 1);
 
 -- --------------------------------------------------------
 
 --
 -- Структура таблицы `content_page`
+--
+-- Создание: Янв 04 2012 г., 10:57
 --
 
 DROP TABLE IF EXISTS `content_page`;
@@ -287,6 +317,8 @@ INSERT INTO `content_page` (`page_title`, `title`, `content`) VALUES
 --
 -- Структура таблицы `gallery`
 --
+-- Создание: Янв 04 2012 г., 10:57
+--
 
 DROP TABLE IF EXISTS `gallery`;
 CREATE TABLE IF NOT EXISTS `gallery` (
@@ -297,7 +329,7 @@ CREATE TABLE IF NOT EXISTS `gallery` (
   `file` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `fk_tm_document_tm_user1` (`user_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=23 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=32 ;
 
 --
 -- Дамп данных таблицы `gallery`
@@ -315,18 +347,26 @@ INSERT INTO `gallery` (`id`, `title`, `date_create`, `user_id`, `file`) VALUES
 (9, 'Первое фото!', '2011-12-27 14:09:26', 8, 'img_27-12-2011-14-09-26.jpg'),
 (10, 'Второе фото!', '2011-12-27 14:09:45', 8, 'img_27-12-2011-14-09-45.jpg'),
 (11, 'Третье фото!', '2011-12-27 14:10:07', 8, 'img_27-12-2011-14-10-07.jpg'),
-(12, 'ОАЭ', '2011-12-28 14:39:04', 1, 'img_28-12-2011-14-39-04.jpg'),
-(13, 'ОАЭ', '2011-12-28 14:39:18', 1, 'img_28-12-2011-14-39-18.jpg'),
-(14, 'ОАЭ', '2011-12-28 14:39:30', 1, 'img_28-12-2011-14-39-30.jpg'),
-(19, 'Тайланд.', '2011-12-28 16:33:51', 9, 'img_28-12-2011-16-33-52.jpg'),
-(20, 'Тайланд.', '2011-12-28 16:46:44', 9, 'img_28-12-2011-16-46-44.jpg'),
-(21, 'Тайланд.', '2011-12-28 16:46:56', 9, 'img_28-12-2011-16-46-56.jpg'),
-(22, 'оаэ', '2011-12-29 17:55:05', 9, 'img_29-12-2011-17-55-05.jpg');
+(12, 'ОАЭ', '2011-12-28 14:39:04', 1, 'img_06-01-2012-23-06-35.jpg'),
+(13, 'ОАЭ', '2011-12-28 14:39:18', 1, 'img_06-01-2012-23-06-15.jpg'),
+(14, 'ОАЭ', '2011-12-28 14:39:30', 1, 'img_06-01-2012-23-06-25.jpg'),
+(22, 'оаэ', '2011-12-29 17:55:05', 9, 'img_09-01-2012-20-20-06.jpg'),
+(23, 'Тайланд!', '2012-01-09 20:18:35', 9, 'img_09-01-2012-20-18-35.jpg'),
+(24, 'Тайланд!', '2012-01-09 20:18:44', 9, 'img_09-01-2012-20-18-44.jpg'),
+(25, 'Тайланд!', '2012-01-09 20:18:53', 9, 'img_09-01-2012-20-18-53.jpg'),
+(26, 'ОАЭ', '2012-01-09 20:24:32', 9, 'img_09-01-2012-20-24-32.jpg'),
+(27, 'ТАЙЛАНД!', '2012-01-10 10:30:11', 9, 'img_10-01-2012-10-30-12.jpg'),
+(28, 'ТАЙЛАНД!', '2012-01-10 10:30:25', 9, 'img_10-01-2012-10-30-25.jpg'),
+(29, 'ТАЙЛАНД!', '2012-01-10 10:30:48', 9, 'img_10-01-2012-10-30-48.jpg'),
+(30, 'Купаьник', '2012-01-11 17:16:14', 8, 'img_11-01-2012-17-16-14.jpeg'),
+(31, '', '2012-01-11 17:16:36', 8, 'img_11-01-2012-17-16-36.jpeg');
 
 -- --------------------------------------------------------
 
 --
 -- Структура таблицы `gallery_company`
+--
+-- Создание: Янв 04 2012 г., 10:57
 --
 
 DROP TABLE IF EXISTS `gallery_company`;
@@ -351,6 +391,8 @@ INSERT INTO `gallery_company` (`gallery_id`, `company_id`) VALUES
 --
 -- Структура таблицы `gallery_product`
 --
+-- Создание: Янв 04 2012 г., 10:57
+--
 
 DROP TABLE IF EXISTS `gallery_product`;
 CREATE TABLE IF NOT EXISTS `gallery_product` (
@@ -365,18 +407,23 @@ CREATE TABLE IF NOT EXISTS `gallery_product` (
 --
 
 INSERT INTO `gallery_product` (`gallery_id`, `product_id`) VALUES
-(9, 14),
-(10, 14),
-(11, 14),
-(19, 15),
-(20, 15),
-(21, 15),
-(22, 16);
+(23, 15),
+(24, 15),
+(25, 15),
+(27, 15),
+(28, 15),
+(29, 15),
+(22, 16),
+(26, 16),
+(30, 17),
+(31, 17);
 
 -- --------------------------------------------------------
 
 --
 -- Структура таблицы `product`
+--
+-- Создание: Янв 04 2012 г., 10:57
 --
 
 DROP TABLE IF EXISTS `product`;
@@ -393,22 +440,23 @@ CREATE TABLE IF NOT EXISTS `product` (
   PRIMARY KEY (`id`),
   KEY `fk_product_product_rubric1` (`product_rubric_id`),
   KEY `company_id` (`company_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=17 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=18 ;
 
 --
 -- Дамп данных таблицы `product`
 --
 
 INSERT INTO `product` (`id`, `product_rubric_id`, `title`, `img`, `short_text`, `full_text`, `price`, `company_id`, `on_first_page`) VALUES
-(11, 1, 'полплпрлп', NULL, '', '', '125.50', 3, 1),
-(14, 6, 'Косюм!', 'img_27-12-2011-14-05-19.jpg', 'Хорошая вещь!', 'Хорошая вещь!', '1000.00', 3, 0),
-(15, 9, 'Таиланд! 12 дней! 21.01.2012', 'img_30-12-2011-13-48-12.jpg', '', 'Прямой вылет из Кемерово в Паттайю! 21 января 2012! на 12 дней!\r\nЦена указана на 1 человека при условии 2х местного размещения!\r\n\r\nОтели 3 — от 24000 т. р.\r\nОтели 4 — от 28500 т. р.\r\nОтели 5* — от 37500 т. р.\r\n\r\nСПЕШИТЕ БРОНИРОВАТЬ! РЕЙСЫ РАСКУПАЮТСЯ!', '29400.00', 4, 1),
-(16, 9, 'ОАЭ 24.01.2012 7 дней! ', 'img_30-12-2011-13-52-01.jpg', 'Горящий тур в ОАЭ из Новосибирска! Вылеты по вторникам и субботам! Горящий на 24.01.2012 — 7 дней / 6 ночей!', 'Горящий тур в ОАЭ из Новосибирска! Вылеты по вторникам и субботам! Горящий на 24.01.2012 — 7 дней / 6 ночей! Дополнительно оплачивается виза 75 у. е. с человека! Есть туры на 14 дней! Цену нужно уточнять! Цена указана на 1 человека при условии 2х местного размещения!\r\n\r\nДубаи — город — от 17500 т. р.\r\n\r\nЭмират Фуджейра! Пляжные отели, первая береговая линия.\r\nFUJAIRAH ROTANA RESORT & SPA 5 — 22000 т. р.\r\nHILTON FUJAIRAH 5 — 25000 т. р.\r\nLE MERIDIEN AL AQAH BEACH RESO 5* — 25500 т. р.\r\n\r\nПитание только завтраки! (Возможно купить концепцию завтрак+ужин)\r\n', '21000.00', 4, 1);
+(15, 9, 'Таиланд! 12 дней! ', 'img_30-12-2011-13-48-12.jpg', '', 'Прямой вылет из Кемерово в Паттайю! 21 января 2012! на 12 дней!\r\nЦена указана на 1 человека при условии 2х местного размещения!\r\n\r\nОтели 3 — от 24000 т. р.\r\nОтели 4 — от 28500 т. р.\r\nОтели 5* — от 37500 т. р.\r\n\r\nСПЕШИТЕ БРОНИРОВАТЬ! РЕЙСЫ РАСКУПАЮТСЯ!', 29400.00, 4, 1),
+(16, 9, 'ОАЭ 24.01.2012 7 дней! ', 'img_30-12-2011-13-52-01.jpg', 'Горящий тур в ОАЭ из Новосибирска! Вылеты по вторникам и субботам! Горящий на 24.01.2012 — 7 дней / 6 ночей!', 'Горящий тур в ОАЭ из Новосибирска! Вылеты по вторникам и субботам! Горящий на 24.01.2012 — 7 дней / 6 ночей! Дополнительно оплачивается виза 75 у. е. с человека! Есть туры на 14 дней! Цену нужно уточнять! Цена указана на 1 человека при условии 2х местного размещения!\r\n\r\nДубаи — город — от 17500 т. р.\r\n\r\nЭмират Фуджейра! Пляжные отели, первая береговая линия.\r\nFUJAIRAH ROTANA RESORT & SPA 5 — 22000 т. р.\r\nHILTON FUJAIRAH 5 — 25000 т. р.\r\nLE MERIDIEN AL AQAH BEACH RESO 5* — 25500 т. р.\r\n\r\nПитание только завтраки! (Возможно купить концепцию завтрак+ужин)\r\n', 21000.00, 4, 1),
+(17, 6, 'Купальник', 'img_11-01-2012-17-14-31.jpeg', '', '', 3000.00, 5, 1);
 
 -- --------------------------------------------------------
 
 --
 -- Структура таблицы `product_attribute`
+--
+-- Создание: Янв 04 2012 г., 10:57
 --
 
 DROP TABLE IF EXISTS `product_attribute`;
@@ -429,15 +477,6 @@ CREATE TABLE IF NOT EXISTS `product_attribute` (
 --
 
 INSERT INTO `product_attribute` (`product_id`, `attribute_key`, `type_id`, `attribute_value`, `is_fill`) VALUES
-(11, 'description', 1, '', 0),
-(11, 'discount', 1, '25', 0),
-(11, 'discount_type', 3, '%', 0),
-(11, 'second_price', 1, '', 0),
-(11, 'terms_of_stock', 2, '', 0),
-(14, 'description', 2, 'Хорошая скидка', 0),
-(14, 'discount', 1, '50 %', 0),
-(14, 'second_price', 1, '500', 0),
-(14, 'terms_of_stock', 2, '1 января', 0),
 (15, 'description', 2, '', 0),
 (15, 'discount', 1, '20', 0),
 (15, 'discount_type', 3, '%', 0),
@@ -447,12 +486,19 @@ INSERT INTO `product_attribute` (`product_id`, `attribute_key`, `type_id`, `attr
 (16, 'discount', 1, '20', 0),
 (16, 'discount_type', 3, '%', 0),
 (16, 'second_price', 1, '17500', 0),
-(16, 'terms_of_stock', 2, '', 0);
+(16, 'terms_of_stock', 2, '', 0),
+(17, 'description', 2, '', 0),
+(17, 'discount', 1, '50', 0),
+(17, 'discount_type', 3, '%', 0),
+(17, 'second_price', 1, '1500', 0),
+(17, 'terms_of_stock', 2, '', 0);
 
 -- --------------------------------------------------------
 
 --
 -- Структура таблицы `product_attribute_type`
+--
+-- Создание: Янв 04 2012 г., 10:57
 --
 
 DROP TABLE IF EXISTS `product_attribute_type`;
@@ -479,6 +525,8 @@ INSERT INTO `product_attribute_type` (`id`, `title`, `handler`, `description`) V
 
 --
 -- Структура таблицы `product_hash`
+--
+-- Создание: Янв 04 2012 г., 10:57
 --
 
 DROP TABLE IF EXISTS `product_hash`;
@@ -509,7 +557,34 @@ INSERT INTO `product_hash` (`product_id`, `attribute_key`, `title`, `type_id`, `
 -- --------------------------------------------------------
 
 --
+-- Структура таблицы `product_like`
+--
+-- Создание: Янв 10 2012 г., 17:38
+--
+
+DROP TABLE IF EXISTS `product_like`;
+CREATE TABLE IF NOT EXISTS `product_like` (
+  `product_id` int(10) unsigned NOT NULL,
+  `like` int(10) unsigned NOT NULL DEFAULT '0',
+  `unlike` int(10) unsigned NOT NULL DEFAULT '0',
+  PRIMARY KEY (`product_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Дамп данных таблицы `product_like`
+--
+
+INSERT INTO `product_like` (`product_id`, `like`, `unlike`) VALUES
+(15, 15, 6),
+(16, 32, 38),
+(17, 22, 292);
+
+-- --------------------------------------------------------
+
+--
 -- Структура таблицы `product_rubric`
+--
+-- Создание: Янв 04 2012 г., 10:57
 --
 
 DROP TABLE IF EXISTS `product_rubric`;
@@ -540,6 +615,8 @@ INSERT INTO `product_rubric` (`id`, `title`, `parent_id`, `is_root`) VALUES
 
 --
 -- Структура таблицы `tm_acl_role`
+--
+-- Создание: Янв 04 2012 г., 10:57
 --
 
 DROP TABLE IF EXISTS `tm_acl_role`;
@@ -649,6 +726,8 @@ INSERT INTO `tm_acl_role` (`tm_user_role_id`, `tm_user_resource_id`, `is_allow`,
 (1, 142, 1, 'show'),
 (1, 143, 1, 'show'),
 (1, 144, 1, 'show'),
+(1, 145, 1, 'show'),
+(1, 146, 1, 'show'),
 (3, 1, 1, 'show'),
 (3, 2, 1, 'show'),
 (3, 3, 1, 'show'),
@@ -794,6 +873,8 @@ INSERT INTO `tm_acl_role` (`tm_user_role_id`, `tm_user_resource_id`, `is_allow`,
 (4, 142, 0, 'show'),
 (4, 143, 0, 'show'),
 (4, 144, 1, 'show'),
+(4, 145, 0, 'show'),
+(4, 146, 1, 'show'),
 (5, 1, 1, 'show'),
 (5, 2, 1, 'show'),
 (5, 3, 1, 'show'),
@@ -885,12 +966,16 @@ INSERT INTO `tm_acl_role` (`tm_user_role_id`, `tm_user_resource_id`, `is_allow`,
 (5, 141, 0, 'show'),
 (5, 142, 0, 'show'),
 (5, 143, 0, 'show'),
-(5, 144, 1, 'show');
+(5, 144, 1, 'show'),
+(5, 145, 0, 'show'),
+(5, 146, 1, 'show');
 
 -- --------------------------------------------------------
 
 --
 -- Структура таблицы `tm_task_attribute`
+--
+-- Создание: Янв 04 2012 г., 10:57
 --
 
 DROP TABLE IF EXISTS `tm_task_attribute`;
@@ -909,6 +994,8 @@ CREATE TABLE IF NOT EXISTS `tm_task_attribute` (
 
 --
 -- Структура таблицы `tm_task_attribute_type`
+--
+-- Создание: Янв 04 2012 г., 10:57
 --
 
 DROP TABLE IF EXISTS `tm_task_attribute_type`;
@@ -935,6 +1022,8 @@ INSERT INTO `tm_task_attribute_type` (`id`, `title`, `handler`, `description`) V
 
 --
 -- Структура таблицы `tm_task_hash`
+--
+-- Создание: Янв 04 2012 г., 10:57
 --
 
 DROP TABLE IF EXISTS `tm_task_hash`;
@@ -964,6 +1053,8 @@ INSERT INTO `tm_task_hash` (`task_id`, `attribute_key`, `title`, `type_id`, `lis
 
 --
 -- Структура таблицы `tm_user`
+--
+-- Создание: Янв 04 2012 г., 10:57
 --
 
 DROP TABLE IF EXISTS `tm_user`;
@@ -995,6 +1086,8 @@ INSERT INTO `tm_user` (`id`, `login`, `password`, `role_id`, `date_create`) VALU
 --
 -- Структура таблицы `tm_user_attribute`
 --
+-- Создание: Янв 04 2012 г., 10:57
+--
 
 DROP TABLE IF EXISTS `tm_user_attribute`;
 CREATE TABLE IF NOT EXISTS `tm_user_attribute` (
@@ -1024,6 +1117,8 @@ INSERT INTO `tm_user_attribute` (`user_id`, `attribute_key`, `type_id`, `attribu
 --
 -- Структура таблицы `tm_user_attribute_type`
 --
+-- Создание: Янв 04 2012 г., 10:57
+--
 
 DROP TABLE IF EXISTS `tm_user_attribute_type`;
 CREATE TABLE IF NOT EXISTS `tm_user_attribute_type` (
@@ -1048,6 +1143,8 @@ INSERT INTO `tm_user_attribute_type` (`id`, `title`, `handler`, `description`) V
 
 --
 -- Структура таблицы `tm_user_hash`
+--
+-- Создание: Янв 04 2012 г., 10:57
 --
 
 DROP TABLE IF EXISTS `tm_user_hash`;
@@ -1074,6 +1171,8 @@ INSERT INTO `tm_user_hash` (`user_id`, `attribute_key`, `title`, `type_id`, `lis
 --
 -- Структура таблицы `tm_user_profile`
 --
+-- Создание: Янв 04 2012 г., 10:57
+--
 
 DROP TABLE IF EXISTS `tm_user_profile`;
 CREATE TABLE IF NOT EXISTS `tm_user_profile` (
@@ -1089,6 +1188,8 @@ CREATE TABLE IF NOT EXISTS `tm_user_profile` (
 --
 -- Структура таблицы `tm_user_resource`
 --
+-- Создание: Янв 04 2012 г., 10:57
+--
 
 DROP TABLE IF EXISTS `tm_user_resource`;
 CREATE TABLE IF NOT EXISTS `tm_user_resource` (
@@ -1097,23 +1198,23 @@ CREATE TABLE IF NOT EXISTS `tm_user_resource` (
   `rtitle` varchar(255) NOT NULL DEFAULT '',
   PRIMARY KEY (`id`),
   UNIQUE KEY `title` (`title`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=145 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=147 ;
 
 --
 -- Дамп данных таблицы `tm_user_resource`
 --
 
 INSERT INTO `tm_user_resource` (`id`, `title`, `rtitle`) VALUES
-(1, 'login', ''),
-(2, 'login/index', ''),
-(3, 'login/logout', ''),
-(4, 'index/index', ''),
-(5, 'user', ''),
+(1, 'login', 'Вход'),
+(2, 'login/index', 'Вход'),
+(3, 'login/logout', 'Выход'),
+(4, 'index/index', 'Главная'),
+(5, 'user', 'Пользователи'),
 (6, 'user/add', ''),
-(7, 'user/edit', ''),
+(7, 'user/edit', 'Пользователи/Редактировать'),
 (8, 'user/delete', ''),
-(15, 'user/index', ''),
-(19, 'user/addRole', ''),
+(15, 'user/index', 'Пользователи'),
+(19, 'user/addRole', 'Пользователи/Добавить роль'),
 (20, 'user/editRole', ''),
 (21, 'user/deleteRole', ''),
 (22, 'user/addResource', ''),
@@ -1128,26 +1229,26 @@ INSERT INTO `tm_user_resource` (`id`, `title`, `rtitle`) VALUES
 (71, 'user/editAttributeHash', ''),
 (72, 'user/deleteAttributeHash', ''),
 (76, 'city', 'Города'),
-(77, 'city/index', ''),
-(78, 'city/add', ''),
-(79, 'city/edit', ''),
-(80, 'company', ''),
-(81, 'company/index', ''),
-(82, 'company/add', ''),
+(77, 'city/index', 'Города'),
+(78, 'city/add', 'Города/Добавить'),
+(79, 'city/edit', 'Города/Редактировать'),
+(80, 'company', 'Компании'),
+(81, 'company/index', 'Компании'),
+(82, 'company/add', 'Компании/Добавить'),
 (83, 'company/edit', ''),
-(84, 'company/delete', ''),
+(84, 'company/delete', 'Компании/Удалить'),
 (85, 'catalog', 'Каталог'),
-(86, 'catalog/index', ''),
-(87, 'company/viewAddress', ''),
+(86, 'catalog/index', 'Каталог'),
+(87, 'company/viewAddress', 'Компания/Просмотреть адреса'),
 (88, 'company/addAddress', ''),
 (89, 'company/editAddress', ''),
 (90, 'company/deleteAddress', ''),
 (91, 'catalog/addRubric', 'Каталог/Добавить рубрику'),
-(92, 'catalog/editRubric', ''),
-(93, 'catalog/deleteRubric', ''),
+(92, 'catalog/editRubric', 'Каталог/Редактировать рубрику'),
+(93, 'catalog/deleteRubric', 'Каталог/Удалить рубрику'),
 (94, 'catalog/add', 'Каталог/Добавить товар'),
-(95, 'catalog/edit', ''),
-(96, 'catalog/delete', ''),
+(95, 'catalog/edit', 'Каталог/Редактировать товар'),
+(96, 'catalog/delete', 'Каталог/Удалить товар'),
 (97, 'user/viewAttributeType', 'Пользователи/Показать типы атрибутов'),
 (98, 'user/viewResource', 'Пользователи/Показать ресурсы'),
 (99, 'user/viewHash', 'Пользователи/Показать список атрибутов'),
@@ -1195,12 +1296,16 @@ INSERT INTO `tm_user_resource` (`id`, `title`, `rtitle`) VALUES
 (141, 'banner/editPlace', 'Баннеры/Редактировать площадку'),
 (142, 'banner/deletePlace', 'Баннеры/Удалить площадку'),
 (143, 'banner/placemark', 'Баннеры/Размещение'),
-(144, 'search/index', 'Поиск');
+(144, 'search/index', 'Поиск'),
+(145, 'city/delete', 'Города/Удалить'),
+(146, 'catalog/addLike', 'Каталог/Нравится');
 
 -- --------------------------------------------------------
 
 --
 -- Структура таблицы `tm_user_role`
+--
+-- Создание: Янв 04 2012 г., 10:57
 --
 
 DROP TABLE IF EXISTS `tm_user_role`;
@@ -1243,7 +1348,7 @@ ALTER TABLE `comments_product`
 -- Ограничения внешнего ключа таблицы `company`
 --
 ALTER TABLE `company`
-  ADD CONSTRAINT `fk_company_city1` FOREIGN KEY (`city_id`) REFERENCES `city` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+  ADD CONSTRAINT `company_ibfk_1` FOREIGN KEY (`city_id`) REFERENCES `city` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Ограничения внешнего ключа таблицы `company_address`
@@ -1301,6 +1406,12 @@ ALTER TABLE `product_hash`
   ADD CONSTRAINT `product_hash_ibfk_1` FOREIGN KEY (`type_id`) REFERENCES `product_attribute_type` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
+-- Ограничения внешнего ключа таблицы `product_like`
+--
+ALTER TABLE `product_like`
+  ADD CONSTRAINT `product_like_ibfk_1` FOREIGN KEY (`product_id`) REFERENCES `product` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
 -- Ограничения внешнего ключа таблицы `product_rubric`
 --
 ALTER TABLE `product_rubric`
@@ -1347,7 +1458,3 @@ ALTER TABLE `tm_user_hash`
   ADD CONSTRAINT `tm_user_hash_ibfk_1` FOREIGN KEY (`type_id`) REFERENCES `tm_user_attribute_type` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 SET FOREIGN_KEY_CHECKS=1;
 COMMIT;
-
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

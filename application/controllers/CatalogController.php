@@ -22,7 +22,7 @@ class CatalogController extends Zend_Controller_Action
         $this->_helper->AjaxContext()->addActionContext('share', 'html')->initContext('html');
         $this->_helper->AjaxContext()->addActionContext('addComments', 'html')->initContext('html');
         $this->_helper->AjaxContext()->addActionContext('viewComments', 'html')->initContext('html');
-        $this->_helper->AjaxContext()->addActionContext('setLike', 'html')->initContext('html');
+        $this->_helper->AjaxContext()->addActionContext('addLike', 'html')->initContext('html');
         /* Initialize action controller here */
     }
 
@@ -116,17 +116,18 @@ class CatalogController extends Zend_Controller_Action
         $oProduct = EK_Catalog_Product::getInstanceById($this->getRequest()->getParam('id'));
 
         $oProductLike = EK_Catalog_ProductLike::getInstanceByProduct($oProduct);
-        if ($this->getRequest()->getParam('like')) {
+        if ($this->getRequest()->getParam('like', 0) > 0) {
             $oProductLike->setLike($oProductLike->getLike() + 1);
             $oProductLike->setToDb();
         }
 
-        if ($this->getRequest()->getParam('unlike')) {
+        if ($this->getRequest()->getParam('unlike', 0) > 0) {
             $oProductLike->setUnlike($oProductLike->getUnlike() + 1);
             $oProductLike->setToDb();
         }
 
         $this->view->assign('productLike', EK_Catalog_ProductLike::getInstanceByProduct($oProduct));
+        $this->view->assign('product', $oProduct);
     }
 
     public function addAction()

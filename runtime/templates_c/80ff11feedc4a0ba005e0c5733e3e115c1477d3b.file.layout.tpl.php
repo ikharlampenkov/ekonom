@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.0.9, created on 2012-01-10 23:03:48
+<?php /* Smarty version Smarty-3.0.9, created on 2012-01-12 20:25:08
          compiled from "F:\www\ekonom\application/layouts/scripts\layout.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:216474f0c6164d87683-90501810%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:167834f0edf3407eee5-51771780%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '80ff11feedc4a0ba005e0c5733e3e115c1477d3b' => 
     array (
       0 => 'F:\\www\\ekonom\\application/layouts/scripts\\layout.tpl',
-      1 => 1326211425,
+      1 => 1326374663,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '216474f0c6164d87683-90501810',
+  'nocache_hash' => '167834f0edf3407eee5-51771780',
   'function' => 
   array (
   ),
@@ -31,6 +31,7 @@ $_smarty_tpl->decodeProperties(array (
 
     <link rel="stylesheet" type="text/css" href="/css/jquery-ui.css"/>
     <link rel="stylesheet" type="text/css" href="/css/jquery-ui-timepicker-addon.css"/>
+    <link rel="stylesheet" type="text/css" href="/css/cloud-zoom.css" />
 
 
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
@@ -51,6 +52,8 @@ $_smarty_tpl->decodeProperties(array (
 
     <script type="text/javascript" language="javascript" src="/js/func.js"></script>
     <script type="text/javascript" language="javascript" src="/js/main.js"></script>
+
+    <script type="text/javascript" language="javascript" src="/js/cloud-zoom.1.0.2.js"></script>
 
     <script type="text/javascript" language="javascript" src="/js/share42.js"></script>
 

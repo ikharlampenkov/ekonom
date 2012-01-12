@@ -21,7 +21,7 @@
 
                 <section class="discount clearfix">
                 {if $product->searchAttribute('discount')}
-                    <h5>Скидка: {$product->getAttribute('discount')->value}{if $product->searchAttribute('discount_type')}{$product->getAttribute('discount_type')->value}{/if}</h5>
+                    <h5>Скидка: <span class="constant-discount-red">{$product->getAttribute('discount')->value}{if $product->searchAttribute('discount_type')}{$product->getAttribute('discount_type')->value}{/if}</span></h5>
                 {/if}
                     <del class="old-price">{$product->price} р</del>
                 {if $product->searchAttribute('second_price')}
@@ -66,7 +66,9 @@
                     {foreach from=$galleryList item=gallery name=_gallery}
                         {if $smarty.foreach._gallery.first}
                             <div class="big-image">
-                                <img src="/gallery{$gallery->file->getSubPath()}/{$gallery->file->getName()}" width="420" height="270" alt="{$gallery->title}" data-preview="/gallery{$gallery->file->getSubPath()}/{$gallery->file->getPreview()}"/>
+                                <a href='/gallery{$gallery->file->getSubPath()}/{$gallery->file->getName()}' class='cloud-zoom' id='zoom1' rel="position: inside">
+                                    <img src="/gallery{$gallery->file->getSubPath()}/{$gallery->file->getName()}" width="420" height="270" alt="{$gallery->title}" data-preview="/gallery{$gallery->file->getSubPath()}/{$gallery->file->getPreview()}"/>
+                                </a>
                                 <h5 class="title">{$gallery->title}</h5>
                                 <a href="#previous" class="previous"></a>
                                 <a href="#next" class="next"></a>
@@ -86,12 +88,36 @@
                         {/if}
                     {/foreach}
                 </div>
+
+                <script type="text/javascript">
+                    $('div#item').load(function () {
+                    $.fn.CloudZoom.defaults = {
+                    zoomWidth: 'auto',
+                    zoomHeight: 'auto',
+                    position: 'right',
+                    tint: false,
+                    tintOpacity: 0.5,
+                    lensOpacity: 0.5,
+                    softFocus: false,
+                    smoothMove: 3,
+                    showTitle: true,
+                    titleOpacity: 0.5,
+                    adjustX: 0,
+                    adjustY: 0
+                    };
+                    $('.cloud-zoom, .cloud-zoom-gallery').CloudZoom();
+                    });
+                </script>
+
+            {*
+                <script type="text/javascript" language="javascript" src="/js/cloud-zoom.1.0.2.min.js"></script>
+                *}
             {/if}
 
                 <a href="{$this->url(['controller' => $controller,'action' => 'reserve', 'idProduct' => $product->id])}" class="button reserve">Отложить</a>
                 <a href="{$this->url(['controller' => $controller,'action' => 'share', 'idProduct' => $product->id])}" class="button share-with-friend">Поделиться</a>
 
-                <span>Нравиться? Да {if is_object($productLike)}{$productLike->like}{/if} / Нет {if is_object($productLike)}{$productLike->unlike}{/if}</span>
+                <div class="product-like">Нравиться? <a href="{$this->url(['controller' => $controller,'action' => 'addLike', 'idProduct' => $product->id, 'like' => 1, 'unlike' => 0])}" class="like">Да</a> {if is_object($productLike)}{$productLike->like}{/if} / <a href="{$this->url(['controller' => $controller,'action' => 'addLike', 'idProduct' => $product->id, 'like' => 0, 'unlike' => 1])}" class="unlike">Нет</a> {if is_object($productLike)}{$productLike->unlike}{/if}</div>
             </aside>
         </div>
 

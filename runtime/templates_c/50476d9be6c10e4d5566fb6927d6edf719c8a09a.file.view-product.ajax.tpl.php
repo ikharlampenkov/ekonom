@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.0.9, created on 2012-01-11 00:35:25
+<?php /* Smarty version Smarty-3.0.9, created on 2012-01-12 21:14:16
          compiled from "F:\www\ekonom\application/views/scripts\catalog/view-product.ajax.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:39814f0c76dd20f8c4-10341523%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:257054f0eeab8232015-72764619%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '50476d9be6c10e4d5566fb6927d6edf719c8a09a' => 
     array (
       0 => 'F:\\www\\ekonom\\application/views/scripts\\catalog/view-product.ajax.tpl',
-      1 => 1326216920,
+      1 => 1326374663,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '39814f0c76dd20f8c4-10341523',
+  'nocache_hash' => '257054f0eeab8232015-72764619',
   'function' => 
   array (
   ),
@@ -44,9 +44,9 @@ $_smarty_tpl->decodeProperties(array (
 
                 <section class="discount clearfix">
                 <?php if ($_smarty_tpl->getVariable('product')->value->searchAttribute('discount')){?>
-                    <h5>Скидка: <?php echo $_smarty_tpl->getVariable('product')->value->getAttribute('discount')->value;?>
+                    <h5>Скидка: <span class="constant-discount-red"><?php echo $_smarty_tpl->getVariable('product')->value->getAttribute('discount')->value;?>
 <?php if ($_smarty_tpl->getVariable('product')->value->searchAttribute('discount_type')){?><?php echo $_smarty_tpl->getVariable('product')->value->getAttribute('discount_type')->value;?>
-<?php }?></h5>
+<?php }?></span></h5>
                 <?php }?>
                     <del class="old-price"><?php echo $_smarty_tpl->getVariable('product')->value->price;?>
  р</del>
@@ -100,12 +100,16 @@ if ($_smarty_tpl->tpl_vars['gallery']->total > 0){
 ?>
                         <?php if ($_smarty_tpl->getVariable('smarty')->value['foreach']['_gallery']['first']){?>
                             <div class="big-image">
-                                <img src="/gallery<?php echo $_smarty_tpl->getVariable('gallery')->value->file->getSubPath();?>
+                                <a href='/gallery<?php echo $_smarty_tpl->getVariable('gallery')->value->file->getSubPath();?>
+/<?php echo $_smarty_tpl->getVariable('gallery')->value->file->getName();?>
+' class='cloud-zoom' id='zoom1' rel="position: inside">
+                                    <img src="/gallery<?php echo $_smarty_tpl->getVariable('gallery')->value->file->getSubPath();?>
 /<?php echo $_smarty_tpl->getVariable('gallery')->value->file->getName();?>
 " width="420" height="270" alt="<?php echo $_smarty_tpl->getVariable('gallery')->value->title;?>
 " data-preview="/gallery<?php echo $_smarty_tpl->getVariable('gallery')->value->file->getSubPath();?>
 /<?php echo $_smarty_tpl->getVariable('gallery')->value->file->getPreview();?>
 "/>
+                                </a>
                                 <h5 class="title"><?php echo $_smarty_tpl->getVariable('gallery')->value->title;?>
 </h5>
                                 <a href="#previous" class="previous"></a>
@@ -132,6 +136,26 @@ if ($_smarty_tpl->tpl_vars['gallery']->total > 0){
                         <?php }?>
                     <?php }} ?>
                 </div>
+
+                <script type="text/javascript">
+                    $('div#item').load(function () {
+                    $.fn.CloudZoom.defaults = {
+                    zoomWidth: 'auto',
+                    zoomHeight: 'auto',
+                    position: 'right',
+                    tint: false,
+                    tintOpacity: 0.5,
+                    lensOpacity: 0.5,
+                    softFocus: false,
+                    smoothMove: 3,
+                    showTitle: true,
+                    titleOpacity: 0.5,
+                    adjustX: 0,
+                    adjustY: 0
+                    };
+                    $('.cloud-zoom, .cloud-zoom-gallery').CloudZoom();
+                    });
+                </script>
             <?php }?>
 
                 <a href="<?php echo $_smarty_tpl->getVariable('this')->value->url(array('controller'=>$_smarty_tpl->getVariable('controller')->value,'action'=>'reserve','idProduct'=>$_smarty_tpl->getVariable('product')->value->id));?>
@@ -139,9 +163,11 @@ if ($_smarty_tpl->tpl_vars['gallery']->total > 0){
                 <a href="<?php echo $_smarty_tpl->getVariable('this')->value->url(array('controller'=>$_smarty_tpl->getVariable('controller')->value,'action'=>'share','idProduct'=>$_smarty_tpl->getVariable('product')->value->id));?>
 " class="button share-with-friend">Поделиться</a>
 
-                <span>Нравиться? Да <?php if (is_object($_smarty_tpl->getVariable('productLike')->value)){?><?php echo $_smarty_tpl->getVariable('productLike')->value->like;?>
-<?php }?> / Нет <?php if (is_object($_smarty_tpl->getVariable('productLike')->value)){?><?php echo $_smarty_tpl->getVariable('productLike')->value->unlike;?>
-<?php }?></span>
+                <div class="product-like">Нравиться? <a href="<?php echo $_smarty_tpl->getVariable('this')->value->url(array('controller'=>$_smarty_tpl->getVariable('controller')->value,'action'=>'addLike','idProduct'=>$_smarty_tpl->getVariable('product')->value->id,'like'=>1,'unlike'=>0));?>
+" class="like">Да</a> <?php if (is_object($_smarty_tpl->getVariable('productLike')->value)){?><?php echo $_smarty_tpl->getVariable('productLike')->value->like;?>
+<?php }?> / <a href="<?php echo $_smarty_tpl->getVariable('this')->value->url(array('controller'=>$_smarty_tpl->getVariable('controller')->value,'action'=>'addLike','idProduct'=>$_smarty_tpl->getVariable('product')->value->id,'like'=>0,'unlike'=>1));?>
+" class="unlike">Нет</a> <?php if (is_object($_smarty_tpl->getVariable('productLike')->value)){?><?php echo $_smarty_tpl->getVariable('productLike')->value->unlike;?>
+<?php }?></div>
             </aside>
         </div>
 

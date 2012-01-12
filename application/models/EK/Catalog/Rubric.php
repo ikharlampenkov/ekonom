@@ -229,7 +229,10 @@ class EK_Catalog_Rubric
         if ($this->_isRoot != EK_Catalog_Rubric::IS_ROOT) {
             $tempRubric = EK_Catalog_Rubric::getInstanceById($this->_parent->id);
             if ($tempRubric instanceof EK_Catalog_Rubric) {
-                $path[] = $tempRubric;
+                if ($tempRubric->getIsRoot() != EK_Catalog_Rubric::IS_ROOT) {
+                    $path[] = $tempRubric;
+                }
+
                 if ($tempRubric->getIsRoot() != EK_Catalog_Rubric::IS_ROOT) {
                     $tempRubric->getPathToRubric($path);
                 }
