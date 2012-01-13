@@ -1,12 +1,167 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7151d89e-e84a-4788-b442-a723b5b4a6eb" name="New changelist" comment="Правка фото&#10;">
+    <list default="true" id="7151d89e-e84a-4788-b442-a723b5b4a6eb" name="New changelist" comment="Поиск">
+      <change type="DELETED" beforePath="E:\www\ekonom\~Documents\econom\about.html" afterPath="" />
+      <change type="DELETED" beforePath="E:\www\ekonom\~Documents\econom\add-comment.html" afterPath="" />
+      <change type="DELETED" beforePath="E:\www\ekonom\~Documents\econom\css\main.css" afterPath="" />
+      <change type="DELETED" beforePath="E:\www\ekonom\~Documents\econom\css\main.css.bak" afterPath="" />
+      <change type="DELETED" beforePath="E:\www\ekonom\~Documents\econom\fancybox\lib\jquery-1.7.1.min.js" afterPath="" />
+      <change type="DELETED" beforePath="E:\www\ekonom\~Documents\econom\fancybox\lib\jquery.mousewheel-3.0.6.pack.js" afterPath="" />
+      <change type="DELETED" beforePath="E:\www\ekonom\~Documents\econom\fancybox\source\blank.gif" afterPath="" />
+      <change type="DELETED" beforePath="E:\www\ekonom\~Documents\econom\fancybox\source\fancybox_loading.gif" afterPath="" />
+      <change type="DELETED" beforePath="E:\www\ekonom\~Documents\econom\fancybox\source\fancybox_sprite.png" afterPath="" />
+      <change type="DELETED" beforePath="E:\www\ekonom\~Documents\econom\fancybox\source\helpers\fancybox_buttons.png" afterPath="" />
+      <change type="DELETED" beforePath="E:\www\ekonom\~Documents\econom\fancybox\source\helpers\jquery.fancybox-buttons.css" afterPath="" />
+      <change type="DELETED" beforePath="E:\www\ekonom\~Documents\econom\fancybox\source\helpers\jquery.fancybox-buttons.js" afterPath="" />
+      <change type="DELETED" beforePath="E:\www\ekonom\~Documents\econom\fancybox\source\helpers\jquery.fancybox-thumbs.css" afterPath="" />
+      <change type="DELETED" beforePath="E:\www\ekonom\~Documents\econom\fancybox\source\helpers\jquery.fancybox-thumbs.js" afterPath="" />
+      <change type="DELETED" beforePath="E:\www\ekonom\~Documents\econom\fancybox\source\jquery.fancybox.css" afterPath="" />
+      <change type="DELETED" beforePath="E:\www\ekonom\~Documents\econom\fancybox\source\jquery.fancybox.js" afterPath="" />
+      <change type="DELETED" beforePath="E:\www\ekonom\~Documents\econom\fancybox\source\jquery.fancybox.pack.js" afterPath="" />
+      <change type="DELETED" beforePath="E:\www\ekonom\~Documents\econom\favicon.ico" afterPath="" />
+      <change type="DELETED" beforePath="E:\www\ekonom\~Documents\econom\fonts\ArialNarrowRegular.ttf" afterPath="" />
+      <change type="DELETED" beforePath="E:\www\ekonom\~Documents\econom\fonts\Bankir-Retro.ttf" afterPath="" />
+      <change type="DELETED" beforePath="E:\www\ekonom\~Documents\econom\images\address_list_border.png" afterPath="" />
+      <change type="DELETED" beforePath="E:\www\ekonom\~Documents\econom\images\button_back.png" afterPath="" />
+      <change type="DELETED" beforePath="E:\www\ekonom\~Documents\econom\images\discount.png" afterPath="" />
+      <change type="DELETED" beforePath="E:\www\ekonom\~Documents\econom\images\first-level_background.png" afterPath="" />
+      <change type="DELETED" beforePath="E:\www\ekonom\~Documents\econom\images\footer_back.png" afterPath="" />
+      <change type="DELETED" beforePath="E:\www\ekonom\~Documents\econom\images\gallery_left.png" afterPath="" />
+      <change type="DELETED" beforePath="E:\www\ekonom\~Documents\econom\images\gallery_right.png" afterPath="" />
+      <change type="DELETED" beforePath="E:\www\ekonom\~Documents\econom\images\header_back.png" afterPath="" />
+      <change type="DELETED" beforePath="E:\www\ekonom\~Documents\econom\images\icons.png" afterPath="" />
+      <change type="DELETED" beforePath="E:\www\ekonom\~Documents\econom\images\logo.png" afterPath="" />
+      <change type="DELETED" beforePath="E:\www\ekonom\~Documents\econom\images\main-nav-marker.png" afterPath="" />
+      <change type="DELETED" beforePath="E:\www\ekonom\~Documents\econom\images\main_nav.png" afterPath="" />
+      <change type="DELETED" beforePath="E:\www\ekonom\~Documents\econom\images\main_nav_li_back.png" afterPath="" />
+      <change type="DELETED" beforePath="E:\www\ekonom\~Documents\econom\images\phone.png" afterPath="" />
+      <change type="DELETED" beforePath="E:\www\ekonom\~Documents\econom\images\search_button_back.png" afterPath="" />
+      <change type="DELETED" beforePath="E:\www\ekonom\~Documents\econom\images\second-level_background.png" afterPath="" />
+      <change type="DELETED" beforePath="E:\www\ekonom\~Documents\econom\images\shop_background.png" afterPath="" />
+      <change type="DELETED" beforePath="E:\www\ekonom\~Documents\econom\images\shop_heading_background.png" afterPath="" />
+      <change type="DELETED" beforePath="E:\www\ekonom\~Documents\econom\images\slider_left.png" afterPath="" />
+      <change type="DELETED" beforePath="E:\www\ekonom\~Documents\econom\images\slider_right.png" afterPath="" />
+      <change type="DELETED" beforePath="E:\www\ekonom\~Documents\econom\images\slider_shadow.png" afterPath="" />
+      <change type="DELETED" beforePath="E:\www\ekonom\~Documents\econom\index.html" afterPath="" />
+      <change type="DELETED" beforePath="E:\www\ekonom\~Documents\econom\item.html" afterPath="" />
+      <change type="DELETED" beforePath="E:\www\ekonom\~Documents\econom\js\ajax-form.js" afterPath="" />
+      <change type="DELETED" beforePath="E:\www\ekonom\~Documents\econom\js\gallery.js" afterPath="" />
+      <change type="DELETED" beforePath="E:\www\ekonom\~Documents\econom\js\html5.js" afterPath="" />
+      <change type="DELETED" beforePath="E:\www\ekonom\~Documents\econom\js\slider.js" afterPath="" />
+      <change type="DELETED" beforePath="E:\www\ekonom\~Documents\econom\reserve.html" afterPath="" />
+      <change type="DELETED" beforePath="E:\www\ekonom\~Documents\econom\share.html" afterPath="" />
+      <change type="DELETED" beforePath="E:\www\ekonom\~Documents\econom\share_buttons.html" afterPath="" />
+      <change type="DELETED" beforePath="E:\www\ekonom\~Documents\econom\shop.html" afterPath="" />
+      <change type="DELETED" beforePath="E:\www\ekonom\~Documents\econom\uploads\action1.png" afterPath="" />
+      <change type="DELETED" beforePath="E:\www\ekonom\~Documents\econom\uploads\action2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="E:\www\ekonom\~Documents\econom\uploads\action3.jpg" afterPath="" />
+      <change type="DELETED" beforePath="E:\www\ekonom\~Documents\econom\uploads\banner.jpg" afterPath="" />
+      <change type="DELETED" beforePath="E:\www\ekonom\~Documents\econom\uploads\banner.png" afterPath="" />
+      <change type="DELETED" beforePath="E:\www\ekonom\~Documents\econom\uploads\gallery.jpg" afterPath="" />
+      <change type="DELETED" beforePath="E:\www\ekonom\~Documents\econom\uploads\gallery1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="E:\www\ekonom\~Documents\econom\uploads\gallery1_preview.jpg" afterPath="" />
+      <change type="DELETED" beforePath="E:\www\ekonom\~Documents\econom\uploads\gallery2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="E:\www\ekonom\~Documents\econom\uploads\gallery2_preview.jpg" afterPath="" />
+      <change type="DELETED" beforePath="E:\www\ekonom\~Documents\econom\uploads\gallery3.jpg" afterPath="" />
+      <change type="DELETED" beforePath="E:\www\ekonom\~Documents\econom\uploads\gallery3_preview.jpg" afterPath="" />
+      <change type="DELETED" beforePath="E:\www\ekonom\~Documents\econom\uploads\gallery_preview.jpg" afterPath="" />
+      <change type="DELETED" beforePath="E:\www\ekonom\~Documents\econom\uploads\prada_logo.jpg" afterPath="" />
+      <change type="DELETED" beforePath="E:\www\ekonom\~Documents\econom\uploads\slide1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="E:\www\ekonom\~Documents\econom_test\about.html" afterPath="" />
+      <change type="DELETED" beforePath="E:\www\ekonom\~Documents\econom_test\add-comment.html" afterPath="" />
+      <change type="DELETED" beforePath="E:\www\ekonom\~Documents\econom_test\css\fonts\ArialNarrowRegular.ttf" afterPath="" />
+      <change type="DELETED" beforePath="E:\www\ekonom\~Documents\econom_test\css\fonts\Bankir-Retro.ttf" afterPath="" />
+      <change type="DELETED" beforePath="E:\www\ekonom\~Documents\econom_test\css\images\address_list_border.png" afterPath="" />
+      <change type="DELETED" beforePath="E:\www\ekonom\~Documents\econom_test\css\images\button_back.png" afterPath="" />
+      <change type="DELETED" beforePath="E:\www\ekonom\~Documents\econom_test\css\images\discount.png" afterPath="" />
+      <change type="DELETED" beforePath="E:\www\ekonom\~Documents\econom_test\css\images\first-level_background.png" afterPath="" />
+      <change type="DELETED" beforePath="E:\www\ekonom\~Documents\econom_test\css\images\footer_back.png" afterPath="" />
+      <change type="DELETED" beforePath="E:\www\ekonom\~Documents\econom_test\css\images\gallery_left.png" afterPath="" />
+      <change type="DELETED" beforePath="E:\www\ekonom\~Documents\econom_test\css\images\gallery_right.png" afterPath="" />
+      <change type="DELETED" beforePath="E:\www\ekonom\~Documents\econom_test\css\images\header_back.png" afterPath="" />
+      <change type="DELETED" beforePath="E:\www\ekonom\~Documents\econom_test\css\images\icons.png" afterPath="" />
+      <change type="DELETED" beforePath="E:\www\ekonom\~Documents\econom_test\css\images\logo.png" afterPath="" />
+      <change type="DELETED" beforePath="E:\www\ekonom\~Documents\econom_test\css\images\main-nav-marker.png" afterPath="" />
+      <change type="DELETED" beforePath="E:\www\ekonom\~Documents\econom_test\css\images\main_nav.png" afterPath="" />
+      <change type="DELETED" beforePath="E:\www\ekonom\~Documents\econom_test\css\images\main_nav_li_back.png" afterPath="" />
+      <change type="DELETED" beforePath="E:\www\ekonom\~Documents\econom_test\css\images\phone.png" afterPath="" />
+      <change type="DELETED" beforePath="E:\www\ekonom\~Documents\econom_test\css\images\search_button_back.png" afterPath="" />
+      <change type="DELETED" beforePath="E:\www\ekonom\~Documents\econom_test\css\images\second-level_background.png" afterPath="" />
+      <change type="DELETED" beforePath="E:\www\ekonom\~Documents\econom_test\css\images\shop_background.png" afterPath="" />
+      <change type="DELETED" beforePath="E:\www\ekonom\~Documents\econom_test\css\images\shop_heading_background.png" afterPath="" />
+      <change type="DELETED" beforePath="E:\www\ekonom\~Documents\econom_test\css\images\slider_left.png" afterPath="" />
+      <change type="DELETED" beforePath="E:\www\ekonom\~Documents\econom_test\css\images\slider_right.png" afterPath="" />
+      <change type="DELETED" beforePath="E:\www\ekonom\~Documents\econom_test\css\images\slider_shadow.png" afterPath="" />
+      <change type="DELETED" beforePath="E:\www\ekonom\~Documents\econom_test\css\main.css" afterPath="" />
+      <change type="DELETED" beforePath="E:\www\ekonom\~Documents\econom_test\fancybox\lib\jquery-1.7.1.min.js" afterPath="" />
+      <change type="DELETED" beforePath="E:\www\ekonom\~Documents\econom_test\fancybox\lib\jquery.mousewheel-3.0.6.pack.js" afterPath="" />
+      <change type="DELETED" beforePath="E:\www\ekonom\~Documents\econom_test\fancybox\source\blank.gif" afterPath="" />
+      <change type="DELETED" beforePath="E:\www\ekonom\~Documents\econom_test\fancybox\source\fancybox_loading.gif" afterPath="" />
+      <change type="DELETED" beforePath="E:\www\ekonom\~Documents\econom_test\fancybox\source\fancybox_sprite.png" afterPath="" />
+      <change type="DELETED" beforePath="E:\www\ekonom\~Documents\econom_test\fancybox\source\helpers\fancybox_buttons.png" afterPath="" />
+      <change type="DELETED" beforePath="E:\www\ekonom\~Documents\econom_test\fancybox\source\helpers\jquery.fancybox-buttons.css" afterPath="" />
+      <change type="DELETED" beforePath="E:\www\ekonom\~Documents\econom_test\fancybox\source\helpers\jquery.fancybox-buttons.js" afterPath="" />
+      <change type="DELETED" beforePath="E:\www\ekonom\~Documents\econom_test\fancybox\source\helpers\jquery.fancybox-thumbs.css" afterPath="" />
+      <change type="DELETED" beforePath="E:\www\ekonom\~Documents\econom_test\fancybox\source\helpers\jquery.fancybox-thumbs.js" afterPath="" />
+      <change type="DELETED" beforePath="E:\www\ekonom\~Documents\econom_test\fancybox\source\jquery.fancybox.css" afterPath="" />
+      <change type="DELETED" beforePath="E:\www\ekonom\~Documents\econom_test\fancybox\source\jquery.fancybox.js" afterPath="" />
+      <change type="DELETED" beforePath="E:\www\ekonom\~Documents\econom_test\fancybox\source\jquery.fancybox.pack.js" afterPath="" />
+      <change type="DELETED" beforePath="E:\www\ekonom\~Documents\econom_test\favicon.ico" afterPath="" />
+      <change type="DELETED" beforePath="E:\www\ekonom\~Documents\econom_test\fonts\ArialNarrowRegular.ttf" afterPath="" />
+      <change type="DELETED" beforePath="E:\www\ekonom\~Documents\econom_test\fonts\Bankir-Retro.ttf" afterPath="" />
+      <change type="DELETED" beforePath="E:\www\ekonom\~Documents\econom_test\images\address_list_border.png" afterPath="" />
+      <change type="DELETED" beforePath="E:\www\ekonom\~Documents\econom_test\images\button_back.png" afterPath="" />
+      <change type="DELETED" beforePath="E:\www\ekonom\~Documents\econom_test\images\discount.png" afterPath="" />
+      <change type="DELETED" beforePath="E:\www\ekonom\~Documents\econom_test\images\first-level_background.png" afterPath="" />
+      <change type="DELETED" beforePath="E:\www\ekonom\~Documents\econom_test\images\footer_back.png" afterPath="" />
+      <change type="DELETED" beforePath="E:\www\ekonom\~Documents\econom_test\images\gallery_left.png" afterPath="" />
+      <change type="DELETED" beforePath="E:\www\ekonom\~Documents\econom_test\images\gallery_right.png" afterPath="" />
+      <change type="DELETED" beforePath="E:\www\ekonom\~Documents\econom_test\images\header_back.png" afterPath="" />
+      <change type="DELETED" beforePath="E:\www\ekonom\~Documents\econom_test\images\icons.png" afterPath="" />
+      <change type="DELETED" beforePath="E:\www\ekonom\~Documents\econom_test\images\logo.png" afterPath="" />
+      <change type="DELETED" beforePath="E:\www\ekonom\~Documents\econom_test\images\main-nav-marker.png" afterPath="" />
+      <change type="DELETED" beforePath="E:\www\ekonom\~Documents\econom_test\images\main_nav.png" afterPath="" />
+      <change type="DELETED" beforePath="E:\www\ekonom\~Documents\econom_test\images\main_nav_li_back.png" afterPath="" />
+      <change type="DELETED" beforePath="E:\www\ekonom\~Documents\econom_test\images\phone.png" afterPath="" />
+      <change type="DELETED" beforePath="E:\www\ekonom\~Documents\econom_test\images\search_button_back.png" afterPath="" />
+      <change type="DELETED" beforePath="E:\www\ekonom\~Documents\econom_test\images\second-level_background.png" afterPath="" />
+      <change type="DELETED" beforePath="E:\www\ekonom\~Documents\econom_test\images\shop_background.png" afterPath="" />
+      <change type="DELETED" beforePath="E:\www\ekonom\~Documents\econom_test\images\shop_heading_background.png" afterPath="" />
+      <change type="DELETED" beforePath="E:\www\ekonom\~Documents\econom_test\images\slider_left.png" afterPath="" />
+      <change type="DELETED" beforePath="E:\www\ekonom\~Documents\econom_test\images\slider_right.png" afterPath="" />
+      <change type="DELETED" beforePath="E:\www\ekonom\~Documents\econom_test\images\slider_shadow.png" afterPath="" />
+      <change type="DELETED" beforePath="E:\www\ekonom\~Documents\econom_test\index.html" afterPath="" />
+      <change type="DELETED" beforePath="E:\www\ekonom\~Documents\econom_test\item.html" afterPath="" />
+      <change type="DELETED" beforePath="E:\www\ekonom\~Documents\econom_test\js\ajax-form.js" afterPath="" />
+      <change type="DELETED" beforePath="E:\www\ekonom\~Documents\econom_test\js\gallery.js" afterPath="" />
+      <change type="DELETED" beforePath="E:\www\ekonom\~Documents\econom_test\js\html5.js" afterPath="" />
+      <change type="DELETED" beforePath="E:\www\ekonom\~Documents\econom_test\js\slider.js" afterPath="" />
+      <change type="DELETED" beforePath="E:\www\ekonom\~Documents\econom_test\reserve.html" afterPath="" />
+      <change type="DELETED" beforePath="E:\www\ekonom\~Documents\econom_test\share.html" afterPath="" />
+      <change type="DELETED" beforePath="E:\www\ekonom\~Documents\econom_test\share_buttons.html" afterPath="" />
+      <change type="DELETED" beforePath="E:\www\ekonom\~Documents\econom_test\shop.html" afterPath="" />
+      <change type="DELETED" beforePath="E:\www\ekonom\~Documents\econom_test\uploads\action1.png" afterPath="" />
+      <change type="DELETED" beforePath="E:\www\ekonom\~Documents\econom_test\uploads\action2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="E:\www\ekonom\~Documents\econom_test\uploads\action3.jpg" afterPath="" />
+      <change type="DELETED" beforePath="E:\www\ekonom\~Documents\econom_test\uploads\banner.jpg" afterPath="" />
+      <change type="DELETED" beforePath="E:\www\ekonom\~Documents\econom_test\uploads\banner.png" afterPath="" />
+      <change type="DELETED" beforePath="E:\www\ekonom\~Documents\econom_test\uploads\gallery.jpg" afterPath="" />
+      <change type="DELETED" beforePath="E:\www\ekonom\~Documents\econom_test\uploads\gallery1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="E:\www\ekonom\~Documents\econom_test\uploads\gallery1_preview.jpg" afterPath="" />
+      <change type="DELETED" beforePath="E:\www\ekonom\~Documents\econom_test\uploads\gallery2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="E:\www\ekonom\~Documents\econom_test\uploads\gallery2_preview.jpg" afterPath="" />
+      <change type="DELETED" beforePath="E:\www\ekonom\~Documents\econom_test\uploads\gallery3.jpg" afterPath="" />
+      <change type="DELETED" beforePath="E:\www\ekonom\~Documents\econom_test\uploads\gallery3_preview.jpg" afterPath="" />
+      <change type="DELETED" beforePath="E:\www\ekonom\~Documents\econom_test\uploads\gallery_preview.jpg" afterPath="" />
+      <change type="DELETED" beforePath="E:\www\ekonom\~Documents\econom_test\uploads\prada_logo.jpg" afterPath="" />
+      <change type="DELETED" beforePath="E:\www\ekonom\~Documents\econom_test\uploads\slide1.jpg" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/SearchController.php" afterPath="$PROJECT_DIR$/application/controllers/SearchController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/models/EK/Catalog/Rubric.php" afterPath="$PROJECT_DIR$/application/models/EK/Catalog/Rubric.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/scripts/catalog/index.tpl" afterPath="$PROJECT_DIR$/application/views/scripts/catalog/index.tpl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/scripts/search/index.tpl" afterPath="$PROJECT_DIR$/application/views/scripts/search/index.tpl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/layouts/scripts/layout.tpl" afterPath="$PROJECT_DIR$/application/layouts/scripts/layout.tpl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/scripts/catalog/view-product.ajax.tpl" afterPath="$PROJECT_DIR$/application/views/scripts/catalog/view-product.ajax.tpl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public_html/css/cloud-zoom.css" afterPath="$PROJECT_DIR$/public_html/css/cloud-zoom.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public_html/css/main.css" afterPath="$PROJECT_DIR$/public_html/css/main.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public_html/js/cloud-zoom.1.0.2.js" afterPath="$PROJECT_DIR$/public_html/js/cloud-zoom.1.0.2.js" />
     </list>
     <ignored path="ekonom.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -28,37 +183,30 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Rubric.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/models/EK/Catalog/Rubric.php">
+      <file leaf-file-name="view-product.ajax.tpl" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/views/scripts/catalog/view-product.ajax.tpl">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="269" column="50" selection-start="5810" selection-end="5810" vertical-scroll-proportion="0.0">
+            <state line="69" column="236" selection-start="3573" selection-end="3573" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SearchController.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/controllers/SearchController.php">
+      <file leaf-file-name="cloud-zoom.1.0.2.js" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/public_html/js/cloud-zoom.1.0.2.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="33" column="43" selection-start="1034" selection-end="1044" vertical-scroll-proportion="0.0">
-              <folding />
+            <state line="361" column="75" selection-start="13634" selection-end="13634" vertical-scroll-proportion="0.30081302">
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.tpl" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/application/views/scripts/search/index.tpl">
+      <file leaf-file-name="layout.tpl" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/layouts/scripts/layout.tpl">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="36" selection-start="204" selection-end="204" vertical-scroll-proportion="0.14251497">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.tpl" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/views/scripts/catalog/index.tpl">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="40" column="195" selection-start="1532" selection-end="1532" vertical-scroll-proportion="-26.153847">
+            <state line="43" column="96" selection-start="2421" selection-end="2421" vertical-scroll-proportion="-14.384615">
               <folding />
             </state>
           </provider>
@@ -87,22 +235,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/application/views/scripts/index/index.tpl" />
-        <option value="$PROJECT_DIR$/public_html/js/slider.js" />
         <option value="$PROJECT_DIR$/application/models/EK/Banner/PlaceMark.php" />
         <option value="$PROJECT_DIR$/application/controllers/BannerController.php" />
         <option value="$PROJECT_DIR$/application/models/EK/Catalog/ProductLike.php" />
         <option value="$PROJECT_DIR$/application/views/scripts/catalog/add-like.ajax.tpl" />
         <option value="$PROJECT_DIR$/application/controllers/CatalogController.php" />
-        <option value="$PROJECT_DIR$/application/layouts/scripts/layout.tpl" />
         <option value="$PROJECT_DIR$/application/models/EK/Company/Company.php" />
         <option value="$PROJECT_DIR$/public_html/js/ajax-form.js" />
-        <option value="$PROJECT_DIR$/public_html/css/main.css" />
-        <option value="$PROJECT_DIR$/application/views/scripts/catalog/view-product.ajax.tpl" />
         <option value="$PROJECT_DIR$/application/models/EK/Catalog/Rubric.php" />
         <option value="$PROJECT_DIR$/application/controllers/SearchController.php" />
         <option value="$PROJECT_DIR$/application/views/scripts/catalog/index.tpl" />
         <option value="$PROJECT_DIR$/application/views/scripts/search/index.tpl" />
+        <option value="$PROJECT_DIR$/public_html/css/main.css" />
+        <option value="$PROJECT_DIR$/public_html/css/cloud-zoom.css" />
+        <option value="$PROJECT_DIR$/application/views/scripts/catalog/view-product.ajax.tpl" />
+        <option value="$PROJECT_DIR$/application/layouts/scripts/layout.tpl" />
+        <option value="$PROJECT_DIR$/public_html/js/cloud-zoom.1.0.2.js" />
       </list>
     </option>
   </component>
@@ -709,10 +857,9 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32925472" sideWeight="0.0" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32925472" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.36485043" sideWeight="0.67074525" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3344017" sideWeight="0.67074525" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="DB Browser" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -720,6 +867,7 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32925472" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32925472" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -761,7 +909,7 @@
     <option name="INCLUDE_TEXT_INTO_SHELF" value="false" />
     <option name="CREATE_PATCH_EXPAND_DETAILS_DEFAULT" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Правка фото&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="Поиск" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -795,31 +943,12 @@
     <MESSAGE value="Каталог, там 2 раза написано, верхний оставь, а от него уже слеш...&#10;Поиск поназванию компании не работает!!!&#10;Цена товара в опере на нижнюю строку переносится!&#10;Скидка на товар сделать оранжевым!&#10;Мультигород - когда компанию добавляем чтоб она во всех городах отображалась!" />
     <MESSAGE value="Сдвинул цену" />
     <MESSAGE value="Правка фото&#10;" />
+    <MESSAGE value="Поиск" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/application/layouts/scripts/layout.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="47" column="27" selection-start="2540" selection-end="2540" vertical-scroll-proportion="0.6946108" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public_html/js/cloud-zoom.1.0.2.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public_html/js/cloud-zoom.1.0.2.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="375" column="4" selection-start="14713" selection-end="15042" vertical-scroll-proportion="0.58536583" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/scripts/company/index.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="52" column="9" selection-start="342" selection-end="2912" vertical-scroll-proportion="-28.115385" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/models/EK/Catalog/ProductCatalog.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="20" column="41" selection-start="308" selection-end="315" vertical-scroll-proportion="0.33295193" />
@@ -845,52 +974,66 @@
         <state line="17" column="0" selection-start="836" selection-end="836" vertical-scroll-proportion="0.5" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public_html/css/main.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="888" column="13" selection-start="14923" selection-end="14923" vertical-scroll-proportion="0.0194508">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public_html/css/cloud-zoom.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/scripts/catalog/view-product.ajax.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="68" column="232" selection-start="3336" selection-end="3336" vertical-scroll-proportion="0.5497006">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/models/EK/Catalog/Rubric.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="269" column="50" selection-start="5810" selection-end="5810" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="269" column="50" selection-start="5810" selection-end="5810" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/SearchController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="43" selection-start="1034" selection-end="1044" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/scripts/catalog/index.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="195" selection-start="1532" selection-end="1532" vertical-scroll-proportion="-26.153847">
-          <folding />
-        </state>
+        <state line="33" column="43" selection-start="1034" selection-end="1044" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/scripts/search/index.tpl">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="36" selection-start="204" selection-end="204" vertical-scroll-proportion="0.14251497">
+        <state line="7" column="36" selection-start="204" selection-end="204" vertical-scroll-proportion="-4.576923" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/scripts/catalog/index.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="40" column="195" selection-start="1532" selection-end="1532" vertical-scroll-proportion="-0.65384614" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/~Documents/econom_pavka/shop.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/~Documents/econom_pavka/item.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="68" column="64" selection-start="2957" selection-end="2958" vertical-scroll-proportion="0.6307978" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public_html/css/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="958" column="4" selection-start="16371" selection-end="16391" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public_html/css/cloud-zoom.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="32" selection-start="556" selection-end="556" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/scripts/catalog/view-product.ajax.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="69" column="236" selection-start="3573" selection-end="3573" vertical-scroll-proportion="0.0">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/layouts/scripts/layout.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="43" column="96" selection-start="2421" selection-end="2421" vertical-scroll-proportion="-14.384615">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public_html/js/cloud-zoom.1.0.2.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="361" column="75" selection-start="13634" selection-end="13634" vertical-scroll-proportion="0.30081302">
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

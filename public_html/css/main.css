@@ -952,6 +952,7 @@ section.comments #paginator {
     position: relative;
     box-shadow: 0 0 5px rgba(0,0,0,0.5);
     border: 1px #fff solid;
+    text-align: center;
 }
 
 .item-description .gallery .big-image img {
@@ -988,6 +989,7 @@ section.comments #paginator {
     border-radius: 0 0 12px 12px;
     padding: 5px 20px;
     color: #fff;
+    text-align: left;
     z-index: 10000;
 }
 
