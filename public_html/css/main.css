@@ -965,6 +965,7 @@ section.comments #paginator {
     height: 50px;
     position: absolute;
     top: 110px;
+    z-index: 10000;
 }
 
 .item-description .gallery .previous {
@@ -986,6 +987,7 @@ section.comments #paginator {
     border-radius: 0 0 12px 12px;
     padding: 5px 20px;
     color: #fff;
+    z-index: 10000;
 }
 
 .item-description .gallery .previews {
@@ -1042,7 +1044,11 @@ section.comments #paginator {
 
 .button.add-comment {
     float: right;
-    padding-right: 15px;
+}
+
+.add-comment-border {
+    float: right;
+    padding-right: 20px;
 }
 
 .button.reserve {
@@ -1255,7 +1261,7 @@ section.comments #paginator {
 }
 
 .constant-discount-red {
-    color: #cf2121;
+    color: #ff8000;
     font-size: 22px;
 }
 

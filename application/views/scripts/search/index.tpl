@@ -23,8 +23,8 @@
 
             {foreach from=$companyList item=company}
                 <li>
-                    <h3><a href="{$this->url(['controller' => 'company','action' => 'view', 'id' => $company->id])}" class="various fancybox.ajax">{$company->title}</a></h3>
-                    <a href="{$this->url(['controller' => 'company','action' => 'view', 'id' => $company->id])}" class="various fancybox.ajax"><img src="{if $company->file->getName()}/files/{$company->file->getPreview()}{else}/i/no_foto.png{/if}" alt="{$company->title}"></a>
+                    <h3><a href="{$this->url(['controller' => 'company','action' => 'view', 'id' => $company->id])}" class="">{$company->title}</a></h3>
+                    <a href="{$this->url(['controller' => 'company','action' => 'view', 'id' => $company->id])}" class=""><img src="{if $company->file->getName()}/files/{$company->file->getPreview()}{else}/i/no_foto.png{/if}" alt="{$company->title}"></a>
                 </li>
             {/foreach}
 
@@ -63,7 +63,10 @@
         closeEffect    : 'none',
         padding: 0,
         scrolling: 'no',
-        afterShow: updatePlusOne
+        afterShow: updatePlusOne,
+        afterShow: function () {
+                $('.cloud-zoom, .cloud-zoom-gallery').CloudZoom();
+                }
         });
         });
     </script>

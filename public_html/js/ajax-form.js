@@ -32,7 +32,7 @@ $(document).ready(function () {
                     $.get(form.attr('action').replace('addComments', 'viewComments'), '', function (data) {
                         if (data) {
                             $('ul.comments-list').html(data);
-                            $('#form-placeholder').html('Отправлено');
+                            $('#form-placeholder').empty();
                         }
                     }, 'html');
                 } else {

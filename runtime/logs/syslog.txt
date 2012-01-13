@@ -1,1 +1,24 @@
 error   Can`t complit query: DELETE FROM city WHERE id=3 No error: 1451:: Error msg: Cannot delete or update a parent row: a foreign key constraint fails (`ekonom_pro_db`.`company`, CONSTRAINT `fk_company_city1` FOREIGN KEY (`city_id`) REFERENCES `city` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION) ;  10.01.2012 23:05
+error   Can`t complit query: INSERT INTO product_like (product_id, `like`, unlike)
+                             VALUES (15, 16, 6) No error: 1062:: Error msg: Duplicate entry '15' for key 'PRIMARY' ;  12.01.2012 21:51
+error   Can`t complit query: INSERT INTO product_like (product_id, `like`, unlike)
+                             VALUES (15, 16, 6) No error: 1062:: Error msg: Duplicate entry '15' for key 'PRIMARY' ;  12.01.2012 21:51
+error   Can`t complit query: SELECT COUNT(id) FROM product_like WHERE product_id=15 No error: 1054:: Error msg: Unknown column 'id' in 'field list' ;  12.01.2012 21:54
+error   Can`t complit query: INSERT INTO product_like (product_id, `like`, unlike)
+                             VALUES (15, 15, 7) No error: 1062:: Error msg: Duplicate entry '15' for key 'PRIMARY' ;  12.01.2012 21:54
+error   Can`t complit query: SELECT COUNT(id) FROM product_like WHERE product_id=15 No error: 1054:: Error msg: Unknown column 'id' in 'field list' ;  12.01.2012 21:57
+error   Can`t complit query: INSERT INTO product_like (product_id, `like`, unlike)
+                             VALUES (15, 16, 6) No error: 1062:: Error msg: Duplicate entry '15' for key 'PRIMARY' ;  12.01.2012 21:57
+error   Can`t complit query: SELECT COUNT(id) FROM product_like WHERE product_id=15 No error: 1054:: Error msg: Unknown column 'id' in 'field list' ;  12.01.2012 22:00
+error   Can`t complit query: INSERT INTO product_like (product_id, `like`, unlike)
+                             VALUES (15, 16, 6) No error: 1062:: Error msg: Duplicate entry '15' for key 'PRIMARY' ;  12.01.2012 22:00
+error   Can`t complit query: SELECT COUNT(id) FROM product_like WHERE product_id=16 No error: 1054:: Error msg: Unknown column 'id' in 'field list' ;  12.01.2012 22:03
+error   Can`t complit query: SELECT COUNT(id) FROM product_like WHERE product_id=16 No error: 1054:: Error msg: Unknown column 'id' in 'field list' ;  12.01.2012 22:03
+error   Can`t complit query: SELECT COUNT(id) FROM product_like WHERE product_id=17 No error: 1054:: Error msg: Unknown column 'id' in 'field list' ;  12.01.2012 22:03
+error   Can`t complit query: SELECT COUNT(id) FROM product_like WHERE product_id=17 No error: 1054:: Error msg: Unknown column 'id' in 'field list' ;  12.01.2012 22:03
+error   Can`t complit query: SELECT COUNT(id) FROM product_like WHERE product_id=17 No error: 1054:: Error msg: Unknown column 'id' in 'field list' ;  12.01.2012 22:03
+error   Can`t complit query: SELECT COUNT(id) FROM product_like WHERE product_id=17 No error: 1054:: Error msg: Unknown column 'id' in 'field list' ;  12.01.2012 22:03
+error   Can`t complit query: SELECT COUNT(id) FROM product_like WHERE product_id=17 No error: 1054:: Error msg: Unknown column 'id' in 'field list' ;  12.01.2012 22:05
+error   Can`t complit query: SELECT COUNT(id) FROM product_like WHERE product_id=15 No error: 1054:: Error msg: Unknown column 'id' in 'field list' ;  12.01.2012 22:05
+error   Can`t complit query: SELECT COUNT(id) FROM product_like WHERE product_id=15 No error: 1054:: Error msg: Unknown column 'id' in 'field list' ;  12.01.2012 22:05
+error   Can`t complit query: SELECT COUNT(id) FROM product_like WHERE product_id=16 No error: 1054:: Error msg: Unknown column 'id' in 'field list' ;  12.01.2012 22:05
