@@ -886,15 +886,16 @@ section.comments #paginator {
 .item-description .information .discount del {
     font-size: 20px; line-height: 20px;
     color: #cf2121;
-    width: 95px;
+    width: 110px;
 }
 
 .item-description .information .discount ins {
     color: #3aa500;
     font-size: 34px; line-height: 32px;
     text-decoration: none;
-    width: 95px;
+    width: 110px;
     clear: both;
+    font-weight: normal;
 }
 
 .item-description .information h3 {
