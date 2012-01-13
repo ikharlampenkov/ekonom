@@ -2,7 +2,18 @@
 
     <h1 class="heading">Результаты поиска: {$query}</h1>
 
-{if $productList || $companyList}
+{if $productList || $companyList || $rubricList}
+
+    {if $rubricList !== false}
+        <ul style="list-style: none;">
+            {foreach from=$rubricList item=rubric}
+                <li>
+                    <a href="{$this->url(['controller' => 'catalog', 'action' => 'index', 'rubric' => $rubric->getId()])}" class="rmenu">{$rubric->title}</a>
+                </li>
+            {/foreach}
+        </ul>
+    {/if}
+
     {if $productList !== false}
         <ul id="companies" class="clearfix shop-actions">
             {foreach from=$productList item=product}
@@ -65,8 +76,8 @@
         scrolling: 'no',
         afterShow: updatePlusOne,
         afterShow: function () {
-                $('.cloud-zoom, .cloud-zoom-gallery').CloudZoom();
-                }
+        $('.cloud-zoom, .cloud-zoom-gallery').CloudZoom();
+        }
         });
         });
     </script>

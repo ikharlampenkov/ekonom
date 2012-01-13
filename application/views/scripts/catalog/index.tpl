@@ -38,7 +38,7 @@
     <table width="100%">
         {foreach from=$rubric_list item=rubric}
             <tr>
-                <td class="ttovar" valign="middle"><a href="{$this->url(['controller' => $controller, 'action' => 'index', 'rubric' => $rubric->getId()])}" class="rmenu">{$rubric->title}</a>
+                <td class="ttovar" valign="middle"><a href="{$this->url(['controller' => $controller, 'action' => 'index', 'rubric' => $rubric->getId()])}" class="rmenu">{$rubric->title}</a></td>
                 <td class="tedit" valign="middle">
                     {if_allowed resource="{$controller}/editRubric"}
                         <a href="{$this->url(['controller' => $controller, 'action' => 'editRubric', 'id' => $rubric->getId(), 'rubric' => $cur_rubric->getId()])}">редактировать</a><br/>

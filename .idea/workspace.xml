@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7151d89e-e84a-4788-b442-a723b5b4a6eb" name="New changelist" comment="Сдвинул цену">
+    <list default="true" id="7151d89e-e84a-4788-b442-a723b5b4a6eb" name="New changelist" comment="Правка фото&#10;">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/scripts/catalog/view-product.ajax.tpl" afterPath="$PROJECT_DIR$/application/views/scripts/catalog/view-product.ajax.tpl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/SearchController.php" afterPath="$PROJECT_DIR$/application/controllers/SearchController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/models/EK/Catalog/Rubric.php" afterPath="$PROJECT_DIR$/application/models/EK/Catalog/Rubric.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/scripts/catalog/index.tpl" afterPath="$PROJECT_DIR$/application/views/scripts/catalog/index.tpl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/scripts/search/index.tpl" afterPath="$PROJECT_DIR$/application/views/scripts/search/index.tpl" />
     </list>
     <ignored path="ekonom.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -24,7 +27,44 @@
     <favorites_list name="ekonom" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="Rubric.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/models/EK/Catalog/Rubric.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="269" column="50" selection-start="5810" selection-end="5810" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SearchController.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/controllers/SearchController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="33" column="43" selection-start="1034" selection-end="1044" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.tpl" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/application/views/scripts/search/index.tpl">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="7" column="36" selection-start="204" selection-end="204" vertical-scroll-proportion="0.14251497">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.tpl" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/views/scripts/catalog/index.tpl">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="40" column="195" selection-start="1532" selection-end="1532" vertical-scroll-proportion="-26.153847">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -54,15 +94,15 @@
         <option value="$PROJECT_DIR$/application/models/EK/Catalog/ProductLike.php" />
         <option value="$PROJECT_DIR$/application/views/scripts/catalog/add-like.ajax.tpl" />
         <option value="$PROJECT_DIR$/application/controllers/CatalogController.php" />
-        <option value="$PROJECT_DIR$/application/models/EK/Catalog/Rubric.php" />
-        <option value="$PROJECT_DIR$/application/views/scripts/catalog/index.tpl" />
         <option value="$PROJECT_DIR$/application/layouts/scripts/layout.tpl" />
-        <option value="$PROJECT_DIR$/application/controllers/SearchController.php" />
         <option value="$PROJECT_DIR$/application/models/EK/Company/Company.php" />
-        <option value="$PROJECT_DIR$/application/views/scripts/search/index.tpl" />
         <option value="$PROJECT_DIR$/public_html/js/ajax-form.js" />
         <option value="$PROJECT_DIR$/public_html/css/main.css" />
         <option value="$PROJECT_DIR$/application/views/scripts/catalog/view-product.ajax.tpl" />
+        <option value="$PROJECT_DIR$/application/models/EK/Catalog/Rubric.php" />
+        <option value="$PROJECT_DIR$/application/controllers/SearchController.php" />
+        <option value="$PROJECT_DIR$/application/views/scripts/catalog/index.tpl" />
+        <option value="$PROJECT_DIR$/application/views/scripts/search/index.tpl" />
       </list>
     </option>
   </component>
@@ -669,9 +709,10 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32925472" sideWeight="0.0" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32925472" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.36485043" sideWeight="0.67074525" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.36485043" sideWeight="0.67074525" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="DB Browser" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -679,7 +720,6 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32925472" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32925472" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -721,7 +761,7 @@
     <option name="INCLUDE_TEXT_INTO_SHELF" value="false" />
     <option name="CREATE_PATCH_EXPAND_DETAILS_DEFAULT" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Сдвинул цену" />
+    <option name="LAST_COMMIT_MESSAGE" value="Правка фото&#10;" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -754,21 +794,12 @@
     <MESSAGE value="Служебный" />
     <MESSAGE value="Каталог, там 2 раза написано, верхний оставь, а от него уже слеш...&#10;Поиск поназванию компании не работает!!!&#10;Цена товара в опере на нижнюю строку переносится!&#10;Скидка на товар сделать оранжевым!&#10;Мультигород - когда компанию добавляем чтоб она во всех городах отображалась!" />
     <MESSAGE value="Сдвинул цену" />
+    <MESSAGE value="Правка фото&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/public_html/js/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public_html/js/gallery.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.36236933" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/layouts/scripts/layout.tpl">
       <provider selected="true" editor-type-id="text-editor">
         <state line="47" column="27" selection-start="2540" selection-end="2540" vertical-scroll-proportion="0.6946108" />
@@ -789,11 +820,6 @@
         <state line="52" column="9" selection-start="342" selection-end="2912" vertical-scroll-proportion="-28.115385" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/SearchController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="5" selection-start="1099" selection-end="1099" vertical-scroll-proportion="0.7002288" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/models/EK/Catalog/ProductCatalog.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="20" column="41" selection-start="308" selection-end="315" vertical-scroll-proportion="0.33295193" />
@@ -807,11 +833,6 @@
     <entry file="file://$PROJECT_DIR$/application/models/EK/Company/Company.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="445" column="13" selection-start="10328" selection-end="10328" vertical-scroll-proportion="0.3501144" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/scripts/search/index.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="120" selection-start="1544" selection-end="1544" vertical-scroll-proportion="0.4071856" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/scripts/catalog/add-comments.ajax.tpl">
@@ -841,6 +862,34 @@
     <entry file="file://$PROJECT_DIR$/application/views/scripts/catalog/view-product.ajax.tpl">
       <provider selected="true" editor-type-id="text-editor">
         <state line="68" column="232" selection-start="3336" selection-end="3336" vertical-scroll-proportion="0.5497006">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/models/EK/Catalog/Rubric.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="269" column="50" selection-start="5810" selection-end="5810" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/SearchController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="33" column="43" selection-start="1034" selection-end="1044" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/scripts/catalog/index.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="40" column="195" selection-start="1532" selection-end="1532" vertical-scroll-proportion="-26.153847">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/scripts/search/index.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="36" selection-start="204" selection-end="204" vertical-scroll-proportion="0.14251497">
           <folding />
         </state>
       </provider>
