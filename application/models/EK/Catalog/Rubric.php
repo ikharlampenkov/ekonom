@@ -263,6 +263,28 @@ class EK_Catalog_Rubric
         }
     }
 
+    public static function search($search)
+    {
+        try {
+            $db = StdLib_DB::getInstance();
+            $search = $db->prepareString($search);
+            $sql = 'SELECT * FROM product_rubric
+                    WHERE is_root=' . EK_Catalog_Rubric::IS_NOT_ROOT . ' AND title LIKE "%' . $search . '%"';
+            $result = $db->query($sql, StdLib_DB::QUERY_MOD_ASSOC);
+            if (isset($result[0])) {
+                $rubricArray = array();
+                foreach ($result as $value) {
+                    $rubricArray[] = EK_Catalog_Rubric::getInstanceByArray($value);
+                }
+                return $rubricArray;
+            } else {
+                return false;
+            }
+        } catch (Exception $e) {
+            return false;
+        }
+    }
+
     /**
      * @static
      * @param $id

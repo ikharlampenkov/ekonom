@@ -66,8 +66,8 @@
                     {foreach from=$galleryList item=gallery name=_gallery}
                         {if $smarty.foreach._gallery.first}
                             <div class="big-image">
-                                <a href='/gallery{$gallery->file->getSubPath()}/{$gallery->file->getName()}' class='cloud-zoom' id='zoom' rel="position: 'inside' , showTitle: false">
-                                    <img src="/gallery{$gallery->file->getSubPath()}/{$gallery->file->getName()}" width="420" height="270" alt="{$gallery->title}" data-preview="/gallery{$gallery->file->getSubPath()}/{$gallery->file->getPreview()}"/>
+                                <a href='/gallery{$gallery->file->getSubPath()}/{$gallery->file->getName()}' class='cloud-zoom' id='zoom' rel="position: 'inside' , showTitle: false, adjustX:0, adjustY:0" style="text-align: center;">
+                                    <img src="/gallery{$gallery->file->getSubPath()}/{$gallery->file->getName()}" height="270" alt="{$gallery->title}" data-preview="/gallery{$gallery->file->getSubPath()}/{$gallery->file->getPreview()}" />
                                 </a>
                                 <h5 class="title">{$gallery->title}</h5>
                                 <a href="#previous" class="previous"></a>
@@ -137,7 +137,9 @@
                             </script>
             *}
 
-                <a href="{$this->url(['controller' => $controller,'action' => 'addComments', 'idProduct' => $product->id])}" class="button add-comment">Комментировать</a>
+                <div class="add-comment-border">
+                    <a href="{$this->url(['controller' => $controller,'action' => 'addComments', 'idProduct' => $product->id])}" class="button add-comment">Комментировать</a>
+                </div>
             </div>
         </div>
 

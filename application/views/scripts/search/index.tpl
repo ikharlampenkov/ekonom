@@ -2,7 +2,18 @@
 
     <h1 class="heading">Результаты поиска: {$query}</h1>
 
-{if $productList || $companyList}
+{if $productList || $companyList || $rubricList}
+
+    {if $rubricList !== false}
+        <ul style="list-style: none;">
+            {foreach from=$rubricList item=rubric}
+                <li>
+                    <a href="{$this->url(['controller' => 'catalog', 'action' => 'index', 'rubric' => $rubric->getId()])}" class="rmenu">{$rubric->title}</a>
+                </li>
+            {/foreach}
+        </ul>
+    {/if}
+
     {if $productList !== false}
         <ul id="companies" class="clearfix shop-actions">
             {foreach from=$productList item=product}
@@ -23,8 +34,8 @@
 
             {foreach from=$companyList item=company}
                 <li>
-                    <h3><a href="{$this->url(['controller' => 'company','action' => 'view', 'id' => $company->id])}" class="various fancybox.ajax">{$company->title}</a></h3>
-                    <a href="{$this->url(['controller' => 'company','action' => 'view', 'id' => $company->id])}" class="various fancybox.ajax"><img src="{if $company->file->getName()}/files/{$company->file->getPreview()}{else}/i/no_foto.png{/if}" alt="{$company->title}"></a>
+                    <h3><a href="{$this->url(['controller' => 'company','action' => 'view', 'id' => $company->id])}" class="">{$company->title}</a></h3>
+                    <a href="{$this->url(['controller' => 'company','action' => 'view', 'id' => $company->id])}" class=""><img src="{if $company->file->getName()}/files/{$company->file->getPreview()}{else}/i/no_foto.png{/if}" alt="{$company->title}"></a>
                 </li>
             {/foreach}
 
@@ -65,8 +76,8 @@
         scrolling: 'no',
         afterShow: updatePlusOne,
         afterShow: function () {
-                $('.cloud-zoom, .cloud-zoom-gallery').CloudZoom();
-                }
+        $('.cloud-zoom, .cloud-zoom-gallery').CloudZoom();
+        }
         });
         });
     </script>
