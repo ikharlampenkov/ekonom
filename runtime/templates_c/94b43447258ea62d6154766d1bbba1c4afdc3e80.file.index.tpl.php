@@ -1,27 +1,27 @@
-<?php /* Smarty version Smarty-3.0.9, created on 2012-01-07 19:16:20
+<?php /* Smarty version Smarty-3.0.9, created on 2012-01-18 23:59:54
          compiled from "F:\www\ekonom\application/views/scripts\index/index.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:50344f083794461789-38712694%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:34454f16fa8a047967-68055046%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '94b43447258ea62d6154766d1bbba1c4afdc3e80' => 
     array (
       0 => 'F:\\www\\ekonom\\application/views/scripts\\index/index.tpl',
-      1 => 1325938577,
+      1 => 1326905989,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '50344f083794461789-38712694',
+  'nocache_hash' => '34454f16fa8a047967-68055046',
   'function' => 
   array (
   ),
   'has_nocache_code' => false,
 )); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_smarty_tpl->getVariable('bannerList')->value!==false){?>
-<div id="slider">
-
-    <ul id="slides">
-        <?php  $_smarty_tpl->tpl_vars['banner'] = new Smarty_Variable;
+<div id="slider-wrapper">
+    <div id="slider">
+        <ul id="slides">
+            <?php  $_smarty_tpl->tpl_vars['banner'] = new Smarty_Variable;
  $_from = $_smarty_tpl->getVariable('bannerList')->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
 if ($_smarty_tpl->_count($_from) > 0){
     foreach ($_from as $_smarty_tpl->tpl_vars['banner']->key => $_smarty_tpl->tpl_vars['banner']->value){
@@ -35,18 +35,25 @@ if ($_smarty_tpl->_count($_from) > 0){
 "><?php echo $_smarty_tpl->getVariable('banner')->value->getBanner()->title;?>
 </a></p>
             </li>
-        <?php }} ?>
-    </ul>
-    <a href="#previous" class="previous"></a>
-    <a href="#next" class="next"></a>
-
+            <?php }} ?>
+        </ul>
+    </div>
     <div id="shadow"></div>
-
 </div>
 
 <script type="text/javascript">
-    var changeTime = <?php echo $_smarty_tpl->getVariable('mainPlace')->value->changeTime;?>
-;
+    $(document).ready(function () {
+    $('#slider').easySlider({
+    auto: true,
+    pause: <?php echo $_smarty_tpl->getVariable('mainPlace')->value->changeTime;?>
+*1000,
+    continuous: true,
+    prevId: 'previous',
+    prevText: '',
+    nextId: 'next',
+    nextText: ''
+    });
+    });
 </script>
 <?php }?>
 
@@ -97,7 +104,10 @@ if ($_smarty_tpl->_count($_from) > 0){
         closeEffect    : 'none',
         padding: 0,
         scrolling: 'no',
-        afterShow: updatePlusOne
+        afterShow: updatePlusOne,
+        afterShow: function () {
+        $('.cloud-zoom, .cloud-zoom-gallery').CloudZoom();
+        }
         });
         });
     </script>

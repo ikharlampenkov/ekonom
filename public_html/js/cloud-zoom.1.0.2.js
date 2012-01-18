@@ -170,7 +170,15 @@
              We need the dummy background image as IE does not trap mouse events on
              transparent parts of a div.
              */
-            $mouseTrap = jWin.parent().append(format("<div class='mousetrap' style='background-image:url(\".\");z-index:999;position:absolute;width:%0px;height:%1px;left:%2px;top:%3px;\'></div>", sImg.outerWidth(), sImg.outerHeight(), 0, 0)).find(':last');
+            var leftPos = 0;
+
+            leftPos = Math.floor((420 - sImg.outerWidth()) / 2);
+
+            sImg.css({
+                'left':leftPos + 'px'
+            });
+
+            $mouseTrap = jWin.parent().append(format("<div class='mousetrap' style='background-image:url(\".\");z-index:999;position:absolute;width:%0px;height:%1px;left:%2px;top:%3px;\'></div>", sImg.outerWidth(), sImg.outerHeight(), leftPos, 0)).find(':last');
 
             //////////////////////////////////////////////////////////////////////			
             /* Do as little as possible in mousemove event to prevent slowdown. */
@@ -255,6 +263,7 @@
                         }
                 }
 
+                xPos = Math.floor((420 - sImg.outerWidth()) / 2);
 
                 zoomDiv = appendTo.append(format('<div id="cloud-zoom-big" class="cloud-zoom-big" style="display:none;position:absolute;left:%0px;top:%1px;width:%2px;height:%3px;background-image:url(\'%4\');z-index:99;"></div>', xPos, yPos, w, h, zoomImage.src)).find(':last');
 
@@ -354,22 +363,26 @@
                     'display':'block'
                 });
 
+
                 $('img', $(this)).css({
-                    'display':'block'
+                    'display':'block',
+                    'position':'relative'
                 });
 
 
+                /*
                 var marg = Math.floor((420 - $('img', $(this)).outerWidth()) / 2);
 
                 $('img', $(this)).css({
-                    'margin-left': marg + 'px'
+                    'left':marg + 'px'
                 });
+                */
 
 
                 // Wrap an outer div around the link so we can attach things without them becoming part of the link.
                 // But not if wrap already exists.
                 if ($(this).parent().attr('id') != 'wrap') {
-                    $(this).wrap('<div id="wrap" style="top:0px;z-index:9999;position:relative;"></div>');
+                    $(this).wrap('<div id="wrap" style="top:0px;z-index:9999;position:relative;text-align: center;"></div>');
                 }
                 opts = $.extend({}, $.fn.CloudZoom.defaults, options);
                 opts = $.extend({}, opts, relOpts);

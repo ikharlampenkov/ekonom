@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.0.9, created on 2012-01-09 18:28:29
+<?php /* Smarty version Smarty-3.0.9, created on 2012-01-18 20:34:34
          compiled from "F:\www\ekonom\application/views/scripts\company/view.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:236344f0acf5d9e7069-78828381%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:195284f16ca6ae5ac04-82580953%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '4a2d248229c0e6452704f9a7ccc41e7a5c93b3ee' => 
     array (
       0 => 'F:\\www\\ekonom\\application/views/scripts\\company/view.tpl',
-      1 => 1326108498,
+      1 => 1326385623,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '236344f0acf5d9e7069-78828381',
+  'nocache_hash' => '195284f16ca6ae5ac04-82580953',
   'function' => 
   array (
   ),
@@ -189,7 +189,10 @@ if ($_smarty_tpl->_count($_from) > 0){
         closeEffect    : 'none',
         padding: 0,
         scrolling: 'no',
-        afterShow: updatePlusOne
+        afterShow: updatePlusOne,
+        afterShow: function () {
+                $('.cloud-zoom, .cloud-zoom-gallery').CloudZoom();
+                }
         });
         });
     </script>

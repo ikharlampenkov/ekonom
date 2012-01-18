@@ -1,4 +1,5 @@
 {if $bannerList!==false}
+{*
 <div id="slider">
 
     <ul id="slides">
@@ -19,6 +20,35 @@
 
 <script type="text/javascript">
     var changeTime = {$mainPlace->changeTime};
+</script>
+*}
+<div id="slider-wrapper">
+    <div id="slider">
+        <ul id="slides">
+            {foreach from=$bannerList item=banner}
+            <li class="slide">
+                <img src="/banners/{$banner->getBanner()->img->getName()}" alt="{$banner->getBanner()->title}">
+
+                <p class="description"><a href="http://{$banner->getBanner()->link}">{$banner->getBanner()->title}</a></p>
+            </li>
+            {/foreach}
+        </ul>
+    </div>
+    <div id="shadow"></div>
+</div>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+    $('#slider').easySlider({
+    auto: true,
+    pause: {$mainPlace->changeTime}*1000,
+    continuous: true,
+    prevId: 'previous',
+    prevText: '',
+    nextId: 'next',
+    nextText: ''
+    });
+    });
 </script>
 {/if}
 
@@ -60,8 +90,8 @@
         scrolling: 'no',
         afterShow: updatePlusOne,
         afterShow: function () {
-                $('.cloud-zoom, .cloud-zoom-gallery').CloudZoom();
-                }
+        $('.cloud-zoom, .cloud-zoom-gallery').CloudZoom();
+        }
         });
         });
     </script>
