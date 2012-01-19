@@ -14,14 +14,20 @@
                 </section>
 
                 <section class="description">
-                    <h3>Краткое описание магазина или товара</h3>
+                    <h3>Краткое описание</h3>
 
                     <p>{$product->fullText}</p>
                 </section>
 
+                <section class="description">
+                    <h3>Компания</h3>
+
+                    <p><a href="{$this->url(['controller' => 'company','action' => 'view', 'id' => $product->getCompany()->id])}">{$product->getCompany()->title}</a></p>
+                </section>
+
                 <section class="discount clearfix">
                 {if $product->searchAttribute('discount')}
-                    <h5>Скидка: {$product->getAttribute('discount')->value}{if $product->searchAttribute('discount_type')}{$product->getAttribute('discount_type')->value}{/if}</h5>
+                    <h5>Скидка: <span class="constant-discount-red">{$product->getAttribute('discount')->value}{if $product->searchAttribute('discount_type')}{$product->getAttribute('discount_type')->value}{/if}</span></h5>
                 {/if}
                     <del class="old-price">{$product->price} р</del>
                 {if $product->searchAttribute('second_price')}
@@ -66,7 +72,9 @@
                     {foreach from=$galleryList item=gallery name=_gallery}
                         {if $smarty.foreach._gallery.first}
                             <div class="big-image">
-                                <img src="/gallery{$gallery->file->getSubPath()}/{$gallery->file->getName()}" width="420" height="270" alt="{$gallery->title}" data-preview="/gallery{$gallery->file->getSubPath()}/{$gallery->file->getPreview()}"/>
+                                <a href='/gallery{$gallery->file->getSubPath()}/{$gallery->file->getName()}' class='cloud-zoom' id='zoom' rel="position: 'inside' , showTitle: false, adjustX:0, adjustY:0" style="text-align: center;">
+                                    <img src="/gallery{$gallery->file->getSubPath()}/{$gallery->file->getName()}" height="270" alt="{$gallery->title}" data-preview="/gallery{$gallery->file->getSubPath()}/{$gallery->file->getPreview()}" style="margin: 0;"/>
+                                </a>
                                 <h5 class="title">{$gallery->title}</h5>
                                 <a href="#previous" class="previous"></a>
                                 <a href="#next" class="next"></a>
@@ -88,7 +96,7 @@
                 </div>
             {/if}
 
-                <a href="{$this->url(['controller' => $controller,'action' => 'reserve', 'idProduct' => $product->id])}" class="button reserve">Отложить</a>
+                <a href="{$this->url(['controller' => $controller,'action' => 'reserve', 'idProduct' => $product->id])}" class="button reserve">Заказать</a>
                 <a href="{$this->url(['controller' => $controller,'action' => 'share', 'idProduct' => $product->id])}" class="button share-with-friend">Поделиться</a>
 
                 <div class="product-like">Нравиться? <a href="{$this->url(['controller' => $controller,'action' => 'addLike', 'idProduct' => $product->id, 'like' => 1, 'unlike' => 0])}" class="like">Да</a> {if is_object($productLike)}{$productLike->like}{/if} / <a href="{$this->url(['controller' => $controller,'action' => 'addLike', 'idProduct' => $product->id, 'like' => 0, 'unlike' => 1])}" class="unlike">Нет</a> {if is_object($productLike)}{$productLike->unlike}{/if}</div>
@@ -135,7 +143,9 @@
                             </script>
             *}
 
-                <a href="{$this->url(['controller' => $controller,'action' => 'addComments', 'idProduct' => $product->id])}" class="button add-comment">Комментировать</a>
+                <div class="add-comment-border">
+                    <a href="{$this->url(['controller' => $controller,'action' => 'addComments', 'idProduct' => $product->id])}" class="button add-comment">Комментировать</a>
+                </div>
             </div>
         </div>
 

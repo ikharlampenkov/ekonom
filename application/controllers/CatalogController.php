@@ -67,6 +67,7 @@ class CatalogController extends Zend_Controller_Action
     {
         $oProduct = EK_Catalog_Product::getInstanceById($this->getRequest()->getParam('id'));
         $this->view->assign('product', $oProduct);
+
         $this->view->assign('galleryList', EK_Gallery_Product::getAllInstance($oProduct));
         $this->view->assign('commentsList', EK_Comments_Product::getAllInstance($oProduct));
         $this->view->assign('productLike', EK_Catalog_ProductLike::getInstanceByProduct($oProduct));

@@ -229,7 +229,10 @@ class EK_Catalog_Rubric
         if ($this->_isRoot != EK_Catalog_Rubric::IS_ROOT) {
             $tempRubric = EK_Catalog_Rubric::getInstanceById($this->_parent->id);
             if ($tempRubric instanceof EK_Catalog_Rubric) {
-                $path[] = $tempRubric;
+                if ($tempRubric->getIsRoot() != EK_Catalog_Rubric::IS_ROOT) {
+                    $path[] = $tempRubric;
+                }
+
                 if ($tempRubric->getIsRoot() != EK_Catalog_Rubric::IS_ROOT) {
                     $tempRubric->getPathToRubric($path);
                 }
@@ -246,6 +249,28 @@ class EK_Catalog_Rubric
         try {
             $db = StdLib_DB::getInstance();
             $result = $db->query('SELECT * FROM product_rubric WHERE parent_id=' . $parent, StdLib_DB::QUERY_MOD_ASSOC);
+            if (isset($result[0])) {
+                $rubricArray = array();
+                foreach ($result as $value) {
+                    $rubricArray[] = EK_Catalog_Rubric::getInstanceByArray($value);
+                }
+                return $rubricArray;
+            } else {
+                return false;
+            }
+        } catch (Exception $e) {
+            return false;
+        }
+    }
+
+    public static function search($search)
+    {
+        try {
+            $db = StdLib_DB::getInstance();
+            $search = $db->prepareString($search);
+            $sql = 'SELECT * FROM product_rubric
+                    WHERE is_root=' . EK_Catalog_Rubric::IS_NOT_ROOT . ' AND title LIKE "%' . $search . '%"';
+            $result = $db->query($sql, StdLib_DB::QUERY_MOD_ASSOC);
             if (isset($result[0])) {
                 $rubricArray = array();
                 foreach ($result as $value) {

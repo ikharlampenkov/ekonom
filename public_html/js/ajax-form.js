@@ -7,13 +7,17 @@
 $(document).ready(function () {
     // This handler catches all clicks on buttons which should create forms
     $('.reserve, .share-with-friend, .add-comment').live('click', function () {
-        $.get($(this).attr('href'), function (response) {
-            $('#form-placeholder').empty().append(response);
+        if ($('#form-placeholder').html() != '' && $('#add-comment-form').length > 0) {
+            $('#form-placeholder').empty();
+        } else {
+            $.get($(this).attr('href'), function (response) {
+                $('#form-placeholder').empty().append(response);
 
-            destination = $('#form-placeholder').offset().top;
-            $('.inner').animate({ scrollTop:destination }, 1100);
+                destination = $('#form-placeholder').offset().top;
+                $('.inner').animate({ scrollTop:destination }, 1100);
 
-        });
+            });
+        }
         return false;
     });
     // submit is 'live' event since jQuery 1.4
@@ -32,7 +36,7 @@ $(document).ready(function () {
                     $.get(form.attr('action').replace('addComments', 'viewComments'), '', function (data) {
                         if (data) {
                             $('ul.comments-list').html(data);
-                            $('#form-placeholder').html('Отправлено');
+                            $('#form-placeholder').empty();
                         }
                     }, 'html');
                 } else {
@@ -46,7 +50,7 @@ $(document).ready(function () {
         return false;
     });
 
-    $('.like, .unlike').live('click', function() {
+    $('.like, .unlike').live('click', function () {
         $.get($(this).attr('href'), function (response) {
             $('.product-like').empty().html(response);
         });

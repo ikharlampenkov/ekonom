@@ -1,6 +1,14 @@
 <article id="main-content">
 
-    <h1 class="heading">Каталог</h1>
+    <h1 class="heading">Каталог
+    {if $path}
+        <span>
+             /
+            {foreach from=$path item=prub name=_prub}
+                <a href="{$this->url(['controller' => $controller,'action' => 'index', 'rubric' => $prub->getId()])}">{if !$prub->isRoot}{$prub->title}{else}Каталог{/if}</a> {if !$smarty.foreach._prub.last}/{/if}
+            {/foreach}
+        </span>
+    {/if}</h1>
 
     <div class="page_block">
     {if_allowed resource="{$controller}/index" priv="show-attribute-hash"}
@@ -13,13 +21,7 @@
     </div>
     <br/>
 
-{if $path}
-    <div>
-        {foreach from=$path item=prub name=_prub}
-            <a href="{$this->url(['controller' => $controller,'action' => 'index', 'rubric' => $prub->getId()])}">{if !$prub->isRoot}{$prub->title}{else}Каталог{/if}</a> {if !$smarty.foreach._prub.last}/{/if}
-        {/foreach}
-    </div>
-{/if}
+
 
 {if !$cur_rubric->isRoot}
     <h1>{$cur_rubric->title}</h1>
@@ -36,7 +38,7 @@
     <table width="100%">
         {foreach from=$rubric_list item=rubric}
             <tr>
-                <td class="ttovar" valign="middle"><a href="{$this->url(['controller' => $controller, 'action' => 'index', 'rubric' => $rubric->getId()])}" class="rmenu">{$rubric->title}</a>
+                <td class="ttovar" valign="middle"><a href="{$this->url(['controller' => $controller, 'action' => 'index', 'rubric' => $rubric->getId()])}" class="rmenu">{$rubric->title}</a></td>
                 <td class="tedit" valign="middle">
                     {if_allowed resource="{$controller}/editRubric"}
                         <a href="{$this->url(['controller' => $controller, 'action' => 'editRubric', 'id' => $rubric->getId(), 'rubric' => $cur_rubric->getId()])}">редактировать</a><br/>
@@ -61,29 +63,29 @@
     <ul id="companies" class="clearfix shop-actions">
         {foreach from=$productList item=product}
             {if $authUserRole!='companyadmin' || ($authUserRole=='companyadmin' && $product->company->getId()==$curCompany)}
-            <li>
-                <h3><a href="{$this->url(['controller' => 'catalog','action' => 'viewProduct', 'id' => $product->id])}" class="various fancybox.ajax">{$product->title}</a></h3>
-                <a href="{$this->url(['controller' => 'catalog','action' => 'viewProduct', 'id' => $product->id])}" class="various fancybox.ajax"><img src="{if $product->img->getName()}/files/{$product->img->getPreview()}{else}/i/no_foto.png{/if}" alt="{$product->title}"></a>
+                <li>
+                    <h3><a href="{$this->url(['controller' => 'catalog','action' => 'viewProduct', 'id' => $product->id])}" class="various fancybox.ajax">{$product->title}</a></h3>
+                    <a href="{$this->url(['controller' => 'catalog','action' => 'viewProduct', 'id' => $product->id])}" class="various fancybox.ajax"><img src="{if $product->img->getName()}/files/{$product->img->getPreview()}{else}/i/no_foto.png{/if}" alt="{$product->title}"></a>
 
 
-                <div class="discount">{if $product->searchAttribute('discount')}{$product->getAttribute('discount')->value}{/if}{if $product->searchAttribute('discount_type')}{$product->getAttribute('discount_type')->value}{/if}</div>
-                {if_allowed resource="{$controller}/edit"}
-                    <ul id="company_action_{$product->id}" class="company_action_menu">
-                        {if_allowed resource="{$controller}/viewGallery"}
-                            <li class="action"><a href="{$this->url(['controller' => $controller,'action' => 'viewGallery', 'idProduct' => $product->id, 'rubric' => $cur_rubric->getId()])}">галерея</a></li>
-                        {/if_allowed}
-                        {if_allowed resource="{$controller}/viewComments"}
-                            <li class="action"><a href="{$this->url(['controller' => $controller,'action' => 'viewComments', 'idProduct' => $product->id, 'rubric' => $cur_rubric->getId()])}">комментарии</a></li>
-                        {/if_allowed}
-                        {if_allowed resource="{$controller}/edit"}
-                            <li class="action"><img src="/i/edit.png"/>&nbsp;<a href="{$this->url(['controller' => $controller,'action' => 'edit', 'id' => $product->getId(), 'rubric' => $cur_rubric->getId()])}">редактировать</a></li>
-                        {/if_allowed}
-                        {if_allowed resource="{$controller}/delete"}
-                            <li class="action"><img src="/i/delete.png"/>&nbsp;<a href="{$this->url(['controller' => $controller,'action' => 'delete', 'id' => $product->getId(), 'rubric' => $cur_rubric->getId()])}" onclick="return confirmDelete('{$product->title}');" style="color: #830000">удалить</a></li>
-                        {/if_allowed}
-                    </ul>
-                {/if_allowed}
-            </li>
+                    <div class="discount">{if $product->searchAttribute('discount')}{$product->getAttribute('discount')->value}{/if}{if $product->searchAttribute('discount_type')}{$product->getAttribute('discount_type')->value}{/if}</div>
+                    {if_allowed resource="{$controller}/edit"}
+                        <ul id="company_action_{$product->id}" class="company_action_menu">
+                            {if_allowed resource="{$controller}/viewGallery"}
+                                <li class="action"><a href="{$this->url(['controller' => $controller,'action' => 'viewGallery', 'idProduct' => $product->id, 'rubric' => $cur_rubric->getId()])}">галерея</a></li>
+                            {/if_allowed}
+                            {if_allowed resource="{$controller}/viewComments"}
+                                <li class="action"><a href="{$this->url(['controller' => $controller,'action' => 'viewComments', 'idProduct' => $product->id, 'rubric' => $cur_rubric->getId()])}">комментарии</a></li>
+                            {/if_allowed}
+                            {if_allowed resource="{$controller}/edit"}
+                                <li class="action"><img src="/i/edit.png"/>&nbsp;<a href="{$this->url(['controller' => $controller,'action' => 'edit', 'id' => $product->getId(), 'rubric' => $cur_rubric->getId()])}">редактировать</a></li>
+                            {/if_allowed}
+                            {if_allowed resource="{$controller}/delete"}
+                                <li class="action"><img src="/i/delete.png"/>&nbsp;<a href="{$this->url(['controller' => $controller,'action' => 'delete', 'id' => $product->getId(), 'rubric' => $cur_rubric->getId()])}" onclick="return confirmDelete('{$product->title}');" style="color: #830000">удалить</a></li>
+                            {/if_allowed}
+                        </ul>
+                    {/if_allowed}
+                </li>
             {/if}
         {/foreach}
         <li>&nbsp;</li>
@@ -148,7 +150,10 @@
         closeEffect    : 'none',
         padding: 0,
         scrolling: 'no',
-        afterShow: updatePlusOne
+        afterShow: updatePlusOne,
+        afterShow: function () {
+        $('.cloud-zoom, .cloud-zoom-gallery').CloudZoom();
+        }
         });
         });
     </script>

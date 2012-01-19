@@ -1,8 +1,316 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0d06bdd7-cf17-42f8-a087-8c22c5988e8b" name="Default" comment="">
+    <list default="true" id="0d06bdd7-cf17-42f8-a087-8c22c5988e8b" name="Default" comment="3. При просмотре акций не видно что за фирма предоставляет товар! &#10;5. Переименовать Краткое описание магазина или товара в &quot;Краткое описание&quot;&#10;6. Кнопку отложить переименовать в кнопку заказать!">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/banners/img_18-01-2012-15-22-25.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/banners/img_18-01-2012-15-22-25_prew.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/banners/img_18-01-2012-20-32-18.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/banners/img_18-01-2012-20-32-18_prew.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/files/img_11-01-2012-17-14-31.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/files/img_11-01-2012-17-14-31_prew.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/files/img_13-01-2012-14-01-39.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/files/img_13-01-2012-14-01-39_prew.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/files/img_16-01-2012-15-15-01.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/files/img_16-01-2012-15-15-01_prew.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/files/img_17-01-2012-13-07-07.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/files/img_17-01-2012-13-07-07_prew.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/files/img_17-01-2012-14-19-19.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/files/img_17-01-2012-14-19-19_prew.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/files/img_17-01-2012-14-49-17.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/files/img_17-01-2012-14-49-17_prew.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/files/img_17-01-2012-14-49-18.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/files/img_17-01-2012-14-49-18_prew.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/files/img_17-01-2012-15-07-25.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/files/img_17-01-2012-15-07-25_prew.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/files/img_17-01-2012-15-07-26.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/files/img_17-01-2012-15-07-26_prew.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/files/img_18-01-2012-14-02-39.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/files/img_18-01-2012-14-02-39_prew.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/files/img_18-01-2012-15-47-39.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/files/img_18-01-2012-15-47-39_prew.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/files/img_18-01-2012-16-19-33.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/files/img_18-01-2012-16-19-33_prew.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/files/img_18-01-2012-16-36-36.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/files/img_18-01-2012-16-36-36_prew.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/files/img_18-01-2012-16-59-50.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/files/img_18-01-2012-16-59-50_prew.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/files/img_18-01-2012-18-08-32.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/files/img_18-01-2012-18-08-32_prew.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/files/img_18-01-2012-18-16-23.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/files/img_18-01-2012-18-16-23_prew.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/files/img_18-01-2012-18-22-38.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/files/img_18-01-2012-18-22-38_prew.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/files/img_18-01-2012-18-34-16.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/files/img_18-01-2012-18-34-16_prew.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/files/img_18-01-2012-18-40-04.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/files/img_18-01-2012-18-40-04_prew.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/gallery/company/img_06-01-2012-23-05-22.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/gallery/company/img_06-01-2012-23-05-22_prew.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/gallery/company/img_06-01-2012-23-06-15.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/gallery/company/img_06-01-2012-23-06-15_prew.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/gallery/company/img_06-01-2012-23-06-25.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/gallery/company/img_06-01-2012-23-06-25_prew.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/gallery/company/img_06-01-2012-23-06-35.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/gallery/company/img_06-01-2012-23-06-35_prew.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/gallery/company/img_16-01-2012-20-40-57.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/gallery/company/img_16-01-2012-20-40-57_prew.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/gallery/company/img_16-01-2012-20-43-38.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/gallery/company/img_16-01-2012-20-43-38_prew.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/gallery/company/img_16-01-2012-20-46-08.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/gallery/company/img_16-01-2012-20-46-08_prew.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/gallery/company/img_16-01-2012-20-47-52.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/gallery/company/img_16-01-2012-20-47-52_prew.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/gallery/company/img_16-01-2012-20-52-12.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/gallery/company/img_16-01-2012-20-52-12_prew.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/gallery/company/img_16-01-2012-21-09-28.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/gallery/company/img_16-01-2012-21-09-28_prew.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/gallery/product/img_09-01-2012-20-18-35.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/gallery/product/img_09-01-2012-20-18-35_prew.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/gallery/product/img_09-01-2012-20-18-44.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/gallery/product/img_09-01-2012-20-18-44_prew.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/gallery/product/img_09-01-2012-20-18-53.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/gallery/product/img_09-01-2012-20-18-53_prew.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/gallery/product/img_09-01-2012-20-20-06.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/gallery/product/img_09-01-2012-20-20-06_prew.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/gallery/product/img_09-01-2012-20-24-32.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/gallery/product/img_09-01-2012-20-24-32_prew.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/gallery/product/img_10-01-2012-10-30-12.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/gallery/product/img_10-01-2012-10-30-12_prew.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/gallery/product/img_10-01-2012-10-30-25.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/gallery/product/img_10-01-2012-10-30-25_prew.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/gallery/product/img_10-01-2012-10-30-48.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/gallery/product/img_10-01-2012-10-30-48_prew.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/gallery/product/img_11-01-2012-17-16-14.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/gallery/product/img_11-01-2012-17-16-14_prew.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/gallery/product/img_11-01-2012-17-16-36.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/gallery/product/img_11-01-2012-17-16-36_prew.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/gallery/product/img_13-01-2012-14-03-04.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/gallery/product/img_13-01-2012-14-03-04_prew.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/gallery/product/img_13-01-2012-14-04-22.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/gallery/product/img_13-01-2012-14-04-22_prew.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/gallery/product/img_13-01-2012-14-34-26.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/gallery/product/img_13-01-2012-14-34-26_prew.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/gallery/product/img_13-01-2012-15-03-08.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/gallery/product/img_13-01-2012-15-03-08_prew.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/gallery/product/img_17-01-2012-15-08-17.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/gallery/product/img_17-01-2012-15-08-17_prew.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/gallery/product/img_18-01-2012-14-03-35.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/gallery/product/img_18-01-2012-14-03-35_prew.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/gallery/product/img_18-01-2012-14-13-21.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/gallery/product/img_18-01-2012-14-13-21_prew.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/gallery/product/img_18-01-2012-14-15-50.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/gallery/product/img_18-01-2012-14-15-50_prew.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/gallery/product/img_18-01-2012-16-38-15.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/gallery/product/img_18-01-2012-16-38-15_prew.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/gallery/product/img_18-01-2012-16-39-30.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/gallery/product/img_18-01-2012-16-39-30_prew.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/gallery/product/img_18-01-2012-16-39-42.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/gallery/product/img_18-01-2012-16-39-42_prew.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/gallery/product/img_18-01-2012-18-18-34.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/gallery/product/img_18-01-2012-18-18-34_prew.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/gallery/product/img_18-01-2012-18-19-30.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/gallery/product/img_18-01-2012-18-19-30_prew.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/gallery/product/img_18-01-2012-18-25-44.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/gallery/product/img_18-01-2012-18-25-44_prew.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/gallery/product/img_18-01-2012-18-34-34.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/gallery/product/img_18-01-2012-18-34-34_prew.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/gallery/product/img_18-01-2012-18-40-28.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/gallery/product/img_18-01-2012-18-40-28_prew.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/~Documents/cloud-zoom.1.0.2.zip" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/~Documents/htdocs.zip" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/css/cloud-zoom.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/js/cloud-zoom.1.0.2.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/js/cloud-zoom.1.0.2.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/js/easySlider1.7.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtime/templates_c/2ca4d9fb8fa4f27acecf2d1ea2f12e9837e0db14.file.index.tpl.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtime/templates_c/4711e375810acdb84af75df1630f88461af3fc17.file.edit.tpl.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtime/templates_c/a5c68603bbe346bf65e3bede36b8e77b606e39aa.file.index.tpl.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtime/templates_c/aa2f40d2fed0221f1a1736ce280c0f55fb16dedd.file.view-resource.tpl.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtime/templates_c/b7d0c95d218e46d4c40cd6c7fbf5579da2689052.file.reserve.ajax.tpl.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtime/templates_c/b9b77a6fb8ced9c3ee56826c39b110e929a779ba.file.add-like.ajax.tpl.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtime/templates_c/eb2b16b47d3eeaa15f66ac8eb95c4fb94fd76ffa.file.add-resource.tpl.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtime/templates_c/f1cd2f2ba3c0923bb94a9e4f4ff2770329493840.file.show-role-acl.tpl.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/~Documents/cloud-zoom.1.0.2/cloud-zoom.1.0.2.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/~Documents/cloud-zoom.1.0.2/cloud-zoom.1.0.2.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/~Documents/cloud-zoom.1.0.2/cloud-zoom.css" />
+      <change type="DELETED" beforePath="C:\www\ekonom\~Documents\econom\about.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\www\ekonom\~Documents\econom\add-comment.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\www\ekonom\~Documents\econom\fancybox\lib\jquery-1.7.1.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\www\ekonom\~Documents\econom\fancybox\lib\jquery.mousewheel-3.0.6.pack.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\www\ekonom\~Documents\econom\fancybox\source\blank.gif" afterPath="" />
+      <change type="DELETED" beforePath="C:\www\ekonom\~Documents\econom\fancybox\source\fancybox_loading.gif" afterPath="" />
+      <change type="DELETED" beforePath="C:\www\ekonom\~Documents\econom\fancybox\source\fancybox_sprite.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\www\ekonom\~Documents\econom\fancybox\source\helpers\fancybox_buttons.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\www\ekonom\~Documents\econom\fancybox\source\helpers\jquery.fancybox-buttons.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\www\ekonom\~Documents\econom\fancybox\source\helpers\jquery.fancybox-buttons.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\www\ekonom\~Documents\econom\fancybox\source\helpers\jquery.fancybox-thumbs.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\www\ekonom\~Documents\econom\fancybox\source\helpers\jquery.fancybox-thumbs.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\www\ekonom\~Documents\econom\fancybox\source\jquery.fancybox.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\www\ekonom\~Documents\econom\fancybox\source\jquery.fancybox.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\www\ekonom\~Documents\econom\fancybox\source\jquery.fancybox.pack.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\www\ekonom\~Documents\econom\favicon.ico" afterPath="" />
+      <change type="DELETED" beforePath="C:\www\ekonom\~Documents\econom\fonts\ArialNarrowRegular.ttf" afterPath="" />
+      <change type="DELETED" beforePath="C:\www\ekonom\~Documents\econom\fonts\Bankir-Retro.ttf" afterPath="" />
+      <change type="DELETED" beforePath="C:\www\ekonom\~Documents\econom\images\address_list_border.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\www\ekonom\~Documents\econom\images\button_back.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\www\ekonom\~Documents\econom\images\discount.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\www\ekonom\~Documents\econom\images\first-level_background.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\www\ekonom\~Documents\econom\images\footer_back.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\www\ekonom\~Documents\econom\images\gallery_left.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\www\ekonom\~Documents\econom\images\gallery_right.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\www\ekonom\~Documents\econom\images\header_back.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\www\ekonom\~Documents\econom\images\icons.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\www\ekonom\~Documents\econom\images\logo.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\www\ekonom\~Documents\econom\images\main-nav-marker.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\www\ekonom\~Documents\econom\images\main_nav.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\www\ekonom\~Documents\econom\images\main_nav_li_back.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\www\ekonom\~Documents\econom\images\phone.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\www\ekonom\~Documents\econom\images\search_button_back.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\www\ekonom\~Documents\econom\images\second-level_background.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\www\ekonom\~Documents\econom\images\shop_background.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\www\ekonom\~Documents\econom\images\shop_heading_background.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\www\ekonom\~Documents\econom\images\slider_left.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\www\ekonom\~Documents\econom\images\slider_right.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\www\ekonom\~Documents\econom\images\slider_shadow.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\www\ekonom\~Documents\econom\index.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\www\ekonom\~Documents\econom\item.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\www\ekonom\~Documents\econom\js\ajax-form.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\www\ekonom\~Documents\econom\js\gallery.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\www\ekonom\~Documents\econom\js\html5.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\www\ekonom\~Documents\econom\js\slider.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\www\ekonom\~Documents\econom\reserve.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\www\ekonom\~Documents\econom\share.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\www\ekonom\~Documents\econom\share_buttons.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\www\ekonom\~Documents\econom\shop.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\www\ekonom\~Documents\econom\uploads\action1.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\www\ekonom\~Documents\econom\uploads\action2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\www\ekonom\~Documents\econom\uploads\action3.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\www\ekonom\~Documents\econom\uploads\banner.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\www\ekonom\~Documents\econom\uploads\banner.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\www\ekonom\~Documents\econom\uploads\gallery.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\www\ekonom\~Documents\econom\uploads\gallery1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\www\ekonom\~Documents\econom\uploads\gallery1_preview.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\www\ekonom\~Documents\econom\uploads\gallery2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\www\ekonom\~Documents\econom\uploads\gallery2_preview.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\www\ekonom\~Documents\econom\uploads\gallery3.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\www\ekonom\~Documents\econom\uploads\gallery3_preview.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\www\ekonom\~Documents\econom\uploads\gallery_preview.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\www\ekonom\~Documents\econom\uploads\prada_logo.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\www\ekonom\~Documents\econom\uploads\slide1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\www\ekonom\~Documents\econom_test\about.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\www\ekonom\~Documents\econom_test\add-comment.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\www\ekonom\~Documents\econom_test\css\fonts\ArialNarrowRegular.ttf" afterPath="" />
+      <change type="DELETED" beforePath="C:\www\ekonom\~Documents\econom_test\css\fonts\Bankir-Retro.ttf" afterPath="" />
+      <change type="DELETED" beforePath="C:\www\ekonom\~Documents\econom_test\css\images\address_list_border.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\www\ekonom\~Documents\econom_test\css\images\button_back.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\www\ekonom\~Documents\econom_test\css\images\discount.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\www\ekonom\~Documents\econom_test\css\images\first-level_background.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\www\ekonom\~Documents\econom_test\css\images\footer_back.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\www\ekonom\~Documents\econom_test\css\images\gallery_left.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\www\ekonom\~Documents\econom_test\css\images\gallery_right.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\www\ekonom\~Documents\econom_test\css\images\header_back.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\www\ekonom\~Documents\econom_test\css\images\icons.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\www\ekonom\~Documents\econom_test\css\images\logo.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\www\ekonom\~Documents\econom_test\css\images\main-nav-marker.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\www\ekonom\~Documents\econom_test\css\images\main_nav.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\www\ekonom\~Documents\econom_test\css\images\main_nav_li_back.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\www\ekonom\~Documents\econom_test\css\images\phone.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\www\ekonom\~Documents\econom_test\css\images\search_button_back.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\www\ekonom\~Documents\econom_test\css\images\second-level_background.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\www\ekonom\~Documents\econom_test\css\images\shop_background.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\www\ekonom\~Documents\econom_test\css\images\shop_heading_background.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\www\ekonom\~Documents\econom_test\css\images\slider_left.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\www\ekonom\~Documents\econom_test\css\images\slider_right.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\www\ekonom\~Documents\econom_test\css\images\slider_shadow.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\www\ekonom\~Documents\econom_test\fancybox\lib\jquery-1.7.1.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\www\ekonom\~Documents\econom_test\fancybox\lib\jquery.mousewheel-3.0.6.pack.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\www\ekonom\~Documents\econom_test\fancybox\source\blank.gif" afterPath="" />
+      <change type="DELETED" beforePath="C:\www\ekonom\~Documents\econom_test\fancybox\source\fancybox_loading.gif" afterPath="" />
+      <change type="DELETED" beforePath="C:\www\ekonom\~Documents\econom_test\fancybox\source\fancybox_sprite.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\www\ekonom\~Documents\econom_test\fancybox\source\helpers\fancybox_buttons.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\www\ekonom\~Documents\econom_test\fancybox\source\helpers\jquery.fancybox-buttons.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\www\ekonom\~Documents\econom_test\fancybox\source\helpers\jquery.fancybox-buttons.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\www\ekonom\~Documents\econom_test\fancybox\source\helpers\jquery.fancybox-thumbs.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\www\ekonom\~Documents\econom_test\fancybox\source\helpers\jquery.fancybox-thumbs.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\www\ekonom\~Documents\econom_test\fancybox\source\jquery.fancybox.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\www\ekonom\~Documents\econom_test\fancybox\source\jquery.fancybox.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\www\ekonom\~Documents\econom_test\fancybox\source\jquery.fancybox.pack.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\www\ekonom\~Documents\econom_test\favicon.ico" afterPath="" />
+      <change type="DELETED" beforePath="C:\www\ekonom\~Documents\econom_test\fonts\ArialNarrowRegular.ttf" afterPath="" />
+      <change type="DELETED" beforePath="C:\www\ekonom\~Documents\econom_test\fonts\Bankir-Retro.ttf" afterPath="" />
+      <change type="DELETED" beforePath="C:\www\ekonom\~Documents\econom_test\images\address_list_border.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\www\ekonom\~Documents\econom_test\images\button_back.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\www\ekonom\~Documents\econom_test\images\discount.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\www\ekonom\~Documents\econom_test\images\first-level_background.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\www\ekonom\~Documents\econom_test\images\footer_back.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\www\ekonom\~Documents\econom_test\images\gallery_left.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\www\ekonom\~Documents\econom_test\images\gallery_right.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\www\ekonom\~Documents\econom_test\images\header_back.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\www\ekonom\~Documents\econom_test\images\icons.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\www\ekonom\~Documents\econom_test\images\logo.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\www\ekonom\~Documents\econom_test\images\main-nav-marker.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\www\ekonom\~Documents\econom_test\images\main_nav.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\www\ekonom\~Documents\econom_test\images\main_nav_li_back.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\www\ekonom\~Documents\econom_test\images\phone.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\www\ekonom\~Documents\econom_test\images\search_button_back.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\www\ekonom\~Documents\econom_test\images\second-level_background.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\www\ekonom\~Documents\econom_test\images\shop_background.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\www\ekonom\~Documents\econom_test\images\shop_heading_background.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\www\ekonom\~Documents\econom_test\images\slider_left.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\www\ekonom\~Documents\econom_test\images\slider_right.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\www\ekonom\~Documents\econom_test\images\slider_shadow.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\www\ekonom\~Documents\econom_test\index.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\www\ekonom\~Documents\econom_test\item.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\www\ekonom\~Documents\econom_test\js\ajax-form.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\www\ekonom\~Documents\econom_test\js\gallery.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\www\ekonom\~Documents\econom_test\js\html5.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\www\ekonom\~Documents\econom_test\js\slider.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\www\ekonom\~Documents\econom_test\reserve.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\www\ekonom\~Documents\econom_test\share_buttons.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\www\ekonom\~Documents\econom_test\shop.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\www\ekonom\~Documents\econom_test\uploads\action1.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\www\ekonom\~Documents\econom_test\uploads\action2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\www\ekonom\~Documents\econom_test\uploads\action3.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\www\ekonom\~Documents\econom_test\uploads\banner.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\www\ekonom\~Documents\econom_test\uploads\banner.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\www\ekonom\~Documents\econom_test\uploads\gallery.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\www\ekonom\~Documents\econom_test\uploads\gallery1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\www\ekonom\~Documents\econom_test\uploads\gallery1_preview.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\www\ekonom\~Documents\econom_test\uploads\gallery2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\www\ekonom\~Documents\econom_test\uploads\gallery2_preview.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\www\ekonom\~Documents\econom_test\uploads\gallery3.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\www\ekonom\~Documents\econom_test\uploads\gallery3_preview.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\www\ekonom\~Documents\econom_test\uploads\gallery_preview.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\www\ekonom\~Documents\econom_test\uploads\prada_logo.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\www\ekonom\~Documents\econom_test\uploads\slide1.jpg" afterPath="" />
+      <change type="MOVED" beforePath="C:\www\ekonom\~Documents\econom\css\main.css" afterPath="$PROJECT_DIR$/~Documents/main.css" />
+      <change type="MOVED" beforePath="C:\www\ekonom\~Documents\econom\css\main.css.bak" afterPath="$PROJECT_DIR$/~Documents/main.css.bak" />
+      <change type="MOVED" beforePath="C:\www\ekonom\~Documents\econom_test\css\main.css" afterPath="$PROJECT_DIR$/public_html/css/main.css.bak" />
+      <change type="MOVED" beforePath="C:\www\ekonom\~Documents\econom_test\share.html" afterPath="$PROJECT_DIR$/runtime/templates_c/4930df03c4f53f8e018377f92315f9fb07706314.file.share.ajax.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/CatalogController.php" afterPath="$PROJECT_DIR$/application/controllers/CatalogController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/SearchController.php" afterPath="$PROJECT_DIR$/application/controllers/SearchController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/layouts/scripts/layout.tpl" afterPath="$PROJECT_DIR$/application/layouts/scripts/layout.tpl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/models/EK/Catalog/ProductLike.php" afterPath="$PROJECT_DIR$/application/models/EK/Catalog/ProductLike.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/models/EK/Catalog/Rubric.php" afterPath="$PROJECT_DIR$/application/models/EK/Catalog/Rubric.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/models/EK/Company/Company.php" afterPath="$PROJECT_DIR$/application/models/EK/Company/Company.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/scripts/catalog/child-block.tpl" afterPath="$PROJECT_DIR$/application/views/scripts/catalog/child-block.tpl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/scripts/catalog/index.tpl" afterPath="$PROJECT_DIR$/application/views/scripts/catalog/index.tpl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/scripts/catalog/view-product.ajax.tpl" afterPath="$PROJECT_DIR$/application/views/scripts/catalog/view-product.ajax.tpl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/scripts/company/view.tpl" afterPath="$PROJECT_DIR$/application/views/scripts/company/view.tpl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/scripts/index/index.tpl" afterPath="$PROJECT_DIR$/application/views/scripts/index/index.tpl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/scripts/search/index.tpl" afterPath="$PROJECT_DIR$/application/views/scripts/search/index.tpl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public_html/css/main.css" afterPath="$PROJECT_DIR$/public_html/css/main.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public_html/js/ajax-form.js" afterPath="$PROJECT_DIR$/public_html/js/ajax-form.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public_html/js/gallery.js" afterPath="$PROJECT_DIR$/public_html/js/gallery.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/runtime/logs/syslog.txt" afterPath="$PROJECT_DIR$/runtime/logs/syslog.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/runtime/templates_c/4a2d248229c0e6452704f9a7ccc41e7a5c93b3ee.file.view.tpl.php" afterPath="$PROJECT_DIR$/runtime/templates_c/4a2d248229c0e6452704f9a7ccc41e7a5c93b3ee.file.view.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/runtime/templates_c/50476d9be6c10e4d5566fb6927d6edf719c8a09a.file.view-product.ajax.tpl.php" afterPath="$PROJECT_DIR$/runtime/templates_c/50476d9be6c10e4d5566fb6927d6edf719c8a09a.file.view-product.ajax.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/runtime/templates_c/80ff11feedc4a0ba005e0c5733e3e115c1477d3b.file.layout.tpl.php" afterPath="$PROJECT_DIR$/runtime/templates_c/80ff11feedc4a0ba005e0c5733e3e115c1477d3b.file.layout.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/runtime/templates_c/94b43447258ea62d6154766d1bbba1c4afdc3e80.file.index.tpl.php" afterPath="$PROJECT_DIR$/runtime/templates_c/94b43447258ea62d6154766d1bbba1c4afdc3e80.file.index.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/runtime/templates_c/a943f4c37583ea01c7979b69872ea4115840ecec.file.index.tpl.php" afterPath="$PROJECT_DIR$/runtime/templates_c/a943f4c37583ea01c7979b69872ea4115840ecec.file.index.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/~Documents/ekonom_pro_db.sql" afterPath="$PROJECT_DIR$/~Documents/ekonom_pro_db.sql" />
     </list>
     <ignored path="ekonom.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -23,7 +331,44 @@
     <favorites_list name="ekonom" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="view-product.ajax.tpl" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/application/views/scripts/catalog/view-product.ajax.tpl">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="24" column="153" selection-start="939" selection-end="939" vertical-scroll-proportion="0.7680723">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CatalogController.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/controllers/CatalogController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="67" column="30" selection-start="2675" selection-end="2675" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Product.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/models/EK/Catalog/Product.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="54" column="23" selection-start="853" selection-end="862" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="view.tpl" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/views/scripts/company/view.tpl">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="3" column="45" selection-start="111" selection-end="128" vertical-scroll-proportion="-1.9615384">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -45,9 +390,10 @@
         <option value="$PROJECT_DIR$/public_html/js/func.js" />
         <option value="$PROJECT_DIR$/application/layouts/scripts/layout.tpl" />
         <option value="$PROJECT_DIR$/public_html/js/main.js" />
-        <option value="$PROJECT_DIR$/application/controllers/CatalogController.php" />
         <option value="$PROJECT_DIR$/application/views/scripts/catalog/view-sub-menu.ajax.tpl" />
         <option value="$PROJECT_DIR$/public_html/css/main.css" />
+        <option value="$PROJECT_DIR$/application/controllers/CatalogController.php" />
+        <option value="$PROJECT_DIR$/application/views/scripts/catalog/view-product.ajax.tpl" />
       </list>
     </option>
   </component>
@@ -217,6 +563,32 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="company" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ekonom" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ekonom" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scripts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="catalog" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -270,8 +642,8 @@
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="true" />
     <property name="options.lastSelected" value="reference.webide.settings.project.settings.php" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
   </component>
   <component name="PublishConfig">
     <servers>
@@ -345,22 +717,22 @@
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="false" />
     <layout>
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32935154" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32593855" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32423207" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26327768" sideWeight="0.67064846" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33611533" sideWeight="0.6757679" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32935154" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32935154" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32935154" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -400,7 +772,7 @@
     <option name="INCLUDE_TEXT_INTO_SHELF" value="false" />
     <option name="CREATE_PATCH_EXPAND_DETAILS_DEFAULT" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Служебный" />
+    <option name="LAST_COMMIT_MESSAGE" value="3. При просмотре акций не видно что за фирма предоставляет товар! &#10;5. Переименовать Краткое описание магазина или товара в &quot;Краткое описание&quot;&#10;6. Кнопку отложить переименовать в кнопку заказать!" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -415,6 +787,7 @@
     <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
     <MESSAGE value="Показать, Скрыть главное меню" />
     <MESSAGE value="Служебный" />
+    <MESSAGE value="3. При просмотре акций не видно что за фирма предоставляет товар! &#10;5. Переименовать Краткое описание магазина или товара в &quot;Краткое описание&quot;&#10;6. Кнопку отложить переименовать в кнопку заказать!" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -455,11 +828,6 @@
         <state line="262" column="29" selection-start="8615" selection-end="8615" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/CatalogController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="39" selection-start="1167" selection-end="1167" vertical-scroll-proportion="0.031021899" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/views/scripts/catalog/view-sub-menu.ajax.tpl">
       <provider selected="true" editor-type-id="text-editor">
         <state line="3" column="34" selection-start="385" selection-end="385" vertical-scroll-proportion="0.09770115" />
@@ -483,6 +851,34 @@
     <entry file="file://$PROJECT_DIR$/public_html/css/main.css">
       <provider selected="true" editor-type-id="text-editor">
         <state line="511" column="18" selection-start="8387" selection-end="8387" vertical-scroll-proportion="0.031021899" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/scripts/company/view.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="45" selection-start="111" selection-end="128" vertical-scroll-proportion="-1.9615384">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/CatalogController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="67" column="30" selection-start="2675" selection-end="2675" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/models/EK/Catalog/Product.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="54" column="23" selection-start="853" selection-end="862" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/scripts/catalog/view-product.ajax.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="153" selection-start="939" selection-end="939" vertical-scroll-proportion="0.7680723">
+          <folding />
+        </state>
       </provider>
     </entry>
   </component>

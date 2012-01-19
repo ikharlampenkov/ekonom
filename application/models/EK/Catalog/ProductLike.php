@@ -14,6 +14,18 @@
 `unlike` int(10) unsigned NOT NULL DEFAULT '0',
 PRIMARY KEY (`product_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+ *
+ * CREATE TABLE IF NOT EXISTS `product_like_ip` (
+`id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+`date_visit` date NOT NULL,
+`product_id` int(10) unsigned NOT NULL,
+`ip` varchar(15) NOT NULL,
+`user_agent` text NOT NULL,
+`cookie` varchar(255) NOT NULL,
+PRIMARY KEY (`id`),
+KEY `product_id` (`product_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+ *
  */
 
 class EK_Catalog_ProductLike
@@ -107,22 +119,67 @@ class EK_Catalog_ProductLike
             if (!$this->_check()) {
                 $sql = 'INSERT INTO product_like (product_id, `like`, unlike)
                              VALUES (' . $this->_product->getId() . ', ' . $this->_like . ', ' . $this->_unlike . ')';
+                $this->_db->query($sql);
+                $this->_saveIpToDB();
             } else {
-                $sql = 'UPDATE product_like
-                           SET `like`=' . $this->_like . ', unlike="' . $this->_unlike . '"
-                        WHERE product_id=' . $this->_product->getId();
-            }
+                if (!$this->_checkIP()) {
+                    $sql = 'UPDATE product_like
+                               SET `like`=' . $this->_like . ', unlike="' . $this->_unlike . '"
+                             WHERE product_id=' . $this->_product->getId();
 
-            $this->_db->query($sql);
+                    $this->_db->query($sql);
+                    $this->_saveIpToDB();
+                }
+            }
         } catch (Exception $e) {
             throw new Exception($e->getMessage());
         }
     }
 
+    protected function _saveIpToDB()
+    {
+        try {
+            $cookie = $_COOKIE['PHPSESSID'];
+            $sql = 'INSERT INTO product_like_ip (date_visit, product_id, ip, user_agent, cookie)
+                    VALUES ("' . date('Y-m-d') . '", ' . $this->_product->getId() . ', "' . $_SERVER['REMOTE_ADDR'] . '",
+                            "' . $_SERVER['HTTP_USER_AGENT'] . '", "' . $cookie . '")';
+
+            $this->_db->query($sql);
+        } catch (Exception $e) {
+            throw new Exception($e->getMessage());
+        }
+
+    }
+
+//date_visit, product_id, ip, user_agent, cookie
+
     private function _check()
     {
         try {
-            $sql = 'SELECT COUNT(product_id) FROM product_like WHERE product_id=' . $this->_product->getId();
+            $sql = 'SELECT COUNT(id) FROM product_like WHERE product_id=' . $this->_product->getId();
+
+            $result = $this->_db->query($sql);
+            if (isset($result[0][0]) && $result[0][0] > 0) {
+                return true;
+            } else {
+                return false;
+            }
+        } catch (Exception $e) {
+            return true;
+        }
+    }
+
+    private function _checkIP()
+    {
+        try {
+            $cookie = $_COOKIE['PHPSESSID'];
+
+            $sql = 'SELECT COUNT(product_id)
+                    FROM product_like_ip
+                    WHERE product_id=' . $this->_product->getId() . '
+                      AND (ip="' . $_SERVER['REMOTE_ADDR'] . '"
+                      AND user_agent="' . $_SERVER['HTTP_USER_AGENT'] . '"
+                      AND cookie="' . $cookie . '")';
             $result = $this->_db->query($sql);
             if (isset($result[0][0]) && $result[0][0] > 0) {
                 return true;

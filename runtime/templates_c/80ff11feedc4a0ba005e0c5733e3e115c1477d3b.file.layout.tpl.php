@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.0.9, created on 2012-01-10 23:03:48
+<?php /* Smarty version Smarty-3.0.9, created on 2012-01-18 23:35:45
          compiled from "F:\www\ekonom\application/layouts/scripts\layout.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:216474f0c6164d87683-90501810%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:142524f16f4e1942271-70782395%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '80ff11feedc4a0ba005e0c5733e3e115c1477d3b' => 
     array (
       0 => 'F:\\www\\ekonom\\application/layouts/scripts\\layout.tpl',
-      1 => 1326211425,
+      1 => 1326904426,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '216474f0c6164d87683-90501810',
+  'nocache_hash' => '142524f16f4e1942271-70782395',
   'function' => 
   array (
   ),
@@ -31,6 +31,7 @@ $_smarty_tpl->decodeProperties(array (
 
     <link rel="stylesheet" type="text/css" href="/css/jquery-ui.css"/>
     <link rel="stylesheet" type="text/css" href="/css/jquery-ui-timepicker-addon.css"/>
+    <link rel="stylesheet" type="text/css" href="/css/cloud-zoom.css"/>
 
 
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
@@ -47,10 +48,12 @@ $_smarty_tpl->decodeProperties(array (
     <script type="text/javascript" src="/js/ajax-form.js"></script>
     <!-- read comments in js files for better understanding of its purpose -->
     <script type="text/javascript" src="/js/gallery.js"></script>
-    <script type="text/javascript" src="/js/slider.js"></script>
+    <script type="text/javascript" src="/js/easySlider1.7.js"></script>
 
     <script type="text/javascript" language="javascript" src="/js/func.js"></script>
     <script type="text/javascript" language="javascript" src="/js/main.js"></script>
+
+    <script type="text/javascript" language="javascript" src="/js/cloud-zoom.1.0.2.js"></script>
 
     <script type="text/javascript" language="javascript" src="/js/share42.js"></script>
 
@@ -198,36 +201,55 @@ $_template->assign('subrubric',$_smarty_tpl->getVariable('rubric')->value->getCh
     <div id="footer-inner" class="clearfix">
         <p id="copyright">Ekonom.pro &copy; 2011</p>
 
-        <p id="conditions">
+        <div id="conditions">
             <a href="/conditions">Общие условия пользования сайтом</a><br/>
 
             <!-- Yandex.Metrika informer -->
-            <a href="http://metrika.yandex.ru/stat/?id=11564479&amp;from=informer"
-               target="_blank" rel="nofollow"><img src="//bs.yandex.ru/informer/11564479/3_0_FFFFFFFF_EFEFEFFF_0_pageviews"
-                                                   style="width:88px; height:31px; border:0;" alt="Яндекс.Метрика" title="Яндекс.Метрика: данные за сегодня (просмотры, визиты и уникальные посетители)" onclick="try { Ya.Metrika.informer( { i:this,id:11564479,type:0,lang:'ru' } );return false } catch(e) { } "/></a>
+            <a href="http://metrika.yandex.ru/stat/?id=11564479&amp;from=informer" target="_blank" rel="nofollow">
+                <img src="//bs.yandex.ru/informer/11564479/3_0_FFFFFFFF_EFEFEFFF_0_pageviews"
+                     style="width:88px; height:31px; border:0;" alt="Яндекс.Метрика" title="Яндекс.Метрика: данные за сегодня (просмотры, визиты и уникальные посетители)" onclick="try { Ya.Metrika.informer( { i:this,id:11564479,type:0,lang:'ru' } );return false } catch(e) { } "/>
+            </a>
             <!-- /Yandex.Metrika informer -->
 
             <!-- Yandex.Metrika counter -->
+            <div style="display:none;">
+                <script type="text/javascript">
+                    (function (w, c) {
+                    (w[c] = w[c] || []).push(function() {
+                    try {
+                    w.yaCounter11564479 = new Ya.Metrika( { id:11564479, enableAll: true, trackHash:true, webvisor:true } );
+                    }
+                    catch(e) { }
+                    });
+                    })(window, "yandex_metrika_callbacks");
+                </script>
+            </div>
+            <script src="//mc.yandex.ru/metrika/watch.js" type="text/javascript" defer="defer"></script>
+            <noscript>
+                <div><img src="//mc.yandex.ru/watch/11564479" style="position:absolute; left:-9999px;" alt=""/></div>
+            </noscript>
+            <!-- /Yandex.Metrika counter -->
 
-        <div style="display:none;">
+            <!--LiveInternet counter-->
             <script type="text/javascript">
-                (function (w, c) {
-                (w[c] = w[c] || []).push(function() {
-                try {
-                w.yaCounter11564479 = new Ya.Metrika( { id:11564479, enableAll: true, trackHash:true, webvisor:true } );
-                }
-                catch(e) { }
-                });
-                })(window, "yandex_metrika_callbacks");
+                <!--
+                new Image().src = "//counter.yadro.ru/hit?r" +
+                        escape(document.referrer) + ((typeof(screen) == "undefined") ? "" :
+                        ";s" + screen.width + "*" + screen.height + "*" + (screen.colorDepth ?
+                                screen.colorDepth : screen.pixelDepth)) + ";u" + escape(document.URL) +
+                        ";h" + escape(document.title.substring(0, 80)) +
+                        ";" + Math.random();//-->
             </script>
-        </div>
-        <script src="//mc.yandex.ru/metrika/watch.js" type="text/javascript" defer="defer"></script>
-        <noscript>
-            <div><img src="//mc.yandex.ru/watch/11564479" style="position:absolute; left:-9999px;" alt=""/></div>
-        </noscript>
-        <!-- /Yandex.Metrika counter -->
+            <!--/LiveInternet-->
 
-        </p>
+            <!--LiveInternet logo-->
+            <a href="http://www.liveinternet.ru/click" target="_blank">
+                <img src="//counter.yadro.ru/logo?14.1" title="LiveInternet: показано число просмотров за 24 часа, посетителей за 24 часа и за сегодня" alt="" border="0" width="88" height="31"/>
+            </a>
+            <!--/LiveInternet-->
+
+
+        </div>
 
         <div id="phone" class="nobr"><?php echo $_smarty_tpl->getVariable('bottomCityNumber')->value;?>
 </div>
