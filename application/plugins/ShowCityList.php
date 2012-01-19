@@ -13,6 +13,10 @@ class ShowCityList extends Zend_Controller_Plugin_Abstract
         $view = Zend_Controller_Front::getInstance()->getParam('bootstrap')->getResource('View');
         $view->assign('headCityList', EK_City_City::getAllInstance());
 
+        $mainSession = new Zend_Session_Namespace('main');
+        $oCity = EK_City_City::getInstanceById($mainSession->curCity);
+        $view->assign('bottomCityNumber', $oCity->getPhoneNumber());
+
     }
 
 }

@@ -20,7 +20,7 @@
 
             <tr>
                 <td class="ttovar_title">Описание</td>
-                <td class="ttovar"><textarea name="data[content]">{$contentPage->content}</textarea></td>
+                <td class="ttovar">{$ckeditor} {*<textarea name="data[content]">{$contentPage->content}</textarea>*}</td>
             </tr>
 
         </table>

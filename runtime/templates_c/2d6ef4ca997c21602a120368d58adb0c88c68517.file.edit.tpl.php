@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.0.9, created on 2011-12-18 19:26:20
+<?php /* Smarty version Smarty-3.0.9, created on 2012-01-06 22:05:11
          compiled from "F:\www\ekonom\application/views/scripts\company/edit.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:207484eeddbec5b7ff4-03263383%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:267654f070da74b5f82-17029001%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '2d6ef4ca997c21602a120368d58adb0c88c68517' => 
     array (
       0 => 'F:\\www\\ekonom\\application/views/scripts\\company/edit.tpl',
-      1 => 1324211174,
+      1 => 1325862305,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '207484eeddbec5b7ff4-03263383',
+  'nocache_hash' => '267654f070da74b5f82-17029001',
   'function' => 
   array (
   ),
@@ -58,10 +58,25 @@ if ($_smarty_tpl->_count($_from) > 0){
         <tr>
             <td class="ttovar_title">Лого</td>
             <td class="ttovar">
-                <?php if ($_smarty_tpl->getVariable('company')->value->file->getName()){?><img src="/files/<?php echo $_smarty_tpl->getVariable('company')->value->file->getName();?>
-" /><?php }?><br/>
+            <?php if ($_smarty_tpl->getVariable('company')->value->file->getName()){?><img src="/files/<?php echo $_smarty_tpl->getVariable('company')->value->file->getName();?>
+"/><?php }?><br/>
                 <input type="file" name="file"/>
             </td>
+        </tr>
+        <tr>
+            <td class="ttovar_title">Email для заказов</td>
+            <td class="ttovar"><input name="data[order_email]" value="<?php echo $_smarty_tpl->getVariable('company')->value->orderEmail;?>
+"/></td>
+        </tr>
+        <tr>
+            <td class="ttovar_title">Официальный сайт</td>
+            <td class="ttovar"><input name="data[ofsite]" value="<?php echo $_smarty_tpl->getVariable('company')->value->ofSite;?>
+"/></td>
+        </tr>
+        <tr>
+            <td class="ttovar_title">Постоянная скидка</td>
+            <td class="ttovar"><input name="data[constant_discount]" value="<?php echo $_smarty_tpl->getVariable('company')->value->constantDiscount;?>
+" style="width: 50px;"/>%</td>
         </tr>
     </table>
     <input id="save" name="save" type="submit" value="Сохранить"/>

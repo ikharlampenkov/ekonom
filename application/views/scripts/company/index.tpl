@@ -1,6 +1,8 @@
 <article id="main-content">
 
-    <h1 class="heading">Компании</h1>
+
+
+    <h1 class="heading">Компании{if isset($rubric)}.{$rubric->title}{/if}</h1>
 
 
 {if_allowed resource="{$controller}/add"}
@@ -15,13 +17,14 @@
             {if_object_allowed type="{$controller|capitalize}" object="{$company}" priv="moderate"}
                 <li>
                     <h3><a href="{$this->url(['controller' => $controller,'action' => 'view', 'id' => $company->id])}" class="various fancybox.ajax">{$company->title}</a></h3>
-                    <a href="{$this->url(['controller' => $controller,'action' => 'view', 'id' => $company->id])}" class="various fancybox.ajax"><img src="/files/{$company->file->getName()}" alt="{$company->title}"></a>
+                    <a href="{$this->url(['controller' => $controller,'action' => 'view', 'id' => $company->id])}" class="various fancybox.ajax"><img src="{if $company->file->getName()}/files/{$company->file->getPreview()}{else}/i/no_foto.png{/if}" alt="{$company->title}"></a>
 
+                    {if_allowed resource="{$controller}/edit"}
                     <div class="discount">A</div>
 
                     <ul id="company_action_{$company->id}" class="company_action_menu">
 
-                        {if_allowed resource="{$controller}/viewAddress"}
+                        {if_allowed resource="{$controller}/viewGallery"}
                             <li class="action"><a href="{$this->url(['controller' => $controller,'action' => 'viewGallery', 'idCompany' => $company->id])}">галерея</a></li>
                         {/if_allowed}
 
@@ -41,7 +44,7 @@
                             <li class="action"><img src="/i/delete.png"/>&nbsp;<a href="{$this->url(['controller' => $controller,'action' => 'delete', 'id' => $company->id])}" onclick="return confirmDelete('{$company->id}');" style="color: #830000">удалить</a></li>
                         {/if_allowed}
                     </ul>
-
+                    {/if_allowed}
 
                 </li>
             {/if_object_allowed}
@@ -54,7 +57,7 @@
 {*
 <li>
     <h3><a href="/item.html" class="various fancybox.ajax">Телефон LG Prada</a></h3>
-    <img src="/uploads/action1.png" alt="">
+    <img src="/i/no_foto.png" alt="">
 
     <div class="discount">20%</div>
 </li>

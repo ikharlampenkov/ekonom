@@ -24,6 +24,7 @@ class CityController extends Zend_Controller_Action
             $data = $this->getRequest()->getParam('data');
             $oCity->setTitle($data['title']);
             $oCity->setPhoneCode($data['phone_code']);
+            $oCity->setPhoneNumber($data['phone_number']);
 
             try {
                 $oCity->insertToDb();
@@ -45,6 +46,7 @@ class CityController extends Zend_Controller_Action
             $data = $this->getRequest()->getParam('data');
             $oCity->setTitle($data['title']);
             $oCity->setPhoneCode($data['phone_code']);
+            $oCity->setPhoneNumber($data['phone_number']);
 
             try {
                 $oCity->updateToDb();

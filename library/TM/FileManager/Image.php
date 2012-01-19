@@ -51,22 +51,36 @@ class TM_FileManager_Image extends TM_FileManager_File {
      * @return
      * @access public
      */
-    public function createPreview($size = 100) {
+    public function createPreview($sizeX = 190, $sizeY = 110) {
         $image = $this->_getImageByType();
-        list($oldxsize, $oldysize) = getimagesize($this->_path . $this->_subPath . '/' . $this->_name);
-        $newxsize = $oldxsize;
-        $newysize = $oldysize;
-//    echo 'X=' . $newxsize . '   Y=' . $newysize. '<br>';
-        if ($newxsize > $size) {
-            $newysize = $newysize * $size / $newxsize;
-            $newxsize = $size;
+        list($oldXsize, $oldYsize) = getimagesize($this->_path . $this->_subPath . '/' . $this->_name);
+        $newXsize = $oldXsize;
+        $newYsize = $oldYsize;
+//    echo 'X=' . $newXsize . '   Y=' . $newYsize. '<br>';
+        if ($newXsize > $sizeX) {
+            $newYsize = $newYsize * $sizeX / $newXsize;
+            $newXsize = $sizeX;
         }
-        if ($newysize > $size) {
-            $newxsize = $newxsize * $size / $newysize;
-            $newysize = $size;
+        if ($newYsize > $sizeY) {
+            $newXsize = $newXsize * $sizeY / $newYsize;
+            $newYsize = $sizeY;
         }
-        $imagePrew = imagecreatetruecolor($newxsize, $newysize);
-        $result = imagecopyresampled($imagePrew, $image, 0, 0, 0, 0, $newxsize, $newysize, $oldxsize, $oldysize);
+        $imagePrew = imagecreatetruecolor($sizeX, $sizeY);
+        imagefill($imagePrew, 0, 0, imagecolorallocate($imagePrew, 255, 255, 255));
+
+        if (($sizeX - $newXsize) <= 25 ) {
+            $newXsize = $sizeX;
+            $dst_x = 0;
+        } else {
+            $dst_x = (int)(($sizeX - $newXsize) / 2);
+        }
+
+        $dst_y = (int)(($sizeY - $newYsize) / 2);
+
+
+
+        $result = imagecopyresampled($imagePrew, $image, $dst_x, $dst_y, 0, 0, $newXsize, $newYsize, $oldXsize, $oldYsize);
+
         if ($result) {
             $this->_savePreviewFile($imagePrew);
             chmod($this->_path . $this->_subPath . '/' . $this->getPreview(), 0666);

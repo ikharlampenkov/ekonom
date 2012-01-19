@@ -6,8 +6,9 @@
  * Time: 21:59
  * To change this template use File | Settings | File Templates.
  */
- 
-class EK_City_City {
+
+class EK_City_City
+{
 
 
     /** Aggregations: */
@@ -33,6 +34,11 @@ class EK_City_City {
      * @access protected
      */
     protected $_phoneCode;
+
+    /**
+     * @var string
+     */
+    protected $_phoneNumber;
 
     /**
      *
@@ -80,7 +86,6 @@ class EK_City_City {
      *
      *
      * @param int $value
-
      * @return void
      * @access protected
      */
@@ -93,7 +98,6 @@ class EK_City_City {
      *
      *
      * @param string $value
-
      * @return void
      * @access public
      */
@@ -106,15 +110,29 @@ class EK_City_City {
      *
      *
      * @param string $value
-
      * @return void
      * @access public
      */
-    public function setPhoneCode( $value)
+    public function setPhoneCode($value)
     {
         $this->_phoneCode = $this->_db->prepareString($value);
     } // end of member function setUser
 
+    /**
+     * @param string $phoneNumber
+     */
+    public function setPhoneNumber($phoneNumber)
+    {
+        $this->_phoneNumber = $this->_db->prepareString($phoneNumber);
+    }
+
+    /**
+     * @return string
+     */
+    public function getPhoneNumber()
+    {
+        return $this->_db->prepareStringToOut($this->_phoneNumber);
+    }
 
     public function __get($name)
     {
@@ -144,8 +162,8 @@ class EK_City_City {
     public function insertToDb()
     {
         try {
-            $sql = 'INSERT INTO city(title, phone_code)
-                    VALUES ("' . $this->_title . '", "' . $this->_phoneCode . '")';
+            $sql = 'INSERT INTO city(title, phone_code, phone_number)
+                    VALUES ("' . $this->_title . '", "' . $this->_phoneCode . '", "' . $this->_phoneNumber . '")';
             $this->_db->query($sql);
 
             $this->_id = $this->_db->getLastInsertId();
@@ -164,7 +182,8 @@ class EK_City_City {
     {
         try {
             $sql = 'UPDATE city
-                    SET title="' . $this->_title . '", phone_code="' . $this->_phoneCode . '"
+                    SET title="' . $this->_title . '", phone_code="' . $this->_phoneCode . '",
+                        phone_number="' . $this->_phoneNumber . '"
                     WHERE id=' . $this->_id;
             $this->_db->query($sql);
         } catch (Exception $e) {
@@ -192,7 +211,6 @@ class EK_City_City {
      *
      *
      * @param int $id идентификатор города
-
      * @return EK_City_City
      * @static
      * @access public
@@ -238,7 +256,6 @@ class EK_City_City {
     /**
      *
      *
-
      * @return array
      * @static
      * @access public
@@ -265,11 +282,10 @@ class EK_City_City {
         }
     } // end of member function getAllInstance
 
-/**
+    /**
      *
      *
      * @param array $values
-
      * @return void
      * @access public
      */
@@ -278,7 +294,9 @@ class EK_City_City {
         $this->setId($values['id']);
         $this->setTitle($values['title']);
         $this->setPhoneCode($values['phone_code']);
-    } // end of member function fillFromArray
+        $this->setPhoneNumber($values['phone_number']);
+    }
 
-    
 }
+
+?>

@@ -175,11 +175,7 @@ var task = {
     },
 
     createSubMenu:function () {
-        $(".task_list button").button({
-            icons:{
-                secondary:"ui-icon-triangle-1-s"
-            }
-        }).next().popup();
+        $(".discounta").next().popup();
     },
 
     viewTask:function (rq_url, id) {
@@ -254,21 +250,24 @@ var company = {
 }
 
 var catalog = {
-
+    createSubMenu:function () {
+        $(".discounta").next().popup();
+    }
 }
 
 var mainMenu = {
     showSubMenu:function (rq_url, parent) {
-        $.get(rq_url, '', function(data) {
+        $.get(rq_url, '', function (data) {
             if (data != '') {
-               $('#first_level_' + parent + ' ul').html(data).show();
+                $('#first_level_' + parent + ' ul').html(data).show();
             }
         }, 'html');
 
     },
 
-    hideSubMenu: function () {
-        $(this).hide();
+    hideSubMenu:function (parent) {
+        $('#first_level_' + parent + ' ul').hide();
+        $('#first_level_' + parent + ' ul').empty();
     }
 }
 

@@ -4,7 +4,8 @@
  * class ProductCatalog
  *
  */
-class EK_Catalog_ProductCatalog {
+class EK_Catalog_ProductCatalog
+{
     /** Aggregations: */
 
     /** Compositions: */
@@ -12,11 +13,31 @@ class EK_Catalog_ProductCatalog {
 
     private $_db;
 
-    public function __construct() {
+    public function __construct()
+    {
         $this->_db = StdLib_DB::getInstance();
     }
 
-    public function getAllRubric($parent) {
+    public function searchProduct($search)
+    {
+        try {
+            $sql = 'SELECT * FROM product WHERE title LIKE "%' . $search . '%" OR short_text LIKE "%' . $search . '%" OR full_text LIKE "%' . $search . '%"';
+            $result = $this->_db->query($sql, StdLib_DB::QUERY_MOD_ASSOC);
+            if (isset($result[0])) {
+                $productArray = array();
+                foreach ($result as $value) {
+                    $productArray[] = EK_Catalog_Product::getInstanceByArray($value);
+                }
+                return $productArray;
+            } else
+                return false;
+        } catch (Exception $e) {
+            return false;
+        }
+    }
+
+    public function getAllRubric($parent)
+    {
         try {
             $result = $this->_db->query('SELECT * FROM product_rubric WHERE parent_id=' . $parent, StdLib_DB::QUERY_MOD_ASSOC);
             if (isset($result[0])) {
@@ -31,7 +52,8 @@ class EK_Catalog_ProductCatalog {
         }
     }
 
-    public function getAllProduct($rubric_id) {
+    public function getAllProduct($rubric_id)
+    {
         try {
             $result = $this->_db->query('SELECT * FROM product WHERE product_rubric_id=' . $rubric_id, StdLib_DB::QUERY_MOD_ASSOC);
             if (isset($result[0])) {
@@ -48,7 +70,8 @@ class EK_Catalog_ProductCatalog {
         }
     }
 
-    public function getAllOrder() {
+    public function getAllOrder()
+    {
         try {
             $result = $this->_db->query('SELECT * FROM `order` ORDER BY is_complite, date DESC', StdLib_DB::QUERY_MOD_ASSOC);
             if (isset($result[0])) {
@@ -65,7 +88,8 @@ class EK_Catalog_ProductCatalog {
         }
     }
 
-    public function getAllOrderByUser($login) {
+    public function getAllOrderByUser($login)
+    {
         try {
             $result = $this->_db->query('SELECT * FROM `order` WHERE user_login="' . $login . '" ORDER BY is_complite, date DESC', StdLib_DB::QUERY_MOD_ASSOC);
             if (isset($result[0])) {
