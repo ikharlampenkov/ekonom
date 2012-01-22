@@ -67,6 +67,7 @@ class CatalogController extends Zend_Controller_Action
     {
         $oProduct = EK_Catalog_Product::getInstanceById($this->getRequest()->getParam('id'));
         $this->view->assign('product', $oProduct);
+
         $this->view->assign('galleryList', EK_Gallery_Product::getAllInstance($oProduct));
         $this->view->assign('commentsList', EK_Comments_Product::getAllInstance($oProduct));
         $this->view->assign('productLike', EK_Catalog_ProductLike::getInstanceByProduct($oProduct));
@@ -142,6 +143,7 @@ class CatalogController extends Zend_Controller_Action
             $data = $this->getRequest()->getParam('data');
 
             $oProduct->setTitle($data['title']);
+            $oProduct->setShortTitle($data['short_title']);
             $oProduct->setRubric(EK_Catalog_Rubric::getInstanceById($data['rubric']));
             $oProduct->setCompany(EK_Company_Company::getInstanceById($data['company']));
             $oProduct->setShortText($data['short_text']);
@@ -180,6 +182,7 @@ class CatalogController extends Zend_Controller_Action
             $data = $this->getRequest()->getParam('data');
 
             $oProduct->setTitle($data['title']);
+            $oProduct->setShortTitle($data['short_title']);
             $oProduct->setRubric(EK_Catalog_Rubric::getInstanceById($data['rubric']));
             $oProduct->setCompany(EK_Company_Company::getInstanceById($data['company']));
             $oProduct->setShortText($data['short_text']);

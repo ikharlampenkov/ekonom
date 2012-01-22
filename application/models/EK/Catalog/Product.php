@@ -20,6 +20,11 @@ class EK_Catalog_Product
      * @access protected
      */
     protected $_title;
+
+    /**
+     * @var string
+     */
+    protected $_short_title;
     /**
      * @var TM_FileManager_Image
      * @access protected
@@ -276,11 +281,27 @@ class EK_Catalog_Product
         return $this->_onFirstPage;
     }
 
+    /**
+     * @param string $short_title
+     */
+    public function setShortTitle($short_title)
+    {
+        $this->_short_title = $this->_db->prepareString($short_title);
+    }
+
+    /**
+     * @return string
+     */
+    public function getShortTitle()
+    {
+        return $this->_db->prepareStringToOut($this->_short_title);
+    }
+
     public function insertToDb()
     {
         try {
-            $sql = 'INSERT INTO product (product_rubric_id, title, short_text, full_text, price, company_id, on_first_page)
-                    VALUES (' . $this->_rubric->id . ', "' . $this->_title . '", "' . $this->_shortText . '",
+            $sql = 'INSERT INTO product (product_rubric_id, title, short_title, short_text, full_text, price, company_id, on_first_page)
+                    VALUES (' . $this->_rubric->id . ', "' . $this->_title . '", "' . $this->_short_title . '", "' . $this->_shortText . '",
                            "' . $this->_fullText . '", ' . $this->_price . ', ' . $this->_company->id . ', ' . $this->_onFirstPage . ')';
             $this->_db->query($sql);
 
@@ -303,7 +324,7 @@ class EK_Catalog_Product
     {
         try {
             $sql = 'UPDATE product
-                    SET product_rubric_id=' . $this->_rubric->id . ', title="' . $this->_title . '",
+                    SET product_rubric_id=' . $this->_rubric->id . ', title="' . $this->_title . '", short_title="' . $this->_short_title . '",
                         short_text="' . $this->_shortText . '", full_text="' . $this->_fullText . '",
                         price=' . $this->_price . ', company_id=' . $this->_company->id . ', on_first_page=' . $this->_onFirstPage . '
                     WHERE id=' . $this->_id;
@@ -345,11 +366,11 @@ class EK_Catalog_Product
         }
     }
 
-    public static function getAllInstance($rubric_id, $city=1)
+    public static function getAllInstance($rubric_id, $city = 1)
     {
         try {
             $db = StdLib_DB::getInstance();
-            $sql = 'SELECT product.id AS id, product.title AS title, product_rubric_id, product.img, short_text, full_text, on_first_page, price, company_id
+            $sql = 'SELECT product.id AS id, product.title AS title, short_title, product_rubric_id, product.img, short_text, full_text, on_first_page, price, company_id
                     FROM product, company
                     WHERE product.company_id=company.id
                       AND city_id=' . $city . '
@@ -372,7 +393,7 @@ class EK_Catalog_Product
     {
         try {
             $db = StdLib_DB::getInstance();
-            $sql = 'SELECT product.id AS id, product.title AS title, product_rubric_id, product.img, short_text, full_text, on_first_page, price, company_id
+            $sql = 'SELECT product.id AS id, product.title AS title, short_title, product_rubric_id, product.img, short_text, full_text, on_first_page, price, company_id
                     FROM product, company
                     WHERE product.company_id=company.id
                       AND city_id=' . $city . '
@@ -442,6 +463,7 @@ class EK_Catalog_Product
     {
         $this->setId($result['id']);
         $this->setTitle($result['title']);
+        $this->setShortTitle($result['short_title']);
         $this->setRubric(EK_Catalog_Rubric::getInstanceById($result['product_rubric_id']));
         $this->setImg(new TM_FileManager_Image(Zend_Registry::get('production')->files->path, $result['img']));
         $this->setShortText($result['short_text']);
@@ -526,6 +548,8 @@ class EK_Catalog_Product
             mail($email, 'Прошу отложить товар', $message);
         }
     }
+
+
 }
 
 ?>

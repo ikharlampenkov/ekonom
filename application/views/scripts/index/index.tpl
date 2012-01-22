@@ -26,11 +26,11 @@
     <div id="slider">
         <ul id="slides">
             {foreach from=$bannerList item=banner}
-            <li class="slide">
-                <img src="/banners/{$banner->getBanner()->img->getName()}" alt="{$banner->getBanner()->title}">
+                <li class="slide">
+                    <img src="/banners/{$banner->getBanner()->img->getName()}" alt="{$banner->getBanner()->title}">
 
-                <p class="description"><a href="http://{$banner->getBanner()->link}">{$banner->getBanner()->title}</a></p>
-            </li>
+                    <p class="description"><a href="http://{$banner->getBanner()->link}">{$banner->getBanner()->title}</a></p>
+                </li>
             {/foreach}
         </ul>
     </div>
@@ -60,12 +60,28 @@
     <ul id="actions" class="clearfix">
         {foreach from=$productList item=product}
             <li>
-                <h3><a href="{$this->url(['controller' => 'catalog','action' => 'viewProduct', 'id' => $product->id])}" class="various fancybox.ajax">{$product->title}</a></h3>
-                <a href="{$this->url(['controller' => 'catalog','action' => 'viewProduct', 'id' => $product->id])}" class="various fancybox.ajax"><img src="{if $product->img->getName()}/files/{$product->img->getPreview()}{else}/i/no_foto.png{/if}" alt="{$product->title}"></a>
+                <h3><a href="{$this->url(['controller' => 'catalog','action' => 'viewProduct', 'id' => $product->id])}" class="various fancybox.ajax">{$product->shortTitle}</a></h3>
+                <a href="{$this->url(['controller' => 'catalog','action' => 'viewProduct', 'id' => $product->id])}" class="various fancybox.ajax"><img src="{if $product->img->getName()}/files/{$product->img->getPreview()}{else}/i/no_foto.png{/if}" alt="{$product->shortTitle}"></a>
 
-                {if $product->searchAttribute('discount')}
-                    <div class="discount">{$product->getAttribute('discount')->value}{if $product->searchAttribute('discount_type')}{$product->getAttribute('discount_type')->value}{/if}</div>
-                {/if}
+                <div class="discount">{if $product->searchAttribute('discount')}{$product->getAttribute('discount')->value}{/if}{if $product->searchAttribute('discount_type')}{$product->getAttribute('discount_type')->value}{/if}</div>
+
+                {if_allowed resource="catalog/edit"}
+                    <ul id="company_action_{$product->id}" class="company_action_menu">
+                        {if_allowed resource="catalog/viewGallery"}
+                            <li class="action"><a href="{$this->url(['controller' => 'catalog','action' => 'viewGallery', 'idProduct' => $product->id, 'rubric' => $product->getRubric()->getId()])}">галерея</a></li>
+                        {/if_allowed}
+                        {if_allowed resource="catalog/viewComments"}
+                            <li class="action"><a href="{$this->url(['controller' => 'catalog','action' => 'viewComments', 'idProduct' => $product->id, 'rubric' => $product->getRubric()->getId()])}">комментарии</a></li>
+                        {/if_allowed}
+                        {if_allowed resource="catalog/edit"}
+                            <li class="action"><img src="/i/edit.png"/>&nbsp;<a href="{$this->url(['controller' => 'catalog','action' => 'edit', 'id' => $product->getId(), 'rubric' => $product->getRubric()->getId()])}">редактировать</a></li>
+                        {/if_allowed}
+                        {if_allowed resource="catalog/delete"}
+                            <li class="action"><img src="/i/delete.png"/>&nbsp;<a href="{$this->url(['controller' => 'catalog','action' => 'delete', 'id' => $product->getId(), 'rubric' => $product->getRubric()->getId()])}" onclick="return confirmDelete('{$product->title}');" style="color: #830000">удалить</a></li>
+                        {/if_allowed}
+                    </ul>
+                {/if_allowed}
+
             </li>
         {/foreach}
     </ul>
@@ -97,15 +113,15 @@
     </script>
 
 {*
-    <div id="paginator">
-        <a href="/actions?page=1">&larr;</a>
-        <ul class="pages-list">
-            <li><a href="/actions?page=1">1</a></li>
-            <li><a href="/actions?page=2" class="active">2</a></li>
-            <li><a href="/actions?page=3">3</a></li>
-        </ul>
-        <a href="/actions?page=3">&rarr;</a>
-    </div>
+<div id="paginator">
+<a href="/actions?page=1">&larr;</a>
+<ul class="pages-list">
+<li><a href="/actions?page=1">1</a></li>
+<li><a href="/actions?page=2" class="active">2</a></li>
+<li><a href="/actions?page=3">3</a></li>
+</ul>
+<a href="/actions?page=3">&rarr;</a>
+</div>
 *}
 {/if}
 
@@ -137,16 +153,16 @@
                         </script>
 
                     {*
-                                            <a target="_blank" title="Поделиться в Facebook" class="facebook" href="#" rel="nofollow"
-                                               onclick="window.open('http://www.facebook.com/sharer.php?u=http://ekonom.pro/&amp;t=Ekonom.pro', '_blank', 'scrollbars=0, resizable=1, menubar=0, left=200, top=200, width=550, height=440, toolbar=0, status=0');return false">
-                                            </a>
-                                            <a target="_blank" title="Добавить в Twitter" class="twitter" href="#" rel="nofollow"
-                                               onclick="window.open('http://twitter.com/share?text=Ekonom.pro&amp;url=http://ekonom.pro/', '_blank', 'scrollbars=0, resizable=1, menubar=0, left=200, top=200, width=550, height=440, toolbar=0, status=0');return false">
-                                            </a>
-                                            <a target="_blank" title="Поделиться В Контакте" class="vkontakte" href="#" rel="nofollow"
-                                               onclick="window.open('http://vkontakte.ru/share.php?url=http://ekonom.pro/', '_blank', 'scrollbars=0, resizable=1, menubar=0, left=200, top=200, width=554, height=421, toolbar=0, status=0');return false">
-                                            </a>
-                    *}
+<a target="_blank" title="Поделиться в Facebook" class="facebook" href="#" rel="nofollow"
+onclick="window.open('http://www.facebook.com/sharer.php?u=http://ekonom.pro/&amp;t=Ekonom.pro', '_blank', 'scrollbars=0, resizable=1, menubar=0, left=200, top=200, width=550, height=440, toolbar=0, status=0');return false">
+</a>
+<a target="_blank" title="Добавить в Twitter" class="twitter" href="#" rel="nofollow"
+onclick="window.open('http://twitter.com/share?text=Ekonom.pro&amp;url=http://ekonom.pro/', '_blank', 'scrollbars=0, resizable=1, menubar=0, left=200, top=200, width=550, height=440, toolbar=0, status=0');return false">
+</a>
+<a target="_blank" title="Поделиться В Контакте" class="vkontakte" href="#" rel="nofollow"
+onclick="window.open('http://vkontakte.ru/share.php?url=http://ekonom.pro/', '_blank', 'scrollbars=0, resizable=1, menubar=0, left=200, top=200, width=554, height=421, toolbar=0, status=0');return false">
+</a>
+*}
                     </span>
 
             <div id="plusone">

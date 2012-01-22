@@ -2,7 +2,50 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d0b1c174-27bf-4d01-a853-aaef73e1aaba" name="Default" comment="">
+      <change type="DELETED" beforePath="F:\www\ekonom\runtime\templates_c\08ccb423618ea4731483238e02e18d7255cb88d9.file.edit-place.tpl.php" afterPath="" />
+      <change type="DELETED" beforePath="F:\www\ekonom\runtime\templates_c\12057dd814e4da6628fcd8a285097da7ce8dc950.file.add-gallery.tpl.php" afterPath="" />
+      <change type="DELETED" beforePath="F:\www\ekonom\runtime\templates_c\1233455740c9efe9de375974f87ca15f934cbd6c.file.index.tpl.php" afterPath="" />
+      <change type="DELETED" beforePath="F:\www\ekonom\runtime\templates_c\1dbf3c4f2f8d7f578c38270eebcbe1876ec7f588.file.add-comments.ajax.tpl.php" afterPath="" />
+      <change type="DELETED" beforePath="F:\www\ekonom\runtime\templates_c\24df40ffa7f00fc7b929cf5e8e71b08fa18e026c.file.view-gallery.tpl.php" afterPath="" />
+      <change type="DELETED" beforePath="F:\www\ekonom\runtime\templates_c\2ca4d9fb8fa4f27acecf2d1ea2f12e9837e0db14.file.index.tpl.php" afterPath="" />
+      <change type="DELETED" beforePath="F:\www\ekonom\runtime\templates_c\2d6ef4ca997c21602a120368d58adb0c88c68517.file.edit.tpl.php" afterPath="" />
+      <change type="DELETED" beforePath="F:\www\ekonom\runtime\templates_c\4528c0f58b5ad95b2e77897251943699034d7647.file.index.tpl.php" afterPath="" />
+      <change type="DELETED" beforePath="F:\www\ekonom\runtime\templates_c\4711e375810acdb84af75df1630f88461af3fc17.file.edit.tpl.php" afterPath="" />
+      <change type="DELETED" beforePath="F:\www\ekonom\runtime\templates_c\4930df03c4f53f8e018377f92315f9fb07706314.file.share.ajax.tpl.php" afterPath="" />
+      <change type="DELETED" beforePath="F:\www\ekonom\runtime\templates_c\4a2d248229c0e6452704f9a7ccc41e7a5c93b3ee.file.view.tpl.php" afterPath="" />
+      <change type="DELETED" beforePath="F:\www\ekonom\runtime\templates_c\4ae7eae07dd76826569daf4fb61833d2d9c24ad3.file.edit-gallery.tpl.php" afterPath="" />
+      <change type="DELETED" beforePath="F:\www\ekonom\runtime\templates_c\633c28ddf0345904e135763bae3bf8dc93318da6.file.view-gallery.tpl.php" afterPath="" />
+      <change type="DELETED" beforePath="F:\www\ekonom\runtime\templates_c\745bad7d02d157fda699307c36362385ac7b42a3.file.view-place.tpl.php" afterPath="" />
+      <change type="DELETED" beforePath="F:\www\ekonom\runtime\templates_c\a5c68603bbe346bf65e3bede36b8e77b606e39aa.file.index.tpl.php" afterPath="" />
+      <change type="DELETED" beforePath="F:\www\ekonom\runtime\templates_c\aa2f40d2fed0221f1a1736ce280c0f55fb16dedd.file.view-resource.tpl.php" afterPath="" />
+      <change type="DELETED" beforePath="F:\www\ekonom\runtime\templates_c\ad14f30a599512452bdfb8efaf3a7effb01cfff5.file.view-comments.ajax.tpl.php" afterPath="" />
+      <change type="DELETED" beforePath="F:\www\ekonom\runtime\templates_c\b7d0c95d218e46d4c40cd6c7fbf5579da2689052.file.reserve.ajax.tpl.php" afterPath="" />
+      <change type="DELETED" beforePath="F:\www\ekonom\runtime\templates_c\b9b77a6fb8ced9c3ee56826c39b110e929a779ba.file.add-like.ajax.tpl.php" afterPath="" />
+      <change type="DELETED" beforePath="F:\www\ekonom\runtime\templates_c\c77ef0bded455b3c083406fd25ecdc9632c15307.file.index.tpl.php" afterPath="" />
+      <change type="DELETED" beforePath="F:\www\ekonom\runtime\templates_c\d492600fb384683736d6bc2f2539f0a0da3fef35.file.edit-gallery.tpl.php" afterPath="" />
+      <change type="DELETED" beforePath="F:\www\ekonom\runtime\templates_c\eb2b16b47d3eeaa15f66ac8eb95c4fb94fd76ffa.file.add-resource.tpl.php" afterPath="" />
+      <change type="DELETED" beforePath="F:\www\ekonom\runtime\templates_c\f1cd2f2ba3c0923bb94a9e4f4ff2770329493840.file.show-role-acl.tpl.php" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/ekonom.iml" afterPath="$PROJECT_DIR$/.idea/ekonom.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/CatalogController.php" afterPath="$PROJECT_DIR$/application/controllers/CatalogController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/models/EK/Catalog/Product.php" afterPath="$PROJECT_DIR$/application/models/EK/Catalog/Product.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/scripts/catalog/add.tpl" afterPath="$PROJECT_DIR$/application/views/scripts/catalog/add.tpl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/scripts/catalog/edit.tpl" afterPath="$PROJECT_DIR$/application/views/scripts/catalog/edit.tpl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/scripts/catalog/index.tpl" afterPath="$PROJECT_DIR$/application/views/scripts/catalog/index.tpl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/scripts/catalog/view-product.ajax.tpl" afterPath="$PROJECT_DIR$/application/views/scripts/catalog/view-product.ajax.tpl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/scripts/company/view.tpl" afterPath="$PROJECT_DIR$/application/views/scripts/company/view.tpl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/scripts/index/index.tpl" afterPath="$PROJECT_DIR$/application/views/scripts/index/index.tpl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/scripts/search/index.tpl" afterPath="$PROJECT_DIR$/application/views/scripts/search/index.tpl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public_html/css/main.css" afterPath="$PROJECT_DIR$/public_html/css/main.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/runtime/logs/syslog.txt" afterPath="$PROJECT_DIR$/runtime/logs/syslog.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/runtime/templates_c/01cb5fc755dd451db9b876f36bb7a73be84e01f7.file.edit.tpl.php" afterPath="$PROJECT_DIR$/runtime/templates_c/01cb5fc755dd451db9b876f36bb7a73be84e01f7.file.edit.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/runtime/templates_c/50476d9be6c10e4d5566fb6927d6edf719c8a09a.file.view-product.ajax.tpl.php" afterPath="$PROJECT_DIR$/runtime/templates_c/50476d9be6c10e4d5566fb6927d6edf719c8a09a.file.view-product.ajax.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/runtime/templates_c/80ff11feedc4a0ba005e0c5733e3e115c1477d3b.file.layout.tpl.php" afterPath="$PROJECT_DIR$/runtime/templates_c/80ff11feedc4a0ba005e0c5733e3e115c1477d3b.file.layout.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/runtime/templates_c/94b43447258ea62d6154766d1bbba1c4afdc3e80.file.index.tpl.php" afterPath="$PROJECT_DIR$/runtime/templates_c/94b43447258ea62d6154766d1bbba1c4afdc3e80.file.index.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/runtime/templates_c/9df79449238660fb8315d8c5e46bbc13abd1b136.file.child-block.tpl.php" afterPath="$PROJECT_DIR$/runtime/templates_c/9df79449238660fb8315d8c5e46bbc13abd1b136.file.child-block.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/runtime/templates_c/a943f4c37583ea01c7979b69872ea4115840ecec.file.index.tpl.php" afterPath="$PROJECT_DIR$/runtime/templates_c/a943f4c37583ea01c7979b69872ea4115840ecec.file.index.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/runtime/templates_c/ca35f7a3852ec8c1a5c7655a0831a90ff115e8c3.file.index.tpl.php" afterPath="$PROJECT_DIR$/runtime/templates_c/ca35f7a3852ec8c1a5c7655a0831a90ff115e8c3.file.index.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/runtime/templates_c/dc7d22eba3ad537ec318f48d3f4df25db84e0df2.file.error.tpl.php" afterPath="$PROJECT_DIR$/runtime/templates_c/dc7d22eba3ad537ec318f48d3f4df25db84e0df2.file.error.tpl.php" />
     </list>
     <list id="ad86b5e8-338a-4c37-be49-497b5521d5ba" name="Failed commit: Default" comment="Интеграция интерфейса" />
     <ignored path="ekonom.iws" />
@@ -57,22 +100,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/application/plugins/ShowCityList.php" />
-        <option value="$PROJECT_DIR$/public_html/js/ajax-form.js" />
-        <option value="$PROJECT_DIR$/application/models/EK/Catalog/EK_Catalog_ProductLike.php" />
-        <option value="$PROJECT_DIR$/application/controllers/CatalogController.php" />
         <option value="$PROJECT_DIR$/application/models/EK/Catalog/ProductLike.php" />
         <option value="$PROJECT_DIR$/application/controllers/IndexController.php" />
-        <option value="$PROJECT_DIR$/application/views/scripts/catalog/index.tpl" />
-        <option value="$PROJECT_DIR$/application/views/scripts/company/view.tpl" />
-        <option value="$PROJECT_DIR$/application/views/scripts/search/index.tpl" />
-        <option value="$PROJECT_DIR$/application/views/scripts/catalog/view-product.ajax.tpl" />
         <option value="$PROJECT_DIR$/public_html/js/gallery.js" />
         <option value="$PROJECT_DIR$/application/layouts/scripts/layout.tpl" />
         <option value="$PROJECT_DIR$/public_html/css/easySlider.css" />
-        <option value="$PROJECT_DIR$/public_html/css/main.css" />
-        <option value="$PROJECT_DIR$/application/views/scripts/index/index.tpl" />
         <option value="$PROJECT_DIR$/application/views/scripts/catalog/child-block.tpl" />
+        <option value="$PROJECT_DIR$/application/views/scripts/catalog/edit.tpl" />
+        <option value="$PROJECT_DIR$/application/models/EK/Catalog/Product.php" />
+        <option value="$PROJECT_DIR$/application/controllers/CatalogController.php" />
+        <option value="$PROJECT_DIR$/application/views/scripts/catalog/index.tpl" />
+        <option value="$PROJECT_DIR$/application/views/scripts/company/view.tpl" />
+        <option value="$PROJECT_DIR$/application/views/scripts/index/index.tpl" />
+        <option value="$PROJECT_DIR$/application/views/scripts/search/index.tpl" />
+        <option value="$PROJECT_DIR$/application/views/scripts/catalog/add.tpl" />
+        <option value="$PROJECT_DIR$/public_html/css/main.css" />
+        <option value="$PROJECT_DIR$/application/views/scripts/catalog/view-product.ajax.tpl" />
       </list>
     </option>
   </component>
@@ -133,6 +176,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -457,7 +501,59 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="search" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ekonom" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ekonom" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scripts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="index" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ekonom" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ekonom" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scripts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="company" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -653,7 +749,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="Favorites" />
     </panes>
   </component>
@@ -666,6 +761,9 @@
   </component>
   <component name="PublishConfig">
     <servers>
+      <server id="20d4e864-8479-4d4a-9e6d-c85667f5b709">
+        <serverdata />
+      </server>
       <server id="4151daf2-ac1c-4e77-b1cf-19d1d98c6a14">
         <serverdata>
           <mappings>
@@ -774,11 +872,12 @@
     <editor active="false" />
     <layout>
       <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32950193" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32950193" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.30747128" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3792735" sideWeight="0.6704981" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3888889" sideWeight="0.6925287" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32950193" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -788,7 +887,6 @@
       <window_info id="Phing Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32950193" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32950193" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -886,44 +984,9 @@
     </PATH>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/application/models/EK/Catalog/Product.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="320" column="5" selection-start="4590" selection-end="6525" vertical-scroll-proportion="0.8498528" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/CatalogController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="128" column="40" selection-start="5147" selection-end="5158" vertical-scroll-proportion="0.016898608" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/scripts/catalog/add-like.ajax.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/IndexController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="92" selection-start="1075" selection-end="1075" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/models/EK/Catalog/ProductLike.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="188" column="32" selection-start="4712" selection-end="4712" vertical-scroll-proportion="0.3670265" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public_html/fancybox/source/jquery.fancybox.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="128" column="21" selection-start="3868" selection-end="3877" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/scripts/company/view.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="137" column="17" selection-start="5629" selection-end="5629" vertical-scroll-proportion="-26.807692" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/scripts/search/index.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="68" column="17" selection-start="2833" selection-end="2833" vertical-scroll-proportion="-33.76923" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public_html/js/gallery.js">
@@ -931,47 +994,94 @@
         <state line="65" column="58" selection-start="3029" selection-end="3029" vertical-scroll-proportion="0.7803181" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/scripts/catalog/index.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="154" column="58" selection-start="7626" selection-end="7676" vertical-scroll-proportion="0.79183674" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/scripts/catalog/view-product.ajax.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="68" column="136" selection-start="3236" selection-end="3240" vertical-scroll-proportion="0.01734694" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/layouts/scripts/layout.tpl">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="102" column="62" selection-start="4743" selection-end="4743" vertical-scroll-proportion="0.0">
+        <state line="102" column="62" selection-start="4743" selection-end="4743" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public_html/js/easySlider1.7.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="51" column="34" selection-start="1235" selection-end="1235" vertical-scroll-proportion="0.016898608" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/scripts/catalog/child-block.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="10" selection-start="426" selection-end="426" vertical-scroll-proportion="0.17119838" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/scripts/catalog/edit.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="17" selection-start="659" selection-end="659" vertical-scroll-proportion="-8.5">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public_html/css/main.css">
+    <entry file="file://$PROJECT_DIR$/application/controllers/CatalogController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="590" column="0" selection-start="9557" selection-end="9558" vertical-scroll-proportion="0.016683023">
+        <state line="206" column="50" selection-start="8576" selection-end="8576" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/scripts/catalog/index.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="126" column="187" selection-start="6940" selection-end="6940" vertical-scroll-proportion="-8.423077">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/scripts/catalog/view-comments.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="32" selection-start="61" selection-end="61" vertical-scroll-proportion="-1.3076923">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/scripts/index/index.tpl">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="74" column="41" selection-start="2485" selection-end="2485" vertical-scroll-proportion="0.01734694">
+        <state line="79" column="254" selection-start="3795" selection-end="3795" vertical-scroll-proportion="-8.423077">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public_html/js/easySlider1.7.js">
+    <entry file="file://$PROJECT_DIR$/application/views/scripts/search/index.tpl">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="51" column="34" selection-start="1235" selection-end="1235" vertical-scroll-proportion="0.016898608">
+        <state line="25" column="278" selection-start="1220" selection-end="1220" vertical-scroll-proportion="-9.423077">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/scripts/catalog/child-block.tpl">
+    <entry file="file://$PROJECT_DIR$/application/views/scripts/catalog/add.tpl">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="10" selection-start="426" selection-end="426" vertical-scroll-proportion="0.17119838">
+        <state line="54" column="14" selection-start="2484" selection-end="2484" vertical-scroll-proportion="-23.307692">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/models/EK/Catalog/Product.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="459" column="5" selection-start="11020" selection-end="11020" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/scripts/company/view.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="201" selection-start="284" selection-end="284" vertical-scroll-proportion="0.052040815">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public_html/css/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="877" column="18" selection-start="14633" selection-end="14633" vertical-scroll-proportion="0.41851106">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/scripts/catalog/view-product.ajax.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="34" column="77" selection-start="1589" selection-end="1589" vertical-scroll-proportion="0.58979595">
           <folding />
         </state>
       </provider>

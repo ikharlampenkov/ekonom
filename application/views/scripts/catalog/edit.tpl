@@ -9,6 +9,10 @@
                 <td class="ttovar"><input name="data[title]" value="{$product->title}"/></td>
             </tr>
             <tr>
+                <td class="ttovar">Сокращенное название</td>
+                <td class="ttovar"><input name="data[short_title]" value="{$product->shortTitle}"/></td>
+            </tr>
+            <tr>
                 <td class="ttovar">Компания</td>
                 <td class="ttovar">
                     <select name="data[company]">
