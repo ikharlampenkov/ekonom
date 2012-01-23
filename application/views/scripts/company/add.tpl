@@ -42,6 +42,10 @@
             <td class="ttovar_title">Постоянная скидка</td>
             <td class="ttovar"><input name="data[constant_discount]" value="{$company->constantDiscount}" style="width: 50px;"/>%</td>
         </tr>
+        <tr>
+            <td class="ttovar">Мультигород</td>
+            <td class="ttovar"><input type="checkbox" style="width: 14px;" name="data[multi_city]" {if $company->multiCity}checked="checked"{/if}"/></td>
+        </tr>
     </table>
     <input id="save" name="save" type="submit" value="Сохранить"/>
 </form>
