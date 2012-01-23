@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.0.9, created on 2012-01-23 19:54:33
+<?php /* Smarty version Smarty-3.0.9, created on 2012-01-23 20:06:48
          compiled from "F:\www\ekonom\application/views/scripts\index/index.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:26274f1d58899a1d46-66166486%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_smarty_tpl->decodeProperties(array (
     '94b43447258ea62d6154766d1bbba1c4afdc3e80' => 
     array (
       0 => 'F:\\www\\ekonom\\application/views/scripts\\index/index.tpl',
-      1 => 1327323183,
+      1 => 1327323901,
       2 => 'file',
     ),
   ),

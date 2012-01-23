@@ -54,7 +54,7 @@
 
             {if $company->ofSite}
                 <h3>Официальный сайт</h3>
-            
+
                 <p><a href="http://{$company->ofSite}" target="_blank">{$company->ofSite}</a></p>
             {/if}
 
@@ -134,8 +134,8 @@
         scrolling: 'no',
         afterShow: updatePlusOne,
         afterShow: function () {
-                $('.cloud-zoom, .cloud-zoom-gallery').CloudZoom();
-                }
+        $('.cloud-zoom, .cloud-zoom-gallery').CloudZoom();
+        }
         });
         });
     </script>
@@ -146,6 +146,8 @@
 
 <aside id="sidebar">
 {if $bannerList!==false}
+
+{*
     {foreach from=$bannerList item=banner}
         <section id="adv">
             <a href="http://{$banner->getBanner()->link}">
@@ -153,6 +155,39 @@
             </a>
         </section>
     {/foreach}
+    *}
+
+    <div id="slider-wrapper-r">
+        <div id="slider-r">
+            <ul id="slides">
+                {foreach from=$bannerList item=banner}
+                    <li class="slide">
+                        <a href="http://{$banner->getBanner()->link}">
+                            <img src="/banners/{$banner->getBanner()->img->getName()}" alt="{$banner->getBanner()->title}">
+                        </a>
+                    </li>
+                {/foreach}
+            </ul>
+        </div>
+        <div id="shadow"></div>
+    </div>
+
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+        $('#slider-r').easySlider({
+        auto: true,
+        pause: {$topPlace->changeTime}*1000,
+        continuous: true,
+        controlsShow: false,
+        prevId: 'previous',
+        prevText: '',
+        nextId: 'next',
+        nextText: ''
+        });
+        });
+    </script>
+
 {/if}
     <br/>
 {if $bannerListBottom!==false}
