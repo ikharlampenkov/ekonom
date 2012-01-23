@@ -287,7 +287,7 @@ class EK_Company_Company
     {
         try {
             $sql = 'INSERT INTO company(title, city_id, multi_city, description, file, order_email, ofsite, constant_discount)
-                    VALUES ("' . $this->_title . '", ' . $this->_city->getId() . ', ' . $this->_multiCity . '
+                    VALUES ("' . $this->_title . '", ' . $this->_city->getId() . ', ' . $this->_multiCity . ',
                             "' . $this->_description . '", "", "' . $this->_orderEmail . '",
                             "' . $this->_ofSite . '", "' . $this->_constantDiscount . '")';
             $this->_db->query($sql);
