@@ -169,7 +169,6 @@
                 {/foreach}
             </ul>
         </div>
-        <div id="shadow"></div>
     </div>
 
 
@@ -187,16 +186,36 @@
         });
         });
     </script>
-
 {/if}
     <br/>
 {if $bannerListBottom!==false}
-    {foreach from=$bannerListBottom item=banner}
-        <section id="adv">
-            <a href="http://{$banner->getBanner()->link}">
-                <img src="/banners/{$banner->getBanner()->img->getName()}" width="187" height="357" alt="{$banner->getBanner()->title}"/>
-            </a>
-        </section>
-    {/foreach}
+    <div id="slider-wrapper-rb">
+        <div id="slider-rb">
+            <ul id="slides-b">
+                {foreach from=$bannerListBottom item=banner}
+                    <li class="slide">
+                        <a href="http://{$banner->getBanner()->link}">
+                            <img src="/banners/{$banner->getBanner()->img->getName()}" width="187" height="357" alt="{$banner->getBanner()->title}"/>
+                        </a>
+                    </li>
+                {/foreach}
+            </ul>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+        $('#slider-rb').easySlider({
+        auto: true,
+        pause: {$bottomPlace->changeTime}*1000,
+        continuous: true,
+        controlsShow: false,
+        prevId: 'previous',
+        prevText: '',
+        nextId: 'next',
+        nextText: ''
+        });
+        });
+    </script>
 {/if}
 </aside>
