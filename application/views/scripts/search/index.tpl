@@ -4,6 +4,10 @@
 
 {if $productList || $companyList || $rubricList}
 
+    {if $productList || $rubricList}
+    <h1 class="heading">Товары:</h1>
+    {/if}
+
     {if $rubricList !== false}
         <ul style="list-style: none;">
             {foreach from=$rubricList item=rubric}
@@ -18,8 +22,8 @@
         <ul id="companies" class="clearfix shop-actions">
             {foreach from=$productList item=product}
                 <li>
-                    <h3><a href="{$this->url(['controller' => 'catalog','action' => 'viewProduct', 'id' => $product->id])}" class="various fancybox.ajax">{$product->title}</a></h3>
-                    <a href="{$this->url(['controller' => 'catalog','action' => 'viewProduct', 'id' => $product->id])}" class="various fancybox.ajax"><img src="{if $product->img->getName()}/files/{$product->img->getPreview()}{else}/i/no_foto.png{/if}" alt="{$product->title}"></a>
+                    <h3><a href="{$this->url(['controller' => 'catalog','action' => 'viewProduct', 'id' => $product->id])}" class="various fancybox.ajax">{$product->shortTitle}</a></h3>
+                    <a href="{$this->url(['controller' => 'catalog','action' => 'viewProduct', 'id' => $product->id])}" class="various fancybox.ajax"><img src="{if $product->img->getName()}/files/{$product->img->getPreview()}{else}/i/no_foto.png{/if}" alt="{$product->shortTitle}"></a>
 
                     <div class="discount">{if $product->searchAttribute('discount')}{$product->getAttribute('discount')->value}{/if}{if $product->searchAttribute('discount_type')}{$product->getAttribute('discount_type')->value}{/if}</div>
                 </li>
@@ -30,6 +34,9 @@
     {/if}
 
     {if $companyList!==false}
+
+    <h1 class="heading">Организации:</h1>
+
         <ul id="companies" class="clearfix">
 
             {foreach from=$companyList item=company}

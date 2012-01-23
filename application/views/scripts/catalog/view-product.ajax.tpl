@@ -9,21 +9,31 @@
                     <h3>{$product->title}</h3>
 
                 {if $product->searchAttribute('terms_of_stock')}
-                    <p>{$product->getAttribute('terms_of_stock')->value}</p>
+                    <p class="">{$product->getAttribute('terms_of_stock')->value}</p>
                 {/if}
                 </section>
 
+            {if $product->searchAttribute('description')}
                 <section class="description">
-                    <h3>Краткое описание магазина или товара</h3>
+                    <h3>Краткое описание</h3>
 
-                    <p>{$product->fullText}</p>
+                    <p>{$product->getAttribute('description')->value}</p>
+                </section>
+            {/if}
+
+                <section class="description">
+                    <h3>Компания</h3>
+
+                    <p><a href="{$this->url(['controller' => 'company','action' => 'view', 'id' => $product->getCompany()->id])}">{$product->getCompany()->title}</a></p>
                 </section>
 
                 <section class="discount clearfix">
                 {if $product->searchAttribute('discount')}
                     <h5>Скидка: <span class="constant-discount-red">{$product->getAttribute('discount')->value}{if $product->searchAttribute('discount_type')}{$product->getAttribute('discount_type')->value}{/if}</span></h5>
                 {/if}
-                    <del class="old-price">{$product->price} р</del>
+                {if $product->searchAttribute('old_price')}
+                    <del class="old-price">{$product->getAttribute('old_price')->value}&nbsp;р</del>
+                {/if}
                 {if $product->searchAttribute('second_price')}
                     <ins class="new-price">{$product->getAttribute('second_price')->value}&nbsp;р</ins>
                 {/if}
@@ -66,8 +76,8 @@
                     {foreach from=$galleryList item=gallery name=_gallery}
                         {if $smarty.foreach._gallery.first}
                             <div class="big-image">
-                                <a href='/gallery{$gallery->file->getSubPath()}/{$gallery->file->getName()}' class='cloud-zoom' id='zoom' rel="position: 'inside' , showTitle: false, adjustX:0, adjustY:0" style="text-align: center;">
-                                    <img src="/gallery{$gallery->file->getSubPath()}/{$gallery->file->getName()}" height="270" alt="{$gallery->title}" data-preview="/gallery{$gallery->file->getSubPath()}/{$gallery->file->getPreview()}" style="margin: 0;"/>
+                                <a href='{$gallery->file->getLastFolder()}{$gallery->file->getSubPath()}/{$gallery->file->getName()}' class='cloud-zoom' id='zoom' rel="position: 'inside' , showTitle: false, adjustX:0, adjustY:0" style="text-align: center;">
+                                    <img src="{$gallery->file->getLastFolder()}{$gallery->file->getSubPath()}/{$gallery->file->getName()}" height="270" alt="{$gallery->title}" data-preview="{$gallery->file->getLastFolder()}{$gallery->file->getSubPath()}/{$gallery->file->getPreview()}" style="margin: 0;"/>
                                 </a>
                                 <h5 class="title">{$gallery->title}</h5>
                                 <a href="#previous" class="previous"></a>
@@ -78,8 +88,8 @@
                         <ul class="previews clearfix">
                             {else}
                             <li>
-                                <a href="/gallery{$gallery->file->getSubPath()}/{$gallery->file->getName()}" title="{$gallery->title}">
-                                    <img src="/gallery{$gallery->file->getSubPath()}/{$gallery->file->getPreview()}" alt="{$gallery->title}" class="shadow-image"/>
+                                <a href="{$gallery->file->getLastFolder()}{$gallery->file->getSubPath()}/{$gallery->file->getName()}" title="{$gallery->title}">
+                                    <img src="{$gallery->file->getLastFolder()}{$gallery->file->getSubPath()}/{$gallery->file->getPreview()}" alt="{$gallery->title}" class="shadow-image"/>
                                 </a>
                             </li>
                         {/if}
@@ -90,7 +100,7 @@
                 </div>
             {/if}
 
-                <a href="{$this->url(['controller' => $controller,'action' => 'reserve', 'idProduct' => $product->id])}" class="button reserve">Отложить</a>
+                <a href="{$this->url(['controller' => $controller,'action' => 'reserve', 'idProduct' => $product->id])}" class="button reserve">Заказать</a>
                 <a href="{$this->url(['controller' => $controller,'action' => 'share', 'idProduct' => $product->id])}" class="button share-with-friend">Поделиться</a>
 
                 <div class="product-like">Нравиться? <a href="{$this->url(['controller' => $controller,'action' => 'addLike', 'idProduct' => $product->id, 'like' => 1, 'unlike' => 0])}" class="like">Да</a> {if is_object($productLike)}{$productLike->like}{/if} / <a href="{$this->url(['controller' => $controller,'action' => 'addLike', 'idProduct' => $product->id, 'like' => 0, 'unlike' => 1])}" class="unlike">Нет</a> {if is_object($productLike)}{$productLike->unlike}{/if}</div>

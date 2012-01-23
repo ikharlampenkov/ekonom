@@ -1,8 +1,141 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7151d89e-e84a-4788-b442-a723b5b4a6eb" name="New changelist" comment="Позиционирование картинки">
+    <list default="true" id="7151d89e-e84a-4788-b442-a723b5b4a6eb" name="New changelist" comment="Картинка товара в галлереи">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/banners/img_18-01-2012-15-22-25.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/banners/img_18-01-2012-15-22-25_prew.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/banners/img_18-01-2012-20-32-18.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/banners/img_18-01-2012-20-32-18_prew.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/files/img_13-01-2012-14-01-39.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/files/img_13-01-2012-14-01-39_prew.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/files/img_16-01-2012-15-15-01.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/files/img_16-01-2012-15-15-01_prew.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/files/img_17-01-2012-13-07-07.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/files/img_17-01-2012-13-07-07_prew.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/files/img_17-01-2012-14-19-19.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/files/img_17-01-2012-14-19-19_prew.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/files/img_17-01-2012-14-49-17.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/files/img_17-01-2012-14-49-17_prew.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/files/img_17-01-2012-14-49-18.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/files/img_17-01-2012-14-49-18_prew.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/files/img_17-01-2012-15-07-25.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/files/img_17-01-2012-15-07-25_prew.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/files/img_17-01-2012-15-07-26.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/files/img_17-01-2012-15-07-26_prew.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/files/img_18-01-2012-14-02-39.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/files/img_18-01-2012-14-02-39_prew.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/files/img_18-01-2012-15-47-39.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/files/img_18-01-2012-15-47-39_prew.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/files/img_18-01-2012-16-19-33.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/files/img_18-01-2012-16-19-33_prew.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/files/img_18-01-2012-16-36-36.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/files/img_18-01-2012-16-36-36_prew.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/files/img_18-01-2012-16-59-50.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/files/img_18-01-2012-16-59-50_prew.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/files/img_18-01-2012-18-08-32.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/files/img_18-01-2012-18-08-32_prew.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/files/img_18-01-2012-18-16-23.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/files/img_18-01-2012-18-16-23_prew.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/files/img_18-01-2012-18-22-38.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/files/img_18-01-2012-18-22-38_prew.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/files/img_18-01-2012-18-34-16.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/files/img_18-01-2012-18-34-16_prew.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/files/img_18-01-2012-18-40-04.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/files/img_18-01-2012-18-40-04_prew.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/gallery/company/img_16-01-2012-20-40-57.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/gallery/company/img_16-01-2012-20-40-57_prew.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/gallery/company/img_16-01-2012-20-43-38.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/gallery/company/img_16-01-2012-20-43-38_prew.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/gallery/company/img_16-01-2012-20-46-08.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/gallery/company/img_16-01-2012-20-46-08_prew.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/gallery/company/img_16-01-2012-20-47-52.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/gallery/company/img_16-01-2012-20-47-52_prew.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/gallery/company/img_16-01-2012-20-52-12.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/gallery/company/img_16-01-2012-20-52-12_prew.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/gallery/company/img_16-01-2012-21-09-28.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/gallery/company/img_16-01-2012-21-09-28_prew.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/gallery/product/img_13-01-2012-14-03-04.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/gallery/product/img_13-01-2012-14-03-04_prew.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/gallery/product/img_13-01-2012-14-04-22.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/gallery/product/img_13-01-2012-14-04-22_prew.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/gallery/product/img_13-01-2012-14-34-26.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/gallery/product/img_13-01-2012-14-34-26_prew.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/gallery/product/img_13-01-2012-15-03-08.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/gallery/product/img_13-01-2012-15-03-08_prew.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/gallery/product/img_17-01-2012-15-08-17.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/gallery/product/img_17-01-2012-15-08-17_prew.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/gallery/product/img_18-01-2012-14-03-35.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/gallery/product/img_18-01-2012-14-03-35_prew.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/gallery/product/img_18-01-2012-14-13-21.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/gallery/product/img_18-01-2012-14-13-21_prew.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/gallery/product/img_18-01-2012-14-15-50.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/gallery/product/img_18-01-2012-14-15-50_prew.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/gallery/product/img_18-01-2012-16-38-15.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/gallery/product/img_18-01-2012-16-38-15_prew.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/gallery/product/img_18-01-2012-16-39-30.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/gallery/product/img_18-01-2012-16-39-30_prew.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/gallery/product/img_18-01-2012-16-39-42.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/gallery/product/img_18-01-2012-16-39-42_prew.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/gallery/product/img_18-01-2012-18-18-34.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/gallery/product/img_18-01-2012-18-18-34_prew.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/gallery/product/img_18-01-2012-18-19-30.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/gallery/product/img_18-01-2012-18-19-30_prew.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/gallery/product/img_18-01-2012-18-25-44.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/gallery/product/img_18-01-2012-18-25-44_prew.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/gallery/product/img_18-01-2012-18-34-34.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/gallery/product/img_18-01-2012-18-34-34_prew.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/gallery/product/img_18-01-2012-18-40-28.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/gallery/product/img_18-01-2012-18-40-28_prew.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/~Documents/htdocs.zip" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/js/easySlider1.7.js" />
+      <change type="DELETED" beforePath="E:\www\ekonom\runtime\templates_c\08ccb423618ea4731483238e02e18d7255cb88d9.file.edit-place.tpl.php" afterPath="" />
+      <change type="DELETED" beforePath="E:\www\ekonom\runtime\templates_c\12057dd814e4da6628fcd8a285097da7ce8dc950.file.add-gallery.tpl.php" afterPath="" />
+      <change type="DELETED" beforePath="E:\www\ekonom\runtime\templates_c\1233455740c9efe9de375974f87ca15f934cbd6c.file.index.tpl.php" afterPath="" />
+      <change type="DELETED" beforePath="E:\www\ekonom\runtime\templates_c\1dbf3c4f2f8d7f578c38270eebcbe1876ec7f588.file.add-comments.ajax.tpl.php" afterPath="" />
+      <change type="DELETED" beforePath="E:\www\ekonom\runtime\templates_c\24df40ffa7f00fc7b929cf5e8e71b08fa18e026c.file.view-gallery.tpl.php" afterPath="" />
+      <change type="DELETED" beforePath="E:\www\ekonom\runtime\templates_c\2ca4d9fb8fa4f27acecf2d1ea2f12e9837e0db14.file.index.tpl.php" afterPath="" />
+      <change type="DELETED" beforePath="E:\www\ekonom\runtime\templates_c\2d6ef4ca997c21602a120368d58adb0c88c68517.file.edit.tpl.php" afterPath="" />
+      <change type="DELETED" beforePath="E:\www\ekonom\runtime\templates_c\4528c0f58b5ad95b2e77897251943699034d7647.file.index.tpl.php" afterPath="" />
+      <change type="DELETED" beforePath="E:\www\ekonom\runtime\templates_c\4711e375810acdb84af75df1630f88461af3fc17.file.edit.tpl.php" afterPath="" />
+      <change type="DELETED" beforePath="E:\www\ekonom\runtime\templates_c\4930df03c4f53f8e018377f92315f9fb07706314.file.share.ajax.tpl.php" afterPath="" />
+      <change type="DELETED" beforePath="E:\www\ekonom\runtime\templates_c\4a2d248229c0e6452704f9a7ccc41e7a5c93b3ee.file.view.tpl.php" afterPath="" />
+      <change type="DELETED" beforePath="E:\www\ekonom\runtime\templates_c\4ae7eae07dd76826569daf4fb61833d2d9c24ad3.file.edit-gallery.tpl.php" afterPath="" />
+      <change type="DELETED" beforePath="E:\www\ekonom\runtime\templates_c\633c28ddf0345904e135763bae3bf8dc93318da6.file.view-gallery.tpl.php" afterPath="" />
+      <change type="DELETED" beforePath="E:\www\ekonom\runtime\templates_c\745bad7d02d157fda699307c36362385ac7b42a3.file.view-place.tpl.php" afterPath="" />
+      <change type="DELETED" beforePath="E:\www\ekonom\runtime\templates_c\a5c68603bbe346bf65e3bede36b8e77b606e39aa.file.index.tpl.php" afterPath="" />
+      <change type="DELETED" beforePath="E:\www\ekonom\runtime\templates_c\aa2f40d2fed0221f1a1736ce280c0f55fb16dedd.file.view-resource.tpl.php" afterPath="" />
+      <change type="DELETED" beforePath="E:\www\ekonom\runtime\templates_c\ad14f30a599512452bdfb8efaf3a7effb01cfff5.file.view-comments.ajax.tpl.php" afterPath="" />
+      <change type="DELETED" beforePath="E:\www\ekonom\runtime\templates_c\b7d0c95d218e46d4c40cd6c7fbf5579da2689052.file.reserve.ajax.tpl.php" afterPath="" />
+      <change type="DELETED" beforePath="E:\www\ekonom\runtime\templates_c\b9b77a6fb8ced9c3ee56826c39b110e929a779ba.file.add-like.ajax.tpl.php" afterPath="" />
+      <change type="DELETED" beforePath="E:\www\ekonom\runtime\templates_c\c77ef0bded455b3c083406fd25ecdc9632c15307.file.index.tpl.php" afterPath="" />
+      <change type="DELETED" beforePath="E:\www\ekonom\runtime\templates_c\d492600fb384683736d6bc2f2539f0a0da3fef35.file.edit-gallery.tpl.php" afterPath="" />
+      <change type="DELETED" beforePath="E:\www\ekonom\runtime\templates_c\eb2b16b47d3eeaa15f66ac8eb95c4fb94fd76ffa.file.add-resource.tpl.php" afterPath="" />
+      <change type="DELETED" beforePath="E:\www\ekonom\runtime\templates_c\f1cd2f2ba3c0923bb94a9e4f4ff2770329493840.file.show-role-acl.tpl.php" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/ekonom.iml" afterPath="$PROJECT_DIR$/.idea/ekonom.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/CatalogController.php" afterPath="$PROJECT_DIR$/application/controllers/CatalogController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/layouts/scripts/layout.tpl" afterPath="$PROJECT_DIR$/application/layouts/scripts/layout.tpl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/models/EK/Catalog/Product.php" afterPath="$PROJECT_DIR$/application/models/EK/Catalog/Product.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/scripts/catalog/add.tpl" afterPath="$PROJECT_DIR$/application/views/scripts/catalog/add.tpl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/scripts/catalog/child-block.tpl" afterPath="$PROJECT_DIR$/application/views/scripts/catalog/child-block.tpl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/scripts/catalog/edit.tpl" afterPath="$PROJECT_DIR$/application/views/scripts/catalog/edit.tpl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/scripts/catalog/index.tpl" afterPath="$PROJECT_DIR$/application/views/scripts/catalog/index.tpl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/scripts/catalog/view-product.ajax.tpl" afterPath="$PROJECT_DIR$/application/views/scripts/catalog/view-product.ajax.tpl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/scripts/company/view.tpl" afterPath="$PROJECT_DIR$/application/views/scripts/company/view.tpl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/scripts/index/index.tpl" afterPath="$PROJECT_DIR$/application/views/scripts/index/index.tpl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/scripts/search/index.tpl" afterPath="$PROJECT_DIR$/application/views/scripts/search/index.tpl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/library/TM/FileManager/File.php" afterPath="$PROJECT_DIR$/library/TM/FileManager/File.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public_html/css/main.css" afterPath="$PROJECT_DIR$/public_html/css/main.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/runtime/logs/syslog.txt" afterPath="$PROJECT_DIR$/runtime/logs/syslog.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/runtime/templates_c/01cb5fc755dd451db9b876f36bb7a73be84e01f7.file.edit.tpl.php" afterPath="$PROJECT_DIR$/runtime/templates_c/01cb5fc755dd451db9b876f36bb7a73be84e01f7.file.edit.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/runtime/templates_c/50476d9be6c10e4d5566fb6927d6edf719c8a09a.file.view-product.ajax.tpl.php" afterPath="$PROJECT_DIR$/runtime/templates_c/50476d9be6c10e4d5566fb6927d6edf719c8a09a.file.view-product.ajax.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/runtime/templates_c/80ff11feedc4a0ba005e0c5733e3e115c1477d3b.file.layout.tpl.php" afterPath="$PROJECT_DIR$/runtime/templates_c/80ff11feedc4a0ba005e0c5733e3e115c1477d3b.file.layout.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/runtime/templates_c/94b43447258ea62d6154766d1bbba1c4afdc3e80.file.index.tpl.php" afterPath="$PROJECT_DIR$/runtime/templates_c/94b43447258ea62d6154766d1bbba1c4afdc3e80.file.index.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/runtime/templates_c/9df79449238660fb8315d8c5e46bbc13abd1b136.file.child-block.tpl.php" afterPath="$PROJECT_DIR$/runtime/templates_c/9df79449238660fb8315d8c5e46bbc13abd1b136.file.child-block.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/runtime/templates_c/a943f4c37583ea01c7979b69872ea4115840ecec.file.index.tpl.php" afterPath="$PROJECT_DIR$/runtime/templates_c/a943f4c37583ea01c7979b69872ea4115840ecec.file.index.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/runtime/templates_c/ca35f7a3852ec8c1a5c7655a0831a90ff115e8c3.file.index.tpl.php" afterPath="$PROJECT_DIR$/runtime/templates_c/ca35f7a3852ec8c1a5c7655a0831a90ff115e8c3.file.index.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/runtime/templates_c/dc7d22eba3ad537ec318f48d3f4df25db84e0df2.file.error.tpl.php" afterPath="$PROJECT_DIR$/runtime/templates_c/dc7d22eba3ad537ec318f48d3f4df25db84e0df2.file.error.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/~Documents/ekonom_pro_db.sql" afterPath="$PROJECT_DIR$/~Documents/ekonom_pro_db.sql" />
     </list>
     <ignored path="ekonom.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -24,28 +157,55 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
+      <file leaf-file-name="CatalogController.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/application/controllers/CatalogController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="83" column="0" selection-start="3217" selection-end="3217" vertical-scroll-proportion="1.079646">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Gallery.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/models/EK/Gallery/Gallery.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="201" column="42" selection-start="3380" selection-end="3380" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Image.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/library/TM/FileManager/Image.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="6" column="46" selection-start="79" selection-end="79" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="File.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/library/TM/FileManager/File.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="159" column="39" selection-start="3239" selection-end="3239" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Product.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/models/EK/Gallery/Product.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="8" column="41" selection-start="202" selection-end="202" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="view-product.ajax.tpl" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/views/scripts/catalog/view-product.ajax.tpl">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="69" column="253" selection-start="3590" selection-end="3590" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="cloud-zoom.1.0.2.js" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/public_html/js/cloud-zoom.1.0.2.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="266" column="0" selection-start="9417" selection-end="9417" vertical-scroll-proportion="0.019744484">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="layout.tpl" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/layouts/scripts/layout.tpl">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="43" column="96" selection-start="2421" selection-end="2421" vertical-scroll-proportion="0.0">
+            <state line="94" column="29" selection-start="5017" selection-end="5017" vertical-scroll-proportion="-6.7894735">
               <folding />
             </state>
           </provider>
@@ -74,11 +234,8 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/application/models/EK/Banner/PlaceMark.php" />
-        <option value="$PROJECT_DIR$/application/controllers/BannerController.php" />
         <option value="$PROJECT_DIR$/application/models/EK/Catalog/ProductLike.php" />
         <option value="$PROJECT_DIR$/application/views/scripts/catalog/add-like.ajax.tpl" />
-        <option value="$PROJECT_DIR$/application/controllers/CatalogController.php" />
         <option value="$PROJECT_DIR$/application/models/EK/Company/Company.php" />
         <option value="$PROJECT_DIR$/public_html/js/ajax-form.js" />
         <option value="$PROJECT_DIR$/application/models/EK/Catalog/Rubric.php" />
@@ -88,8 +245,11 @@
         <option value="$PROJECT_DIR$/public_html/css/cloud-zoom.css" />
         <option value="$PROJECT_DIR$/application/layouts/scripts/layout.tpl" />
         <option value="$PROJECT_DIR$/public_html/css/main.css" />
-        <option value="$PROJECT_DIR$/application/views/scripts/catalog/view-product.ajax.tpl" />
         <option value="$PROJECT_DIR$/public_html/js/cloud-zoom.1.0.2.js" />
+        <option value="$PROJECT_DIR$/application/models/EK/Catalog/Product.php" />
+        <option value="$PROJECT_DIR$/library/TM/FileManager/File.php" />
+        <option value="$PROJECT_DIR$/application/views/scripts/catalog/view-product.ajax.tpl" />
+        <option value="$PROJECT_DIR$/application/controllers/CatalogController.php" />
       </list>
     </option>
   </component>
@@ -133,7 +293,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -267,6 +426,28 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="css" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ekonom" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ekonom" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="library" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TM" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FileManager" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -488,6 +669,32 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="Gallery" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ekonom" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ekonom" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="models" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="EK" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="Company" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -578,6 +785,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="Favorites" />
     </panes>
   </component>
@@ -585,8 +793,8 @@
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="true" />
     <property name="options.lastSelected" value="reference.webide.settings.project.settings.php" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
   </component>
   <component name="PublishConfig" serverName="ftp.ekonom.nichost.ru" serverId="3e210fe7-de3e-44a8-a89f-902305fafa1d" autoUpload="true">
     <servers>
@@ -689,18 +897,18 @@
     <editor active="false" />
     <layout>
       <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32925472" sideWeight="0.0" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3514957" sideWeight="0.67074525" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="DB Browser" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32925472" sideWeight="0.0" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32925472" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32925472" sideWeight="0.0" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32925472" sideWeight="0.0" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.35576922" sideWeight="0.32703003" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.35576922" sideWeight="0.67074525" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="DB Browser" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Phing Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -748,7 +956,7 @@
     <option name="INCLUDE_TEXT_INTO_SHELF" value="false" />
     <option name="CREATE_PATCH_EXPAND_DETAILS_DEFAULT" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Позиционирование картинки" />
+    <option name="LAST_COMMIT_MESSAGE" value="Картинка товара в галлереи" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -761,7 +969,6 @@
     <option name="UPDATE_GROUP_BY_CHANGELIST" value="false" />
     <option name="SHOW_FILE_HISTORY_AS_TREE" value="false" />
     <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
-    <MESSAGE value="Первый" />
     <MESSAGE value="Компании" />
     <MESSAGE value="Адреса" />
     <MESSAGE value="Пользователи и права" />
@@ -778,7 +985,6 @@
     <MESSAGE value="Интеллектуальное изменение размеров фото" />
     <MESSAGE value="Баннеры" />
     <MESSAGE value="Баннеры новые позиции" />
-    <MESSAGE value="Служебный" />
     <MESSAGE value="Каталог, там 2 раза написано, верхний оставь, а от него уже слеш...&#10;Поиск поназванию компании не работает!!!&#10;Цена товара в опере на нижнюю строку переносится!&#10;Скидка на товар сделать оранжевым!&#10;Мультигород - когда компанию добавляем чтоб она во всех городах отображалась!" />
     <MESSAGE value="Сдвинул цену" />
     <MESSAGE value="Правка фото&#10;" />
@@ -786,51 +992,13 @@
     <MESSAGE value="Размер картинки" />
     <MESSAGE value="Мелкие изменения" />
     <MESSAGE value="Позиционирование картинки" />
+    <MESSAGE value="Служебный" />
+    <MESSAGE value="Картинка товара в галлереи" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/application/models/EK/Catalog/ProductCatalog.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="41" selection-start="308" selection-end="315" vertical-scroll-proportion="0.33295193" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/library/StdLib/DB.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="91" column="20" selection-start="2155" selection-end="2155" vertical-scroll-proportion="0.019744484" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/models/EK/Company/Company.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="445" column="13" selection-start="10328" selection-end="10328" vertical-scroll-proportion="0.3501144" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/scripts/catalog/add-comments.ajax.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="25" selection-start="9" selection-end="25" vertical-scroll-proportion="-0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public_html/js/ajax-form.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="0" selection-start="836" selection-end="836" vertical-scroll-proportion="0.5" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/models/EK/Catalog/Rubric.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="269" column="50" selection-start="5810" selection-end="5810" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/SearchController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="43" selection-start="1034" selection-end="1044" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/scripts/search/index.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="36" selection-start="204" selection-end="204" vertical-scroll-proportion="-4.576923" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/views/scripts/catalog/index.tpl">
       <provider selected="true" editor-type-id="text-editor">
         <state line="40" column="195" selection-start="1532" selection-end="1532" vertical-scroll-proportion="-0.65384614" />
@@ -856,21 +1024,79 @@
         <state line="1141" column="1" selection-start="19477" selection-end="19477" vertical-scroll-proportion="0.36956522" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/scripts/catalog/view-product.ajax.tpl">
+    <entry file="file://$PROJECT_DIR$/application/layouts/scripts/layout.tpl">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="69" column="253" selection-start="3590" selection-end="3590" vertical-scroll-proportion="0.0">
+        <state line="43" column="84" selection-start="2324" selection-end="2324" vertical-scroll-proportion="0.020359281">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/layouts/scripts/layout.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="43" column="96" selection-start="2421" selection-end="2421" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public_html/js/cloud-zoom.1.0.2.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="266" column="0" selection-start="9417" selection-end="9417" vertical-scroll-proportion="0.019744484">
+        <state line="266" column="0" selection-start="9417" selection-end="9417" vertical-scroll-proportion="0.7897793">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/models/EK/Catalog/Product.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="121" column="35" selection-start="1894" selection-end="1894" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/com/jetbrains/php/lang/psi/stubs/data/standard_1.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="910" column="9" selection-start="26947" selection-end="26947" vertical-scroll-proportion="0.68306637">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/models/EK/Gallery/Product.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="41" selection-start="202" selection-end="202" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/models/EK/Gallery/Gallery.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="201" column="42" selection-start="3380" selection-end="3380" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/library/TM/FileManager/Image.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="46" selection-start="79" selection-end="79" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/configs/application.ini">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.12814645">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/library/TM/FileManager/File.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="159" column="39" selection-start="3239" selection-end="3239" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/scripts/catalog/view-product.ajax.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="94" column="29" selection-start="5017" selection-end="5017" vertical-scroll-proportion="-6.7894735">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/CatalogController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="83" column="0" selection-start="3217" selection-end="3217" vertical-scroll-proportion="1.079646">
           <folding />
         </state>
       </provider>

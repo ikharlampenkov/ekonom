@@ -45,7 +45,6 @@ class TM_FileManager_File
     /**
      *
      *
-
      * @return string
      * @access public
      */
@@ -79,9 +78,7 @@ class TM_FileManager_File
      *
      *
      * @param string $path
-
      * @param string $name
-
      * @return TM_FileManager_File
      * @access public
      */
@@ -99,7 +96,6 @@ class TM_FileManager_File
      *
      *
      * @param string $field
-
      * @return string
      * @access public
      */
@@ -156,6 +152,12 @@ class TM_FileManager_File
         } else {
             return '';
         }
+    }
+
+    public function getLastFolder()
+    {
+        $temp = explode('/', $this->_path);
+        return $temp[count($temp) - 1];
     }
 
 // end of member function extractExt

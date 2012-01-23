@@ -36,7 +36,10 @@
     <script type="text/javascript" src="/js/ajax-form.js"></script>
     <!-- read comments in js files for better understanding of its purpose -->
     <script type="text/javascript" src="/js/gallery.js"></script>
+    {*
     <script type="text/javascript" src="/js/slider.js"></script>
+    *}
+    <script type="text/javascript" src="/js/easySlider1.7.js"></script>
 
     <script type="text/javascript" language="javascript" src="/js/func.js"></script>
     <script type="text/javascript" language="javascript" src="/js/main.js"></script>

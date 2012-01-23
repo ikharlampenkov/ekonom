@@ -525,13 +525,21 @@ body > footer
 }
 
 /* Slider */
-#slider {
+#slider-wrapper {
     position: relative;
     width: 100%;
     height: 269px;
     margin: 40px 0 90px 0;
-    overflow-x: hidden;
-    overflow-y: visible;
+}
+
+#slider {
+    width: 994px;
+    height: 230px;
+    overflow: hidden;
+    position: relative;
+    margin:  0 auto;
+    border: 3px #eee solid;
+    border-radius: 20px;
 }
 
 #slider #slides {
@@ -541,10 +549,10 @@ body > footer
 }
 
 #slider .slide {
+    width: 994px;
     margin: 0;
     position: relative;
-    border: 3px #eee solid;
-    border-radius: 20px;
+
     height: 230px;
     float: left;
 }
@@ -572,28 +580,34 @@ body > footer
     border-radius: 20px;
 }
 
-#slider .previous,
-#slider .next{
+#slider-wrapper #previous,
+#slider-wrapper #next{
     position: absolute;
     top: 87px;
     width: 66px;
     height: 66px;
+    display: block;
 }
 
-#slider .previous {
+#slider-wrapper span a {
+    display: block;
+    height: 66px;
+}
+
+#slider-wrapper #previous {
     background: url('/i/slider_left.png') no-repeat;
     left: 25px;
 }
 
-#slider .next {
+#slider-wrapper #next {
     background: url('/i/slider_right.png') no-repeat;
     right: 25px;
 }
 
-#slider #shadow {
+#slider-wrapper #shadow {
     width: 1000px;
     height: 32px;
-    background:  url('/i/slider_shadow.png') no-repeat;
+    background:  url('/images/slider_shadow.png') no-repeat;
     position: absolute;
     bottom: 0px;
     left: 0;
@@ -617,7 +631,7 @@ body > footer
     width: 190px;
     height: 110px;
     float: left;
-    overflow:  hidden;
+    /* overflow:  hidden; */
     position: relative;
     border-radius: 12px;
 }
@@ -630,7 +644,7 @@ body > footer
     border:  1px #fff solid;
     width: 188px;
     height: 108px;
-    overflow:  hidden;
+    /* overflow:  hidden; */
 }
 
 #actions li h3 {
@@ -858,6 +872,10 @@ section.comments #paginator {
 
 .item-description .information .naming h3 {
     margin-top: 0;
+}
+
+.item-description .information .naming p {
+    color: #cf2121;
 }
 
 .item-description .information section p:last-child {

@@ -22,3 +22,14 @@ error   Can`t complit query: SELECT COUNT(id) FROM product_like WHERE product_id
 error   Can`t complit query: SELECT COUNT(id) FROM product_like WHERE product_id=15 No error: 1054:: Error msg: Unknown column 'id' in 'field list' ;  12.01.2012 22:05
 error   Can`t complit query: SELECT COUNT(id) FROM product_like WHERE product_id=15 No error: 1054:: Error msg: Unknown column 'id' in 'field list' ;  12.01.2012 22:05
 error   Can`t complit query: SELECT COUNT(id) FROM product_like WHERE product_id=16 No error: 1054:: Error msg: Unknown column 'id' in 'field list' ;  12.01.2012 22:05
+error   Can`t complit query: UPDATE product
+                    SET product_rubric_id=10, title="Возврат % по кредитам", short_title="Возврат % по кредитам",
+                        short_text="Возврат процентов по кредитам банков.", full_text="Компания "Альфа" имеет большой опыт участия в подобных делах, предлагает услуги по:
+
+Составлению исковых заявлений о признании условий кредитного договора недействительными;
+
+Представление интересов доверителя в суде;
+
+Взаимодействие с судебными приставами по вопросу исполнения данных судебных актов.",
+                        price=0, company_id=8, on_first_page=1
+                    WHERE id=21 No error: 1064:: Error msg: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'Альфа" имеет большой опыт участия в подобны�' at line 3 ;  22.01.2012 23:11

@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.0.9, created on 2012-01-12 23:28:41
+<?php /* Smarty version Smarty-3.0.9, created on 2012-01-22 23:04:47
          compiled from "F:\www\ekonom\application/views/scripts\catalog/index.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:34454f0f0a398d8401-12489411%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:183514f1c339f0d6500-07309733%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'a943f4c37583ea01c7979b69872ea4115840ecec' => 
     array (
       0 => 'F:\\www\\ekonom\\application/views/scripts\\catalog/index.tpl',
-      1 => 1326385521,
+      1 => 1327248188,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '34454f0f0a398d8401-12489411',
+  'nocache_hash' => '183514f1c339f0d6500-07309733',
   'function' => 
   array (
   ),
@@ -85,7 +85,7 @@ if ($_smarty_tpl->_count($_from) > 0){
             <tr>
                 <td class="ttovar" valign="middle"><a href="<?php echo $_smarty_tpl->getVariable('this')->value->url(array('controller'=>$_smarty_tpl->getVariable('controller')->value,'action'=>'index','rubric'=>$_smarty_tpl->getVariable('rubric')->value->getId()));?>
 " class="rmenu"><?php echo $_smarty_tpl->getVariable('rubric')->value->title;?>
-</a>
+</a></td>
                 <td class="tedit" valign="middle">
                     <?php $_smarty_tpl->smarty->_tag_stack[] = array('if_allowed', array('resource'=>($_smarty_tpl->getVariable('controller')->value)."/editRubric")); $_block_repeat=true; smarty_block_if_allowed(array('resource'=>($_smarty_tpl->getVariable('controller')->value)."/editRubric"), null, $_smarty_tpl, $_block_repeat);while ($_block_repeat) { ob_start();?>
 
@@ -126,11 +126,11 @@ if ($_smarty_tpl->_count($_from) > 0){
             <?php if ($_smarty_tpl->getVariable('authUserRole')->value!='companyadmin'||($_smarty_tpl->getVariable('authUserRole')->value=='companyadmin'&&$_smarty_tpl->getVariable('product')->value->company->getId()==$_smarty_tpl->getVariable('curCompany')->value)){?>
                 <li>
                     <h3><a href="<?php echo $_smarty_tpl->getVariable('this')->value->url(array('controller'=>'catalog','action'=>'viewProduct','id'=>$_smarty_tpl->getVariable('product')->value->id));?>
-" class="various fancybox.ajax"><?php echo $_smarty_tpl->getVariable('product')->value->title;?>
+" class="various fancybox.ajax"><?php echo $_smarty_tpl->getVariable('product')->value->shortTitle;?>
 </a></h3>
                     <a href="<?php echo $_smarty_tpl->getVariable('this')->value->url(array('controller'=>'catalog','action'=>'viewProduct','id'=>$_smarty_tpl->getVariable('product')->value->id));?>
 " class="various fancybox.ajax"><img src="<?php if ($_smarty_tpl->getVariable('product')->value->img->getName()){?>/files/<?php echo $_smarty_tpl->getVariable('product')->value->img->getPreview();?>
-<?php }else{ ?>/i/no_foto.png<?php }?>" alt="<?php echo $_smarty_tpl->getVariable('product')->value->title;?>
+<?php }else{ ?>/i/no_foto.png<?php }?>" alt="<?php echo $_smarty_tpl->getVariable('product')->value->shortTitle;?>
 "></a>
 
 

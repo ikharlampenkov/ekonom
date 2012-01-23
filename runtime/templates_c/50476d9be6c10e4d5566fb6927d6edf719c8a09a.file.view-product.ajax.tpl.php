@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.0.9, created on 2012-01-12 23:35:25
+<?php /* Smarty version Smarty-3.0.9, created on 2012-01-22 23:29:50
          compiled from "F:\www\ekonom\application/views/scripts\catalog/view-product.ajax.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:198904f0f0bcdddbfa8-82587116%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:327414f1c397ee61061-07588112%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '50476d9be6c10e4d5566fb6927d6edf719c8a09a' => 
     array (
       0 => 'F:\\www\\ekonom\\application/views/scripts\\catalog/view-product.ajax.tpl',
-      1 => 1326386007,
+      1 => 1327249784,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '198904f0f0bcdddbfa8-82587116',
+  'nocache_hash' => '327414f1c397ee61061-07588112',
   'function' => 
   array (
   ),
@@ -30,16 +30,26 @@ $_smarty_tpl->decodeProperties(array (
 </h3>
 
                 <?php if ($_smarty_tpl->getVariable('product')->value->searchAttribute('terms_of_stock')){?>
-                    <p><?php echo $_smarty_tpl->getVariable('product')->value->getAttribute('terms_of_stock')->value;?>
+                    <p class=""><?php echo $_smarty_tpl->getVariable('product')->value->getAttribute('terms_of_stock')->value;?>
 </p>
                 <?php }?>
                 </section>
 
+            <?php if ($_smarty_tpl->getVariable('product')->value->searchAttribute('description')){?>
                 <section class="description">
-                    <h3>Краткое описание магазина или товара</h3>
+                    <h3>Краткое описание</h3>
 
-                    <p><?php echo $_smarty_tpl->getVariable('product')->value->fullText;?>
+                    <p><?php echo $_smarty_tpl->getVariable('product')->value->getAttribute('description')->value;?>
 </p>
+                </section>
+            <?php }?>
+
+                <section class="description">
+                    <h3>Компания</h3>
+
+                    <p><a href="<?php echo $_smarty_tpl->getVariable('this')->value->url(array('controller'=>'company','action'=>'view','id'=>$_smarty_tpl->getVariable('product')->value->getCompany()->id));?>
+"><?php echo $_smarty_tpl->getVariable('product')->value->getCompany()->title;?>
+</a></p>
                 </section>
 
                 <section class="discount clearfix">
@@ -48,8 +58,10 @@ $_smarty_tpl->decodeProperties(array (
 <?php if ($_smarty_tpl->getVariable('product')->value->searchAttribute('discount_type')){?><?php echo $_smarty_tpl->getVariable('product')->value->getAttribute('discount_type')->value;?>
 <?php }?></span></h5>
                 <?php }?>
-                    <del class="old-price"><?php echo $_smarty_tpl->getVariable('product')->value->price;?>
- р</del>
+                <?php if ($_smarty_tpl->getVariable('product')->value->searchAttribute('old_price')){?>
+                    <del class="old-price"><?php echo $_smarty_tpl->getVariable('product')->value->getAttribute('old_price')->value;?>
+&nbsp;р</del>
+                <?php }?>
                 <?php if ($_smarty_tpl->getVariable('product')->value->searchAttribute('second_price')){?>
                     <ins class="new-price"><?php echo $_smarty_tpl->getVariable('product')->value->getAttribute('second_price')->value;?>
 &nbsp;р</ins>
@@ -102,13 +114,13 @@ if ($_smarty_tpl->tpl_vars['gallery']->total > 0){
                             <div class="big-image">
                                 <a href='/gallery<?php echo $_smarty_tpl->getVariable('gallery')->value->file->getSubPath();?>
 /<?php echo $_smarty_tpl->getVariable('gallery')->value->file->getName();?>
-' class='cloud-zoom' id='zoom' rel="position: 'inside' , showTitle: false">
+' class='cloud-zoom' id='zoom' rel="position: 'inside' , showTitle: false, adjustX:0, adjustY:0" style="text-align: center;">
                                     <img src="/gallery<?php echo $_smarty_tpl->getVariable('gallery')->value->file->getSubPath();?>
 /<?php echo $_smarty_tpl->getVariable('gallery')->value->file->getName();?>
-" width="420" height="270" alt="<?php echo $_smarty_tpl->getVariable('gallery')->value->title;?>
+" height="270" alt="<?php echo $_smarty_tpl->getVariable('gallery')->value->title;?>
 " data-preview="/gallery<?php echo $_smarty_tpl->getVariable('gallery')->value->file->getSubPath();?>
 /<?php echo $_smarty_tpl->getVariable('gallery')->value->file->getPreview();?>
-"/>
+" style="margin: 0;"/>
                                 </a>
                                 <h5 class="title"><?php echo $_smarty_tpl->getVariable('gallery')->value->title;?>
 </h5>
@@ -139,7 +151,7 @@ if ($_smarty_tpl->tpl_vars['gallery']->total > 0){
             <?php }?>
 
                 <a href="<?php echo $_smarty_tpl->getVariable('this')->value->url(array('controller'=>$_smarty_tpl->getVariable('controller')->value,'action'=>'reserve','idProduct'=>$_smarty_tpl->getVariable('product')->value->id));?>
-" class="button reserve">Отложить</a>
+" class="button reserve">Заказать</a>
                 <a href="<?php echo $_smarty_tpl->getVariable('this')->value->url(array('controller'=>$_smarty_tpl->getVariable('controller')->value,'action'=>'share','idProduct'=>$_smarty_tpl->getVariable('product')->value->id));?>
 " class="button share-with-friend">Поделиться</a>
 
@@ -195,8 +207,10 @@ if ($_smarty_tpl->tpl_vars['gallery']->total > 0){
                 //-->
                 </script>
 
-                <a href="<?php echo $_smarty_tpl->getVariable('this')->value->url(array('controller'=>$_smarty_tpl->getVariable('controller')->value,'action'=>'addComments','idProduct'=>$_smarty_tpl->getVariable('product')->value->id));?>
+                <div class="add-comment-border">
+                    <a href="<?php echo $_smarty_tpl->getVariable('this')->value->url(array('controller'=>$_smarty_tpl->getVariable('controller')->value,'action'=>'addComments','idProduct'=>$_smarty_tpl->getVariable('product')->value->id));?>
 " class="button add-comment">Комментировать</a>
+                </div>
             </div>
         </div>
 
