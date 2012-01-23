@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.0.9, created on 2012-01-22 23:03:13
+<?php /* Smarty version Smarty-3.0.9, created on 2012-01-23 19:54:33
          compiled from "F:\www\ekonom\application/views/scripts\index/index.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:149364f1c33418d3645-02017485%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:26274f1d58899a1d46-66166486%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '94b43447258ea62d6154766d1bbba1c4afdc3e80' => 
     array (
       0 => 'F:\\www\\ekonom\\application/views/scripts\\index/index.tpl',
-      1 => 1327248188,
+      1 => 1327323183,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '149364f1c33418d3645-02017485',
+  'nocache_hash' => '26274f1d58899a1d46-66166486',
   'function' => 
   array (
   ),
@@ -69,6 +69,7 @@ if ($_smarty_tpl->_count($_from) > 0){
 if ($_smarty_tpl->_count($_from) > 0){
     foreach ($_from as $_smarty_tpl->tpl_vars['product']->key => $_smarty_tpl->tpl_vars['product']->value){
 ?>
+            <?php if ($_smarty_tpl->getVariable('authUserRole')->value!='companyadmin'||($_smarty_tpl->getVariable('authUserRole')->value=='companyadmin'&&$_smarty_tpl->getVariable('product')->value->company->getId()==$_smarty_tpl->getVariable('curCompany')->value)){?>
             <li>
                 <h3><a href="<?php echo $_smarty_tpl->getVariable('this')->value->url(array('controller'=>'catalog','action'=>'viewProduct','id'=>$_smarty_tpl->getVariable('product')->value->id));?>
 " class="various fancybox.ajax"><?php echo $_smarty_tpl->getVariable('product')->value->shortTitle;?>
@@ -116,6 +117,7 @@ if ($_smarty_tpl->_count($_from) > 0){
 
 
             </li>
+            <?php }?>
         <?php }} ?>
     </ul>
 

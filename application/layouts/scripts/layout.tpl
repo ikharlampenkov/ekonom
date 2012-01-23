@@ -168,6 +168,7 @@
         <div id="conditions">
             <a href="/conditions">Общие условия пользования сайтом</a><br/>
 
+            {*
             <!-- Yandex.Metrika informer -->
             <a href="http://metrika.yandex.ru/stat/?id=11564479&amp;from=informer" target="_blank" rel="nofollow">
                 <img src="//bs.yandex.ru/informer/11564479/3_0_FFFFFFFF_EFEFEFFF_0_pageviews"
@@ -193,6 +194,7 @@
                 <div><img src="//mc.yandex.ru/watch/11564479" style="position:absolute; left:-9999px;" alt=""/></div>
             </noscript>
             <!-- /Yandex.Metrika counter -->
+            *}
 
             <!--LiveInternet counter-->
             <script type="text/javascript">

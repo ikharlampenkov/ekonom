@@ -68,7 +68,22 @@ class CatalogController extends Zend_Controller_Action
         $oProduct = EK_Catalog_Product::getInstanceById($this->getRequest()->getParam('id'));
         $this->view->assign('product', $oProduct);
 
-        $this->view->assign('galleryList', EK_Gallery_Product::getAllInstance($oProduct));
+        $galleryList = EK_Gallery_Product::getAllInstance($oProduct);
+
+
+        if ($oProduct->getImg()->getName() != '') {
+            if ($galleryList === false) {
+                $galleryList = array();
+            }
+
+            $oImg = new EK_Gallery_Product();
+            $oImg->setTitle($oProduct->getTitle());
+            $oImg->setFile($oProduct->getImg());
+            array_unshift($galleryList, $oImg);
+        }
+
+
+        $this->view->assign('galleryList', $galleryList);
         $this->view->assign('commentsList', EK_Comments_Product::getAllInstance($oProduct));
         $this->view->assign('productLike', EK_Catalog_ProductLike::getInstanceByProduct($oProduct));
     }
@@ -146,10 +161,14 @@ class CatalogController extends Zend_Controller_Action
             $oProduct->setShortTitle($data['short_title']);
             $oProduct->setRubric(EK_Catalog_Rubric::getInstanceById($data['rubric']));
             $oProduct->setCompany(EK_Company_Company::getInstanceById($data['company']));
-            $oProduct->setShortText($data['short_text']);
-            $oProduct->setFullText($data['full_text']);
-            $oProduct->setPrice($data['price']);
-            $oProduct->setOnFirstPage($data['on_first_page']);
+            //$oProduct->setShortText($data['short_text']);
+            //$oProduct->setFullText($data['full_text']);
+            //$oProduct->setPrice($data['price']);
+            if (isset($data['on_first_page'])) {
+                $oProduct->setOnFirstPage($data['on_first_page']);
+            } else {
+                $oProduct->setOnFirstPage(0);
+            }
 
             try {
                 $oProduct->insertToDb();
@@ -188,7 +207,11 @@ class CatalogController extends Zend_Controller_Action
             $oProduct->setShortText($data['short_text']);
             $oProduct->setFullText($data['full_text']);
             $oProduct->setPrice($data['price']);
-            $oProduct->setOnFirstPage($data['on_first_page']);
+            if (isset($data['on_first_page'])) {
+                $oProduct->setOnFirstPage($data['on_first_page']);
+            } else {
+                $oProduct->setOnFirstPage(0);
+            }
 
             foreach ($data['attribute'] as $key => $value) {
                 $oProduct->setAttribute($key, $value);

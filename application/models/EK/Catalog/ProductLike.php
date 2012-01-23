@@ -156,7 +156,7 @@ class EK_Catalog_ProductLike
     private function _check()
     {
         try {
-            $sql = 'SELECT COUNT(id) FROM product_like WHERE product_id=' . $this->_product->getId();
+            $sql = 'SELECT COUNT(product_id) FROM product_like WHERE product_id=' . $this->_product->getId();
 
             $result = $this->_db->query($sql);
             if (isset($result[0][0]) && $result[0][0] > 0) {
@@ -202,6 +202,8 @@ class EK_Catalog_ProductLike
                 return $o;
             } else {
                 $o = new EK_Catalog_ProductLike($product);
+                $o->setLike(0);
+                $o->setUnlike(0);
                 return $o;
             }
         } catch (Exception $e) {

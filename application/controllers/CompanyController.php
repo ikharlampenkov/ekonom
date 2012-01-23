@@ -55,6 +55,11 @@ class CompanyController extends Zend_Controller_Action
             $oCompany->setOrderEmail($data['order_email']);
             $oCompany->setOfSite($data['ofsite']);
             $oCompany->setConstantDiscount($data['constant_discount']);
+            if (isset($data['multi_city'])) {
+                $oCompany->setMultiCity($data['multi_city']);
+            } else {
+                $oCompany->setMultiCity(0);
+            }
 
             try {
                 $oCompany->insertToDb();
@@ -81,6 +86,11 @@ class CompanyController extends Zend_Controller_Action
             $oCompany->setOrderEmail($data['order_email']);
             $oCompany->setOfSite($data['ofsite']);
             $oCompany->setConstantDiscount($data['constant_discount']);
+            if (isset($data['multi_city'])) {
+                $oCompany->setMultiCity($data['multi_city']);
+            } else {
+                $oCompany->setMultiCity(0);
+            }
 
             try {
                 $oCompany->updateToDb();

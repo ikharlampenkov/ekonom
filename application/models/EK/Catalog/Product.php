@@ -119,7 +119,7 @@ class EK_Catalog_Product
     /**
      *
      *
-     * @return FileManager::TM_FileManager_Image
+     * @return TM_FileManager_Image
      * @access public
      */
     public function getImg()
@@ -373,7 +373,7 @@ class EK_Catalog_Product
             $sql = 'SELECT product.id AS id, product.title AS title, short_title, product_rubric_id, product.img, short_text, full_text, on_first_page, price, company_id
                     FROM product, company
                     WHERE product.company_id=company.id
-                      AND city_id=' . $city . '
+                      AND (city_id=' . $city . ' OR multi_city=1)
                       AND product_rubric_id=' . $rubric_id;
             $result = $db->query($sql, StdLib_DB::QUERY_MOD_ASSOC);
             if (isset($result[0])) {
@@ -396,7 +396,7 @@ class EK_Catalog_Product
             $sql = 'SELECT product.id AS id, product.title AS title, short_title, product_rubric_id, product.img, short_text, full_text, on_first_page, price, company_id
                     FROM product, company
                     WHERE product.company_id=company.id
-                      AND city_id=' . $city . '
+                      AND (city_id=' . $city . ' OR multi_city=1)
                       AND on_first_page=1';
 
             $result = $db->query($sql, StdLib_DB::QUERY_MOD_ASSOC);

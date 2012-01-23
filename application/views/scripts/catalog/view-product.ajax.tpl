@@ -76,8 +76,8 @@
                     {foreach from=$galleryList item=gallery name=_gallery}
                         {if $smarty.foreach._gallery.first}
                             <div class="big-image">
-                                <a href='/gallery{$gallery->file->getSubPath()}/{$gallery->file->getName()}' class='cloud-zoom' id='zoom' rel="position: 'inside' , showTitle: false, adjustX:0, adjustY:0" style="text-align: center;">
-                                    <img src="/gallery{$gallery->file->getSubPath()}/{$gallery->file->getName()}" height="270" alt="{$gallery->title}" data-preview="/gallery{$gallery->file->getSubPath()}/{$gallery->file->getPreview()}" style="margin: 0;"/>
+                                <a href='{$gallery->file->getLastFolder()}{$gallery->file->getSubPath()}/{$gallery->file->getName()}' class='cloud-zoom' id='zoom' rel="position: 'inside' , showTitle: false, adjustX:0, adjustY:0" style="text-align: center;">
+                                    <img src="{$gallery->file->getLastFolder()}{$gallery->file->getSubPath()}/{$gallery->file->getName()}" height="270" alt="{$gallery->title}" data-preview="{$gallery->file->getLastFolder()}{$gallery->file->getSubPath()}/{$gallery->file->getPreview()}" style="margin: 0;"/>
                                 </a>
                                 <h5 class="title">{$gallery->title}</h5>
                                 <a href="#previous" class="previous"></a>
@@ -88,8 +88,8 @@
                         <ul class="previews clearfix">
                             {else}
                             <li>
-                                <a href="/gallery{$gallery->file->getSubPath()}/{$gallery->file->getName()}" title="{$gallery->title}">
-                                    <img src="/gallery{$gallery->file->getSubPath()}/{$gallery->file->getPreview()}" alt="{$gallery->title}" class="shadow-image"/>
+                                <a href="{$gallery->file->getLastFolder()}{$gallery->file->getSubPath()}/{$gallery->file->getName()}" title="{$gallery->title}">
+                                    <img src="{$gallery->file->getLastFolder()}{$gallery->file->getSubPath()}/{$gallery->file->getPreview()}" alt="{$gallery->title}" class="shadow-image"/>
                                 </a>
                             </li>
                         {/if}
