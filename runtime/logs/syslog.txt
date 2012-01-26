@@ -32,4 +32,5 @@ error   Can`t complit query: UPDATE product
 
 Взаимодействие с судебными приставами по вопросу исполнения данных судебных актов.",
                         price=0, company_id=8, on_first_page=1
-                    WHERE id=21 No error: 1064:: Error msg: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'Альфа" имеет большой опыт участия в подобны�' at line 3 ;  22.01.2012 23:11
+                    WHERE id=21 No error: 1064:: Error msg: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'Альфа" имеет большой опыт участия в подобны�' at line 3 ;  22.01.2012 23:11
+error   Can`t complit query: SELECT COUNT(id) FROM product_like WHERE product_id=90 No error: 1054:: Error msg: Unknown column 'id' in 'field list' ;  23.01.2012 20:03

@@ -72,6 +72,36 @@ class CityController extends Zend_Controller_Action
         }
     }
 
+    public function showaclAction()
+    {
+        $oCity = EK_City_City::getInstanceById($this->getRequest()->getParam('idCity'));
+
+        if ($this->getRequest()->isPost()) {
+            $data = $this->getRequest()->getParam('data');
+
+            try {
+                foreach ($data as $idUser => $values) {
+
+                    $cityAcl = new EK_Acl_CityAcl($oCity);
+
+                    $cityAcl->setUser(TM_User_User::getInstanceById($idUser));
+                    $cityAcl->setIsRead($values['is_read']);
+                    $cityAcl->setIsWrite($values['is_write']);
+                    $cityAcl->setIsModerate($values['is_moderate']);
+                    $cityAcl->saveToDb();
+                }
+
+                $this->_redirect('/city/showAcl/idCity/' . $this->getRequest()->getParam('idCity'));
+            } catch (Exception $e) {
+                $this->view->assign('exception_msg', $e->getMessage());
+            }
+        }
+
+        $this->view->assign('cityAcl', EK_Acl_CityAcl::getAllInstance($oCity));
+        $this->view->assign('userList', TM_User_User::getAllInstance());
+        $this->view->assign('city', $oCity);
+    }
+
 
 }
 

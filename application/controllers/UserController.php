@@ -87,6 +87,8 @@ class UserController extends Zend_Controller_Action
 
     public function addroleAction()
     {
+        $oRole = new TM_User_Role();
+
         if ($this->getRequest()->isPost()) {
             $data = $this->getRequest()->getParam('data');
 
@@ -98,6 +100,7 @@ class UserController extends Zend_Controller_Action
             $this->_redirect('/user');
         }
 
+        $this->view->assign('role', $oRole);
     }
 
     public function editroleAction()

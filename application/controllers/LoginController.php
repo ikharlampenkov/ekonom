@@ -33,6 +33,15 @@ class LoginController extends Zend_Controller_Action
                     $mainSession->curCompany = $oCompany->getId();
                 }
 
+                if ($data->role == 'regional_admin') {
+                    $oCity = EK_City_City::getInstanceByUser($data->id);
+                    if (is_object($oCity)) {
+                        $mainSession = new Zend_Session_Namespace('main');
+                        $mainSession->curCity = $oCity->getId();
+                    }
+
+                }
+
                 $this->_redirect('/');
             } else {
                 $this->view->assign('result', $authResult->getMessages());

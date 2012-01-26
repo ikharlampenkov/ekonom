@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.0.9, created on 2012-01-22 22:11:10
+<?php /* Smarty version Smarty-3.0.9, created on 2012-01-23 20:06:49
          compiled from "F:\www\ekonom\application/layouts/scripts\layout.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:318884f1c270e52a860-74256612%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:290914f1d5889ec7ef7-98437899%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '80ff11feedc4a0ba005e0c5733e3e115c1477d3b' => 
     array (
       0 => 'F:\\www\\ekonom\\application/layouts/scripts\\layout.tpl',
-      1 => 1326904426,
+      1 => 1327323901,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '318884f1c270e52a860-74256612',
+  'nocache_hash' => '290914f1d5889ec7ef7-98437899',
   'function' => 
   array (
   ),
@@ -203,32 +203,6 @@ $_template->assign('subrubric',$_smarty_tpl->getVariable('rubric')->value->getCh
 
         <div id="conditions">
             <a href="/conditions">Общие условия пользования сайтом</a><br/>
-
-            <!-- Yandex.Metrika informer -->
-            <a href="http://metrika.yandex.ru/stat/?id=11564479&amp;from=informer" target="_blank" rel="nofollow">
-                <img src="//bs.yandex.ru/informer/11564479/3_0_FFFFFFFF_EFEFEFFF_0_pageviews"
-                     style="width:88px; height:31px; border:0;" alt="Яндекс.Метрика" title="Яндекс.Метрика: данные за сегодня (просмотры, визиты и уникальные посетители)" onclick="try { Ya.Metrika.informer( { i:this,id:11564479,type:0,lang:'ru' } );return false } catch(e) { } "/>
-            </a>
-            <!-- /Yandex.Metrika informer -->
-
-            <!-- Yandex.Metrika counter -->
-            <div style="display:none;">
-                <script type="text/javascript">
-                    (function (w, c) {
-                    (w[c] = w[c] || []).push(function() {
-                    try {
-                    w.yaCounter11564479 = new Ya.Metrika( { id:11564479, enableAll: true, trackHash:true, webvisor:true } );
-                    }
-                    catch(e) { }
-                    });
-                    })(window, "yandex_metrika_callbacks");
-                </script>
-            </div>
-            <script src="//mc.yandex.ru/metrika/watch.js" type="text/javascript" defer="defer"></script>
-            <noscript>
-                <div><img src="//mc.yandex.ru/watch/11564479" style="position:absolute; left:-9999px;" alt=""/></div>
-            </noscript>
-            <!-- /Yandex.Metrika counter -->
 
             <!--LiveInternet counter-->
             <script type="text/javascript">
