@@ -9,7 +9,7 @@
 
 /**
  * class TM_User_User
- * 
+ *
  */
 class TM_User_User
 {
@@ -18,7 +18,7 @@ class TM_User_User
 
     /** Compositions: */
 
-     /*** Attributes: ***/
+    /*** Attributes: ***/
 
 
     protected $_id;
@@ -90,14 +90,37 @@ class TM_User_User
         return $this->_role;
     }
 
-    public function __get($name) {
+    public function getCity()
+    {
+        try {
+            $sql = 'SELECT * FROM city, city_user
+                            WHERE city.id=city_user.city_id AND user_id=' . $this->_id . '
+                            LIMIT 1';
+            $result = $this->_db->query($sql, StdLib_DB::QUERY_MOD_ASSOC);
+
+            if (isset($result[0])) {
+                $o = new EK_City_City();
+                $o->fillFromArray($result[0]);
+                return $o;
+            } else {
+                $o = EK_City_City::getInstanceById(1);
+                return $o;
+            }
+        } catch (Exception $e) {
+            throw new Exception($e->getMessage());
+        }
+    }
+
+    public function __get($name)
+    {
         $method = "get{$name}";
         if (method_exists($this, $method)) {
             return $this->$method();
         }
     }
 
-    public function __construct() {
+    public function __construct()
+    {
         $this->_db = StdLib_DB::getInstance();
 
     }
@@ -112,7 +135,7 @@ class TM_User_User
     {
         try {
             $sql = 'INSERT INTO tm_user(login, password, role_id, date_create)
-                    VALUES ("' . $this->_login . '", "' . $this->_password  . '", ' . $this->_role->getId() . ', "' . $this->_dateCreate . '")';
+                    VALUES ("' . $this->_login . '", "' . $this->_password . '", ' . $this->_role->getId() . ', "' . $this->_dateCreate . '")';
             $this->_db->query($sql);
         } catch (Exception $e) {
             throw new Exception($e->getMessage());
@@ -130,7 +153,7 @@ class TM_User_User
         try {
             $sql = 'UPDATE tm_user
                     SET login="' . $this->_login . '", role_id="' . $this->_role->getId() . '",
-                    date_create="' . $this->_dateCreate . '", password="' . $this->_password  . '"
+                    date_create="' . $this->_dateCreate . '", password="' . $this->_password . '"
                     WHERE id=' . $this->_id;
             $this->_db->query($sql);
             $this->saveAttributeList();
@@ -160,7 +183,6 @@ class TM_User_User
      *
      *
      * @param int id
-
      * @return TM_User_User
      * @static
      * @access public
@@ -188,7 +210,6 @@ class TM_User_User
      *
      *
      * @param int id
-
      * @return TM_User_User
      * @static
      * @access public
@@ -216,7 +237,6 @@ class TM_User_User
      *
      *
      * @param array values
-
      * @return TM_User_User
      * @static
      * @access public
@@ -264,7 +284,6 @@ class TM_User_User
      *
      *
      * @param array $values
-
      * @return void
      * @access public
      */

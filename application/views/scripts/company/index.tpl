@@ -15,6 +15,7 @@
     {if $companyList!==false}
         {foreach from=$companyList item=company}
             {if_object_allowed type="{$controller|capitalize}" object="{$company}" priv="moderate"}
+            {if_object_allowed type="City" object="{$company->city}" priv="moderate"}
                 <li>
                     <h3><a href="{$this->url(['controller' => $controller,'action' => 'view', 'id' => $company->id])}" class="various fancybox.ajax">{$company->title}</a></h3>
                     <a href="{$this->url(['controller' => $controller,'action' => 'view', 'id' => $company->id])}" class="various fancybox.ajax"><img src="{if $company->file->getName()}/files/{$company->file->getPreview()}{else}/i/no_foto.png{/if}" alt="{$company->title}"></a>
@@ -47,6 +48,7 @@
                     {/if_allowed}
 
                 </li>
+            {/if_object_allowed}
             {/if_object_allowed}
         {/foreach}
     {/if}
