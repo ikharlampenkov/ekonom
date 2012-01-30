@@ -18,10 +18,17 @@ class EK_Catalog_ProductCatalog
         $this->_db = StdLib_DB::getInstance();
     }
 
-    public function searchProduct($search)
+    public function searchProduct($search, $city)
     {
         try {
-            $sql = 'SELECT * FROM product WHERE title LIKE "%' . $search . '%" OR short_text LIKE "%' . $search . '%" OR full_text LIKE "%' . $search . '%"';
+            $sql = 'SELECT product.id AS id, product.title AS title, short_title, product_rubric_id, product.img, short_text, full_text, on_first_page, price, company_id
+                    FROM product, company
+                    WHERE product.company_id=company.id
+                      AND (title LIKE "%' . $search . '%"
+                       OR short_text LIKE "%' . $search . '%"
+                       OR full_text LIKE "%' . $search . '%")
+                       AND (city_id=' . $city . ' OR multi_city=1)';
+
             $result = $this->_db->query($sql, StdLib_DB::QUERY_MOD_ASSOC);
             if (isset($result[0])) {
                 $productArray = array();

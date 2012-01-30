@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.0.9, created on 2012-01-23 20:40:03
+<?php /* Smarty version Smarty-3.0.9, created on 2012-01-30 22:05:20
          compiled from "F:\www\ekonom\application/views/scripts\company/view.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:178914f1d633349d232-67098283%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:313834f26b1b0d12ec2-23887632%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '4a2d248229c0e6452704f9a7ccc41e7a5c93b3ee' => 
     array (
       0 => 'F:\\www\\ekonom\\application/views/scripts\\company/view.tpl',
-      1 => 1327326000,
+      1 => 1327932813,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '178914f1d633349d232-67098283',
+  'nocache_hash' => '313834f26b1b0d12ec2-23887632',
   'function' => 
   array (
   ),
@@ -84,13 +84,13 @@ if ($_smarty_tpl->tpl_vars['gallery']->total > 0){
 <?php }else{ ?>/i/no_foto.png<?php }?>" alt="Логотип магазина <?php echo $_smarty_tpl->getVariable('company')->value->title;?>
 "/>
 
-                <h3>Краткое описание магазина</h3>
+                <h3>Описание</h3>
 
                 <p><?php echo $_smarty_tpl->getVariable('company')->value->description;?>
 </p>
 
             <?php if ($_smarty_tpl->getVariable('company')->value->getAddressList()!==false){?>
-                <h3>Адреса магазинов</h3>
+                <h3>Адреса</h3>
                 <ul class="addresses-list">
                     <?php  $_smarty_tpl->tpl_vars['address'] = new Smarty_Variable;
  $_from = $_smarty_tpl->getVariable('company')->value->getAddressList(); if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
