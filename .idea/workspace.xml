@@ -3,14 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="d0b1c174-27bf-4d01-a853-aaef73e1aaba" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/SearchController.php" afterPath="$PROJECT_DIR$/application/controllers/SearchController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/models/EK/Catalog/ProductCatalog.php" afterPath="$PROJECT_DIR$/application/models/EK/Catalog/ProductCatalog.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/models/EK/Company/Company.php" afterPath="$PROJECT_DIR$/application/models/EK/Company/Company.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/runtime/logs/syslog.txt" afterPath="$PROJECT_DIR$/runtime/logs/syslog.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/runtime/templates_c/4528c0f58b5ad95b2e77897251943699034d7647.file.index.tpl.php" afterPath="$PROJECT_DIR$/runtime/templates_c/4528c0f58b5ad95b2e77897251943699034d7647.file.index.tpl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/runtime/templates_c/4a2d248229c0e6452704f9a7ccc41e7a5c93b3ee.file.view.tpl.php" afterPath="$PROJECT_DIR$/runtime/templates_c/4a2d248229c0e6452704f9a7ccc41e7a5c93b3ee.file.view.tpl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/runtime/templates_c/80ff11feedc4a0ba005e0c5733e3e115c1477d3b.file.layout.tpl.php" afterPath="$PROJECT_DIR$/runtime/templates_c/80ff11feedc4a0ba005e0c5733e3e115c1477d3b.file.layout.tpl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/runtime/templates_c/94b43447258ea62d6154766d1bbba1c4afdc3e80.file.index.tpl.php" afterPath="$PROJECT_DIR$/runtime/templates_c/94b43447258ea62d6154766d1bbba1c4afdc3e80.file.index.tpl.php" />
     </list>
     <list id="ad86b5e8-338a-4c37-be49-497b5521d5ba" name="Failed commit: Default" comment="Интеграция интерфейса" />
     <ignored path="ekonom.iws" />
@@ -32,62 +25,7 @@
     <favorites_list name="ekonom" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="view-product.ajax.tpl" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/views/scripts/catalog/view-product.ajax.tpl">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="50" column="59" selection-start="2360" selection-end="2360" vertical-scroll-proportion="-20.923077">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="view.tpl" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/views/scripts/company/view.tpl">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="43" column="26" selection-start="2151" selection-end="2151" vertical-scroll-proportion="-18.307692">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Company.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/models/EK/Company/Company.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="455" column="69" selection-start="10453" selection-end="10453" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SearchController.php" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/application/controllers/SearchController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="31" column="124" selection-start="895" selection-end="895" vertical-scroll-proportion="0.5171737">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ProductCatalog.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/models/EK/Catalog/ProductCatalog.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="30" column="0" selection-start="863" selection-end="863" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Product.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/models/EK/Catalog/Product.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="402" column="83" selection-start="8803" selection-end="9250" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -134,8 +72,8 @@
         <option value="$PROJECT_DIR$/application/views/scripts/catalog/view-product.ajax.tpl" />
         <option value="$PROJECT_DIR$/application/views/scripts/company/view.tpl" />
         <option value="$PROJECT_DIR$/application/models/EK/Company/Company.php" />
-        <option value="$PROJECT_DIR$/application/models/EK/Catalog/ProductCatalog.php" />
         <option value="$PROJECT_DIR$/application/controllers/SearchController.php" />
+        <option value="$PROJECT_DIR$/application/models/EK/Catalog/ProductCatalog.php" />
       </list>
     </option>
   </component>
@@ -923,7 +861,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.4139957" sideWeight="0.6704981" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.4139957" sideWeight="0.6704981" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32950193" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -975,7 +913,7 @@
     <option name="INCLUDE_TEXT_INTO_SHELF" value="false" />
     <option name="CREATE_PATCH_EXPAND_DETAILS_DEFAULT" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Убрать слова магазина! Оставить просто: &quot;Описание&quot;, &quot;Адрес&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="мультигород для компаний&#10;Поиск с уычетом города" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -988,7 +926,6 @@
     <option name="UPDATE_GROUP_BY_CHANGELIST" value="false" />
     <option name="SHOW_FILE_HISTORY_AS_TREE" value="false" />
     <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
-    <MESSAGE value="Интеграция интерфейса&#10;Галерея для компаний" />
     <MESSAGE value="Обновление дизайна&#10;Контентные страницы" />
     <MESSAGE value="Выбор города&#10;Вывод информации об акции&#10;" />
     <MESSAGE value="Кнопки Поделиться и Зарезервировать&#10;Оформление каталога" />
@@ -1013,6 +950,7 @@
     <MESSAGE value="Баннеры с переключением" />
     <MESSAGE value="Баннеры с переключением, bottom" />
     <MESSAGE value="Убрать слова магазина! Оставить просто: &quot;Описание&quot;, &quot;Адрес&quot;" />
+    <MESSAGE value="мультигород для компаний&#10;Поиск с уычетом города" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1030,11 +968,6 @@
     </PATH>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/application/views/scripts/catalog/view-comments.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="32" selection-start="61" selection-end="61" vertical-scroll-proportion="-1.3076923" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/views/scripts/search/index.tpl">
       <provider selected="true" editor-type-id="text-editor">
         <state line="25" column="278" selection-start="1220" selection-end="1220" vertical-scroll-proportion="-9.423077" />
@@ -1107,14 +1040,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/models/EK/Catalog/Product.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="402" column="83" selection-start="8803" selection-end="9250" vertical-scroll-proportion="0.0">
+        <state line="402" column="83" selection-start="8803" selection-end="9250" vertical-scroll-proportion="0.3717694">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/models/EK/Catalog/ProductCatalog.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="0" selection-start="863" selection-end="863" vertical-scroll-proportion="0.0">
+        <state line="26" column="35" selection-start="647" selection-end="647" vertical-scroll-proportion="0.4393638">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/runtime/logs/syslog.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="50" column="0" selection-start="5923" selection-end="5923" vertical-scroll-proportion="0.8449304">
           <folding />
         </state>
       </provider>

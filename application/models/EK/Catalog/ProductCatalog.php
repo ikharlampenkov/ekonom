@@ -24,7 +24,7 @@ class EK_Catalog_ProductCatalog
             $sql = 'SELECT product.id AS id, product.title AS title, short_title, product_rubric_id, product.img, short_text, full_text, on_first_page, price, company_id
                     FROM product, company
                     WHERE product.company_id=company.id
-                      AND (title LIKE "%' . $search . '%"
+                      AND (product.title LIKE "%' . $search . '%"
                        OR short_text LIKE "%' . $search . '%"
                        OR full_text LIKE "%' . $search . '%")
                        AND (city_id=' . $city . ' OR multi_city=1)';
