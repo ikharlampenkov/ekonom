@@ -16,7 +16,9 @@
                 <option value="">--</option>
             {if !empty($cityList)}
                 {foreach from=$cityList item=city}
+                    {if_object_allowed type="City" object="{$city}" priv="moderate"}
                     <option value="{$city->id}" {if is_object($company->city) && $company->city->id == $city->id}selected="selected"{/if}>{$city->title}</option>
+                    {/if_object_allowed}
                 {/foreach}
             {/if}
             </select>

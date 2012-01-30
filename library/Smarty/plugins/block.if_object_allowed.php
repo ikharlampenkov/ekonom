@@ -24,7 +24,12 @@ function smarty_block_if_object_allowed($params, $content, &$smarty, &$repeat)
             $storage_data = Zend_Auth::getInstance()->getStorage()->read();
             $user = $storage_data->id;
 
-            if ($storage_data->role === 'admin' || ($storage_data->role === 'customer' || $storage_data->role === 'guest')) {
+            if ($storage_data->role === 'admin' || ($storage_data->role === 'customer' || $storage_data->role === 'guest')
+               || ($storage_data->role === 'regional_admin' && $params['type'] == 'Company')) {
+                return $content;
+            }
+
+            if ($storage_data->role === 'companyadmin' && $params['type'] == 'City') {
                 return $content;
             }
 

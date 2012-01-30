@@ -6,6 +6,8 @@
  */
 class EK_Catalog_Product
 {
+    const PRODUCT_PER_PAGE = 25;
+
     /** Aggregations: */
     /** Compositions: */
     /*     * * Attributes: ** */
@@ -389,7 +391,7 @@ class EK_Catalog_Product
         }
     }
 
-    public static function getAllInstanceFirstPage($city)
+    public static function getAllInstanceFirstPage($city, $start = 0)
     {
         try {
             $db = StdLib_DB::getInstance();
@@ -397,7 +399,8 @@ class EK_Catalog_Product
                     FROM product, company
                     WHERE product.company_id=company.id
                       AND (city_id=' . $city . ' OR multi_city=1)
-                      AND on_first_page=1';
+                      AND on_first_page=1
+                    LIMIT ' . $start . ', ' . EK_Catalog_Product::PRODUCT_PER_PAGE;
 
             $result = $db->query($sql, StdLib_DB::QUERY_MOD_ASSOC);
             if (isset($result[0])) {
@@ -408,6 +411,31 @@ class EK_Catalog_Product
                 return $productArray;
             } else
                 return false;
+        } catch (Exception $e) {
+            throw new Exception($e->getMessage());
+        }
+    }
+
+    public static function getFirstPageCount($city)
+    {
+        try {
+            $db = StdLib_DB::getInstance();
+            $sql = 'SELECT COUNT(product.id) AS product_count
+                    FROM product, company
+                    WHERE product.company_id=company.id
+                      AND (city_id=' . $city . ' OR multi_city=1)
+                      AND on_first_page=1';
+
+            $result = $db->query($sql, StdLib_DB::QUERY_MOD_ASSOC);
+            if (isset($result[0]['product_count'])) {
+                $page_count = $result[0]['product_count'] / EK_Catalog_Product::PRODUCT_PER_PAGE;
+                if ($result[0]['product_count'] % EK_Catalog_Product::PRODUCT_PER_PAGE == 0) {
+                    return $page_count;
+                } else {
+                    return ceil($page_count) + 1;
+                }
+            } else
+                return 1;
         } catch (Exception $e) {
             throw new Exception($e->getMessage());
         }

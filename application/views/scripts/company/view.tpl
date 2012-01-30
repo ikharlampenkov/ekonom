@@ -36,12 +36,12 @@
             <div class="information">
                 <img class="shop-logo shadow-image" src="{if $company->file->getName()}/files/{$company->file->getPreview()}{else}/i/no_foto.png{/if}" alt="Логотип магазина {$company->title}"/>
 
-                <h3>Краткое описание магазина</h3>
+                <h3>Описание</h3>
 
                 <p>{$company->description}</p>
 
             {if $company->getAddressList() !== false}
-                <h3>Адреса магазинов</h3>
+                <h3>Адреса</h3>
                 <ul class="addresses-list">
                     {foreach from=$company->getAddressList() item=address}
                         <li>
