@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="d0b1c174-27bf-4d01-a853-aaef73e1aaba" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/models/EK/Catalog/ProductCatalog.php" afterPath="$PROJECT_DIR$/application/models/EK/Catalog/ProductCatalog.php" />
     </list>
     <list id="ad86b5e8-338a-4c37-be49-497b5521d5ba" name="Failed commit: Default" comment="Интеграция интерфейса" />
     <ignored path="ekonom.iws" />
@@ -740,8 +739,8 @@
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="true" />
     <property name="options.lastSelected" value="reference.webide.settings.project.settings.php" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
   </component>
   <component name="PublishConfig">
     <servers>
@@ -795,6 +794,13 @@
         <option name="PhingTarget" enabled="false" />
       </method>
     </configuration>
+    <configuration default="true" type="JavascriptDebugSession" factoryName="Local">
+      <JSDebuggerConfigurationSettings>
+        <option name="engineId" value="embedded" />
+        <option name="fileUrl" />
+      </JSDebuggerConfigurationSettings>
+      <method />
+    </configuration>
     <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server">
       <method>
         <option name="FtpUpload" enabled="false">
@@ -803,13 +809,6 @@
         </option>
         <option name="PhingTarget" enabled="false" />
       </method>
-    </configuration>
-    <configuration default="true" type="JavascriptDebugSession" factoryName="Local">
-      <JSDebuggerConfigurationSettings>
-        <option name="engineId" value="embedded" />
-        <option name="fileUrl" />
-      </JSDebuggerConfigurationSettings>
-      <method />
     </configuration>
     <list size="0" />
   </component>
@@ -855,13 +854,12 @@
     <frame x="-8" y="-8" width="1936" height="1176" extended-state="6" />
     <editor active="false" />
     <layout>
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32950193" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32950193" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.4139957" sideWeight="0.6704981" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.4193376" sideWeight="0.6704981" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32950193" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -872,6 +870,7 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.30747128" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32950193" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -1005,65 +1004,47 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/CompanyController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="44" column="29" selection-start="1748" selection-end="1759" vertical-scroll-proportion="0.016898608">
-          <folding />
-        </state>
+        <state line="44" column="29" selection-start="1748" selection-end="1759" vertical-scroll-proportion="0.016898608" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public_html/css/main.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="794" column="12" selection-start="12988" selection-end="12988" vertical-scroll-proportion="0.016683023">
-          <folding />
-        </state>
+        <state line="794" column="12" selection-start="12988" selection-end="12988" vertical-scroll-proportion="0.016683023" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/scripts/catalog/view-product.ajax.tpl">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="50" column="59" selection-start="2360" selection-end="2360" vertical-scroll-proportion="-20.923077">
-          <folding />
-        </state>
+        <state line="50" column="59" selection-start="2360" selection-end="2360" vertical-scroll-proportion="-20.923077" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/scripts/company/view.tpl">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="43" column="26" selection-start="2151" selection-end="2151" vertical-scroll-proportion="-18.307692">
-          <folding />
-        </state>
+        <state line="43" column="26" selection-start="2151" selection-end="2151" vertical-scroll-proportion="-18.307692" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/models/EK/Company/Company.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="455" column="69" selection-start="10453" selection-end="10453" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="455" column="69" selection-start="10453" selection-end="10453" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/models/EK/Catalog/Product.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="402" column="83" selection-start="8803" selection-end="9250" vertical-scroll-proportion="0.3717694">
-          <folding />
-        </state>
+        <state line="402" column="83" selection-start="8803" selection-end="9250" vertical-scroll-proportion="0.3717694" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/models/EK/Catalog/ProductCatalog.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="35" selection-start="647" selection-end="647" vertical-scroll-proportion="0.4393638">
-          <folding />
-        </state>
+        <state line="26" column="35" selection-start="647" selection-end="647" vertical-scroll-proportion="0.4393638" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/runtime/logs/syslog.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="50" column="0" selection-start="5923" selection-end="5923" vertical-scroll-proportion="0.8449304">
-          <folding />
-        </state>
+        <state line="50" column="0" selection-start="5923" selection-end="5923" vertical-scroll-proportion="0.8449304" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/SearchController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="124" selection-start="895" selection-end="895" vertical-scroll-proportion="0.5171737">
-          <folding />
-        </state>
+        <state line="31" column="124" selection-start="895" selection-end="895" vertical-scroll-proportion="0.5171737" />
       </provider>
     </entry>
   </component>
