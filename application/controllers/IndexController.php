@@ -28,9 +28,11 @@ class IndexController extends Zend_Controller_Action
 
         $oPlace = EK_Banner_Place::getInstanceById(4);
         $this->view->assign('bannerListRight', EK_Banner_PlaceMark::getAllInstance($oPlace));
+        $this->view->assign('rightPlace', $oPlace);
 
         $oPlace = EK_Banner_Place::getInstanceById(5);
         $this->view->assign('bannerListLeft', EK_Banner_PlaceMark::getAllInstance($oPlace));
+        $this->view->assign('leftPlace', $oPlace);
     }
 
     public function showproductlistAction()

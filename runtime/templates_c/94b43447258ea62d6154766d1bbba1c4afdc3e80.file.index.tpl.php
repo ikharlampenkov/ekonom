@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.0.9, created on 2012-01-30 21:57:43
+<?php /* Smarty version Smarty-3.0.9, created on 2012-01-31 21:01:30
          compiled from "F:\www\ekonom\application/views/scripts\index/index.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:20664f26a51a16c899-28778236%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:24464f27f43a00c315-36879143%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '94b43447258ea62d6154766d1bbba1c4afdc3e80' => 
     array (
       0 => 'F:\\www\\ekonom\\application/views/scripts\\index/index.tpl',
-      1 => 1327932875,
+      1 => 1328018465,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '20664f26a51a16c899-28778236',
+  'nocache_hash' => '24464f27f43a00c315-36879143',
   'function' => 
   array (
   ),
@@ -193,30 +193,85 @@ $_smarty_tpl->tpl_vars['smarty']->value['section']["_pager"]['last']       = ($_
     <aside>
         <div id="banners" class="clearfix">
         <?php if ($_smarty_tpl->getVariable('bannerListLeft')->value!==false){?>
-            <?php  $_smarty_tpl->tpl_vars['banner'] = new Smarty_Variable;
+            <div id="slider-wrapper-ml">
+                <div id="slider-ml">
+                    <ul id="slides-ml">
+                        <?php  $_smarty_tpl->tpl_vars['banner'] = new Smarty_Variable;
  $_from = $_smarty_tpl->getVariable('bannerListLeft')->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
 if ($_smarty_tpl->_count($_from) > 0){
     foreach ($_from as $_smarty_tpl->tpl_vars['banner']->key => $_smarty_tpl->tpl_vars['banner']->value){
 ?>
-                <div class="banner size490_84">
-                    <a href="http://<?php echo $_smarty_tpl->getVariable('banner')->value->getBanner()->link;?>
+                            <li class="slide">
+                                <a href="http://<?php echo $_smarty_tpl->getVariable('banner')->value->getBanner()->link;?>
+">
+                                    <img src="/banners/<?php echo $_smarty_tpl->getVariable('banner')->value->getBanner()->img->getName();?>
+" width="490" height="84" alt="<?php echo $_smarty_tpl->getVariable('banner')->value->getBanner()->title;?>
+"/>
+                                </a>
+                            </li>
+                            <div class="banner size490_84">
+                                <a href="http://<?php echo $_smarty_tpl->getVariable('banner')->value->getBanner()->link;?>
 "><img src="/banners/<?php echo $_smarty_tpl->getVariable('banner')->value->getBanner()->img->getName();?>
 "/></a>
+                            </div>
+                        <?php }} ?>
+                    </ul>
                 </div>
-            <?php }} ?>
+            </div>
+
+            <script type="text/javascript">
+                $(document).ready(function () {
+                $('#slider-ml').easySlider({
+                auto: true,
+                pause: <?php echo $_smarty_tpl->getVariable('leftPlace')->value->changeTime;?>
+*1000,
+                continuous: true,
+                controlsShow: false,
+                prevId: 'previous',
+                prevText: '',
+                nextId: 'next',
+                nextText: ''
+                });
+                });
+            </script>
         <?php }?>
         <?php if ($_smarty_tpl->getVariable('bannerListRight')->value!==false){?>
-            <?php  $_smarty_tpl->tpl_vars['banner'] = new Smarty_Variable;
+            <div id="slider-wrapper-mr">
+                <div id="slider-mr">
+                    <ul id="slides-mr">
+                        <?php  $_smarty_tpl->tpl_vars['banner'] = new Smarty_Variable;
  $_from = $_smarty_tpl->getVariable('bannerListRight')->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
 if ($_smarty_tpl->_count($_from) > 0){
     foreach ($_from as $_smarty_tpl->tpl_vars['banner']->key => $_smarty_tpl->tpl_vars['banner']->value){
 ?>
-                <div class="banner size490_84">
-                    <a href="http://<?php echo $_smarty_tpl->getVariable('banner')->value->getBanner()->link;?>
-"><img src="/banners/<?php echo $_smarty_tpl->getVariable('banner')->value->getBanner()->img->getName();?>
-"/></a>
+                            <li class="slide">
+                                <a href="http://<?php echo $_smarty_tpl->getVariable('banner')->value->getBanner()->link;?>
+">
+                                    <img src="/banners/<?php echo $_smarty_tpl->getVariable('banner')->value->getBanner()->img->getName();?>
+" width="490" height="84" alt="<?php echo $_smarty_tpl->getVariable('banner')->value->getBanner()->title;?>
+">
+                                </a>
+                            </li>
+                        <?php }} ?>
+                    </ul>
                 </div>
-            <?php }} ?>
+            </div>
+
+            <script type="text/javascript">
+                $(document).ready(function () {
+                $('#slider-mr').easySlider({
+                auto: true,
+                pause: <?php echo $_smarty_tpl->getVariable('rightPlace')->value->changeTime;?>
+*1000,
+                continuous: true,
+                controlsShow: false,
+                prevId: 'previous',
+                prevText: '',
+                nextId: 'next',
+                nextText: ''
+                });
+                });
+            </script>
         <?php }?>
 
         </div>
