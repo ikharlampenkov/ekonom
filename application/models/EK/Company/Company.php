@@ -417,10 +417,11 @@ class EK_Company_Company
         try {
             $db = StdLib_DB::getInstance();
 
-            $sql = 'SELECT * FROM company '; // WHERE city_id=' . (int)$city
+            $sql = 'SELECT * FROM company
+                    WHERE (city_id=' . (int)$city . ' OR multi_city=1) ';
 
             if (!is_null($rubric)) {
-                $sql .= ' WHERE id IN (
+                $sql .= ' AND id IN (
                  SELECT DISTINCT company_id
                  FROM product, product_rubric
                  WHERE product.product_rubric_id=product_rubric.id
@@ -444,13 +445,15 @@ class EK_Company_Company
         }
     } // end of member function getAllInstance
 
-    public static function search($search)
+    public static function search($search, $city)
     {
         try {
             $db = StdLib_DB::getInstance();
             $search = $db->prepareString($search);
 
-            $sql = 'SELECT * FROM company WHERE title LIKE "%' . $search . '%" OR description LIKE "%' . $search . '%"'; // WHERE city_id=' . (int)$city
+            $sql = 'SELECT * FROM company
+                    WHERE title LIKE "%' . $search . '%" OR description LIKE "%' . $search . '%"
+                      AND (city_id=' . (int)$city . ' OR multi_city=1)';
 
             $result = $db->query($sql, StdLib_DB::QUERY_MOD_ASSOC);
 

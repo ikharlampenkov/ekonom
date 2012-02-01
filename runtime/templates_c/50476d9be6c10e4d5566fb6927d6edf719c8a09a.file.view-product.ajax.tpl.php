@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.0.9, created on 2012-01-23 20:06:48
+<?php /* Smarty version Smarty-3.0.9, created on 2012-01-30 21:11:50
          compiled from "F:\www\ekonom\application/views/scripts\catalog/view-product.ajax.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:71554f1d5a815356d8-77438945%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:37064f26a526ed9fd3-14462468%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '50476d9be6c10e4d5566fb6927d6edf719c8a09a' => 
     array (
       0 => 'F:\\www\\ekonom\\application/views/scripts\\catalog/view-product.ajax.tpl',
-      1 => 1327323901,
+      1 => 1327928034,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '71554f1d5a815356d8-77438945',
+  'nocache_hash' => '37064f26a526ed9fd3-14462468',
   'function' => 
   array (
   ),
@@ -112,15 +112,15 @@ if ($_smarty_tpl->tpl_vars['gallery']->total > 0){
 ?>
                         <?php if ($_smarty_tpl->getVariable('smarty')->value['foreach']['_gallery']['first']){?>
                             <div class="big-image">
-                                <a href='<?php echo $_smarty_tpl->getVariable('gallery')->value->file->getLastFolder();?>
+                                <a href='/<?php echo $_smarty_tpl->getVariable('gallery')->value->file->getLastFolder();?>
 <?php echo $_smarty_tpl->getVariable('gallery')->value->file->getSubPath();?>
 /<?php echo $_smarty_tpl->getVariable('gallery')->value->file->getName();?>
 ' class='cloud-zoom' id='zoom' rel="position: 'inside' , showTitle: false, adjustX:0, adjustY:0" style="text-align: center;">
-                                    <img src="<?php echo $_smarty_tpl->getVariable('gallery')->value->file->getLastFolder();?>
+                                    <img src="/<?php echo $_smarty_tpl->getVariable('gallery')->value->file->getLastFolder();?>
 <?php echo $_smarty_tpl->getVariable('gallery')->value->file->getSubPath();?>
 /<?php echo $_smarty_tpl->getVariable('gallery')->value->file->getName();?>
 " height="270" alt="<?php echo $_smarty_tpl->getVariable('gallery')->value->title;?>
-" data-preview="<?php echo $_smarty_tpl->getVariable('gallery')->value->file->getLastFolder();?>
+" data-preview="/<?php echo $_smarty_tpl->getVariable('gallery')->value->file->getLastFolder();?>
 <?php echo $_smarty_tpl->getVariable('gallery')->value->file->getSubPath();?>
 /<?php echo $_smarty_tpl->getVariable('gallery')->value->file->getPreview();?>
 " style="margin: 0;"/>
@@ -135,12 +135,12 @@ if ($_smarty_tpl->tpl_vars['gallery']->total > 0){
                         <ul class="previews clearfix">
                             <?php }else{ ?>
                             <li>
-                                <a href="<?php echo $_smarty_tpl->getVariable('gallery')->value->file->getLastFolder();?>
+                                <a href="/<?php echo $_smarty_tpl->getVariable('gallery')->value->file->getLastFolder();?>
 <?php echo $_smarty_tpl->getVariable('gallery')->value->file->getSubPath();?>
 /<?php echo $_smarty_tpl->getVariable('gallery')->value->file->getName();?>
 " title="<?php echo $_smarty_tpl->getVariable('gallery')->value->title;?>
 ">
-                                    <img src="<?php echo $_smarty_tpl->getVariable('gallery')->value->file->getLastFolder();?>
+                                    <img src="/<?php echo $_smarty_tpl->getVariable('gallery')->value->file->getLastFolder();?>
 <?php echo $_smarty_tpl->getVariable('gallery')->value->file->getSubPath();?>
 /<?php echo $_smarty_tpl->getVariable('gallery')->value->file->getPreview();?>
 " alt="<?php echo $_smarty_tpl->getVariable('gallery')->value->title;?>

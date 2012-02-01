@@ -29,8 +29,8 @@ class SearchController extends Zend_Controller_Action
         $oCatalog = new EK_Catalog_ProductCatalog();
 
         if ($this->getRequest()->getParam('query')) {
-            $this->view->assign('productList', $oCatalog->searchProduct($this->getRequest()->getParam('query')));
-            $this->view->assign('companyList', EK_Company_Company::search($this->getRequest()->getParam('query')));
+            $this->view->assign('productList', $oCatalog->searchProduct($this->getRequest()->getParam('query'), $this->_city));
+            $this->view->assign('companyList', EK_Company_Company::search($this->getRequest()->getParam('query'), $this->_city));
             $this->view->assign('rubricList', EK_Catalog_Rubric::search($this->getRequest()->getParam('query')));
             $this->view->assign('query', $this->getRequest()->getParam('query'));
         }

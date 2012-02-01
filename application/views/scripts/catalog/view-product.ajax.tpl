@@ -15,7 +15,7 @@
 
             {if $product->searchAttribute('description')}
                 <section class="description">
-                    <h3>Краткое описание</h3>
+                    <h3>Описание</h3>
 
                     <p>{$product->getAttribute('description')->value}</p>
                 </section>

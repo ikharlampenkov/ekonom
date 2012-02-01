@@ -1,23 +1,24 @@
-<?php /* Smarty version Smarty-3.0.9, created on 2012-01-23 20:06:49
+<?php /* Smarty version Smarty-3.0.9, created on 2012-01-30 21:57:44
          compiled from "F:\www\ekonom\application/layouts/scripts\layout.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:290914f1d5889ec7ef7-98437899%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:195214f26a51a5e44b5-80953760%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '80ff11feedc4a0ba005e0c5733e3e115c1477d3b' => 
     array (
       0 => 'F:\\www\\ekonom\\application/layouts/scripts\\layout.tpl',
-      1 => 1327323901,
+      1 => 1327932875,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '290914f1d5889ec7ef7-98437899',
+  'nocache_hash' => '195214f26a51a5e44b5-80953760',
   'function' => 
   array (
   ),
   'has_nocache_code' => false,
 )); /*/%%SmartyHeaderCode%%*/?>
-<?php if (!is_callable('smarty_block_if_allowed')) include 'F:\www\ekonom\library\Smarty\plugins\block.if_allowed.php';
+<?php if (!is_callable('smarty_block_if_object_allowed')) include 'F:\www\ekonom\library\Smarty\plugins\block.if_object_allowed.php';
+if (!is_callable('smarty_block_if_allowed')) include 'F:\www\ekonom\library\Smarty\plugins\block.if_allowed.php';
 ?><!DOCTYPE html>
 <html>
 <head>
@@ -76,9 +77,13 @@ $_smarty_tpl->decodeProperties(array (
 if ($_smarty_tpl->_count($_from) > 0){
     foreach ($_from as $_smarty_tpl->tpl_vars['city']->key => $_smarty_tpl->tpl_vars['city']->value){
 ?>
-                        <option value="<?php echo $_smarty_tpl->getVariable('city')->value->id;?>
+                        <?php $_smarty_tpl->smarty->_tag_stack[] = array('if_object_allowed', array('type'=>"City",'object'=>($_smarty_tpl->tpl_vars['city']->value),'priv'=>"moderate")); $_block_repeat=true; smarty_block_if_object_allowed(array('type'=>"City",'object'=>($_smarty_tpl->tpl_vars['city']->value),'priv'=>"moderate"), null, $_smarty_tpl, $_block_repeat);while ($_block_repeat) { ob_start();?>
+
+                            <option value="<?php echo $_smarty_tpl->getVariable('city')->value->id;?>
 " <?php if ($_smarty_tpl->getVariable('city')->value->id==$_smarty_tpl->getVariable('curCity')->value){?>selected="selected"<?php }?> ><?php echo $_smarty_tpl->getVariable('city')->value->title;?>
 </option>
+                        <?php $_block_content = ob_get_clean(); $_block_repeat=false; echo smarty_block_if_object_allowed(array('type'=>"City",'object'=>($_smarty_tpl->tpl_vars['city']->value),'priv'=>"moderate"), $_block_content, $_smarty_tpl, $_block_repeat);  } array_pop($_smarty_tpl->smarty->_tag_stack);?>
+
                     <?php }} ?>
                 <?php }?>
                 </select>

@@ -2,7 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7151d89e-e84a-4788-b442-a723b5b4a6eb" name="New changelist" comment="Разбиение на страницы на главной странице">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtime/templates_c/1233455740c9efe9de375974f87ca15f934cbd6c.file.index.tpl.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtime/templates_c/1ae9b9bc2ba7f9f2071c36d6343e9e1d77d9777a.file.placemark.tpl.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtime/templates_c/2adc0c36825528be1d2fd0a9a8a25316b8e1eba4.file.edit.tpl.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtime/templates_c/4528c0f58b5ad95b2e77897251943699034d7647.file.index.tpl.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtime/templates_c/4a2d248229c0e6452704f9a7ccc41e7a5c93b3ee.file.view.tpl.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtime/templates_c/745bad7d02d157fda699307c36362385ac7b42a3.file.view-place.tpl.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtime/templates_c/b9b77a6fb8ced9c3ee56826c39b110e929a779ba.file.add-like.ajax.tpl.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtime/templates_c/f6461da2727bf7223dfbbd5fed5d70b20ce2fc3f.file.add.tpl.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/SearchController.php" afterPath="$PROJECT_DIR$/application/controllers/SearchController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/models/EK/Catalog/ProductCatalog.php" afterPath="$PROJECT_DIR$/application/models/EK/Catalog/ProductCatalog.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/models/EK/Company/Company.php" afterPath="$PROJECT_DIR$/application/models/EK/Company/Company.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/scripts/catalog/view-product.ajax.tpl" afterPath="$PROJECT_DIR$/application/views/scripts/catalog/view-product.ajax.tpl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/scripts/company/view.tpl" afterPath="$PROJECT_DIR$/application/views/scripts/company/view.tpl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/runtime/logs/syslog.txt" afterPath="$PROJECT_DIR$/runtime/logs/syslog.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/runtime/templates_c/50476d9be6c10e4d5566fb6927d6edf719c8a09a.file.view-product.ajax.tpl.php" afterPath="$PROJECT_DIR$/runtime/templates_c/50476d9be6c10e4d5566fb6927d6edf719c8a09a.file.view-product.ajax.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/runtime/templates_c/80ff11feedc4a0ba005e0c5733e3e115c1477d3b.file.layout.tpl.php" afterPath="$PROJECT_DIR$/runtime/templates_c/80ff11feedc4a0ba005e0c5733e3e115c1477d3b.file.layout.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/runtime/templates_c/94b43447258ea62d6154766d1bbba1c4afdc3e80.file.index.tpl.php" afterPath="$PROJECT_DIR$/runtime/templates_c/94b43447258ea62d6154766d1bbba1c4afdc3e80.file.index.tpl.php" />
     </list>
     <ignored path="ekonom.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -105,6 +122,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -344,6 +362,32 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="index" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ekonom" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ekonom" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scripts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="company" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -633,7 +677,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="Favorites" />
     </panes>
   </component>
@@ -748,11 +791,11 @@
     <editor active="false" />
     <layout>
       <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32925472" sideWeight="0.0" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32925472" sideWeight="0.0" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.35576922" sideWeight="0.32703003" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3985043" sideWeight="0.67074525" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.40865386" sideWeight="0.67074525" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="DB Browser" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
