@@ -143,18 +143,67 @@
     <aside>
         <div id="banners" class="clearfix">
         {if $bannerListLeft!==false}
-            {foreach from=$bannerListLeft item=banner}
-                <div class="banner size490_84">
-                    <a href="http://{$banner->getBanner()->link}"><img src="/banners/{$banner->getBanner()->img->getName()}"/></a>
+            <div id="slider-wrapper-ml">
+                <div id="slider-ml">
+                    <ul id="slides-ml">
+                        {foreach from=$bannerListLeft item=banner}
+                            <li class="slide">
+                                <a href="http://{$banner->getBanner()->link}">
+                                    <img src="/banners/{$banner->getBanner()->img->getName()}" width="490" height="84" alt="{$banner->getBanner()->title}"/>
+                                </a>
+                            </li>
+                            <div class="banner size490_84">
+                                <a href="http://{$banner->getBanner()->link}"><img src="/banners/{$banner->getBanner()->img->getName()}"/></a>
+                            </div>
+                        {/foreach}
+                    </ul>
                 </div>
-            {/foreach}
+            </div>
+
+            <script type="text/javascript">
+                $(document).ready(function () {
+                $('#slider-ml').easySlider({
+                auto: true,
+                pause: {$leftPlace->changeTime}*1000,
+                continuous: true,
+                controlsShow: false,
+                prevId: 'previous',
+                prevText: '',
+                nextId: 'next',
+                nextText: ''
+                });
+                });
+            </script>
         {/if}
         {if $bannerListRight!==false}
-            {foreach from=$bannerListRight item=banner}
-                <div class="banner size490_84">
-                    <a href="http://{$banner->getBanner()->link}"><img src="/banners/{$banner->getBanner()->img->getName()}"/></a>
+            <div id="slider-wrapper-mr">
+                <div id="slider-mr">
+                    <ul id="slides-mr">
+                        {foreach from=$bannerListRight item=banner}
+                            <li class="slide">
+                                <a href="http://{$banner->getBanner()->link}">
+                                    <img src="/banners/{$banner->getBanner()->img->getName()}" width="490" height="84" alt="{$banner->getBanner()->title}">
+                                </a>
+                            </li>
+                        {/foreach}
+                    </ul>
                 </div>
-            {/foreach}
+            </div>
+
+            <script type="text/javascript">
+                $(document).ready(function () {
+                $('#slider-mr').easySlider({
+                auto: true,
+                pause: {$rightPlace->changeTime}*1000,
+                continuous: true,
+                controlsShow: false,
+                prevId: 'previous',
+                prevText: '',
+                nextId: 'next',
+                nextText: ''
+                });
+                });
+            </script>
         {/if}
 
         </div>
