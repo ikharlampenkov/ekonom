@@ -6,9 +6,7 @@
         <div class="clearfix">
         {if $galleryList !== false}
 
-
-
-            <div class="gallery">
+            <div class="gallery-company">
                 {foreach from=$galleryList item=gallery name=_gallery}
                     {if $smarty.foreach._gallery.first}
                         <div class="big-image">
@@ -18,7 +16,7 @@
                             <a href="#next" class="next"></a>
                         </div>
 
-                    <ul class="previews clearfix">
+                    <ul class="previews-company clearfix">
                         {else}
                         <li>
                             <a href="/gallery{$gallery->file->getSubPath()}/{$gallery->file->getName()}" title="{$gallery->title}">
