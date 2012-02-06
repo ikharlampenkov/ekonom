@@ -1413,6 +1413,76 @@ section.comments #paginator {
     border: none;
 }
 
+/* Gallery company */
+
+.item-description .gallery-company {
+    width: 422px;
+    float: left;
+    margin-bottom: 30px;
+}
+
+.item-description .gallery-company .big-image {
+    border-radius: 12px;
+    position: relative;
+    box-shadow: 0 0 5px rgba(0,0,0,0.5);
+    border: 1px #fff solid;
+}
+
+.item-description .gallery-company .big-image img {
+    border-radius: 12px;
+    display: block;
+}
+
+.item-description .gallery-company .previous,
+.item-description .gallery-company .next {
+    display: block;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 110px;
+    /* z-index: 10000; */
+}
+
+.item-description .gallery-company .previous {
+    left: 10px;
+    background: url('/i/gallery_left.png') no-repeat;
+}
+
+.item-description .gallery-company .next {
+    right: 10px;
+    background: url('/i/gallery_right.png') no-repeat;
+}
+
+.item-description .gallery-company .title {
+    margin: 0;
+    position: absolute;
+    bottom: 0; left: 0;
+    width: 380px;
+    background: rgba(0,0,0,0.5);
+    border-radius: 0 0 12px 12px;
+    padding: 5px 20px;
+    color: #fff;
+    text-align: left;
+    /* z-index: 10000; */
+}
+
+.item-description .gallery-company .previews-company {
+    margin: 20px 0 0 -12px;
+    list-style: none;
+}
+
+.item-description .gallery-company .previews-company li {
+    float: left;
+    margin-left: 12px;
+    width: 132px;
+}
+
+.item-description .gallery-company .previews-company img {
+    border: 1px #fff solid;
+}
+
+/* End Gallery company */
+
 .fancybox-outer {
     border-radius: 12px;
 }

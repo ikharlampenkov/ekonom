@@ -79,7 +79,13 @@
                                 <a href='/{$gallery->file->getLastFolder()}{$gallery->file->getSubPath()}/{$gallery->file->getName()}' class='cloud-zoom' id='zoom' rel="position: 'inside' , showTitle: false, adjustX:0, adjustY:0" style="text-align: center;">
                                     <img src="/{$gallery->file->getLastFolder()}{$gallery->file->getSubPath()}/{$gallery->file->getName()}" height="270" alt="{$gallery->title}" data-preview="/{$gallery->file->getLastFolder()}{$gallery->file->getSubPath()}/{$gallery->file->getPreview()}" style="margin: 0;"/>
                                 </a>
-                                <h5 class="title">{$gallery->title}</h5>
+                                <h5 class="title">
+                                {if $product->searchAttribute('original_link') && $product->getAttribute('original_link')->value != ''}
+                                    <a href="http://{$product->getAttribute('original_link')->value}" target="_blank">{$gallery->title}</a>
+                                {else}    
+                                    {$gallery->title}
+                                {/if}
+                                </h5>
                                 <a href="#previous" class="previous"></a>
                                 <a href="#next" class="next"></a>
                             </div>
@@ -89,7 +95,7 @@
                             {else}
                             <li>
                                 <a href="/{$gallery->file->getLastFolder()}{$gallery->file->getSubPath()}/{$gallery->file->getName()}" title="{$gallery->title}">
-                                    <img src="/{$gallery->file->getLastFolder()}{$gallery->file->getSubPath()}/{$gallery->file->getPreview()}" alt="{$gallery->title}" class="shadow-image"/>
+                                    <img src="/{$gallery->file->getLastFolder()}{$gallery->file->getSubPath()}/{$gallery->file->getPreview()}" alt="{$gallery->title}" height="83" class="shadow-image"/>
                                 </a>
                             </li>
                         {/if}
