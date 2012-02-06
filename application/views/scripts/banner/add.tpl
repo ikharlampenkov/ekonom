@@ -11,6 +11,17 @@
             <td class="ttovar"><input name="data[title]" value="{$banner->title}"/></td>
         </tr>
         <tr>
+            <td class="ttovar_title">Город</td>
+            <td class="ttovar"><select name="data[city_id]">
+            {if !empty($cityList)}
+                {foreach from=$cityList item=city}
+                    <option value="{$city->id}" {if $banner->city->id == $city->id}selected="selected"{/if}>{$city->title}</option>
+                {/foreach}
+            {/if}
+            </select>
+            </td>
+        </tr>
+        <tr>
             <td class="ttovar_title">Ссылка</td>
             <td class="ttovar"><input name="data[link]" value="{$banner->link}"/></td>
         </tr>

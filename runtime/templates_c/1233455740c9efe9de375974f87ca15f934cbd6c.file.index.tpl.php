@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.0.9, created on 2012-01-23 20:07:42
+<?php /* Smarty version Smarty-3.0.9, created on 2012-02-06 23:33:38
          compiled from "F:\www\ekonom\application/views/scripts\banner/index.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:89624f1d5b9e80a8c1-70266879%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:87864f3000e2ebd074-08884140%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '1233455740c9efe9de375974f87ca15f934cbd6c' => 
     array (
       0 => 'F:\\www\\ekonom\\application/views/scripts\\banner/index.tpl',
-      1 => 1325169332,
+      1 => 1328546018,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '89624f1d5b9e80a8c1-70266879',
+  'nocache_hash' => '87864f3000e2ebd074-08884140',
   'function' => 
   array (
   ),
@@ -51,9 +51,13 @@ if ($_smarty_tpl->_count($_from) > 0){
     foreach ($_from as $_smarty_tpl->tpl_vars['banner']->key => $_smarty_tpl->tpl_vars['banner']->value){
 ?>
             <tr>
+                <td class="ttovar"><?php if ($_smarty_tpl->getVariable('banner')->value->img->getName()){?><img src="/banners/<?php echo $_smarty_tpl->getVariable('banner')->value->img->getPreview();?>
+"/><?php }?></td>
                 <td class="ttovar"><?php echo $_smarty_tpl->getVariable('banner')->value->title;?>
 </td>
                 <td class="ttovar"><?php echo $_smarty_tpl->getVariable('banner')->value->link;?>
+</td>
+                <td class="ttovar"><?php echo $_smarty_tpl->getVariable('banner')->value->city->title;?>
 </td>
                 <td class="tedit">
                     <?php $_smarty_tpl->smarty->_tag_stack[] = array('if_allowed', array('resource'=>($_smarty_tpl->getVariable('controller')->value)."/edit")); $_block_repeat=true; smarty_block_if_allowed(array('resource'=>($_smarty_tpl->getVariable('controller')->value)."/edit"), null, $_smarty_tpl, $_block_repeat);while ($_block_repeat) { ob_start();?>

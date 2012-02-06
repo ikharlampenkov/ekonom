@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.0.9, created on 2012-01-30 22:05:20
+<?php /* Smarty version Smarty-3.0.9, created on 2012-02-06 23:43:17
          compiled from "F:\www\ekonom\application/views/scripts\company/view.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:313834f26b1b0d12ec2-23887632%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:109054f300325e1b4f6-13950709%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '4a2d248229c0e6452704f9a7ccc41e7a5c93b3ee' => 
     array (
       0 => 'F:\\www\\ekonom\\application/views/scripts\\company/view.tpl',
-      1 => 1327932813,
+      1 => 1328538354,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '313834f26b1b0d12ec2-23887632',
+  'nocache_hash' => '109054f300325e1b4f6-13950709',
   'function' => 
   array (
   ),
@@ -27,9 +27,7 @@ $_smarty_tpl->decodeProperties(array (
         <div class="clearfix">
         <?php if ($_smarty_tpl->getVariable('galleryList')->value!==false){?>
 
-
-
-            <div class="gallery">
+            <div class="gallery-company">
                 <?php  $_smarty_tpl->tpl_vars['gallery'] = new Smarty_Variable;
  $_from = $_smarty_tpl->getVariable('galleryList')->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
  $_smarty_tpl->tpl_vars['gallery']->total= $_smarty_tpl->_count($_from);
@@ -58,7 +56,7 @@ if ($_smarty_tpl->tpl_vars['gallery']->total > 0){
                             <a href="#next" class="next"></a>
                         </div>
 
-                    <ul class="previews clearfix">
+                    <ul class="previews-company clearfix">
                         <?php }else{ ?>
                         <li>
                             <a href="/gallery<?php echo $_smarty_tpl->getVariable('gallery')->value->file->getSubPath();?>

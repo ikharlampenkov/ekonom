@@ -123,15 +123,19 @@ class EK_Banner_PlaceMark
     /**
      *
      * @param $place
+     * @param $city_id
      * @return array
      * @static
      * @access public
      */
-    public static function getAllInstance($place)
+    public static function getAllInstance($place, $city_id)
     {
         try {
             $db = StdLib_DB::getInstance();
-            $sql = 'SELECT * FROM banner_place WHERE bplace_id=' . $place->getId();
+            $sql = 'SELECT * FROM banner_place, banner
+                    WHERE banner_place.banner_id=banner.id
+                      AND bplace_id=' . $place->getId() . '
+                      AND banner.city_id=' . $city_id;
             $result = $db->query($sql, StdLib_DB::QUERY_MOD_ASSOC);
 
             if (isset($result[0])) {

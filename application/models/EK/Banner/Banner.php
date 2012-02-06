@@ -32,6 +32,11 @@ class EK_Banner_Banner
     protected $_id;
 
     /**
+     * @var EK_City_City
+     */
+    protected $_city;
+
+    /**
      *
      * @access protected
      */
@@ -67,6 +72,22 @@ class EK_Banner_Banner
     {
         return $this->_id;
     } // end of member function getId
+
+    /**
+     * @param EK_City_City $city
+     */
+    public function setCity($city)
+    {
+        $this->_city = $city;
+    }
+
+    /**
+     * @return EK_City_City
+     */
+    public function getCity()
+    {
+        return $this->_city;
+    }
 
     /**
      *
@@ -165,8 +186,8 @@ class EK_Banner_Banner
     public function insertToDb()
     {
         try {
-            $sql = 'INSERT INTO banner(title, link, img)
-                        VALUES ("' . $this->_title . '", "' . $this->_link . '", "")';
+            $sql = 'INSERT INTO banner(city_id, title, link, img)
+                        VALUES (' . $this->_city->getId() . ', "' . $this->_title . '", "' . $this->_link . '", "")';
             $this->_db->query($sql);
 
             $this->_id = $this->_db->getLastInsertId();
@@ -196,7 +217,7 @@ class EK_Banner_Banner
     {
         try {
             $sql = 'UPDATE banner
-                        SET title="' . $this->_title . '", link="' . $this->_link . '"
+                        SET city_id=' . $this->_city->getId() . ', title="' . $this->_title . '", link="' . $this->_link . '"
                         WHERE id=' . $this->_id;
             $this->_db->query($sql);
 
@@ -318,10 +339,12 @@ class EK_Banner_Banner
     public function fillFromArray($values)
     {
         $this->setId($values['id']);
+        $this->setCity(EK_City_City::getInstanceById($values['city_id']));
         $this->setTitle($values['title']);
         $this->setLink($values['link']);
         $this->_img->setName($values['img']);
     }
+
 }
 
 ?>
