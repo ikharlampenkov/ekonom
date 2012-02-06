@@ -117,7 +117,7 @@ class CatalogController extends Zend_Controller_Action
                         'Тебе понравиться <a href="http://ekonom.pro/">Ekonom.pro</a>';
 
                 if ($share['email'] != '') {
-                    mail($share['email'], 'Приглашение от друга', $message);
+                    mail($share['email'], 'Приглашение от друга', mb_convert_encoding($message, 'windows-1251', 'UTF-8'));
                 }
                 exit;
             } catch (Exception $e) {
