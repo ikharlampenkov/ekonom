@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="d0b1c174-27bf-4d01-a853-aaef73e1aaba" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/CatalogController.php" afterPath="$PROJECT_DIR$/application/controllers/CatalogController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/scripts/catalog/reserve.ajax.tpl" afterPath="$PROJECT_DIR$/application/views/scripts/catalog/reserve.ajax.tpl" />
     </list>
     <list id="ad86b5e8-338a-4c37-be49-497b5521d5ba" name="Failed commit: Default" comment="Интеграция интерфейса" />
     <ignored path="ekonom.iws" />
@@ -26,10 +26,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="reserve.ajax.tpl" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="reserve.ajax.tpl" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/views/scripts/catalog/reserve.ajax.tpl">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="0" selection-start="905" selection-end="905" vertical-scroll-proportion="-10.461538">
+            <state line="14" column="60" selection-start="802" selection-end="802" vertical-scroll-proportion="0.23967774">
               <folding />
             </state>
           </provider>
@@ -44,10 +44,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CatalogController.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="CatalogController.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/controllers/CatalogController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="119" column="109" selection-start="4788" selection-end="4788" vertical-scroll-proportion="0.6421471">
+            <state line="119" column="109" selection-start="4788" selection-end="4788" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -100,8 +100,8 @@
         <option value="$PROJECT_DIR$/public_html/js/gallery.js" />
         <option value="$PROJECT_DIR$/public_html/css/main.css" />
         <option value="$PROJECT_DIR$/application/models/EK/Catalog/Product.php" />
-        <option value="$PROJECT_DIR$/application/views/scripts/catalog/reserve.ajax.tpl" />
         <option value="$PROJECT_DIR$/application/controllers/CatalogController.php" />
+        <option value="$PROJECT_DIR$/application/views/scripts/catalog/reserve.ajax.tpl" />
       </list>
     </option>
   </component>
@@ -919,7 +919,7 @@
     <option name="INCLUDE_TEXT_INTO_SHELF" value="false" />
     <option name="CREATE_PATCH_EXPAND_DETAILS_DEFAULT" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Добавлена почта при заказе товара" />
+    <option name="LAST_COMMIT_MESSAGE" value="Добавлена почта при заказе товара&#10;Перекодировка писем" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -932,7 +932,6 @@
     <option name="UPDATE_GROUP_BY_CHANGELIST" value="false" />
     <option name="SHOW_FILE_HISTORY_AS_TREE" value="false" />
     <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
-    <MESSAGE value="Merge branch 'master' of github.com:ikharlampenkov/ekonom&#10;&#10;Conflicts:&#10;&#9;.idea/workspace.xml&#10;" />
     <MESSAGE value="Счетчик, акции на первой странице, Исправление глюков по компаниям и городам" />
     <MESSAGE value="Перемещение баннера на главной" />
     <MESSAGE value="Компании: официальный сайт и постоянная скидка" />
@@ -957,6 +956,7 @@
     <MESSAGE value="Слайдер для н6ижних баннеров на первой странице" />
     <MESSAGE value="Цены смешены вправо" />
     <MESSAGE value="Добавлена почта при заказе товара" />
+    <MESSAGE value="Добавлена почта при заказе товара&#10;Перекодировка писем" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1057,13 +1057,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/scripts/catalog/reserve.ajax.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="0" selection-start="905" selection-end="905" vertical-scroll-proportion="-10.461538">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/models/EK/Catalog/Product.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="579" column="0" selection-start="15446" selection-end="15446" vertical-scroll-proportion="0.0">
@@ -1073,7 +1066,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/CatalogController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="119" column="109" selection-start="4788" selection-end="4788" vertical-scroll-proportion="0.6421471">
+        <state line="119" column="109" selection-start="4788" selection-end="4788" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/scripts/catalog/reserve.ajax.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="60" selection-start="802" selection-end="802" vertical-scroll-proportion="0.23967774">
           <folding />
         </state>
       </provider>

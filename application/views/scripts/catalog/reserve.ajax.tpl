@@ -12,7 +12,7 @@
                 <p class="help">Укажите телефон, по которому с вам можно связаться для подтверждения заказа.</p>
             </div>
             <div class="field">
-                <label for="reserve_email">Электронная почта друга</label>
+                <label for="reserve_email">Электронная почта</label>
                 <input type="email" id="reserve_email" value="" name="reserve[email]"/>
 
                 <p class="help">Укажите элетронную почту, по которой с вам можно связаться для подтверждения заказа.</p>
