@@ -3,8 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="d0b1c174-27bf-4d01-a853-aaef73e1aaba" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public_html/css/main.css" afterPath="$PROJECT_DIR$/public_html/css/main.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/runtime/templates_c/50476d9be6c10e4d5566fb6927d6edf719c8a09a.file.view-product.ajax.tpl.php" afterPath="$PROJECT_DIR$/runtime/templates_c/50476d9be6c10e4d5566fb6927d6edf719c8a09a.file.view-product.ajax.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/models/EK/Catalog/Product.php" afterPath="$PROJECT_DIR$/application/models/EK/Catalog/Product.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/scripts/catalog/reserve.ajax.tpl" afterPath="$PROJECT_DIR$/application/views/scripts/catalog/reserve.ajax.tpl" />
     </list>
     <list id="ad86b5e8-338a-4c37-be49-497b5521d5ba" name="Failed commit: Default" comment="Интеграция интерфейса" />
     <ignored path="ekonom.iws" />
@@ -27,28 +27,28 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="view-product.ajax.tpl" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/views/scripts/catalog/view-product.ajax.tpl">
+      <file leaf-file-name="reserve.ajax.tpl" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/application/views/scripts/catalog/reserve.ajax.tpl">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="34" column="41" selection-start="1536" selection-end="1545" vertical-scroll-proportion="-22.23077">
+            <state line="16" column="0" selection-start="905" selection-end="905" vertical-scroll-proportion="0.27391744">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.css" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/public_html/css/main.css">
+      <file leaf-file-name="CatalogController.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/controllers/CatalogController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1280" column="1" selection-start="21322" selection-end="21322" vertical-scroll-proportion="0.50402415">
+            <state line="97" column="30" selection-start="3837" selection-end="3837" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="gallery.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public_html/js/gallery.js">
+      <file leaf-file-name="Product.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/models/EK/Catalog/Product.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="101" column="134" selection-start="4688" selection-end="4688" vertical-scroll-proportion="0.0">
+            <state line="579" column="0" selection-start="15446" selection-end="15446" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -87,8 +87,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/application/models/EK/Catalog/Product.php" />
-        <option value="$PROJECT_DIR$/application/controllers/CatalogController.php" />
         <option value="$PROJECT_DIR$/application/views/scripts/catalog/index.tpl" />
         <option value="$PROJECT_DIR$/application/views/scripts/search/index.tpl" />
         <option value="$PROJECT_DIR$/application/views/scripts/catalog/add.tpl" />
@@ -103,6 +101,8 @@
         <option value="$PROJECT_DIR$/application/views/scripts/catalog/view-product.ajax.tpl" />
         <option value="$PROJECT_DIR$/public_html/js/gallery.js" />
         <option value="$PROJECT_DIR$/public_html/css/main.css" />
+        <option value="$PROJECT_DIR$/application/models/EK/Catalog/Product.php" />
+        <option value="$PROJECT_DIR$/application/views/scripts/catalog/reserve.ajax.tpl" />
       </list>
     </option>
   </component>
@@ -862,6 +862,7 @@
     <frame x="-8" y="-8" width="1936" height="1176" extended-state="6" />
     <editor active="false" />
     <layout>
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32950193" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32950193" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -878,7 +879,6 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.30747128" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32950193" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -920,7 +920,7 @@
     <option name="INCLUDE_TEXT_INTO_SHELF" value="false" />
     <option name="CREATE_PATCH_EXPAND_DETAILS_DEFAULT" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Слайдер для н6ижних баннеров на первой странице" />
+    <option name="LAST_COMMIT_MESSAGE" value="Цены смешены вправо" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -933,7 +933,6 @@
     <option name="UPDATE_GROUP_BY_CHANGELIST" value="false" />
     <option name="SHOW_FILE_HISTORY_AS_TREE" value="false" />
     <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
-    <MESSAGE value="Выбор города&#10;Вывод информации об акции&#10;" />
     <MESSAGE value="Кнопки Поделиться и Зарезервировать&#10;Оформление каталога" />
     <MESSAGE value="Merge branch 'master' of github.com:ikharlampenkov/ekonom&#10;&#10;Conflicts:&#10;&#9;.idea/workspace.xml&#10;" />
     <MESSAGE value="Счетчик, акции на первой странице, Исправление глюков по компаниям и городам" />
@@ -958,6 +957,7 @@
     <MESSAGE value="мультигород для компаний&#10;Поиск с уычетом города" />
     <MESSAGE value="Служебный" />
     <MESSAGE value="Слайдер для н6ижних баннеров на первой странице" />
+    <MESSAGE value="Цены смешены вправо" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -975,51 +975,6 @@
     </PATH>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/application/views/scripts/catalog/add.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="54" column="14" selection-start="2484" selection-end="2484" vertical-scroll-proportion="-23.307692" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/models/EK/Catalog/ProductLike.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="158" column="43" selection-start="3694" selection-end="3694" vertical-scroll-proportion="0.016683023" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/CatalogController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="133" column="62" selection-start="5153" selection-end="5153" vertical-scroll-proportion="0.27037773" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public_html/js/easySlider1.7.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="24" selection-start="956" selection-end="956" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/CompanyController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="44" column="29" selection-start="1748" selection-end="1759" vertical-scroll-proportion="0.016898608" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/models/EK/Company/Company.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="455" column="69" selection-start="10453" selection-end="10453" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/models/EK/Catalog/Product.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="402" column="83" selection-start="8803" selection-end="9250" vertical-scroll-proportion="0.3717694" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/models/EK/Catalog/ProductCatalog.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="35" selection-start="647" selection-end="647" vertical-scroll-proportion="0.4393638" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/runtime/logs/syslog.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="50" column="0" selection-start="5923" selection-end="5923" vertical-scroll-proportion="0.8449304" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/SearchController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="31" column="124" selection-start="895" selection-end="895" vertical-scroll-proportion="0.5171737" />
@@ -1042,7 +997,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public_html/js/gallery.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="101" column="134" selection-start="4688" selection-end="4688" vertical-scroll-proportion="0.0">
+        <state line="101" column="134" selection-start="4688" selection-end="4688" vertical-scroll-proportion="0.019880716">
           <folding />
         </state>
       </provider>
@@ -1057,6 +1012,69 @@
     <entry file="file://$PROJECT_DIR$/public_html/css/main.css">
       <provider selected="true" editor-type-id="text-editor">
         <state line="1280" column="1" selection-start="21322" selection-end="21322" vertical-scroll-proportion="0.50402415">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/scripts/catalog/reserve.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public_html/js/slider.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public_html/js/func.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/CatalogController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="97" column="30" selection-start="3837" selection-end="3837" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public_html/js/ajax-form.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public_html/js/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/scripts/catalog/share.ajax.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="6" selection-start="1032" selection-end="1032" vertical-scroll-proportion="0.35951662">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/models/EK/Catalog/Product.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="579" column="0" selection-start="15446" selection-end="15446" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/scripts/catalog/reserve.ajax.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="0" selection-start="905" selection-end="905" vertical-scroll-proportion="0.27391744">
           <folding />
         </state>
       </provider>
