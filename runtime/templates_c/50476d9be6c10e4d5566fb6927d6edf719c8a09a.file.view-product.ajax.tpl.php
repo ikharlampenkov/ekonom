@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.0.9, created on 2012-02-06 21:17:52
+<?php /* Smarty version Smarty-3.0.9, created on 2012-02-06 21:38:56
          compiled from "F:\www\ekonom\application/views/scripts\catalog/view-product.ajax.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:155214f2fe110c1cde8-99382848%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_smarty_tpl->decodeProperties(array (
     '50476d9be6c10e4d5566fb6927d6edf719c8a09a' => 
     array (
       0 => 'F:\\www\\ekonom\\application/views/scripts\\catalog/view-product.ajax.tpl',
-      1 => 1328537868,
+      1 => 1328538354,
       2 => 'file',
     ),
   ),

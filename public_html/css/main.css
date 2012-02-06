@@ -1277,6 +1277,7 @@ section.comments #paginator {
 .item-description .information .discount ins {
     float: right;
     display: block;
+    text-align: right;
 }
 
 .item-description .information .discount del {
