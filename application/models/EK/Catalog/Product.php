@@ -570,10 +570,11 @@ class EK_Catalog_Product
         $message .= 'Дата: ' . date('d.m.Y') . "\r\n" .
                 'Имя: ' . $data['name'] . "\r\n" .
                 'Телефон: ' . $data['tel'] . "\r\n" .
+                'E-mail: ' . $data['email'] . "\r\n" .
                 '<a href="http://ekonom.pro/catalog/index/rubric/' . $this->_rubric->getId() . '">' . $this->getTitle() . '</a>';
         $email = $this->getCompany()->getOrderEmail();
         if (!empty($email)) {
-            mail($email, 'Прошу отложить товар', $message);
+            mail($email, 'Прошу отложить товар', mb_convert_encoding($message, 'windows-1251', 'UTF-8'));
         }
     }
 

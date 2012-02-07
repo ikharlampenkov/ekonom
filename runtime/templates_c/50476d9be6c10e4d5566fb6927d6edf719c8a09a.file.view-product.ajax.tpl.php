@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.0.9, created on 2012-01-30 21:11:50
+<?php /* Smarty version Smarty-3.0.9, created on 2012-02-06 21:38:56
          compiled from "F:\www\ekonom\application/views/scripts\catalog/view-product.ajax.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:37064f26a526ed9fd3-14462468%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:155214f2fe110c1cde8-99382848%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '50476d9be6c10e4d5566fb6927d6edf719c8a09a' => 
     array (
       0 => 'F:\\www\\ekonom\\application/views/scripts\\catalog/view-product.ajax.tpl',
-      1 => 1327928034,
+      1 => 1328538354,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '37064f26a526ed9fd3-14462468',
+  'nocache_hash' => '155214f2fe110c1cde8-99382848',
   'function' => 
   array (
   ),
@@ -37,7 +37,7 @@ $_smarty_tpl->decodeProperties(array (
 
             <?php if ($_smarty_tpl->getVariable('product')->value->searchAttribute('description')){?>
                 <section class="description">
-                    <h3>Краткое описание</h3>
+                    <h3>Описание</h3>
 
                     <p><?php echo $_smarty_tpl->getVariable('product')->value->getAttribute('description')->value;?>
 </p>
@@ -125,8 +125,16 @@ if ($_smarty_tpl->tpl_vars['gallery']->total > 0){
 /<?php echo $_smarty_tpl->getVariable('gallery')->value->file->getPreview();?>
 " style="margin: 0;"/>
                                 </a>
-                                <h5 class="title"><?php echo $_smarty_tpl->getVariable('gallery')->value->title;?>
-</h5>
+                                <h5 class="title">
+                                <?php if ($_smarty_tpl->getVariable('product')->value->searchAttribute('original_link')&&$_smarty_tpl->getVariable('product')->value->getAttribute('original_link')->value!=''){?>
+                                    <a href="http://<?php echo $_smarty_tpl->getVariable('product')->value->getAttribute('original_link')->value;?>
+" target="_blank"><?php echo $_smarty_tpl->getVariable('gallery')->value->title;?>
+</a>
+                                <?php }else{ ?>    
+                                    <?php echo $_smarty_tpl->getVariable('gallery')->value->title;?>
+
+                                <?php }?>
+                                </h5>
                                 <a href="#previous" class="previous"></a>
                                 <a href="#next" class="next"></a>
                             </div>
@@ -144,7 +152,7 @@ if ($_smarty_tpl->tpl_vars['gallery']->total > 0){
 <?php echo $_smarty_tpl->getVariable('gallery')->value->file->getSubPath();?>
 /<?php echo $_smarty_tpl->getVariable('gallery')->value->file->getPreview();?>
 " alt="<?php echo $_smarty_tpl->getVariable('gallery')->value->title;?>
-" class="shadow-image"/>
+" height="83" class="shadow-image"/>
                                 </a>
                             </li>
                         <?php }?>

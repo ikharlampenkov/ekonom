@@ -95,7 +95,7 @@
                             {else}
                             <li>
                                 <a href="/{$gallery->file->getLastFolder()}{$gallery->file->getSubPath()}/{$gallery->file->getName()}" title="{$gallery->title}">
-                                    <img src="/{$gallery->file->getLastFolder()}{$gallery->file->getSubPath()}/{$gallery->file->getPreview()}" alt="{$gallery->title}" class="shadow-image"/>
+                                    <img src="/{$gallery->file->getLastFolder()}{$gallery->file->getSubPath()}/{$gallery->file->getPreview()}" alt="{$gallery->title}" height="83" class="shadow-image"/>
                                 </a>
                             </li>
                         {/if}

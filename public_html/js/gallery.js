@@ -23,7 +23,7 @@ $(document).ready(function () {
         }
 
 
-        $(this).attr('title', current_title).attr('href', current_image).find('img').attr('src', current_preview);
+        $(this).attr('title', current_title).attr('href', current_image).find('img').attr('src', current_preview).attr('height', '83');
         $('.cloud-zoom, .cloud-zoom-gallery').CloudZoom();
 
         return false;
@@ -51,7 +51,7 @@ $(document).ready(function () {
         $('.cloud-zoom, .cloud-zoom-gallery').CloudZoom();
 
         first_item.remove();
-        $('.previews').append($('<li><a href="' + current_image + '" title="' + current_title + '"><img src="' + current_preview + '" alt="" class="shadow-image" /></a></li>'));
+        $('.previews').append($('<li><a href="' + current_image + '" title="' + current_title + '"><img src="' + current_preview + '" alt="" height="83" class="shadow-image" /></a></li>'));
 
         return false;
     });
@@ -79,7 +79,7 @@ $(document).ready(function () {
         $('.cloud-zoom, .cloud-zoom-gallery').CloudZoom();
 
         last_item.remove();
-        $('.previews').prepend($('<li><a href="' + current_image + '" title="' + current_title + '"><img src="' + current_preview + '" alt="" class="shadow-image" /></a></li>'));
+        $('.previews').prepend($('<li><a href="' + current_image + '" title="' + current_title + '"><img src="' + current_preview + '" alt="" height="83" class="shadow-image" /></a></li>'));
 
         return false;
     });
@@ -99,7 +99,7 @@ $(document).ready(function () {
         $('.gallery-company .big-image img').attr('src', new_image).attr('data-preview', new_preview);
         $('.gallery-company .big-image h5').empty().append(new_title);
 
-        $(this).attr('title', current_title).attr('href', current_image).find('img').attr('src', current_preview);
+        $(this).attr('title', current_title).attr('href', current_image).find('img').attr('src', current_preview).attr('height', '83');
         //$('.cloud-zoom, .cloud-zoom-gallery').CloudZoom();
 
         return false;
@@ -123,7 +123,7 @@ $(document).ready(function () {
         //$('.cloud-zoom, .cloud-zoom-gallery').CloudZoom();
 
         first_item.remove();
-        $('.previews-company').append($('<li><a href="' + current_image + '" title="' + current_title + '"><img src="' + current_preview + '" alt="" class="shadow-image" /></a></li>'));
+        $('.previews-company').append($('<li><a href="' + current_image + '" title="' + current_title + '"><img src="' + current_preview + '" alt="" height="83" class="shadow-image" /></a></li>'));
 
         return false;
     });
@@ -147,7 +147,7 @@ $(document).ready(function () {
         //$('.cloud-zoom, .cloud-zoom-gallery').CloudZoom();
 
         last_item.remove();
-        $('.previews-company').prepend($('<li><a href="' + current_image + '" title="' + current_title + '"><img src="' + current_preview + '" alt="" class="shadow-image" /></a></li>'));
+        $('.previews-company').prepend($('<li><a href="' + current_image + '" title="' + current_title + '"><img src="' + current_preview + '" alt="" height="83" class="shadow-image" /></a></li>'));
 
         return false;
     });

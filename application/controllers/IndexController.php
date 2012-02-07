@@ -23,15 +23,15 @@ class IndexController extends Zend_Controller_Action
         $this->view->assign('curPager', 0);
 
         $oPlace = EK_Banner_Place::getInstanceById(1);
-        $this->view->assign('bannerList', EK_Banner_PlaceMark::getAllInstance($oPlace));
+        $this->view->assign('bannerList', EK_Banner_PlaceMark::getAllInstance($oPlace, $this->_city));
         $this->view->assign('mainPlace', $oPlace);
 
         $oPlace = EK_Banner_Place::getInstanceById(4);
-        $this->view->assign('bannerListRight', EK_Banner_PlaceMark::getAllInstance($oPlace));
+        $this->view->assign('bannerListRight', EK_Banner_PlaceMark::getAllInstance($oPlace, $this->_city));
         $this->view->assign('rightPlace', $oPlace);
 
         $oPlace = EK_Banner_Place::getInstanceById(5);
-        $this->view->assign('bannerListLeft', EK_Banner_PlaceMark::getAllInstance($oPlace));
+        $this->view->assign('bannerListLeft', EK_Banner_PlaceMark::getAllInstance($oPlace, $this->_city));
         $this->view->assign('leftPlace', $oPlace);
     }
 

@@ -21,8 +21,10 @@
     {if $bannerList!==false}
         {foreach from=$bannerList item=banner}
             <tr>
+                <td class="ttovar">{if $banner->img->getName()}<img src="/banners/{$banner->img->getPreview()}"/>{/if}</td>
                 <td class="ttovar">{$banner->title}</td>
                 <td class="ttovar">{$banner->link}</td>
+                <td class="ttovar">{$banner->city->title}</td>
                 <td class="tedit">
                     {if_allowed resource="{$controller}/edit"}
                         <a href="{$this->url(['controller' => $controller,'action' => 'edit', 'id' => $banner->id])}">редактировать</a><br/>
