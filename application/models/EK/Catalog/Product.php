@@ -56,6 +56,11 @@ class EK_Catalog_Product
     protected $_onFirstPage = 0;
 
     /**
+     * @var int - приоритет для сортировки на первой странице
+     */
+    protected $_firstPagePrior = 0;
+
+    /**
      * @var EK_Company_Company
      * @access protected
      */
@@ -284,6 +289,22 @@ class EK_Catalog_Product
     }
 
     /**
+     * @param int $firstPagePrior
+     */
+    public function setFirstPagePrior($firstPagePrior)
+    {
+        $this->_firstPagePrior = $firstPagePrior;
+    }
+
+    /**
+     * @return int
+     */
+    public function getFirstPagePrior()
+    {
+        return $this->_firstPagePrior;
+    }
+
+    /**
      * @param string $short_title
      */
     public function setShortTitle($short_title)
@@ -302,9 +323,9 @@ class EK_Catalog_Product
     public function insertToDb()
     {
         try {
-            $sql = 'INSERT INTO product (product_rubric_id, title, short_title, short_text, full_text, price, company_id, on_first_page)
+            $sql = 'INSERT INTO product (product_rubric_id, title, short_title, short_text, full_text, price, company_id, on_first_page, first_page_prior)
                     VALUES (' . $this->_rubric->id . ', "' . $this->_title . '", "' . $this->_short_title . '", "' . $this->_shortText . '",
-                           "' . $this->_fullText . '", ' . $this->_price . ', ' . $this->_company->id . ', ' . $this->_onFirstPage . ')';
+                           "' . $this->_fullText . '", ' . $this->_price . ', ' . $this->_company->id . ', ' . $this->_onFirstPage . ', ' . $this->_firstPagePrior . ')';
             $this->_db->query($sql);
 
             $this->_id = $this->_db->getLastInsertId();
@@ -328,7 +349,8 @@ class EK_Catalog_Product
             $sql = 'UPDATE product
                     SET product_rubric_id=' . $this->_rubric->id . ', title="' . $this->_title . '", short_title="' . $this->_short_title . '",
                         short_text="' . $this->_shortText . '", full_text="' . $this->_fullText . '",
-                        price=' . $this->_price . ', company_id=' . $this->_company->id . ', on_first_page=' . $this->_onFirstPage . '
+                        price=' . $this->_price . ', company_id=' . $this->_company->id . ', on_first_page=' . $this->_onFirstPage . ',
+                        first_page_prior=' . $this->_firstPagePrior . '
                     WHERE id=' . $this->_id;
             $this->_db->query($sql);
             $this->saveAttributeList();
@@ -372,7 +394,7 @@ class EK_Catalog_Product
     {
         try {
             $db = StdLib_DB::getInstance();
-            $sql = 'SELECT product.id AS id, product.title AS title, short_title, product_rubric_id, product.img, short_text, full_text, on_first_page, price, company_id
+            $sql = 'SELECT product.id AS id, product.title AS title, short_title, product_rubric_id, product.img, short_text, full_text, on_first_page, first_page_prior, price, company_id
                     FROM product, company
                     WHERE product.company_id=company.id
                       AND (city_id=' . $city . ' OR multi_city=1)
@@ -395,11 +417,12 @@ class EK_Catalog_Product
     {
         try {
             $db = StdLib_DB::getInstance();
-            $sql = 'SELECT product.id AS id, product.title AS title, short_title, product_rubric_id, product.img, short_text, full_text, on_first_page, price, company_id
+            $sql = 'SELECT product.id AS id, product.title AS title, short_title, product_rubric_id, product.img, short_text, full_text, on_first_page, first_page_prior, price, company_id
                     FROM product, company
                     WHERE product.company_id=company.id
                       AND (city_id=' . $city . ' OR multi_city=1)
                       AND on_first_page=1
+                    ORDER BY first_page_prior DESC, short_title
                     LIMIT ' . $start . ', ' . EK_Catalog_Product::PRODUCT_PER_PAGE;
 
             $result = $db->query($sql, StdLib_DB::QUERY_MOD_ASSOC);
@@ -500,6 +523,7 @@ class EK_Catalog_Product
 
         $this->setCompany(EK_Company_Company::getInstanceById($result['company_id']));
         $this->setOnFirstPage($result['on_first_page']);
+        $this->setFirstPagePrior($result['first_page_prior']);
 
         $this->getAttributeList();
     }
@@ -577,8 +601,6 @@ class EK_Catalog_Product
             mail($email, 'Прошу отложить товар', mb_convert_encoding($message, 'windows-1251', 'UTF-8'));
         }
     }
-
-
 }
 
 ?>

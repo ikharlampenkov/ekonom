@@ -169,6 +169,7 @@ class CatalogController extends Zend_Controller_Action
             } else {
                 $oProduct->setOnFirstPage(0);
             }
+            $oProduct->setFirstPagePrior($data['first_page_prior']);
 
             try {
                 $oProduct->insertToDb();
@@ -212,6 +213,7 @@ class CatalogController extends Zend_Controller_Action
             } else {
                 $oProduct->setOnFirstPage(0);
             }
+            $oProduct->setFirstPagePrior($data['first_page_prior']);
 
             foreach ($data['attribute'] as $key => $value) {
                 $oProduct->setAttribute($key, $value);

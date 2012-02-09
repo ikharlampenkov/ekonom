@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7151d89e-e84a-4788-b442-a723b5b4a6eb" name="New changelist" comment="Лишние поля в редактировании">
+    <list default="true" id="7151d89e-e84a-4788-b442-a723b5b4a6eb" name="New changelist" comment="Сокрашенния в названих акций, обрезка по 25 символов">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/scripts/catalog/index.tpl" afterPath="$PROJECT_DIR$/application/views/scripts/catalog/index.tpl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/scripts/company/view.tpl" afterPath="$PROJECT_DIR$/application/views/scripts/company/view.tpl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/scripts/index/index.tpl" afterPath="$PROJECT_DIR$/application/views/scripts/index/index.tpl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/scripts/index/show-product-list.ajax.tpl" afterPath="$PROJECT_DIR$/application/views/scripts/index/show-product-list.ajax.tpl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/scripts/search/index.tpl" afterPath="$PROJECT_DIR$/application/views/scripts/search/index.tpl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/CatalogController.php" afterPath="$PROJECT_DIR$/application/controllers/CatalogController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/models/EK/Catalog/Product.php" afterPath="$PROJECT_DIR$/application/models/EK/Catalog/Product.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/scripts/catalog/add.tpl" afterPath="$PROJECT_DIR$/application/views/scripts/catalog/add.tpl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/scripts/catalog/edit.tpl" afterPath="$PROJECT_DIR$/application/views/scripts/catalog/edit.tpl" />
     </list>
     <ignored path="ekonom.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -51,8 +50,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/application/views/scripts/catalog/view-product.ajax.tpl" />
-        <option value="$PROJECT_DIR$/public_html/js/gallery.js" />
         <option value="$PROJECT_DIR$/application/views/scripts/catalog/reserve.ajax.tpl" />
         <option value="$PROJECT_DIR$/application/views/scripts/catalog/share.ajax.tpl" />
         <option value="$PROJECT_DIR$/application/models/EK/Banner/Banner.php" />
@@ -60,13 +57,15 @@
         <option value="$PROJECT_DIR$/application/views/scripts/banner/add.tpl" />
         <option value="$PROJECT_DIR$/application/views/scripts/banner/edit.tpl" />
         <option value="$PROJECT_DIR$/application/models/EK/Banner/PlaceMark.php" />
-        <option value="$PROJECT_DIR$/application/views/scripts/catalog/edit.tpl" />
-        <option value="$PROJECT_DIR$/application/controllers/CatalogController.php" />
         <option value="$PROJECT_DIR$/application/views/scripts/catalog/index.tpl" />
         <option value="$PROJECT_DIR$/application/views/scripts/company/view.tpl" />
         <option value="$PROJECT_DIR$/application/views/scripts/index/index.tpl" />
         <option value="$PROJECT_DIR$/application/views/scripts/index/show-product-list.ajax.tpl" />
         <option value="$PROJECT_DIR$/application/views/scripts/search/index.tpl" />
+        <option value="$PROJECT_DIR$/application/controllers/CatalogController.php" />
+        <option value="$PROJECT_DIR$/application/views/scripts/catalog/add.tpl" />
+        <option value="$PROJECT_DIR$/application/views/scripts/catalog/edit.tpl" />
+        <option value="$PROJECT_DIR$/application/models/EK/Catalog/Product.php" />
       </list>
     </option>
   </component>
@@ -890,7 +889,7 @@
     <option name="INCLUDE_TEXT_INTO_SHELF" value="false" />
     <option name="CREATE_PATCH_EXPAND_DETAILS_DEFAULT" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Лишние поля в редактировании" />
+    <option name="LAST_COMMIT_MESSAGE" value="Сокрашенния в названих акций, обрезка по 25 символов" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -903,7 +902,6 @@
     <option name="UPDATE_GROUP_BY_CHANGELIST" value="false" />
     <option name="SHOW_FILE_HISTORY_AS_TREE" value="false" />
     <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
-    <MESSAGE value="Компании для товара" />
     <MESSAGE value="Компании для товара и Дизайн" />
     <MESSAGE value="Галерея в товарах" />
     <MESSAGE value="Редактор в контентных страницах" />
@@ -928,18 +926,12 @@
     <MESSAGE value="Служебный" />
     <MESSAGE value="Мультигород для баннеров" />
     <MESSAGE value="Лишние поля в редактировании" />
+    <MESSAGE value="Сокрашенния в названих акций, обрезка по 25 символов" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/application/models/EK/Company/Company.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="288" column="66" selection-start="5175" selection-end="5185" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/CompanyController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="63" column="13" selection-start="2382" selection-end="2556" vertical-scroll-proportion="0.64187646">
@@ -989,27 +981,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/scripts/catalog/add.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="15.692307">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/scripts/catalog/edit.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="47" column="17" selection-start="2408" selection-end="2408" vertical-scroll-proportion="-13.076923">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/CatalogController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="214" column="0" selection-start="8643" selection-end="8643" vertical-scroll-proportion="0.48627">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/views/scripts/search/index.tpl">
       <provider selected="true" editor-type-id="text-editor">
         <state line="34" column="0" selection-start="1624" selection-end="1624" vertical-scroll-proportion="0.42874253">
@@ -1041,6 +1012,34 @@
     <entry file="file://$PROJECT_DIR$/application/views/scripts/catalog/index.tpl">
       <provider selected="true" editor-type-id="text-editor">
         <state line="69" column="0" selection-start="3331" selection-end="3331" vertical-scroll-proportion="0.25508982">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/CatalogController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="173" column="17" selection-start="6879" selection-end="6879" vertical-scroll-proportion="0.38901603">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/scripts/catalog/add.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="51" column="48" selection-start="2302" selection-end="2302" vertical-scroll-proportion="0.42994013">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/scripts/catalog/edit.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="52" column="12" selection-start="2573" selection-end="2573" vertical-scroll-proportion="0.44071856">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/models/EK/Catalog/Product.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="422" column="34" selection-start="9662" selection-end="9662" vertical-scroll-proportion="0.4076655">
           <folding />
         </state>
       </provider>
