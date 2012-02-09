@@ -114,7 +114,7 @@ class CatalogController extends Zend_Controller_Action
                 $message .= 'Дата: ' . date('d.m.Y') . "\r\n" .
                         'Имя: ' . $share['name'] . "\r\n" .
                         'Комментарий: ' . $share['text'] . "\r\n" .
-                        'Тебе понравиться <a href="http://ekonom.pro/">Ekonom.pro</a>';
+                        'Тебе понравиться <a href="http://ekonom.pro/catalog/viewProduct/rubric/' . $oProduct->getRubric()->getId() . '/id/' . $oProduct->getId() . '">Ekonom.pro</a>';
 
                 if ($share['email'] != '') {
                     mail($share['email'], 'Приглашение от друга', mb_convert_encoding($message, 'windows-1251', 'UTF-8'));

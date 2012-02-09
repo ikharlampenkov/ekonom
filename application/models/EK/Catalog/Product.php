@@ -595,7 +595,7 @@ class EK_Catalog_Product
                 'Имя: ' . $data['name'] . "\r\n" .
                 'Телефон: ' . $data['tel'] . "\r\n" .
                 'E-mail: ' . $data['email'] . "\r\n" .
-                '<a href="http://ekonom.pro/catalog/index/rubric/' . $this->_rubric->getId() . '">' . $this->getTitle() . '</a>';
+                '<a href="http://ekonom.pro/catalog/viewProduct/rubric/' . $this->_rubric->getId() . '/id/' . $this->id . '">' . $this->getTitle() . '</a>';
         $email = $this->getCompany()->getOrderEmail();
         if (!empty($email)) {
             mail($email, 'Прошу отложить товар', mb_convert_encoding($message, 'windows-1251', 'UTF-8'));
