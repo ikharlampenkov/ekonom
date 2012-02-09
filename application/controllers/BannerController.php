@@ -31,6 +31,11 @@ class BannerController extends Zend_Controller_Action
             $oBanner->setTitle($data['title']);
             $oBanner->setLink($data['link']);
             $oBanner->setCity(EK_City_City::getInstanceById($data['city_id']));
+            if (isset($data['multi_city'])) {
+                $oBanner->setMultiCity($data['multi_city']);
+            } else {
+                $oBanner->setMultiCity(0);
+            }
 
             try {
                 $oBanner->insertToDb();
@@ -54,6 +59,11 @@ class BannerController extends Zend_Controller_Action
             $oBanner->setTitle($data['title']);
             $oBanner->setLink($data['link']);
             $oBanner->setCity(EK_City_City::getInstanceById($data['city_id']));
+            if (isset($data['multi_city'])) {
+                $oBanner->setMultiCity($data['multi_city']);
+            } else {
+                $oBanner->setMultiCity(0);
+            }
 
             try {
                 $oBanner->updateToDb();

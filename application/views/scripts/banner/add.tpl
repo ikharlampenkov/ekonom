@@ -22,6 +22,10 @@
             </td>
         </tr>
         <tr>
+            <td class="ttovar">Мультигород</td>
+            <td class="ttovar"><input type="checkbox" style="width: 14px;" name="data[multi_city]" {if $banner->multiCity}checked="checked"{/if}"/></td>
+        </tr>
+        <tr>
             <td class="ttovar_title">Ссылка</td>
             <td class="ttovar"><input name="data[link]" value="{$banner->link}"/></td>
         </tr>
