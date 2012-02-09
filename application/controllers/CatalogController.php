@@ -204,9 +204,9 @@ class CatalogController extends Zend_Controller_Action
             $oProduct->setShortTitle($data['short_title']);
             $oProduct->setRubric(EK_Catalog_Rubric::getInstanceById($data['rubric']));
             $oProduct->setCompany(EK_Company_Company::getInstanceById($data['company']));
-            $oProduct->setShortText($data['short_text']);
-            $oProduct->setFullText($data['full_text']);
-            $oProduct->setPrice($data['price']);
+            //$oProduct->setShortText($data['short_text']);
+            //$oProduct->setFullText($data['full_text']);
+            //$oProduct->setPrice($data['price']);
             if (isset($data['on_first_page'])) {
                 $oProduct->setOnFirstPage($data['on_first_page']);
             } else {
