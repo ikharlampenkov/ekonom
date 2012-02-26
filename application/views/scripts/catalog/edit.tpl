@@ -41,21 +41,27 @@
                 </select>
                 </td>
             </tr>
-            <tr>
-                <td class="ttovar">Цена</td>
-                <td class="ttovar"><input id="price" name="data[price]" value="{$product->price}" onchange="checkNum('price');"/></td>
-            </tr>
-            <tr>
-                <td class="ttovar">Текст</td>
-                <td class="ttovar"><textarea name="data[short_text]">{$product->shortText}</textarea></td>
-            </tr>
-            <tr>
-                <td class="ttovar">Полный текст</td>
-                <td class="ttovar"><textarea name="data[full_text]">{$product->fullText}</textarea></td>
-            </tr>
+        {*
+        <tr>
+            <td class="ttovar">Цена</td>
+            <td class="ttovar"><input id="price" name="data[price]" value="{$product->price}" onchange="checkNum('price');"/></td>
+        </tr>
+        <tr>
+            <td class="ttovar">Текст</td>
+            <td class="ttovar"><textarea name="data[short_text]">{$product->shortText}</textarea></td>
+        </tr>
+        <tr>
+            <td class="ttovar">Полный текст</td>
+            <td class="ttovar"><textarea name="data[full_text]">{$product->fullText}</textarea></td>
+        </tr>
+        *}
             <tr>
                 <td class="ttovar">На первой странице</td>
                 <td class="ttovar"><input type="checkbox" style="width: 14px;" name="data[on_first_page]" {if $product->onFirstPage}checked="checked"{/if}"/></td>
+            </tr>
+            <tr>
+                <td class="ttovar">Приоритет сортировки для первой страници</td>
+                <td class="ttovar"><input name="data[first_page_prior]" value="{$product->firstPagePrior}"/></td>
             </tr>
 
         {if $attributeHashList!==false}

@@ -56,3 +56,28 @@ error   Can`t complit query: SELECT * FROM banner_place, banner
                     WHERE banner_place.banner_id=banner.id
                       AND bplace_id=2
                       AND banner.city_id= No error: 1064:: Error msg: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 4 ;  06.02.2012 23:42
+error   Can`t complit query: SELECT product.id AS id, product.title AS title, short_title, product_rubric_id, product.img, short_text, full_text, on_first_page, first_page_prior, price, company_id
+                    FROM product, company
+                    WHERE product.company_id=company.id
+                      AND (city_id=1 OR multi_city=1)
+                      AND on_first_page=1
+                    ORDER BY first_page_prior DESC, short_title
+                    LIMIT 0, 25 No error: 1054:: Error msg: Unknown column 'first_page_prior' in 'field list' ;  26.02.2012 21:34
+error   Can`t complit query: SELECT product.id AS id, product.title AS title, short_title, product_rubric_id, product.img, short_text, full_text, on_first_page, first_page_prior, price, company_id
+                    FROM product, company
+                    WHERE product.company_id=company.id
+                      AND (city_id=1 OR multi_city=1)
+                      AND on_first_page=1
+                    ORDER BY first_page_prior DESC, short_title
+                    LIMIT 0, 25 No error: 1054:: Error msg: Unknown column 'first_page_prior' in 'field list' ;  26.02.2012 21:34
+error   Can`t complit query: SELECT product.id AS id, product.title AS title, short_title, product_rubric_id, product.img, short_text, full_text, on_first_page, first_page_prior, price, company_id
+                    FROM product, company
+                    WHERE product.company_id=company.id
+                      AND (city_id=1 OR multi_city=1)
+                      AND on_first_page=1
+                    ORDER BY first_page_prior DESC, short_title
+                    LIMIT 0, 25 No error: 1054:: Error msg: Unknown column 'first_page_prior' in 'field list' ;  26.02.2012 21:35
+error   Can`t complit query: SELECT * FROM banner_place, banner
+                    WHERE banner_place.banner_id=banner.id
+                      AND bplace_id=2
+                      AND (banner.city_id=1 OR multi_city=1) No error: 1054:: Error msg: Unknown column 'multi_city' in 'where clause' ;  26.02.2012 21:35
