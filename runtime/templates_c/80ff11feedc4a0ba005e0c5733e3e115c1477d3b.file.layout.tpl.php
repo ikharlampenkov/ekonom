@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.0.9, created on 2012-01-30 21:57:44
+<?php /* Smarty version Smarty-3.0.9, created on 2012-02-26 22:00:02
          compiled from "F:\www\ekonom\application/layouts/scripts\layout.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:195214f26a51a5e44b5-80953760%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:175794f4a48f268aac7-04555532%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '80ff11feedc4a0ba005e0c5733e3e115c1477d3b' => 
     array (
       0 => 'F:\\www\\ekonom\\application/layouts/scripts\\layout.tpl',
-      1 => 1327932875,
+      1 => 1330268398,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '195214f26a51a5e44b5-80953760',
+  'nocache_hash' => '175794f4a48f268aac7-04555532',
   'function' => 
   array (
   ),
@@ -210,23 +210,20 @@ $_template->assign('subrubric',$_smarty_tpl->getVariable('rubric')->value->getCh
             <a href="/conditions">Общие условия пользования сайтом</a><br/>
 
             <!--LiveInternet counter-->
-            <script type="text/javascript">
-                <!--
-                new Image().src = "//counter.yadro.ru/hit?r" +
-                        escape(document.referrer) + ((typeof(screen) == "undefined") ? "" :
-                        ";s" + screen.width + "*" + screen.height + "*" + (screen.colorDepth ?
-                                screen.colorDepth : screen.pixelDepth)) + ";u" + escape(document.URL) +
-                        ";h" + escape(document.title.substring(0, 80)) +
-                        ";" + Math.random();//-->
+            <script type="text/javascript"><!--
+            new Image().src = "//counter.yadro.ru/hit?r" +
+                    escape(document.referrer) + ((typeof(screen) == "undefined") ? "" :
+                    ";s" + screen.width + "*" + screen.height + "*" + (screen.colorDepth ?
+                            screen.colorDepth : screen.pixelDepth)) + ";u" + escape(document.URL) +
+                    ";h" + escape(document.title.substring(0, 80)) +
+                    ";" + Math.random();//-->
             </script>
             <!--/LiveInternet-->
 
             <!--LiveInternet logo-->
-            <a href="http://www.liveinternet.ru/click" target="_blank">
-                <img src="//counter.yadro.ru/logo?14.1" title="LiveInternet: показано число просмотров за 24 часа, посетителей за 24 часа и за сегодня" alt="" border="0" width="88" height="31"/>
-            </a>
+            <a href="http://www.liveinternet.ru/click" target="_blank"><img src="//counter.yadro.ru/logo?44.1" title="LiveInternet"
+                                                                            alt="" border="0" width="31" height="31"/></a>
             <!--/LiveInternet-->
-
 
         </div>
 
