@@ -126,6 +126,7 @@
                 </li>
             {/if_allowed}
                 <li><a href="/about/">О нас</a></li>
+                <li><a href="/distributionList/">Новостная рассылка</a></li>
             {if_allowed resource="city/index"}
                 <li><a href="/city/">Города</a></li>
             {/if_allowed}

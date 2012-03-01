@@ -1,23 +1,24 @@
-<?php /* Smarty version Smarty-3.0.9, created on 2012-01-31 21:01:30
+<?php /* Smarty version Smarty-3.0.9, created on 2012-03-01 20:28:29
          compiled from "F:\www\ekonom\application/views/scripts\index/index.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:24464f27f43a00c315-36879143%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:8264f4f797da11173-78721642%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '94b43447258ea62d6154766d1bbba1c4afdc3e80' => 
     array (
       0 => 'F:\\www\\ekonom\\application/views/scripts\\index/index.tpl',
-      1 => 1328018465,
+      1 => 1330268135,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '24464f27f43a00c315-36879143',
+  'nocache_hash' => '8264f4f797da11173-78721642',
   'function' => 
   array (
   ),
   'has_nocache_code' => false,
 )); /*/%%SmartyHeaderCode%%*/?>
-<?php if (!is_callable('smarty_block_if_allowed')) include 'F:\www\ekonom\library\Smarty\plugins\block.if_allowed.php';
+<?php if (!is_callable('smarty_modifier_truncate')) include 'F:\www\ekonom\library\Smarty\plugins\modifier.truncate.php';
+if (!is_callable('smarty_block_if_allowed')) include 'F:\www\ekonom\library\Smarty\plugins\block.if_allowed.php';
 ?><?php if ($_smarty_tpl->getVariable('bannerList')->value!==false){?>
 <div id="slider-wrapper">
     <div id="slider">
@@ -74,7 +75,7 @@ if ($_smarty_tpl->_count($_from) > 0){
                 <?php if ($_smarty_tpl->getVariable('authUserRole')->value!='companyadmin'||($_smarty_tpl->getVariable('authUserRole')->value=='companyadmin'&&$_smarty_tpl->getVariable('product')->value->company->getId()==$_smarty_tpl->getVariable('curCompany')->value)){?>
                     <li>
                         <h3><a href="<?php echo $_smarty_tpl->getVariable('this')->value->url(array('controller'=>'catalog','action'=>'viewProduct','id'=>$_smarty_tpl->getVariable('product')->value->id));?>
-" class="various fancybox.ajax"><?php echo $_smarty_tpl->getVariable('product')->value->shortTitle;?>
+" class="various fancybox.ajax"><?php echo smarty_modifier_truncate($_smarty_tpl->getVariable('product')->value->shortTitle,25,"...",true);?>
 </a></h3>
                         <a href="<?php echo $_smarty_tpl->getVariable('this')->value->url(array('controller'=>'catalog','action'=>'viewProduct','id'=>$_smarty_tpl->getVariable('product')->value->id));?>
 " class="various fancybox.ajax"><img src="<?php if ($_smarty_tpl->getVariable('product')->value->img->getName()){?>/files/<?php echo $_smarty_tpl->getVariable('product')->value->img->getPreview();?>

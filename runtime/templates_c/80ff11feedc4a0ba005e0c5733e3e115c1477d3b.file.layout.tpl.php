@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.0.9, created on 2012-02-26 22:00:02
+<?php /* Smarty version Smarty-3.0.9, created on 2012-03-01 22:03:54
          compiled from "F:\www\ekonom\application/layouts/scripts\layout.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:175794f4a48f268aac7-04555532%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:40474f4f8fda498d42-00174604%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '80ff11feedc4a0ba005e0c5733e3e115c1477d3b' => 
     array (
       0 => 'F:\\www\\ekonom\\application/layouts/scripts\\layout.tpl',
-      1 => 1330268398,
+      1 => 1330614231,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '175794f4a48f268aac7-04555532',
+  'nocache_hash' => '40474f4f8fda498d42-00174604',
   'function' => 
   array (
   ),
@@ -163,6 +163,7 @@ $_template->assign('subrubric',$_smarty_tpl->getVariable('rubric')->value->getCh
             <?php $_block_content = ob_get_clean(); $_block_repeat=false; echo smarty_block_if_allowed(array('resource'=>"company/index"), $_block_content, $_smarty_tpl, $_block_repeat);  } array_pop($_smarty_tpl->smarty->_tag_stack);?>
 
                 <li><a href="/about/">О нас</a></li>
+                <li><a href="/distributionList/">Новостная рассылка</a></li>
             <?php $_smarty_tpl->smarty->_tag_stack[] = array('if_allowed', array('resource'=>"city/index")); $_block_repeat=true; smarty_block_if_allowed(array('resource'=>"city/index"), null, $_smarty_tpl, $_block_repeat);while ($_block_repeat) { ob_start();?>
 
                 <li><a href="/city/">Города</a></li>

@@ -81,3 +81,5 @@ error   Can`t complit query: SELECT * FROM banner_place, banner
                     WHERE banner_place.banner_id=banner.id
                       AND bplace_id=2
                       AND (banner.city_id=1 OR multi_city=1) No error: 1054:: Error msg: Unknown column 'multi_city' in 'where clause' ;  26.02.2012 21:35
+error   Can`t complit query: SELECT * FROM product WHERE id= No error: 1064:: Error msg: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1 ;  01.03.2012 20:37
+error   Can`t complit query: SELECT * FROM product WHERE id= No error: 1064:: Error msg: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1 ;  01.03.2012 20:37
