@@ -126,6 +126,7 @@
                 </li>
             {/if_allowed}
                 <li><a href="/about/">О нас</a></li>
+                <li><a href="/distributionList/">Стать партнером</a></li>
             {if_allowed resource="city/index"}
                 <li><a href="/city/">Города</a></li>
             {/if_allowed}
@@ -199,23 +200,20 @@
         *}
 
             <!--LiveInternet counter-->
-            <script type="text/javascript">
-                <!--
-                new Image().src = "//counter.yadro.ru/hit?r" +
-                        escape(document.referrer) + ((typeof(screen) == "undefined") ? "" :
-                        ";s" + screen.width + "*" + screen.height + "*" + (screen.colorDepth ?
-                                screen.colorDepth : screen.pixelDepth)) + ";u" + escape(document.URL) +
-                        ";h" + escape(document.title.substring(0, 80)) +
-                        ";" + Math.random();//-->
+            <script type="text/javascript"><!--
+            new Image().src = "//counter.yadro.ru/hit?r" +
+                    escape(document.referrer) + ((typeof(screen) == "undefined") ? "" :
+                    ";s" + screen.width + "*" + screen.height + "*" + (screen.colorDepth ?
+                            screen.colorDepth : screen.pixelDepth)) + ";u" + escape(document.URL) +
+                    ";h" + escape(document.title.substring(0, 80)) +
+                    ";" + Math.random();//-->
             </script>
             <!--/LiveInternet-->
 
             <!--LiveInternet logo-->
-            <a href="http://www.liveinternet.ru/click" target="_blank">
-                <img src="//counter.yadro.ru/logo?14.1" title="LiveInternet: показано число просмотров за 24 часа, посетителей за 24 часа и за сегодня" alt="" border="0" width="88" height="31"/>
-            </a>
+            <a href="http://www.liveinternet.ru/click" target="_blank"><img src="//counter.yadro.ru/logo?44.1" title="LiveInternet"
+                                                                            alt="" border="0" width="31" height="31"/></a>
             <!--/LiveInternet-->
-
 
         </div>
 

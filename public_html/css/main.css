@@ -484,13 +484,15 @@ body > footer
 }
 
 #main-nav .second-level {
-    color: #293f4a;
-    background: #fff;
-    border-radius: 5px;
-    box-shadow: 5px 5px 5px 0 rgba(0,0,0,0.3);
-    top: -38px; left: 170px;
-    list-style: none;
+    background: none repeat scroll 0 0 #FFFFFF;
+    border-radius: 5px 5px 5px 5px;
+    box-shadow: 5px 5px 5px 0 rgba(0, 0, 0, 0.3);
+    color: #293F4A;
+    display: none;
+    left: 170px;
+    list-style: none outside none;
     padding: 12px 0;
+    top: -13px;
     display: none;
 }
 
@@ -1020,7 +1022,7 @@ body > footer
 #actions li:hover {
     box-shadow: 0 0 7px 0 rgba(0,0,0,0.6);
     border:  1px #fff solid;
-    width: 188px;
+    width: 186px;
     height: 108px;
     /* overflow:  hidden; */
 }

@@ -77,14 +77,24 @@
                         {if $smarty.foreach._gallery.first}
                             <div class="big-image">
                                 <a href='/{$gallery->file->getLastFolder()}{$gallery->file->getSubPath()}/{$gallery->file->getName()}' class='cloud-zoom' id='zoom' rel="position: 'inside' , showTitle: false, adjustX:0, adjustY:0" style="text-align: center;">
+
+                                    {*{if $product->searchAttribute('original_link') && $product->getAttribute('original_link')->value != ''}
+                                    <a href="http://{$product->getAttribute('original_link')->value}" target="_blank">
+                                    {/if}*}
+
                                     <img src="/{$gallery->file->getLastFolder()}{$gallery->file->getSubPath()}/{$gallery->file->getName()}" height="270" alt="{$gallery->title}" data-preview="/{$gallery->file->getLastFolder()}{$gallery->file->getSubPath()}/{$gallery->file->getPreview()}" style="margin: 0;"/>
+
+                                    {*{if $product->searchAttribute('original_link') && $product->getAttribute('original_link')->value != ''}
+                                    </a>
+                                    {/if}*}
+
                                 </a>
                                 <h5 class="title">
-                                {if $product->searchAttribute('original_link') && $product->getAttribute('original_link')->value != ''}
-                                    <a href="http://{$product->getAttribute('original_link')->value}" target="_blank">{$gallery->title}</a>
-                                {else}    
-                                    {$gallery->title}
-                                {/if}
+                                    {if $product->searchAttribute('original_link') && $product->getAttribute('original_link')->value != ''}
+                                        <a href="http://{$product->getAttribute('original_link')->value}" target="_blank">{$gallery->title}</a>
+                                        {else}
+                                        {$gallery->title}
+                                    {/if}
                                 </h5>
                                 <a href="#previous" class="previous"></a>
                                 <a href="#next" class="next"></a>

@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.0.9, created on 2012-02-06 21:38:56
+<?php /* Smarty version Smarty-3.0.9, created on 2012-03-01 21:29:08
          compiled from "F:\www\ekonom\application/views/scripts\catalog/view-product.ajax.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:155214f2fe110c1cde8-99382848%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:177384f4f87b44db902-21751338%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '50476d9be6c10e4d5566fb6927d6edf719c8a09a' => 
     array (
       0 => 'F:\\www\\ekonom\\application/views/scripts\\catalog/view-product.ajax.tpl',
-      1 => 1328538354,
+      1 => 1330611923,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '155214f2fe110c1cde8-99382848',
+  'nocache_hash' => '177384f4f87b44db902-21751338',
   'function' => 
   array (
   ),
@@ -116,6 +116,7 @@ if ($_smarty_tpl->tpl_vars['gallery']->total > 0){
 <?php echo $_smarty_tpl->getVariable('gallery')->value->file->getSubPath();?>
 /<?php echo $_smarty_tpl->getVariable('gallery')->value->file->getName();?>
 ' class='cloud-zoom' id='zoom' rel="position: 'inside' , showTitle: false, adjustX:0, adjustY:0" style="text-align: center;">
+
                                     <img src="/<?php echo $_smarty_tpl->getVariable('gallery')->value->file->getLastFolder();?>
 <?php echo $_smarty_tpl->getVariable('gallery')->value->file->getSubPath();?>
 /<?php echo $_smarty_tpl->getVariable('gallery')->value->file->getName();?>
@@ -124,16 +125,17 @@ if ($_smarty_tpl->tpl_vars['gallery']->total > 0){
 <?php echo $_smarty_tpl->getVariable('gallery')->value->file->getSubPath();?>
 /<?php echo $_smarty_tpl->getVariable('gallery')->value->file->getPreview();?>
 " style="margin: 0;"/>
+
                                 </a>
                                 <h5 class="title">
-                                <?php if ($_smarty_tpl->getVariable('product')->value->searchAttribute('original_link')&&$_smarty_tpl->getVariable('product')->value->getAttribute('original_link')->value!=''){?>
-                                    <a href="http://<?php echo $_smarty_tpl->getVariable('product')->value->getAttribute('original_link')->value;?>
+                                    <?php if ($_smarty_tpl->getVariable('product')->value->searchAttribute('original_link')&&$_smarty_tpl->getVariable('product')->value->getAttribute('original_link')->value!=''){?>
+                                        <a href="http://<?php echo $_smarty_tpl->getVariable('product')->value->getAttribute('original_link')->value;?>
 " target="_blank"><?php echo $_smarty_tpl->getVariable('gallery')->value->title;?>
 </a>
-                                <?php }else{ ?>    
-                                    <?php echo $_smarty_tpl->getVariable('gallery')->value->title;?>
+                                        <?php }else{ ?>
+                                        <?php echo $_smarty_tpl->getVariable('gallery')->value->title;?>
 
-                                <?php }?>
+                                    <?php }?>
                                 </h5>
                                 <a href="#previous" class="previous"></a>
                                 <a href="#next" class="next"></a>
