@@ -1,27 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d0b1c174-27bf-4d01-a853-aaef73e1aaba" name="Default" comment="Счетчик&#10;">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/controllers/DistributionListController.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/scripts/catalog/view-product.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/scripts/distribution-list/index.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtime/templates_c/2ca4d9fb8fa4f27acecf2d1ea2f12e9837e0db14.file.index.tpl.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtime/templates_c/5ea9c92e3621d8baf70d1e494338a57bc894b5d7.file.index.tpl.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtime/templates_c/94bb712bee8ee8457a23aedc7fc1611f33d1b498.file.view-product.tpl.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtime/templates_c/aa2f40d2fed0221f1a1736ce280c0f55fb16dedd.file.view-resource.tpl.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtime/templates_c/eb2b16b47d3eeaa15f66ac8eb95c4fb94fd76ffa.file.add-resource.tpl.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtime/templates_c/f1cd2f2ba3c0923bb94a9e4f4ff2770329493840.file.show-role-acl.tpl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/ekonom.iml" afterPath="$PROJECT_DIR$/.idea/ekonom.iml" />
+    <list default="true" id="d0b1c174-27bf-4d01-a853-aaef73e1aaba" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.zfproject.xml" afterPath="$PROJECT_DIR$/.zfproject.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/layouts/scripts/layout.tpl" afterPath="$PROJECT_DIR$/application/layouts/scripts/layout.tpl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/scripts/catalog/view-product.ajax.tpl" afterPath="$PROJECT_DIR$/application/views/scripts/catalog/view-product.ajax.tpl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/runtime/logs/syslog.txt" afterPath="$PROJECT_DIR$/runtime/logs/syslog.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/runtime/templates_c/50476d9be6c10e4d5566fb6927d6edf719c8a09a.file.view-product.ajax.tpl.php" afterPath="$PROJECT_DIR$/runtime/templates_c/50476d9be6c10e4d5566fb6927d6edf719c8a09a.file.view-product.ajax.tpl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/runtime/templates_c/80ff11feedc4a0ba005e0c5733e3e115c1477d3b.file.layout.tpl.php" afterPath="$PROJECT_DIR$/runtime/templates_c/80ff11feedc4a0ba005e0c5733e3e115c1477d3b.file.layout.tpl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/runtime/templates_c/898c0f378fd93e61d9863a07c19225c322d67c3d.file.show-product-list.ajax.tpl.php" afterPath="$PROJECT_DIR$/runtime/templates_c/898c0f378fd93e61d9863a07c19225c322d67c3d.file.show-product-list.ajax.tpl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/runtime/templates_c/94b43447258ea62d6154766d1bbba1c4afdc3e80.file.index.tpl.php" afterPath="$PROJECT_DIR$/runtime/templates_c/94b43447258ea62d6154766d1bbba1c4afdc3e80.file.index.tpl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/runtime/templates_c/a943f4c37583ea01c7979b69872ea4115840ecec.file.index.tpl.php" afterPath="$PROJECT_DIR$/runtime/templates_c/a943f4c37583ea01c7979b69872ea4115840ecec.file.index.tpl.php" />
     </list>
     <list id="ad86b5e8-338a-4c37-be49-497b5521d5ba" name="Failed commit: Default" comment="Интеграция интерфейса" />
     <ignored path="ekonom.iws" />
@@ -43,44 +24,7 @@
     <favorites_list name="ekonom" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="DistributionListController.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/controllers/DistributionListController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="22" selection-start="13" selection-end="29" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.tpl" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/application/views/scripts/distribution-list/index.tpl">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="109" selection-start="197" selection-end="197" vertical-scroll-proportion="0.10271903">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="layout.tpl" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/layouts/scripts/layout.tpl">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="137" column="25" selection-start="6578" selection-end="6578" vertical-scroll-proportion="-28.884615">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.tpl" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/views/scripts/about/index.tpl">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="120" column="0" selection-start="4789" selection-end="4799" vertical-scroll-proportion="-33.76923">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -195,7 +139,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -660,6 +603,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="Favorites" />
     </panes>
   </component>
@@ -790,12 +734,11 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3301282" sideWeight="0.6704981" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3386752" sideWeight="0.6704981" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32950193" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Command Line Tools Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32950193" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32950193" sideWeight="0.0" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Phing Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -807,6 +750,7 @@
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Command Line Tools Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32950193" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -843,7 +787,7 @@
     <option name="INCLUDE_TEXT_INTO_SHELF" value="false" />
     <option name="CREATE_PATCH_EXPAND_DETAILS_DEFAULT" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Счетчик&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="Новостная рассылка" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -856,7 +800,6 @@
     <option name="UPDATE_GROUP_BY_CHANGELIST" value="false" />
     <option name="SHOW_FILE_HISTORY_AS_TREE" value="false" />
     <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
-    <MESSAGE value="Вывод постоянной скидки, масштабирование фото" />
     <MESSAGE value="В галлереи удаляются старые фото" />
     <MESSAGE value="Время на баннере" />
     <MESSAGE value="Добавлена captcha" />
@@ -881,6 +824,7 @@
     <MESSAGE value="Правка названия почты" />
     <MESSAGE value="Баннеры для разных городов" />
     <MESSAGE value="Счетчик&#10;" />
+    <MESSAGE value="Новостная рассылка" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -950,46 +894,32 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/scripts/catalog/view-product.ajax.tpl">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="82" column="43" selection-start="4148" selection-end="4148" vertical-scroll-proportion="0.49489796">
-          <folding />
-        </state>
+        <state line="82" column="43" selection-start="4148" selection-end="4148" vertical-scroll-proportion="0.49489796" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public_html/js/cloud-zoom.1.0.2.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="22" selection-start="1001" selection-end="1001" vertical-scroll-proportion="-1.5685885">
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
+        <state line="33" column="22" selection-start="1001" selection-end="1001" vertical-scroll-proportion="-1.5685885" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/layouts/scripts/layout.tpl">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="137" column="25" selection-start="6578" selection-end="6578" vertical-scroll-proportion="-28.884615">
-          <folding />
-        </state>
+        <state line="137" column="25" selection-start="6578" selection-end="6578" vertical-scroll-proportion="0.76632655" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/DistributionListController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="22" selection-start="13" selection-end="29" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="2" column="22" selection-start="13" selection-end="29" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/scripts/about/index.tpl">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="120" column="0" selection-start="4789" selection-end="4799" vertical-scroll-proportion="-33.76923">
-          <folding />
-        </state>
+        <state line="120" column="0" selection-start="4789" selection-end="4799" vertical-scroll-proportion="-33.76923" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/scripts/distribution-list/index.tpl">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="109" selection-start="197" selection-end="197" vertical-scroll-proportion="0.10271903">
-          <folding />
-        </state>
+        <state line="6" column="109" selection-start="197" selection-end="197" vertical-scroll-proportion="0.10271903" />
       </provider>
     </entry>
   </component>
