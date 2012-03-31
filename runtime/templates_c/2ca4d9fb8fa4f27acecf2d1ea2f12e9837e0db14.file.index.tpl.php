@@ -1,23 +1,24 @@
-<?php /* Smarty version Smarty-3.0.9, created on 2012-01-10 23:04:22
+<?php /* Smarty version Smarty-3.0.9, created on 2012-03-01 22:04:36
          compiled from "F:\www\ekonom\application/views/scripts\user/index.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:187354f0c61861e6c35-37187377%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:22994f4f900461dc73-45368358%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '2ca4d9fb8fa4f27acecf2d1ea2f12e9837e0db14' => 
     array (
       0 => 'F:\\www\\ekonom\\application/views/scripts\\user/index.tpl',
-      1 => 1324107625,
+      1 => 1327932875,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '187354f0c61861e6c35-37187377',
+  'nocache_hash' => '22994f4f900461dc73-45368358',
   'function' => 
   array (
   ),
   'has_nocache_code' => false,
 )); /*/%%SmartyHeaderCode%%*/?>
 <?php if (!is_callable('smarty_block_if_allowed')) include 'F:\www\ekonom\library\Smarty\plugins\block.if_allowed.php';
+if (!is_callable('smarty_block_if_object_allowed')) include 'F:\www\ekonom\library\Smarty\plugins\block.if_object_allowed.php';
 ?><h1 class="heading">Пользователи</h1>
 
 <div class="page_block">
@@ -63,6 +64,8 @@ $_smarty_tpl->decodeProperties(array (
 if ($_smarty_tpl->_count($_from) > 0){
     foreach ($_from as $_smarty_tpl->tpl_vars['user']->key => $_smarty_tpl->tpl_vars['user']->value){
 ?>
+        <?php $_smarty_tpl->smarty->_tag_stack[] = array('if_object_allowed', array('type'=>"City",'object'=>($_smarty_tpl->getVariable('user')->value->getCity()),'priv'=>"moderate")); $_block_repeat=true; smarty_block_if_object_allowed(array('type'=>"City",'object'=>($_smarty_tpl->getVariable('user')->value->getCity()),'priv'=>"moderate"), null, $_smarty_tpl, $_block_repeat);while ($_block_repeat) { ob_start();?>
+
         <tr>
             <td class="ttovar"><?php if ($_smarty_tpl->getVariable('user')->value->searchAttribute('name')){?><?php echo $_smarty_tpl->getVariable('user')->value->getAttribute('name')->value;?>
 <?php }else{ ?>-<?php }?></td>
@@ -77,10 +80,14 @@ if ($_smarty_tpl->_count($_from) > 0){
 " onclick="return confirmDelete('<?php echo $_smarty_tpl->getVariable('user')->value->login;?>
 ');" style="color: #830000">удалить</a></td>
         </tr>
+        <?php $_block_content = ob_get_clean(); $_block_repeat=false; echo smarty_block_if_object_allowed(array('type'=>"City",'object'=>($_smarty_tpl->getVariable('user')->value->getCity()),'priv'=>"moderate"), $_block_content, $_smarty_tpl, $_block_repeat);  } array_pop($_smarty_tpl->smarty->_tag_stack);?>
+
     <?php }} ?>
 <?php }?>
 </table>
 
+
+<?php $_smarty_tpl->smarty->_tag_stack[] = array('if_allowed', array('resource'=>($_smarty_tpl->getVariable('controller')->value)."/index",'priv'=>"show-role")); $_block_repeat=true; smarty_block_if_allowed(array('resource'=>($_smarty_tpl->getVariable('controller')->value)."/index",'priv'=>"show-role"), null, $_smarty_tpl, $_block_repeat);while ($_block_repeat) { ob_start();?>
 
 <br/>
 <h1 class="heading">Роли</h1>
@@ -116,3 +123,4 @@ if ($_smarty_tpl->_count($_from) > 0){
         <?php }} ?>
     <?php }?>
     </table>
+<?php $_block_content = ob_get_clean(); $_block_repeat=false; echo smarty_block_if_allowed(array('resource'=>($_smarty_tpl->getVariable('controller')->value)."/index",'priv'=>"show-role"), $_block_content, $_smarty_tpl, $_block_repeat);  } array_pop($_smarty_tpl->smarty->_tag_stack);?>

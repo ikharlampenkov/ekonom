@@ -36,9 +36,9 @@
     <script type="text/javascript" src="/js/ajax-form.js"></script>
     <!-- read comments in js files for better understanding of its purpose -->
     <script type="text/javascript" src="/js/gallery.js"></script>
-    {*
-    <script type="text/javascript" src="/js/slider.js"></script>
-    *}
+{*
+<script type="text/javascript" src="/js/slider.js"></script>
+*}
     <script type="text/javascript" src="/js/easySlider1.7.js"></script>
 
     <script type="text/javascript" language="javascript" src="/js/func.js"></script>
@@ -63,7 +63,9 @@
                 <select name="city_name" id="city_name">
                 {if !empty($headCityList)}
                     {foreach from=$headCityList item=city}
-                        <option value="{$city->id}" {if $city->id == $curCity}selected="selected"{/if} >{$city->title}</option>
+                        {if_object_allowed type="City" object="{$city}" priv="moderate"}
+                            <option value="{$city->id}" {if $city->id == $curCity}selected="selected"{/if} >{$city->title}</option>
+                        {/if_object_allowed}
                     {/foreach}
                 {/if}
                 </select>
@@ -124,6 +126,10 @@
                 </li>
             {/if_allowed}
                 <li><a href="/about/">О нас</a></li>
+            {if_allowed resource="news/index"}
+                <li><a href="/news/">Новости</a></li>
+            {/if_allowed}
+                <li><a href="/distributionList/">Стать партнером</a></li>
             {if_allowed resource="city/index"}
                 <li><a href="/city/">Города</a></li>
             {/if_allowed}
@@ -168,50 +174,49 @@
         <div id="conditions">
             <a href="/conditions">Общие условия пользования сайтом</a><br/>
 
-            <!-- Yandex.Metrika informer -->
-            <a href="http://metrika.yandex.ru/stat/?id=11564479&amp;from=informer" target="_blank" rel="nofollow">
-                <img src="//bs.yandex.ru/informer/11564479/3_0_FFFFFFFF_EFEFEFFF_0_pageviews"
-                     style="width:88px; height:31px; border:0;" alt="Яндекс.Метрика" title="Яндекс.Метрика: данные за сегодня (просмотры, визиты и уникальные посетители)" onclick="try { Ya.Metrika.informer( { i:this,id:11564479,type:0,lang:'ru' } );return false } catch(e) { } "/>
-            </a>
-            <!-- /Yandex.Metrika informer -->
+        {*
+        <!-- Yandex.Metrika informer -->
+        <a href="http://metrika.yandex.ru/stat/?id=11564479&amp;from=informer" target="_blank" rel="nofollow">
+            <img src="//bs.yandex.ru/informer/11564479/3_0_FFFFFFFF_EFEFEFFF_0_pageviews"
+                 style="width:88px; height:31px; border:0;" alt="Яндекс.Метрика" title="Яндекс.Метрика: данные за сегодня (просмотры, визиты и уникальные посетители)" onclick="try { Ya.Metrika.informer( { i:this,id:11564479,type:0,lang:'ru' } );return false } catch(e) { } "/>
+        </a>
+        <!-- /Yandex.Metrika informer -->
 
-            <!-- Yandex.Metrika counter -->
-            <div style="display:none;">
-                <script type="text/javascript">
-                    (function (w, c) {
-                    (w[c] = w[c] || []).push(function() {
-                    try {
-                    w.yaCounter11564479 = new Ya.Metrika( { id:11564479, enableAll: true, trackHash:true, webvisor:true } );
-                    }
-                    catch(e) { }
-                    });
-                    })(window, "yandex_metrika_callbacks");
-                </script>
-            </div>
-            <script src="//mc.yandex.ru/metrika/watch.js" type="text/javascript" defer="defer"></script>
-            <noscript>
-                <div><img src="//mc.yandex.ru/watch/11564479" style="position:absolute; left:-9999px;" alt=""/></div>
-            </noscript>
-            <!-- /Yandex.Metrika counter -->
+        <!-- Yandex.Metrika counter -->
+        <div style="display:none;">
+            <script type="text/javascript">
+                (function (w, c) {
+                (w[c] = w[c] || []).push(function() {
+                try {
+                w.yaCounter11564479 = new Ya.Metrika( { id:11564479, enableAll: true, trackHash:true, webvisor:true } );
+                }
+                catch(e) { }
+                });
+                })(window, "yandex_metrika_callbacks");
+            </script>
+        </div>
+        <script src="//mc.yandex.ru/metrika/watch.js" type="text/javascript" defer="defer"></script>
+        <noscript>
+            <div><img src="//mc.yandex.ru/watch/11564479" style="position:absolute; left:-9999px;" alt=""/></div>
+        </noscript>
+        <!-- /Yandex.Metrika counter -->
+        *}
 
             <!--LiveInternet counter-->
-            <script type="text/javascript">
-                <!--
-                new Image().src = "//counter.yadro.ru/hit?r" +
-                        escape(document.referrer) + ((typeof(screen) == "undefined") ? "" :
-                        ";s" + screen.width + "*" + screen.height + "*" + (screen.colorDepth ?
-                                screen.colorDepth : screen.pixelDepth)) + ";u" + escape(document.URL) +
-                        ";h" + escape(document.title.substring(0, 80)) +
-                        ";" + Math.random();//-->
+            <script type="text/javascript"><!--
+            new Image().src = "//counter.yadro.ru/hit?r" +
+                    escape(document.referrer) + ((typeof(screen) == "undefined") ? "" :
+                    ";s" + screen.width + "*" + screen.height + "*" + (screen.colorDepth ?
+                            screen.colorDepth : screen.pixelDepth)) + ";u" + escape(document.URL) +
+                    ";h" + escape(document.title.substring(0, 80)) +
+                    ";" + Math.random();//-->
             </script>
             <!--/LiveInternet-->
 
             <!--LiveInternet logo-->
-            <a href="http://www.liveinternet.ru/click" target="_blank">
-                <img src="//counter.yadro.ru/logo?14.1" title="LiveInternet: показано число просмотров за 24 часа, посетителей за 24 часа и за сегодня" alt="" border="0" width="88" height="31"/>
-            </a>
+            <a href="http://www.liveinternet.ru/click" target="_blank"><img src="//counter.yadro.ru/logo?44.1" title="LiveInternet"
+                                                                            alt="" border="0" width="31" height="31"/></a>
             <!--/LiveInternet-->
-
 
         </div>
 

@@ -234,6 +234,28 @@ class EK_City_City
         }
     } // end of member function getInstanceById
 
+
+    public static function getInstanceByUser($id)
+    {
+        try {
+            $db = StdLib_DB::getInstance();
+            $sql = 'SELECT * FROM city, city_user
+                    WHERE city.id=city_user.city_id AND user_id=' . (int)$id . '
+                    LIMIT 1';
+            $result = $db->query($sql, StdLib_DB::QUERY_MOD_ASSOC);
+
+            if (isset($result[0])) {
+                $o = new EK_City_City();
+                $o->fillFromArray($result[0]);
+                return $o;
+            } else {
+                return false;
+            }
+        } catch (Exception $e) {
+            throw new Exception($e->getMessage());
+        }
+    }
+
     /**
      *
      *

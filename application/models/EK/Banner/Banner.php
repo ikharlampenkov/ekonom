@@ -32,6 +32,16 @@ class EK_Banner_Banner
     protected $_id;
 
     /**
+     * @var EK_City_City
+     */
+    protected $_city;
+
+    /**
+     * @var int - флаг мультигорода
+     */
+    protected $_multiCity = 0;
+
+    /**
      *
      * @access protected
      */
@@ -67,6 +77,44 @@ class EK_Banner_Banner
     {
         return $this->_id;
     } // end of member function getId
+
+    /**
+     * @param EK_City_City $city
+     */
+    public function setCity($city)
+    {
+        $this->_city = $city;
+    }
+
+    /**
+     * @return EK_City_City
+     */
+    public function getCity()
+    {
+        return $this->_city;
+    }
+
+    /**
+     * @param int $multiCity
+     */
+    public function setMultiCity($multiCity)
+    {
+        if ($multiCity === 'on') {
+            $this->_multiCity = 1;
+        } elseif (empty($multiCity)) {
+            $this->_multiCity = 0;
+        } else {
+            $this->_multiCity = $multiCity;
+        }
+    }
+
+    /**
+     * @return int
+     */
+    public function getMultiCity()
+    {
+        return $this->_multiCity;
+    }
 
     /**
      *
@@ -165,8 +213,8 @@ class EK_Banner_Banner
     public function insertToDb()
     {
         try {
-            $sql = 'INSERT INTO banner(title, link, img)
-                        VALUES ("' . $this->_title . '", "' . $this->_link . '", "")';
+            $sql = 'INSERT INTO banner(city_id, multi_city, title, link, img)
+                        VALUES (' . $this->_city->getId() . ', ' . $this->_multiCity . ', "' . $this->_title . '", "' . $this->_link . '", "")';
             $this->_db->query($sql);
 
             $this->_id = $this->_db->getLastInsertId();
@@ -196,7 +244,7 @@ class EK_Banner_Banner
     {
         try {
             $sql = 'UPDATE banner
-                        SET title="' . $this->_title . '", link="' . $this->_link . '"
+                        SET city_id=' . $this->_city->getId() . ', multi_city=' . $this->_multiCity . ', title="' . $this->_title . '", link="' . $this->_link . '"
                         WHERE id=' . $this->_id;
             $this->_db->query($sql);
 
@@ -318,10 +366,13 @@ class EK_Banner_Banner
     public function fillFromArray($values)
     {
         $this->setId($values['id']);
+        $this->setCity(EK_City_City::getInstanceById($values['city_id']));
+        $this->setMultiCity($values['multi_city']);
         $this->setTitle($values['title']);
         $this->setLink($values['link']);
         $this->_img->setName($values['img']);
     }
+
 }
 
 ?>

@@ -4,7 +4,7 @@
             <div class="field">
                 <label for="share_email">Электронная почта друга</label>
                 <input type="email" id="share_email" value="" name="share[email]"/>
-                <p class="help">Укажите элетронную почту, куда отправить приглашение.</p>
+                <p class="help">Укажите электронную почту, куда отправить приглашение.</p>
             </div>
             <div class="field">
                 <label for="share_name">Ваше имя</label>

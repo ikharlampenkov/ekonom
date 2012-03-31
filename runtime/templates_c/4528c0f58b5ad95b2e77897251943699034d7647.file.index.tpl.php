@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.0.9, created on 2012-01-06 22:03:46
+<?php /* Smarty version Smarty-3.0.9, created on 2012-01-30 22:05:07
          compiled from "F:\www\ekonom\application/views/scripts\company/index.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:106144f070d525b2213-42040463%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:271394f1d5b6c400e01-87236021%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '4528c0f58b5ad95b2e77897251943699034d7647' => 
     array (
       0 => 'F:\\www\\ekonom\\application/views/scripts\\company/index.tpl',
-      1 => 1325169332,
+      1 => 1327932874,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '106144f070d525b2213-42040463',
+  'nocache_hash' => '271394f1d5b6c400e01-87236021',
   'function' => 
   array (
   ),
@@ -46,6 +46,8 @@ if ($_smarty_tpl->_count($_from) > 0){
 ?>
             <?php ob_start();?><?php echo smarty_modifier_capitalize($_smarty_tpl->getVariable('controller')->value);?>
 <?php $_tmp1=ob_get_clean();?><?php $_smarty_tpl->smarty->_tag_stack[] = array('if_object_allowed', array('type'=>$_tmp1,'object'=>($_smarty_tpl->tpl_vars['company']->value),'priv'=>"moderate")); $_block_repeat=true; smarty_block_if_object_allowed(array('type'=>$_tmp1,'object'=>($_smarty_tpl->tpl_vars['company']->value),'priv'=>"moderate"), null, $_smarty_tpl, $_block_repeat);while ($_block_repeat) { ob_start();?>
+
+            <?php $_smarty_tpl->smarty->_tag_stack[] = array('if_object_allowed', array('type'=>"City",'object'=>($_smarty_tpl->getVariable('company')->value->city),'priv'=>"moderate")); $_block_repeat=true; smarty_block_if_object_allowed(array('type'=>"City",'object'=>($_smarty_tpl->getVariable('company')->value->city),'priv'=>"moderate"), null, $_smarty_tpl, $_block_repeat);while ($_block_repeat) { ob_start();?>
 
                 <li>
                     <h3><a href="<?php echo $_smarty_tpl->getVariable('this')->value->url(array('controller'=>$_smarty_tpl->getVariable('controller')->value,'action'=>'view','id'=>$_smarty_tpl->getVariable('company')->value->id));?>
@@ -103,6 +105,8 @@ if ($_smarty_tpl->_count($_from) > 0){
 
 
                 </li>
+            <?php $_block_content = ob_get_clean(); $_block_repeat=false; echo smarty_block_if_object_allowed(array('type'=>"City",'object'=>($_smarty_tpl->getVariable('company')->value->city),'priv'=>"moderate"), $_block_content, $_smarty_tpl, $_block_repeat);  } array_pop($_smarty_tpl->smarty->_tag_stack);?>
+
             <?php $_block_content = ob_get_clean(); $_block_repeat=false; echo smarty_block_if_object_allowed(array('type'=>$_tmp1,'object'=>($_smarty_tpl->tpl_vars['company']->value),'priv'=>"moderate"), $_block_content, $_smarty_tpl, $_block_repeat);  } array_pop($_smarty_tpl->smarty->_tag_stack);?>
 
         <?php }} ?>

@@ -6,9 +6,7 @@
         <div class="clearfix">
         {if $galleryList !== false}
 
-
-
-            <div class="gallery">
+            <div class="gallery-company">
                 {foreach from=$galleryList item=gallery name=_gallery}
                     {if $smarty.foreach._gallery.first}
                         <div class="big-image">
@@ -18,7 +16,7 @@
                             <a href="#next" class="next"></a>
                         </div>
 
-                    <ul class="previews clearfix">
+                    <ul class="previews-company clearfix">
                         {else}
                         <li>
                             <a href="/gallery{$gallery->file->getSubPath()}/{$gallery->file->getName()}" title="{$gallery->title}">
@@ -36,12 +34,12 @@
             <div class="information">
                 <img class="shop-logo shadow-image" src="{if $company->file->getName()}/files/{$company->file->getPreview()}{else}/i/no_foto.png{/if}" alt="Логотип магазина {$company->title}"/>
 
-                <h3>Краткое описание магазина</h3>
+                <h3>Описание</h3>
 
                 <p>{$company->description}</p>
 
             {if $company->getAddressList() !== false}
-                <h3>Адреса магазинов</h3>
+                <h3>Адреса</h3>
                 <ul class="addresses-list">
                     {foreach from=$company->getAddressList() item=address}
                         <li>
@@ -54,7 +52,7 @@
 
             {if $company->ofSite}
                 <h3>Официальный сайт</h3>
-            
+
                 <p><a href="http://{$company->ofSite}" target="_blank">{$company->ofSite}</a></p>
             {/if}
 
@@ -90,8 +88,8 @@
     <ul id="actions" class="clearfix shop-actions">
         {foreach from=$productList item=product}
             <li>
-                <h3><a href="{$this->url(['controller' => 'catalog','action' => 'viewProduct', 'id' => $product->id])}" class="various fancybox.ajax">{$product->title}</a></h3>
-                <a href="{$this->url(['controller' => 'catalog','action' => 'viewProduct', 'id' => $product->id])}" class="various fancybox.ajax"><img src="{if $product->img->getName()}/files/{$product->img->getPreview()}{else}/i/no_foto.png{/if}" alt="{$product->title}"></a>
+                <h3><a href="{$this->url(['controller' => 'catalog','action' => 'viewProduct', 'id' => $product->id])}" class="various fancybox.ajax">{$product->shortTitle|truncate:25:"...":true}</a></h3>
+                <a href="{$this->url(['controller' => 'catalog','action' => 'viewProduct', 'id' => $product->id])}" class="various fancybox.ajax"><img src="{if $product->img->getName()}/files/{$product->img->getPreview()}{else}/i/no_foto.png{/if}" alt="{$product->shortTitle}"></a>
 
                 {if $product->searchAttribute('discount')}
                     <div class="discount">{$product->getAttribute('discount')->value}{if $product->searchAttribute('discount_type')}{$product->getAttribute('discount_type')->value}{/if}</div>
@@ -134,8 +132,8 @@
         scrolling: 'no',
         afterShow: updatePlusOne,
         afterShow: function () {
-                $('.cloud-zoom, .cloud-zoom-gallery').CloudZoom();
-                }
+        $('.cloud-zoom, .cloud-zoom-gallery').CloudZoom();
+        }
         });
         });
     </script>
@@ -146,6 +144,8 @@
 
 <aside id="sidebar">
 {if $bannerList!==false}
+
+{*
     {foreach from=$bannerList item=banner}
         <section id="adv">
             <a href="http://{$banner->getBanner()->link}">
@@ -153,15 +153,67 @@
             </a>
         </section>
     {/foreach}
+    *}
+
+    <div id="slider-wrapper-r">
+        <div id="slider-r">
+            <ul id="slides">
+                {foreach from=$bannerList item=banner}
+                    <li class="slide">
+                        <a href="http://{$banner->getBanner()->link}">
+                            <img src="/banners/{$banner->getBanner()->img->getName()}" alt="{$banner->getBanner()->title}">
+                        </a>
+                    </li>
+                {/foreach}
+            </ul>
+        </div>
+    </div>
+
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+        $('#slider-r').easySlider({
+        auto: true,
+        pause: {$topPlace->changeTime}*1000,
+        continuous: true,
+        controlsShow: false,
+        prevId: 'previous',
+        prevText: '',
+        nextId: 'next',
+        nextText: ''
+        });
+        });
+    </script>
 {/if}
     <br/>
 {if $bannerListBottom!==false}
-    {foreach from=$bannerListBottom item=banner}
-        <section id="adv">
-            <a href="http://{$banner->getBanner()->link}">
-                <img src="/banners/{$banner->getBanner()->img->getName()}" width="187" height="357" alt="{$banner->getBanner()->title}"/>
-            </a>
-        </section>
-    {/foreach}
+    <div id="slider-wrapper-rb">
+        <div id="slider-rb">
+            <ul id="slides-b">
+                {foreach from=$bannerListBottom item=banner}
+                    <li class="slide">
+                        <a href="http://{$banner->getBanner()->link}">
+                            <img src="/banners/{$banner->getBanner()->img->getName()}" width="187" height="357" alt="{$banner->getBanner()->title}"/>
+                        </a>
+                    </li>
+                {/foreach}
+            </ul>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+        $('#slider-rb').easySlider({
+        auto: true,
+        pause: {$bottomPlace->changeTime}*1000,
+        continuous: true,
+        controlsShow: false,
+        prevId: 'previous',
+        prevText: '',
+        nextId: 'next',
+        nextText: ''
+        });
+        });
+    </script>
 {/if}
 </aside>

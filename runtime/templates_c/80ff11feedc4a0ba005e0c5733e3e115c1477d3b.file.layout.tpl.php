@@ -1,23 +1,24 @@
-<?php /* Smarty version Smarty-3.0.9, created on 2012-01-18 23:35:45
+<?php /* Smarty version Smarty-3.0.9, created on 2012-03-01 22:03:54
          compiled from "F:\www\ekonom\application/layouts/scripts\layout.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:142524f16f4e1942271-70782395%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:40474f4f8fda498d42-00174604%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '80ff11feedc4a0ba005e0c5733e3e115c1477d3b' => 
     array (
       0 => 'F:\\www\\ekonom\\application/layouts/scripts\\layout.tpl',
-      1 => 1326904426,
+      1 => 1330614231,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '142524f16f4e1942271-70782395',
+  'nocache_hash' => '40474f4f8fda498d42-00174604',
   'function' => 
   array (
   ),
   'has_nocache_code' => false,
 )); /*/%%SmartyHeaderCode%%*/?>
-<?php if (!is_callable('smarty_block_if_allowed')) include 'F:\www\ekonom\library\Smarty\plugins\block.if_allowed.php';
+<?php if (!is_callable('smarty_block_if_object_allowed')) include 'F:\www\ekonom\library\Smarty\plugins\block.if_object_allowed.php';
+if (!is_callable('smarty_block_if_allowed')) include 'F:\www\ekonom\library\Smarty\plugins\block.if_allowed.php';
 ?><!DOCTYPE html>
 <html>
 <head>
@@ -76,9 +77,13 @@ $_smarty_tpl->decodeProperties(array (
 if ($_smarty_tpl->_count($_from) > 0){
     foreach ($_from as $_smarty_tpl->tpl_vars['city']->key => $_smarty_tpl->tpl_vars['city']->value){
 ?>
-                        <option value="<?php echo $_smarty_tpl->getVariable('city')->value->id;?>
+                        <?php $_smarty_tpl->smarty->_tag_stack[] = array('if_object_allowed', array('type'=>"City",'object'=>($_smarty_tpl->tpl_vars['city']->value),'priv'=>"moderate")); $_block_repeat=true; smarty_block_if_object_allowed(array('type'=>"City",'object'=>($_smarty_tpl->tpl_vars['city']->value),'priv'=>"moderate"), null, $_smarty_tpl, $_block_repeat);while ($_block_repeat) { ob_start();?>
+
+                            <option value="<?php echo $_smarty_tpl->getVariable('city')->value->id;?>
 " <?php if ($_smarty_tpl->getVariable('city')->value->id==$_smarty_tpl->getVariable('curCity')->value){?>selected="selected"<?php }?> ><?php echo $_smarty_tpl->getVariable('city')->value->title;?>
 </option>
+                        <?php $_block_content = ob_get_clean(); $_block_repeat=false; echo smarty_block_if_object_allowed(array('type'=>"City",'object'=>($_smarty_tpl->tpl_vars['city']->value),'priv'=>"moderate"), $_block_content, $_smarty_tpl, $_block_repeat);  } array_pop($_smarty_tpl->smarty->_tag_stack);?>
+
                     <?php }} ?>
                 <?php }?>
                 </select>
@@ -158,6 +163,7 @@ $_template->assign('subrubric',$_smarty_tpl->getVariable('rubric')->value->getCh
             <?php $_block_content = ob_get_clean(); $_block_repeat=false; echo smarty_block_if_allowed(array('resource'=>"company/index"), $_block_content, $_smarty_tpl, $_block_repeat);  } array_pop($_smarty_tpl->smarty->_tag_stack);?>
 
                 <li><a href="/about/">О нас</a></li>
+                <li><a href="/distributionList/">Новостная рассылка</a></li>
             <?php $_smarty_tpl->smarty->_tag_stack[] = array('if_allowed', array('resource'=>"city/index")); $_block_repeat=true; smarty_block_if_allowed(array('resource'=>"city/index"), null, $_smarty_tpl, $_block_repeat);while ($_block_repeat) { ob_start();?>
 
                 <li><a href="/city/">Города</a></li>
@@ -204,50 +210,21 @@ $_template->assign('subrubric',$_smarty_tpl->getVariable('rubric')->value->getCh
         <div id="conditions">
             <a href="/conditions">Общие условия пользования сайтом</a><br/>
 
-            <!-- Yandex.Metrika informer -->
-            <a href="http://metrika.yandex.ru/stat/?id=11564479&amp;from=informer" target="_blank" rel="nofollow">
-                <img src="//bs.yandex.ru/informer/11564479/3_0_FFFFFFFF_EFEFEFFF_0_pageviews"
-                     style="width:88px; height:31px; border:0;" alt="Яндекс.Метрика" title="Яндекс.Метрика: данные за сегодня (просмотры, визиты и уникальные посетители)" onclick="try { Ya.Metrika.informer( { i:this,id:11564479,type:0,lang:'ru' } );return false } catch(e) { } "/>
-            </a>
-            <!-- /Yandex.Metrika informer -->
-
-            <!-- Yandex.Metrika counter -->
-            <div style="display:none;">
-                <script type="text/javascript">
-                    (function (w, c) {
-                    (w[c] = w[c] || []).push(function() {
-                    try {
-                    w.yaCounter11564479 = new Ya.Metrika( { id:11564479, enableAll: true, trackHash:true, webvisor:true } );
-                    }
-                    catch(e) { }
-                    });
-                    })(window, "yandex_metrika_callbacks");
-                </script>
-            </div>
-            <script src="//mc.yandex.ru/metrika/watch.js" type="text/javascript" defer="defer"></script>
-            <noscript>
-                <div><img src="//mc.yandex.ru/watch/11564479" style="position:absolute; left:-9999px;" alt=""/></div>
-            </noscript>
-            <!-- /Yandex.Metrika counter -->
-
             <!--LiveInternet counter-->
-            <script type="text/javascript">
-                <!--
-                new Image().src = "//counter.yadro.ru/hit?r" +
-                        escape(document.referrer) + ((typeof(screen) == "undefined") ? "" :
-                        ";s" + screen.width + "*" + screen.height + "*" + (screen.colorDepth ?
-                                screen.colorDepth : screen.pixelDepth)) + ";u" + escape(document.URL) +
-                        ";h" + escape(document.title.substring(0, 80)) +
-                        ";" + Math.random();//-->
+            <script type="text/javascript"><!--
+            new Image().src = "//counter.yadro.ru/hit?r" +
+                    escape(document.referrer) + ((typeof(screen) == "undefined") ? "" :
+                    ";s" + screen.width + "*" + screen.height + "*" + (screen.colorDepth ?
+                            screen.colorDepth : screen.pixelDepth)) + ";u" + escape(document.URL) +
+                    ";h" + escape(document.title.substring(0, 80)) +
+                    ";" + Math.random();//-->
             </script>
             <!--/LiveInternet-->
 
             <!--LiveInternet logo-->
-            <a href="http://www.liveinternet.ru/click" target="_blank">
-                <img src="//counter.yadro.ru/logo?14.1" title="LiveInternet: показано число просмотров за 24 часа, посетителей за 24 часа и за сегодня" alt="" border="0" width="88" height="31"/>
-            </a>
+            <a href="http://www.liveinternet.ru/click" target="_blank"><img src="//counter.yadro.ru/logo?44.1" title="LiveInternet"
+                                                                            alt="" border="0" width="31" height="31"/></a>
             <!--/LiveInternet-->
-
 
         </div>
 

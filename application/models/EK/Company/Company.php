@@ -48,6 +48,11 @@ class EK_Company_Company
      */
     protected $_city = null;
 
+    /**
+     * @var int - флаг мультигорода
+     */
+    protected $_multiCity = 0;
+
     protected $_file = null;
 
     /**
@@ -230,6 +235,28 @@ class EK_Company_Company
         return $this->_db->prepareStringToOut($this->_ofSite);
     }
 
+    /**
+     * @param int $multiCity
+     */
+    public function setMultiCity($multiCity)
+    {
+        if ($multiCity === 'on') {
+            $this->_multiCity = 1;
+        } elseif (empty($multiCity)) {
+            $this->_multiCity = 0;
+        } else {
+            $this->_multiCity = $multiCity;
+        }
+    }
+
+    /**
+     * @return int
+     */
+    public function getMultiCity()
+    {
+        return $this->_multiCity;
+    }
+
     public function __get($name)
     {
         $method = "get{$name}";
@@ -259,8 +286,8 @@ class EK_Company_Company
     public function insertToDb()
     {
         try {
-            $sql = 'INSERT INTO company(title, city_id, description, file, order_email, ofsite, constant_discount)
-                    VALUES ("' . $this->_title . '", ' . $this->_city->getId() . ',
+            $sql = 'INSERT INTO company(title, city_id, multi_city, description, file, order_email, ofsite, constant_discount)
+                    VALUES ("' . $this->_title . '", ' . $this->_city->getId() . ', ' . $this->_multiCity . ',
                             "' . $this->_description . '", "", "' . $this->_orderEmail . '",
                             "' . $this->_ofSite . '", "' . $this->_constantDiscount . '")';
             $this->_db->query($sql);
@@ -292,7 +319,7 @@ class EK_Company_Company
     {
         try {
             $sql = 'UPDATE company
-                    SET title="' . $this->_title . '", city_id=' . $this->_city->getId() . ',
+                    SET title="' . $this->_title . '", city_id=' . $this->_city->getId() . ', multi_city=' . $this->_multiCity . ',
                         description="' . $this->_description . '", order_email="' . $this->_orderEmail . '",
                         ofsite="' . $this->_ofSite . '", constant_discount="' . $this->_constantDiscount . '"
                     WHERE id=' . $this->_id;
@@ -390,10 +417,11 @@ class EK_Company_Company
         try {
             $db = StdLib_DB::getInstance();
 
-            $sql = 'SELECT * FROM company '; // WHERE city_id=' . (int)$city
+            $sql = 'SELECT * FROM company
+                    WHERE (city_id=' . (int)$city . ' OR multi_city=1) ';
 
             if (!is_null($rubric)) {
-                $sql .= ' WHERE id IN (
+                $sql .= ' AND id IN (
                  SELECT DISTINCT company_id
                  FROM product, product_rubric
                  WHERE product.product_rubric_id=product_rubric.id
@@ -417,13 +445,15 @@ class EK_Company_Company
         }
     } // end of member function getAllInstance
 
-    public static function search($search)
+    public static function search($search, $city)
     {
         try {
             $db = StdLib_DB::getInstance();
             $search = $db->prepareString($search);
 
-            $sql = 'SELECT * FROM company WHERE title LIKE "%' . $search . '%" OR description LIKE "%' . $search . '%"'; // WHERE city_id=' . (int)$city
+            $sql = 'SELECT * FROM company
+                    WHERE title LIKE "%' . $search . '%" OR description LIKE "%' . $search . '%"
+                      AND (city_id=' . (int)$city . ' OR multi_city=1)';
 
             $result = $db->query($sql, StdLib_DB::QUERY_MOD_ASSOC);
 
@@ -510,6 +540,7 @@ class EK_Company_Company
         $this->setTitle($values['title']);
         $this->setDescription($values['description']);
         $this->setCity(EK_City_City::getInstanceById($values['city_id']));
+        $this->setMultiCity($values['multi_city']);
         $this->_file->setName($values['file']);
         $this->setOrderEmail($values['order_email']);
         $this->setOfSite($values['ofsite']);

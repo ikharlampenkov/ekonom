@@ -37,10 +37,12 @@ class CompanyController extends Zend_Controller_Action
         $this->view->assign('productList', EK_Catalog_Product::getAllInstanceByCompany($oCompany));
 
         $oPlace = EK_Banner_Place::getInstanceById(2);
-        $this->view->assign('bannerList', EK_Banner_PlaceMark::getAllInstance($oPlace));
+        $this->view->assign('bannerList', EK_Banner_PlaceMark::getAllInstance($oPlace, $this->_city));
+        $this->view->assign('topPlace', $oPlace);
 
         $oPlace = EK_Banner_Place::getInstanceById(6);
-        $this->view->assign('bannerListBottom', EK_Banner_PlaceMark::getAllInstance($oPlace));
+        $this->view->assign('bannerListBottom', EK_Banner_PlaceMark::getAllInstance($oPlace, $this->_city));
+        $this->view->assign('bottomPlace', $oPlace);
     }
 
     public function addAction()
@@ -55,6 +57,11 @@ class CompanyController extends Zend_Controller_Action
             $oCompany->setOrderEmail($data['order_email']);
             $oCompany->setOfSite($data['ofsite']);
             $oCompany->setConstantDiscount($data['constant_discount']);
+            if (isset($data['multi_city'])) {
+                $oCompany->setMultiCity($data['multi_city']);
+            } else {
+                $oCompany->setMultiCity(0);
+            }
 
             try {
                 $oCompany->insertToDb();
@@ -81,6 +88,11 @@ class CompanyController extends Zend_Controller_Action
             $oCompany->setOrderEmail($data['order_email']);
             $oCompany->setOfSite($data['ofsite']);
             $oCompany->setConstantDiscount($data['constant_discount']);
+            if (isset($data['multi_city'])) {
+                $oCompany->setMultiCity($data['multi_city']);
+            } else {
+                $oCompany->setMultiCity(0);
+            }
 
             try {
                 $oCompany->updateToDb();

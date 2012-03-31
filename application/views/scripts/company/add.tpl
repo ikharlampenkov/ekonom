@@ -16,7 +16,9 @@
                 <option value="">--</option>
             {if !empty($cityList)}
                 {foreach from=$cityList item=city}
+                    {if_object_allowed type="City" object="{$city}" priv="moderate"}
                     <option value="{$city->id}" {if is_object($company->city) && $company->city->id == $city->id}selected="selected"{/if}>{$city->title}</option>
+                    {/if_object_allowed}
                 {/foreach}
             {/if}
             </select>
@@ -41,6 +43,10 @@
         <tr>
             <td class="ttovar_title">Постоянная скидка</td>
             <td class="ttovar"><input name="data[constant_discount]" value="{$company->constantDiscount}" style="width: 50px;"/>%</td>
+        </tr>
+        <tr>
+            <td class="ttovar">Мультигород</td>
+            <td class="ttovar"><input type="checkbox" style="width: 14px;" name="data[multi_city]" {if $company->multiCity}checked="checked"{/if}"/></td>
         </tr>
     </table>
     <input id="save" name="save" type="submit" value="Сохранить"/>

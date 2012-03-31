@@ -6,6 +6,8 @@
  */
 class EK_Catalog_Product
 {
+    const PRODUCT_PER_PAGE = 25;
+
     /** Aggregations: */
     /** Compositions: */
     /*     * * Attributes: ** */
@@ -20,6 +22,11 @@ class EK_Catalog_Product
      * @access protected
      */
     protected $_title;
+
+    /**
+     * @var string
+     */
+    protected $_short_title;
     /**
      * @var TM_FileManager_Image
      * @access protected
@@ -47,6 +54,11 @@ class EK_Catalog_Product
      * @var int - на первой странице?
      */
     protected $_onFirstPage = 0;
+
+    /**
+     * @var int - приоритет для сортировки на первой странице
+     */
+    protected $_firstPagePrior = 0;
 
     /**
      * @var EK_Company_Company
@@ -114,7 +126,7 @@ class EK_Catalog_Product
     /**
      *
      *
-     * @return FileManager::TM_FileManager_Image
+     * @return TM_FileManager_Image
      * @access public
      */
     public function getImg()
@@ -276,12 +288,44 @@ class EK_Catalog_Product
         return $this->_onFirstPage;
     }
 
+    /**
+     * @param int $firstPagePrior
+     */
+    public function setFirstPagePrior($firstPagePrior)
+    {
+        $this->_firstPagePrior = $firstPagePrior;
+    }
+
+    /**
+     * @return int
+     */
+    public function getFirstPagePrior()
+    {
+        return $this->_firstPagePrior;
+    }
+
+    /**
+     * @param string $short_title
+     */
+    public function setShortTitle($short_title)
+    {
+        $this->_short_title = $this->_db->prepareString($short_title);
+    }
+
+    /**
+     * @return string
+     */
+    public function getShortTitle()
+    {
+        return $this->_db->prepareStringToOut($this->_short_title);
+    }
+
     public function insertToDb()
     {
         try {
-            $sql = 'INSERT INTO product (product_rubric_id, title, short_text, full_text, price, company_id, on_first_page)
-                    VALUES (' . $this->_rubric->id . ', "' . $this->_title . '", "' . $this->_shortText . '",
-                           "' . $this->_fullText . '", ' . $this->_price . ', ' . $this->_company->id . ', ' . $this->_onFirstPage . ')';
+            $sql = 'INSERT INTO product (product_rubric_id, title, short_title, short_text, full_text, price, company_id, on_first_page, first_page_prior)
+                    VALUES (' . $this->_rubric->id . ', "' . $this->_title . '", "' . $this->_short_title . '", "' . $this->_shortText . '",
+                           "' . $this->_fullText . '", ' . $this->_price . ', ' . $this->_company->id . ', ' . $this->_onFirstPage . ', ' . $this->_firstPagePrior . ')';
             $this->_db->query($sql);
 
             $this->_id = $this->_db->getLastInsertId();
@@ -303,9 +347,10 @@ class EK_Catalog_Product
     {
         try {
             $sql = 'UPDATE product
-                    SET product_rubric_id=' . $this->_rubric->id . ', title="' . $this->_title . '",
+                    SET product_rubric_id=' . $this->_rubric->id . ', title="' . $this->_title . '", short_title="' . $this->_short_title . '",
                         short_text="' . $this->_shortText . '", full_text="' . $this->_fullText . '",
-                        price=' . $this->_price . ', company_id=' . $this->_company->id . ', on_first_page=' . $this->_onFirstPage . '
+                        price=' . $this->_price . ', company_id=' . $this->_company->id . ', on_first_page=' . $this->_onFirstPage . ',
+                        first_page_prior=' . $this->_firstPagePrior . '
                     WHERE id=' . $this->_id;
             $this->_db->query($sql);
             $this->saveAttributeList();
@@ -345,14 +390,14 @@ class EK_Catalog_Product
         }
     }
 
-    public static function getAllInstance($rubric_id, $city=1)
+    public static function getAllInstance($rubric_id, $city = 1)
     {
         try {
             $db = StdLib_DB::getInstance();
-            $sql = 'SELECT product.id AS id, product.title AS title, product_rubric_id, product.img, short_text, full_text, on_first_page, price, company_id
+            $sql = 'SELECT product.id AS id, product.title AS title, short_title, product_rubric_id, product.img, short_text, full_text, on_first_page, first_page_prior, price, company_id
                     FROM product, company
                     WHERE product.company_id=company.id
-                      AND city_id=' . $city . '
+                      AND (city_id=' . $city . ' OR multi_city=1)
                       AND product_rubric_id=' . $rubric_id;
             $result = $db->query($sql, StdLib_DB::QUERY_MOD_ASSOC);
             if (isset($result[0])) {
@@ -368,15 +413,17 @@ class EK_Catalog_Product
         }
     }
 
-    public static function getAllInstanceFirstPage($city)
+    public static function getAllInstanceFirstPage($city, $start = 0)
     {
         try {
             $db = StdLib_DB::getInstance();
-            $sql = 'SELECT product.id AS id, product.title AS title, product_rubric_id, product.img, short_text, full_text, on_first_page, price, company_id
+            $sql = 'SELECT product.id AS id, product.title AS title, short_title, product_rubric_id, product.img, short_text, full_text, on_first_page, first_page_prior, price, company_id
                     FROM product, company
                     WHERE product.company_id=company.id
-                      AND city_id=' . $city . '
-                      AND on_first_page=1';
+                      AND (city_id=' . $city . ' OR multi_city=1)
+                      AND on_first_page=1
+                    ORDER BY first_page_prior DESC, short_title
+                    LIMIT ' . $start . ', ' . EK_Catalog_Product::PRODUCT_PER_PAGE;
 
             $result = $db->query($sql, StdLib_DB::QUERY_MOD_ASSOC);
             if (isset($result[0])) {
@@ -387,6 +434,31 @@ class EK_Catalog_Product
                 return $productArray;
             } else
                 return false;
+        } catch (Exception $e) {
+            throw new Exception($e->getMessage());
+        }
+    }
+
+    public static function getFirstPageCount($city)
+    {
+        try {
+            $db = StdLib_DB::getInstance();
+            $sql = 'SELECT COUNT(product.id) AS product_count
+                    FROM product, company
+                    WHERE product.company_id=company.id
+                      AND (city_id=' . $city . ' OR multi_city=1)
+                      AND on_first_page=1';
+
+            $result = $db->query($sql, StdLib_DB::QUERY_MOD_ASSOC);
+            if (isset($result[0]['product_count'])) {
+                $page_count = $result[0]['product_count'] / EK_Catalog_Product::PRODUCT_PER_PAGE;
+                if ($result[0]['product_count'] % EK_Catalog_Product::PRODUCT_PER_PAGE == 0) {
+                    return $page_count;
+                } else {
+                    return ceil($page_count) + 1;
+                }
+            } else
+                return 1;
         } catch (Exception $e) {
             throw new Exception($e->getMessage());
         }
@@ -442,6 +514,7 @@ class EK_Catalog_Product
     {
         $this->setId($result['id']);
         $this->setTitle($result['title']);
+        $this->setShortTitle($result['short_title']);
         $this->setRubric(EK_Catalog_Rubric::getInstanceById($result['product_rubric_id']));
         $this->setImg(new TM_FileManager_Image(Zend_Registry::get('production')->files->path, $result['img']));
         $this->setShortText($result['short_text']);
@@ -450,6 +523,7 @@ class EK_Catalog_Product
 
         $this->setCompany(EK_Company_Company::getInstanceById($result['company_id']));
         $this->setOnFirstPage($result['on_first_page']);
+        $this->setFirstPagePrior($result['first_page_prior']);
 
         $this->getAttributeList();
     }
@@ -520,10 +594,11 @@ class EK_Catalog_Product
         $message .= 'Дата: ' . date('d.m.Y') . "\r\n" .
                 'Имя: ' . $data['name'] . "\r\n" .
                 'Телефон: ' . $data['tel'] . "\r\n" .
-                '<a href="http://ekonom.pro/catalog/index/rubric/' . $this->_rubric->getId() . '">' . $this->getTitle() . '</a>';
+                'E-mail: ' . $data['email'] . "\r\n" .
+                '<a href="http://ekonom.pro/catalog/viewProduct/rubric/' . $this->_rubric->getId() . '/id/' . $this->id . '">' . $this->getTitle() . '</a>';
         $email = $this->getCompany()->getOrderEmail();
         if (!empty($email)) {
-            mail($email, 'Прошу отложить товар', $message);
+            mail($email, 'Прошу отложить товар', mb_convert_encoding($message, 'windows-1251', 'UTF-8'));
         }
     }
 }

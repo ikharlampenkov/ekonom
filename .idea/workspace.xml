@@ -2,7 +2,105 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0d06bdd7-cf17-42f8-a087-8c22c5988e8b" name="Default" comment="3. При просмотре акций не видно что за фирма предоставляет товар! &#10;5. Переименовать Краткое описание магазина или товара в &quot;Краткое описание&quot;&#10;6. Кнопку отложить переименовать в кнопку заказать!">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/~Documents/test_ekonom.pro.rar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/controllers/DistributionListController.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/controllers/NewsController.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/models/EK/Acl/CityAcl.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/scripts/catalog/view-product.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/scripts/city/show-acl.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/scripts/distribution-list/index.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/scripts/index/show-product-list.ajax.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/scripts/news/index.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtime/templates_c/1ae9b9bc2ba7f9f2071c36d6343e9e1d77d9777a.file.placemark.tpl.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtime/templates_c/1f79f07b66919a879692beedce13796262daffdf.file.add.tpl.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtime/templates_c/2adc0c36825528be1d2fd0a9a8a25316b8e1eba4.file.edit.tpl.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtime/templates_c/49b36ad6efe5dc6d4571b600955bfca8c202fe60.file.add-attribute-hash.tpl.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtime/templates_c/5ea9c92e3621d8baf70d1e494338a57bc894b5d7.file.index.tpl.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtime/templates_c/898c0f378fd93e61d9863a07c19225c322d67c3d.file.show-product-list.ajax.tpl.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtime/templates_c/94bb712bee8ee8457a23aedc7fc1611f33d1b498.file.view-product.tpl.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtime/templates_c/f0a0c624d55f414fc5584bccb2f3279b3a132d30.file.view-hash.tpl.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtime/templates_c/f6461da2727bf7223dfbbd5fed5d70b20ce2fc3f.file.add.tpl.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtime/templates_c/f862cd5a0cfb33ded8658b030c8778cf1e413fdf.file.index.tpl.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtime/templates_c/fdac397dd5e94fe02ce8b945e33c254b7697dbb8.file.edit-attribute-hash.tpl.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/~Documents/ekonom_pro_db_new.sql" />
+      <change type="DELETED" beforePath="C:\www\ekonom\public_html\css\main.css.bak" afterPath="" />
+      <change type="DELETED" beforePath="C:\www\ekonom\public_html\css\main2.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\www\ekonom\public_html\public_html.zip" afterPath="" />
+      <change type="DELETED" beforePath="C:\www\ekonom\runtime\templates_c\08ccb423618ea4731483238e02e18d7255cb88d9.file.edit-place.tpl.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\www\ekonom\runtime\templates_c\12057dd814e4da6628fcd8a285097da7ce8dc950.file.add-gallery.tpl.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\www\ekonom\runtime\templates_c\24df40ffa7f00fc7b929cf5e8e71b08fa18e026c.file.view-gallery.tpl.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\www\ekonom\runtime\templates_c\2d6ef4ca997c21602a120368d58adb0c88c68517.file.edit.tpl.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\www\ekonom\runtime\templates_c\4711e375810acdb84af75df1630f88461af3fc17.file.edit.tpl.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\www\ekonom\runtime\templates_c\4ae7eae07dd76826569daf4fb61833d2d9c24ad3.file.edit-gallery.tpl.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\www\ekonom\runtime\templates_c\633c28ddf0345904e135763bae3bf8dc93318da6.file.view-gallery.tpl.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\www\ekonom\runtime\templates_c\a5c68603bbe346bf65e3bede36b8e77b606e39aa.file.index.tpl.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\www\ekonom\runtime\templates_c\ad14f30a599512452bdfb8efaf3a7effb01cfff5.file.view-comments.ajax.tpl.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\www\ekonom\runtime\templates_c\c77ef0bded455b3c083406fd25ecdc9632c15307.file.index.tpl.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\www\ekonom\runtime\templates_c\d492600fb384683736d6bc2f2539f0a0da3fef35.file.edit-gallery.tpl.php" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/ekonom.iml" afterPath="$PROJECT_DIR$/.idea/ekonom.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.zfproject.xml" afterPath="$PROJECT_DIR$/.zfproject.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/BannerController.php" afterPath="$PROJECT_DIR$/application/controllers/BannerController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/CatalogController.php" afterPath="$PROJECT_DIR$/application/controllers/CatalogController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/CityController.php" afterPath="$PROJECT_DIR$/application/controllers/CityController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/CompanyController.php" afterPath="$PROJECT_DIR$/application/controllers/CompanyController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/IndexController.php" afterPath="$PROJECT_DIR$/application/controllers/IndexController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/LoginController.php" afterPath="$PROJECT_DIR$/application/controllers/LoginController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/SearchController.php" afterPath="$PROJECT_DIR$/application/controllers/SearchController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/UserController.php" afterPath="$PROJECT_DIR$/application/controllers/UserController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/layouts/scripts/layout.tpl" afterPath="$PROJECT_DIR$/application/layouts/scripts/layout.tpl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/models/EK/Banner/Banner.php" afterPath="$PROJECT_DIR$/application/models/EK/Banner/Banner.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/models/EK/Banner/PlaceMark.php" afterPath="$PROJECT_DIR$/application/models/EK/Banner/PlaceMark.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/models/EK/Catalog/Product.php" afterPath="$PROJECT_DIR$/application/models/EK/Catalog/Product.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/models/EK/Catalog/ProductCatalog.php" afterPath="$PROJECT_DIR$/application/models/EK/Catalog/ProductCatalog.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/models/EK/Catalog/ProductLike.php" afterPath="$PROJECT_DIR$/application/models/EK/Catalog/ProductLike.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/models/EK/City/City.php" afterPath="$PROJECT_DIR$/application/models/EK/City/City.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/models/EK/Company/Company.php" afterPath="$PROJECT_DIR$/application/models/EK/Company/Company.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/models/TM/User/User.php" afterPath="$PROJECT_DIR$/application/models/TM/User/User.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/scripts/banner/add.tpl" afterPath="$PROJECT_DIR$/application/views/scripts/banner/add.tpl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/scripts/banner/edit.tpl" afterPath="$PROJECT_DIR$/application/views/scripts/banner/edit.tpl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/scripts/banner/index.tpl" afterPath="$PROJECT_DIR$/application/views/scripts/banner/index.tpl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/scripts/catalog/add.tpl" afterPath="$PROJECT_DIR$/application/views/scripts/catalog/add.tpl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/scripts/catalog/edit.tpl" afterPath="$PROJECT_DIR$/application/views/scripts/catalog/edit.tpl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/scripts/catalog/index.tpl" afterPath="$PROJECT_DIR$/application/views/scripts/catalog/index.tpl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/scripts/catalog/reserve.ajax.tpl" afterPath="$PROJECT_DIR$/application/views/scripts/catalog/reserve.ajax.tpl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/scripts/catalog/share.ajax.tpl" afterPath="$PROJECT_DIR$/application/views/scripts/catalog/share.ajax.tpl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/scripts/catalog/view-product.ajax.tpl" afterPath="$PROJECT_DIR$/application/views/scripts/catalog/view-product.ajax.tpl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/scripts/city/index.tpl" afterPath="$PROJECT_DIR$/application/views/scripts/city/index.tpl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/scripts/company/add.tpl" afterPath="$PROJECT_DIR$/application/views/scripts/company/add.tpl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/scripts/company/edit.tpl" afterPath="$PROJECT_DIR$/application/views/scripts/company/edit.tpl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/scripts/company/index.tpl" afterPath="$PROJECT_DIR$/application/views/scripts/company/index.tpl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/scripts/company/view.tpl" afterPath="$PROJECT_DIR$/application/views/scripts/company/view.tpl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/scripts/index/index.tpl" afterPath="$PROJECT_DIR$/application/views/scripts/index/index.tpl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/scripts/search/index.tpl" afterPath="$PROJECT_DIR$/application/views/scripts/search/index.tpl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/scripts/user/index.tpl" afterPath="$PROJECT_DIR$/application/views/scripts/user/index.tpl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/library/Smarty/plugins/block.if_object_allowed.php" afterPath="$PROJECT_DIR$/library/Smarty/plugins/block.if_object_allowed.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/library/TM/FileManager/File.php" afterPath="$PROJECT_DIR$/library/TM/FileManager/File.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public_html/css/main.css" afterPath="$PROJECT_DIR$/public_html/css/main.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public_html/js/gallery.js" afterPath="$PROJECT_DIR$/public_html/js/gallery.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public_html/js/main.js" afterPath="$PROJECT_DIR$/public_html/js/main.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/runtime/logs/syslog.txt" afterPath="$PROJECT_DIR$/runtime/logs/syslog.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/runtime/templates_c/01cb5fc755dd451db9b876f36bb7a73be84e01f7.file.edit.tpl.php" afterPath="$PROJECT_DIR$/runtime/templates_c/01cb5fc755dd451db9b876f36bb7a73be84e01f7.file.edit.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/runtime/templates_c/1233455740c9efe9de375974f87ca15f934cbd6c.file.index.tpl.php" afterPath="$PROJECT_DIR$/runtime/templates_c/1233455740c9efe9de375974f87ca15f934cbd6c.file.index.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/runtime/templates_c/1dbf3c4f2f8d7f578c38270eebcbe1876ec7f588.file.add-comments.ajax.tpl.php" afterPath="$PROJECT_DIR$/runtime/templates_c/1dbf3c4f2f8d7f578c38270eebcbe1876ec7f588.file.add-comments.ajax.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/runtime/templates_c/2ca4d9fb8fa4f27acecf2d1ea2f12e9837e0db14.file.index.tpl.php" afterPath="$PROJECT_DIR$/runtime/templates_c/2ca4d9fb8fa4f27acecf2d1ea2f12e9837e0db14.file.index.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/runtime/templates_c/4528c0f58b5ad95b2e77897251943699034d7647.file.index.tpl.php" afterPath="$PROJECT_DIR$/runtime/templates_c/4528c0f58b5ad95b2e77897251943699034d7647.file.index.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/runtime/templates_c/4930df03c4f53f8e018377f92315f9fb07706314.file.share.ajax.tpl.php" afterPath="$PROJECT_DIR$/runtime/templates_c/4930df03c4f53f8e018377f92315f9fb07706314.file.share.ajax.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/runtime/templates_c/4a2d248229c0e6452704f9a7ccc41e7a5c93b3ee.file.view.tpl.php" afterPath="$PROJECT_DIR$/runtime/templates_c/4a2d248229c0e6452704f9a7ccc41e7a5c93b3ee.file.view.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/runtime/templates_c/50476d9be6c10e4d5566fb6927d6edf719c8a09a.file.view-product.ajax.tpl.php" afterPath="$PROJECT_DIR$/runtime/templates_c/50476d9be6c10e4d5566fb6927d6edf719c8a09a.file.view-product.ajax.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/runtime/templates_c/745bad7d02d157fda699307c36362385ac7b42a3.file.view-place.tpl.php" afterPath="$PROJECT_DIR$/runtime/templates_c/745bad7d02d157fda699307c36362385ac7b42a3.file.view-place.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/runtime/templates_c/80ff11feedc4a0ba005e0c5733e3e115c1477d3b.file.layout.tpl.php" afterPath="$PROJECT_DIR$/runtime/templates_c/80ff11feedc4a0ba005e0c5733e3e115c1477d3b.file.layout.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/runtime/templates_c/94b43447258ea62d6154766d1bbba1c4afdc3e80.file.index.tpl.php" afterPath="$PROJECT_DIR$/runtime/templates_c/94b43447258ea62d6154766d1bbba1c4afdc3e80.file.index.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/runtime/templates_c/9df79449238660fb8315d8c5e46bbc13abd1b136.file.child-block.tpl.php" afterPath="$PROJECT_DIR$/runtime/templates_c/9df79449238660fb8315d8c5e46bbc13abd1b136.file.child-block.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/runtime/templates_c/a943f4c37583ea01c7979b69872ea4115840ecec.file.index.tpl.php" afterPath="$PROJECT_DIR$/runtime/templates_c/a943f4c37583ea01c7979b69872ea4115840ecec.file.index.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/runtime/templates_c/aa2f40d2fed0221f1a1736ce280c0f55fb16dedd.file.view-resource.tpl.php" afterPath="$PROJECT_DIR$/runtime/templates_c/aa2f40d2fed0221f1a1736ce280c0f55fb16dedd.file.view-resource.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/runtime/templates_c/b7d0c95d218e46d4c40cd6c7fbf5579da2689052.file.reserve.ajax.tpl.php" afterPath="$PROJECT_DIR$/runtime/templates_c/b7d0c95d218e46d4c40cd6c7fbf5579da2689052.file.reserve.ajax.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/runtime/templates_c/b9b77a6fb8ced9c3ee56826c39b110e929a779ba.file.add-like.ajax.tpl.php" afterPath="$PROJECT_DIR$/runtime/templates_c/b9b77a6fb8ced9c3ee56826c39b110e929a779ba.file.add-like.ajax.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/runtime/templates_c/ca35f7a3852ec8c1a5c7655a0831a90ff115e8c3.file.index.tpl.php" afterPath="$PROJECT_DIR$/runtime/templates_c/ca35f7a3852ec8c1a5c7655a0831a90ff115e8c3.file.index.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/runtime/templates_c/dc7d22eba3ad537ec318f48d3f4df25db84e0df2.file.error.tpl.php" afterPath="$PROJECT_DIR$/runtime/templates_c/dc7d22eba3ad537ec318f48d3f4df25db84e0df2.file.error.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/runtime/templates_c/eb2b16b47d3eeaa15f66ac8eb95c4fb94fd76ffa.file.add-resource.tpl.php" afterPath="$PROJECT_DIR$/runtime/templates_c/eb2b16b47d3eeaa15f66ac8eb95c4fb94fd76ffa.file.add-resource.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/runtime/templates_c/f1cd2f2ba3c0923bb94a9e4f4ff2770329493840.file.show-role-acl.tpl.php" afterPath="$PROJECT_DIR$/runtime/templates_c/f1cd2f2ba3c0923bb94a9e4f4ff2770329493840.file.show-role-acl.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/~Documents/ekonom_pro_db.sql" afterPath="$PROJECT_DIR$/~Documents/ekonom_pro_db.sql" />
     </list>
     <ignored path="ekonom.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -23,67 +121,17 @@
     <favorites_list name="ekonom" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="view-product.ajax.tpl" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/views/scripts/catalog/view-product.ajax.tpl">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="153" selection-start="939" selection-end="939" vertical-scroll-proportion="-0.65384614">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Info.txt" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/~Documents/Info.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="README.txt" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/docs/README.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="31" column="0" selection-start="859" selection-end="867" vertical-scroll-proportion="0.6666667">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CatalogController.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/controllers/CatalogController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="67" column="30" selection-start="2675" selection-end="2675" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Product.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/models/EK/Catalog/Product.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="54" column="23" selection-start="853" selection-end="862" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="view.tpl" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/views/scripts/company/view.tpl">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="45" selection-start="111" selection-end="128" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FindManager">
     <FindUsagesManager>
       <setting name="OPEN_NEW_TAB" value="false" />
     </FindUsagesManager>
+  </component>
+  <component name="FrameworkCommandLineHistory">
+    <commandsHistory>
+      <command text="zf create controller news" />
+    </commandsHistory>
   </component>
   <component name="Git.Settings">
     <option name="CHECKOUT_INCLUDE_TAGS" value="false" />
@@ -93,17 +141,23 @@
   <component name="GitLogSettings">
     <option name="myStructureFilterPaths" />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="mock:///dummy.txt" root0="SKIP_INSPECTION" />
+    <setting file="mock:///dummy.txt" root0="SKIP_INSPECTION" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
         <option value="$PROJECT_DIR$/public_html/index.php" />
         <option value="$PROJECT_DIR$/public_html/js/func.js" />
-        <option value="$PROJECT_DIR$/application/layouts/scripts/layout.tpl" />
         <option value="$PROJECT_DIR$/public_html/js/main.js" />
         <option value="$PROJECT_DIR$/application/views/scripts/catalog/view-sub-menu.ajax.tpl" />
         <option value="$PROJECT_DIR$/public_html/css/main.css" />
         <option value="$PROJECT_DIR$/application/controllers/CatalogController.php" />
         <option value="$PROJECT_DIR$/application/views/scripts/catalog/view-product.ajax.tpl" />
+        <option value="$PROJECT_DIR$/application/controllers/NewsController.php" />
+        <option value="$PROJECT_DIR$/application/views/scripts/news/index.tpl" />
+        <option value="$PROJECT_DIR$/application/layouts/scripts/layout.tpl" />
       </list>
     </option>
   </component>
@@ -147,6 +201,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -251,7 +306,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="company" />
+              <option name="myItemId" value="news" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -277,7 +332,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="catalog" />
+              <option name="myItemId" value="about" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -321,17 +376,34 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ekonom" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ekonom" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="configs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="true" />
     <property name="options.lastSelected" value="reference.webide.settings.project.settings.php" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
   </component>
   <component name="PublishConfig">
     <servers>
@@ -409,15 +481,16 @@
     <editor active="false" />
     <layout>
       <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32423207" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32423207" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.34218514" sideWeight="0.6757679" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.29817906" sideWeight="0.6757679" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Command Line Tools Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32935154" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32935154" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -484,31 +557,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/public_html/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="2" selection-start="794" selection-end="794" vertical-scroll-proportion="0.8181818" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/IndexController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/LoginController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/CompanyController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public_html/js/func.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="262" column="29" selection-start="8615" selection-end="8615" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/views/scripts/catalog/view-sub-menu.ajax.tpl">
       <provider selected="true" editor-type-id="text-editor">
         <state line="3" column="34" selection-start="385" selection-end="385" vertical-scroll-proportion="0.09770115" />
@@ -517,11 +565,6 @@
     <entry file="file://$PROJECT_DIR$/application/controllers/ActionsController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="7" column="8" selection-start="106" selection-end="191" vertical-scroll-proportion="0.21212122" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/layouts/scripts/layout.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="135" column="66" selection-start="7140" selection-end="7159" vertical-scroll-proportion="0.03256705" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public_html/js/main.js">
@@ -534,26 +577,9 @@
         <state line="511" column="18" selection-start="8387" selection-end="8387" vertical-scroll-proportion="0.031021899" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/CatalogController.php">
+    <entry file="file://$PROJECT_DIR$/docs/README.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="67" column="30" selection-start="2675" selection-end="2675" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/models/EK/Catalog/Product.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="54" column="23" selection-start="853" selection-end="862" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/scripts/company/view.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="45" selection-start="111" selection-end="128" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/scripts/catalog/view-product.ajax.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="153" selection-start="939" selection-end="939" vertical-scroll-proportion="-0.65384614">
+        <state line="34" column="5" selection-start="875" selection-end="875" vertical-scroll-proportion="0.72727275">
           <folding />
         </state>
       </provider>
@@ -565,9 +591,72 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/docs/README.txt">
+    <entry file="file://$PROJECT_DIR$/application/views/scripts/catalog/view-product.ajax.tpl">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="0" selection-start="859" selection-end="867" vertical-scroll-proportion="0.6666667">
+        <state line="24" column="37" selection-start="887" selection-end="887" vertical-scroll-proportion="0.03256705">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/CatalogController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="67" column="30" selection-start="2675" selection-end="2675" vertical-scroll-proportion="0.031021899">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/models/EK/Catalog/Product.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="54" column="7" selection-start="853" selection-end="862" vertical-scroll-proportion="0.031021899">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/scripts/company/view.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="45" selection-start="111" selection-end="128" vertical-scroll-proportion="0.03256705">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/AboutController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="50" column="118" selection-start="199" selection-end="1930" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/scripts/about/index.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="808" vertical-scroll-proportion="-0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/NewsController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="42" column="41" selection-start="1287" selection-end="1287" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/scripts/news/index.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="91" selection-start="316" selection-end="316" vertical-scroll-proportion="-5.230769">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/configs/application.ini">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="42" selection-start="999" selection-end="1007" vertical-scroll-proportion="0.54545456">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/layouts/scripts/layout.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="131" column="73" selection-start="6292" selection-end="6292" vertical-scroll-proportion="0.62068963">
           <folding />
         </state>
       </provider>

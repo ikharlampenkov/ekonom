@@ -29,6 +29,7 @@
 
 {if $userList!==false}
     {foreach from=$userList item=user}
+        {if_object_allowed type="City" object="{$user->getCity()}" priv="moderate"}
         <tr>
             <td class="ttovar">{if $user->searchAttribute('name')}{$user->getAttribute('name')->value}{else}-{/if}</td>
             <td class="ttovar">{$user->login}</td>
@@ -37,11 +38,13 @@
                 <img src="/i/edit.png"/>&nbsp;<a href="{$this->url(['controller' => $controller,'action' => 'edit', 'id' => $user->id])}">редактировать</a><br/>
                 <img src="/i/delete.png"/>&nbsp;<a href="{$this->url(['controller' => $controller,'action' => 'delete', 'id' => $user->id])}" onclick="return confirmDelete('{$user->login}');" style="color: #830000">удалить</a></td>
         </tr>
+        {/if_object_allowed}
     {/foreach}
 {/if}
 </table>
 
 
+{if_allowed resource="{$controller}/index" priv="show-role"}
 <br/>
 <h1 class="heading">Роли</h1>
 
@@ -65,3 +68,4 @@
         {/foreach}
     {/if}
     </table>
+{/if_allowed}

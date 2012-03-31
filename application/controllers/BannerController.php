@@ -24,11 +24,18 @@ class BannerController extends Zend_Controller_Action
     public function addAction()
     {
         $oBanner = new EK_Banner_Banner();
+        $oBanner->setCity(EK_City_City::getInstanceById($this->_city));
 
         if ($this->getRequest()->isPost()) {
             $data = $this->getRequest()->getParam('data');
             $oBanner->setTitle($data['title']);
             $oBanner->setLink($data['link']);
+            $oBanner->setCity(EK_City_City::getInstanceById($data['city_id']));
+            if (isset($data['multi_city'])) {
+                $oBanner->setMultiCity($data['multi_city']);
+            } else {
+                $oBanner->setMultiCity(0);
+            }
 
             try {
                 $oBanner->insertToDb();
@@ -40,6 +47,7 @@ class BannerController extends Zend_Controller_Action
         }
 
         $this->view->assign('banner', $oBanner);
+        $this->view->assign('cityList', EK_City_City::getAllInstance());
     }
 
     public function editAction()
@@ -50,6 +58,12 @@ class BannerController extends Zend_Controller_Action
             $data = $this->getRequest()->getParam('data');
             $oBanner->setTitle($data['title']);
             $oBanner->setLink($data['link']);
+            $oBanner->setCity(EK_City_City::getInstanceById($data['city_id']));
+            if (isset($data['multi_city'])) {
+                $oBanner->setMultiCity($data['multi_city']);
+            } else {
+                $oBanner->setMultiCity(0);
+            }
 
             try {
                 $oBanner->updateToDb();
@@ -61,6 +75,7 @@ class BannerController extends Zend_Controller_Action
         }
 
         $this->view->assign('banner', $oBanner);
+        $this->view->assign('cityList', EK_City_City::getAllInstance());
     }
 
     public function deleteAction()

@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.0.9, created on 2012-01-06 23:52:09
+<?php /* Smarty version Smarty-3.0.9, created on 2012-01-22 22:56:08
          compiled from "F:\www\ekonom\application/views/scripts\catalog/edit.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:327044f0726b9426000-47138178%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:235784f1c31984a0214-47987596%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '01cb5fc755dd451db9b876f36bb7a73be84e01f7' => 
     array (
       0 => 'F:\\www\\ekonom\\application/views/scripts\\catalog/edit.tpl',
-      1 => 1325002472,
+      1 => 1327247766,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '327044f0726b9426000-47138178',
+  'nocache_hash' => '235784f1c31984a0214-47987596',
   'function' => 
   array (
   ),
@@ -28,6 +28,11 @@ $_smarty_tpl->decodeProperties(array (
             <tr>
                 <td width="200" class="ttovar">Название</td>
                 <td class="ttovar"><input name="data[title]" value="<?php echo $_smarty_tpl->getVariable('product')->value->title;?>
+"/></td>
+            </tr>
+            <tr>
+                <td class="ttovar">Сокращенное название</td>
+                <td class="ttovar"><input name="data[short_title]" value="<?php echo $_smarty_tpl->getVariable('product')->value->shortTitle;?>
 "/></td>
             </tr>
             <tr>

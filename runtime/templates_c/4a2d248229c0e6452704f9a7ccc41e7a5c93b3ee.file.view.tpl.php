@@ -1,23 +1,24 @@
-<?php /* Smarty version Smarty-3.0.9, created on 2012-01-18 20:34:34
+<?php /* Smarty version Smarty-3.0.9, created on 2012-02-26 21:59:18
          compiled from "F:\www\ekonom\application/views/scripts\company/view.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:195284f16ca6ae5ac04-82580953%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:96254f4a460429ab03-04456493%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '4a2d248229c0e6452704f9a7ccc41e7a5c93b3ee' => 
     array (
       0 => 'F:\\www\\ekonom\\application/views/scripts\\company/view.tpl',
-      1 => 1326385623,
+      1 => 1330268135,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '195284f16ca6ae5ac04-82580953',
+  'nocache_hash' => '96254f4a460429ab03-04456493',
   'function' => 
   array (
   ),
   'has_nocache_code' => false,
 )); /*/%%SmartyHeaderCode%%*/?>
-<article id="main-content" class="item-description shop">
+<?php if (!is_callable('smarty_modifier_truncate')) include 'F:\www\ekonom\library\Smarty\plugins\modifier.truncate.php';
+?><article id="main-content" class="item-description shop">
     <div class="inner">
 
         <h1 class="heading"><?php echo $_smarty_tpl->getVariable('company')->value->title;?>
@@ -27,9 +28,7 @@ $_smarty_tpl->decodeProperties(array (
         <div class="clearfix">
         <?php if ($_smarty_tpl->getVariable('galleryList')->value!==false){?>
 
-
-
-            <div class="gallery">
+            <div class="gallery-company">
                 <?php  $_smarty_tpl->tpl_vars['gallery'] = new Smarty_Variable;
  $_from = $_smarty_tpl->getVariable('galleryList')->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
  $_smarty_tpl->tpl_vars['gallery']->total= $_smarty_tpl->_count($_from);
@@ -58,7 +57,7 @@ if ($_smarty_tpl->tpl_vars['gallery']->total > 0){
                             <a href="#next" class="next"></a>
                         </div>
 
-                    <ul class="previews clearfix">
+                    <ul class="previews-company clearfix">
                         <?php }else{ ?>
                         <li>
                             <a href="/gallery<?php echo $_smarty_tpl->getVariable('gallery')->value->file->getSubPath();?>
@@ -84,13 +83,13 @@ if ($_smarty_tpl->tpl_vars['gallery']->total > 0){
 <?php }else{ ?>/i/no_foto.png<?php }?>" alt="Логотип магазина <?php echo $_smarty_tpl->getVariable('company')->value->title;?>
 "/>
 
-                <h3>Краткое описание магазина</h3>
+                <h3>Описание</h3>
 
                 <p><?php echo $_smarty_tpl->getVariable('company')->value->description;?>
 </p>
 
             <?php if ($_smarty_tpl->getVariable('company')->value->getAddressList()!==false){?>
-                <h3>Адреса магазинов</h3>
+                <h3>Адреса</h3>
                 <ul class="addresses-list">
                     <?php  $_smarty_tpl->tpl_vars['address'] = new Smarty_Variable;
  $_from = $_smarty_tpl->getVariable('company')->value->getAddressList(); if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
@@ -110,7 +109,7 @@ if ($_smarty_tpl->_count($_from) > 0){
 
             <?php if ($_smarty_tpl->getVariable('company')->value->ofSite){?>
                 <h3>Официальный сайт</h3>
-            
+
                 <p><a href="http://<?php echo $_smarty_tpl->getVariable('company')->value->ofSite;?>
 " target="_blank"><?php echo $_smarty_tpl->getVariable('company')->value->ofSite;?>
 </a></p>
@@ -153,11 +152,11 @@ if ($_smarty_tpl->_count($_from) > 0){
 ?>
             <li>
                 <h3><a href="<?php echo $_smarty_tpl->getVariable('this')->value->url(array('controller'=>'catalog','action'=>'viewProduct','id'=>$_smarty_tpl->getVariable('product')->value->id));?>
-" class="various fancybox.ajax"><?php echo $_smarty_tpl->getVariable('product')->value->title;?>
+" class="various fancybox.ajax"><?php echo smarty_modifier_truncate($_smarty_tpl->getVariable('product')->value->shortTitle,25,"...",true);?>
 </a></h3>
                 <a href="<?php echo $_smarty_tpl->getVariable('this')->value->url(array('controller'=>'catalog','action'=>'viewProduct','id'=>$_smarty_tpl->getVariable('product')->value->id));?>
 " class="various fancybox.ajax"><img src="<?php if ($_smarty_tpl->getVariable('product')->value->img->getName()){?>/files/<?php echo $_smarty_tpl->getVariable('product')->value->img->getPreview();?>
-<?php }else{ ?>/i/no_foto.png<?php }?>" alt="<?php echo $_smarty_tpl->getVariable('product')->value->title;?>
+<?php }else{ ?>/i/no_foto.png<?php }?>" alt="<?php echo $_smarty_tpl->getVariable('product')->value->shortTitle;?>
 "></a>
 
                 <?php if ($_smarty_tpl->getVariable('product')->value->searchAttribute('discount')){?>
@@ -191,8 +190,8 @@ if ($_smarty_tpl->_count($_from) > 0){
         scrolling: 'no',
         afterShow: updatePlusOne,
         afterShow: function () {
-                $('.cloud-zoom, .cloud-zoom-gallery').CloudZoom();
-                }
+        $('.cloud-zoom, .cloud-zoom-gallery').CloudZoom();
+        }
         });
         });
     </script>
@@ -203,36 +202,82 @@ if ($_smarty_tpl->_count($_from) > 0){
 
 <aside id="sidebar">
 <?php if ($_smarty_tpl->getVariable('bannerList')->value!==false){?>
-    <?php  $_smarty_tpl->tpl_vars['banner'] = new Smarty_Variable;
+
+    <div id="slider-wrapper-r">
+        <div id="slider-r">
+            <ul id="slides">
+                <?php  $_smarty_tpl->tpl_vars['banner'] = new Smarty_Variable;
  $_from = $_smarty_tpl->getVariable('bannerList')->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
 if ($_smarty_tpl->_count($_from) > 0){
     foreach ($_from as $_smarty_tpl->tpl_vars['banner']->key => $_smarty_tpl->tpl_vars['banner']->value){
 ?>
-        <section id="adv">
-            <a href="http://<?php echo $_smarty_tpl->getVariable('banner')->value->getBanner()->link;?>
+                    <li class="slide">
+                        <a href="http://<?php echo $_smarty_tpl->getVariable('banner')->value->getBanner()->link;?>
 ">
-                <img src="/banners/<?php echo $_smarty_tpl->getVariable('banner')->value->getBanner()->img->getName();?>
-" width="187" height="357" alt="<?php echo $_smarty_tpl->getVariable('banner')->value->getBanner()->title;?>
-"/>
-            </a>
-        </section>
-    <?php }} ?>
+                            <img src="/banners/<?php echo $_smarty_tpl->getVariable('banner')->value->getBanner()->img->getName();?>
+" alt="<?php echo $_smarty_tpl->getVariable('banner')->value->getBanner()->title;?>
+">
+                        </a>
+                    </li>
+                <?php }} ?>
+            </ul>
+        </div>
+    </div>
+
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+        $('#slider-r').easySlider({
+        auto: true,
+        pause: <?php echo $_smarty_tpl->getVariable('topPlace')->value->changeTime;?>
+*1000,
+        continuous: true,
+        controlsShow: false,
+        prevId: 'previous',
+        prevText: '',
+        nextId: 'next',
+        nextText: ''
+        });
+        });
+    </script>
 <?php }?>
     <br/>
 <?php if ($_smarty_tpl->getVariable('bannerListBottom')->value!==false){?>
-    <?php  $_smarty_tpl->tpl_vars['banner'] = new Smarty_Variable;
+    <div id="slider-wrapper-rb">
+        <div id="slider-rb">
+            <ul id="slides-b">
+                <?php  $_smarty_tpl->tpl_vars['banner'] = new Smarty_Variable;
  $_from = $_smarty_tpl->getVariable('bannerListBottom')->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
 if ($_smarty_tpl->_count($_from) > 0){
     foreach ($_from as $_smarty_tpl->tpl_vars['banner']->key => $_smarty_tpl->tpl_vars['banner']->value){
 ?>
-        <section id="adv">
-            <a href="http://<?php echo $_smarty_tpl->getVariable('banner')->value->getBanner()->link;?>
+                    <li class="slide">
+                        <a href="http://<?php echo $_smarty_tpl->getVariable('banner')->value->getBanner()->link;?>
 ">
-                <img src="/banners/<?php echo $_smarty_tpl->getVariable('banner')->value->getBanner()->img->getName();?>
+                            <img src="/banners/<?php echo $_smarty_tpl->getVariable('banner')->value->getBanner()->img->getName();?>
 " width="187" height="357" alt="<?php echo $_smarty_tpl->getVariable('banner')->value->getBanner()->title;?>
 "/>
-            </a>
-        </section>
-    <?php }} ?>
+                        </a>
+                    </li>
+                <?php }} ?>
+            </ul>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+        $('#slider-rb').easySlider({
+        auto: true,
+        pause: <?php echo $_smarty_tpl->getVariable('bottomPlace')->value->changeTime;?>
+*1000,
+        continuous: true,
+        controlsShow: false,
+        prevId: 'previous',
+        prevText: '',
+        nextId: 'next',
+        nextText: ''
+        });
+        });
+    </script>
 <?php }?>
 </aside>
