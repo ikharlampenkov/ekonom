@@ -2,12 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d0b1c174-27bf-4d01-a853-aaef73e1aaba" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/controllers/NewsController.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/scripts/news/index.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/googlebf8548209267277f.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/yandex_5cb551fb8de033f5.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.zfproject.xml" afterPath="$PROJECT_DIR$/.zfproject.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/layouts/scripts/layout.tpl" afterPath="$PROJECT_DIR$/application/layouts/scripts/layout.tpl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="F:\www\ekonom\application\models\EK\Share\ContentPage.php" afterPath="$PROJECT_DIR$/application/models/EK/Share/ContentPage.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/runtime/templates_c/80ff11feedc4a0ba005e0c5733e3e115c1477d3b.file.layout.tpl.php" afterPath="$PROJECT_DIR$/runtime/templates_c/80ff11feedc4a0ba005e0c5733e3e115c1477d3b.file.layout.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/~Documents/ekonom_pro_db.sql" afterPath="$PROJECT_DIR$/~Documents/ekonom_pro_db.sql" />
     </list>
     <list id="ad86b5e8-338a-4c37-be49-497b5521d5ba" name="Failed commit: Default" comment="Интеграция интерфейса" />
     <ignored path="ekonom.iws" />
@@ -63,7 +61,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/public_html/js/gallery.js" />
         <option value="$PROJECT_DIR$/application/models/EK/Catalog/Product.php" />
         <option value="$PROJECT_DIR$/application/controllers/CatalogController.php" />
         <option value="$PROJECT_DIR$/application/views/scripts/catalog/reserve.ajax.tpl" />
@@ -79,6 +76,7 @@
         <option value="$PROJECT_DIR$/application/views/scripts/catalog/view-product.ajax.tpl" />
         <option value="$PROJECT_DIR$/application/layouts/scripts/layout.tpl" />
         <option value="$PROJECT_DIR$/application/views/scripts/distribution-list/index.tpl" />
+        <option value="$PROJECT_DIR$/application/models/EK/Share/ContentPage.php" />
       </list>
     </option>
   </component>
@@ -440,6 +438,32 @@
               <option name="myItemId" value="EK" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Share" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ekonom" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ekonom" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="models" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="EK" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -730,12 +754,13 @@
     <frame x="-8" y="-8" width="1936" height="1176" extended-state="6" />
     <editor active="false" />
     <layout>
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32950193" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32950193" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3514957" sideWeight="0.6704981" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3514957" sideWeight="0.6704981" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32950193" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -746,7 +771,6 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.30747128" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32950193" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -788,7 +812,7 @@
     <option name="INCLUDE_TEXT_INTO_SHELF" value="false" />
     <option name="CREATE_PATCH_EXPAND_DETAILS_DEFAULT" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Новостная рассылка" />
+    <option name="LAST_COMMIT_MESSAGE" value="Слияние" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -801,7 +825,6 @@
     <option name="UPDATE_GROUP_BY_CHANGELIST" value="false" />
     <option name="SHOW_FILE_HISTORY_AS_TREE" value="false" />
     <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
-    <MESSAGE value="В галлереи удаляются старые фото" />
     <MESSAGE value="Время на баннере" />
     <MESSAGE value="Добавлена captcha" />
     <MESSAGE value="Добавлены социальные сети" />
@@ -826,6 +849,7 @@
     <MESSAGE value="Баннеры для разных городов" />
     <MESSAGE value="Счетчик&#10;" />
     <MESSAGE value="Новостная рассылка" />
+    <MESSAGE value="Слияние" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -843,21 +867,6 @@
     </PATH>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/application/controllers/BannerController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="44" column="72" selection-start="1343" selection-end="1343" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/models/EK/Banner/Banner.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="52" column="19" selection-start="846" selection-end="846" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/scripts/banner/index.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="21" selection-start="1547" selection-end="1547" vertical-scroll-proportion="-22.23077" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/models/EK/Banner/Place.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-4.7222767" />
@@ -925,6 +934,27 @@
     <entry file="file://$PROJECT_DIR$/application/controllers/CatalogController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-7.99006">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/library/StdLib/DB/Driver.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="26" selection-start="404" selection-end="404" vertical-scroll-proportion="0.33366045">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/library/StdLib/DB.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="119" column="42" selection-start="3124" selection-end="3151" vertical-scroll-proportion="0.7047714">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/models/EK/Share/ContentPage.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="64" column="5" selection-start="1205" selection-end="1205" vertical-scroll-proportion="0.6673209">
           <folding />
         </state>
       </provider>

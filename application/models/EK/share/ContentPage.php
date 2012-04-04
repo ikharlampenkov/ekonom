@@ -55,7 +55,7 @@ class EK_Share_ContentPage
      */
     public function getContent()
     {
-        return $this->_db->prepareStringToOut($this->_content);
+        return str_replace('&quot;', '"', $this->_db->prepareStringToOut($this->_content));
     }
 
     /**
