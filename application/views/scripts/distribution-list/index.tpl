@@ -1,6 +1,6 @@
 <article id="main-content">
 
-    <h1 class="heading">Новстная рассылка</h1>
+    <h1 class="heading">Стать партнером</h1>
 
     <div>
 

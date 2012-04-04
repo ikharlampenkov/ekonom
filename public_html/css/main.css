@@ -1143,6 +1143,14 @@ section.comments #paginator {
     padding-left: 30px !important;
 }
 
+.controls .share42 {
+    float: left;
+    margin: 5px 0 0 30px;
+    width: 180px;
+    border-left: 1px #c8c8c8 solid !important;
+    padding-left: 30px !important;
+}
+
 .share42 a {
     display:inline-block;
     vertical-align:bottom;
@@ -1187,6 +1195,11 @@ section.comments #paginator {
 }
 
 .fancybox-outer #plusone {
+    float: left;
+    margin: 5px 0 0 30px;
+}
+
+.controls #plusone {
     float: left;
     margin: 5px 0 0 30px;
 }
