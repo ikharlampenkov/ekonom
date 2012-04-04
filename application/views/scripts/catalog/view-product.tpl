@@ -122,19 +122,19 @@
 
                 <span class="share42">
                     <a target="_blank" title="Поделиться в Facebook" class="facebook" href="#" rel="nofollow"
-                       onclick="window.open('http://www.facebook.com/sharer.php?u={$this->url(['controller' => 'catalog','action' => 'viewProduct', 'id' => $product->id])}&amp;t={$product->title}', '_blank', 'scrollbars=0, resizable=1, menubar=0, left=200, top=200, width=550, height=440, toolbar=0, status=0');return false">
+                       onclick="window.open('http://www.facebook.com/sharer.php?u={$siteUrl}{$this->url(['controller' => 'catalog','action' => 'viewProduct', 'id' => $product->id])}&amp;t={$product->title}', '_blank', 'scrollbars=0, resizable=1, menubar=0, left=200, top=200, width=550, height=440, toolbar=0, status=0');return false">
                     </a>
                     <a target="_blank" title="Поделиться в Моем Мире@Mail.Ru" class="mail-ru" href="#" rel="nofollow"
-                       onclick="window.open('http://connect.mail.ru/share?url={$this->url(['controller' => 'catalog','action' => 'viewProduct', 'id' => $product->id])}&amp;title={$product->title}', '_blank', 'scrollbars=0, resizable=1, menubar=0, left=200, top=200, width=554, height=421, toolbar=0, status=0');return false">
+                       onclick="window.open('http://connect.mail.ru/share?url={$siteUrl}{$this->url(['controller' => 'catalog','action' => 'viewProduct', 'id' => $product->id])}&amp;title={$product->title}', '_blank', 'scrollbars=0, resizable=1, menubar=0, left=200, top=200, width=554, height=421, toolbar=0, status=0');return false">
                     </a>
                     <a target="_blank" title="Добавить в Одноклассники" class="odnoklassniki" href="#" rel="nofollow"
-                       onclick="window.open('http://www.odnoklassniki.ru/dk?st.cmd=addShare&amp;st._surl={$this->url(['controller' => 'catalog','action' => 'viewProduct', 'id' => $product->id])}&amp;title={$product->title}', '_blank', 'scrollbars=0, resizable=1, menubar=0, left=200, top=200, width=554, height=421, toolbar=0, status=0');return false">
+                       onclick="window.open('http://www.odnoklassniki.ru/dk?st.cmd=addShare&amp;st._surl={$siteUrl}{$this->url(['controller' => 'catalog','action' => 'viewProduct', 'id' => $product->id])}&amp;title={$product->title}', '_blank', 'scrollbars=0, resizable=1, menubar=0, left=200, top=200, width=554, height=421, toolbar=0, status=0');return false">
                     </a>
                     <a target="_blank" title="Добавить в Twitter" class="twitter" href="#" rel="nofollow"
-                       onclick="window.open('http://twitter.com/share?text={$product->title}&amp;url={$this->url(['controller' => 'catalog','action' => 'viewProduct', 'id' => $product->id])}', '_blank', 'scrollbars=0, resizable=1, menubar=0, left=200, top=200, width=550, height=440, toolbar=0, status=0');return false">
+                       onclick="window.open('http://twitter.com/share?text={$product->title}&amp;url={$siteUrl}{$this->url(['controller' => 'catalog','action' => 'viewProduct', 'id' => $product->id])}', '_blank', 'scrollbars=0, resizable=1, menubar=0, left=200, top=200, width=550, height=440, toolbar=0, status=0');return false">
                     </a>
                     <a target="_blank" title="Поделиться В Контакте" class="vkontakte" href="#" rel="nofollow"
-                       onclick="window.open('http://vkontakte.ru/share.php?url={$this->url(['controller' => 'catalog','action' => 'viewProduct', 'id' => $product->id])}', '_blank', 'scrollbars=0, resizable=1, menubar=0, left=200, top=200, width=554, height=421, toolbar=0, status=0');return false">
+                       onclick="window.open('http://vkontakte.ru/share.php?url={$siteUrl}{$this->url(['controller' => 'catalog','action' => 'viewProduct', 'id' => $product->id])}', '_blank', 'scrollbars=0, resizable=1, menubar=0, left=200, top=200, width=554, height=421, toolbar=0, status=0');return false">
                     </a>
                     </span>
 
