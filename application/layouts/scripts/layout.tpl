@@ -4,6 +4,7 @@
     <title>Ekonom.pro - Экономь профессионально.</title>
     <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico"/>
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+    <meta name='yandex-verification' content='5cb551fb8de033f5' />
     <!-- This script describes some html5 specific things for IE8- -->
     <!--[if lte IE 8]>
     <script type="text/javascript" src="/js/html5.js"></script>
@@ -126,6 +127,9 @@
                 </li>
             {/if_allowed}
                 <li><a href="/about/">О нас</a></li>
+            {if_allowed resource="news/index"}
+                <li><a href="/news/">Новости</a></li>
+            {/if_allowed}
                 <li><a href="/distributionList/">Стать партнером</a></li>
             {if_allowed resource="city/index"}
                 <li><a href="/city/">Города</a></li>
