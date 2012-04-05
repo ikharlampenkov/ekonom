@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.0.9, created on 2012-04-04 21:32:38
+<?php /* Smarty version Smarty-3.0.9, created on 2012-04-05 22:37:46
          compiled from "F:\www\ekonom\application/layouts/scripts\layout.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:96624f7c5b86a8e1c8-55167411%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:123334f7dbc4a0566e0-54194167%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '80ff11feedc4a0ba005e0c5733e3e115c1477d3b' => 
     array (
       0 => 'F:\\www\\ekonom\\application/layouts/scripts\\layout.tpl',
-      1 => 1333549816,
+      1 => 1333640254,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '96624f7c5b86a8e1c8-55167411',
+  'nocache_hash' => '123334f7dbc4a0566e0-54194167',
   'function' => 
   array (
   ),
@@ -235,7 +235,12 @@ $_template->assign('subrubric',$_smarty_tpl->getVariable('rubric')->value->getCh
         </div>
 
         <div id="phone" class="nobr"><?php echo $_smarty_tpl->getVariable('bottomCityNumber')->value;?>
-</div>
+
+        <br/>
+            <a href="http://ru-ru.facebook.com/ekonom.pro" class="facebook" target="_blank" title="Мы в Facebook"></a>
+            <a href="http://vk.com/ekonompro" class="vkontakte" target="_blank" title="Мы в Вконтакте"></a>
+            
+        </div>
     </div>
 </footer>
 </body>
