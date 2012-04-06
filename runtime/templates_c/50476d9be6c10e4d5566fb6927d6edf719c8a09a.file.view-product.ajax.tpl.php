@@ -1,23 +1,24 @@
-<?php /* Smarty version Smarty-3.0.9, created on 2012-03-01 21:29:08
+<?php /* Smarty version Smarty-3.0.9, created on 2012-04-05 21:41:41
          compiled from "F:\www\ekonom\application/views/scripts\catalog/view-product.ajax.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:177384f4f87b44db902-21751338%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:272284f7daf25d768c6-60967300%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '50476d9be6c10e4d5566fb6927d6edf719c8a09a' => 
     array (
       0 => 'F:\\www\\ekonom\\application/views/scripts\\catalog/view-product.ajax.tpl',
-      1 => 1330611923,
+      1 => 1333636830,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '177384f4f87b44db902-21751338',
+  'nocache_hash' => '272284f7daf25d768c6-60967300',
   'function' => 
   array (
   ),
   'has_nocache_code' => false,
 )); /*/%%SmartyHeaderCode%%*/?>
-<!-- Этот блок должен отдаваться аяксом при нажатии на акцию -->
+<?php if (!is_callable('smarty_modifier_escape')) include 'F:\www\ekonom\library\Smarty\plugins\modifier.escape.php';
+?><!-- Этот блок должен отдаваться аяксом при нажатии на акцию -->
 <div id="item" class="item-description">
     <h1 class="heading"><?php echo $_smarty_tpl->getVariable('product')->value->title;?>
 </h1>
@@ -183,27 +184,33 @@ if ($_smarty_tpl->tpl_vars['gallery']->total > 0){
             <div class="clearfix">
                 <span class="share42">
                     <a target="_blank" title="Поделиться в Facebook" class="facebook" href="#" rel="nofollow"
-                       onclick="window.open('http://www.facebook.com/sharer.php?u=<?php echo $_smarty_tpl->getVariable('this')->value->url(array('controller'=>'catalog','action'=>'viewProduct','id'=>$_smarty_tpl->getVariable('product')->value->id));?>
+                       onclick="window.open('http://www.facebook.com/sharer.php?u=<?php echo smarty_modifier_escape($_smarty_tpl->getVariable('siteUrl')->value,'url');?>
+<?php echo $_smarty_tpl->getVariable('this')->value->url(array('controller'=>'catalog','action'=>'viewProduct','id'=>$_smarty_tpl->getVariable('product')->value->id));?>
 &amp;t=<?php echo $_smarty_tpl->getVariable('product')->value->title;?>
 ', '_blank', 'scrollbars=0, resizable=1, menubar=0, left=200, top=200, width=550, height=440, toolbar=0, status=0');return false">
                     </a>
                     <a target="_blank" title="Поделиться в Моем Мире@Mail.Ru" class="mail-ru" href="#" rel="nofollow"
-                       onclick="window.open('http://connect.mail.ru/share?url=<?php echo $_smarty_tpl->getVariable('this')->value->url(array('controller'=>'catalog','action'=>'viewProduct','id'=>$_smarty_tpl->getVariable('product')->value->id));?>
+                       onclick="window.open('http://connect.mail.ru/share?url=<?php echo smarty_modifier_escape($_smarty_tpl->getVariable('siteUrl')->value,'url');?>
+<?php echo $_smarty_tpl->getVariable('this')->value->url(array('controller'=>'catalog','action'=>'viewProduct','id'=>$_smarty_tpl->getVariable('product')->value->id));?>
 &amp;title=<?php echo $_smarty_tpl->getVariable('product')->value->title;?>
 ', '_blank', 'scrollbars=0, resizable=1, menubar=0, left=200, top=200, width=554, height=421, toolbar=0, status=0');return false">
                     </a>
                     <a target="_blank" title="Добавить в Одноклассники" class="odnoklassniki" href="#" rel="nofollow"
-                       onclick="window.open('http://www.odnoklassniki.ru/dk?st.cmd=addShare&amp;st._surl=<?php echo $_smarty_tpl->getVariable('this')->value->url(array('controller'=>'catalog','action'=>'viewProduct','id'=>$_smarty_tpl->getVariable('product')->value->id));?>
+                       onclick="window.open('http://www.odnoklassniki.ru/dk?st.cmd=addShare&amp;st._surl=<?php echo smarty_modifier_escape($_smarty_tpl->getVariable('siteUrl')->value,'url');?>
+<?php echo $_smarty_tpl->getVariable('this')->value->url(array('controller'=>'catalog','action'=>'viewProduct','id'=>$_smarty_tpl->getVariable('product')->value->id));?>
 &amp;title=<?php echo $_smarty_tpl->getVariable('product')->value->title;?>
 ', '_blank', 'scrollbars=0, resizable=1, menubar=0, left=200, top=200, width=554, height=421, toolbar=0, status=0');return false">
                     </a>
                     <a target="_blank" title="Добавить в Twitter" class="twitter" href="#" rel="nofollow"
                        onclick="window.open('http://twitter.com/share?text=<?php echo $_smarty_tpl->getVariable('product')->value->title;?>
-&amp;url=<?php echo $_smarty_tpl->getVariable('this')->value->url(array('controller'=>'catalog','action'=>'viewProduct','id'=>$_smarty_tpl->getVariable('product')->value->id));?>
+&amp;url=<?php echo smarty_modifier_escape($_smarty_tpl->getVariable('siteUrl')->value,'url');?>
+<?php echo $_smarty_tpl->getVariable('this')->value->url(array('controller'=>'catalog','action'=>'viewProduct','id'=>$_smarty_tpl->getVariable('product')->value->id));?>
 ', '_blank', 'scrollbars=0, resizable=1, menubar=0, left=200, top=200, width=550, height=440, toolbar=0, status=0');return false">
                     </a>
                     <a target="_blank" title="Поделиться В Контакте" class="vkontakte" href="#" rel="nofollow"
-                       onclick="window.open('http://vkontakte.ru/share.php?url=<?php echo $_smarty_tpl->getVariable('this')->value->url(array('controller'=>'catalog','action'=>'viewProduct','id'=>$_smarty_tpl->getVariable('product')->value->id));?>
+                       onclick="window.open('http://vk.com/share.php?url=<?php echo smarty_modifier_escape($_smarty_tpl->getVariable('siteUrl')->value,'url');?>
+<?php echo smarty_modifier_escape($_smarty_tpl->getVariable('this')->value->url(array('controller'=>'catalog','action'=>'viewProduct','id'=>$_smarty_tpl->getVariable('product')->value->id)),'url');?>
+&amp;title=<?php echo $_smarty_tpl->getVariable('product')->value->title;?>
 ', '_blank', 'scrollbars=0, resizable=1, menubar=0, left=200, top=200, width=554, height=421, toolbar=0, status=0');return false">
                     </a>
                     </span>

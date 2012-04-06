@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.0.9, created on 2012-03-01 20:37:51
+<?php /* Smarty version Smarty-3.0.9, created on 2012-04-04 22:51:54
          compiled from "F:\www\ekonom\application/views/scripts\catalog/view-product.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:39884f4f7baf45a273-90412815%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:102724f7c6e1a503b24-31364795%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '94bb712bee8ee8457a23aedc7fc1611f33d1b498' => 
     array (
       0 => 'F:\\www\\ekonom\\application/views/scripts\\catalog/view-product.tpl',
-      1 => 1328777040,
+      1 => 1333554697,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '39884f4f7baf45a273-90412815',
+  'nocache_hash' => '102724f7c6e1a503b24-31364795',
   'function' => 
   array (
   ),
@@ -185,7 +185,8 @@ if ($_smarty_tpl->tpl_vars['gallery']->total > 0){
 
                 <span class="share42">
                     <a target="_blank" title="Поделиться в Facebook" class="facebook" href="#" rel="nofollow"
-                       onclick="window.open('http://www.facebook.com/sharer.php?u=<?php echo $_smarty_tpl->getVariable('this')->value->url(array('controller'=>'catalog','action'=>'viewProduct','id'=>$_smarty_tpl->getVariable('product')->value->id));?>
+                       onclick="window.open('http://www.facebook.com/sharer.php?u=<?php echo $_smarty_tpl->getVariable('siteUrl')->value;?>
+<?php echo $_smarty_tpl->getVariable('this')->value->url(array('controller'=>'catalog','action'=>'viewProduct','id'=>$_smarty_tpl->getVariable('product')->value->id));?>
 &amp;t=<?php echo $_smarty_tpl->getVariable('product')->value->title;?>
 ', '_blank', 'scrollbars=0, resizable=1, menubar=0, left=200, top=200, width=550, height=440, toolbar=0, status=0');return false">
                     </a>

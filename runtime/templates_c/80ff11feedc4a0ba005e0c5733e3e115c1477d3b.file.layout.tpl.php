@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.0.9, created on 2012-03-01 22:03:54
+<?php /* Smarty version Smarty-3.0.9, created on 2012-04-05 22:37:46
          compiled from "F:\www\ekonom\application/layouts/scripts\layout.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:40474f4f8fda498d42-00174604%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:123334f7dbc4a0566e0-54194167%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '80ff11feedc4a0ba005e0c5733e3e115c1477d3b' => 
     array (
       0 => 'F:\\www\\ekonom\\application/layouts/scripts\\layout.tpl',
-      1 => 1330614231,
+      1 => 1333640254,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '40474f4f8fda498d42-00174604',
+  'nocache_hash' => '123334f7dbc4a0566e0-54194167',
   'function' => 
   array (
   ),
@@ -25,6 +25,7 @@ if (!is_callable('smarty_block_if_allowed')) include 'F:\www\ekonom\library\Smar
     <title>Ekonom.pro - Экономь профессионально.</title>
     <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico"/>
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+    <meta name='yandex-verification' content='5cb551fb8de033f5' />
     <!-- This script describes some html5 specific things for IE8- -->
     <!--[if lte IE 8]>
     <script type="text/javascript" src="/js/html5.js"></script>
@@ -163,7 +164,12 @@ $_template->assign('subrubric',$_smarty_tpl->getVariable('rubric')->value->getCh
             <?php $_block_content = ob_get_clean(); $_block_repeat=false; echo smarty_block_if_allowed(array('resource'=>"company/index"), $_block_content, $_smarty_tpl, $_block_repeat);  } array_pop($_smarty_tpl->smarty->_tag_stack);?>
 
                 <li><a href="/about/">О нас</a></li>
-                <li><a href="/distributionList/">Новостная рассылка</a></li>
+            <?php $_smarty_tpl->smarty->_tag_stack[] = array('if_allowed', array('resource'=>"news/index")); $_block_repeat=true; smarty_block_if_allowed(array('resource'=>"news/index"), null, $_smarty_tpl, $_block_repeat);while ($_block_repeat) { ob_start();?>
+
+                <li><a href="/news/">Новости</a></li>
+            <?php $_block_content = ob_get_clean(); $_block_repeat=false; echo smarty_block_if_allowed(array('resource'=>"news/index"), $_block_content, $_smarty_tpl, $_block_repeat);  } array_pop($_smarty_tpl->smarty->_tag_stack);?>
+
+                <li><a href="/distributionList/">Стать партнером</a></li>
             <?php $_smarty_tpl->smarty->_tag_stack[] = array('if_allowed', array('resource'=>"city/index")); $_block_repeat=true; smarty_block_if_allowed(array('resource'=>"city/index"), null, $_smarty_tpl, $_block_repeat);while ($_block_repeat) { ob_start();?>
 
                 <li><a href="/city/">Города</a></li>
@@ -229,7 +235,12 @@ $_template->assign('subrubric',$_smarty_tpl->getVariable('rubric')->value->getCh
         </div>
 
         <div id="phone" class="nobr"><?php echo $_smarty_tpl->getVariable('bottomCityNumber')->value;?>
-</div>
+
+        <br/>
+            <a href="http://ru-ru.facebook.com/ekonom.pro" class="facebook" target="_blank" title="Мы в Facebook"></a>
+            <a href="http://vk.com/ekonompro" class="vkontakte" target="_blank" title="Мы в Вконтакте"></a>
+            
+        </div>
     </div>
 </footer>
 </body>

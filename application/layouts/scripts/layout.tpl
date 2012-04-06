@@ -221,7 +221,12 @@
 
         </div>
 
-        <div id="phone" class="nobr">{$bottomCityNumber}{*+7 (3842) 33-86-86*}</div>
+        <div id="phone" class="nobr">{$bottomCityNumber}{*+7 (3842) 33-86-86*}
+        <br/>
+            <a href="http://ru-ru.facebook.com/ekonom.pro" class="facebook" target="_blank" title="Мы в Facebook"></a>
+            <a href="http://vk.com/ekonompro" class="vkontakte" target="_blank" title="Мы в Вконтакте"></a>
+            
+        </div>
     </div>
 </footer>
 </body>

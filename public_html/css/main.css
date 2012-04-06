@@ -392,6 +392,24 @@ body > footer
     float: right;
     font-size: 24px;
     width: 171px;
+    text-align: center;
+}
+
+#phone a {
+    display:inline-block;
+    vertical-align:bottom;
+    width:24px;
+    height:24px;
+    margin:0 2px 2px 0;
+    outline:none;
+}
+
+#phone .facebook {
+    background:url(/i/icons.png) -0px 0;
+}
+
+#phone .vkontakte {
+    background:url(/i/icons.png) -96px 0;
 }
 
 #conditions {
