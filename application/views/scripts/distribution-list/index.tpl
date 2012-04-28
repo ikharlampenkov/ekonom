@@ -1,6 +1,6 @@
 <article id="main-content">
 
-    <h1 class="heading">Стать партнером</h1>
+    <h1 class="heading">Стать участником</h1>
 
     <div>
 

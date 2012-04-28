@@ -130,7 +130,7 @@
             {if_allowed resource="news/index"}
                 <li><a href="/news/">Новости</a></li>
             {/if_allowed}
-                <li><a href="/distributionList/">Стать партнером</a></li>
+                <li><a href="/distributionList/">Стать участником</a></li>
             {if_allowed resource="city/index"}
                 <li><a href="/city/">Города</a></li>
             {/if_allowed}
